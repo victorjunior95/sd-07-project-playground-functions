@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor, valor2) {
-  if(valor == valor2 && valor2 == valor){
+  if(valor == true && valor2 == true){
     return true;
 } else {
     return false;
@@ -44,21 +44,19 @@ pontosDeVitoria= wins*3;
 }
 
 // Desafio 6
-function highestCount(array) {
-  let maiorValor= 0;
-    let repetição = 0;
+function highestCount(array){
+    let maiorValor= 0;
+    let repeticao = 0;
     for (let i = 0; i < array.length; i++) {
   if (array[i] > maiorValor) {
     maiorValor = array[i];
   }
   if(maiorValor == array[i]){
-        repetição= repetição += 1;
+        repeticao= repeticao += 1;
     }
 }
-    
-    return repetição;
+    return repeticao;
 }
-highestCount([9, 1, 2, 3, 9, 5, 7])
 
 // Desafio 7
 function catAndMouse() {
