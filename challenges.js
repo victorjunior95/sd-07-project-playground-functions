@@ -17,15 +17,17 @@ function calcArea(base, height) {
   return area;
 }
 
-/* ________________________________________________________________________________ */
-
-
 console.log(calcArea(2, 3));
 
+/* ________________________________________________________________________________ */
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let arrayStrings = string.split(" ");
+  return arrayStrings;
 }
+
+console.log(splitSentence("família é amor"));
 
 /* ________________________________________________________________________________ */
 
