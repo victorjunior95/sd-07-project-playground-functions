@@ -130,10 +130,18 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  if(lineA>(lineB+lineC) || lineA<Math.abs(lineB-lineC)){
+    return false;
+  }
+  if(lineB>(lineA+lineC) || lineB<Math.abs(lineA-lineC)){
+    return false;
+  }
+  if(lineC>(lineB+lineA) || lineC<Math.abs(lineB-lineA)){
+    return false;
+  }
+  return true;
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
