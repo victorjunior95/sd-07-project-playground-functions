@@ -5,3 +5,20 @@ function compareTrue(value, value2) {
   }
   return false;
 }
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
