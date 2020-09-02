@@ -9,23 +9,47 @@ function compareTrue(a, b) {
 }
 compareTrue(a,b);
 
+// Desafio 2
 let base= 1;
 let height= 2;
-
-// Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   let area = base*height/2
-  return console.log(area);
+  // return console.log(area);
   return area;
 }
-
 calcArea(base, height);
 
 // Desafio 3
-function splitSentence() {
+let string = "go Trybe"
+let array = [];
+// console.log(string[6])
+// console.log(string.length)
+// array= ["aba", "cat", "e"];
+// console.log(array);
+// for (i=0; i<string.length; i += 1){
+//   if (string[i] == " "){//completamente diferente de string[i] = " "!!!
+//     array = [string.slice(0,i),string.slice(i,string.length)];
+//       }
+// console.log(i);
+// console.log(string[i])
+// console.log(array);
+// console.log("---")
+
+function splitSentence(string) {
   // seu código aqui
-}
+  for (i=0; i<string.length; i += 1) {
+    if (string[i] == " "){//completamente diferente de string[i] = " "!!!
+      array = [string.slice(0,i),string.slice(i,string.length)];
+    }
+  }
+  return console.log(array);
+  return array;
+} 
+
+
+splitSentence(string);
+
 
 // Desafio 4
 function concatName() {
