@@ -1,16 +1,21 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  if (a === b && b === a) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  return (base * heigth) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let stringPhrase = phrase;
+  return stringPhrase.split(" ");
 }
 
 // Desafio 4
@@ -66,7 +71,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -82,4 +86,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
