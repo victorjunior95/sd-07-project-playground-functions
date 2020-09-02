@@ -30,7 +30,7 @@ function splitSentence(string) {
   arrayString.push(word);
   return arrayString;
 }
-console.log(splitSentence('vamo que vamo'));
+
 // Desafio 4
 function concatName(array) {
 
@@ -105,13 +105,64 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let result = '';
+
+  for (let i in string) {
+
+    switch (string[i]) {
+      case 'a':
+        result += '1';
+        break;
+      case 'e':
+        result += '2';
+        break;
+      case 'i':
+        result += '3';
+        break;
+      case 'o':
+        result += '4';
+        break;
+      case 'u':
+        result += '5';
+        break;
+      default:
+        result += string[i]
+        break;
+    }
+  }
+  return result;
 }
 
+function decode(string) {
+  let result = '';
+
+  for (let i in string) {
+
+    switch (string[i]) {
+      case '1':
+        result += 'a';
+        break;
+      case '2':
+        result += 'e';
+        break;
+      case '3':
+        result += 'i';
+        break;
+      case '4':
+        result += 'o';
+        break;
+      case '5':
+        result += 'u';
+        break;
+      default:
+        result += string[i]
+        break;
+    }
+  }
+  return result;
+}
+console.log(decode("h3 th2r2!"))
 // Desafio 10
 function techList() {
   // seu código aqui
