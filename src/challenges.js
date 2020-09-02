@@ -47,12 +47,16 @@ function highestCount(num) {
   for (let i in num){
     if (num[i] >= maiorValor){
       maiorValor = num[i];
+    }
+  }
+  for (let j in num){
+    if (num[j] === maiorValor){
       contador += 1;
     }
   }
 return contador;
 }
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+//console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse() {
