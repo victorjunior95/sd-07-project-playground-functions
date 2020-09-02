@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
-console.log('desafio 1')
   if(valueOne && valueTwo == true) {
     return true;
   } else {
@@ -12,9 +11,14 @@ console.log('desafio 1')
 compareTrue(true, false);
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  let cal = (base*height)/2;
+  console.log(cal);
+  return cal;
   // seu código aqui
 }
+
+calcArea(2,3);
 
 // Desafio 3
 function splitSentence(string) {
