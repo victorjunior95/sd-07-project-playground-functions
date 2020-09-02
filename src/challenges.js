@@ -29,8 +29,6 @@ function concatName(arraystrings) {
   return arrayFinal[0]+', '+arrayFinal[1]
 }
 
-console.log(concatName(["amendoin","é muito","bom rpa carvalho", "leonnardo"]))
-
 // Desafio 5
 function footballPoints(wins,ties) {
   return wins*3+ties
@@ -138,8 +136,11 @@ function decode(arraydeconde) {
 
 // Desafio 10
 function techList(tech) {
+  if (tech == undefined) {
+    return "Vazio!"
+  }
   let arrayreturn = [];
-  let name = "leonnardo"
+  let name = "Lucas"
   for ( key in tech)
   arrayreturn.push({
     tech: tech[key],
