@@ -66,15 +66,27 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1ToMouseDistance < cat2ToMouseDistance) {
     return "cat1";
   } else if (cat2ToMouseDistance < cat1ToMouseDistance) {
-    return "cat2"
+    return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let arrayFizzBuzz = [];
+  for (let contador = 0; contador < arrayDeNumeros.length; contador += 1) {
+    if ((arrayDeNumeros[contador] % 3 == 0) && (arrayDeNumeros[contador] % 5 != 0)) {
+      arrayFizzBuzz.push("Fizz");
+    } else if ((arrayDeNumeros[contador] % 3 != 0) && (arrayDeNumeros[contador] % 5 == 0)) { 
+      arrayFizzBuzz.push("Buzz");
+    } else if ((arrayDeNumeros[contador] % 3 == 0) && (arrayDeNumeros[contador] % 5 == 0)) {
+      arrayFizzBuzz.push("fizzBuzz");
+    } else {
+      arrayFizzBuzz.push("bug!");
+    }
+  }
+return arrayFizzBuzz;
 }
 
 // Desafio 9
