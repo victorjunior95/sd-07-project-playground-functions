@@ -102,6 +102,7 @@ function techList(arr, name) {
       name: name,
     });
   }
+  out.sort();
   return out;
 }
 
