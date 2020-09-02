@@ -65,12 +65,29 @@ function footballPoints(wins, ties) {
     return "Favor verifique os dados inseridos"
   }
 }
-console.log(footballPoints(7, 1));
+//console.log(footballPoints(7, 1));
 
 // Desafio 6
-function highestCount() {
+let numbers = [9, 1, 2, 3, 9, 5, 7];
+
+function highestCount(numbers) {
   // seu código aqui
+  if (numbers.length > 0) {
+    let biggest = 0;
+    let counts = 0;
+    
+    for (let i = 0; i < numbers.length; i += 1) {
+      if (numbers[i] >= biggest) {
+        biggest = numbers[i];
+        counts += 1;
+      }
+    }
+    return "Biggest number: " + biggest + "\nCounts: " + counts;
+  } else {
+    return "Favor verifique os dados inseridos"
+  }
 }
+console.log(highestCount(numbers));
 
 // Desafio 7
 function catAndMouse() {
