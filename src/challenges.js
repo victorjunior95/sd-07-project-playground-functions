@@ -26,7 +26,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   // sort array
-  array.sort(function(a, b) { return b - a; });
+  array.sort(function (a, b) { return b - a; });
   // count highest number
   let countHighest = 1;
   for (let i = 1; array[i - 1] === array[i]; i += 1) {
@@ -71,7 +71,7 @@ function fizzBuzz(numArray) {
 function encode(arg) {
   let code = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 1; i <= code.length; i += 1) {
-    arg = arg.replace(RegExp(code[i - 1], 'g'), i);  
+    arg = arg.replace(RegExp(code[i - 1], 'g'), i);
   }
   return arg;
 }
@@ -79,14 +79,14 @@ function encode(arg) {
 function decode(arg) {
   let code = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 1; i <= code.length; i += 1) {
-    arg = arg.replace(RegExp(i.toString(), 'g'), code[i - 1]); 
+    arg = arg.replace(RegExp(i.toString(), 'g'), code[i - 1]);
   }
   return arg;
 }
 
 // Desafio 10
 function techList(techArray, name) {
-  if (techArray.length === 0 ) {
+  if (techArray.length === 0) {
     return 'Vazio!';
   }
 
@@ -116,7 +116,7 @@ function generatePhoneNumber(numberArray) {
   }
   // chek rule repeat 3 times or more
   let numberArraySorted = numberArray.slice(0);
-  numberArraySorted.sort(function(a, b) { return a - b });
+  numberArraySorted.sort(function (a, b) { return a - b });
   for (let i = 0; i <= 8; i += 1) {
     if (numberArraySorted[i] === numberArraySorted[i + 2]) {
       return 'não é possível gerar um número de telefone com esses valores';
