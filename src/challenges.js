@@ -199,13 +199,17 @@ function triangleCheck(lineA,lineB,lineC) {
 console.log(triangleCheck(10,10,10))
 // Desafio 13
 function hydrate(bebida) {
+  let copo="copos"
   let soma = 0;
   for (let i = 0; i < bebida.length; i += 1) {
     if (!isNaN(bebida[i]) === true) {
       soma += Number(bebida[i])
     }
+    if(soma === 1){
+      copo="copo"
+    }
   }
-  return `${soma} copos de água`
+  return `${soma} ${copo} de água`
 }
 
 
