@@ -25,7 +25,7 @@ function concatName(array) {
   let arrayLast = parArray[parArray.length - 1];
   return (concatName = `${arrayLast}, ${arrayFirst}`);
 }
-console.log(ultimoItem);
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
