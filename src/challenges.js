@@ -90,7 +90,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let posMaisF = 0;numTelef
+  let posMaisF = 0;
   let somaMaisF = somaRepeat(array, posMaisF);
   let posAtual = posMaisF + 1;
   let somaAtual = 0;
