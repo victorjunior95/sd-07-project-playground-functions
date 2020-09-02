@@ -31,10 +31,14 @@ function concatName(arrayString) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
-
+  let sumWins = wins * 3;
+  let sumTies = ties * 1;
+  let sun = sumWins + sumTies;
+return sun;
 }
+
 
 // Desafio 6
 function highestCount() {
