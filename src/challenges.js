@@ -69,10 +69,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let finalCat2 = Math.abs(disCat2);
 
   if (finalCat1 > finalCat2) {
-      return 'gato 2'
+      return 'cat2'
 
   } else if (finalCat1 < finalCat2) {
-      return 'gato 1'
+      return 'cat1'
 
   } else {
       return "os gatos trombam e o rato foge"
@@ -104,12 +104,56 @@ function fizzBuzz(array) {
   return arrayResult;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 
+function encode(string) {
+
+  let array = string.split('');
+  
+  for (let i = 0; i < array.length; i += 1) {
+
+      if (array[i] == 'a') {
+          array[i] = 1; 
+
+      } else if (array[i] == 'e') {
+          array[i] = 2;
+
+      } else if (array[i] == 'i') {
+          array[i] = 3;
+
+      } else if (array[i] == 'o') {
+          array[i] = 4;
+
+      } else if (array[i] == 'u') {
+          array[i] = 5;
+      }
+  }
+  return array.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+
+  let array = string.split('');
+
+  for (let i = 0; i < array.length; i += 1) {
+
+      if (array[i] == 1) {
+          array[i] = 'a'; 
+
+      } else if (array[i] == 2) {
+          array[i] = 'e';
+
+      } else if (array[i] == 3) {
+          array[i] = 'i';
+
+      } else if (array[i] == 4) {
+          array[i] = 'o';
+
+      } else if (array[i] == 5) {
+          array[i] = 'u';
+      }
+
+  }
+return array.join('');
 }
 
 // Desafio 10
