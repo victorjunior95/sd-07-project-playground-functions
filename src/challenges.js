@@ -80,29 +80,25 @@ if (unidades1 > unidades2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  let arrNumbers = [2, 15, 7, 9, 45];
-let resultado = [];
+function fizzBuzz(arrNumbers) {
 
    for (let indice in arrNumbers){
 
       if((arrNumbers[indice]%3==0)&&(arrNumbers[indice]%5==0)){
-          resultado[indice] = "fizzBuzz";
+          arrNumbers[indice] = "fizzBuzz";
 
       } else if (arrNumbers[indice]%5==0) {
-          resultado[indice] = "buzz";
+          arrNumbers[indice] = "buzz";
 
       } else if (arrNumbers[indice]%3==0){
-          resultado[indice] = "fizz";
+          arrNumbers[indice] = "fizz";
 
       } else {
-          resultado[indice]="bug!";
+          arrNumbers[indice]="bug!";
       }
   }
-  return resultado;
+  return arrNumbers;
 }
-
-console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {
