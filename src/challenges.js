@@ -109,6 +109,9 @@ function techList(tecnologia,nome) {
   // seu código aqui
   let resultado = [];
   tecnologia.sort();
+  if(tecnologia.length<=0){
+    return "Vazio!";
+  }
   for(let count in tecnologia){
     resultado.push({
       tech: tecnologia[count],
