@@ -134,7 +134,6 @@ function techList(array, name) {
   });
   return structuredArray;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -162,15 +161,26 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let checkLines = true ?
+  lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) &&
+  lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) &&
+  lineC < lineB + lineA && lineC > Math.abs(lineB - lineA) :
+  false;
+  
+  return checkLines;
 }
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let drinkQty = 0;
+  let numbers = string.replace(/[^0-9]/g, "");
+  for (let i = 0; i < numbers.length; i += 1){
+    drinkQty += Number(numbers[i]);
+  }
+  return drinkQty;
 }
 
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
