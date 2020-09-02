@@ -21,9 +21,14 @@ function calcArea(base, height) {
 console.log(calcArea(baseTriangulo, alturaTriangulo));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let sentence = "go trybe";
+
+function splitSentence(frase) {
+  let arrayPalavras = frase.split(" ");
+  return arrayPalavras;
 }
+
+console.log(splitSentence(sentence));
 
 // Desafio 4
 function concatName() {
