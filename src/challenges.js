@@ -28,7 +28,6 @@ function footballPoints(wins, ties) {
 function highestCount(numeros) {
   let maiornumerorep = 0;
   let maiornumb = 0;
-  numeros = [9, 1, 2, 3, 9, 5, 7];
   for(u = 0; u < numeros.length; u += 1){
     if(numeros[u] > maiornumb){
       maiornumb = numeros[u];
