@@ -1,7 +1,5 @@
 // Desafio 1
-function compareTrue() {
-  let dormir = true;
-  let acordado = false;
+function compareTrue(dormir, acordado) {
   if (dormir == true && acordado == true) {
     return true;
   } else {
