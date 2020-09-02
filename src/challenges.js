@@ -1,20 +1,19 @@
 // Desafio 1
 function compareTrue(boolA, boolB) {
-  if (boolA && boolB === true) {
-    return true;
-  } else {
-    return false;
-  }
+  if (boolA && boolB === true) return true;
+  else return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(height, base) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let splittedSentence = string.split(" ");
+  return splittedSentence;
 }
 
 // Desafio 4
