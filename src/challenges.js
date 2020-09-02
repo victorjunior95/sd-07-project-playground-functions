@@ -28,15 +28,24 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  winPoints = wins * 3;
-  tiePoints = ties;
-  totalPoints = winPoints + tiePoints;
+  let winPoints = wins * 3;
+  let tiePoints = ties;
+  let totalPoints = winPoints + tiePoints;
   return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestNumber = 0;
+  let countRepetition = 0;
+  for (index in array){
+    if (highestNumber <= array[index]){
+      highestNumber = array[index];
+      validateNumber = highestNumber
+      countRepetition += 1;
+    }
+  }
+  return countRepetition - 1;
 }
 
 // Desafio 7
