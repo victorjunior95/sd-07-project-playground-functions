@@ -1,16 +1,16 @@
-//Alexandre Faustino Leite - Turma 7
 // Desafio 1
-function compareTrue(boolOne,boolTwo) {
-  if(boolOne == 1 && boolTwo == 1){
+function compareTrue(boolOne, boolTwo) {
+  if (boolOne == 1 && boolTwo == 1) {
     return true;
-  } else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
