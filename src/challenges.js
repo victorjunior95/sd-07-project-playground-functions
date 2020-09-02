@@ -32,7 +32,7 @@ function footballPoints(wins , ties) {
   let wins = 0;
   let ties = 0; 
   wins += *3;
-  let ties += *1;
+  ties += *1;
 }
 
 // Desafio 6
