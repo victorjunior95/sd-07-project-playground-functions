@@ -33,13 +33,24 @@ return vencidos + empatados;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  greaterNumber = 0;
+    for (let i = 0; i < numbers.length; i += 1) {
+        if (greaterNumber < numbers[i]) {
+    greaterNumber = numbers[i]
+  }
+return 
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  if (cat1 > cat2) {
+    return cat1
+    } else if (cat2 > cat1) {
+    return cat2
+    } else {
+return console.log("os gatos trombam e o rato foge")
+}
 }
 
 // Desafio 8
