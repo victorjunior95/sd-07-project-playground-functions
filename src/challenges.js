@@ -17,13 +17,14 @@ function compareTrue(camisaAzul, calcaAzul) {
 // Desafio 2
 function calcArea(base, height) {
   let calculoArea = (base * height) / 2;
-  return calculoArea
+  return calculoArea;
   // seu código aqui
 }
 
 // Desafio 3
 function splitSentence(stringExemplo) {
-  return = stringExemplo.split(" ");
+  resultado = stringExemplo.split(" ");
+  return resultado;
   // seu código aqui
 }
 
