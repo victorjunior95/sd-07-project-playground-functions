@@ -1,21 +1,28 @@
 //Desafio Raphael Caputo
 
 // Desafio 1
-function compareTrue() {
+function compareTrue(comparar1, comparar2) {
   // seu código aqui
-  let comparar1 = ["Raphael"]
-  let comparar2 = ["Programador"]
-  if(comparar1 === comparar2) {
+  if(comparar1 && comparar2) {
     return false;
   } else {
     return true;
   }
   return compareTrue
 }
-console.log(compareTrue(comparar1, comparar2));
+console.log(compareTrue("raphael", 2));
+
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
+  base = 10;
+  height = 20;
+
+
+
+
+
 }
 
 // Desafio 3
