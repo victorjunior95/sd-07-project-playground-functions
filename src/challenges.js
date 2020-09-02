@@ -65,12 +65,13 @@ function fizzBuzz(vetor) {
   let vetorSaida = [];
 
   for (i = 0; i < array.length; i++) {
-    if (array[i] % 3 == 0) {
+    if (array[i] % 5 == 0 && array[i] % 3 == 0) {
+      vetorSaida.push("fizbuzz");
+    } else if (array[i] % 3 == 0) {
       vetorSaida.push("fizz");
+      console.log("fizz");
     } else if (array[i] % 5 == 0) {
       vetorSaida.push("buzz");
-    } else if (array[i] % 5 == 0 && array[i] % 3 == 0) {
-      vetorSaida.push("fizbuzz");
     } else {
       vetorSaida.push("bug!");
     }
