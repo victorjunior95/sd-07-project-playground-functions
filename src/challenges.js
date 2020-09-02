@@ -29,12 +29,14 @@ function concatName(string) {
   let primeiroUltimo = `${string[string.length-1]}, ${string[0]}`;
   return primeiroUltimo;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
+  return pontos;
 }
+//console.log(footballPoints(10,20));
 
 // Desafio 6
 function highestCount() {
