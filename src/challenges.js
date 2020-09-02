@@ -1,6 +1,11 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+  if (true === true && true === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -66,7 +71,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -82,4 +86,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
