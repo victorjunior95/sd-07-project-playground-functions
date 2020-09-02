@@ -121,7 +121,7 @@ function decode(string) {
 // Desafio 10
 function techList(array, string) {
   
-  if (array != null || array.length!=0)
+  if (array != null && array.length!=0)
   {
     array=array.sort();
     let retorno=[];
@@ -167,8 +167,9 @@ function generatePhoneNumber(array) {
       {
         return "não é possível gerar um número de telefone com esses valores";
       }
-      return "("+array[0]+array[1]+") "+array[2]+array[3]+array[4]+array[5]+array[6]+"-"+array[7]+array[8]+array[9]+array[10];
+      
     }
+    return "("+array[0]+array[1]+") "+array[2]+array[3]+array[4]+array[5]+array[6]+"-"+array[7]+array[8]+array[9]+array[10];
   }
 }
 
@@ -192,7 +193,13 @@ function hydrate(string) {
       }
     }
   }
-  return agua+" copos de água";
+  if (agua==1)
+  {
+    return "1 copo de água";
+  }else
+  {
+    return agua+" copos de água";
+  }
 }
 
 
@@ -227,7 +234,15 @@ module.exports = {
 //console.log(encode("hi there!"));
 //console.log(decode("h3 th2r2!"));
 //console.log(highestCount([0, 0, 0]));
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-//console.log(generatePhoneNumber([2, 2, 2, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(techList([], "Lucas"));
+console.log(techList(null, "Lucas"));
+//console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 //console.log(triangleCheck(100,14,8));
-console.log(hydrate("0 1 2 3 4 5 6 7 8 9 "));
+//console.log(hydrate("0 1 2 3 4 5 6 7 8 9 "));
+//console.log(generatePhoneNumber([3, -2, 1, 9, -5, 0, 7, 4, 0, 6, 1]));
+//console.log(generatePhoneNumber([1, 2, -3, 4, 0, 6, 7, 8, 9, 9, 0]));
+//console.log(generatePhoneNumber([-1, 2, 4, -4, 5, 6, 9, -8, 7, 3, 3]));
+//console.log(generatePhoneNumber([1, 1, 9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
+//console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
+//console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+//console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
