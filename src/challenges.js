@@ -239,7 +239,7 @@ function generatePhoneNumber(array) {
     }
 
   } else {
-    stringTel = "Array com tamanho incorreto."
+    return stringTel = "Array com tamanho incorreto."
   }
 
   for (let i = 0; i < array.length; i++) {
@@ -265,7 +265,7 @@ function generatePhoneNumber(array) {
 
 }
 
-let array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let array4 = [1, 2, 3, 4, 5, 6, 7, 8, 1, 0, 1];
 console.log(generatePhoneNumber(array4));
 
 // Desafio 12
