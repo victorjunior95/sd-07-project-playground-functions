@@ -38,16 +38,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
+  let biggest = 0;
   let referenceCount = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    let count = 0;
-    for (let j = 0; j < array.length; j += 1) {
-        if (array[i] == array[j]){
-          count += 1;
-        }
-    }
-    if (count > referenceCount){
-        referenceCount = count;
+  for(let number in array){
+     if(array == 0){
+        biggest = number[array];
+     } else if(number[array] > biggest){
+        biggest = i;
+     }
+  }
+  for(let count in array){
+    if (biggest === array[count]){
+      referenceCount += 1;
     }
   }
   return referenceCount;
@@ -128,9 +130,30 @@ function techList(array, theName) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let reformuledNumber = "";
+  if (array.length != 11) {
+    return "Array com tamanho incorreto."
+  } else {
+    for (let number in array){
+      let repeatedNumbs = 0;
+      for (let revision in array){
+      if (array[revision] == array[number]){
+        repeatedNumbs += 1;
+        }
+      }
+      if (array[number] > 9 || array[number] < 0 || repeatedNumbs > 3) {
+        return 'não é possível gerar um número de telefone com esses valores.';
+      }
+    }
+  }
+  reformuledNumber = '(' + array[0] + array[1] + ')' + ' '
+  + array[2] + array[3] + array[4] + array[5] + array[6] 
+  + '-' 
+  + array[7] + array[8] + array[9] + array[10];
+  return reformuledNumber;
 }
+console.log(generatePhoneNumber([1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 5]));
 
 // Desafio 12
 function triangleCheck() {
