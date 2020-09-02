@@ -250,8 +250,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  
+  let result;
+  let NumberOfDrinks = drinks.match(/\d+/g).map(Number);  //linha de código retirada da internet https://stackoverflow.com/questions/53897373/js-how-to-got-the-sum-of-numbers-from-a-string
+  let sum = 0;
+
+  for (let i in NumberOfDrinks) {
+    sum += NumberOfDrinks[i];
+  }
+
+  if (NumberOfDrinks === 1) {
+    result = sum + ' copo de água';
+  } else{
+    result = sum + ' copos de água'
+  }
+  return result;
 }
 
 
