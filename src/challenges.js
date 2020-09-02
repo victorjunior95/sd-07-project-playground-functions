@@ -1,27 +1,40 @@
 // Desafio 1
-function compareTrue(valor1, valor2) {
+function compareTrue(valor1,valor2) {
 
-  if(valor1 && valor2){
+  if ( valor1 && valor2 ){
     return true;
-  }else{
-    return false;
   }
 }
 
 // Desafio 2
-function calcArea(base, altura) {
+function calcArea(base,height) {
 
-  return base * altura;
+  let resultado = (base * height) / 2;
+  return resultado;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+
+  let resultado = string.split(" ");
+  return resultado;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  arrayString.reverse();
+  let palavra1;
+  let palavra2;
+
+  for (let i = 0; i < arrayString.length; i += 1) {
+    palavra1 = arrayString[0];
+    palavra2 = arrayString[1];
+  }
+
+  let string = [palavra1, palavra2];
+
+  console.log(string.join(", "))
+
 }
 
 // Desafio 5
