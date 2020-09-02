@@ -77,7 +77,7 @@ function encode(string) {
 
 function decode(string) {
     let saida = string.replace("1", "a");
-    let said = saida.replace("2", "b");
+    let said = saida.replace("2", "e");
     let sai = said.replace("3", "i");
     let sa = sai.replace("4", "o");
     let s = sa.replace("5", "u");
