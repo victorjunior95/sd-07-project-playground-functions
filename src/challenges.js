@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 
@@ -33,13 +33,27 @@ function concatName(arrayString) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = (wins * 3) + (ties * 1);
+  console.log(resultado);
 }
 
+let numeros= [9, 1, 2, 3, 9, 5, 7];
+highestCount(numeros);
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+
+  let maior = Math.max.apply(null, numeros );
+  let cont = 0;
+
+  for (let i = 0; i < numeros.length; i += 1) {
+      if (numeros[i] === maior) {
+          cont = cont + 1;
+      }
+  }
+
+console.log(cont);
 }
 
 // Desafio 7
