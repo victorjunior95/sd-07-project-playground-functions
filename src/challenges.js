@@ -177,7 +177,7 @@ function hydrate(string) {
   for (let i = 0; i < numbers.length; i += 1){
     drinkQty += Number(numbers[i]);
   }
-  return drinkQty;
+  return `${drinkQty} copos de água`;
 }
 
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
