@@ -230,9 +230,9 @@ function generatePhoneNumber(numeros) {
 
   numeroValidado =
     "(" + String(numeros[0]) + String(numeros[1]) + ") " +
-    String(numeros[2]) + String(numeros[3]) + String(numeros[4]) + String(numeros[5]) +
+    String(numeros[2]) + String(numeros[3]) + String(numeros[4]) + String(numeros[5]) + String(numeros[6]) +
     "-" +
-    String(numeros[6]) + String(numeros[7]) + String(numeros[8]) + String(numeros[9]);
+    String(numeros[7]) + String(numeros[8]) + String(numeros[9]) + String(numeros[10]);
 
   return numeroValidado;
 }
