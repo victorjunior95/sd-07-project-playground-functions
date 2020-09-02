@@ -85,12 +85,32 @@ function fizzBuzz(ArrayBuzz) {
   return formulacao;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodando) {
+  let formPalavra ='';
+  for(let item in encodando){
+   if(encodando[item] == 'a'){
+    formPalavra += '1';
+    }else if(encodando[item] == 'e'){
+      formPalavra += '2';
+    }else if(encodando[item] == 'i'){
+      formPalavra += '3';
+    }else if(encodando[item] == 'o'){
+      formPalavra += '4';
+    }else if(encodando[item] == 'u'){
+      formPalavra += '5';
+    }
+    else{
+      formPalavra +=encodando[item];
+    }
+
+  }
+  return formPalavra;
+
 }
+
+console.log(encode("hi there!"));
+
 function decode() {
   // seu código aqui
 }
