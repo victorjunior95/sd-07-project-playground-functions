@@ -37,8 +37,8 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs((cat1 - mouse));
   let distance2 = Math.abs((cat2 - mouse));
-  if (distance1 > distance2) return 'cat1';
-  else if (distance2 > distance1) return 'cat2';
+  if (distance1 > distance2) return 'cat2';
+  else if (distance2 > distance1) return 'cat1';
   return 'os gatos trombam e o rato foge';
 }
 
