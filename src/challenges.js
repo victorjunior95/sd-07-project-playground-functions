@@ -42,14 +42,14 @@ function highestCount(numeros) {
   for (let i = 0; i < numeros.length; i += 1) {
 
     if (numeros[i] > maiorNumero) {
-      maiorNumero = numeros[i]
+      maiorNumero = numeros[i];
 
     }
   }
   let repeti = 0;
   for (let j = 0; j < numeros.length; j += 1) {
     if (numeros[j] === maiorNumero) {
-      repeti += 1
+      repeti += 1;
     }
 
 
@@ -60,36 +60,49 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciacat1=0;
-  let distanciacat2=0;
-  if(cat1 > mouse){
-      distanciacat1 = cat1 - mouse
+  let distanciacat1 = 0;
+  let distanciacat2 = 0;
+  if (cat1 > mouse) {
+    distanciacat1 = cat1 - mouse;
   }
-  if(cat2 > mouse){
-      distanciacat2 = cat2 - mouse 
-  } 
-   if(mouse > cat1){
-     distanciacat1 =  mouse - cat1
-  } 
-  if(mouse > cat2){
-     distanciacat2 =  mouse - cat2
+  if (cat2 > mouse) {
+    distanciacat2 = cat2 - mouse;
   }
-  
+  if (mouse > cat1) {
+    distanciacat1 = mouse - cat1;
+  }
+  if (mouse > cat2) {
+    distanciacat2 = mouse - cat2;
+  }
+
   if (distanciacat1 < distanciacat2) {
-    return "cat1"
-  } else if(distanciacat2 < distanciacat1){
-    return "cat2"
+    return "cat1";
+  } else if (distanciacat2 < distanciacat1) {
+    return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 
 }
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let relatorio = [];
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      relatorio.push("fizzbuzz");
+    } else if (numeros[i] % 3 === 0) {
+      relatorio.push("fizz");
+    } else if (numeros[i] % 5 === 0) {
+      relatorio.push("buzz");
+    } else {
+      relatorio.push("bug!");
+    }
+  }
+  return relatorio
 }
+
 
 // Desafio 9
 function encode() {
