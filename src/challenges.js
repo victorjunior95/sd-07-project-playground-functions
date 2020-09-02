@@ -13,12 +13,11 @@ function calcArea(base, height) {
 }
 // Desafio 3
 function splitSentence(gru) {
-  gru = "go Trybe"
   return gru.split(" ")
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome) {
+  return `${nome.[(nome.length -1)], ${nome[1]}` }
 }
 
 // Desafio 5
