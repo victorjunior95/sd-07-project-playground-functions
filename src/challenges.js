@@ -110,7 +110,7 @@ function fizzBuzz(array) {
     }
     
     if (array[key]%5==0){
-      stringResultado = stringResultado + "buzz";
+      stringResultado = stringResultado + "Buzz";
     }
 
     if (array[key]%3>0 && array[key]%5>0){
