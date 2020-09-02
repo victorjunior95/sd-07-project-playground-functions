@@ -30,8 +30,13 @@ function concatName(vetorString) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let quantidadeVitorias = wins;
+  let quantidadeEmpates = ties;
+  let pontosVitoria = quantidadeVitorias * 3;
+  let pontosEmpates = quantidadeEmpates * 1;
+  let resultado = pontosVitoria + pontosEmpates;
+  return resultado;
 }
 
 // Desafio 6
