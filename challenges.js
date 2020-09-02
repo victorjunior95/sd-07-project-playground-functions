@@ -32,8 +32,8 @@ console.log(splitSentence('família é amor'));
 /* ________________________________________________________________________________ */
 
 // Desafio 4
-function concatName(arrayPosicoes) {
-  let primeiroEUltimo = arrayPosicoes[arrayPosicoes.length - 1] + ', ' + arrayPosicoes[0];
+function concatName(concatName) {
+  let primeiroEUltimo = concatName[concatName.length - 1] + ', ' + concatName[0];
   return primeiroEUltimo;
 }
 
@@ -95,14 +95,28 @@ console.log(catAndMouse(5, 4, 7));
 /* ________________________________________________________________________________ */
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  let retorno = "";
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
+    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+      retorno = 'fizzBuzz';
+    } else if (arrayNumeros[i] % 3 === 0) {
+      retorno = 'fizz';
+    } else if (arrayNumeros[i] % 5 === 0) {
+      retorno = 'buzz';
+    } else {
+      retorno = 'bug!';
+    }
+  }
+  return retorno; 
 }
+
+console.log(fizzBuzz([5, 3, 15, 13]));
 
 /* ________________________________________________________________________________ */
 
 // Desafio 9
-function encode() {
+function encode(stringEncode) {
   // seu código aqui
 }
 
