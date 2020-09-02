@@ -67,12 +67,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumber) {
   // seu código aqui
   const divisores = [];
-  for (let i = 0; i < arrayNumber.length; i +=1){
-    if(arrayNumber[i] % 3 && arrayNumber[i] % 5){
+  for (let i = 0; i < arrayNumber.length; i += 1){
+    if(arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0){
       divisores.push('fizzBuzz');
-    }else if(arrayNumber[i] % 3){
+    }else if(arrayNumber[i] % 3 === 0){
       divisores.push('fizz');
-    }else if(arrayNumber[i] % 5){
+    }else if(arrayNumber[i] % 5 === 0){
       divisores.push('buzz');
     }else {
       divisores.push('bug!');
