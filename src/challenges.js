@@ -11,19 +11,41 @@ function compareTrue(a, b) {
 
 console.log(compareTrue(true,true))
 
+
+
+
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   const areaTriangulo = (base*height)/2;
-  return areaTriangulo 
+  return areaTriangulo; 
 }
 
 console.log(calcArea(4.1,2.5))
 
+
+
+
+
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
+  return str.split(" ");  
 }
+
+console.log(splitSentence("ola trybe"))
+
+
+
+function splitSent() {
+  var str = "go trybe";
+  var res = str.split(" ");
+  return res;
+}
+
+  console.log(splitSent())
+
+
 
 // Desafio 4
 function concatName() {
