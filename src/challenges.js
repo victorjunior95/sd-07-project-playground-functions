@@ -2,14 +2,14 @@
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
     return true
-  } else if (bool1 === false || bool2 === false){
+  } else {
     return false
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2
+  return (base * height) / 2
 }
 
 // Desafio 3
@@ -18,8 +18,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  output = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}` 
+  return output
 }
 
 // Desafio 5
