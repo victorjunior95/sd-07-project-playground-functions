@@ -45,16 +45,33 @@ let vitorias = 5;
 let empates = 10;
 
 function footballPoints(wins, ties) {
-  totalPontos = (wins * 3) + ties;
+  let totalPontos = (wins * 3) + ties;
   return totalPontos;
 }
 
 console.log(footballPoints(vitorias, empates));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+let numeros = [9, 1, 2, 3, 9, 5, 7];
+
+function highestCount(listaNumeros) {
+  let qtdRepeticao = 0;
+  for (let i = 0; i < listaNumeros.length; i+= 1) {
+    let num = listaNumeros[i];
+    let qtdRepeticaoAtual = 0;
+    for (let j = 0; j < listaNumeros.length; j+= 1) {
+      if (num === listaNumeros[j]) {
+        qtdRepeticaoAtual += 1;
+      }
+    }
+    if (qtdRepeticaoAtual > qtdRepeticao) {
+      qtdRepeticao = qtdRepeticaoAtual;
+    }
+  }
+  return qtdRepeticao
 }
+
+console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse() {
