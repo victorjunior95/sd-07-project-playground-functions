@@ -1,10 +1,10 @@
 // Desafio 1
-function compareTrue(param1, param2) {
-  param1 = true;
-  param2 = true;
-  if(param1 == true && param2 == true) {
+function compareTrue() {
+  if(compareTrue[0] == true && compareTrue[1] == true) {
     return true;
-  } else if (param1 == false && param2 == false) {
+  } else if (compareTrue[0] == false && compareTrue[1] == false) {
+    return false;
+  } else {
     return false;
   }
 }
@@ -26,11 +26,10 @@ function concatName(array) {
   array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
   let resultado = (`${array[array.length - 1]}, ${array[0]}`)
   return resultado;
-} console.log(concatName)
+} console.log(concatName())
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  wins = 3, ties = 1;
   let pontos = (wins * 3) + (ties);
   return pontos;
 }
