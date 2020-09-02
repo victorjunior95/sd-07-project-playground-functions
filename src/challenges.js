@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(bool1, bool2) {
   let boolR = false;
   if (bool1 && bool2) {
     boolR = true;
@@ -8,12 +8,12 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   return ((base * height) / 2);
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   let palavra = '';
   let arrayPalavras = [];
   for (let i in frase) {
@@ -29,13 +29,13 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (3 * wins) + ties;
 }
 
 // Desafio 6
