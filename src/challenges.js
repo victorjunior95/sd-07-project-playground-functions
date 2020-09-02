@@ -189,20 +189,37 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  let novoArray = [];
-  for (let i in array) {
-    novoArray[i] = {
-      tech: array[i],
-      name: name,
-    };
+  if (array == []) {
+    return "Vazio!";
+  } else {
+    let novoArray = [];
+    for (let i in array) {
+      novoArray[i] = {
+        tech: array[i],
+        name: name,
+      };
+    }
+
+    function compare(a, b) {
+      if (a.tech < b.tech) {
+        return -1;
+      }
+      if (a.tech > b.tech) {
+        return 1;
+      }
+      return 0;
+    }
+
+    novoArray.sort(compare);
+
+    return novoArray;
   }
-  return novoArray;
 }
 
 // --------------------TESTE DESAFIO 10--------------------------------
-let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let teste1 = "Lucas";
-console.log(techList(teste, teste1));
+// let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let teste1 = "Lucas";
+// console.log(techList(teste, teste1));
 // -------------------------------------------------------------------
 
 // Desafio 11
