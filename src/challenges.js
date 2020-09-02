@@ -21,9 +21,18 @@ function calcArea(base, height) {
 console.log(calcArea(base, height));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+const splitPhrase = "go Trybe"
+let aux = '';
+
+function splitSentence(split) {
+  let stringForArray = [];
+  for (i in split + 1) {   // + 1 para não cortar a última letra na condicional (último push)
+    (split[i] == " ") || (split.length == i) ? (stringForArray.push(aux)) && (aux = '') : aux += split[i];
+  }
+  return stringForArray;
 }
+
+console.log(splitSentence(splitPhrase));
 
 // Desafio 4
 function concatName() {
