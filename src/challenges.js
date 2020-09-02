@@ -22,8 +22,11 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-    // seu código aqui
+function concatName(array) {
+    let primeiro = array[0];
+    let ultimo = array[array.length - 1];
+
+    return `${lastItem}, ${firstItem}`
 }
 
 // Desafio 5
@@ -43,8 +46,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-    // seu código aqui
+function fizzBuzz(array) {
+    for (i = 0; i < array.lenght; i++) {
+        if (array[i] % 3 == 0 && array[i] % 5 == 0)
+            console.log("fizzbuzz");
+
+        else if (array[i] % 5 == 0)
+            console.log("buzz");
+
+        else if (array[i] % 3 == 0)
+            console.log("fizz");
+
+        else
+            console.log("bug!");
+    }
 }
 
 // Desafio 9
@@ -57,8 +72,17 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-    // seu código aqui
+function techList(list) {
+    for (i = 0; i < list.lenght; i++) {
+        function Tech(list[i], name) {
+            this.tech: "NomeTech",
+
+        }
+
+
+
+    }
+
 }
 
 // Desafio 11
