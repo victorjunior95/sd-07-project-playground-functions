@@ -91,9 +91,10 @@ function decode() {
 
 function techList(tec, name) {
   // seu código aqui
+  let tecnos = tec.sort();
   let tecnologies = []; 
   if(tec.length > 0){
-    for(i = 0; i < tec.length; i += 1){
+    for(i = 0; i < tecnos.length; i += 1){
       tecnologies.push({tech: tec[i], name: name})
     }
   } else {
