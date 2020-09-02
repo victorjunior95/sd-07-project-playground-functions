@@ -159,7 +159,9 @@ function decode(arrayString) {
 function techList(arrayList, name) {
 
     let saida = [];
-
+    if(arrayList.length <= 0){
+      return 'Vazio!';
+    }
     for (let indice in arrayList) {
 
         saida.push({
@@ -179,6 +181,7 @@ function techList(arrayList, name) {
 
     return saida;
 }
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
