@@ -153,8 +153,11 @@ function hydrate(frase) {
     let num = parseInt(resultado[i]);
     contador+=num;
   }
-  return contador+" copos de água";
+  if(contador==1){return contador+" copo de água";}
+  else{return contador+" copos de água";
 }
+}
+console.log(hydrate("1 cerveja"));
 
 module.exports = {
   calcArea,
