@@ -57,9 +57,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCatUm = cat1 - mouse;
   let distanciaCatDois = cat2 - mouse;
   if (distanciaCatUm < distanciaCatDois) {
-    return cat1;
+    return "cat1";
   } else if (distanciaCatUm > distanciaCatDois) {
-    return cat2;
+    return "cat2";
   }
 }
 
@@ -67,16 +67,17 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resultado = [];
   for (i in array) {
-    if ((array % 3) == 0 && (array[i] % 5) == 0) {
+    if (((array[i] % 3) == 0) && ((array[i] % 5) == 0)) {
       resultado.push("fizzBuzz");
-    } else if ((array % 3) == 0) {
+    } else if ((array[i] % 3) == 0) {
       resultado.push("fizz");
-    } else if ((array % 5) == 0) {
+    } else if ((array[i] % 5) == 0) {
       resultado.push("buzz");
     } else {
       resultado.push("bug!");
     }
   }
+  return resultado;
 }
 
 // Desafio 9
