@@ -98,7 +98,7 @@ function fizzBuzz(arrayNumbers) {
           resultado[i] = 'buzz';
       } else {
 
-          resultado[i] = 'bug';
+          resultado[i] = 'bug!';
       }
   }
 
