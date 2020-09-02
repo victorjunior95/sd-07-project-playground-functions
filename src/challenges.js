@@ -17,8 +17,12 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arraysname) {
   // seu código aqui
+  const firstPos = arraysname[0];
+  const secondPos = arraysname[arraysname.lenght - 1];
+  const final = firstPos + ', ' + secondPos;
+  return final;
 }
 
 // Desafio 5
