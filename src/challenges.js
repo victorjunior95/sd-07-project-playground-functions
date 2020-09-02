@@ -46,10 +46,10 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let answer = []
   for (let i in numbers) {
-    if((numbers[i] % 3 === 0) && (numbers[i] % 5 === 0)) answer.push('fizzBuzz');
-    if((numbers[i] % 3 === 0) && (numbers[i] % 5 != 0)) answer.push('fizz');
-    if((numbers[i] % 3 != 0) && (numbers[i] % 5 === 0)) answer.push('buzz');
-    if((numbers[i] % 3 != 0) && (numbers[i] % 5 != 0)) answer.push('bug!');
+    if ((numbers[i] % 3 === 0) && (numbers[i] % 5 === 0)) answer.push('fizzBuzz');
+    else if (numbers[i] % 3 === 0) answer.push('fizz');
+    else if (numbers[i] % 5 === 0) answer.push('buzz');
+    else answer.push('bug!');
   }
   return answer;
 }
