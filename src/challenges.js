@@ -82,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-console.log(catAndMouse(30, 22, 4))
+
 // Desafio 8
 function fizzBuzz(num) {
   let numbers = num;
@@ -107,11 +107,50 @@ function fizzBuzz(num) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavras) {
+  let vogais = {
+    a : 1,
+    e : 2,
+    i : 3,
+    o : 4,
+    u : 5
+  }
+  let frase = palavras;
+  let igual = [];
+  for (let j = 0; j < frase.length; j += 1) {
+    igual.push(frase[j]);
+  }
+  for (let key in vogais) {
+    for (let j = 0; j < igual.length; j += 1) {
+      if (key === igual[j]) {
+        igual[j] = vogais[key];
+      }
+    }
+  }
+  return igual.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(palavras) {
+  let vogais = {
+    1 : 'a',
+    2 : 'e',
+    3 : 'i',
+    4 : 'o',
+    5 : 'u'
+  }
+  let frase = palavras;
+  let igual = [];
+  for (let j = 0; j < frase.length; j += 1) {
+    igual.push(frase[j]);
+  }
+  for (let key in vogais) {
+    for (let j = 0; j < igual.length; j += 1) {
+      if (key === igual[j]) {
+        igual[j] = vogais[key];
+      }
+    }
+  }
+  return igual.join('');
 }
 
 // Desafio 10
