@@ -74,9 +74,24 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(name) {
+  encrypt = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }
+
+  let encodeName = "";
+
+  for (letter in name){
+    encodeName += encrypt[name[letter]] ?? name[letter];
+  }
+
+  return encodeName;
 }
+
 function decode() {
   // seu código aqui
 }
