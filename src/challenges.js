@@ -50,10 +50,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(lista) {
   let fizzOrBuzz = [];
   for (let i = 0; i < lista.length; i += 1){
-    if ((lista[i] % 3 === 0) && (lista[i] % 5 !== 0)) fizzOrBuzz[i] = 'fizz';
-    else if ((lista[i] % 3 !== 0) && (lista[i] % 5 === 0)) fizzOrBuzz[i] = 'buzz'
-    else if ((lista[i] % 3 === 0) && (lista[i] % 5 === 0)) fizzOrBuzz[i] = 'fizzBuzz'
-    else fizzOrBuzz[i] = 'bug!'
+    if ((lista[i] % 3 === 0) && (lista[i] % 5 !== 0)) {
+      fizzOrBuzz[i] = 'fizz';}
+    else if ((lista[i] % 3 !== 0) && (lista[i] % 5 === 0)) {
+      fizzOrBuzz[i] = 'buzz';}
+    else if ((lista[i] % 3 === 0) && (lista[i] % 5 === 0)) {
+      fizzOrBuzz[i] = 'fizzBuzz';
+    }
+    else fizzOrBuzz[i] = 'bug!';
   }
   return fizzOrBuzz;
 }
