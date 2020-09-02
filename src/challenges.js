@@ -78,6 +78,7 @@ function fizzBuzz(numbers) {
       newArray.push('bug!');
     }
   }
+  return newArray;
 }
 
 fizzBuzz([2, 15, 7, 9, 45]);
