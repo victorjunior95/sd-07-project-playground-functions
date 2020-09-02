@@ -4,7 +4,8 @@ let b= false;
 function compareTrue(a, b) {
   // seu código aqui
   let resultado = a && b;
-  return console.log(resultado);
+  // return console.log(resultado);
+  return resultado;
 }
 compareTrue(a,b);
 
