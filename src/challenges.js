@@ -11,8 +11,6 @@ function compareTrue(){
   }
   return podeBanhar;
 }
-console.log(compareTrue());
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
@@ -21,8 +19,6 @@ function calcArea() {
   let area = (base*height)/2;
   return area;
 }
-console.log(calcArea());
-
 // Desafio 3
 function splitSentence() {
   // seu código aqui
@@ -30,7 +26,6 @@ let frase = "Dia de festa";
 let resultado = frase.split(" ");
 return resultado;
 }
-console.log(splitSentence());
 // Desafio 4
 function concatName() {
   // seu código aqui
@@ -42,8 +37,6 @@ for(let count in frase){
 }
 return resultado;
 }
-console.log(concatName());
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
@@ -52,8 +45,6 @@ function footballPoints() {
   let totalPoints = (wins*3) + ties;
   return totalPoints
 }
-console.log(footballPoints());
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
@@ -72,8 +63,6 @@ for(let count in highestCount){
 }
 return result;
 }
-console.log(highestCount());
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
@@ -89,8 +78,6 @@ if(cat1Distance<cat2Distance){
 }
 return "os gatos trombam e o rato foge";
 }
-console.log(catAndMouse());
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -109,8 +96,6 @@ let fizzBuzzReturn = [];
   }
   return fizzBuzzReturn;
 }
-console.log(fizzBuzz());
-
 // Desafio 9
 function encode() {
   // seu código aqui
