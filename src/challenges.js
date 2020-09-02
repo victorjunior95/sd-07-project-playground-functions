@@ -3,9 +3,8 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === b) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -15,8 +14,20 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let arrayString = [];
+  let palavraSeparada = "";
+  for (let i in string) {
+    if (string[i] != " ") {
+      palavraSeparada += string[i];
+    } else {
+      arrayString.push(palavraSeparada);
+      palavraSeparada = "";
+    }
+  }
+  arrayString.push(palavraSeparada);
+  return arrayString;
 }
 
 // Desafio 4
@@ -88,3 +99,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
+splitSentence("Eduardo Lima da Silva Souza");
