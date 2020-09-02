@@ -85,14 +85,14 @@ function fizzBuzz(vetor) {
   let vetorSaida = [];
 
   for (i = 0; i < array.length; i++) {
-    if (array[i] % 5 !== 0 && array[i] % 3 !== 0) {
-      vetorSaida.push("bug!");
-    } else if (array[i] % 5 == 0 && array[i] % 3 == 0) {
+    if (array[i] % 5 === 0 && array[i] % 3 === 0) {
       vetorSaida.push("fizzBuz");
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       vetorSaida.push("buzz");
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       vetorSaida.push("fizz");
+    } else {
+      vetorSaida.push("bug!");
     }
   }
 
@@ -108,8 +108,16 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let arrayHabilidades = array;
+  let arraySaida = [];
+  let nome = name;
+
+  for (let i in array) {
+    let habilidade = new Object();
+    habilidade.tech = array[i];
+    habilidade.name = nome;
+  }
 }
 
 // Desafio 11
