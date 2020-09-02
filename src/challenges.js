@@ -1,5 +1,9 @@
 // Desafio 1
-let bool1 = false;
+//Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
+
+//Retorne true se ambos os valores são verdadeiros;
+//Retorne false se um ou ambos os parâmetros forem falsos.
+let bool1 = true;
 let bool2 = false;
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true){
@@ -12,9 +16,14 @@ let function1 = compareTrue(bool1, bool2);
 console.log(function1);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+//Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+let base = 3;
+let height = 5;
+function calcArea(base, height) {
+  return (base*height)/2;  
 }
+let area = calcArea(base, height);
+console.log(area);
 
 // Desafio 3
 function splitSentence() {
