@@ -85,7 +85,7 @@ function catAndMouse(mouse,cat1,cat2) {
   let c="os gatos trombam e o rato foge"
   if (cat1>cat2)
   {
-    return("cat2");
+    return(cat2);
   }
   else
   {
@@ -95,7 +95,7 @@ function catAndMouse(mouse,cat1,cat2) {
     }
     else
     {
-      return("cat1");
+      return(cat1);
     }
   }
 }
