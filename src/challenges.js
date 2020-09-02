@@ -86,23 +86,71 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let newStr = '';
+  for (let key in str) {
+    switch(str[key]) {
+      case 'a':
+        newStr += '1'
+        break;
+      case 'e':
+        newStr += '2'
+        break;
+      case 'i':
+        newStr += '3'
+        break;
+      case 'o':
+        newStr += '4'
+        break;
+      case 'u':
+        newStr += '5'
+        break;
+      default:
+        newStr += str[key];
+        break;
+    }
+  }
+  return newStr;
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let newStr = '';
+  for (let key in str) {
+    switch(str[key]) {
+      case '1':
+        newStr += 'a'
+        break;
+      case '2':
+        newStr += 'e'
+        break;
+      case '3':
+        newStr += 'i'
+        break;
+      case '4':
+        newStr += 'o'
+        break;
+      case '5':
+        newStr += 'u'
+        break;
+      default:
+        newStr += str[key];
+        break;
+    }
+  }
+  return newStr;
 }
 
 // Desafio 10
-function techList(arr) {
+function techList(arr, name) {
+  if (arr.length === 0) {
+    return 'Vazio!';
+  }
   const sortByName = (a, b) => {
     if (a > b) {
       return 1;
-    } else if (a < b){
+    } else if (a < b) {
       return -1;
-    } else {
-      return 0;
     }
+    return 0;
   }
   let sortedArray = arr.sort(sortByName);
   let newArray = [];
