@@ -27,12 +27,16 @@ function calcArea(base, height) {
     return "Digite um valor válido"
   }
 }
-console.log(calcArea(4, 5));
+//console.log(calcArea(4, 5));
 
 // Desafio 3
-function splitSentence() {
+let str = "go Trybe";
+function splitSentence(str) {
   // seu código aqui
+  let res = str.split (/[ ,]+/);
+  return res
 }
+console.log(splitSentence(str));
 
 // Desafio 4
 function concatName() {
