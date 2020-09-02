@@ -52,13 +52,13 @@ function fizzBuzz(arr) {
   let numbersArr = [];
 for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
-     numbersArr.push("fizzbuzz")
+     numbersArr[i] = "fizzbuzz"
 } else if (arr[i] % 3 == 0) {
-   numbersArr.push("fizz") 
+  numbersArr[i] = "fizz" 
 } else if(arr[i] % 5 == 0) {
-    numbersArr.push("buzz")
+  numbersArr[i] = "buzz"
 } else {
-    numbersArr.push("bug!")
+  numbersArr[i] = "bug!"
 }
 }
 return numbersArr
