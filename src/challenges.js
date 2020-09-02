@@ -3,27 +3,27 @@
 
 // Desafio 1
 function compareTrue(value1, value2) {
-  return (value1 && value2)
+  return (value1 && value2);
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2
+  return (base*height)/2;
 }
 
 // Desafio 3
 function splitSentence(originalString) {
-  return originalString.split(' ')
+  return originalString.split(' ');
 }
 
 // Desafio 4
 function concatName(originalArray) {
-  return originalArray[originalArray.length - 1] + ", " + originalArray[0]
+  return originalArray[originalArray.length - 1] + ", " + originalArray[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3) + ties;
 }
 
 // Desafio 6
