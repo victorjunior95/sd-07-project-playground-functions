@@ -137,9 +137,22 @@ function decode(arraydeconde) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech) {
+  let arrayreturn = [];
+  let name = "leonnardo"
+  for ( key in tech)
+  arrayreturn.push({
+    tech: tech[key],
+    name: name}
+  )
+  // nessa parte do código que faço ele ordenar a os objetos no array
+  // essa parte do código ficou confuso, achei a solução no link em :
+  // "https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/" mas não ficou claro
+  arrayreturn.sort((a,b) => (a.tech > b.tech) ? 1 : -1);
+  return arrayreturn
 }
+
+console.log(techList(["macarrão","css","mandioca","amendoim","andy a fofinha maioral"]))
 
 // Desafio 11
 function generatePhoneNumber() {
