@@ -21,8 +21,6 @@ function splitSentence(word) {
   
   return result;
 }
-let word = "tentativa de separar"
-console.log(splitSentence(word))
 
 // Desafio 4
 function concatName() {
