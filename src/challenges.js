@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 == "true" && boolean2 == "true") {
-    return "true";
+  if (boolean1 == true && boolean2 == true) {
+    return true;
   } else {
-    return "false";
+    return false;
   }
 }
 
@@ -36,10 +36,24 @@ function splitSentence(string) {
 // console.log(splitSentence(teste));
 // -------------------------------------------------------------------
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 4 ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'],
+function concatName(array) {
+  let novoArray = [];
+  for (let i = array.length - 1; i >= 0; i -= 1) {
+    if (i == array.length - 1){
+      novoArray.push(array[i]);
+    }
+    if(i == 0){
+      novoArray.push(array[i]);
+    }
+  }
+  return novoArray;
 }
+
+// --------------------TESTE DESAFIO 4--------------------------------
+// let teste = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// console.log(concatName(teste));
+// -------------------------------------------------------------------
 
 // Desafio 5
 function footballPoints() {
