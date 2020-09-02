@@ -19,8 +19,11 @@ function splitSentence(a) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let n = array.length -1;
+    let a = array[n]; 
+    let b = array[0]
+    return concatName = (`${a}, ${b}`)
 }
 
 // Desafio 5
