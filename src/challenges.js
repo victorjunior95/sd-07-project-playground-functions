@@ -20,14 +20,15 @@ function splitSentence(phrase) {
 function concatName(arraysname) {
   // seu código aqui
   const firstPos = arraysname[0];
-  const finalPos = arraysname[arraysname.lenght - 1];
+  const finalPos = arraysname[arraysname.length - 1];
   const final = finalPos + ', ' + firstPos;
   return final;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
