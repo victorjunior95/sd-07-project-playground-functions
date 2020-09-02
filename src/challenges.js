@@ -113,8 +113,18 @@ function decode(sentence) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, theName) {
+  let structuredArray = [];
+  let structureObjects = {};
+  if (array === '') {
+    return 'Vazio!';
+  } else {
+    for (let tech in array) {
+      structureObjects = { tech: `${array[tech]}`, name: `${theName}`};
+      structuredArray.push(structureObjects);
+    }
+  }
+  return structuredArray;
 }
 
 // Desafio 11
