@@ -74,15 +74,18 @@ highestCount([9, 1, 2, 3, 9, 5, 7]);
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
+  
+  let unidadeCat1 = Math.abs(distanceCat1);
+  let unidadeCat2 = Math.abs(distanceCat2)
 
-  if (distanceCat1 < distanceCat2) {
-    return "cat1";
+  if (unidadeCat1 === unidadeCat2) {
+    return "os gatos trombam e o rato foge";
   }
-  else if (distanceCat2 < distanceCat1){
+  else if (unidadeCat2 < unidadeCat1){
     return "cat2";
   }
   else {
-    return "os gatos trombam e o rato foge";
+    return "cat1";
   }
 }
 
