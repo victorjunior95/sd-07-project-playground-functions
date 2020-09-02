@@ -1,21 +1,35 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(par, par1) {
+  // Função opedor de lógico 
+  if(par == true && par1 == TRUE){
+    return true
+  }else{
+    return false
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  // Função que calcula a área
+  let area = (base*height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  // Função separa frases em palavras
+  let result = text.split(" ");
+
+  return result;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArray) {
+  // Função concatena 2 stings
+  let concStr = [...strArray].shift();
+  let concStr2 = [...strArray].pop();
+
+  return `${concStr2}, ${concStr}`;
 }
 
 // Desafio 5
