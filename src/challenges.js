@@ -158,16 +158,23 @@ function techList(tech, name) {
   let stack = tech;
   let nome = name;
   let result = [];
-  for (let valor of stack){
-    let objeto = {
-      tech: valor,
-      name: nome
-    }
-    result.push(objeto);
+  let vazio = "";
+  if (stack.length === 0) {
+    vazio = "Vazio!";
+    return vazio;
+  }else {
+    stack.sort();
+    for (let valor of stack){
+      let objeto = {
+        tech: valor,
+        name: nome
+      }
+      result.push(objeto);
+    }  
   }
   return result;
 }
-
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
