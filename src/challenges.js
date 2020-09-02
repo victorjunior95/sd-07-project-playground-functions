@@ -60,8 +60,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(array) {
+  for (key in array) {
+    if (array[key] % 3 == 0 && array[key] % 5 == 0) {
+      array[key] = "fizzBuzz";
+    } else {
+        if (array[key] % 3 == 0) {
+        array[key] = "fizz";
+      } else if (array[key] % 5 == 0) {
+        array[key] = "buzz";
+      } else {
+        array[key] = "bug!";
+      }
+    }
+  }
+  return array;
 }
 
 // Desafio 9
