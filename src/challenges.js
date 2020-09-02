@@ -124,12 +124,10 @@ function techList(array, nome) {
   } else {
     for (obj in array) {
       array[obj] = new Object(array[obj])
-    }
-    for (obj in array) {
       array[obj].name = nome 
-      return array
     }
   }
+  return array
 }
 
 // Desafio 11
