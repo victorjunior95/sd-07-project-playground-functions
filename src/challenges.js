@@ -20,8 +20,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  arrayReverse = array.reverse();
+  arrayLastFirst = [arrayReverse[0], arrayReverse[array.length-1]];
+  return arrayLastFirst;
 }
 
 // Desafio 5
