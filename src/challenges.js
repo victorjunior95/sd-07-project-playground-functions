@@ -161,8 +161,6 @@ function decode(textDecode) {
   return decoding;
 }
 
-console.log(decode('h3 th2r2!'))
-
 // Desafio 10
 function techList(techNames, name) {
   // seu código aqui
@@ -178,8 +176,23 @@ function techList(techNames, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  // return phone number formated
+
+  let phoneFormated = '(';
+  for(let pos in phoneNumber){
+    if(pos >= 0 && pos <= 1){
+      phoneFormated += phoneNumber[pos];
+      if(pos == 1) phoneFormated += ') ';
+    }else if(pos >= 2 && pos <= 6){
+      phoneFormated += phoneNumber[pos];
+      if(pos == 6) phoneFormated += '-';
+    }else if(pos >= 7 && pos <= 10){
+      phoneFormated += phoneNumber[pos];
+    }
+  }
+
+  return phoneFormated;
 }
 
 // Desafio 12
