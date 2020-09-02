@@ -3,29 +3,43 @@ function compareTrue(value1, value2) {
   result = value1 && value2;
   return result;
 }
-
 // Desafio 2
 function calcArea(base, height) {
   result = (base * height) / 2;
   return result;
 }
-calcArea(5, 2)
-console.log(result)
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+/*
+// Desafio 3 << Falta fazer.
+function splitSentence(value) {
+  valueArray = value.split(" ")
 }
-
+splitSentence("Teste", "Oi")
+console.log(valueArray)
+*/
+/*
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  firstItem = array[0];
+  lastItem = array[-1];
+  resultItem = firstItem + lastItem;
 }
-
+console.log(resultItem)
+concatName("Teste", "testei")
+*/
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  points = 0;
+  eachWin = 3;
+  eachTies = 1;
+  for ( i = 0; i < wins; i += 1) {
+    points += eachWin;
+  }
+  for ( i = 0; i < ties; i += 1) {
+    points += eachTies;
+  }
+  return points;
 }
-
+/*
 // Desafio 6
 function highestCount() {
   // seu código aqui
@@ -86,3 +100,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+*/
