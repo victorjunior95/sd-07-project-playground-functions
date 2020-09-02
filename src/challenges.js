@@ -1,3 +1,14 @@
+//Função Auxiliar
+function somaRepeat(array, pos) {
+  let soma = 0;
+  for (let i in array) {
+    if (array[pos] === array[i]) {
+      soma += 1;
+    }
+  }
+  return soma;
+}
+
 // Desafio 1
 function compareTrue(bool1, bool2) {
   let boolR = false;
@@ -39,11 +50,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array, pos) {
-  let soma = 0;
-  for (let i in array) {
-    if (array[pos] === array[i]) {
-      soma += 1;
+function highestCount(array) {
+  let posMaisF = 0;
+  let somaMaisF = somaRepeat(array, posMaisF);
+  let posAtual = posMaisF + 1;
+  let somaAtual = 0;
+  for (posAtual; posAtual < array.length; posAtual += 1) {
+    somaAtual = somaRepeat(array, posAtual);
+    if (somaAtual > somaMaisF) {
+      posMaisF = posAtual;
+      somaMaisF = somaAtual;
     }
   }
   return soma;
