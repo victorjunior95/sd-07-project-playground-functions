@@ -31,8 +31,14 @@ let primeiro = [];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontosDeVitoria= "";
+  let pontosDeEmpate= "";
+let totalDePontosDoTime= "";
+pontosDeVitoria= wins*3;
+    pontosDeEmpate= ties*1;
+    totalDePontosDoTime= pontosDeVitoria + pontosDeEmpate;
+    return totalDePontosDoTime
 }
 
 // Desafio 6
