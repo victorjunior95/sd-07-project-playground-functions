@@ -1,11 +1,7 @@
 // Desafio 1
 function compareTrue() {
-  if(compareTrue[0] == true && compareTrue[1] == true) {
-    return true;
-  } else if (compareTrue[0] == false && compareTrue[1] == false) {
-    return false;
-  }
-} console.log(compareTrue())
+  // seu código aqui
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -20,11 +16,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() { // CORRIGIR
-  
-  let resultado = (`${array[array.length - 1]}, ${array[0]}`)
-  return resultado;
-} console.log(concatName())
+function concatName() {
+  // seu código aqui
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -38,8 +32,14 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse > cat2 - mouse) {
+    return cat1;
+  } else if (cat1 == cat2) {
+    return "os gatos trombam e o rato foge";
+  } else {
+    return cat2;
+  }
 }
 
 // Desafio 8
