@@ -13,28 +13,38 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let total = (base * height) / 2
-  return total
+  let total = (base * height) / 2;
+  return total;
 }
 
 // Desafio 3
 function splitSentence(trybe) {
   // seu código aqui
-  trybeSplit = trybe.split(" ");
+  let trybeSplit = trybe.split(" ");
   return trybeSplit;
 }
 
 // Desafio 4
 function concatName(nameArray) {
   // seu código aqui
-  let newArray = `${nameArray[nameArray.length - 1]}, ${nameArray[0]}`
-  return newArray.toString()
+  let newArray = `${nameArray[nameArray.length - 1]}, ${nameArray[0]}`;
+  return newArray.toString();
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let totalPoints = 0;
+  let pointsForWin = 3;
+  if (wins > 0) {
+    for (i = 1; i <= wins; i += 1) {
+      totalPoints = totalPoints += pointsForWin;
+    }
+  }
+  totalPoints = totalPoints += ties
+  return totalPoints;
 }
+console.log(footballPoints(0, 3));
 
 // Desafio 6
 function highestCount() {
