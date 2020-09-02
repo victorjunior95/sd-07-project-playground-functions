@@ -67,12 +67,49 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode() {
-  // 
+function encode(string) {
+  new_string = string.split('')
+  for (let i = 0; i < new_string.length; i++){
+    if (new_string[i] === "a"){
+      new_string[i] = 1
+    }
+    else if (new_string[i] === "e"){
+      new_string[i] = 2
+    }
+    else if (new_string[i] === "i"){
+      new_string[i] = 3
+    }
+    else if (new_string[i] === "o"){
+      new_string[i] = 4
+    }
+    else if (new_string[i] === "u"){
+      new_string[i] = 5
+    }
+  }
+  return new_string.join('')
 }
 
-function decode() {
-  // 
+
+function decode(string) {
+  new_string = string.split('')
+  for (let i = 0; i < new_string.length; i++){
+    if (new_string[i] == 1){
+      new_string[i] = "a"
+    }
+    else if (new_string[i] == 2){
+      new_string[i] = "e"
+    }
+    else if (new_string[i] == 3){
+      new_string[i] = "i"
+    }
+    else if (new_string[i] == 4){
+      new_string[i] = "o"
+    }
+    else if (new_string[i] == 5){
+      new_string[i] = "u"
+    }
+  }
+  return new_string.join('')
 }
 
 // Desafio 10
