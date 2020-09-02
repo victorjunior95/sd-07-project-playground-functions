@@ -54,7 +54,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
 
     let highest = 0;
-    let repetition = 1;
+    let repetition = 0;
     let numbers2 = numbers;
 
     for (let i = 0; i < numbers.length; i += 1) {
@@ -72,9 +72,9 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    if (cat1 > cat2) {
 
-    }
+    let distanceCat1 = 0;
+    let distanceCat2 = 0;
 }
 
 // Desafio 8
