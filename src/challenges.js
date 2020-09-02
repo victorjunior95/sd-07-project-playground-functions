@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
     if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
       return 'cat2';
     }else{
-      return "Os gatos trombam e o rato foge";
+      return "os gatos trombam e o rato foge";
   }
 }
 
@@ -82,8 +82,8 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(strings) {
+
 }
 function decode() {
   // seu código aqui
