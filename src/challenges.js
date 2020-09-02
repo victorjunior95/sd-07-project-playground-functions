@@ -10,15 +10,15 @@ function compareTrue(valorA, valorB) {
 console.log(compareTrue(a, b));
 
 // Desafio 2
-let base = 10;
-let altura = 8;
+let baseTriangulo = 10;
+let alturaTriangulo = 8;
 
 function calcArea(base, height) {
   let triangleArea = (base * height) / 2;
   return triangleArea;
 }
 
-console.log(calcArea(base, altura));
+console.log(calcArea(baseTriangulo, alturaTriangulo));
 
 // Desafio 3
 function splitSentence() {
