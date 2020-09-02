@@ -1,6 +1,11 @@
 // Desafio 1 qq
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor1,valor2) {
+    // seu código aqui
+    if(valor1 && valor2){
+        return true;
+    } else{
+        return false;
+    }
 }
 
 // Desafio 2
