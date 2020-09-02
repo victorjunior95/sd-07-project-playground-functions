@@ -89,21 +89,20 @@ function encode(frase) {
   return frase;
 }
 
-function decode(frase_estranha) {
-  frase_estranha = frase_estranha.toLowerCase();
+function decode(fraseEstranha) {
   let trocasAto1 = {
-    '1': 'a', '2': 'e',
-    '3': 'i', '4': 'o',
-    '5': 'u'
+    1: 'a', 2: 'e',
+    3: 'i', 4: 'o',
+    5: 'u'
   };
-  for (let i = 0; i < frase_estranha.length; i += 1) {
+  for (let i = 0; i < fraseEstranha.length; i += 1) {
     for (const j in trocasAto1) {
-      if (frase_estranha[i] === j) {
-        frase_estranha = frase_estranha.replace(frase_estranha[i], trocasAto1[j]);
+      if (fraseEstranha[i] === j) {
+        fraseEstranha = fraseEstranha.replace(fraseEstranha[i], trocasAto1[j]);
       }
     }
   }
-  return frase_estranha;
+  return fraseEstranha;
 }
 
 // Desafio 10
@@ -123,9 +122,10 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate() {
-  
+
 }
 
+console.log(decode('KMKDD v1545dd'));
 module.exports = {
   calcArea,
   catAndMouse,
