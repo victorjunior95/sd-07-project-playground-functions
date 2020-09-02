@@ -44,12 +44,17 @@ function concatName(array) {
   string = array[ultimaPosicaoDaArray] + ", " + array[0];
   return string;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let pontosVitorias = wins*3;
+  let pontosEmpates = ties;
+  let pontosCampeonato = pontosVitorias + pontosEmpates;
+
+  return pontosCampeonato;
 }
+//console.log(footballPoints(5,2));
 
 // Desafio 6
 function highestCount() {
