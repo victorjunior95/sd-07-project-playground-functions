@@ -218,7 +218,7 @@ function triangleCheck(lineA,lineB,lineC) {
   }
   // seu código aqui
 }
-console.log(triangleCheck(10,4,6))
+//console.log(triangleCheck(10,4,6))
 
 // Desafio 13
 function hydrate(bebidas) {
@@ -228,12 +228,11 @@ let total=0;
 for (let i in matches){
   total+= parseInt(matches[i]);
 }
-let saida = total + " copos de água"
-console.log(saida);
-return (saida);
+
+return (total + " copos de água");
 }
 
-console.log(hydrate('3 cervejas e 5 vinhos'))
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 module.exports = {
   calcArea,
   catAndMouse,
