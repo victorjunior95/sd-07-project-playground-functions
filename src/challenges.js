@@ -95,9 +95,31 @@ function catAndMouse(mouse, cat1, cat2) {
   console.log(resultadoCaptura);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+//Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+
+//Para cada número da Array que seja divisível apenas por 3, apresente uma string "fizz";
+//Para cada número da Array que seja divisível apenas por 5, apresente uma string "buzz";
+//Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+//Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+
+function fizzBuzz(numerosFB) {
+  let arrayFizzBuzz = [];
+  for (i = 0; i < numerosFB.length; i += 1) {
+    if (numerosFB[i] % 3 == 0 && numerosFB[i] % 5 == 0) {
+      arrayFizzBuzz.push("fizzBuzz");
+    } else if (numerosFB[i] % 3 == 0) {
+      arrayFizzBuzz.push("fizz");
+    } else if (numerosFB[i] % 5 == 0) {
+      arrayFizzBuzz.push("buzz");
+    } else {
+      arrayFizzBuzz.push("bug!");
+    }
+  }
+  return arrayFizzBuzz;
 }
+let testeFizzBuzz = fizzBuzz([3, 8, 6, 5, 25, 7, 15, 24]);
+console.log(testeFizzBuzz);
+
 
 // Desafio 9
 function encode() {
