@@ -1,8 +1,6 @@
 // Desafio 1
-function compareTrue(valor1,valor2) {
-  
+function compareTrue(valor1, valor2) {
   let retorno = false;
-
   if (valor1 === true && valor2 === true) {
     retorno = true;
   } else {
@@ -13,41 +11,44 @@ function compareTrue(valor1,valor2) {
 
 
 // Desafio 2
-function calcArea(base,height) {
-  
+function calcArea(base, height) {
   let area = (base * height / 2);
-
   return area;
 }
 
 
 // Desafio 3
 function splitSentence(umaString) {
-    
   umArray = umaString.split(" ")
-
   return umArray;
 }
 
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  
-  let stringFinal = (arrayDeStrings[(arrayDeStrings.length-1)] +" , "+ arrayDeStrings[0])
-  
+  let stringFinal = (arrayDeStrings[(arrayDeStrings.length-1)] +", "+ arrayDeStrings[0])
   return stringFinal;
 }
 
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = ((3*wins) + ties);
+  rturn points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let numerosEmOrdem = numeros.sort();
+  let maiorNumero = numerosEmOrdem[numerosEmOrdem.length-1];
+  let rep = 0;
+  for (let i in numerosEmOrdem) {
+      if (numerosEmOrdem[i] === maiorNumero) {
+          rep += 1;
+      }
+  }
+  return rep;
 }
 
 // Desafio 7
