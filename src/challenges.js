@@ -26,7 +26,7 @@ function concatName(array) {
     let primeiro = array[0];
     let ultimo = array[array.length - 1];
 
-    return `${lastItem}, ${firstItem}`
+    return `${primeiro}, ${ultimo}`
 }
 
 // Desafio 5
