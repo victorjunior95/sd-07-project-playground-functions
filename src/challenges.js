@@ -19,23 +19,59 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(ArrayStrings) {
+  let fimComeco = ArrayStrings[ArrayStrings.length - 1] + ' , ' + ArrayStrings[0]
+  return fimComeco
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let pontos = 0
+  let vitorias = wins*3
+  let empates = ties*1
+  if(vitorias > 0 ){
+    pontos += vitorias
+  if(empates > 0){
+    pontos += empates
+  }
+  
+  }
+  return pontos
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maior = 0
+  let maiorNumero = 0
+  let contador = 0
+  for(let i = 0 ; i <= numeros.length ; i += 1){
+    if(numeros[i] > numeros[maior]){
+      maior = i  
+    } 
+  }
+  maiorNumero = numeros[maior]
+  for(valor in numeros){
+      if(numeros[valor] == maiorNumero){
+          contador += 1
+      }
+  }
+
+  return contador
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let posicaoCat1 = mouse - cat1
+  let posicaoCat2 = mouse - cat2//maior posição mais longe estara
+  if (posicaoCat1 > posicaoCat2){
+      return "cat2"
+  }
+  if(posicaoCat2 > posicaoCat1){
+      return "cat1"
+  }
+  else{
+      console.log("os gatos trombam e o rato foge")
+  }
 }
 
 // Desafio 8
