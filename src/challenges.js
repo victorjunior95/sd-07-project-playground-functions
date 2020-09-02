@@ -17,9 +17,22 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(recebeString) {
   // seu código aqui
-  let stringA;
+  let posicaoDoEspaco = 0;
+  let palavraCortada;
+  let arrayParaImprimir = [];
 
-  return recebeString.split("");
+  for (let i = 0; i < recebeString.length; i += 1) {
+    if (recebeString[i] === " ") {
+      palavraCortada = recebeString.slice(posicaoDoEspaco, i);
+      arrayParaImprimir.push(palavraCortada);
+
+      posicaoDoEspaco = i;
+    }
+  }
+  palavraCortada = recebeString.slice(posicaoDoEspaco, recebeString.length);
+  arrayParaImprimir.push(palavraCortada);
+
+  return arrayParaImprimir;
 }
 
 // Desafio 4
@@ -57,9 +70,15 @@ function highestCount(arrayDeNumeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse) && Math.abs(cat1 - mouse) !== Math.abs(cat2 - mouse)) {
+  if (
+    Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse) &&
+    Math.abs(cat1 - mouse) !== Math.abs(cat2 - mouse)
+  ) {
     return "cat2";
-  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse) && Math.abs(cat1 - mouse) !== Math.abs(cat2 - mouse)) {
+  } else if (
+    Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse) &&
+    Math.abs(cat1 - mouse) !== Math.abs(cat2 - mouse)
+  ) {
     return "cat1";
   } else {
     return "os gatos trombam e o rato foge";
