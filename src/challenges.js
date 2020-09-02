@@ -19,8 +19,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let resp;
+  
+  resp= str.split(" "); // retira o espaço e retorna o resto em um array
+  return resp;
 }
 
 // Desafio 4
@@ -93,9 +96,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
- let resp=0;
- //resp = compareTrue(false, false);
- //console.log(resp);
-
- resp = calcArea(4,4);
- console.log(resp);
+ 
