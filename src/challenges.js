@@ -139,6 +139,8 @@ function decode(string) {
 function techList(tecnologias, nome) {
   let saida = [];
 
+  tecnologias = tecnologias.sort();
+
   if (tecnologias.length === 0) {
     saida = "Vazio!";
   } else {
