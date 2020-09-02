@@ -3,16 +3,17 @@ function compareTrue(a, b) {
   let resultado;
 
   if (a === b && a === true) {
-      resultado = true;
-    } else {
-      resultado = false;
-    }
+    resultado = true;
+  } else {
+    resultado = false;
+  }
   return resultado;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base*height)/2;
+  return area;
 }
 
 // Desafio 3
