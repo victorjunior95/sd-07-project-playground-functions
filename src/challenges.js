@@ -25,9 +25,11 @@ return guarda;
 function concatName(array) {
   let ultimo = [];
 let primeiro = [];
+let respostaFinal= "";
  ultimo=(array[array.length -1]);
              primeiro=(array[0])
-             return ultimo + " , " + primeiro
+             respostaFinal =(ultimo + " , " + primeiro);
+             return respostaFinal;
 }
 
 // Desafio 5
