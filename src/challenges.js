@@ -60,11 +60,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let successfulCatch;
 
   if (positionCat1 > positionCat2) {
-    successfulCatch = "cat2";
+    successfulCatch = 'cat2';
   } else if (positionCat2 > positionCat1) {
-    successfulCatch = "cat1";
+    successfulCatch = 'cat1';
   } else if (positionCat1 === positionCat2) {
-    successfulCatch = "os gatos trombam e o rato foge";
+    successfulCatch = 'os gatos trombam e o rato foge';
   }
 
   return successfulCatch;
@@ -73,24 +73,21 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(evenOddArray) {
   let divisible;
-  let divisibleBy3;
-  let divisibleBy5;
-  let indivisible;
   let array = [];
 
   for (let i in evenOddArray) {
     if (evenOddArray[i] % 3 === 0 && evenOddArray[i] % 5 === 0) {
-      divisible = "fizzBuzz";
+      divisible = 'fizzBuzz';
       array.push(divisible);
     } else if (evenOddArray[i] % 3 === 0) {
-      divisibleBy3 = "fizz";
-      array.push(divisibleBy3);
+      divisible = 'fizz';
+      array.push(divisible);
     } else if (evenOddArray[i] % 5 === 0) {
-      divisibleBy5 = "buzz";
-      array.push(divisibleBy5);
+      divisible = 'buzz';
+      array.push(divisible);
     } else {
-      indivisible = "bug!";
-      array.push(indivisible);
+      divisible = 'bug!';
+      array.push(divisible);
     }
   }
 
@@ -98,11 +95,58 @@ function fizzBuzz(evenOddArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeString = '';
+  let letter;
+  for (let i in string) {
+    if (string[i] === 'a') {
+      letter = '1';
+      encodeString += letter;
+    } else if (string[i] === 'e') {
+      letter = '2';
+      encodeString += letter;
+    } else if (string[i] === 'i') {
+      letter = '3';
+      encodeString += letter;
+    } else if (string[i] === 'o') {
+      letter = '4';
+      encodeString += letter;
+    } else if (string[i] === 'u') {
+      letter = '5';
+      encodeString += letter;
+    } else {
+      letter = string[i];
+      encodeString += letter;
+    }
+  }
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let decodeString = '';
+  let letter;
+  for (let i in string) {
+    if (string[i] === '1') {
+      letter = 'a';
+      decodeString += letter;
+    } else if (string[i] === '2') {
+      letter = 'e';
+      decodeString += letter;
+    } else if (string[i] === '3') {
+      letter = 'i';
+      decodeString += letter;
+    } else if (string[i] === '4') {
+      letter = 'o';
+      decodeString += letter;
+    } else if (string[i] === '5') {
+      letter = 'u';
+      decodeString += letter;
+    } else {
+      letter = string[i];
+      decodeString += letter;
+    }
+  }
+  return decodeString;
 }
 
 // Desafio 10
