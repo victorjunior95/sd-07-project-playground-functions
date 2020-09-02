@@ -35,13 +35,12 @@ function splitSentence(string) {
   function addString(initialPosition, finalPosition) {
     let newString = "";
     for (let index = 0; index <= finalPosition - initialPosition; index++) {
-      newString[index] = string[initialPosition + index];
-      // console.log(string[index + initialPosition]);
+      newString = `${newString}${string[initialPosition + index]}`;
     }
     array.push(newString);
   }
 }
-// console.log(splitSentence("go trybe"))
+console.log(splitSentence("go trybe"))
 
 // Desafio 4
 function concatName(array) {
@@ -191,9 +190,7 @@ function techList(array,name) {
     returnArray.push(object);
   }
   return returnArray;
-  // seu código aqui
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
