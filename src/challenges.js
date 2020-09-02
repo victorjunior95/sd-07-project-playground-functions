@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue(a,b) {
-  if(a==b) return true;
+  let teste = true;
+  if(a==teste && b==teste) return true;
   else return false;
 }
 
