@@ -44,7 +44,7 @@ function footballPoints(wins, ties) {
   }
   let points = scoreTies + victory;
 
-  return `O total de pontos é ${points}`;
+  return `${points}`;
 }
 
 // Desafio 6
@@ -61,8 +61,28 @@ function highestCount(numbers) {
 }
     
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+  let distance = mouse - cat1;
+  let distance2 = mouse-cat2;
+  if(Math.sign(distance) == 1 && Math.sign(distance2) == 1 || Math.sign(distance) == 0 && Math.sign(distance2) == 0 ){
+      if (distance < distance2) {
+          return "cat1";
+      }else if (distance == distance2) {
+          console.log("os gatos trombam e o rato foge")
+      }else {
+          return "cat2";
+      }
+  }else{
+      if (distance > distance2) {
+          return "cat1";
+      }else if (distance == distance2) {
+          console.log("os gatos trombam e o rato foge")
+      }else {
+          return "cat2";
+      }
+  }
+      
 }
 
 // Desafio 8
