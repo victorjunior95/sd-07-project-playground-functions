@@ -79,14 +79,9 @@ function decode() {
 }
 
 // Desafio 10
-function techList(techs, name) {
-  this.techs = techs;
-  this.name = name;
-  let object = new techs(techs, name);
-  console.log(object);
+function techList() {
+  // seu código aqui
 }
-
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas');
 
 // Desafio 11
 function generatePhoneNumber() {
