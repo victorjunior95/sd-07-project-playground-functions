@@ -21,21 +21,36 @@ function concatName(namesArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
-  
-  for (let i = 0; i < wins; i++) {
-    points++;
+  for (let i = 0; i < wins; i += 1) {
+    points += 3;
   }
-  
-  for (let i = 0; i < ties; i++) {
-    points++;
+  for (let i = 0; i < ties; i += 1) {
+    points += 1;
   }
-  
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let counts = {};
+  let mostDuplicated = {
+    value: arr[0],
+    times: 1,
+  }
+  for (let key in arr ) {
+    if (counts[arr[key]]) {
+      counts[arr[key]] += 1;
+    } else {
+      counts[arr[key]] = 1;
+    }
+  }
+  for (let key in counts) {
+    if (counts[key] > mostDuplicated['times']) {
+      mostDuplicated['value'] = key;
+      mostDuplicated['times'] = counts[key];
+    }
+  }
+  return mostDuplicated.times;
 }
 
 // Desafio 7
