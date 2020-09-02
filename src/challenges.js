@@ -18,9 +18,9 @@ function splitSentence(textString) {
   for (let index = 0; index < textString.length; index += 1) {
     if (textString[index] !== ' ') {
       palavra += textString[index];
-      if(index === textString.length - 1) {
+      if (index === textString.length - 1) {
         palavras.push(palavra);
-      } 
+      }
     } else {
       palavras.push(palavra);
       palavra = '';
@@ -38,13 +38,33 @@ function concatName(textString) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return ((wins * 3)+ ties);
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  // retorna maior número de array
+  const myNuns = numbers;
+
+  let countRepeatCurrentValue = 0;
+
+  for (let value of myNuns) {
+    let countRepeatValue = 0;
+
+    for (let values of myNuns) {
+      if (value === values) {
+        countRepeatValue += 1;
+      }
+      if (countRepeatValue > countRepeatCurrentValue) {
+        countRepeatCurrentValue = countRepeatValue;
+      }
+    }
+  }
+
+  return countRepeatCurrentValue;
 }
+
+console.log(highestCount([1, 2, 3, 3, 2, 2, 3, 3]))
 
 // Desafio 7
 function catAndMouse() {
