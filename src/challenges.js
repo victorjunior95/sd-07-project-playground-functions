@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(first, second) {
   if (first === true && second === true) {
-    return true;
+      return true;
   }
 }
 
@@ -86,4 +86,3 @@ module.exports = {
   triangleCheck,
 }
 
-compareTrue(true, true);
