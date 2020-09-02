@@ -42,7 +42,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
-function decoder() {
+function decode() {
   // seu código aqui
 }
 
