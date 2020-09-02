@@ -1,13 +1,13 @@
 // Desafio 1
-function compareTrue(seiProgramar) {
-  if ( seiProgramar === "Trybe" && seiProgramar != ""){
-     seiProgramar = true;
+function compareTrue(num1, num2) {
+  if ( num1 > num2 && num2 % 2 != 0){
+     result = true;
   }else {
-    seiProgramar = false;
+    result = false;
   }
-  return seiProgramar;
+  return result;
 }
-console.log(compareTrue('seiProgramar'));
+console.log(compareTrue(3, 7));
 
 // Desafio 2
 function calcArea(base, altura) {
@@ -27,12 +27,13 @@ function concatName(array) {
     return array[array.length -1] + ", " + array[0];
   }
 }
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
 console.log(concatName(array));
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+
+
 }
 
 // Desafio 6
