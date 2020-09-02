@@ -41,7 +41,7 @@ function concatName(array) {
   let novoArray = "";
   for (let i = array.length - 1; i >= 0; i -= 1) {
     if (i == array.length - 1) {
-      novoArray = novoArray + array[i] + " ";
+      novoArray = novoArray + array[i] + ", ";
     }
     if (i == 0) {
       novoArray = novoArray + array[i];
@@ -96,9 +96,24 @@ function highestCount(array) {
 // -------------------------------------------------------------------
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  dist1 = mouse - cat1;
+  dist2 = mouse - cat2;
+  if (dist1 > dist2) {
+    return "cat2";
+  } else if (dist2 > dist1) {
+    return "cat1";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
+
+// --------------------TESTE DESAFIO 7--------------------------------
+// let teste = 10;
+// let teste2 = 5;
+// let teste3 = 5;
+// console.log(catAndMouse(teste, teste2, teste3));
+// -------------------------------------------------------------------
 
 // Desafio 8
 function fizzBuzz() {
