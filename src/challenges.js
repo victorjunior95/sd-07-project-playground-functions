@@ -76,7 +76,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(frase) {
-  const list = [a=1, e=2, i=3, o=4, u=5];
+  const list = {a:1, e:2, i:3, o:4, u:5};
   let arrayfrase = frase.split('');
   for (const key in arrayfrase) {
     for (const keylist in list) {
@@ -87,6 +87,8 @@ function encode(frase) {
   }
   return arrayfrase.join('');
 }
+console.log(encode("hi there!"));
+
 function decode(frase) {
   let arrayfrase = frase.split('');
   for (const key in arrayfrase) {
@@ -110,9 +112,10 @@ function decode(frase) {
       default:
         break;
     }
-    }
   }
   return arrayfrase.join('');
+}
+
 
 console.log(decode("h3 th2r2!"));
 
