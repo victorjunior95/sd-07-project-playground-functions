@@ -84,7 +84,7 @@ function fizzBuzz(arrayNumbers) {
 
   let resultado = [];
 
-  for (let i = 0; i < arrayNumbers.length; i++) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
 
       if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
 
