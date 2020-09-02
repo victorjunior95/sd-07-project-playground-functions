@@ -1,13 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  let numero = 10;
-  let numero2 = 10;
-  if (numero === 10 && numero2 === 10) {
+function compareTrue(a, b) {
+  a = 10;
+  b = '10';
+  if (a === 10 && b === 10) {
     return true
   } else {
     return false;
   }
 }
+
+console.log(compareTrue());
 
 // Desafio 2
 function calcArea() {
