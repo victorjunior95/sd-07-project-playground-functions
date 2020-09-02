@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 === true && number2 === false) {
+  if (number1 === true && number2 === true) {
     return true
   } else {
     return false
@@ -154,10 +154,18 @@ function decode(word) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(tech, name) {
+  let newTechList = []
 
+  for (let item in tech) {
+    let newTechItem = {
+      tech: tech[item],
+      name: name,
+    }
+    newTechList.push(newTechItem)
+  }
+  return newTechList
+}
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
