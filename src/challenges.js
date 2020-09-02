@@ -176,34 +176,35 @@ console.log(testeDecode);
 function techList(tecnologias, name) {
 
   let arrayTech = [];
-
-  for (i = 0; i < tecnologias.length; i += 1) {
-    objeto = {
-      tech: tecnologias[i],
-      name: name
+  if (tecnologias.length == 0) {
+    return "Vazio!";
+  } else {
+    for (i = 0; i < tecnologias.length; i += 1) {
+      objeto = {
+        tech: tecnologias[i],
+        name: name
+      }
+      arrayTech.push(objeto);
     }
-    arrayTech.push(objeto);
-  }
 
-  function compare(a, b) {
-    let tech1 = a.tech;
-    let tech2 = b.tech;
-  
-    let comparison = 0;
-    if (tech1 > tech2) {
-      comparison = 1;
-    } else if (tech1 < tech2) {
-      comparison = -1;
+    function compare(a, b) {
+      let tech1 = a.tech;
+      let tech2 = b.tech;
+    
+      let comparison = 0;
+      if (tech1 > tech2) {
+        comparison = 1;
+      } else if (tech1 < tech2) {
+        comparison = -1;
+      }
+      return comparison;
     }
-    return comparison;
+    arrayTech.sort(compare);
+    return arrayTech;
   }
-  arrayTech.sort(compare);
-  return arrayTech;
 }
 
-
-
-let testeTechList = techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+let testeTechList = techList([], "Lucas");
 console.log(testeTechList);
 
 // Desafio 11
