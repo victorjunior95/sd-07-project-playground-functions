@@ -13,9 +13,14 @@ let valorBool2 = false;
 console.log(compareTrue(valorBool1, valorBool2));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height)/2
 }
+
+let base = 4;
+let height = 4;
+
+console.log(calcArea(base, height));
 
 // Desafio 3
 function splitSentence() {
