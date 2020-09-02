@@ -15,8 +15,9 @@ function compareTrue(first, second) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = (base * height)/2;
+  console.log(`O resultado é ${result}`);
 }
 
 // Desafio 3
@@ -97,3 +98,5 @@ module.exports = {
 }
 
 compareTrue(first = true, second = true);
+
+calcArea(25, 450);
