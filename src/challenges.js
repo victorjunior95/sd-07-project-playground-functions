@@ -64,17 +64,15 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let getMouse = '';
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
-  if (cat1Distance === cat2Distance) {
-    console.log("os gatos trombam e o rato foge");
+  if (cat1Distance == cat2Distance) {
+    return "os gatos trombam e o rato foge";
   } else if (cat1Distance < cat2Distance) {
-    getMouse = "cat1";
+    return "cat1";
   } else {
-    getMouse = "cat2"
+    return "cat2";
   }
-  return getMouse;
 }
 
 // Desafio 8
