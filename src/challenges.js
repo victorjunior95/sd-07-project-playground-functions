@@ -91,7 +91,7 @@ function fizzBuzz(numeros) {
   let relatorio = [];
   for (let i = 0; i < numeros.length; i += 1) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-      relatorio.push("fizzbuzz");
+      relatorio.push("fizzBuzz");
     } else if (numeros[i] % 3 === 0) {
       relatorio.push("fizz");
     } else if (numeros[i] % 5 === 0) {
@@ -102,11 +102,12 @@ function fizzBuzz(numeros) {
   }
   return relatorio
 }
-
+ 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+
+ 
 }
 function decode() {
   // seu código aqui
