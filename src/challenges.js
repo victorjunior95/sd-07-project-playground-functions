@@ -38,17 +38,17 @@ function splitSentence(setenca) {
 // Desafio 4
 function concatName(names) {
 
-    let arrayInitialFinalName = [names[0], names[names.length - 1]];
+    let arrayInitialFinalName = [names[0], " " + names[names.length - 1]];
     let initialFinalName = arrayInitialFinalName.toString();
 
     return initialFinalName;
 }
-console.log(concatName(["Lucas", "Nonato", "de", "Sá"]));
 
 // Desafio 5
-function footballPoints(wins) {
+function footballPoints(wins, ties) {
 
-    // seu código aqui
+    let points = (wins * 3) + ties;
+    return points;
 }
 
 // Desafio 6
