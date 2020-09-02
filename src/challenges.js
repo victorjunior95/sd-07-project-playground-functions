@@ -15,13 +15,18 @@ function calcArea(base, height) {
 
 // Desafio 3
 let frase = 'go Trybe'
+
 function splitSentence(frase) {
-  return frase.split(" ");  
+  return frase.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let wordConcat = ['Raphael', 'Cicero', 'Rodrigues', 'Araujo'];
+
+function concatName(wordConcat) {
+  let firstWord = wordConcat[0];
+  let lastWord = wordConcat[wordConcat.length - 1];
+  return lastWord + ', ' + firstWord;
 }
 
 // Desafio 5
