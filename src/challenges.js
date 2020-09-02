@@ -83,7 +83,7 @@ return(resultado)
 function fizzBuzz(array) {
   let string = [];
 for (let i = 0; i < array.length; i += 1)
-    if (array[i] % 3 != 0) {
+if (array[i] % 3 != 0 && array[i] % 5 != 0) {
         string.push('bug!');
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
         string.push('fizzBuzz');
