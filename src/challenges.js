@@ -86,7 +86,11 @@ function encode(name) {
   let encodeName = "";
 
   for (letter in name){
-    encodeName += encrypt[name[letter]] ?? name[letter];
+    if (encrypt[name[letter]] === null) {
+      encodeName += name[letter]
+    } else {
+      encodeName += encrypt[name[letter]]
+    }
   }
 
   return encodeName;
