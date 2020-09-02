@@ -29,7 +29,9 @@ function splitSentence(stringExemplo) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(listaDeNomes) {
+  let resultado = (listaDeNomes[listaDeNomes.length -1] + ',' + ' ' + listaDeNomes[0])
+      return resultado;
   // seu código aqui
 }
 
