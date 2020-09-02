@@ -2,21 +2,32 @@
 function compareTrue(and1, and2) {
   if (and1 === true && and2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
+  
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return base * height / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  let arrayString = [];
+  let word = '';
 
+  for (let i in string) {
+     if ( string[i] === ' ') {
+       arrayString.push(word);
+       word = '';
+     }
+     word += string[i];
+  }
+  arrayString.push(word);
+  return arrayString;
+}
+console.log(splitSentence("go trybe"))
 // Desafio 4
 function concatName() {
   // seu código aqui
