@@ -32,70 +32,62 @@ function splitSentence(string) {
 function concatName(array) {
   let result = `${array[array.length -1]} , ${array[0]}`;
   return result;
-
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties * 1;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(numbers) {
-
   let highest = 0;
-  let highestCount = 0;
+  let highestReps = 0;
 
   for (let i in numbers) {
-
     if (numbers[i] > highest) {
       highest = numbers[i];
     }
   }
   for (let i in numbers) {
     if (numbers[i] === highest) {
-      highestCount += 1;
+      highestReps += 1;
     }
   }
-  return highestCount;
+  return highestReps;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
-  let result ;
+  let result;
   if (distCat1 === distCat2) {
-    result = "os gatos trombam e o rato foge";
+    result = 'os gatos trombam e o rato foge';
+  } else if (distCat1 < distCat2) {
+    result = 'cat1';
   } else {
-    if (distCat1 < distCat2) {
-      result = "cat1";
-    } else {
-      result = "cat2";
-    }
+    result = 'cat2';
   }
-  return result
+  
+  return result;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  result = [];
+  let result = [];
 
   for (let i in numbers) {
-    if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
-      result.push("fizzBuzz");
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numbers[i] % 3 === 0 ) {
+      result.push('fizz');
+    } else if (numbers[i] % 5 === 0 ) {
+      result.push('buzz');
     } else {
-      if (numbers[i] % 3 == 0 ) {
-        result.push("fizz");
-      } else {
-        if (numbers[i] % 5 == 0 ) {
-          result.push("buzz");
-        } else {
-        result.push("bug!");
-        }
-      }
+    result.push('bug!');
     }
+  
   }
   return result;
 }
