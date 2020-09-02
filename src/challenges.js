@@ -33,22 +33,19 @@ function footballPoints(wins,ties) {
   pontos = ties + wins;
   return pontos;
 }
-
 // Desafio 6
 function highestCount(lista) {
+  let maiorNumero = 0;
   let repeticao = 0;
-  let nrRepetido = 0;
-  for(i = 1; i < lista.length; i += 1){
-    for(j = 0; j < i; j += 1){
-      if(lista[j] === lista[i]){
-        nrRepetido = lista[j];
-        if(nrRepetido === nrRepetido){
-          repeticao += 1;
-        }
-      }
+  for(let i = 0; i < lista.length; i += 1){
+    if(maiorNumero < lista[i]){
+      maiorNumero = lista[i]
+    }
+    if(maiorNumero === lista[i]){
+      repeticao += 1;
     }
   }
-    return repeticao;
+  console.log(repeticao)
 }
 
 // Desafio 7
