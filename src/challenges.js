@@ -64,18 +64,18 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let cat1M = Math.abs(cat1 - mouse);
+  let cat2M = Math.abs(cat2 - mouse);
   let result;
-  if (cat1 - mouse < cat2 - mouse) {
-    result = 'cat1';
-  } 
-  if (cat2 - mouse < cat1 - mouse) {
-    result = 'cat2';
-  } else {
+  if (cat1M === cat2M) {
     result = 'os gatos trombam e o rato foge';
+  } else if (cat1M < cat2M) {
+    result = 'cat1';
+  } else if (cat2M < cat1M) {
+    result = 'cat2';
   }
   return result;
 }
-console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz(arrayNum) {
@@ -97,7 +97,7 @@ function fizzBuzz(arrayNum) {
 // Desafio 9
 function encode(paramString) {
   let newString = '';
-  for (let i = 0; i <= paramString.length-1; i += 1) {
+  for (let i = 0; i <= paramString.length - 1; i += 1) {
     if (paramString[i] === 'a') {
       newString += '1';
     } else if (paramString[i] === 'e') {
@@ -116,7 +116,7 @@ function encode(paramString) {
 }
 function decode(paramString2) {
   let newString2 = '';
-  for (let index = 0; index <= paramString2.length-1; index += 1) {
+  for (let index = 0; index <= paramString2.length - 1; index += 1) {
     if (paramString2[index] === '1') {
       newString2 += 'a';
     } else if (paramString2[index] === '2') {
@@ -133,11 +133,14 @@ function decode(paramString2) {
   }
   return newString2;
 }
-console.log(decode("h3 th2r2"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let endList = [];
+  for (let i = 0; i < tech.length; i += 1) {
+    endList.push({tech: tech[i], name: name});
+  }
+  return endList;
 }
 
 // Desafio 11
