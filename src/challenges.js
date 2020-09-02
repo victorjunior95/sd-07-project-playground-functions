@@ -28,11 +28,10 @@ function concatName(nomes) {
 }
 
 function footballPoints(wins,ties) {
+  let pontos = 0;
   wins = wins * 3;
-  return {
-    wins ,
-    ties
-  }
+  pontos = ties + wins;
+  return pontos;
 }
 
 // Desafio 6
