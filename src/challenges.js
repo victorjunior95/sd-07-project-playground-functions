@@ -58,7 +58,7 @@ function fizzBuzz(array) {
   let fbarray = [];
   for(let i=0; i<array.length; i+=1){
     if(array[i]%3===0 && array[i]%5===0){
-      fbarray.push("fizzbuzz");
+      fbarray.push("fizzBuzz");
     }else{
       if(array[i]%3===0){
         fbarray.push("fizz");
@@ -74,6 +74,8 @@ function fizzBuzz(array) {
   return fbarray;
 }
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode(frase) {
   const list = {a:1, e:2, i:3, o:4, u:5};
@@ -87,7 +89,6 @@ function encode(frase) {
   }
   return arrayfrase.join('');
 }
-console.log(encode("hi there!"));
 
 function decode(frase) {
   let arrayfrase = frase.split('');
@@ -115,9 +116,6 @@ function decode(frase) {
   }
   return arrayfrase.join('');
 }
-
-
-console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
