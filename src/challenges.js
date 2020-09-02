@@ -134,22 +134,22 @@ function generatePhoneNumber(array) {
   }
 
   for (let index = 0; index < array.length; index+=1) {
-    let count = 0
+    let count = 0;
     for (let index2 = 0; index2 < array.length; index2++) {
       if (array[index] === array[index2]) {
-        count += 1;
+        count += 1;;
       }
     }
     if (count>=3 || array[index] < 0 || array[index] > 9) {
-      return "não é possível gerar um número de telefone com esses valores"
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
 
   const stringNumber = (array.map(function (n){return n.toString()})).join('');
 
-  const dddNum = stringNumber.slice(0,2)
-  const part1Num = stringNumber.slice(2,7)
-  const part2Num = stringNumber.slice(7,11)
+  const dddNum = stringNumber.slice(0,2);
+  const part1Num = stringNumber.slice(2,7);
+  const part2Num = stringNumber.slice(7,11);
 
   return `(${dddNum}) ${part1Num}-${part2Num}`// seu código aqui
 }
@@ -157,9 +157,11 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(ladoA, ladoB, ladoC) {
   let check = false
-  if ((ladoA < ladoB + ladoC && ladoA > Math.abs(ladoB-ladoC))
-    ||(ladoB < ladoA + ladoC && ladoB > Math.abs(ladoA-ladoC))
-    ||(ladoC < ladoB + ladoA && ladoC > Math.abs(ladoB-ladoA))) {
+  let testeLadoA = (ladoA < ladoB + ladoC && ladoA > Math.abs(ladoB-ladoC));
+  let testeLadoB = (ladoB < ladoA + ladoC && ladoB > Math.abs(ladoA-ladoC));
+  let testeLadoC = (ladoC < ladoB + ladoA && ladoC > Math.abs(ladoB-ladoA));
+
+  if ( testeLadoA || testeLadoB || testeLadoC ) {
       check = true;
   }
 
