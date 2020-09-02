@@ -5,31 +5,31 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  let resultado = (base * height) / 2
+  return resultado;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  return String(string).split(" ");
+  return String(string).split(' ');
 }
 
 // Desafio 4
 function concatName(string) {
   string = splitSentence(string);
-    let contaString = 0;
+  let contaString = 0;
 
-    for(const key in string){
-        contaString++;
-    }
+  for (const key in string) {
+    contaString++;
+  }
 
-    let newString = string[(contaString-1)]+" "+string[0];
-    
-    return newString;
+  let newString = string[(contaString - 1)] + " " + string[0];
+  return newString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3) + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -51,6 +51,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
