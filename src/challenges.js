@@ -15,7 +15,7 @@ function calcArea(base, height) {
   return cal;
 }
 
-calcArea(2,3);
+calcArea(2, 3);
 
 // Desafio 3
 function splitSentence(string) {
@@ -29,7 +29,7 @@ function concatName(strings) {
   let lastString = strings[strings.length-1];
   let strFinal = `${lastString}, ${strings[0]}`;
   console.log(strFinal);
-  return lastString, strings[0];
+  return strFinal;
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
@@ -79,9 +79,14 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  this.techs = techs;
+  this.name = name;
+  let object = new techs(techs, name);
+  console.log(object);
 }
+
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas');
 
 // Desafio 11
 function generatePhoneNumber() {
