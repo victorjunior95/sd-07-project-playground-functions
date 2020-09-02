@@ -55,9 +55,9 @@ console.log(highestCount(num));
 function catAndMouse(bicho) {
   let maisProximo;
   for (let i = 1; i <= bicho.length; i += 1){
-    if (bicho[i] === 'cat1'){
+    if (bicho[1] === 'cat1'){
       maisProximo = 'cat1';
-    } else if (bicho[i] === 'cat2'){
+    } else if (bicho[2] === 'cat2'){
       maisProximo = 'cat2';
     }else {
       maisProximo = 'os gatos trombam e o rato foge';
