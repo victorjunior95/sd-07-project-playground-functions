@@ -25,14 +25,18 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
+    if (frase = false){
+      let ponder = "Frase inexistente!";
+      return ponder;
+    } else {
     let corda = frase;
     let vetor = corda.split(' ');
     for (i in vetor);
         vetor.unshift();
         return vetor;
 }  
-
+}
 
 // Desafio 4
 function concatName() {
