@@ -8,7 +8,6 @@ function compareTrue(val1,val2){
         return (false);
     }
 }
-console.log(compareTrue (true,false))
 
 //**2 - Área do triângulo** 
 console.log ('**2 - Área do triângulo** ')
@@ -23,10 +22,25 @@ console.log ('**3 - Dividindo a frase**')
 
 function splitSentence (frase){
     let copia = frase;
-    let partida=[]
+    let partida =[];
     let palavra
-    for (let i=0;i<copia;length;i+=1){
-        for (let j=0;)
-        if ()
+    let tamanho =0;
+    let indice =0;
+
+    for (let i=0;i<copia.length;i+=1){
+        if (i==0){
+            partida[indice] = copia[i]
+        } else if (copia[i] !== ' '){
+            partida[indice] = partida[indice] + copia[i]
+        }else{
+            indice +=1;
+            partida[indice] =  copia[i]
+            ;
+        
+        }
     }
+    console.log (partida);
+    return (partida);
 }
+let a = "go Trybe";
+console.log (splitSentence(a));
