@@ -176,9 +176,13 @@ function techList(techs, name) {
   techsArray.sort(); //techs em ordem alfabética
 
   for (i in techsArray) {
-    
+    result[i] = {
+      tech: techsArray[i],
+      name: name
+    }
   }
-
+  return result;
+  
 }
 console.log( techList([1,2],'lucas'))
 // Desafio 11
