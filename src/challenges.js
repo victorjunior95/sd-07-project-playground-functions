@@ -75,10 +75,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
 
-  if (distanceCat1.ABS() < distanceCat2.ABS()) {
+  if (distanceCat1 < distanceCat2) {
     return "cat1";
   }
-  else if (distanceCat2.ABS() < distanceCat1.ABS()){
+  else if (distanceCat2 < distanceCat1){
     return "cat2";
   }
   else {
