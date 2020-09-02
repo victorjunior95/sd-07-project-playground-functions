@@ -1,7 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolean1, boolean2) {
+  if (boolean1.toLowerCase() == "true" && boolean2.toLowerCase() == "true") {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+// --------------------TESTE DESAFIO 1--------------------------------
+// let teste = "false";
+// let teste2= "True";
+// console.log(compareTrue(teste,teste2));
+// -------------------------------------------------------------------
 
 // // Desafio 2
 // function calcArea() {
@@ -66,7 +76,6 @@ function compareTrue() {
 //   // seu código aqui
 // }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -82,4 +91,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
