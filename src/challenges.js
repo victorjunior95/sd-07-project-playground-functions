@@ -9,9 +9,12 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let result = string.split(' ');
+  console.log(result);
 }
+
+splitSentence("go Trybe");
 
 // Desafio 4
 function concatName() {
@@ -42,6 +45,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
