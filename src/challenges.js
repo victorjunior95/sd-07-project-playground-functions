@@ -19,11 +19,13 @@ function concatName(string) {
   string = splitSentence(string);
   let contaString = 0;
 
-  for (const key in string) {
-    contaString++;
+  if (string.lenght < 0) {
+    for (const key in string) {
+      contaString+=1;
+    }
   }
 
-  let newString = string[(contaString - 1)] + " " + string[0];
+  let newString = `${strin[(contaString-1)]} ${string[0]}`;
   return newString;
 }
 
