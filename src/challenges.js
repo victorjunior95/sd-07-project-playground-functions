@@ -80,11 +80,23 @@ function catAndMouse(mouse,cat1,cat2) {
       
 }
 
-console.log(catAndMouse(1,0,2));
-
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let divide = [3,5];
+
+  for (let i in array) {
+      if(array[i] % divide[0] == 0 && array[i] % divide[1] == 0){
+          array[i] = "fizzBuzz";
+      } else if(array[i] % divide[0] == 0) {
+          array[i] = "fizz";
+      } else if(array[i] % divide[1] == 0) {
+          array[i] = "buzz";
+      } else{
+          array[i] = "bug!"; 
+      }
+  }
+  return array;
 }
 
 // Desafio 9
