@@ -9,19 +9,21 @@ function compareTrue(a,b) {
 };
 // Desafio 2
 function calcArea(base,height) {
-  let area = [(base*height)/2]
+  let area = (base*height)/2
 return area
 };
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
-
+function splitSentence(string) {
+  let arrayString = string.split('');
+  return arrayString;
+};
 // Desafio 4
-function concatName() {
+function concatName(arrayOfString) {
+  let lastAndFirstName = arrayOfString[arrayOfString.length-1]+", "+arrayOfString[0]
   // seu código aqui
-}
+  return lastAndFirstName
+};
 
 // Desafio 5
 function footballPoints() {
