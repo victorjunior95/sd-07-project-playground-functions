@@ -15,14 +15,16 @@ return (base * altura / 2)
 }
 
 // Desafio 3
-function splitSentence(string) {
+function splitSentence(frase) {
   // seu código aqui
-return string.split(" ");
+return frase.split(" ");
 }
 
 // Desafio 4
-function concatName() {
+function concatName(lista) {
   // seu código aqui
+
+  return lista[lista.length - 1] + ", " + lista[0];
 }
 
 // Desafio 5
