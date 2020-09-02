@@ -94,11 +94,39 @@ function decode(word) {
 
 // Desafio 10
 function techList(tecnologias,name) {
+  let arrayDeObjetos = [];
+  if(tecnologias.length==0){
+    return "Vazio!"
+  }
+  tecnologias.sort();
+  for(let i=0;i<tecnologias.length;i+=1){
+    arrayDeObjetos[i]={
+      tech: tecnologias[i],
+      name: name
+    };
+  }
+  arrayDeObjetos.sort();
+   return arrayDeObjetos;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let aux=0;
+  if(array.length!=11){
+    return "Array com tamanho incorreto.";
+  }
+  for(let i=0;i<array.length;i+=1){
+    if(array[i]<0 || array[i]>9) return "não é possível gerar um número de telefone com esses valores";
+    let contador=0;
+    aux=array[i];
+    for(let j=0;j<array.length;j+=1){
+      if(aux==array[j]){
+        contador+=1;
+      }
+    }
+    if(contador>=3){return "não é possível gerar um número de telefone com esses valores";}
+  }
+  return "("+array[0]+array[1]+")"+array[2]+array[3]+array[4]+array[5]+"-"+array[6]+array[7]+array[8]+array[9]+array[10];
 }
 
 // Desafio 12
