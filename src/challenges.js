@@ -6,7 +6,7 @@ function compareTrue(boleano1 , boleano2) {
     return `false`;
   } else if (boleano1 == false && boleano2 == false){
     return `false`;
-  }
+  } 
 }
 
 // Desafio 2
@@ -14,16 +14,16 @@ function calcArea(base,height) {
   resultado = (base * height) / 2;
   return resultado;
 }
-console.log(splitSentence(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 // Desafio 3
 function splitSentence(nomes) {
-  let n = nomes.length;
-  return `${nomes[0]}, ${nomes[n-1]}`;
+
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let n = nomes.length;
+  return `${nomes[0]}, ${nomes[n-1]}`;
 }
 
 // Desafio 5
