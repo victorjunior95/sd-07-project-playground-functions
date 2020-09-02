@@ -124,7 +124,7 @@ function techList(arrayTech, name) {
   for(const key in arrayTech){
     resp.push({tech: arrayTech[key], name})
   }
-  return resp;
+  return resp.length==0?'Vazio!':resp;
 }
 
 
