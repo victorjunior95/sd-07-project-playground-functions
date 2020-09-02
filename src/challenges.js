@@ -22,9 +22,10 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  arrayResultado = [];
-  arrayResultado.push(arrayDeStrings[arrayDeStrings.length-1]);
-  arrayResultado.push(arrayDeStrings[0]);
+  arrayResultado = "";
+  arrayResultado += arrayDeStrings[arrayDeStrings.length-1];
+  arrayResultado += ", "
+  arrayResultado += arrayDeStrings[0];
   return arrayResultado;
 }
 
