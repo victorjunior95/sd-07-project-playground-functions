@@ -94,10 +94,12 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias,name) {
+  // let info = [];
+  // for(let i=0;i<tecnologias.length;i+=1){
+  // }
 }
-
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Bruno"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
