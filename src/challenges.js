@@ -2,8 +2,8 @@
 function compareTrue(valor1,valor2) {
   let a = valor1;
   let b = valor2;
-  let resposta = 'false';
-  if (a == 'true' && b == 'true'){
+  let resposta = false;
+  if (a == true && b == true){
     resposta = 'true'
     console.log(resposta);
   }else{
@@ -11,7 +11,7 @@ function compareTrue(valor1,valor2) {
   }
   return resposta;
 }
-compareTrue("true","true");
+compareTrue(false,true);
 
 // Desafio 2
 function calcArea() {
