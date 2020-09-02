@@ -258,9 +258,18 @@ function triangleCheck(lineA,lineB,lineC) {
 //console.log(triangleCheck(10,14,8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(texto) {
+  let string = texto;
+  let numbers = string.match(/\d+/g).map(Number);
+  let contador = 0;
+  
+  for (key in numbers){
+    contador=contador+numbers[key];
+  }
+  
+  return `${contador} copos de água`
 }
+//console.log(hydrate(`10 cachaça, 5 cervejas e 3 copo de vinho`));
 
 
 module.exports = {
