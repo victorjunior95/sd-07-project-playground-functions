@@ -130,44 +130,26 @@ function generatePhoneNumber(array) {
   // função que verifica se os numeros estao entre 0 e 9 e nao se repetem mais que 3 vezes
   function validatingTheNumbers(array2) {
     let counterRepetition = 0;
-    for (let i in array2) {
-      if (array2[i] < 0 || array2[i] > 9) {
-        return true;
-      }
-    }
-    for (let j in array2) {
-      for (let i in array2) {
-        if (array2[j] == array2[i]) {
+    for (let i in array2) {if (array2[i] < 0 || array2[i] > 9) return true;}
+    for (let j in array2) {for (let i in array2) {if (array2[j] == array2[i]) {
           counterRepetition += 1;
-          if (counterRepetition >= 3) {
-            return true;
-          }
-        }
-      }
-      counterRepetition = 0;
-    }
-    return false;
-  }
+          if (counterRepetition >= 3) return true;}}
+      counterRepetition = 0;}
+    return false;}
   // função que gera uma string a partir de uma lista (os parametros pos1 e pos2 dizem onde começar da lista e onde terminar)
   function listForString(array, pos1, pos2) {
     let finalString = "";
     for (let i = pos1; i <= pos2; i += 1){
-      finalString += array[i];
-    }
-    return finalString;
-  }
+      finalString += array[i];}
+    return finalString;}
   let validation = validatingTheNumbers(array);
-  if (array.length != 11) {
-    return "Array com tamanho incorreto.";
-  } else if (validation) {
-    return "não é possível gerar um número de telefone com esses valores";
-  } else {
+  if (array.length != 11) return "Array com tamanho incorreto.";
+  else if (validation) return "não é possível gerar um número de telefone com esses valores";
+  else {
     let firstNumbers = listForString(array, 0, 1);
     let middleNumbers = listForString(array, 2, 6);
     let lastNumbers = listForString(array, 7, 10);
-    return `(${firstNumbers}) ${middleNumbers}-${lastNumbers}`;
-  }
-}
+    return `(${firstNumbers}) ${middleNumbers}-${lastNumbers}`;}}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -185,7 +167,8 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   stringList = string.split("");
   let listOfIntegers = [];
-  // verificando se cada caracter da string é um numero e se for dando push na lista de inteiros
+  // verificando se cada caracter da string é um numero 
+  //e se for dando push na lista de inteiros
   for (let key in stringList) {
     if (Number(stringList[key])) {
       listOfIntegers.push(Number(stringList[key]));
@@ -220,4 +203,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-console.log(hydrate("1 cerveja, 5 de cachaça, 8 de vodka"));
