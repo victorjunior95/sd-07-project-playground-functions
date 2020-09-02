@@ -23,6 +23,9 @@ function splitSentence() {
       arrayPalavras.push(palavra);
       palavra = '';
     }
+  }
+  arrayPalavras.push(palavra);
+  return arrayPalavras;
 }
 
 // Desafio 4
