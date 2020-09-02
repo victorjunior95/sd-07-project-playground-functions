@@ -42,9 +42,15 @@ console.log(concatName(["Ana", "Maria", "Joana", "Jaquina", "Francisca"]));
 /* ________________________________________________________________________________ */
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  let vitoria = 3;
+  let empate = 1;
+  let campeonato = 0;
+  campeonato = (wins * vitoria) + (ties * empate);
+  return campeonato;  
+} 
+
+console.log(footballPoints(3, 11));
 
 /* ________________________________________________________________________________ */
 
