@@ -3,7 +3,7 @@
 // Desafio 1
 function compareTrue(comparar1, comparar2) {
   // seu código aqui
-  if ( comparar1 == true && comparar2 == false){
+  if ( comparar1 === true && comparar2 === true){
     return true
   }  else {
     return false
@@ -15,11 +15,13 @@ function calcArea(base, height) {
   // seu código aqui
  
   let resultado = (base * height) / 2;
-
+  return resultado;
 
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+
+
 }
 
 // Desafio 4
