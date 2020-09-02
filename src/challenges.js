@@ -129,10 +129,19 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
   // seu código aqui
-  let verific01 = Math.abs(lineA-lineB)<(lineC)<Math.abs(lineA+lineB);
-  let verific02 = Math.abs(lineA-lineC)<(lineB)<Math.abs(lineA+lineC);
-  let verific03 = Math.abs(lineB-lineC)<(lineA)<Math.abs(lineB+lineC);
-  if((verific01==true) && (verific02==true) && (verific03==true)){
+  let verific01;
+  let verific02;
+  let verific03;
+if((lineA<(lineB+lineC))&&(lineA>(lineB+lineC))){
+    verific01=true;
+}
+if((lineB<(lineA+lineC))&&(lineB>(lineA+lineC))){
+  verific02=true;
+}
+if((lineC<(lineA+lineB))&&(lineC>(lineA+lineB))){
+  verific01=true;
+}
+if((verific01==true) && (verific02==true) && (verific03==true)){
   return true
   }
   return false;
