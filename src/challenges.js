@@ -106,14 +106,25 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nomeTech, name) {
+  let novaLista = [];
+  nomeTech.sort(); // Ordenando o Array primeiro
+  for (let i in nomeTech){
+    novaLista.push(techNome = {
+      tech: nomeTech[i],
+      name: name
+    })
+  }
+  return novaLista;
 }
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
+
 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
+
 
 // Desafio 12
 function triangleCheck() {
