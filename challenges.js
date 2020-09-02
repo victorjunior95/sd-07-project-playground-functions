@@ -23,18 +23,21 @@ console.log ('**3 - Dividindo a frase**')
 function splitSentence (frase){
     let copia = frase;
     let partida =[];
-    let palavra
-    let tamanho =0;
     let indice =0;
 
     for (let i=0;i<copia.length;i+=1){
+
         if (i==0){
             partida[indice] = copia[i]
-        } else if (copia[i] !== ' '){
+
+        }   else if (copia[i] !== ' '){
             partida[indice] = partida[indice] + copia[i]
-        }else{
+
+        }   else{
             indice +=1;
+            i+=1;
             partida[indice] =  copia[i]
+            
             ;
         
         }
@@ -42,5 +45,5 @@ function splitSentence (frase){
     console.log (partida);
     return (partida);
 }
-let a = "go Trybe";
+let a = "go Trybe vamo que vamo";
 console.log (splitSentence(a));
