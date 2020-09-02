@@ -16,8 +16,10 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(separator) {
+  separator = "" ;
+  separator = separator.split(" ");
+  return separator;
 }
 
 // Desafio 4
