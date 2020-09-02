@@ -38,12 +38,11 @@ function splitSentence(setenca) {
 // Desafio 4
 function concatName(names) {
 
-    let arrayInitialFinalName = [names[0], " " + names[names.length - 1]];
-    let initialFinalName = arrayInitialFinalName.toString();
+    let arrayInitialFinalName = [names[names.length - 1], " " + names[0]];
+    let finalInitialName = arrayInitialFinalName.toString();
 
-    return initialFinalName;
+    return finalInitialName;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
 
