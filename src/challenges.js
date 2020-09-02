@@ -1,15 +1,15 @@
-//JS projeto 1 
+//JS projeto 1
 // Desafio 1
-function compareTrue(boolean1,boolean2) {
+function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
-} else {
+}   else {
     return false;
-}
+  }
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let calculoArea = (base * height) / 2;
   return calculoArea;
 }
@@ -21,7 +21,8 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+    lastAndFirst = word[word.length - 1] + "," + word[0];
+    return lastAndFirst;
 }
 
 // Desafio 5
