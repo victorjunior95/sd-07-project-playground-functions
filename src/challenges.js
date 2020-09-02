@@ -24,15 +24,24 @@ function concatName(array) {
   return trocaString
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let Points = (3 * wins) + ties
+  return Points
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+numbers = [5,7,5,8,1,2,4,9]
+
+function highestCount(numbers) {
+  let maior = numbers[0]
+  for(let i = 1;i < numbers.length;i += 1)
+    if (maior < numbers[i]) {
+        maior = numbers[i]
+        return maior
+    }
 }
+
+let resultado = highestCount(numbers)
+console.log(resultado)
 
 // Desafio 7
 function catAndMouse() {
