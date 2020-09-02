@@ -9,19 +9,20 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
+  let calculate = 0;
   calculate = (base * height) / 2;
   return calculate;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array;
 }
 
 // Desafio 4
 function concatName(array) {
-  let output = "";
+  let output = '';
   for (let i = 0; i < array.length; i += 1) {
     if (i === 0) {
       output += `${array[array.length - 1]}, `;
