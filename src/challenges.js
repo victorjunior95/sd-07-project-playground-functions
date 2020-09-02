@@ -1,7 +1,7 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  
+function compareTrue(bolean1, bolean2) {
+  // testando se o resultado é verdadeiro ou falso
+  return bolean1 && bolean2 ? true : false;
 }
 
 // Desafio 2
