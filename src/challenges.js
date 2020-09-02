@@ -104,6 +104,10 @@ function decode(arg) {
 
 // Desafio 10
 function techList(techArray, name) {
+  if (techArray.length ===0 ) {
+    return `Vazio!`;
+  };
+
   let resultArray = [];
   techArray.sort();
   for (let techName of techArray) {
@@ -115,7 +119,7 @@ function techList(techArray, name) {
   };
   return resultArray;
 }
-
+console.log(techList([],"Lucas"));
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 
 // Desafio 11
