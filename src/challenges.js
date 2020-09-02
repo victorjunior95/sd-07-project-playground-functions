@@ -14,14 +14,29 @@ function calcArea(base , height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let dividir = string.split()//separa por espaços vazios
-    return dividir
+  string = string.split(" ")//separa por espaços vazios
+  return string
 }
 
 // Desafio 4
 function concatName(ArrayStrings) {
-  let fimComeco = ArrayStrings[ArrayStrings.length - 1] + ' , ' + ArrayStrings[0]
-  return fimComeco
+  //let fimComeco = ArrayStrings[ArrayStrings.length - 1] + ' , ' + ArrayStrings[0]
+  //return fimComeco
+  let fim = ""
+  let comeco = ""
+  let junto = ""
+  for(i = 0; i <= ArrayStrings.length - 1 ; i+= 1){
+      if(ArrayStrings[0] ){
+          comeco = ArrayStrings[0] 
+      }if(ArrayStrings[ArrayStrings.length - 1]){
+        fim = ArrayStrings[ArrayStrings.length - 1]
+      }
+          
+  }
+  junto = fim + ", " + comeco
+  
+  return junto
+  
 }
 
 // Desafio 5
@@ -61,19 +76,37 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let posicaoCat1 = mouse - cat1
-  let posicaoCat2 = mouse - cat2//maior posição mais longe estara
-  if (posicaoCat1 > posicaoCat2){
-      return "cat2"
-  }
-  if(posicaoCat2 > posicaoCat1){
-      return "cat1"
-  }
-  else{
-      console.log("os gatos trombam e o rato foge")
-  }
+  if(mouse == 0){
+    if(cat1 > cat2){
+        return cat2
+    }
+    if(cat2 > cat1){
+        return cat1
+    }
+}
+if(cat1 === cat2){
+   console.log("os gatos trombam e o rato foge")
+}
+if(cat1 == mouse){
+   return cat1
+}
+if(cat2 == mouse){
+   return cat2
+}
+if(mouse > 0 && mouse < cat2 && cat2 < cat1){
+   return cat2
+}
+if(mouse > 0 && mouse < cat1 && cat1 < cat2){
+   return cat1
+}
+if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat1 > cat2){
+    return cat1
+}
+if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat2 > cat1){
+    return cat2
 }
 
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
