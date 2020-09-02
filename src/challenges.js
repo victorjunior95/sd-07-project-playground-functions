@@ -11,8 +11,6 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let split = [];
-  for (let i in phase)
 }
 
 // Desafio 4
