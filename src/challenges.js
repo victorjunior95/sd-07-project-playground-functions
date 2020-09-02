@@ -139,7 +139,7 @@ function encode(stringEncode) {
   return novaString;
 } 
 
-console.log(encode('Oi, tudo bem?'));
+/* console.log(encode('Oi, tudo bem?')); */
 
 /* 
 a -> 1
@@ -151,9 +151,30 @@ u -> 5
 
 /* ________________________________________________________________________________ */
 
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  let arrayDecode = stringDecode.split('');
+  let novoArray = [];
+  let novaString = '';
+  for (let i = 0; i < arrayDecode.length; i += 1) {
+    if (arrayDecode[i] == 1) {
+      novoArray.push('a');
+    } else if (arrayDecode[i] == 2) {
+      novoArray.push('e');
+    } else if (arrayDecode[i] == 3) {
+      novoArray.push('i');
+    } else if (arrayDecode[i] == 4) {
+      novoArray.push('o');
+    } else if (arrayDecode[i] == 5) {
+      novoArray.push('u');
+    } else {
+      novoArray.push(arrayDecode[i]);
+    }
+  }
+  novaString = novoArray.join('');
+  return novaString;
 }
+
+console.log(decode('12345'));
 
 /* ________________________________________________________________________________ */
 
