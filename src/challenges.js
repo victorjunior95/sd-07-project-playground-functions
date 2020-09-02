@@ -1,20 +1,16 @@
 // Desafio 1
-function compareTrue(valor1,valor2) {
-
-  if(valor1 && valor2){
-
+function compareTrue(valor1, valor2) {
+  if (valor1 && valor2) {
     return true;
-
-  }else{
-
+  } else {
     return false;
   }
-
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * altura) / 2;
+  return area;
 }
 
 // Desafio 3
@@ -75,7 +71,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -91,4 +86,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
