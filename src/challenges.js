@@ -171,16 +171,29 @@ function techList(array,name) {
   if (array.length == 0) {
     return "Vazio!";
   }
-  let newArray = [];
-  for (let index = 0; index < array.length; index++) {
-    let object = {};
-    object.tech = array[index];
-    object.name = name;
-    newArray.push(object);
+  let returnArray = [];
+  let newArray = array;
+
+  for (let i = 1; i < array.length; i++) {
+  for (let j = 0; j < i; j++) {
+    if (newArray[i] < newArray[j]) {
+      let position = newArray[i];
+      newArray[i] = newArray[j];
+      newArray[j] = position;
+    }
   }
-  return newArray;
+}
+  
+  for (let index = 0; index < newArray.length; index++) {
+    let object = {};
+    object.tech = newArray[index];
+    object.name = name;
+    returnArray.push(object);
+  }
+  return returnArray;
   // seu código aqui
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
