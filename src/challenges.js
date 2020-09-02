@@ -4,7 +4,9 @@ function compareTrue(a,b) {
     return true
   } 
   else {
-    return false};
+    return false
+  }
+};
 // Desafio 2
 function calcArea(base,height) {
   let area = [(base*height)/2]
@@ -85,4 +87,5 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
+
 }
