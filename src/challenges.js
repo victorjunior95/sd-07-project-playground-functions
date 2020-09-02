@@ -43,9 +43,10 @@ function highestCount(array) {
   let maiorValor = 0;
   let reapt = 0;
   for (let i = 0; i < array.length; i++){
-    if (array[i] >= maiorValor){
+    if (array[i] > maiorValor){
       maiorValor = array[i];
-    } else if(maiorValor === array[i]){
+    } 
+    if(maiorValor === array[i]){
       reapt = reapt += 1;
     }
   }
