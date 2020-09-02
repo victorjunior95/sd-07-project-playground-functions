@@ -43,9 +43,7 @@ function highestCount(numbers) {
   let repetions = 0;
   for (let i = 0; i < numbers.length; i += 1) {
     if (highestNumber <= numbers[i]) {
-        highestNumber = numbers[i];
-    } else {
-        highestNumber = highestNumber;
+      highestNumber = numbers[i];
     }
   }
   for (let j = 0; j < numbers.length; j += 1) {
@@ -57,8 +55,18 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
+  let felino;
+  if (distCat1 > distCat2) {
+    felino = "cat1";
+  } else if (distCat1 < distCat2) {
+    felino = "cat2";
+  } else {
+    felino = "os gatos trombam e o rato foge"
+  }
+  return felino;
 }
 
 // Desafio 8
