@@ -24,12 +24,10 @@ return guarda;
 // Desafio 4
 function concatName(array) {
   let ultimo = [];
-let primeiro = [];
-let respostaFinal= "";
- ultimo=(array[array.length -1]);
+    let primeiro = [];
+             ultimo=(array[array.length -1]);
              primeiro=(array[0])
-             respostaFinal =(ultimo + " , " + primeiro);
-             return respostaFinal;
+             return(ultimo + " , " + primeiro)
 }
 
 // Desafio 5
