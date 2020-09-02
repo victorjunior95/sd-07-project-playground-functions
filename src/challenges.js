@@ -103,23 +103,21 @@ function fizzBuzz(arrNumbers) {
 // Desafio 9
 function encode(arrString) {
   let encodeString = [];
-
-
   for (let i = 0; i < arrString.length; i += 1) {
 
-        if(arrString[i] === 'a'){
+        if(arrString[i] == 'a'){
             encodeString[i] = 1;
         }
-        else if(arrString[i] === 'e') {
+        else if(arrString[i] == 'e') {
             encodeString[i] = 2;
         }
-        else if(arrString[i] === 'i'){
+        else if(arrString[i] == 'i'){
             encodeString[i] = 3;
         }
-        else if (arrString[i] === 'o') {
+        else if (arrString[i] == 'o') {
             encodeString[i] = 4;
         }
-        else if (arrString[i] === 'u') {
+        else if (arrString[i] == 'u') {
             encodeString[i] = 5;
         }
         else {
@@ -130,8 +128,31 @@ function encode(arrString) {
    return encodeString.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(arrayString) {
+  let decodeString = [];
+
+  for (let i = 0; i < arrayString.length; i += 1) {
+
+        if(arrayString[i] == 1){
+            decodeString[i] = 'a';
+        }
+        else if(arrayString[i] == 2) {
+            decodeString[i] = 'e';
+        }
+        else if(arrayString[i] == 3){
+            decodeString[i] = 'i';
+        }
+        else if (arrayString[i] == 4) {
+            decodeString[i] = 'o';
+        }
+        else if (arrayString[i] == 5) {
+           decodeString[i] = 'u';
+        }
+        else {
+          decodeString[i] = arrayString[i];
+        }
+  }
+   return decodeString.join('');
 }
 
 // Desafio 10
