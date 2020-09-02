@@ -139,15 +139,21 @@ function decode(string) {
 function techList(techs, name) {
   let list = [];
   techs.sort();
-    for(let i = 0; i < techs.length; i += 1){
-        let techToLearn = {
-            tech: techs[i],
-            name: name
-        }
-        list.push(techToLearn);
-    }
 
-    return list;
+  if(techs.length < 1){
+    return "Vazio!";
+  }else{
+    for(let i = 0; i < techs.length; i += 1){
+      let techToLearn = {
+          tech: techs[i],
+          name: name
+      }
+      list.push(techToLearn);
+  }
+
+  return list;
+  }
+    
 }
 
 // Desafio 11
