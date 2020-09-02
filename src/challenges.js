@@ -57,12 +57,12 @@ function catAndMouse(mouse,cat1,cat2) {
   ptscat1 = Math.abs(mouse - cat1);
   ptscat2 = Math.abs(mouse - cat2);
   if(ptscat1>ptscat2){
-    return cat1
+    return "cat1"
   } else {
     if (ptscat1 == ptscat2) {
     return  "os gatos trombam e o rato foge"
     } else {
-      return cat2
+      return "cat2"
     }
   }
 }
@@ -89,12 +89,30 @@ function fizzBuzz(arrayfizzbuzz) {
 return arrayfizzbuzzfinal
 }
 
-console.log(fizzBuzz([3,5,15,30,2,4,60,80]))
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrayenconde) {
+  
+  for (key in arrayenconde){
+    if (arrayenconde[key] == "a"){
+      arrayenconde[key] = 1; 
+    }
+    if (arrayenconde[key] == "e"){
+      arrayenconde[key] = 2;
+    }
+    if (arrayenconde[key] == "i"){
+      arrayenconde[key] = 3;
+    }
+    if (arrayenconde[key] == "o"){
+      arrayenconde[key] = 4;
+    }
+    if (arrayenconde[key] == "u"){
+      arrayenconde[key] = 5;
+    }
+  }
+  return arrayenconde
 }
+console.log(encode("amendoim"))
+
 function decode() {
   // seu código aqui
 }
