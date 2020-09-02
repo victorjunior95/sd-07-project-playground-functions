@@ -18,7 +18,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   // seu código aqui
   let separator = ' ';
-  let array = string.split(separator); 
+  let array = string.split(separator);
   return array;
 }
 
@@ -27,19 +27,20 @@ function concatName(array) {
   // seu código aqui
   let output = '';
   for (let i = 0; i < array.length; i += 1) {
-      if (i == 0){
-          output += array[array.length - 1] + ', ';
-      }        
-      else if (i == array.length - 1) {
-          output += array[0];
-      }
+    if (i === 0) {
+      output += array[array.length - 1] + ', ';
+    }
+    else if (i == array.length - 1) {
+      output += array[0];
+    }
   }
   return output;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
