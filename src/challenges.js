@@ -49,7 +49,7 @@ function highestCount(numeros) {
     }
   }
   return repeticao
-}console.log(highestCount([0,0,0]))
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -84,15 +84,37 @@ function fizzBuzz(numeros) {
     }
   }
   return msg;
-}console.log(fizzBuzz([27, 2, 15, 7, 9, 45]))
+}
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let msg = [];
+  for (let i in frase) {
+    switch (frase[i]) {
+      case "a": msg.push("1"); break;
+      case "e": msg.push("2"); break;
+      case "i": msg.push("3"); break;
+      case "o": msg.push("4"); break;
+      case "u": msg.push("5"); break;
+      default: msg.push(frase[i]);
+    }
+  } return msg.join("");
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let msg = [];
+  for (let i in frase) {
+    switch (frase[i]) {
+      case "1": msg.push("a"); break;
+      case "2": msg.push("e"); break;
+      case "3": msg.push("i"); break;
+      case "4": msg.push("o"); break;
+      case "5": msg.push("u"); break;
+      default: msg.push(frase[i]);
+    }
+  } return msg.join("");
 }
+
 
 // Desafio 10
 function techList() {
