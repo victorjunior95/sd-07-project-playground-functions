@@ -57,10 +57,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros1) {
+  let arrayDeNumeros2 = [];
+  for (let i = 0; i < arrayDeNumeros1.length; i += 1) {
+    if (arrayDeNumeros1[i] % 3 == 0 && arrayDeNumeros1[i] % 5 !== 0 ) {
+      arrayDeNumeros2.push("fizz");
+    } else if (arrayDeNumeros1[i] % 5 == 0 && arrayDeNumeros1[i] % 3 !== 0) {
+      arrayDeNumeros2.push("buzz")
+    } else if (arrayDeNumeros1[i] % 5 == 0 && arrayDeNumeros1[i] % 3 == 0) {
+      arrayDeNumeros2.push("fizzBuzz")
+    } else {
+      arrayDeNumeros2.push("bugg!")
+    }
+  }
+  return arrayDeNumeros2
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
