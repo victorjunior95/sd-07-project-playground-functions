@@ -11,13 +11,16 @@ function compareTrue(valor1, valor2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangleArea;
+  triangleArea = (base * height) / 2;
+  return triangleArea;  
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let fraseSeparada = frase.split(" ", 2);
+  return fraseSeparada;
 }
 
 // Desafio 4
