@@ -104,7 +104,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   let altString = '';
   for(let i in string){
     switch(string[i]){
@@ -130,8 +130,31 @@ function encode() {
   }
   return altString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let altString = '';
+  for(let i in string){
+    switch(string[i]){
+      case '1':
+        altString += 'a';
+        break;
+      case '2':
+        altString += 'e';
+        break;
+      case '3':
+        altString += 'i';
+        break;
+      case '4':
+        altString += 'o';
+        break; 
+      case '5':
+        altString += 'u';
+        break;
+      default:
+        altString += string[i];
+        break;
+    }
+  }
+  return altString;
 }
 
 // Desafio 10
