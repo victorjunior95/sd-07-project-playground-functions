@@ -74,32 +74,28 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(palavra) {
-  palavra = palavra.replace(/a/g,1);
-  palavra = palavra.replace(/e/g,2);
-  palavra = palavra.replace(/i/g,3);
-  palavra = palavra.replace(/o/g,4);
-  palavra = palavra.replace(/u/g,5);
-  return palavra;
+function encode(word) {
+  word = word.replace(/a/g,1);
+  word = word.replace(/e/g,2);
+  word = word.replace(/i/g,3);
+  word = word.replace(/o/g,4);
+  word = word.replace(/u/g,5);
+  return word;
 }
-let b =encode(a);
 
-function decode(palavra) {
-  palavra = palavra.replace(/1/g,"a");
-  palavra = palavra.replace(/2/g,"e");
-  palavra = palavra.replace(/3/g,"i");
-  palavra = palavra.replace(/4/g,"o");
-  palavra = palavra.replace(/5/g,"u");
-  return palavra;
+function decode(word) {
+  word = word.replace(/1/g,"a");
+  word = word.replace(/2/g,"e");
+  word = word.replace(/3/g,"i");
+  word = word.replace(/4/g,"o");
+  word = word.replace(/5/g,"u");
+  return word;
 }
 
 // Desafio 10
 function techList(tecnologias,name) {
-  // let info = [];
-  // for(let i=0;i<tecnologias.length;i+=1){
-  // }
 }
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Bruno"));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
