@@ -143,8 +143,21 @@ function decode(arrayWithNumbers) {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayTech, name) {
   // seu código aqui
+  let arraySorting = arrayTech.sort();
+
+  let arrayWithInformation = [];
+
+  for (i = 0; i < arraySorting.length; i += 1){
+    arrayWithInformation[i] = {
+      tech: arraySorting[i],
+      name: name
+    }
+  }
+
+  return arrayWithInformation;
+  
 }
 
 // Desafio 11
