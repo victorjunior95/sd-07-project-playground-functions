@@ -81,17 +81,17 @@ let array2 = [9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(array2));
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
- 
-  let difference1 = Math.abs(mouse-cat1);
-  let difference2 = Math.abs(mouse-cat2);
+function catAndMouse(mouse, cat1, cat2) {
+
+  let difference1 = Math.abs(mouse - cat1);
+  let difference2 = Math.abs(mouse - cat2);
   let answer = 0;
-  
-  if (difference1>difference2) {
+
+  if (difference1 > difference2) {
     answer = "cat2";
-  } else if (difference1<difference2) {
+  } else if (difference1 < difference2) {
     answer = "cat1";
-  }else{
+  } else {
     answer = "os gatos trombam e o rato foge"
   }
 
@@ -99,12 +99,29 @@ function catAndMouse(mouse,cat1,cat2) {
 
 }
 
-console.log(catAndMouse(5,2,3));
+console.log(catAndMouse(5, 2, 3));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+
+  arrayString = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      arrayString.push("fizzBuzz");
+    } else if (array[i] % 3 == 0) {
+      arrayString.push("fizz");
+    } else if (array[i] % 5 == 0) {
+      arrayString.push("buzz");
+    } else {
+      arrayString.push("bug!");
+    }
+  }
+  return arrayString;
 }
+
+let array3 = [2,15,7,9,45];
+console.log(fizzBuzz(array3));
 
 // Desafio 9
 function encode() {
