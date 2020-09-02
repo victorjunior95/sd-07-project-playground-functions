@@ -60,4 +60,37 @@ function concatName(array){
 let b = ['nando', 'paulo', 'jose', 'treco', 'trem'];
 console.log (concatName(b));
 
+//**5 - Pontos no futebol**
+console.log ('**5 - Pontos no futebol**');
 
+function footballPoints (wins,ties){
+    return (wins*3 + ties);
+}
+let c = 3, d=4;
+console.log(footballPoints(c,d));
+
+//**6 - Repetição do maior número**
+console.log ('**6 - Repetição do maior número**');
+
+function highestCount (array){
+    let maior =array[0];
+    let contador =0;
+    for (let i=0;i<array.length;i+=1){
+        if (array[i]>maior){
+            maior = array[i]
+        }
+    }
+    for (let j=0;j<array.length;j+=1){
+        if (array[j] == maior){
+            contador +=1;
+        }
+
+    }
+    return (contador);
+}
+
+let e= [9, 1, 9, 3, 9, 5, 7];
+console.log ("O maior número se repete " +highestCount(e)+ " vezes.");
+
+//**7 - Caça ao rato**
+console.log ('**7 - Caça ao rato**');
