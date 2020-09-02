@@ -18,23 +18,33 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(word) {
   let result = word.split(" ");
-  
+
   return result;
 }
 
 // Desafio 4
 function concatName(word) {
   // seu código aqui
-  let result = word[word.length-1]+", "+word[0]
+  let result = word[word.length - 1] + ", " + word[0]
   return result;
-  
+
 }
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let result = 0,
+    i = 0;
+  if (wins > 0) {
+    result += wins * 3;
+  } 
+  if (ties > 0){
+    result += ties
+  }
+  return result;
 }
+console.log(footballPoints(0,0))
 
 // Desafio 6
 function highestCount() {
