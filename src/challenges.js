@@ -20,9 +20,10 @@ function calcArea(base, height) {
     return result;
 }
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Desafio 3
+function splitSentence(word) {
+
+
 }
 
 // Desafio 4
@@ -36,9 +37,25 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  // let arrayNumbers = numbers.split();
+  let maxNum = numbers[0];
+  let count = 0;
+
+  for (let i = 1; i < numbers.length; i += 1) {
+
+    if (numbers[i] > maxNum) {
+      maxNum = numbers[i];
+    }
+  }
+  for (let j = 0; j < numbers.length; j += 1) {
+    if (maxNum === numbers[j]) {
+      count += 1;
+    }
+  }
+  return count;
 }
+
 
 // Desafio 7
 function catAndMouse() {
@@ -100,3 +117,5 @@ module.exports = {
 compareTrue(first = true, second = true);
 
 calcArea(51, 1);
+
+highestCount([0, 0, 0]);
