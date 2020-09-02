@@ -111,7 +111,7 @@ function decode(string) {
 function techList(arrayTech, name) {
   let arrayTechSorted = arrayTech.sort();
   for (let i in arrayTechSorted) {
-    let = {
+    arrayTechSorted.i = {
       tech: arrayTechSorted[i],
       name: name
     }
