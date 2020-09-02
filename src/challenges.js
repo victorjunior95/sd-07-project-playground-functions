@@ -48,8 +48,10 @@ function highestCount(repeat) {
   for (let i of array){
     if (i > maior) {
       maior = i;
-    }
-    if (maior === i) {
+    }   
+  }
+  for (let j of array) {
+    if (maior === j) {
       count += 1;
     }
   }
@@ -57,8 +59,25 @@ function highestCount(repeat) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let rato = mouse;
+  let gato1 = cat1;
+  let gato2 = cat2;
+  let distancia1 = 0;
+  let distancia2 = 0;
+  let result = "";
+  if (rato > gato1 && rato > gato2) {
+    distancia1 = rato - gato1;
+    distancia2 = rato - gato2;
+  }
+  if (distancia1 > distancia2) {
+    result = "cat2";
+  }else if (distancia1 < distancia2){
+    result = "cat1";
+  }else if (distancia1 === distancia2){
+    result = "os gatos trombam e o rato foge";
+  }
+  return result;
 }
 
 // Desafio 8
