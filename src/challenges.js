@@ -61,21 +61,62 @@ function highestCount (array) {
           maior = array[i]
       }
   }
-
+}
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = math.abs(cat1-mouse)
+  let dist2 = math.abs(cat2-mouse)
+  if (dist1< dist2){
+    return cat1;
+  } else if(dist2<dist1){
+    return cat2;
+  }else{
+    return ("os gatos trombam e o rato foge");
+  }
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resposta=[];
+  for(let i in array){
+    if (array[i]%3==0 || array[i]%5==0){
+      resposta.push = "fizzBuzz";
+    } else if(array[i]%3==0){
+      resposta.push = "fizz";
+    } else if (array[i]%5==0){
+      resposta.push = "Buzz";
+    } else{
+      resposta.push = "bug!"
+    }
+  }
+ 
 }
 
 // Desafio 9
-function encode() {
+function encode(entrada) {
+  let frase = entrada;
+  for (let i=0;i<frase.length;i+=1){
+      if (frase[i] == "a"){
+          frase[i] = "1";
+      } else if (frase[i] == "e"){
+          frase[i] = 2;
+      } else if (frase[i] == 'i'){
+          frase[i] = '3';
+      } else if (frase[i] == 'o'){
+          frase[i] = '4';
+      } else if (frase[i] == 'u'){
+          frase[i] = '5';
+      }
+ 
+    }
+  
+  console.log (frase)
+  return (frase);
+
   // seu código aqui
 }
+console.log (encode("Hi There"))
 function decode() {
   // seu código aqui
 }
