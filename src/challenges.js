@@ -61,19 +61,19 @@ function highestCount(arrayNumeros) {
   let maiorNumero = 0;
   let contNumero = 0;
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (maiorNumero < arrayNumeros[i]) {
+    if (maiorNumero < arrayNumeros[i] && maiorNumero != 0) {
       maiorNumero = arrayNumeros[i];
-    } else {
-      maiorNumero = maiorNumero;
     }
-    if (maiorNumero === arrayNumeros[i]) {
+  }
+  for (let j = 0; j < arrayNumeros.length; j += 1) {
+    if (maiorNumero === arrayNumeros[j]) {
       contNumero = contNumero + 1;              
     } 
   }
   return contNumero;
 }
 
-/* console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
+console.log(highestCount([0, 0, 0]));
 
 /* ________________________________________________________________________________ */
 
