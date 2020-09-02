@@ -55,17 +55,17 @@ function highestCount(lista) {
 function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
 }
-console.log(fizzBuzz([7 , 9]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 8
 function fizzBuzz(numeros) {
   let retorno = [];
   for(let i in numeros){
-    if(numeros[i] % 3 == 0){
-      retorno.push(`fizz`);
+    if(numeros[i] % 3 == 0 && numeros[i] % 5 == 0){
+      retorno.push(`fizzBuzz`);
     }else if(numeros[i] % 5 == 0){
       retorno.push(`buzz`);
-    }else if(numeros[i] % 3 == 0 && numeros[i] % 5 ==0){
-      retorno.push(`fizzBuzz`);
+    }else if(numeros[i] % 3 == 0){
+      retorno.push(`fizz`);
     }else{
       retorno.push(`bug!`);
     }
