@@ -109,10 +109,9 @@ function techList(arr, name) {
 // Desafio bonus 1
 function generatePhoneNumber(arr) {
   let c = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  if (arr.length != 11) {
+  if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let n = 0;
   for (let i in arr) {
     if (arr[i] < 0 || arr[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -126,28 +125,26 @@ function generatePhoneNumber(arr) {
   }
   return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio bonus 2
 function triangleCheck(lineA, lineB, lineC) {
-  lineA = Math.abs(lineA)
-  lineB = Math.abs(lineB)
-  lineC = Math.abs(lineC)
-  if(lineA>lineB+lineC || lineB>lineA+lineC ||lineC>lineA+lineB){
+  lineA = Math.abs(lineA);
+  lineB = Math.abs(lineB);
+  lineC = Math.abs(lineC);
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
     return false;
   }
   return true;
-  
 }
 
 // Desafio bonus 3
 function hydrate(str) {
-  num = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  out = 0;
+  let num = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  let out = 0;
   for (let i in str) {
     for (let j in num) {
-      if (str[i] == num[j]) {
-        out += parseInt(num[j]);
+      if (str[i] === num[j]) {
+        out += parseInt(num[j], 10);
       }
     }
   }
