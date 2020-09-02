@@ -3,6 +3,7 @@
 
 //Retorne true se ambos os valores são verdadeiros;
 //Retorne false se um ou ambos os parâmetros forem falsos.
+
 let bool1 = true;
 let bool2 = false;
 function compareTrue(bool1, bool2) {
@@ -13,22 +14,29 @@ function compareTrue(bool1, bool2) {
   }
 }
 let function1 = compareTrue(bool1, bool2);
-console.log(function1);
+//console.log(function1);
 
 // Desafio 2
 //Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+
 let base = 3;
 let height = 5;
 function calcArea(base, height) {
   return (base*height)/2;  
 }
 let area = calcArea(base, height);
-console.log(area);
+//console.log(area);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+
+let frase = "and tonight we can truly say together we're invincible";
+let separador = " ";
+function splitSentence(frase, separador) {
+  return frase.split(separador);
 }
+let arrayDePalavras = splitSentence(frase, separador);
+console.log(arrayDePalavras);
 
 // Desafio 4
 function concatName() {
