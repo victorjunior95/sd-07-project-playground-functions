@@ -28,28 +28,21 @@ function footballPoints(wins, ties) {
   return (wins * 3 + ties);
 }
 
-// Desafio 6 - OK
+// Desafio 6 - NOK
 function highestCount(arrayNumeros) {
   // seu código aqui
   let count = 0;
-  let higherCount = 0;
+  let highNumber = Math.max.apply(Math, arrayNumeros);
 
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    count = 0;
-    for (let j = 0; j < arrayNumeros.length; j += 1) {
-      if (arrayNumeros[j] == arrayNumeros[i]) {
-        count += 1;
-      }
-    }
-
-    if (count > higherCount) {
-      higherCount = count;
+    if (arrayNumeros[i] == highNumber) {
+      count += 1;
     }
   }
 
-  return higherCount;
+  return count;
 
-}
+} 
 
 // Desafio 7 - OK
 function catAndMouse(mouse, cat1, cat2) {
@@ -63,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
+// Desafio 8 - OK
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let arrayString = [];
@@ -83,7 +76,7 @@ function fizzBuzz(arrayNumeros) {
   return arrayString;
 }
 
-// Desafio 9
+// Desafio 9 - OK
 function encode(arrayWithVowels) {
   // seu código aqui
   let newString = "";
@@ -142,7 +135,7 @@ function decode(arrayWithNumbers) {
 
 }
 
-// Desafio 10
+// Desafio 10 - OK
 function techList(arrayTech, name) {
   // seu código aqui
 
@@ -211,7 +204,7 @@ function triangleCheck(lineA, lineB, lineC) {
   } else {
     return false;
   }
-} console.log(triangleCheck(10, 14, 8));
+}
 
 // Desafio 13
 function hydrate() {
