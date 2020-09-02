@@ -2,9 +2,8 @@
 function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
 
 // Desafio 2
@@ -14,12 +13,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringTest) {
-  return stringTest.split(" ");
+  return stringTest.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ", " + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -38,8 +37,8 @@ function highestCount(array) {
     }
   }
   // contando quantas vezes o maior valor aparece
-  for (let j  in array) {
-    if (array[j] == maxValue) {
+  for (let j in array) {
+    if (array[j] === maxValue) {
       counter += 1;
     }
   }
@@ -51,26 +50,25 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
-    return "cat1";
+    return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
-    return "cat2";
-  } else {
-    return "os gatos trombam e o rato foge";
+    return 'cat2';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (key in array) {
-    if (array[key] % 3 == 0 && array[key] % 5 == 0) {
-      array[key] = "fizzBuzz";
+  for (let key in array) {
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) {
+      array[key] = 'fizzBuzz';
     } else {
-        if (array[key] % 3 == 0) {
-        array[key] = "fizz";
-      } else if (array[key] % 5 == 0) {
-        array[key] = "buzz";
+        if (array[key] % 3 === 0) {
+          array[key] = 'fizz';
+      } else if (array[key] % 5 === 0) {
+          array[key] = 'buzz';
       } else {
-        array[key] = "bug!";
+          array[key] = 'bug!';
       }
     }
   }
@@ -79,12 +77,12 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let toEncodeArray = string.split("");
-  let vowels = {"a": "1", "e": "2", "i": "3", "o": "4", "u": "5"};
-  let finalString = "";
-  for (let i in toEncodeArray) {
+  let toEncodeArray = string.split('');
+  let vowels = {a: '1', e: '2', i: '3', o: '4', u: '5'};
+  let finalString = '';
+  for (let i in toEncodeArray) { 
     for (let j in vowels) {
-      if (string[i].toLowerCase() == j) {
+      if (string[i].toLowerCase() === j) {
         toEncodeArray[i] = vowels[j];
       }
     }
@@ -93,17 +91,17 @@ function encode(string) {
   return finalString;
 }
 function decode(encodedString) {
-  let toDecodeArray = encodedString.split("");
-  let numbers = {"a": "1", "e": "2", "i": "3", "o": "4", "u": "5"};
-  let finalString = "";
-  for (let i in toDecodeArray) {
+  let toDecodeArray = encodedString.split('');
+  let numbers = {a: '1', e: '2', i: '3', o: '4', u: '5'};
+  let finalString = '';
+  for (let i in toDecodeArray) { 
     for (let j in numbers) {
-      if (toDecodeArray[i] == numbers[j]) {
+      if (toDecodeArray[i] === numbers[j]) {
         toDecodeArray[i] = j;
       }
     }
     finalString += toDecodeArray[i];
-  }
+   }
   return finalString;
 }
 
