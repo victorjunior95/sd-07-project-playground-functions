@@ -78,15 +78,29 @@ function fizzBuzz(numArray) {
   return result;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arg) {
+  arg = arg.replace(/a/g, '1');
+  arg = arg.replace(/e/g, '2');
+  arg = arg.replace(/i/g, '3');
+  arg = arg.replace(/o/g, '4');
+  arg = arg.replace(/u/g, '5');
+  return arg;
 }
-function decode() {
-  // seu código aqui
+
+function decode(arg) {
+  arg = arg.replace(/1/g, 'a');
+  arg = arg.replace(/2/g, 'e');
+  arg = arg.replace(/3/g, 'i');
+  arg = arg.replace(/4/g, 'o');
+  arg = arg.replace(/5/g, 'u');
+  return arg;
 }
+
+//console.log(encode("hi there!"));
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
