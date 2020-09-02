@@ -194,9 +194,10 @@ function hydrate() {
   // seu código aqui
 }
 
-let vetor = [0, 4, 4, 4, 9, 2, 1];
+//let vetor = [0, 4, 4, 4, 9, 2, 1];
+//let vetor = [0, 0, 0];
 
-console.log( highestCount(vetor) );
+//console.log( highestCount(vetor) );
 
 module.exports = {
   calcArea,
