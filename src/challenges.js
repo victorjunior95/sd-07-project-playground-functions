@@ -197,7 +197,7 @@ function techList(arrayTech, name) {
   }
 
   if(arrayTech.length == 0){
-    console.log("Vazio")
+    return "Vazio!"
   }else{
     return arrayTech.sort(compare);
   }
