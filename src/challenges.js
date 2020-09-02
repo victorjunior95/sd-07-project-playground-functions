@@ -12,10 +12,12 @@ Faça a função utilizando o operador &&.*/
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
+  } else {
+    return false;
   }
 }
 
-compareTrue(a, b);
+// compareTrue(a, b);
 
 // Desafio 2
 /*Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
@@ -29,7 +31,7 @@ function calcArea(base, height) {
   return calculate;
 }
 
-calcArea(base, height);
+// calcArea(base, height);
 
 // Desafio 3
 function splitSentence() {
