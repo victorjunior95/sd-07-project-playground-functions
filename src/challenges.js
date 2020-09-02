@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 feito
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
@@ -7,13 +7,13 @@ function compareTrue(valor1, valor2) {
   }
 }
 
-// Desafio 2
+// Desafio 2 feito
 function calcArea(base, height) {
   let resultado = (base * height) / 2;
   return resultado;
 }
 
-// Desafio 3
+// Desafio 3 feito
 function splitSentence(string) {
   let resultado = string.split(' ');
   return resultado;
@@ -29,14 +29,16 @@ function concatName(arrayString) {
     palavra2 = arrayString[1];
   }
   let string = [palavra1, palavra2];
-  console.log(string.join(', '));
+  return string.join(', ');
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let resultado = (wins * 3) + (ties * 1);
-  console.log(resultado);
+  return resultado;
 }
+
+
 
 let numeros= [9, 1, 2, 3, 9, 5, 7];
 highestCount(numeros);
