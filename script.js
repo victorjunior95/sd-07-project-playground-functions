@@ -10,12 +10,12 @@ Faça a função utilizando o operador &&. */
 
 let opcao1 = true;
 let opcao2 = true;
+let retorno = false;
 
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2 == true) {
-    return true;
-  } else {
-    return false;
+  if (valor1 && valor2 === true) {
+    retorno = true;
+    return retorno;
   }
 }
 
