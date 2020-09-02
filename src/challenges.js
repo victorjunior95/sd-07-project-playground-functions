@@ -9,19 +9,19 @@ function compareTrue(comparar1, comparar2) {
     return false
   }
 
-
+}
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
  
   let resultado = (base * height) / 2;
   return resultado;
-
+}
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-
-
+  let strings = "go Trybe"
+  console.log(strings.split(' ');
 }
 
 // Desafio 4
