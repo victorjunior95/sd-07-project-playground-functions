@@ -73,18 +73,20 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resposta = [];
   for (let i in array) {
-    if (array[i] % 3 == 0 || array[i] % 5 == 0) {
-      resposta.push = "fizzBuzz";
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      resposta.push ("fizzBuzz");
     } else if (array[i] % 3 == 0) {
-      resposta.push = "fizz";
+      resposta.push ("fizz");
     } else if (array[i] % 5 == 0) {
-      resposta.push = "buzz";
+      resposta.push ("buzz");
     } else {
-      resposta.push = "bug!";
+      resposta.push ("bug!");
     }
   }
+  ;
   return (resposta);
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(entrada) {
