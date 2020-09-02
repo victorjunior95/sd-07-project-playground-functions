@@ -127,15 +127,66 @@ function fizzBuzz(array) {
   }
   return arrayResultado;
 }
-console.log(fizzBuzz([9, 25]));
+//console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+  let codigo = "";
+
+  for (i=0; i<texto.length; i+=1){
+
+    switch(texto.substr(i,1)){
+      case "a":
+        codigo=codigo+1;
+        break;
+      case "e":
+        codigo=codigo+2;
+        break;
+      case "i":
+        codigo=codigo+3;
+        break;
+      case "o":
+        codigo=codigo+4;
+        break;
+      case "u":
+        codigo=codigo+5;
+        break;
+      default:
+        codigo=codigo+texto.substr(i,1);
+    }
+  }
+  return codigo;
 }
-function decode() {
-  // seu código aqui
+//console.log(encode("hi there!"));
+//-------------------------------------------------------
+function decode(codigo) {
+    let texto = "";
+
+  for (i=0; i<codigo.length; i+=1){
+
+    switch(codigo.substr(i,1)){
+      case "1":
+        texto=texto+"a";
+        break;
+      case "2":
+        texto=texto+"e";
+        break;
+      case "3":
+        texto=texto+"i";
+        break;
+      case "4":
+        texto=texto+"o";
+        break;
+      case "5":
+        texto=texto+"u";
+        break;
+      default:
+        texto=texto+codigo.substr(i,1);
+    }
+  }
+  return texto;
 }
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
