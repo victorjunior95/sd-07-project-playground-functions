@@ -87,11 +87,21 @@ let fizzBuzzReturn = [];
   return fizzBuzzReturn;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(senhaEncoder) {
+  let encoder = senhaEncoder.replace(/a/g,1);
+  encoder = encoder.replace(/e/g,2);
+  encoder = encoder.replace(/i/g,3);
+  encoder = encoder.replace(/o/g,4);
+  encoder = encoder.replace(/u/g,5);
+  return encoder;
 }
-function decode() {
-  // seu código aqui
+function decode(senhaDecoder) {
+  let decoder = senhaDecoder.replace(/1/g,"a");
+  decoder = decoder.replace(/2/g,"e");
+  decoder = decoder.replace(/3/g,"i");
+  decoder = decoder.replace(/4/g,"o");
+  decoder = decoder.replace(/5/g,"u");
+  return decoder;
 }
 
 // Desafio 10
