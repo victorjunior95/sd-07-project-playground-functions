@@ -28,9 +28,8 @@ function concatName(array) {
   let output = '';
   for (let i = 0; i < array.length; i += 1) {
     if (i === 0) {
-      output += array[array.length - 1] + ', ';
-    }
-    else if (i === array.length - 1) {
+      output +=`${array[array.length - 1]}, `;
+    } else if (i === array.length - 1) {
       output += array[0];
     }
   }
@@ -44,19 +43,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(highestCount) {
+function highestCount(array) {
   // seu código aqui
   let count = 0;
-  for (let i = 0; i < highestCount.length; i += 1) {
-    let countRepeticoes = 0;
-    for (let j = i; j <= highestCount.length; j += 1) {
-      if (highestCount[i] == highestCount[j]) {
-        countRepeticoes += 1;
+  let maiorNumero = '';
+  for (let i = 0; i < array.length; i += 1) {
+      if (array[i] > maiorNumero){
+          maiorNumero = array[i];
       }
-    }
-    if (count < countRepeticoes){ 
-      count = countRepeticoes;
-    }
+  }
+  for (let i = 0; i < array.length; i += 1) {
+      if (array[i] === maiorNumero){
+          count += 1;
+      }
   }
   return count;
 }
