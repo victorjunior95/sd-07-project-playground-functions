@@ -17,9 +17,8 @@ function splitSentence(gru) {
 }
 // Desafio 4
 function concatName(nome) {
-  return `${nome[(nome.length - 1)]}, ${nome[0]}`
+  return `${nome[nome.length - 1]}, ${nome[0]}`
 }
-console.log(concatName())
 // Desafio 5
 function footballPoints() {
   // seu código aqui
