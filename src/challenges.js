@@ -2,9 +2,10 @@
 function compareTrue(boolOne, boolTwo) {
   if (boolOne == 1 && boolTwo == 1) {
     return true;
-  } else {
-      return false;
-    }
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -31,8 +32,9 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-// Desafio 6
-function highestCount(array) {
+
+//Função auxiliar Maior valor
+function maxValueArray(array){
   let maior = array[0];
   let cont = 0;
   for (let i of array) {
@@ -40,6 +42,12 @@ function highestCount(array) {
       maior = i;
     }
   }
+  return maior;
+}
+
+// Desafio 6
+function highestCount(array) {
+  let maior = maxValueArray(array);
   for (let j of array) {
     if (j === maior) {
       cont += 1;
@@ -49,8 +57,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let disMouseCat1 = cat1 - mouse;
+  let disMouseCat2 = cat2 - mouse;
+
+  if (disMouseCat1 < disMouseCat2) {
+    return cat1;
+  } else if (disMouseCat2 < disMouseCat1) {
+    return cat2;
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
