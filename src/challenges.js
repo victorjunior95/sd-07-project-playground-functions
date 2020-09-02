@@ -86,7 +86,7 @@ function encode(name) {
   let encodeName = "";
 
   for (letter in name){
-    if (encrypt[name[letter]] === null) {
+    if (encrypt[name[letter]] === undefined) {
       encodeName += name[letter]
     } else {
       encodeName += encrypt[name[letter]]
@@ -108,7 +108,7 @@ function decode(name) {
   let decodeName = "";
 
   for (letter in name){
-    if (encrypt[name[letter]] === null) {
+    if (encrypt[name[letter]] === undefined) {
       decodeName += name[letter]
     } else {
       decodeName += encrypt[name[letter]]
@@ -201,3 +201,6 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+
+console.log(encode("hello"))
