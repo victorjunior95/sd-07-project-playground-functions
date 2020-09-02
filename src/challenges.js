@@ -59,7 +59,7 @@ function fizzBuzz(arrayNumeros) {
   let arrayString = [];
 
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i] % 5 == 0)) {
+    if ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i] % 5 === 0)) {
       arrayString.push('fizzBuzz');
     } else if (arrayNumeros[i] % 3 === 0) {
       arrayString.push('fizz');
@@ -141,7 +141,7 @@ function techList(arrayTech, name) {
   let arrayWithInformation = [];
 
   for (let i = 0; i < arraySorting.length; i += 1) {
-    arrayWithInformation[i] = {tech: arraySorting[i], name: name}
+    arrayWithInformation[i] = { tech: arraySorting[i], name: name }
   }
   return arrayWithInformation;
 }
@@ -149,49 +149,50 @@ function techList(arrayTech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // seu código aqui
-  let phoneNumber = "";
+  let phoneNumber = '';
 
-  if (arrayNumber.length != 11) {
+  if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
   let count = 0;
 
   for (let i = 0; i < arrayNumber.length; i += 1) {
+
     count = 0;
+
     for (let j = 0; j < arrayNumber.length; j += 1) {
-      if (arrayNumber[j] == arrayNumber[i]) {
+      if (arrayNumber[j] === arrayNumber[i]) {
         count += 1;
       }
     }
 
     if (count >= 3 || arrayNumber[i] < 0 || arrayNumber[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
 
-    if (i == 0) {
+    if (i === 0) {
       phoneNumber += `(${arrayNumber[i]}`;
-    } else if (i == 1) {
+    } else if (i === 1) {
       phoneNumber += `${arrayNumber[i]}) `;
-    }else if (i == 7) {
+    }else if (i === 7) {
       phoneNumber += `-${arrayNumber[i]}`;
     } else {
       phoneNumber += arrayNumber[i];
     }
   }
-
   return phoneNumber;
-
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) && ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) && ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)))) {
+  if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)))
+  && ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) 
+  && ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)))) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
@@ -206,9 +207,8 @@ function hydrate(stringText) {
 
   if (coposDeAgua > 1) {
     return `${coposDeAgua} copos de água`;
-  } else {
-    return `${coposDeAgua} copo de água`;
   }
+  return `${coposDeAgua} copo de água`;
 }
 
 module.exports = {
