@@ -4,9 +4,11 @@ function compareTrue(boleano1 , boleano2) {
     return `true`;
   }else if(boleano1 == false && boleano2 == true){
     return `false`;
+  } else if (boleano1 == false && boleano2 == false){
+    return `false`;
   }
 }
-console.log(calcArea(20 , 30));
+
 // Desafio 2
 function calcArea(base,height) {
   resultado = (base * height) / 2;
