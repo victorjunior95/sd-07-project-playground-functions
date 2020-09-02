@@ -1,12 +1,12 @@
 // Desafio 4
-function concatName(vetor) {
-    let armazem = {};
-    let ultimoItem = vetor.length - 1;
-    armazem.ultimoItem1 = vetor[ultimoItem];
-    armazem.primeiroItem = vetor[0];
-    return armazem.ultimoItem1 + ', ' + armazem.primeiroItem; 
-    
-} 
+function footballPoints(wins, ties) {
+let valorTotalVitoria = wins;
+let valorTotalEmpates = ties;
+let valorDePontosVitoria = valorTotalVitoria * 3;
+let valorDePontosEmpate = valorTotalEmpates * 1;
+let valorTotalPontos = valorDePontosVitoria + valorDePontosEmpate;
+return valorTotalPontos;
 
-console.log(concatName(['Go', 'Trybe', 'Vai', 'Atras']));
+}
+console.log(footballPoints(0, 1));
 

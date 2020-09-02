@@ -44,8 +44,14 @@ function concatName(vetor) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let valorTotalVitoria = wins;
+  let valorTotalEmpates = ties;
+  let valorDePontosVitoria = valorTotalVitoria * 3;
+  let valorDePontosEmpate = valorTotalEmpates * 1;
+  let valorTotalPontos = valorDePontosVitoria + valorDePontosEmpate;
+  return valorTotalPontos;
+  
 }
 
 // Desafio 6
