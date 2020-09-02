@@ -64,13 +64,13 @@ function fizzBuzz(numeros) {
           numeros.push("fizzBuzz")
       }
         else if (numeros[i] % 3 == 0){
-          numeros.push("fizz")
+          arrayresultado.push("fizz")
         }
         else if(numeros[i] % 5 == 0){
-          numeros.push("buzz")
+          arrayresultado.push("buzz")
         }
         else{
-          numeros.push("bug!")
+          arrayresultado.push("bug!")
         }
         return arrayresultado;
       }
@@ -78,7 +78,7 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+   
 }
 function decode() {
   // seu código aqui
