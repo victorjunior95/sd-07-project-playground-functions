@@ -12,7 +12,7 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let resultado = ((base*height)/2);
+  resultado = ((base*height)/2);
   return resultado;
 }
 
@@ -24,14 +24,14 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let resultado = `${array[array.length-1]}, ${array[0]}`;
+  resultado = `${array[array.length-1]}, ${array[0]}`;
   return resultado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let total = (wins*3) + ties;
+  total = (wins*3) + ties;
   return total;
 }
 
@@ -58,13 +58,13 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (cat1 - mouse > cat2 - mouse){
-    let resultado = `cat2`;
+    resultado = `cat2`;
   }
   else if (cat1 - mouse < cat2 - mouse){
-    let resultado = `cat1`;
+    resultado = `cat1`;
   }
   else {
-    let resultado = `os gatos trombam e o rato foge`
+    resultado = `os gatos trombam e o rato foge`
   }
   return resultado;
 }
@@ -80,7 +80,7 @@ function fizzBuzz(array) {
     else if ((array[i] % 3) == 0){
       resultado = resultado.push(`fizz`);
     }
-    else if ((array[i] % 5) == 0)) {
+    else if ((array[i] % 5) == 0) {
       resultado = resultado.push(`buzz`);
     }
     else {
