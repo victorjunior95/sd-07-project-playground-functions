@@ -57,8 +57,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mouseDistanceBetweenCat1 = Math.abs(mouse - cat1);
-  let mouseDistanceBetweenCat2 = Math.abs(mouse - cat2);
+  let mouseDistanceBetweenCat1 = mouse > cat1 ? (mouse - cat1) : (cat1 - mouse);
+  let mouseDistanceBetweenCat2 = mouse > cat2 ? (mouse - cat2) : (cat2 - mouse);
   if (mouseDistanceBetweenCat1 > mouseDistanceBetweenCat2) {
     return 'cat 2 got the mouse';
   } else if (mouseDistanceBetweenCat1 < mouseDistanceBetweenCat2) {
@@ -68,7 +68,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let arrayOfNumbs = [2, 15, 7, 9, 45];
 function fizzBuzz(array) {
   let wordsCollections = [];
   for (let number in array) {
@@ -118,11 +117,12 @@ function decode(sentence) {
 function techList(array, theName) {
   let structuredArray = [];
   let structureObjects = {};
+  array.sort();
   if (array === '') {
     return 'Vazio!';
   } else {
     for (let tech in array) {
-      structureObjects = { tech: `${array[tech]}`, name: `${theName}`};
+      structureObjects = { tech: `${array[tech]}`, name: `${theName}` };
       structuredArray.push(structureObjects);
     }
   }
@@ -142,7 +142,7 @@ function generatePhoneNumber(array) {
         repeatedNumbs += 1;
         }
       }
-      if (array[number] > 9 || array[number] < 0 || repeatedNumbs > 3) {
+      if (array[number] > 9 || array[number] < 0 || repeatedNumbs >= 3) {
         return 'não é possível gerar um número de telefone com esses valores.';
       }
     }
@@ -151,7 +151,7 @@ function generatePhoneNumber(array) {
   + array[2] + array[3] + array[4] + array[5] + array[6] 
   + '-' 
   + array[7] + array[8] + array[9] + array[10];
-  return reformuledNumber.toString();
+  return reformuledNumber;
 }
 
 // Desafio 12
