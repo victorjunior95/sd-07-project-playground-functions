@@ -34,13 +34,15 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(paramArray) {
   let lastItem = paramArray.length-1;
-  let lastFirst = paramArray[lastItem] + ", " + paramArray[0];
-    return lastFirst;
+  let lastFirst = paramArray[lastItem] + ', ' + paramArray[0];
+  return lastFirst;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let victory = wins * 3;
+  let sum = victory + ties;
+  return sum;
 }
 
 // Desafio 6
