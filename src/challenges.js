@@ -15,8 +15,9 @@ return (base * altura / 2)
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+return string.split(" ");
 }
 
 // Desafio 4
