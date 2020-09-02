@@ -145,6 +145,11 @@ function decode(arrayWithNumbers) {
 // Desafio 10
 function techList(arrayTech, name) {
   // seu código aqui
+
+  if (arrayTech.length = 0) {
+    return "Vazio!";
+  }
+
   let arraySorting = arrayTech.sort();
 
   let arrayWithInformation = [];
