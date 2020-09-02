@@ -50,12 +50,12 @@ function highestCount(arrayNumbers) {
   let high = arrayNumbers[0];
   for (let i = 0; i <= arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] > high) {
-      high = arrayNumbers[i]
+      high = arrayNumbers[i];
     }
   }
   let repeat = 0;
   for (let index = 0; index <= arrayNumbers.length; index += 1) {
-    if(arrayNumbers[index] === high) {
+    if (arrayNumbers[index] === high) {
       repeat += 1;
     }
   }
@@ -63,8 +63,16 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let result;
+  if (cat1-mouse < cat2-mouse) {
+    result = cat1;
+  } else if (cat2-mouse < cat1-mouse) {
+    result = cat2;
+  } else {
+    result = 'os gatos trombam e o rato foge'
+  }
+  return result;
 }
 
 // Desafio 8
