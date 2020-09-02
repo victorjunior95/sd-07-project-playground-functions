@@ -1,8 +1,8 @@
 // Desafio 1
-function compareTrue(param1, param2) {
-  if(param1 == true && param2 == true) {
+function compareTrue() {
+  if(compareTrue[0] == true && compareTrue[1] == true) {
     return true;
-  } else if (param1 == false && param2 == false) {
+  } else if (compareTrue[0] == false && compareTrue[1] == false) {
     return false;
   }
 }
@@ -14,8 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let arrayResultado = string.split(" ");
+  return arrayResultado;
 }
 
 // Desafio 4
