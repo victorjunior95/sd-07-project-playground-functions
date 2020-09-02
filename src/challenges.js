@@ -1,9 +1,10 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
+  let validation = true;
   if (boolean1 === true && boolean2 === true) {
-    return true;
+    return validation;
   } else {
-    return false;
+    return validation = false;
   }
 }
 
@@ -15,25 +16,34 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringSentence) {
-  let splitArray = stringSentence.split(" ");
+  let splitArray = stringSentence.split(' ');
   return splitArray;
 }
 
 // Desafio 4
 function concatName(stringsArray) {
-  
   return `${stringsArray[stringsArray.length - 1]}, ${stringsArray[0]}`;
-  
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let victory = 3;
+  let draw = 1;
+  let points = (wins * victory) + (ties * draw);
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbersArray) {
+  let counter = 0;
+  let highNumber = numbersArray[0];
+  for (let i in numbersArray){
+    if (numbersArray[i] >= highNumber){
+    highNumber = numbersArray[i];
+    counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
