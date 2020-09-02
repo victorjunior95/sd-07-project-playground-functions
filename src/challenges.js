@@ -148,7 +148,6 @@ function techList(tecnologias, nome) {
         name: nome,
       })
     }
-    console.log("executei aqui")
   }
   return saida;
 }
