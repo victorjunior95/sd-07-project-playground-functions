@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let resposta = "false";
-  if (a == "true" && b == "true") {
+  let resposta = true;
+  if (a == true && b == true) {
 
   } else {
-    resposta = "false";
+    resposta = false;
   }
-  return resposta
+  console.log (resposta);
 }
 
 // Desafio 2
