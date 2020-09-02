@@ -75,10 +75,10 @@ function catAndMouse(mouse,cat1, cat2) {
 
   if(cat1 === cat2){
     return msg;
-  }else if(cat1 >= cat2){
-    return cat2;
+  }else if(cat1 > cat2){
+    return 'cat2';
   }else{
-    return cat1;
+    return 'cat1';
   }
 }
 
@@ -188,9 +188,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-//let numeros = [9, 1, 2, 3, 9, 5, 7];
-
-//console.log( splitSentence("go Trybe"));
 
 module.exports = {
   calcArea,
