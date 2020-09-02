@@ -45,15 +45,17 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 == cat2) {
-    console.log("os gatos trombam e o rato foge");
-  }
-  else if ((cat1 - mouse) < (cat2 - mouse)) {
-    console.log('cat1');
-  }
-  else {
-    console.log('cat2');
-  }
+  let value = "";
+    if (Math.abs(cat1 - mouse) == Math.abs(cat2 - mouse)) {
+      value = "os gatos trombam e o rato foge";
+    }
+    else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+      value = "cat1";
+    }
+    else {
+      value = "cat2";
+    }
+  return value;
 }
 
 // Desafio 8
