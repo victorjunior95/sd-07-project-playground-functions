@@ -74,8 +74,6 @@ function fizzBuzz(array) {
   return fbarray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 function encode(frase) {
   const list = {a:1, e:2, i:3, o:4, u:5};
@@ -127,18 +125,36 @@ function techList(arrayTech, name) {
   return resp.length==0?'Vazio!':resp;
 }
 
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Pedro'))
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  let formatedNumber = [];
+  formatedNumber.push('(');
+  formatedNumber.push(arrayNumber[0]);
+  formatedNumber.push(arrayNumber[1]);
+  formatedNumber.push(')');
+  formatedNumber.push(' ');
+  formatedNumber.push(arrayNumber[2]);
+  formatedNumber.push(arrayNumber[3]);
+  formatedNumber.push(arrayNumber[4]);
+  formatedNumber.push(arrayNumber[5]);
+  formatedNumber.push(arrayNumber[6]);
+  formatedNumber.push('-');
+  formatedNumber.push(arrayNumber[7]);
+  formatedNumber.push(arrayNumber[8]);
+  formatedNumber.push(arrayNumber[9]);
+  formatedNumber.push(arrayNumber[10]);
+  return formatedNumber.join('');
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let a = lineA<(lineB+lineC) && lineA>Math.abs(lineB-lineC);
+  let b = lineB<(lineA+lineC) && lineA>Math.abs(lineA-lineC);
+  let c = lineC<(lineA+lineB) && lineA>Math.abs(lineA-lineB);
+  return a && b && c;
 }
+
+console.log(triangleCheck(10, 40, 10));
 
 // Desafio 13
 function hydrate() {
