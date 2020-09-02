@@ -44,10 +44,14 @@ function highestCount(arr) {
       counts[arr[key]] = 1;
     }
   }
+  console.log(counts);
   for (let key in counts) {
-    if (counts[key] > mostDuplicated.value) {
+      console.log(`${key}, ${mostDuplicated.value}`);
+    if (key > mostDuplicated.value) {
       mostDuplicated.value = key;
       mostDuplicated.times = counts[key];
+    } else if (Number(key) === mostDuplicated.value) {
+        mostDuplicated.times += 1;
     }
   }
   return mostDuplicated.times;
