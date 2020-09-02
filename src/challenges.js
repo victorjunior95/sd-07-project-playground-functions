@@ -16,7 +16,7 @@ function splitSentence(palavra) {
 
 // Desafio 4
 function concatName(palavras) {
-  return palavras[0] + palavras[palavras.length - 1]
+  return palavras[palavras.length - 1] + palavras[0]
 }
 
 // Desafio 5
