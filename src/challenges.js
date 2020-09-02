@@ -149,7 +149,7 @@ function decode(frase) {
 
 // Desafio 10
 function techList(arrayTech, name) {
-  if (arrayTech == []) {
+  if (arrayTech === []) {
     return "Vazio!"
   } else {
     let nome = name;
@@ -161,9 +161,10 @@ function techList(arrayTech, name) {
       };
       objectResult = objectResult.concat(parameter)
     }
-    return objectResult.sort(function(a, b) {
+    let result = objectResult.sort(function(a, b) {
       return (a.tech > b.tech)
     })
+    return result
   }
 }
 
