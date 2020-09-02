@@ -91,11 +91,66 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let newString = ""
+  let finalString = ""
+  
+  let vogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+
+  for (let counter = 0 ; counter <= word.length - 1 ; counter += 1) {
+    let counterVogais = 0
+    let currentLetter = word[counter]
+    for (key in vogais) {
+      let currentVogal = key
+      if (currentLetter === currentVogal) {
+        newString = vogais[key]
+        counterVogais += 1
+      }
+    }
+    if (counterVogais > 0 ) {
+      finalString += newString
+    } else {
+      finalString += currentLetter
+    }
+  }
+  return finalString
 }
-function decode() {
-  // seu código aqui
+
+function decode(word) {
+  let newString = ""
+  let finalString = ""
+  
+  let vogais = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  }
+
+  for (let counter = 0 ; counter <= word.length - 1 ; counter += 1) {
+    let counterVogais = 0
+    let currentLetter = word[counter]
+    for (key in vogais) {
+      let currentVogal = key
+      if (currentLetter === currentVogal) {
+        newString = vogais[key]
+        counterVogais += 1
+      }
+    }
+    if (counterVogais > 0 ) {
+      finalString += newString
+    } else {
+      finalString += currentLetter
+    }
+  }
+  return finalString
 }
 
 // Desafio 10
