@@ -93,6 +93,7 @@ function decode(str) {
 // Desafio 10
 function techList(arr, name) {
   let out = [];
+  arr.sort();
   if(arr.length <= 0){
     return 'Vazio!';
   }
@@ -102,9 +103,9 @@ function techList(arr, name) {
       name: name,
     });
   }
-  out.sort();
   return out;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 
 // Desafio bonus 1
 function generatePhoneNumber() {
