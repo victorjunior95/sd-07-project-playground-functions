@@ -2,10 +2,9 @@
 function compareTrue(boolOne, boolTwo) {
   if (boolOne == 1 && boolTwo == 1) {
     return true;
-  }
-  else {
-    return false;
-  }
+  } else {
+      return false;
+    }
 }
 
 // Desafio 2
@@ -16,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(words) {
-  let newArrayWords = words.split(" ");
+  let newArrayWords = words.split(' ');
   return newArrayWords;
 }
 
@@ -33,8 +32,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = array[0];
+  let cont = 0;
+  for (let i of array) {
+    if (i > maior) {
+      maior = i;
+    }
+  }
+  for (let j of array) {
+    if (j === maior) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
 
 // Desafio 7
