@@ -18,15 +18,17 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  let newArray = [];
-  newArray.push(array[array.length - 1]);
-  newArray.push(array[0]);
-  return newArray;
+  let nomes = "";
+  nomes += array[array.length - 1];
+  nomes += ", " + array[0];
+  return nomes;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let total = 0;
+  total = (wins * 3) + ties;
+  return total
 }
 
 // Desafio 6
