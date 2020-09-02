@@ -38,17 +38,32 @@ function footballPoints(wins, ties) {
     i = 0;
   if (wins > 0) {
     result += wins * 3;
-  } 
-  if (ties > 0){
+  }
+  if (ties > 0) {
     result += ties
   }
   return result;
 }
-console.log(footballPoints(0,0))
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
+  let i = 0,
+    j = 0,
+    result = 0,
+    bigger = [];
+  for (i = 0; i < arrayNumbers.length - 1; i += 1) {
+    bigger[i] = 0;
+    for (j = 0; j < arrayNumbers.length - 1; j += 1) {
+      if (arrayNumbers[i] == arrayNumbers[j]) {
+        bigger[i] += 1
+      }
+    }
+  }
+  let biggerSort = bigger.sort()
+  let biggerLast = (biggerSort.length) - 1
+  result = biggerSort[biggerLast]
+  return result;
 }
 
 // Desafio 7
