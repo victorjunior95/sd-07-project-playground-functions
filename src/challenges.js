@@ -9,11 +9,18 @@ function compareTrue(a, b) {
 }
 compareTrue(a,b);
 
+let base= 1;
+let height= 2;
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let area = base*height/2
+  return console.log(area);
+  return area;
 }
+
+calcArea(base, height);
 
 // Desafio 3
 function splitSentence() {
