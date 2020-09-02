@@ -12,7 +12,6 @@ compareTrue(true, false);
 // Desafio 2
 function calcArea(base, height) {
   let cal = (base*height)/2;
-  console.log(cal);
   return cal;
 }
 
@@ -21,7 +20,6 @@ calcArea(2,3);
 // Desafio 3
 function splitSentence(string) {
   let result = string.split(' ');
-  console.log(result);
   return result;
 }
 splitSentence('go Trybe');
@@ -38,7 +36,6 @@ concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints(wins, ties) { 
   let points = (3*wins)+(1*ties);
-  console.log(points);
   return points;
 }
 footballPoints(2, 1)
@@ -57,7 +54,6 @@ function highestCount(numbers) {
       repeticao += 1;
     }
   }
-  console.log(repeticao);
   return repeticao
 }
 
