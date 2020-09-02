@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if ( bool1 === true && bool2 === true ) {
+  if (bool1 === true && bool2 === true) {
     return true;
   } else {
     return false;
@@ -9,13 +9,14 @@ function compareTrue(bool1, bool2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = base * height / 2;
+  let areaTriangulo = (base*height)/2;
   return areaTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+    let splits = string.split(' ');
+     return splits;
 }
 
 // Desafio 4
