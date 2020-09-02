@@ -188,9 +188,22 @@ function decode(string) {
 // -------------------------------------------------------------------
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let novoArray = [];
+  for (let i in array) {
+    novoArray[i] = {
+      tech: array[i],
+      name: name,
+    };
+  }
+  return novoArray;
 }
+
+// --------------------TESTE DESAFIO 10--------------------------------
+let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let teste1 = "Lucas";
+console.log(techList(teste, teste1));
+// -------------------------------------------------------------------
 
 // Desafio 11
 function generatePhoneNumber() {
