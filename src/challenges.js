@@ -52,10 +52,21 @@ function highestCount(array6) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  mousePosition = mouse;
+  cat1Position = mouse - cat1;
+  cat2Position = mouse - cat2;
+  
+  if (cat1Position < cat2Position){
+    return cat1;
+  } else if (cat2Position < cat1Position){
+    return cat2;
+  } else {
+    return mouse
+  }
+  
 }
-
+console.log(catAndMouse(4, 1, 1))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
