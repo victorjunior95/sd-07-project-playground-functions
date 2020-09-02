@@ -66,21 +66,17 @@ console.log(footballPoints(wins, ties));
 const numbers = [9, 1, 2, 3, 9, 5, 7]
 
 function highestCount(arraysOfNumbers) {
-  let cont = 0;
-  let aux = 0;
-  
+  let bigger = 0;
+  let result = 0;
   for (i in arraysOfNumbers) {
-    cont = 0;
-    for (j in arraysOfNumbers) {
-      if (arraysOfNumbers[i] == arraysOfNumbers[j]) {
-        cont += 1;
-      }
+    if (arraysOfNumbers[i] => bigger){
+      bigger = arraysOfNumbers[i];
     }
-    if (cont > aux) {
-      aux = cont;
+    if (arraysOfNumbers[i] == bigger){
+      result += 1;
     }
   }
-  return aux;
+  return result;
 }
 
   console.log(highestCount(numbers));
