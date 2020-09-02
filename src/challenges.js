@@ -125,12 +125,34 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
 }
-console.log(catAndMouse(mouse, cat1, cat2));
+//console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
-function fizzBuzz() {
+let numbersArr =  [2, 15, 7, 9, 45];
+
+function fizzBuzz(numbersArr) {
   // seu código aqui
+  let nStr = "";
+  let nArr = [];
+  if (numbersArr.length > 0) {
+    for (let i = 0; i < numbersArr.length; i += 1) {
+      if (numbersArr[i] % 15 === 0) {
+        nStr = "fizzbuzz";
+      } else if (numbersArr[i] % 5 === 0) {
+        nStr = "buzz";
+      } else if (numbersArr[i] % 3 === 0) {
+        nStr = "fizz";
+      } else {
+        nStr = "bug!";
+      }
+      nArr.push(nStr);
+    }
+    return nArr
+  } else {
+    return "Favor verifique os dados inseridos"
+  }
 }
+console.log(fizzBuzz(numbersArr));
 
 // Desafio 9
 function encode() {
