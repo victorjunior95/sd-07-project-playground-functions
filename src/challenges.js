@@ -40,11 +40,19 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(10, 3));
 
 // Desafio 6
-function highestCount() {
-  
+function highestCount(num) {
+  let maiorValor = 0;
+  let contador = 0;
 
-
+  for (let i in num){
+    if (num[i] >= maiorValor){
+      maiorValor = num[i];
+      contador += 1;
+    }
+  }
+return contador;
 }
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
