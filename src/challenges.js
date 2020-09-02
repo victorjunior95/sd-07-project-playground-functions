@@ -158,7 +158,7 @@ function generatePhoneNumber(array) {
   }
   let validation = validatingTheNumbers(array);
   if (array.length != 11) {
-    return "Array com tamanho incorreto";
+    return "Array com tamanho incorreto.";
   } else if (validation) {
     return "não é possível gerar um número de telefone com esses valores";
   } else {
