@@ -37,17 +37,20 @@ console.log(footballPoints(2,3));
 function highestCount(numeros) {
   let higherNumber = 0;
   let numberOfTimes = 0;
-  for (let i in numeros) {
-    if (higherNumber < numeros[i]) {
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (higherNumber <= numeros[i]) {
       higherNumber = numeros[i];
-    }
-    if (higherNumber === numeros[i]) {
+    }    
+  }
+
+  for (let j = 0; j < numeros.length; j += 1) {
+    if (higherNumber === numeros[j]) {
       numberOfTimes += 1;
     }
   }
   return numberOfTimes;
 }
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+console.log(highestCount([9, 4, 4, 4, 9, 2, 1]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -82,10 +85,10 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
 }
-function decode() {
+
+function decode(string) {
   // seu código aqui
 }
 
