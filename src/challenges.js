@@ -18,7 +18,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(word) {
-  let arrayWord = word.split(" ");
+  let arrayWord = word.split(" "); // esta função já divide uma string de acordo com o separador que vc define
   return arrayWord;
 }
 //console.log(splitSentence("go Trybe"));
@@ -146,10 +146,54 @@ function techList(nomeTech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let numTel = "(";
+  let numInvalido = false;
+  let repetido = 0;
+
+  for (let i = 0; i < numbers.length; i += 1){
+    if (numbers[i] < 0 || numbers[i] > 9){
+      numInvalido = true;
+    }
+  }
+
+  for (let i = 0; i < numbers.length; i += 1){
+    let cont = 1;
+    for (let j = i + 1; j < numbers.length; j += 1){
+      if (numbers[i] === numbers[j]){
+        cont += 1;
+      }
+      if (cont > repetido){
+        repetido = cont;
+      }
+    }
+  }
+
+  if (numbers.length != 11){
+    return "Array com tamanho incorreto.";
+  } 
+  else if (numInvalido === true || repetido >= 3) {
+    return "não é possível gerar um número de telefone com esses valores"
+  } 
+  else {
+  for (let i = 0; i < 2; i += 1){
+    numTel += numbers[i];
+  }
+  numTel = `${numTel}) `;
+
+  for (let j = 2; j < 7; j += 1){
+    numTel += numbers[j];
+  }
+  numTel = `${numTel}-`;
+
+  for (let k = 7; k < 11; k += 1){
+    numTel += numbers[k];
+  }
+  return numTel;
 }
 
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
