@@ -71,7 +71,7 @@ function encode(string) {
     let sai = said.replace("i", "3");
     let sa = sai.replace("o", "4");
     let s = sa.replace("u", "5");
-    console.log(s);
+    return (s);
 
 }
 
@@ -81,7 +81,7 @@ function decode(string) {
     let sai = said.replace("3", "i");
     let sa = sai.replace("4", "o");
     let s = sa.replace("5", "u");
-    console.log(s);
+    return (s);
 }
 
 // Desafio 10
