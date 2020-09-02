@@ -40,14 +40,36 @@ function footballPoints(wins, ties ) {
 console.log(footballPoints(7, 5));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let repete = 0;
+  let maiorNum = 0;
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] > maiorNum) {
+      maiorNum = numeros[i];
+      repete = 1;
+    } else if (numeros[i] === maiorNum) {
+      repete += 1;
+    }
+  }
+  return repete;
 }
 
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let retorno ='';
+  if ((mouse - cat1) < (mouse - cat2)) {
+    retorno = "cat1";
+  } else if ((mouse - cat1) > (mouse - cat2)) {
+    retorno = "cat2";
+  } else {
+    retorno = "os gatos trombam e o rato foge";
+  }
+  return retorno;
 }
+
+console.log(catAndMouse(5, 2, 3));
 
 // Desafio 8
 function fizzBuzz() {
