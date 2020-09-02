@@ -137,7 +137,7 @@ function decode(entrada) {
     } else if (array[i] == "4") {
       array[i] = "o";
     } else if (array[i] == "5") {
-      array[i] = "o";
+      array[i] = "u";
     }
   }
   let frase = array[0];
@@ -148,7 +148,8 @@ function decode(entrada) {
 
  
 }
-console.log(decode('H3 Th2r2'))
+console.log("encode funcionando?" + encode('Hi there a e i o u'))
+console.log("decode funcionando?" + decode('H3 Th2r2 11 22 33 44 55'))
 
 // Desafio 10
 function techList(array, name) {
