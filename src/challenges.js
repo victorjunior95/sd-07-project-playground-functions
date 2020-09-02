@@ -97,12 +97,24 @@ if (array[i] % 3 != 0 && array[i] % 5 != 0) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(string) {
+  let newString = '';
+  newString = string.replace(/a/g, '1');
+  newString1 = newString.replace(/e/g, '2');
+  newString2 = newString1.replace(/i/g, '3');
+  newString3 = newString2.replace(/o/g, '4');
+  newString4 = newString3.replace(/u/g, '5');
+  return(newString4)
+  }
+  function decode(string) {
+  let newString = '';
+  newString = string.replace(/1/g, 'a');
+  newString1 = newString.replace(/2/g, 'b');
+  newString2 = newString1.replace(/3/g, 'c');
+  newString3 = newString2.replace(/4/g, 'd');
+  newString4 = newString3.replace(/5/g, 'e');
+  return(newString4)
+  }
 
 // Desafio 10
 function techList() {
