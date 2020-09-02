@@ -61,10 +61,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(cat2 - mouse);
   let sentense = null;
   if (distanceCat1 < distanceCat2) {
-    sentense = "Cat 1";
+    sentense = "Cat1";
   }
   else if (distanceCat2 < distanceCat1) {
-    sentense = "Cat 2";
+    sentense = "Cat2";
   }
   else{
     sentense = "os gatos trombam e o rato foge";
@@ -160,8 +160,9 @@ function techList(array, name) {
       structure.tech = word;
       arrayStructure.push(Object.assign({}, structure));
     }
+    return  (arrayStructure);
   }
-  return  (arrayStructure);
+  return ("Vazio!");
 }
 
 // Desafio 11
