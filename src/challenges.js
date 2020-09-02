@@ -1,6 +1,6 @@
 // Desafio 1
-let a= false;
-let b= false;
+let first= false;
+let second= false;
 function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
@@ -9,7 +9,7 @@ function compareTrue(a, b) {
     return false;
   };
 }
-compareTrue(a, b)
+compareTrue(first, second)
 
 // Desafio 2
 let base = 10;
@@ -36,9 +36,14 @@ function concatName() {
 }
 
 // Desafio 5
+let victory = 5;
+let draw = 3;
 function footballPoints(wins, ties) {
   // seu código aqui
+    wins = wins * 3;
+    return wins + ties;
 }
+footballPoints(victory, draw)
 
 // Desafio 6
 function highestCount() {
@@ -51,9 +56,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+let dataFizzBuzz = [2, 15, 7, 9, 45]
+function fizzBuzz(a) {
   // seu código aqui
+  let message = [];
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
+      message.push('FizzBuzz');
+    } else if (a[i] % 3 === 0) {
+      message.push('Fizz');
+    } else if (a[i] % 5 === 0) { 
+      message.push('Buzz');
+    } else {
+      message.push('Bug!');
+    }
+  }
+  return message;
 }
+fizzBuzz(dataFizzBuzz)
 
 // Desafio 9
 function encode() {
