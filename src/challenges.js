@@ -3,11 +3,12 @@ function compareTrue(valor1,valor2) {
   // seu código aqui
   return valor1 && valor2;
 }
-console.log(compareTrue(true,true));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
