@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolean1, boolean2) {
+  return boolean1 == true && boolean2 == true;
 }
 
 // Desafio 2
@@ -83,5 +83,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-//alteração pro commit inicial
