@@ -51,12 +51,15 @@ function highestCount(array){
   if (array[i] > maiorValor) {
     maiorValor = array[i];
   }
-  if(maiorValor == array[i]){
+}
+for(let j = 0; j < array.length; j++){
+  if(maiorValor == array[j]){
         repeticao= repeticao += 1;
     }
 }
-    return repeticao;
+  return repeticao;
 }
+
 
 // Desafio 7
 function catAndMouse() {
