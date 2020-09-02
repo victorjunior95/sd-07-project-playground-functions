@@ -198,8 +198,43 @@ function techList(vetor, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numeros) {
   // seu código aqui
+  const msgErro = "não é possível gerar um número de telefone com esses valores";
+  let numero;
+  let qtdRepeticao = 0;
+  let numeroValidado;
+
+  if(numeros.length != 11){
+    return "Array com tamanho incorreto.";
+  }
+
+  for(let i=0; i < numeros.length; i += 1){
+    numero = numeros[i];
+
+    if(numeros[i] < 0 || numeros[i] > 9){
+      return msgErro;
+    }
+
+    for(let j=0; j < numeros.length; j += 1){
+      if(numeros[j] === numero){
+        qtdRepeticao++;
+      }
+    }
+
+    if(qtdRepeticao >= 3){
+      return msgErro;
+    }
+    qtdRepeticao = 0;
+  }
+
+  numeroValidado =
+    "(" + String(numeros[0]) + String(numeros[1]) + ")" +
+    String(numeros[2]) + String(numeros[3]) + String(numeros[4]) + String(numeros[5]) +
+    "-" +
+    String(numeros[6]) + String(numeros[7]) + String(numeros[8]) + String(numeros[9]);
+
+  return numeroValidado;
 }
 
 // Desafio 12
@@ -212,13 +247,9 @@ function hydrate() {
   // seu código aqui
 }
 
-//let vetor = [0, 4, 4, 4, 9, 2, 1];
-//let vetor = [9, 1, 2, 3, 9, 5, 7];
-//let vetor = [0, 0, 0];
-let vetor = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
-
-console.log( techList(vetor, "André") );
+console.log( generatePhoneNumber(numero) );
 
 module.exports = {
   calcArea,
