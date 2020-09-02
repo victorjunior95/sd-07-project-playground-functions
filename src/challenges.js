@@ -154,7 +154,7 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 // Desafio 11
 function generatePhoneNumber(phoneNumberArray) {
   let phoneNumber = "(";
-  if (phoneNumberArray.length > 11)
+  if (phoneNumberArray.length != 11)
   {
     return "Array com tamanho incorreto.";
   }
