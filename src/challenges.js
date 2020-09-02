@@ -21,10 +21,12 @@ function calcArea(base, height) {
 console.log(calcArea(base, height));
 
 // Desafio 3
+
 const splitPhrase = "go Trybe"
-let aux = '';
 
 function splitSentence(split) {
+  let aux = '';
+
   let stringForArray = [];
   for (i in split + 1) {   // + 1 para não cortar a última letra na condicional (último push)
     (split[i] == " ") || (split.length == i) ? (stringForArray.push(aux)) && (aux = '') : aux += split[i];
@@ -35,14 +37,29 @@ function splitSentence(split) {
 console.log(splitSentence(splitPhrase));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+const arrayOfString = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
+function concatName(phrase) {
+  return `${phrase[phrase.length - 1]}, ${phrase[0]}`;
 }
 
+console.log(concatName(arrayOfString));
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+const wins = 3;
+const ties = 4;
+
+function footballPoints(wins, ties) {
+  let result = 0;
+  for (let i = 1; i <= wins + ties; i += 1) { // i vai começar a contar a partir do primeiro ponto até a soma de todos(vitórias ou empates)
+    wins >= i ? (result += 3) : result += 1; // enquanto o número de vitórias forem maior ou igual o contador ira somar 3 caso contrario 1(valor de empate)
+  }
+  return result
 }
+
+console.log(footballPoints(wins, ties));
 
 // Desafio 6
 function highestCount() {
