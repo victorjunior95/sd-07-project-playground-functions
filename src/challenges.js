@@ -34,8 +34,13 @@ function splitSentence(frase) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetor) {
+  let arr = [];
+  let ultimoItem = vetor.length - 1;
+  let ultimoItem1 = vetor[ultimoItem];
+  let primeiroItem = vetor[0];
+  arr = [ultimoItem1, primeiroItem];
+  return arr;
 }
 
 // Desafio 5
