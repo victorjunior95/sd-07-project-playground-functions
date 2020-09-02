@@ -66,9 +66,12 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
 
-    let saida = string.replace("a", "1")
-    console.log(saida)
-
+    let saida = string.replace("a", "1");
+    let said = saida.replace("e", "2");
+    let sai = said.replace("i", "3");
+    let sa = sai.replace("o", "4");
+    let s = sa.replace("u", "5");
+    console.log(s);
 
 }
 
