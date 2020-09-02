@@ -43,25 +43,46 @@ function highestCount(arrayNumbers) {
   let countRepetitions = 0;
   let highestNumber = arrayNumbers[0];
 
-  for (let i = 0; i < arrayNumbers.length; i += 1){
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (highestNumber <= arrayNumbers[i]) {
       highestNumber = arrayNumbers[i];
     }
   }
 
-  for (let j = 0; j < arrayNumbers.length; j += 1){
+  for (let j = 0; j < arrayNumbers.length; j += 1) {
     if (highestNumber == arrayNumbers[j]) {
       countRepetitions += 1;
     }
   }
-  return countRepetitions
+  return countRepetitions;
 }
 //console.log(highestCount([9, 1, 2, 3, 9, 5, 10, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mathMouse = Math.abs(mouse);
+  let mathCat1 = Math.abs(cat1);
+  let mathCat2 = Math.abs(cat2);
+
+  let distancia = mathMouse - mathCat1;
+  let distancia2 = mathMouse - mathCat2;
+
+  if (distancia < distancia2 && mathMouse < mathCat2) {
+    console.log("cat2");
+  } else if (distancia > distancia2 && mathMouse < mathCat1) {
+    console.log("cat1");
+  }
+  if (distancia < distancia2 && mathMouse > mathCat2) {
+    console.log("cat1");
+  } else if (distancia > distancia2 && mathMouse > mathCat1) {
+    console.log("cat2");
+  } else if (mathMouse == mathCat1 && mathMouse == mathCat2) {
+    console.log("os gatos trombam e o rato foge");
+  }
+
+  return catAndMouse;
 }
+console.log(catAndMouse(0, 0, 0));
 
 // Desafio 8
 function fizzBuzz() {
