@@ -1,9 +1,9 @@
 // Iniciando o projeto:
 // Desafio 1
 function compareTrue(arg1, arg2) {
-    let valor = true;
-    if(arg1 && arg2) {
-        return valor;
+  let valor = true;
+   if(arg1 && arg2) {
+       return valor;
     } else {
         valor = false;
         return valor;
@@ -21,7 +21,21 @@ function calcArea(base, height) {
     } else {
         return area = (solido*altura)/2;
 
-    }
-    
-  }
+   }
+}
+
+// Desafio 3
+function splitSentence(frase) {
+    let ponder = "Frase inexistente!"
+    if (frase == false){
+        return ponder;
+    } else {
+    let corda = frase;
+    let vetor = corda.split(' ');
+    for (i in vetor);
+        vetor.unshift();
+        return vetor;
+}  
+}
+
 
