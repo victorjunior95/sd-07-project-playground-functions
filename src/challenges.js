@@ -61,10 +61,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   else{
     if (distancia1 < distancia2){
-      return cat1
+      return 'cat1'
     }
     else{
-      return cat2
+      return 'cat2'
     }
   }
 }
