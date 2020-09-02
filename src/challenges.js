@@ -1,16 +1,19 @@
 //Desafio Raphael Caputo
 
 // Desafio 1
-function compareTrue(comparar1, comparar2) {
+function compareTrue(compararFalse, compararTrue) {
   // seu código aqui
-  if(comparar1.split('').length && comparar2.split('').length >= [0]) {
-    return false;
-  } else {
+  compararFalse = true;
+  compararTrue = false;
+
+  if (compararFalse && compararTrue == Boolean()) {
     return true;
+  } else {
+    return false;
   }
   return compareTrue
 }
-console.log(compareTrue("Raphael", "Caputo"));
+console.log(compareTrue(false, true));
 
 
 // Desafio 2
