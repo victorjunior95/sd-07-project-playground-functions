@@ -38,17 +38,22 @@ function highestCount(numeros) {
   // seu código aqui
   let maiorNumero = 0;
   let cont = 0;
+  
   for (i in numeros) {
     if (numeros[i] > maiorNumero) {
       maiorNumero = numeros[i];
     }
+  }
+  for (i in numeros) {
     if (maiorNumero === numeros[i]) {
       cont += 1;
     }
-  }  
-  return (cont);
-}  
-
+  }
+  console.log (maiorNumero);
+  return cont;   
+}
+  
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
