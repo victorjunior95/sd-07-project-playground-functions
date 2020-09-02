@@ -1,11 +1,17 @@
+
 // Desafio 1
-function compareTrue() {
-  Breno Alves
+function compareTrue(a, b) {
+  if(a === true && b === true){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  
+
 }
 
 // Desafio 3
