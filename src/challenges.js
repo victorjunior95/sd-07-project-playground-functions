@@ -147,8 +147,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let str_low=string.toLowerCase();
-  let array=str_low.split("");
+  let array=string.split("");
   let array_encoded = [];
   let str_encoded="";
   for (let key in array)
@@ -188,11 +187,9 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
-  let str_low=string.toLowerCase();
-  let array=str_low.split("");
+  let array=string.split("");
   let array_decoded = [];
   let str_decoded="";
-  let str_decoded_low="";
   for (let key in array)
   {
     if(array[key]=="1" || array[key]=="2" ||array[key]=="3" ||array[key]=="4" ||array[key]=="5")
@@ -225,8 +222,7 @@ function decode(string) {
   {
     str_decoded=str_decoded+array_decoded[key2];
   }
-  str_decoded_low=str_decoded.toLowerCase();
-  return(str_decoded_low);
+  return(str_decoded);
 }
 
 // Desafio 10
