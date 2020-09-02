@@ -94,7 +94,6 @@ function fizzBuzz(numbers) {
 function encode(word) {
   let newString = ""
   let finalString = ""
-  
   let vogais = {
     a: 1,
     e: 2,
@@ -125,7 +124,6 @@ function encode(word) {
 function decode(word) {
   let newString = ""
   let finalString = ""
-  
   let vogais = {
     1: 'a',
     2: 'e',
@@ -164,8 +162,13 @@ function techList(tech, name) {
     }
     newTechList.push(newTechItem)
   }
-  return newTechList
+  if (newTechList.length > 0) {
+    return newTechList
+  } else {
+    return 'Vazio!'
+  }
 }
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
