@@ -1,12 +1,51 @@
-//  Função Auxiliar
-function somaRepeat(array, pos) {
+// Funções Auxiliares
+// Soma repetidos
+function somaRepeat(arrayGenerico, pos) {
   let soma = 0;
-  for (let i in array) {
-    if (array[pos] === array[i]) {
+  for (let i in arrayGenerico) {
+    if (arrayGenerico[pos] === arrayGenerico[i]) {
       soma += 1;
     }
   }
   return soma;
+}
+
+// Valida array e dá uma resposta em strings
+function validaTelefone(arrayTelefone) {
+  retorno = '';
+  if (arrayTelefone.length == 11) {
+    for (let i in arrayTelefone) {
+      if (arrayTelefone[i] > 9 || arrayTelefone[i] < 0 || somaRepeat(arrayTelefone, i) > 3) {
+        retorno = 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }  else {
+    retorno = 'Array com tamanho incorreto.';
+  }
+  return retorno;
+}
+
+// Separa e enfeita Telefone
+function enfeitaTelefone(arrayTelefone){
+  let numeroTelefone = '';
+    for (let i in arrayTelefone) {
+      switch(i) {
+        case '0':
+          numeroTelefone += '(';
+          break;
+        case '2':
+          numeroTelefone += ')';
+          numeroTelefone += ' ';
+          break;
+        case '7':
+          numeroTelefone += ' ';
+          break;
+        default:
+        break;
+      }
+      numeroTelefone += arrayTelefone[i]
+    }
+  return numeroTelefone;
 }
 
 // Desafio 1
@@ -51,7 +90,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let posMaisF = 0;
+  let posMaisF = 0;numTelef
   let somaMaisF = somaRepeat(array, posMaisF);
   let posAtual = posMaisF + 1;
   let somaAtual = 0;
@@ -176,43 +215,15 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let numero = '';
-  for (let i in array) {
-    if (somaRepeat(array, i) >= 3) {
-      numero = 'não é possível gerar um número de telefone com esses valores';
-      break;
-    }
+function generatePhoneNumber(arrayTelefone) {
+  let resposta = validaTelefone(arrayTelefone)
+  if (resposta === ''){
+    resposta = enfeitaTelefone(arrayTelefone)
   }
-  for (let i in array) {
-    if (array[i] > 9 || array[i] < 0) {
-      numero = 'não é possível gerar um número de telefone com esses valores';
-      break;
-    }
-  }
-  if (array.length === 11) {
-    for (let i in array) {
-      switch(i) {
-        case '0':
-          numero += '(';
-          break;
-        case '2':
-          numero += ')';
-          numero += ' ';
-          break;
-        case '7':
-          numero += ' ';
-          break;
-        default:
-        break;
-      }
-      numero += array[i]
-    }
-  } else {
-    numero = 'Array com tamanho incorreto.';
-  }
-  return numero;
+  return resposta;
 }
+let numeroTelefone = [3,2,9,8,8,4,4,7,6,7, 0];
+console.log(generatePhoneNumber(numeroTelefone));
 
 // Desafio 12
 let lineA = 3;
