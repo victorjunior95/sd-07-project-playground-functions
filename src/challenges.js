@@ -30,7 +30,7 @@ function concatName(array) {
     if (i === 0) {
       output += array[array.length - 1] + ', ';
     }
-    else if (i == array.length - 1) {
+    else if (i === array.length - 1) {
       output += array[0];
     }
   }
@@ -43,9 +43,25 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
-// Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let count = 0;
+  let number = '';
+  for (let i = 0; i < array.length; i +=1){
+      let number1 = array[i];
+      let countRepeticoes = 0;
+      for (j = i + 1; j <= array.length; j +=1){
+          let number2 = array[j];
+          if (number1 == number2){
+              countRepeticoes += 1;
+          }
+      }
+      if (count < countRepeticoes){
+          number = number1;
+          count = countRepeticoes;
+      }
+  }
+  return number;
 }
 
 // Desafio 7
