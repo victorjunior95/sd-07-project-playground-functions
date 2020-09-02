@@ -70,14 +70,14 @@ function catAndMouse(mouse, cat1, cat2) {
     distCat2 *= -1;
   }
   if (distCat1 < distCat2){
-    return cat1;
+    return "cat1";
   } else if (distCat2 < distCat1){
-    return cat2;
+    return "cat2";
   } else {
     return("os gatos trombam e o rato foge");
   }
 }
-//console.log(catAndMouse(2, -1, 7));
+//console.log(catAndMouse(10, 4, 22));
 
 // Desafio 8
 function fizzBuzz(num) {
