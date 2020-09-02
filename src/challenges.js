@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
   return (wins * 3 + ties);
 }
 
-// Desafio 6 - NOK
+// Desafio 6 - OK
 function highestCount(arrayNumeros) {
   // seu código aqui
   let count = 0;
@@ -199,7 +199,7 @@ function generatePhoneNumber(arrayNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (((lineA > (lineB + lineC)) && (lineA < Math.abs(lineA - (lineB+lineC)))) || ((lineB > (lineA + lineC)) && (lineB < Math.abs(lineB - (lineA+lineC)))) || ((lineC > (lineA + lineB)) && (lineC < Math.abs(lineC - (lineA+lineB))))) {
+  if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineA - (lineB+lineC)))) || ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineB - (lineA+lineC)))) || ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineC - (lineA+lineB))))) {
     return true;
   } else {
     return false;
