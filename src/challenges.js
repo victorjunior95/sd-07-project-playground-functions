@@ -98,7 +98,7 @@ function fizzBuzz(array3) {
     }
     else if ((array3[i] % 5 == 0) && (array3[i] % 3 == 0))
     {
-      array4.push("fizzbuzz");
+      array4.push("fizzBuzz");
     }
     else
     {
