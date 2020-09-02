@@ -9,7 +9,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 #### Vídeo passo a passo de como preparar o ambiente no GitHub
 Ps. Tutorial escrito logo abaixo.
 
-{{< vimeo 453822377 >}}
+https://vimeo.com/453822377
 
 1. Clone o repositório
   * `git clone https://github.com/tryber/sd-07-project-playground-functions.git`.
