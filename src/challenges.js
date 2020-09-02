@@ -56,7 +56,7 @@ function highestCount(numbers) {
   return cont;
 }
 
-// Desafio 7
+// Desafio 7 feito
 function catAndMouse(mouse, cat1, cat2,) {
 
   let distancia1 = cat1 - mouse;
@@ -80,8 +80,29 @@ if (unidades1 > unidades2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+
+  let resultado = [];
+
+  for (let i = 0; i < arrayNumbers.length; i++) {
+
+      if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
+
+          resultado[i] = 'fizzbuzz';
+      }
+      else if(arrayNumbers[i] % 3 === 0) {
+
+          resultado[i] = 'fizz';
+      }
+      else if (arrayNumbers[i] % 5 === 0) {
+          resultado[i] = 'buzz';
+      } else {
+
+          resultado[i] = 'bug';
+      }
+  }
+
+  return resultado;
 }
 
 // Desafio 9
