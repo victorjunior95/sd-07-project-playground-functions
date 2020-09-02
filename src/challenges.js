@@ -46,9 +46,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maior = 0;
+  let repete = 0;
+  for (let i in numbers) {
+    if (numbers[i] > maior) {
+      maior = numbers[i];
+    }
+  }
+  for (let i in numbers) {
+    if (numbers[i] === maior) {
+      repete += 1;
+    }
+  }
+  return repete;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
