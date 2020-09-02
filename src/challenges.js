@@ -75,8 +75,13 @@ function encode(string) {
 
 }
 
-function decode() {
-    // seu código aqui
+function decode(string) {
+    let saida = string.replace("1", "a");
+    let said = saida.replace("2", "b");
+    let sai = said.replace("3", "i");
+    let sa = sai.replace("4", "o");
+    let s = sa.replace("5", "u");
+    console.log(s);
 }
 
 // Desafio 10
