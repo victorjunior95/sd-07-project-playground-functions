@@ -1,16 +1,21 @@
 // Desafio 1
 function compareTrue() {
-    let aprovacao, formacao = true;
-    if (aprovacao == true && formacao == true) {
 
-        let felicidade = true;
-        return felicidade;
+    let aprovacao = true;
+    let conclusao = true;
+    let felicidade = true;
+
+    if (aprovacao == true && conclusao == true) {
+
+        felicidade = true;
+        console.log(felicidade);
     } else {
 
-        let felicidade = false;
-        return felicidade;
+        felicidade = false;
+        console.log(felicidade);
     }
 }
+
 // Desafio 2
 function calcArea() {
     // seu código aqui
