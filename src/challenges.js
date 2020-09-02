@@ -117,12 +117,29 @@ function fizzBuzz(arrayNumerosFB) {
 console.log(fizzBuzz(numerosFB));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let fraseTeste = 'hi there!';
+let fraseCodada = '';
+
+function encode(frase) {
+  let fraseResultante = frase.replace(/a/g, '1');
+  fraseResultante = fraseResultante.replace(/e/g, '2');
+  fraseResultante = fraseResultante.replace(/i/g, '3');
+  fraseResultante = fraseResultante.replace(/o/g, '4');
+  fraseResultante = fraseResultante.replace(/u/g, '5');
+  return fraseResultante;  
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let fraseResultante = frase.replace(/1/g, 'a');
+  fraseResultante = fraseResultante.replace(/2/g, 'e');
+  fraseResultante = fraseResultante.replace(/3/g, 'i');
+  fraseResultante = fraseResultante.replace(/4/g, 'o');
+  fraseResultante = fraseResultante.replace(/5/g, 'u');
+  return fraseResultante;  
 }
+
+fraseCodada = encode(fraseTeste);
+console.log(fraseCodada);
+console.log(decode(fraseCodada))
 
 // Desafio 10
 function techList() {
