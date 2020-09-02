@@ -19,13 +19,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  output = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}` 
+  output = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`
   return output
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  points = (wins * 3) + ties
+  return points
 }
 
 // Desafio 6
