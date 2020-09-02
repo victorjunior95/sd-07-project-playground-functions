@@ -222,8 +222,6 @@ function generatePhoneNumber(arrayTelefone) {
   }
   return resposta;
 }
-let numeroTelefone = [3,2,9,8,8,4,4,7,6,7, 0];
-console.log(generatePhoneNumber(numeroTelefone));
 
 // Desafio 12
 let lineA = 3;
