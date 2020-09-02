@@ -23,9 +23,13 @@ function splitSentence(frase) {
 console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let tamanho = nomes[nomes.length -1] + `, ` + nomes[0];
+
+  return tamanho;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
