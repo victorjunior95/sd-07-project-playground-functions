@@ -100,31 +100,55 @@ return arrayNovo;
 // Desafio 9
 function encode(word) {
   let armazena = [];
+  let wordEncode = "";
   for (let i = 0; i < word.length; i += 1){
     armazena.push(word[i]);
   }
 
   for (let i = 0; i < armazena.length; i += 1){
     if (armazena[i] == "a"){
-      armazena[i] = "1";
+      wordEncode = `${wordEncode}1`;
     } else if (armazena[i] == "e"){
-      armazena[i] = "2";
+      wordEncode = `${wordEncode}2`;
   } else if (armazena[i] == "i"){
-    armazena[i] = "3";
+    wordEncode = `${wordEncode}3`;
   } else if (armazena[i] == "o"){
-    armazena[i] = "4";
+    wordEncode = `${wordEncode}4`;
   } else if (armazena[i] == "u"){
-    armazena[i] = "5";
+    wordEncode = `${wordEncode}5`;
+  } else {
+    wordEncode = `${wordEncode}${armazena[i]}`;
   }
 }
-return armazena.join(' ');
+return wordEncode;
 }
 
-function decode() {
-  // seu código aqui
+function decode(word) {
+  let armazena = [];
+  let wordDecode = "";
+  for (let i = 0; i < word.length; i += 1){
+    armazena.push(word[i]);
+  }
+
+  for (let i = 0; i < armazena.length; i += 1){
+    if (armazena[i] == "1"){
+      wordDecode = `${wordDecode}a`;
+    } else if (armazena[i] == "2"){
+      wordDecode = `${wordDecode}e`;
+  } else if (armazena[i] == "3"){
+    wordDecode = `${wordDecode}i`;
+  } else if (armazena[i] == "4"){
+    wordDecode = `${wordDecode}o`;
+  } else if (armazena[i] == "5"){
+    wordDecode = `${wordDecode}u`;
+  } else {
+    wordDecode = `${wordDecode}${armazena[i]}`;
+  }
+}
+return wordDecode;
 }
 //console.log(encode("hi there!"));
-
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList(nomeTech, name) {
@@ -157,19 +181,19 @@ function generatePhoneNumber(numbers) {
     }
   }
 
-  for (let i = 0; i < numbers.length; i += 1){
+  for (let i = 0; i < numbers.length; i += 1){ // Verifica o número que se repete mais vezes
     let cont = 1;
     for (let j = i + 1; j < numbers.length; j += 1){
       if (numbers[i] === numbers[j]){
         cont += 1;
       }
-      if (cont > repetido){
+      if (cont > repetido){ // armazena o número que mais se repete
         repetido = cont;
       }
     }
   }
 
-  if (numbers.length != 11){
+  if (numbers.length != 11){ // se o tamanho do array for diferente de 11
     return "Array com tamanho incorreto.";
   } 
   else if (numInvalido === true || repetido >= 3) {
@@ -193,7 +217,7 @@ function generatePhoneNumber(numbers) {
 }
 
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
