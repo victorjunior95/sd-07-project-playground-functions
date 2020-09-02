@@ -16,10 +16,12 @@ function compareTrue(valor1, valor2) {
   return retorno;
 }
 
+compareTrue();
+
 /* 2 - Área do triângulo
 Escreva uma função com o nome calcArea que receba um valor de base (chamado base)
 e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
 Lembre-se que a área de um triângulo é calculada através da seguinte fórmula:
 (base * altura) / 2. */
 
-//function calcArea
+// function calcArea
