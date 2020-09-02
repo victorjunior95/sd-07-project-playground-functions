@@ -134,20 +134,20 @@ function decode(frase) {
 
 // Desafio 10
 
-function techList(name) {
-  let arrayDeObjetos = [];
-  if(tecnologias.length==0){
+function techList(tecnology,name) {
+  let objeto = [];
+  if(tecnology.length==0){
     return "Vazio!"
   }
-  tecnologias.sort();
-  for(let i=0;i<tecnologias.length;i+=1){
-    arrayDeObjetos[i]={
-      tech: tecnologias[i],
+  tecnology.sort();
+  for(let i=0;i<tecnology.length;i+=1){
+    objeto[i]={
+      tech: tecnology[i],
       name: name
     };
   }
-  arrayDeObjetos.sort();
-   return arrayDeObjetos;
+  objeto.sort();
+   return objeto;
 }
 
 // Desafio 11
