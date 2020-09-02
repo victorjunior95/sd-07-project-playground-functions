@@ -34,11 +34,13 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  let saida = [];
-  saida.push(array[array.length - 1]);
-  saida.push(array[0]);
+  let saida;
+  //saida.push(array[array.length - 1]);
+  //saida.push(array[0]);
+  saida= array[array.length - 1]+', ' + array[0]
   return saida;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
