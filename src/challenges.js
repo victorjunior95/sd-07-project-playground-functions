@@ -41,7 +41,7 @@ function highestCount(maiorNumber) {
   let itemaux;
   let ordenado = maiorNumber.sort((a, b) => a - b);
   for(let item in ordenado){
-      if(ordenado[item] === itemaux && itemaux != undefined){
+      if(ordenado[item] === itemaux && itemaux >= ordenado[ordenado.length-1]  && itemaux != undefined ){
         conta += 1;
       }
       else{
@@ -50,6 +50,9 @@ function highestCount(maiorNumber) {
     }
     return conta;
 }
+
+console.log(highestCount([9, 1, 2, 2, 1, 2, 7]));
+
 
 // Desafio 7
 function catAndMouse() {
