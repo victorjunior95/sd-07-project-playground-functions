@@ -96,12 +96,36 @@ function fizzBuzz(arrayNum) {
   }
 return arrayNum;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(arrayEncode) {
   // seu código aqui
+  let cestaDeLetras = arrayEncode.split('');
+
+  for(i = 0; i < cestaDeLetras.length; i += 1){
+    if(cestaDeLetras[i] == 'a'){
+      cestaDeLetras.splice(i, 1, '1');
+    }
+    else if(cestaDeLetras[i] == 'e'){
+      cestaDeLetras.splice(i, 1, '2');
+    }
+    else if(cestaDeLetras[i] == 'i'){
+      cestaDeLetras.splice(i, 1, '3');
+    }
+    else if(cestaDeLetras[i] == 'o'){
+      cestaDeLetras.splice(i, 1, '4');
+    }
+    else if(cestaDeLetras[i] == 'u'){
+      cestaDeLetras.splice(i, 1, '5');
+    }
+  }
+  let novaCesta = cestaDeLetras.toString();
+  let novaCesta2 = novaCesta.replace(/,/g,'');
+  return novaCesta2;
 }
+console.log(encode("hi there!"));
+
+
 function decode() {
   // seu código aqui
 }
