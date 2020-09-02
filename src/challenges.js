@@ -45,8 +45,7 @@ function highestCount(numbers) {
           cont = cont + 1;
       }
   }
-
-console.log(cont);
+  return cont;
 }
 
 // Desafio 7
