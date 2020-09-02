@@ -66,13 +66,13 @@ function highestCount(vetor) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let resultado = 0;
-  cat1 = mouse - cat1;
-  cat2 = mouse - cat2;
+  cat1 = Math.abs(cat1 - mouse);
+  cat2 = Math.abs(cat2 - mouse);
 
   if(cat1 === cat2){
       resultado = "os gatos trombam e o rato foge";
   }else{
-      resultado = cat1 > cat2 ? "cat2" : "cat1";
+      resultado = (cat1 > cat2) ? "cat2" : "cat1";
   }
   
   return resultado;
