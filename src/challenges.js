@@ -1,6 +1,6 @@
-// Desafio 1
+// Desafio 1 - PLAYGROUND | FUNCTIONS
 function compareTrue() {
-  // seu código aqui
+  // seu código aqui 
 }
 
 // Desafio 2
