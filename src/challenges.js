@@ -104,19 +104,19 @@ function encode(string) {
     switch (stringChange[i]) {
       case 'a':
         stringChange[i] = 1;
-      break;
+        break;
       case 'e':
         stringChange[i] = 2;
-      break;
+        break;
       case 'i':
         stringChange[i] = 3;
-      break;
+        break;
       case 'o':
         stringChange[i] = 4;
-      break;
+        break;
       case 'u':
         stringChange[i] = 5;
-      break;
+        break;
       default:
         stringChange[i] = stringChange[i];
     }
@@ -132,19 +132,19 @@ function decode(string) {
     switch (stringChange[i]) {
       case '1':
         stringChange[i] = 'a';
-            break;
+        break;
       case '2':
         stringChange[i] = 'e';
-            break;
+        break;
       case '3':
         stringChange[i] = 'i';
-            break;
+        break;
       case '4':
         stringChange[i] = 'o';
-            break;
+        break;
       case '5':
         stringChange[i] = 'u';
-            break;
+        break;
       default:
         stringChange[i] = stringChange[i];
     }
@@ -157,9 +157,10 @@ function techList(array, name) {
   // seu código aqui
   let obj = {};
   let newArray = [];
-  for (let i = 0; i < array.length; i += 1) {
+  let arrayEmOrdem = array.sort();
+  for (let i = 0; i < arrayEmOrdem.length; i += 1) {
     obj = {
-      tech: array[i],
+      tech: arrayEmOrdem[i],
       name: name,
     }
     newArray.push(obj);
