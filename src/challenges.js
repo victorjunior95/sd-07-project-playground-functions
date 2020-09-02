@@ -1,17 +1,48 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(proposition1,proposition2) {
+  return proposition1 && proposition2;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  let newWord = false;
+  let initialPosition = 0;
+  let finalPosition = 0;
+
+  for (let index = 0; index < string.length; index++) {
+    if (string[index] != " " && !newWord ) {
+      initialPosition = index;
+      newWord = true;
+    } else if( string[index] != " " && index == string.length - 1) {
+      finalPosition = index;
+      addString(initialPosition,finalPosition);
+    } else if( string[index] != " " ) {
+      finalPosition = index;
+    } else  if( string[index] == " " && newWord){
+      addString(initialPosition,finalPosition);
+      newWord = false;
+    } 
+  }
+  
+  return array;
+
+  function addString(initialPosition,finalPosition){
+    let newString = "";
+    for (let index = 0 ; index <= finalPosition - initialPosition; index++) {
+      newString[index] = string[initialPosition + index];
+      // console.log(string[index + initialPosition]);
+    }
+    array.push(newString);
+  }
+
 }
+// console.log(splitSentence("go trybe"))
 
 // Desafio 4
 function concatName() {
