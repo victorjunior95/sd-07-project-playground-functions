@@ -29,12 +29,13 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  let concatenando = ` ${array[array.length -1]}, ${array[0]}`;
+  let concatenando = `${array[array.length -1]}, ${array[0]}`;
   return concatenando;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
+
 
   }
 
