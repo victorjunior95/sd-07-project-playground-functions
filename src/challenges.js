@@ -233,7 +233,7 @@ function generatePhoneNumber(arrayTelefone) {
     contador=0;
   }
 
-  numeroTelefone = `(` + arrayTelefone[0] + arrayTelefone[1] + `)` + arrayTelefone[2] + 
+  numeroTelefone = `(` + arrayTelefone[0] + arrayTelefone[1] + `) ` + arrayTelefone[2] + 
   arrayTelefone[3] + arrayTelefone[4] + arrayTelefone[5] + arrayTelefone[6] + `-` + 
   arrayTelefone[7] + arrayTelefone[8] + arrayTelefone[9] + arrayTelefone[10]
 
