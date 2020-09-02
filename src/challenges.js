@@ -117,8 +117,22 @@ function decode(frase) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techName, name) {
+  if (techName == "" || techName.length == 0) {
+    return "Vazio!";
+  } else {
+    let objectList = [];
+    for(let i in techName) {
+      let obj = {
+        tech: "",
+        name: "",
+      };
+      obj.tech = techName[i];
+      obj.name = name;
+      objectList.push(obj);
+    }
+    return objectList;
+  }
 }
 
 // Desafio 11
