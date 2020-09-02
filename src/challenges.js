@@ -175,8 +175,26 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
+function techList(vetor, name) {
   // seu código aqui
+
+  const vetorOrdenado = vetor.sort();
+  let resultado = [];
+
+  if(vetor.length === 0){
+    return "Vazio!";
+  }
+
+  for (const key in vetorOrdenado) {
+    let objeto = {
+      tech: vetorOrdenado[key],
+      name: name
+    }
+
+    resultado.push(objeto);
+  }
+
+  return resultado;
 }
 
 // Desafio 11
@@ -195,10 +213,12 @@ function hydrate() {
 }
 
 //let vetor = [0, 4, 4, 4, 9, 2, 1];
-let vetor = [9, 1, 2, 3, 9, 5, 7];
+//let vetor = [9, 1, 2, 3, 9, 5, 7];
 //let vetor = [0, 0, 0];
+let vetor = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 
-console.log( highestCount(vetor) );
+
+console.log( techList(vetor, "André") );
 
 module.exports = {
   calcArea,
