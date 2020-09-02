@@ -47,7 +47,7 @@ function highestCount(arrayNumber) {
 function whatIsHighest(numbers){
   let maior = -1000000000;
   for (let i = 0; i < numbers.length; i +=1 ){
-    if(numbers > maior){
+    if(maior < numbers[i]){
       maior = numbers[i];
     }
   }
