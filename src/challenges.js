@@ -54,19 +54,19 @@ function highestCount(array6) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   mousePosition = mouse;
-  cat1Position = mouse - cat1;
-  cat2Position = mouse - cat2;
+  cat1Position = cat1;
+  cat2Position = cat2;
   
   if (cat1Position < cat2Position){
-    return cat1;
+    return "cat1";
   } else if (cat2Position < cat1Position){
-    return cat2;
+    return "cat2";
   } else {
-    return mouse
+    return "os gatos trombam e o rato foge";
   }
   
 }
-console.log(catAndMouse(4, 1, 1))
+console.log(catAndMouse(0, 3, 2))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
