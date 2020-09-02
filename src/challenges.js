@@ -227,7 +227,15 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  let coposDagua = 0;
+  for(let i in pedido){
+    let numbers = /^[0-9]+$/;
+    let number = 0;
+      if(pedido[i].match(numbers))
+        number = parseInt(pedido[i], 10);//w3Schools Parseint
+      coposDagua += number;
+  }
+  return coposDagua;
 }
 
 
