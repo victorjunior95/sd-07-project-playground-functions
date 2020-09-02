@@ -112,8 +112,36 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+
+function fizzBuzz(array) {
   // seu código aqui
+  let array_r=[];
+  for (let key in array)
+  {
+    if (array[key]%3 == 0 && array[key]%5 == 0)
+    {
+      array_r[key]="fizzBuzz";
+    }
+    else
+    {
+      if (array[key]%5==0)
+      {
+        array_r[key]="buzz"
+      }
+      else
+      {
+        if (array[key]%3==0)
+        {
+          array_r[key]="fizz"
+        }
+        else
+        {
+          array_r[key]="bug!"
+        }
+      }
+    }
+  }
+  return(array_r);
 }
 
 // Desafio 9
