@@ -166,12 +166,21 @@ function decode(string) {
   return newString;
 }
 
-console.log(decode("h3 th2r2!"));
 // Desafio 10
-function techList() {
+function techList(array,name) {
+  if (array.length == 0) {
+    return "Vazio!";
+  }
+  let newArray = [];
+  for (let index = 0; index < array.length; index++) {
+    let object = {};
+    object.tech = array[index];
+    object.name = name;
+    newArray.push(object);
+  }
+  return newArray;
   // seu código aqui
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
