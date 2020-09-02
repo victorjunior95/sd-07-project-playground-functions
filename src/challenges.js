@@ -133,14 +133,36 @@ function decode(desencodado) {
 }
 
 
-//let encodado = encode("hi there!");
-
-//console.log(decode(encodado))
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nometech,name) {
+  novaNomeTech = nometech;
+  for(let item in novaNomeTech){
+    novaNomeTech[item].name = name;
+  }
+  return novaNomeTech;
 }
+
+nometech = [
+  {
+    tech: "CSS"
+  },
+  {
+    tech: "HTML"
+  },
+  {
+    tech: "JavaScript"
+  },
+  {
+    tech: "Jest"
+  },
+  {
+    tech: "React"
+  }
+];
+
+name = 'lucas';
+console.log(techList(nometech,name));
+
 
 // Desafio 11
 function generatePhoneNumber() {
