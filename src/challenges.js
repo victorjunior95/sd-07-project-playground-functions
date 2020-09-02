@@ -136,9 +136,9 @@ function decode(strings) {
 console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
-}
+
 
 // Desafio 11
 function generatePhoneNumber() {
