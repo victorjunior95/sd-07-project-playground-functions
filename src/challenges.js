@@ -11,9 +11,25 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(textString) {
+  // retorna array de string separada pelos espaços
+  let palavras = [];
+  let palavra = '';
+  for (let index = 0; index < textString.length; index += 1) {
+    if (textString[index] !== ' ') {
+      palavra += textString[index];
+      if(index === textString.length - 1) {
+        palavras.push(palavra);
+      } 
+    } else {
+      palavras.push(palavra);
+      palavra = '';
+    }
+  }
+  return palavras;
 }
+
+console.log(splitSentence('eu não sei'));
 
 // Desafio 4
 function concatName() {
