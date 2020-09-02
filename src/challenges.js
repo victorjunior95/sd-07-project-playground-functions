@@ -14,8 +14,12 @@ function compareTrue(valor1,valor2) {
 compareTrue(false,true);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  let a = base;
+  let b = height;
+  let area = 0;
+    area = ((a * b) / 2);
+  return area;
 }
 
 // Desafio 3
