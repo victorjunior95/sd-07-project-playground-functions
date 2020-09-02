@@ -220,9 +220,21 @@ function generatePhoneNumber(numbers) {
 //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let isTriangle = false;
+  let difAB = Math.abs(lineA - lineB);
+  let difBC = Math.abs(lineB - lineC);
+  let difCA = Math.abs(lineC - lineA);
+
+
+  if (lineA < (lineB + lineC) && lineB <(lineA + lineC) && lineC < (lineB + lineA) && 
+      lineA > difBC && lineB > difCA && lineC > difAB){
+    isTriangle = true;
+  } 
+
+return isTriangle;
 }
+//console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
