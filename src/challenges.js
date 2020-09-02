@@ -2,7 +2,7 @@
 function compareTrue(a, b) {
   // seu código aqui
   let result;
-  if (a === true && b === false) {
+  if (a === true && b === true) {
     result = true;
   } else {
     result = false;
@@ -11,8 +11,9 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height) /2
 }
 
 // Desafio 3
