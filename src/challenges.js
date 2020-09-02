@@ -96,7 +96,7 @@ let numerosFB = [2, 15, 7, 9, 45];
 
 function fizzBuzz(arrayNumerosFB) {
   let arrayFB = [];
-  for (let i = 0; i < arrayNumerosFB.length; i+= 1) {
+  for (let i = 0; i < arrayNumerosFB.length; i += 1) {
     let resto3 = arrayNumerosFB[i] % 3;
     let resto5 = arrayNumerosFB[i] % 5
     if ((resto3 === 0) || (resto5 === 0)) {
@@ -121,20 +121,20 @@ let fraseTeste = 'hi there!';
 let fraseCodada = '';
 
 function encode(frase) {
-  let fraseResultante = frase.replace(/a/g, '1');
-  fraseResultante = fraseResultante.replace(/e/g, '2');
-  fraseResultante = fraseResultante.replace(/i/g, '3');
-  fraseResultante = fraseResultante.replace(/o/g, '4');
-  fraseResultante = fraseResultante.replace(/u/g, '5');
-  return fraseResultante;  
+  let fraseEncode = frase.replace(/a/g, '1');
+  fraseEncode = fraseEncode.replace(/e/g, '2');
+  fraseEncode = fraseEncode.replace(/i/g, '3');
+  fraseEncode = fraseEncode.replace(/o/g, '4');
+  fraseEncode = fraseEncode.replace(/u/g, '5');
+  return fraseEncode;
 }
 function decode(frase) {
-  let fraseResultante = frase.replace(/1/g, 'a');
-  fraseResultante = fraseResultante.replace(/2/g, 'e');
-  fraseResultante = fraseResultante.replace(/3/g, 'i');
-  fraseResultante = fraseResultante.replace(/4/g, 'o');
-  fraseResultante = fraseResultante.replace(/5/g, 'u');
-  return fraseResultante;  
+  let fraseDecode = frase.replace(/1/g, 'a');
+  fraseDecode = fraseDecode.replace(/2/g, 'e');
+  fraseDecode = fraseDecode.replace(/3/g, 'i');
+  fraseDecode = fraseDecode.replace(/4/g, 'o');
+  fraseDecode = fraseDecode.replace(/5/g, 'u');
+  return fraseDecode;
 }
 
 fraseCodada = encode(fraseTeste);
@@ -142,9 +142,34 @@ console.log(fraseCodada);
 console.log(decode(fraseCodada))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+let listaTech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+
+function techList(tecnologias, name) {
+  let arrayTech = [];
+  for (let i = 0; i < tecnologias.length; i += 1) {
+    let techObjeto = {tech: tecnologias[i], name: name};
+    arrayTech[i] = techObjeto;
+  }
+  arrayTech = ordenaArray(arrayTech);
+  return arrayTech;
 }
+
+function ordenaArray(listaTech) {
+  for (let i = 0; i < listaTech.length; i += 1) {
+    let propiedade = listaTech[i].tech;
+    for (let j = 0; j < listaTech.length; j += 1) {
+      let propiedadeAtual = listaTech[j].tech;
+      if (propiedade < propiedadeAtual) {
+        let itemArray = listaTech[i];
+        listaTech[i] = listaTech[j];
+        listaTech[j] = itemArray;
+      }
+    }
+  }
+  return listaTech;
+}
+
+console.log(techList(listaTech, 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
