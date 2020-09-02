@@ -156,10 +156,29 @@ function decode(arrayString) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(arrayList, name) {
 
+    let saida = [];
+
+    for (let indice in arrayList) {
+
+        saida.push({
+          tech: arrayList[indice],
+          name: name,
+        })
+    }
+    saida.sort(function (a, b) {
+      if (a.tech > b.tech) {
+        return 1;
+      }
+      if (a.tech < b.tech) {
+        return -1;
+      }
+        return 0;
+    });
+
+    return saida;
+}
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
