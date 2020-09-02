@@ -24,4 +24,8 @@ e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua 
 Lembre-se que a área de um triângulo é calculada através da seguinte fórmula:
 (base * altura) / 2. */
 
-// function calcArea
+function calcArea(base, height) {
+  return (base * height) / 2;
+}
+
+calcArea();
