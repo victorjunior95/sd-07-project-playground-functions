@@ -62,9 +62,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = cat2 - mouse;
   let frase;
   if (distanceCat1 < distanceCat2) {
-    frase = cat1;
+    frase = "cat1";
   } else if (distanceCat1 > distanceCat2) {
-    frase = cat2;
+    frase = "cat2";
   } else {
     frase = "os gatos trombam e o rato foge";
   }
@@ -91,10 +91,58 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let novaFrase = "";
+  for (i=0; i < frase.length; i += 1) {
+    switch (frase[i]) {
+      case "a":
+        novaFrase += 1
+        break;
+        case "e":
+          novaFrase += 2
+          break;
+          case "i":
+            novaFrase += 3
+            break;
+            case "o":
+              novaFrase += 4
+              break;
+              case "u":
+                novaFrase += 5
+                break;
+      default:
+        novaFrase += frase[i]
+        break;
+    }
+  }
+  return novaFrase;
 }
-function decode() {
+
+function decode(frase) {
+  let novaFrase = "";
+  for (i=0; i < frase.length; i += 1) {
+    switch (frase[i]) {
+      case "1":
+        novaFrase += "a"
+        break;
+        case "2":
+          novaFrase += "e"
+          break;
+          case "3":
+            novaFrase += "i"
+            break;
+            case "4":
+              novaFrase += "o"
+              break;
+              case "5":
+                novaFrase += "u"
+                break;
+      default:
+        novaFrase += frase[i]
+        break;
+    }
+  }
+  return novaFrase;
   // seu código aqui
 }
 
