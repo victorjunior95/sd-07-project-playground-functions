@@ -83,6 +83,7 @@ function fizzBuzz(array) {
       resposta.push = "bug!";
     }
   }
+  return (resposta);
 }
 
 // Desafio 9
@@ -129,7 +130,7 @@ function techList(array, name) {
   return lista;
   // seu código aqui
 }
-console.log(techList(["java", "css", "totó", "algo"], "Fernando"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fernando"));
 
 // Desafio 11
 function generatePhoneNumber() {
