@@ -1,15 +1,15 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   if (boolean1 == "true" && boolean2 == "true") {
-    return true;
+    return "true";
   } else {
-    return false;
+    return "false";
   }
 }
 
 // --------------------TESTE DESAFIO 1--------------------------------
-// let teste = "false";
-// let teste2= "True";
+// let teste = "true";
+// let teste2= "true";
 // console.log(compareTrue(teste,teste2));
 // -------------------------------------------------------------------
 
@@ -26,9 +26,15 @@ function calcArea(base, height) {
 // -------------------------------------------------------------------
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  resultado = string.split(" ");
+  return resultado;
 }
+
+// --------------------TESTE DESAFIO 3--------------------------------
+// let teste = "be trybe";
+// console.log(splitSentence(teste));
+// -------------------------------------------------------------------
 
 // Desafio 4
 function concatName() {
