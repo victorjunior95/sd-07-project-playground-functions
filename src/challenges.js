@@ -1,24 +1,28 @@
 // Desafio 1
-function compareTrue(x,y) {
+function compareTrue(x, y) {
   let result = false;
-  if(x == true && y==true){
+  if (x == true && y == true) {
     result = true;
   }
   return result;
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area;
-  
+
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(word) {
+  let result = word.split(" ");
+  
+  return result;
 }
+let word = "tentativa de separar"
+console.log(splitSentence(word))
 
 // Desafio 4
 function concatName() {
@@ -49,6 +53,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
