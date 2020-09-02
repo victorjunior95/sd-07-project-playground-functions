@@ -39,7 +39,7 @@ function highestCount(numeros) {
     }
   }
   for (let j = 0; j < numeros.length; j += 1){
-    if (maior === numeros.length){
+    if (maior === numeros[j]){
       repeticao += 1;
     }
   }
@@ -47,8 +47,26 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = cat1 - mouse;
+  let distancia2 = cat2 - mouse;
+  if (distancia1 < 0){
+    distancia1 *= -1;
+  }
+  if (distancia2 < 0) {
+    distancia2 *= -1;
+  }
+  if (cat1 === cat2) {
+    return "os gatos trombam e o rato foge";
+  }
+  else{
+    if (distancia1 < distancia2){
+      return cat1
+    }
+    else{
+      return cat2
+    }
+  }
 }
 
 // Desafio 8
