@@ -180,7 +180,12 @@ function generatePhoneNumber(phoneNumber) {
   // return phone number formated
 
   if(phoneNumber.length > 11) return "Array com tamanho incorreto.";
-
+  for(let i of phoneNumber){
+    if(
+      i != 0 || i != 1 || i != 2 || i != 3 || i != 4 || i != 5 || i != 6 || i != 7 ||
+      i != 8 || i != 9 
+    ) return "não é possível gerar um número de telefone com esses valores";
+  }
   let phoneFormated = '(';
   for(let pos in phoneNumber){
     if(pos >= 0 && pos <= 1){
@@ -217,9 +222,6 @@ function hydrate(textString) {
 
   return `${glassWater} copos de água`;
 }
-
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
-
 
 module.exports = {
   calcArea,
