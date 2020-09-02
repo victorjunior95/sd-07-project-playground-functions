@@ -60,15 +60,10 @@ function fizzBuzz(numbersArray) {
   let fizzBussReturned = [];
 
   for (let num of numbersArray) {
-    if (num % 3 === 0 && num % 5 !== 0) {
-      fizzBussReturned.push("fizz");
-    } else if (num % 3 !== 0 && num % 5 === 0) {
-      fizzBussReturned.push("buzz");
-    } else if (num % 3 === 0 && num % 5 === 0) {
-      fizzBussReturned.push("fizzBuzz");
-    } else {
-      fizzBussReturned.push("bug!");
-    }
+    if (num % 3 === 0 && num % 5 !== 0) fizzBussReturned.push("fizz");
+    else if (num % 3 !== 0 && num % 5 === 0) fizzBussReturned.push("buzz");
+    else if (num % 3 === 0 && num % 5 === 0) fizzBussReturned.push("fizzBuzz");
+    else fizzBussReturned.push("bug!");
   }
   return fizzBussReturned;
 }
