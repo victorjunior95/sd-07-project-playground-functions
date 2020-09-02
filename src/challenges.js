@@ -14,7 +14,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   return str.split(" ")
 }
 
@@ -48,7 +48,7 @@ return console.log("os gatos trombam e o rato foge")
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arr) {
   let numbersArr = [];
 for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
