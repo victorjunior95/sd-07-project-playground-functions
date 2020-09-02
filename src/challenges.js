@@ -43,6 +43,7 @@ function highestCount(vetor) {
   // seu código aqui
   let numero;
   let qtdRepeticao = 0;
+  let maior = 0;
 
   let maiorRepeticao = 0;
   let indiceRepeticao;
@@ -51,8 +52,9 @@ function highestCount(vetor) {
     numero = vetor[index];
 
     for (let indexNumero = 0; indexNumero < vetor.length; indexNumero++) {
-      if(vetor[indexNumero] === numero){
+      if((vetor[indexNumero] === numero) && (maior >= vetor[indexNumero])){
         qtdRepeticao++;
+        maior = vetor[indexNumero];
       }
     }
 
@@ -191,6 +193,10 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
+let vetor = [0, 4, 4, 4, 9, 2, 1];
+
+console.log( highestCount(vetor) );
 
 module.exports = {
   calcArea,
