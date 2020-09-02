@@ -18,16 +18,19 @@ function splitSentence(string) {
   let word = '';
 
   for (let i in string) {
+
      if ( string[i] === ' ') {
        arrayString.push(word);
        word = '';
+     } else {
+      word += string[i];
      }
-     word += string[i];
+     
   }
   arrayString.push(word);
   return arrayString;
 }
-
+console.log(splitSentence('vamo que vamo'));
 // Desafio 4
 function concatName(array) {
 
@@ -35,7 +38,7 @@ function concatName(array) {
   return result;
 
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties * 1;
