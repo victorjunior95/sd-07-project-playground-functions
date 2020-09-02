@@ -22,12 +22,14 @@ return aFraseArray
 
 // Desafio 4
 function concatName(arraystrings) {
-  let arrayFinal = ['',''];
+  let arrayFinal = [];
   let countlen = arraystrings.length-1;
   arrayFinal[0] = arraystrings[countlen];
   arrayFinal[1] = arraystrings[0];
-  return arrayFinal
+  return arrayFinal[0]+', '+arrayFinal[1]
 }
+
+console.log(concatName(["amendoin","é muito","bom rpa carvalho", "leonnardo"]))
 
 // Desafio 5
 function footballPoints(wins,ties) {
