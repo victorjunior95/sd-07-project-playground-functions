@@ -106,11 +106,15 @@ function fizzBuzz(array) {
 
   for (key in array){
     if (array[key]%3==0){
-      stringResultado = stringResultado + "fizz";
+      stringResultado = "fizz";
     }
     
     if (array[key]%5==0){
-      stringResultado = stringResultado + "Buzz";
+      stringResultado = "buzz";
+    }
+
+    if (array[key]%3==0 && array[key]%5==0){
+      stringResultado = "fizzBuzz";
     }
 
     if (array[key]%3>0 && array[key]%5>0){
@@ -123,7 +127,7 @@ function fizzBuzz(array) {
   }
   return arrayResultado;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
