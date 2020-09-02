@@ -14,8 +14,9 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concatName) {
+  let primeiroEUltimo = concatName[concatName.length - 1] + ', ' + concatName[0];
+  return primeiroEUltimo;
 }
 
 // Desafio 5
