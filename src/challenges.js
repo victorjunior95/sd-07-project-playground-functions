@@ -22,18 +22,16 @@ console.log(calcArea(5, 6));
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split("");
+  let array = string.split(" ");
   return array;
 }
 
-console.log(splitSentence("conferindo"));
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName(array2) {
-  let array3 = [];
-  array3.push(array2[(array2.length - 1)]);
-  array3.push(array2[0]);
-  return array3;
+  let concatString = array2[(array2.length - 1)] + ", " + array2[0];
+  return concatString;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
