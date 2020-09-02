@@ -69,20 +69,41 @@ function catAndMouse(mouse, cat1, cat2) {
   if (rato > gato1 && rato > gato2) {
     distancia1 = rato - gato1;
     distancia2 = rato - gato2;
+  }else if (rato <= gato1 && rato <= gato2) {
+    distancia1 = gato1;
+    distancia2 = gato2;
   }
   if (distancia1 > distancia2) {
     result = "cat2";
   }else if (distancia1 < distancia2){
     result = "cat1";
-  }else if (distancia1 === distancia2){
+  }else {
     result = "os gatos trombam e o rato foge";
   }
   return result;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(num) {
+  let numbers = num;
+  let palavra = "";
+  let result = [];
+  for(let i of numbers) {
+    if (i % 3 === 0 && i % 5 !== 0){
+      palavra = "fizz";
+      result.push(palavra);
+    }else if (i % 5 === 0 && i % 3 !== 0){
+      palavra = "buzz";
+      result.push(palavra);
+    }else if (i % 3 === 0 && i % 5 === 0){
+      palavra = "fizzBuzz";
+      result.push(palavra);
+    }else if (i % 3 !== 0 && i % 5 !== 0) {
+      palavra = "bug!";
+      result.push(palavra);
+    }
+  }
+  return result;
 }
 
 // Desafio 9
