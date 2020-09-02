@@ -1,16 +1,16 @@
-console.log(compareTrue(false , false));
 // Desafio 1
 function compareTrue(boleano1 , boleano2) {
   if(boleano1 == true && boleano2 == true){
     return `true`;
-  }else if(boleano1 == false && boleano2 == false){
+  }else if(boleano1 == false && boleano2 == true){
     return `false`;
   }
 }
-
+console.log(calcArea(20 , 30));
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  resultado = (base * height) / 2;
+  return resultado;
 }
 
 // Desafio 3
