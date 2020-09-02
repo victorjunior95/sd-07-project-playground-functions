@@ -11,11 +11,9 @@ Faça a função utilizando o operador &&.*/
 
 function compareTrue(a, b) {
   if (a === true && b === true) {
-    console.log(true);
-  } else {
-    console.log(false);
+    return true;
   }
-};
+}
 
 compareTrue(a, b);
 
@@ -27,9 +25,9 @@ Lembre-se que a área de um triângulo é calculada através da seguinte fórmul
 // let height = 5;
 
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-  console.log(area);
-};
+  let calculate = (base * height) / 2;
+  return calculate;
+}
 
 calcArea(base, height);
 
