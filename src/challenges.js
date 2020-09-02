@@ -1,16 +1,16 @@
 // Desafio 1
 function compareTrue(aprovacao, conclusao) {
 
-    let felicidade = true;
+
 
     if (aprovacao == true && conclusao == true) {
 
-        felicidade = true;
+        let felicidade = true;
         return felicidade;
 
     } else {
 
-        felicidade = false;
+        let felicidade = false;
         return felicidade;
 
     }
@@ -18,9 +18,13 @@ function compareTrue(aprovacao, conclusao) {
 }
 
 // Desafio 2
-function calcArea() {
-    // seu código aqui
+function calcArea(base, height) {
+
+    let areaTriangulo = (base * height) / 2;
+    return areaTriangulo
+
 }
+
 
 // Desafio 3
 function splitSentence() {
