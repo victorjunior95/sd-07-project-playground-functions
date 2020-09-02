@@ -94,8 +94,21 @@ else{
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let multiplos = [];
+  for(let n in numeros){
+    if (numeros[n] % 3 == 0 ){
+      multiplos.push("fizz");
+    }
+    else if(numeros[n] % 5 == 0){
+      multiplos.push("buzz");
+    }
+    else if(numeros[n] % 3 ==0 && numeros[n] % 5 == 0){
+      multiplos.push("fizzBuzz");
+    }
+    else{
+      multiplos.push("bug!");
+    }
 }
 
 // Desafio 9
