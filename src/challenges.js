@@ -52,7 +52,7 @@ function highestCount(Array) {
       }
     }
 
-    if (key > greaterValue) {
+    if (greaterValue <=key) {
       greaterValue = key
       greaterValueCont = cont;
 
@@ -161,8 +161,8 @@ function decode(string) {
 // Desafio 10
 function techList(technologies, name) {
   // seu código aqui
-  if (technologies === []) {
-    return "Vazio!"
+  if (technologies.length === 0) {
+    return "Vazio!";
   }
   let techs = [];
 
