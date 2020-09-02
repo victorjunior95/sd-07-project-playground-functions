@@ -215,6 +215,9 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
+let lineA = 3;
+let lineB = 4;
+let lineC = 5;
 function triangleCheck(lineA, lineB, lineC) {
   let resultado = false;
   if (lineA >= 0 || lineB > 0 || lineC >= 0) {
