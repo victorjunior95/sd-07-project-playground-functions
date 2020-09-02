@@ -36,12 +36,20 @@ function splitSentence(str) {
   let res = str.split (/[ ,]+/);
   return res
 }
-console.log(splitSentence(str));
+//console.log(splitSentence(str));
 
 // Desafio 4
-function concatName() {
+let arrayStr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
+function concatName(arrayStr) {
   // seu código aqui
+  let first = arrayStr[0];
+  let last = arrayStr[arrayStr.length-1];
+  let newStr = "";
+  newStr = last + ", " + first;
+  return newStr
 }
+console.log(concatName(arrayStr));
 
 // Desafio 5
 function footballPoints() {
