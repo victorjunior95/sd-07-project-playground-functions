@@ -84,11 +84,42 @@ function fizzBuzz(arrayFizzBuzz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = "hi there!" ;
+  let stringReturn = "";
+
+  for ( i in string ) {
+    let aFind = string.replace(/a/g, "1" );
+    stringReturn = aFind;
+    var eFind = stringReturn.replace(/e/g, "2" );
+    stringReturn = eFind ;
+    let iFind = stringReturn.replace( /i/g, "3" );
+    stringReturn = iFind ;
+    let oFind = stringReturn.replace( /o/g, "4" );
+    stringReturn = oFind ;
+    let uFind = stringReturn.replace( /u/g, "5" );
+    stringReturn = uFind ;
+  }
+  return stringReturn ;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  string = "h3 th2r2!" ;
+  let stringReturn = "";
+
+  for ( i in string ) {
+    let aFind = string.replace(/1/g, "a" );
+    stringReturn = aFind;
+    var eFind = stringReturn.replace(/2/g, "e" );
+    stringReturn = eFind ;
+    let iFind = stringReturn.replace( /3/, "i" );
+    stringReturn = iFind ;
+    let oFind = stringReturn.replace( /4/g, "o" );
+    stringReturn = oFind ;
+    let uFind = stringReturn.replace( /5/g, "u" );
+    stringReturn = uFind ;
+  }
+
+  return stringReturn ;
 }
 
 // Desafio 10
