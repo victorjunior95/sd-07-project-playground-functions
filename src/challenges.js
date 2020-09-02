@@ -1,14 +1,15 @@
 // Iniciando projeto
 
 // Desafio 1
-function compareTrue(yes , no) {
+function compareTrue(yes, no) {
   let boolean = yes && no
   return boolean;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo = (base * height)/2;
+  return areaTriangulo;
 }
 
 // Desafio 3
