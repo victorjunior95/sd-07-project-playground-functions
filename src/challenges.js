@@ -4,7 +4,7 @@
 function compareTrue() {
 // seu código aqui
 function compareTrue(comparar1, comparar2) {
-  if (comparar1&& comparar2) {
+  if (comparar1 && comparar2) {
     return true;
   } else {
     return false;
