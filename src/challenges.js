@@ -109,12 +109,12 @@ function encode(string) {
   function decode(string) {
   let newString = '';
   newString = string.replace(/1/g, 'a');
-  newString1 = newString.replace(/2/g, 'b');
-  newString2 = newString1.replace(/3/g, 'c');
-  newString3 = newString2.replace(/4/g, 'd');
-  newString4 = newString3.replace(/5/g, 'e');
+  newString1 = newString.replace(/2/g, 'e');
+  newString2 = newString1.replace(/3/g, 'i');
+  newString3 = newString2.replace(/4/g, 'o');
+  newString4 = newString3.replace(/5/g, 'u');
   return(newString4)
-  }
+    }
 
 // Desafio 10
 function techList() {
