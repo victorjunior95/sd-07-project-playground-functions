@@ -62,18 +62,18 @@ function fizzBuzz(a) {
   let message = [];
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] % 3 === 0 && a[i] % 5 === 0) {
-      message.push('FizzBuzz');
+      message.push("fizzBuzz");
     } else if (a[i] % 3 === 0) {
-      message.push('Fizz');
+      message.push("fizz");
     } else if (a[i] % 5 === 0) { 
-      message.push('Buzz');
+      message.push("buzz");
     } else {
-      message.push('Bug!');
+      message.push("bug!");
     }
   }
   return message;
 }
-fizzBuzz(dataFizzBuzz)
+console.log(fizzBuzz(dataFizzBuzz))
 
 // Desafio 9
 function encode() {
