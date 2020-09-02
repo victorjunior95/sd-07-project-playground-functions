@@ -117,17 +117,48 @@ function fizzBuzz(numerosFB) {
   }
   return arrayFizzBuzz;
 }
-let testeFizzBuzz = fizzBuzz([3, 8, 6, 5, 25, 7, 15, 24]);
+let testeFizzBuzz = fizzBuzz([2, 15, 7, 9, 45]);
 console.log(testeFizzBuzz);
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+//Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números
+
+//A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
+function encode(fraseEntrada) {
+      fraseEntrada = fraseEntrada.replace(/a/g, 1);
+
+      fraseEntrada = fraseEntrada.replace(/e/g, 2);
+
+      fraseEntrada = fraseEntrada.replace(/i/g, 3);
+  
+      fraseEntrada = fraseEntrada.replace(/o/g, 4);
+   
+      fraseEntrada = fraseEntrada.replace(/u/g, 5);
+
+      return fraseEntrada;
 }
-function decode() {
-  // seu código aqui
+
+let testeEncode = encode("hi there!");
+console.log(testeEncode);
+
+function decode(fraseEntrada) {
+  fraseEntrada = fraseEntrada.replace(/1/g, "a");
+
+      fraseEntrada = fraseEntrada.replace(/2/g, "e");
+
+      fraseEntrada = fraseEntrada.replace(/3/g, "i");
+  
+      fraseEntrada = fraseEntrada.replace(/4/g, "o");
+   
+      fraseEntrada = fraseEntrada.replace(/5/g, "u");
+
+      return fraseEntrada;
 }
+
+let testeDecode = decode(testeEncode);
+console.log(testeDecode);
 
 // Desafio 10
 function techList() {
