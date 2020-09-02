@@ -67,9 +67,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
   if (dist1 < dist2) {
-    return ("cat1");
+    return "cat1";
   } else if (dist2 < dist1) {
-    return ("cat2");
+    return "cat2";
   } else {
     return "os gatos trombam e o rato foge";
   }
@@ -97,35 +97,63 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(entrada) {
-  let frase = entrada;
-  for (let i = 0; i < frase.length; i += 1) {
-    if (frase[i] == "a") {
-      frase[i] = "1";
-    } else if (frase[i] == "e") {
-      frase[i] = 2;
-    } else if (frase[i] == "i") {
-      frase[i] = "3";
-    } else if (frase[i] == "o") {
-      frase[i] = "4";
-    } else if (frase[i] == "u") {
-      frase[i] = "5";
+  let array = [];
+  for (let i = 0; i < entrada.length; i += 1) {
+    array.push(entrada[i]);
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] == "a") {
+      array[i] = "1";
+    } else if (array[i] == "e") {
+      array[i] = 2;
+    } else if (array[i] == "i") {
+      array[i] = "3";
+    } else if (array[i] == "o") {
+      array[i] = "4";
+    } else if (array[i] == "u") {
+      array[i] = "5";
     }
   }
-
+  let frase = array[0];
+  for (let i = 1; i < array.length; i += 1) {
+    frase += array[i];
+  }
   return frase;
-
-  // seu código aqui
 }
 console.log(encode("Hi There"));
 
-function decode() {
-  // seu código aqui
+function decode(entrada) {
+  let array = [];
+  for (let i = 0; i < entrada.length; i += 1) {
+    array.push(entrada[i]);
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] == "1") {
+      array[i] = "a";
+    } else if (array[i] == "2") {
+      array[i] = "e";
+    } else if (array[i] == "3") {
+      array[i] = "i";
+    } else if (array[i] == "4") {
+      array[i] = "o";
+    } else if (array[i] == "5") {
+      array[i] = "o";
+    }
+  }
+  let frase = array[0];
+  for (let i = 1; i < array.length; i += 1) {
+    frase += array[i];
+  }
+  return frase;
+
+ 
 }
+console.log(decode('H3 Th2r2'))
 
 // Desafio 10
 function techList(array, name) {
-  if(array.length==0){
-    return ("Vazio!")
+  if (array.length == 0) {
+    return "Vazio!";
   }
   let saida = {};
   let emOrdem = array.sort(); //ordena o array da entrada
