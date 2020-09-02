@@ -1,8 +1,9 @@
 //Desafio Raphael Caputo
 
 // Desafio 1
-function compareTrue(comparar1, comparar2) {
+function compareTrue()
   // seu código aqui
+  function compareTrue(comparar1, comparar2) {
   if ( comparar1 === true && comparar2 === true){
     return true
   }  else {
@@ -11,9 +12,9 @@ function compareTrue(comparar1, comparar2) {
 
 }
 // Desafio 2
-function calcArea(base, height) {
+function calcAreab()
   // seu código aqui
- 
+  function calcArea(base, height) {
   let resultado = (base * height) / 2;
   return resultado;
 }
