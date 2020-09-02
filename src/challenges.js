@@ -62,12 +62,12 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let conclusion = '';
-    if (mouse - cat1 < mouse - cat2) {
+  if (cat1 - mouse  < cat2 - mouse) {
       conclusion = 'cat1';
-  } else if (mouse - cat1 > mouse - cat2) {
-      conclusion = 'cat2';
+    } else if (cat1 - mouse > cat2 - mouse) {
+    conclusion = 'cat2';
   } else {
-      conclusion = 'os gatos tromabm e o rato foge';
+    conclusion = 'os gatos trombam e o rato foge';
   }
   return (conclusion);
 }
