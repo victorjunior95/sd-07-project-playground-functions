@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+  okok
 }
 
 // Desafio 2
@@ -15,7 +16,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  // seuls código aqui
 }
 
 // Desafio 5
