@@ -119,17 +119,6 @@ function techList(arrTech, name) {
   }
 }
 
-console.log(techList
-([
-  "python",
-  "javascript",
-  "node", 
-  "react", 
-  "react-native"
-  
-  ], 'Richard' 
-));
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
