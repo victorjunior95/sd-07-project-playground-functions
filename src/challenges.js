@@ -32,9 +32,10 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
- let soma = wins + ties
- return soma
+let pontos = (wins * 3) + (ties * 1)
+return pontos
 }
+console.log(footballPoints(6,4))
 
 
 
