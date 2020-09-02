@@ -38,11 +38,16 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNum) {
   let highest = 0;
   let highestArrayNum = 0;
+
   for ( let i in arrayNum ) {
     if ( arrayNum[i] >= highest ){
       highest = arrayNum[i];
-      highestArrayNum = highestArrayNum + 1;
-    };
+    }
+  }
+  for ( let i in arrayNum) {
+    if (highest === arrayNum[i]) {
+    highestArrayNum += 1;
+    } 
   }
   return highestArrayNum;
 }
@@ -54,9 +59,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   } else {
     if ( ((cat1 - mouse) < 0 ? (( cat1 - mouse ) * - 1) : (cat1 -mouse )) < ((cat2 - mouse) < 0 ? (( cat2 - mouse ) * - 1) : (cat2 -mouse ))) {
-      return "cat1 wins."
+      return "cat1"
     } else {
-      return "cat2 wins."
+      return "cat2"
     }
   }
 }
@@ -104,7 +109,7 @@ function decode(string) {
     stringReturn = aFind;
     var eFind = stringReturn.replace(/2/g, "e" );
     stringReturn = eFind ;
-    let iFind = stringReturn.replace( /3/, "i" );
+    let iFind = stringReturn.replace( /3/g, "i" );
     stringReturn = iFind ;
     let oFind = stringReturn.replace( /4/g, "o" );
     stringReturn = oFind ;
