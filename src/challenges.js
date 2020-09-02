@@ -6,15 +6,28 @@ Considerando isso, crie uma função chamada compareTrue que, ao receber dois bo
 Retorne true se ambos os valores são verdadeiros;
 Retorne false se um ou ambos os parâmetros forem falsos.
 Faça a função utilizando o operador &&.*/
+let a = true;
+let b = false;
+
 function compareTrue(a, b) {
+  // let comparation = false;
+
   if (a === true && b === true) {
+    // comparation = true;
     console.log(true);
   } else {
     console.log(false);
-  };
+  }
+
+  // return comparation;
 };
 
+compareTrue(a, b);
+
 // Desafio 2
+/*Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+
+Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
 function calcArea() {
   // seu código aqui
 }
@@ -93,4 +106,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+}*/
