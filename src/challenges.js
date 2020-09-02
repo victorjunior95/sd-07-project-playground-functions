@@ -1,4 +1,6 @@
-// Desafio 1 - PLAYGROUND | FUNCTIONS
+// PLAYGROUND | FUNCTIONS
+
+// Desafio 1
 function compareTrue(param1 , param2) {
   if (param1 === true && param2 === true) {
     return(true);
@@ -9,9 +11,11 @@ function compareTrue(param1 , param2) {
 //console.log (compareTrue (true,false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base , height) {
+  let area = (base * height)/2;
+  return area;
 }
+ //console.log(calcArea(20,10))
 
 // Desafio 3
 function splitSentence() {
