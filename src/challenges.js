@@ -182,8 +182,25 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  
+function hydrate(string) {
+  stringList = string.split("");
+  let listOfIntegers = [];
+  // verificando se cada caracter da string é um numero e se for dando push na lista de inteiros
+  for (let key in stringList) {
+    if (Number(stringList[key])) {
+      listOfIntegers.push(Number(stringList[key]));
+    }
+  }
+  // somando todos os inteiros da lista de inteiros
+  let sum = 0;
+  for (let key in listOfIntegers) {
+    sum += listOfIntegers[key];
+  }
+  if (sum == 1) {
+    return "1 copo de água";
+  } else {
+    return `${sum} copos de água`;
+  }
 }
 
 
@@ -203,3 +220,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+console.log(hydrate("1 cerveja, 5 de cachaça, 8 de vodka"));
