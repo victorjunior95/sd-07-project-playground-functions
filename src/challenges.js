@@ -87,18 +87,20 @@ function highestCount(arraysOfNumbers) {
 
 // Desafio 7
 
-const mousePosition = 6;
-const catOnePosition = 3;
-const catTwoPostion = 7;
+const mousePosition = -200;
+const catOnePosition = -20;
+const catTwoPostion = -350;
 
 function catAndMouse(mouse, cat1, cat2) {
-  cat1 -= mouse;
-  cat2 -= mouse;
-  if (cat1 < 0) {
-    cat1 = cat1 * - 1;
+  if (mouse > cat1){
+    cat1 = mouse - cat1;
+  } else {
+    cat1 -= mouse;
   }
-  if (cat2 < 0) {
-    cat2 = cat2 * - 1;
+  if (mouse > cat2){
+    cat2 = mouse - cat2;
+  } else {
+    cat2 -= mouse;
   }
   if (cat1 == cat2) {
     return "os gatos trombam e o rato foge";
