@@ -45,7 +45,7 @@ function highestCount(arr) {
     }
   }
   for (let key in counts) {
-    if (counts[key] > mostDuplicated.times && counts[key] > mostDuplicated.value) {
+    if (counts[key] > mostDuplicated.value) {
       mostDuplicated.value = key;
       mostDuplicated.times = counts[key];
     }
@@ -58,16 +58,28 @@ function catAndMouse(mouse, cat1, cat2) {
   let firstCatDistance = mouse - cat1;
   let secondCatDistance = mouse - cat2;
   if (firstCatDistance > secondCatDistance) {
-    return 'cat2';
-  } else if (firstCatDistance < secondCatDistance) {
     return 'cat1';
+  } else if (firstCatDistance < secondCatDistance) {
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let newArray = [];
+  for (let key in arr) {
+    if (arr[key] % 3 === 0 && arr[key] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (arr[key] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (arr[key] % 5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
