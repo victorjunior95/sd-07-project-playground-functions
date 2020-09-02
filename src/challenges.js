@@ -1,8 +1,9 @@
-//Iniciando projeto
+// Iniciando projeto
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(yes , no) {
+  let boolean = yes && no
+  return boolean;
 }
 
 // Desafio 2
