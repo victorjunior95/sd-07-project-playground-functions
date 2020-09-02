@@ -7,7 +7,7 @@ function compareTrue(bolean1, bolean2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base*height/2);
+  return (base * height / 2);
 }
 
 // Desafio 3
@@ -23,8 +23,9 @@ function concatName(arrayString) {
 } 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins*3 + ties);
 }
 
 // Desafio 6
