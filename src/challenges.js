@@ -56,12 +56,12 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse , cat1, cat2) {
-  if(cat1 - mouse < cat2 - mouse){
+  if(Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
     return "cat1";
-} else if(cat1 - mouse > cat2 - mouse){
-    return "cat2";
-} else{
+} else if(Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
     return "os gatos trombam e o rato foge";
+} else{
+    return "cat2";
 }
 }
 
@@ -138,6 +138,7 @@ function decode(string) {
 // Desafio 10
 function techList(techs, name) {
   let list = [];
+  techs.sort();
     for(let i = 0; i < techs.length; i += 1){
         let techToLearn = {
             tech: techs[i],
