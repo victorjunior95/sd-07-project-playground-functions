@@ -12,39 +12,84 @@ function compareTrue(a,b) {
 // Desafio 2
 function calcArea(base,height) {
 return (base * height)/2;
-  // seu código aqui
 }
-console.log(calcArea(2,8))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(aFrase) {
+let aFraseArray = aFrase.split(' ');
+return aFraseArray
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arraystrings) {
+  let arrayFinal = ['',''];
+  let countlen = arraystrings.length-1;
+  arrayFinal[0] = arraystrings[countlen];
+  arrayFinal[1] = arraystrings[0];
+  return arrayFinal
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins,ties) {
+  return wins*3+ties
+  }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(arraynum) {
+  let repmax = null
+  let maiornum = null
+  for (key in arraynum) {
+    if (arraynum[key] > maiornum){
+      maiornum = arraynum[key];
+      repmax = 1;
+    } else{
+    if (maiornum == arraynum[key]){
+      repmax += 1;
+    }
+    }
+
+    }
+  return repmax  
+  }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  ptscat1 = Math.abs(mouse - cat1);
+  ptscat2 = Math.abs(mouse - cat2);
+  if(ptscat1>ptscat2){
+    return cat1
+  } else {
+    if (ptscat1 == ptscat2) {
+    return  "os gatos trombam e o rato foge"
+    } else {
+      return cat2
+    }
+  }
 }
+// console.log(catAndMouse(15,10,20))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayfizzbuzz) {
+  let arrayfizzbuzzfinal = [];
+  for ( key in arrayfizzbuzz) {
+  if (arrayfizzbuzz[key] % 3 == 0 && arrayfizzbuzz[key] % 5 == 0) {
+    arrayfizzbuzzfinal.push("fizzBuzz");
+  } else{
+    if (arrayfizzbuzz[key] % 3 == 0) {
+      arrayfizzbuzzfinal.push("fizz");
+    } else {
+      if (arrayfizzbuzz[key] % 5 == 0) {
+        arrayfizzbuzzfinal.push("buzz");
+      } else {
+        arrayfizzbuzzfinal.push("bug!");
+      }
+    }
+  }
 }
+return arrayfizzbuzzfinal
+}
+
+console.log(fizzBuzz([3,5,15,30,2,4,60,80]))
 
 // Desafio 9
 function encode() {
