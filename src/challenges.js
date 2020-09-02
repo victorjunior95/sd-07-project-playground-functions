@@ -92,8 +92,22 @@ function encode(name) {
   return encodeName;
 }
 
-function decode() {
-  // seu código aqui
+function decode(name) {
+  encrypt = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u"
+  }
+
+  let decodeName = "";
+
+  for (letter in name){
+    decodeName += encrypt[name[letter]] ?? name[letter];
+  }
+
+  return decodeName;
 }
 
 // Desafio 10
