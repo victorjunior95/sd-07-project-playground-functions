@@ -164,7 +164,7 @@ function generatePhoneNumber(arrayNumber) {
   let phoneNumber = "";
 
   if (arrayNumber.length != 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
 
   let count = 0;
@@ -199,7 +199,7 @@ function generatePhoneNumber(arrayNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineA - (lineB+lineC)))) || ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineB - (lineA+lineC)))) || ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineC - (lineA+lineB))))) {
+  if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) && ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) && ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)))) {
     return true;
   } else {
     return false;
