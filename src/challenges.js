@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  Breno Alves
 }
 
 // Desafio 2
