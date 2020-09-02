@@ -2,18 +2,15 @@
 function compareTrue(valor1, valor2) {
   if (valor1 == 1 && valor2 == 1) {
     return true;
-
-  } else {
+  }
+  else {
     return false;
-
   }
 }
 
 // Desafio 2
 function calcArea(base, heigth) {
   return (base * heigth)/2
-
-
 }
 
 
@@ -35,11 +32,16 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-
+  let totalDePontos = wins + ties
+  return totalDePontos
 
   }
 
-  // seu código aqui
+
+
+
+
+
 
 
 // Desafio 6
