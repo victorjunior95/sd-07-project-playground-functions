@@ -50,7 +50,7 @@ function highestCount(numbers) {
     }
   }
   for (let indice in numbers) {
-    if (numbers[indice] == maiorNumero) {
+    if (numbers[indice] === maiorNumero) {
       repeticao += 1;
     }
   }
@@ -102,7 +102,7 @@ function techList(arrayTechs, name) {
     console.log('Vazio!');
     return 'Vazio!';
   }
-  for (let i = 0; i < arrayTechs.length; i++) {
+  for (let i = 0; i < arrayTechs.length; += 1 ) {
     techs[i] = {
       tech: arrayTechs[i],
       name: name
