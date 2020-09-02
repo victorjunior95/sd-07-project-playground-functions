@@ -1,6 +1,10 @@
-// Desafio 1
-function compareTrue() {
-  
+const valueOneCompareTrue = false;
+const valueTwoCompareTrue = true;
+
+console.log(compareTrue(valueOneCompareTrue, valueTwoCompareTrue));
+
+function compareTrue(testOne, testTwo) {
+  return testOne && testTwo;
 }
 
 // Desafio 2
