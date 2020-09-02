@@ -34,8 +34,6 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-
-// Falta identificar o maior do array
 function highestCount(maiorNumber) {
   let conta=1;
   let itemaux;
@@ -51,13 +49,20 @@ function highestCount(maiorNumber) {
     return conta;
 }
 
-console.log(highestCount([9, 1, 2, 2, 1, 2, 7]));
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(cat1 == cat2){
+    return "os gatos trombam e o rato foge";
+  }
+  if(cat1 > cat2){
+    return "cat1";
+  }
+  else if(cat2 > cat1){
+    return "cat2";
+  }
 }
+
+//console.log(catAndMouse(1, 1, 1));
 
 // Desafio 8
 function fizzBuzz() {
