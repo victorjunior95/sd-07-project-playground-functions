@@ -141,22 +141,26 @@ function decode(string) {
 function techList(tech, name) {
   let objetos = [];
   let nome = name;
-  let tecnologias = tech.sort();
-  for (i in tecnologias) {
-    let objeto = {
-      tech: tecnologias[i],
-      name: nome
+  if (tech.length == 0) {
+    return 'Vazio!'
+  } else {
+    let tecnologias = tech.sort();
+    for (i in tecnologias) {
+      let objeto = {
+        tech: tecnologias[i],
+        name: nome
+      }
+      objetos.push(objeto);
     }
-    objetos.push(objeto);
+    return objetos;
   }
-  return objetos;
 }
 
-/*
-let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+
+let tech = [];
 let nome = "Lucas";
 console.log(techList(tech, nome));
-*/
+
 
 // Desafio 11
 function generatePhoneNumber() {
