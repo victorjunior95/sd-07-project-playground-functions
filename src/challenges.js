@@ -73,15 +73,6 @@ function decode() {
 
 // Desafio 10
 function techList(list) {
-    for (i = 0; i < list.lenght; i++) {
-        function Tech(list[i], name) {
-            this.tech: "NomeTech",
-
-        }
-
-
-
-    }
 
 }
 
