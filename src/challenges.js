@@ -1,11 +1,13 @@
-// Desafio 1 
+// Desafio 1
+
 function compareTrue(valorA, valorB) {
   return valorA && valorB;
 }
-console.log(compareTrue(false,false))
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+
+function calcArea(base, height) {
+  return base * height / 2;
 }
 
 // Desafio 3
