@@ -260,7 +260,7 @@ function hydrate(drinks) {
     sum += NumberOfDrinks[i];
   }
 
-  if (NumberOfDrinks === 1) {
+  if (sum === 1) {
     result = sum + ' copo de água';
   } else{
     result = sum + ' copos de água'
