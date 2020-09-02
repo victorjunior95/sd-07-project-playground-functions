@@ -126,8 +126,47 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  
+function generatePhoneNumber(array) {
+  // função que verifica se os numeros estao entre 0 e 9 e nao se repetem mais que 3 vezes
+  function validatingTheNumbers(array2) {
+    let counterRepetition = 0;
+    for (let i in array2) {
+      if (array2[i] < 0 || array2[i] > 9) {
+        return true;
+      }
+    }
+    for (let j in array2) {
+      for (let i in array2) {
+        if (array2[j] == array2[i]) {
+          counterRepetition += 1;
+          if (counterRepetition >= 3) {
+            return true;
+          }
+        }
+      }
+      counterRepetition = 0;
+    }
+    return false;
+  }
+  // função que gera uma string a partir de uma lista (os parametros pos1 e pos2 dizem onde começar da lista e onde terminar)
+  function listForString(array, pos1, pos2) {
+    let finalString = "";
+    for (let i = pos1; i <= pos2; i += 1){
+      finalString += array[i];
+    }
+    return finalString;
+  }
+  let validation = validatingTheNumbers(array);
+  if (array.length != 11) {
+    return "Array com tamanho incorreto";
+  } else if (validation) {
+    return "não é possível gerar um número de telefone com esses valores";
+  } else {
+    let firstNumbers = listForString(array, 0, 1);
+    let middleNumbers = listForString(array, 2, 6);
+    let lastNumbers = listForString(array, 7, 10);
+    return `(${firstNumbers}) ${middleNumbers}-${lastNumbers}`;
+  }
 }
 
 // Desafio 12
@@ -157,3 +196,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
