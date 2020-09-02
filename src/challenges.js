@@ -132,19 +132,19 @@ function decode(string) {
     switch (stringChange[i]) {
       case '1':
         stringChange[i] = 'a';
-        break;
+          break;
       case '2':
         stringChange[i] = 'e';
-        break;
+          break;
       case '3':
         stringChange[i] = 'i';
-        break;
+          break;
       case '4':
         stringChange[i] = 'o';
-        break;
+          break;
       case '5':
         stringChange[i] = 'u';
-        break;
+          break;
       default:
         stringChange[i] = stringChange[i];
     }
@@ -163,6 +163,9 @@ function techList(array, name) {
       name: name
       }
     newArray.push(obj);
+  }
+  if (newArray.length === 0 && newArray[0] == null) {
+    return 'Vazio';
   }
   return newArray;
 }
