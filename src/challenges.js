@@ -41,9 +41,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {}
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -67,6 +65,9 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
+
+    str.replace(regexp | substr, newSubStr | function)
+
     // seu código aqui
 }
 
