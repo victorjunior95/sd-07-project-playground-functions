@@ -54,18 +54,38 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numArray) {
   let result = [];
   for (let num of numArray) {
-    if (num % 3 === 0 && num % 5 === 0) {
+    if (ehDiv3e5(num)) {
       result.push('fizzBuzz');
-    } else if (num % 3 === 0) {
-      result.push('fizz');
-    } else if (num % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
+      continue;
     }
+    if (ehDiv3Apenas(num)) {
+      result.push('fizz');
+      continue;
+    } 
+    if (ehDiv5Apenas(num)) {
+      result.push('buzz');
+      continue;
+    } 
+    result.push('bug!');
   }
   return result;
 }
+
+// Funções Auxiliares para diminuir a complexidade - codeclimate
+function ehDiv5Apenas(num) {
+  return num % 5 === 0 && num % 3 !== 0;
+}
+
+function ehDiv3Apenas(num) {
+  return num % 3 === 0 && num % 5 !== 0;
+}
+
+function ehDiv3e5(num) {
+  return num % 5 === 0 && num % 3 === 0;
+}
+
+
+
 
 // Desafio 9
 function encode(arg) {
