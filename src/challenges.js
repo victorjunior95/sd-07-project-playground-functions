@@ -33,9 +33,9 @@ function splitSentence(param) {
 function concatName(param) {
   let Array_inverte = param.reverse();
   let tamanho = Array_inverte.length -1;
-  console.log(Array_inverte[0]+','+param[tamanho]);
+  let Array_reverse = Array_inverte.reverse();
+  console.log(Array_reverse[tamanho]+','+Array_inverte[0]);
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
