@@ -1,8 +1,6 @@
 // Desafio 1
-function compareTrue(){
+function compareTrue(ligado,quente){
   // seu código aqui
-  let ligado=true;
-  let quente=true;
   let podeBanhar;
   if((ligado==true)&&(quente==true)){
       podeBanhar=true;
@@ -12,24 +10,20 @@ function compareTrue(){
   return podeBanhar;
 }
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
-  let base = 5;
-  let height = 5;
   let area = (base*height)/2;
   return area;
 }
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase,resultado) {
   // seu código aqui
-let frase = "Dia de festa";
 let resultado = frase.split(" ");
 return resultado;
 }
 // Desafio 4
-function concatName() {
+function concatName(frase) {
   // seu código aqui
-let frase = ["João","José","Paulo","Fernando"];
 let resultado = [];
 for(let count in frase){
   resultado[0]=frase[frase.length-1];
@@ -38,17 +32,14 @@ for(let count in frase){
 return resultado;
 }
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
-  let wins = 7;
-  let ties = 7;
   let totalPoints = (wins*3) + ties;
   return totalPoints
 }
 // Desafio 6
-function highestCount() {
+function highestCount(highestCount) {
   // seu código aqui
-  let highestCount = [9, 1, 2, 3, 9, 5, 7,10];
   let bigger = 0;
   let result = 0;
 for(let count in highestCount){
@@ -64,11 +55,8 @@ for(let count in highestCount){
 return result;
 }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
-let cat1 = 6;
-let cat2 = 6;
-let mouse = 10;
 let cat1Distance = mouse-cat1;
 let cat2Distance = mouse-cat2;
 if(cat1Distance<cat2Distance){
@@ -79,9 +67,8 @@ if(cat1Distance<cat2Distance){
 return "os gatos trombam e o rato foge";
 }
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
-let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,30,75,300];
 let fizzBuzzReturn = [];
   for (let count in numbers){
       if((numbers[count]%3==0)&&(numbers[count]%5==0)){
