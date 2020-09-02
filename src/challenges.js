@@ -52,9 +52,21 @@ let num = [9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(num));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(bicho) {
+  let maisProximo;
+  for (let i = 1; i <= bicho.length; i += 1){
+    if (bicho[i] === 'cat1'){
+      maisProximo = 'cat1';
+    } else if (bicho[i] === 'cat2'){
+      maisProximo = 'cat2';
+    }else {
+      maisProximo = 'os gatos trombam e o rato foge';
+    }
+  }
+  return maisProximo;
 }
+let bicho = ['mouse', 'cat1', 'cat2'];
+console.log(catAndMouse(bicho));
 
 // Desafio 8
 function fizzBuzz() {
