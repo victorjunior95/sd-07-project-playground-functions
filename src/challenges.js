@@ -25,7 +25,7 @@ function concatName(arrayString) {
 // Desafio 5 - OK
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (wins*3 + ties);
+  return (wins * 3 + ties);
 }
 
 // Desafio 6 - OK
@@ -34,9 +34,9 @@ function highestCount(arrayNumeros) {
   let count = 0;
   let higherCount = 0;
 
-  for (i = 0; i < arrayNumeros.length; i += 1) {
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
     count = 0;
-    for (j = 0; j < arrayNumeros.length; j += 1) {
+    for (let j = 0; j < arrayNumeros.length; j += 1) {
       if (arrayNumeros[j] == arrayNumeros[i]) {
         count += 1;
       }
@@ -84,11 +84,62 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
+function encode(arrayWithVowels) {
   // seu código aqui
+  let newString = "";
+  for (let i = 0; i < arrayWithVowels.length; i += 1){
+    switch (arrayWithVowels[i]) {
+      case 'a':
+        newString += '1';
+        break;
+      case 'e':
+        newString += '2';
+        break;
+      case 'i':
+        newString += '3';
+        break;
+      case 'o':
+        newString += '4';
+        break;
+      case 'u':
+        newString += '5';
+        break;
+      default:
+        newString += arrayWithVowels[i];    
+    }
+  }
+
+  return newString;
+
 }
-function decode() {
+
+function decode(arrayWithNumbers) {
   // seu código aqui
+  let newStringDec = "";
+  for (let i = 0; i < arrayWithNumbers.length; i += 1){
+    switch (arrayWithNumbers[i]) {
+      case '1':
+        newStringDec += 'a';
+        break;
+      case '2':
+        newStringDec += 'e';
+        break;
+      case '3':
+        newStringDec += 'i';
+        break;
+      case '4':
+        newStringDec += 'o';
+        break;
+      case '5':
+        newStringDec += 'u';
+        break;
+      default:
+        newStringDec += arrayWithNumbers[i];    
+    }
+  }
+
+  return newStringDec;
+
 }
 
 // Desafio 10
