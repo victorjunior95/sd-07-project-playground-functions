@@ -1,34 +1,34 @@
-// Desafio 1
+// Desafio 1 - OK
 function compareTrue(bolean1, bolean2) {
   // seu código aqui
   return (bolean1 && bolean2);
 }
 
-// Desafio 2
+// Desafio 2 - OK
 function calcArea(base, height) {
   // seu código aqui
   return (base * height / 2);
 }
 
-// Desafio 3
+// Desafio 3 - OK
 function splitSentence(texto) {
   // seu código aqui
   return (texto.split(" "));
 }
 
-// Desafio 4
+// Desafio 4 - OK
 function concatName(arrayString) {
   // seu código aqui
   return (`${arrayString[arrayString.length-1]}, ${arrayString[0]}`);
 } 
 
-// Desafio 5
+// Desafio 5 - OK
 function footballPoints(wins, ties) {
   // seu código aqui
   return (wins*3 + ties);
 }
 
-// Desafio 6
+// Desafio 6 - OK
 function highestCount(arrayNumeros) {
   // seu código aqui
   let count = 0;
@@ -51,7 +51,7 @@ function highestCount(arrayNumeros) {
 
 }
 
-// Desafio 7
+// Desafio 7 - OK
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
@@ -71,10 +71,10 @@ function fizzBuzz(arrayNumeros) {
   for (i = 0; i < arrayNumeros.length; i += 1){
     if ((arrayNumeros[i] % 3 == 0) && (arrayNumeros[i] % 5 == 0)) {
       arrayString.push("fizzBuzz");
-    } else if (arrayNumeros[i]%3 == 0) {
+    } else if (arrayNumeros[i] % 3 == 0) {
       arrayString.push("fizz");
-    } else if (arrayNumeros[i]%5 == 0) {
-      arrayString.push("Buzz");
+    } else if (arrayNumeros[i] % 5 == 0) {
+      arrayString.push("buzz");
     } else {
       arrayString.push("bug!");
     }
