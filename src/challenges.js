@@ -91,31 +91,20 @@ function fizzBuzz(bus) {
 
 // Desafio 9
 function encode(palavra) {
-  let codigo = []
-  for (let i = 0; i < palavra.length; i += 1){
-    if (palavra[i] == "a"){
-      codigo[i] = "1"
-    }
-    else if (palavra[i] == "e"){
-      codigo[i] = "2"
-    }
-    else if (palavra[i] == "i"){
-      codigo[i] = "3"
-    }
-    else if (palavra[i] == "o"){
-      codigo[i] = "4"
-    }
-    else if (palavra[i] == "u"){
-      codigo[i] = "5"
-    }
-    else {
-      codigo[i] = palavra[i] 
-    }
-  }
-  return codigo
+  let codigo = palavra.split("a").join("1");
+  codigo = codigo.split("e").join("2");
+  codigo = codigo.split("i").join("3");
+  codigo = codigo.split("o").join("4");
+  codigo = codigo.split("u").join("5");
+  return codigo;
 }
-function decode() {
-  // seu código aqui
+function decode(palavra) {
+  let codigo = palavra.split("1").join("a");
+  codigo = codigo.split("2").join("e");
+  codigo = codigo.split("3").join("i");
+  codigo = codigo.split("4").join("o");
+  codigo = codigo.split("5").join("u");
+  return codigo;
 }
 
 // Desafio 10
