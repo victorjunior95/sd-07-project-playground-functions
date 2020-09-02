@@ -15,9 +15,19 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  let initialArray = text.split(" ")
+  let finalArray = []
+
+  for (let counter = 0 ; counter <= initialArray.length - 1; counter += 1) {
+    if (initialArray[counter] !== "") {
+      finalArray.push(initialArray[counter])
+    }
+  }
+  return finalArray
 }
+
+console.log(splitSentence("go   Trybe"))
 
 // Desafio 4
 function concatName() {
