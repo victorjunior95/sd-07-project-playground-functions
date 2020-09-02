@@ -81,16 +81,16 @@ function catAndMouse(mouse,cat1,cat2) {
   let distanciaGato2 = cat2-mouse;
 
     if (distanciaGato1<distanciaGato2){
-      return cat1;
+      return `cat1`;
     }
     else if (distanciaGato1>distanciaGato2){
-      return cat2;
+      return `cat2`;
     }
     else {
       return `Os gatos trombam e o rato foge`
     }
 }
-//console.log(catAndMouse(2,5,5));
+//console.log(catAndMouse(2,10,10));
 
 // Desafio 8
 function fizzBuzz() {
