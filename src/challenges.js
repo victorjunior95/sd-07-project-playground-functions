@@ -231,14 +231,15 @@ function generatePhoneNumber(array) {
   }
 
   let count = 1;
-  let igual;
   for (let j = 0; j < array.length - 1; j += 1) {
     for (let k = 1; k < array.length; k += 1) {
       if (array[j] == array[k]) {
         count += 1;
-        if (array[k] == array.length - 1) {
+        if (k == array.length - 1) {
           if (count >= 3) {
             return "não é possível gerar um número de telefone com esses valores";
+          } else {
+            count = 1;
           }
         }
       }
@@ -246,7 +247,7 @@ function generatePhoneNumber(array) {
   }
 
   for (let i in array) {
-    if (array[i] < 0 || array[i] > 9 || count >= 3) {
+    if (array[i] < 0 || array[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     } else {
       if (i == 0) {
@@ -264,8 +265,8 @@ function generatePhoneNumber(array) {
 }
 
 // --------------------TESTE DESAFIO 11--------------------------------
-let teste = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
-console.log(generatePhoneNumber(teste));
+// let teste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(teste));
 // -------------------------------------------------------------------
 
 // Desafio 12
