@@ -20,7 +20,7 @@ function splitSentence(sentença) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length-1] + ", " + array[0];;
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let helper = 0;
   for (const i of array) {
-    if (Math.max.apply(null, array) === i){
+    if (Math.max.apply(null, array) === i) {
       helper++;
     }
   }
@@ -40,43 +40,91 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 > cat2 && cat1 < mouse) {
+    return cat1;
+  } else if (cat2 > cat1 && cat2 < mouse) {
+    return cat2;
+  } else if (cat1 < cat2 && cat1 > mouse) {
+    return cat1;
+  } else if (cat2 < cat1 && cat2 > mouse) {
+    return cat2
+  } else if (cat1 === cat2) {
+    return 'Os gatos trombam e o rato foge.';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resposta = [];
+  for (const i of array) {
+    if (i % 3 === 0 && i % 5 !== 0) {
+      resposta.push('fizz');
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+      resposta.push('buzz');
+    } else if (i % 5 === 0 && i % 3 === 0) {
+      resposta.push('fizzbuzz');
+    } else {
+      resposta.push('bug!');
+    }
+  }
+  return resposta;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  frase = frase.toLowerCase();
+  let trocasAto1 = {
+    a: '1', e: '2',
+    i: '3', o: '4',
+    u: '5'
+  };
+  for (let i = 0; i < frase.length; i += 1) {
+    for (const j in trocasAto1) {
+      if (frase[i] === j) {
+        frase = frase.replace(frase[i], trocasAto1[j]);
+      }
+    }
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase_estranha) {
+  frase_estranha = frase_estranha.toLowerCase();
+  let trocasAto1 = {
+    '1': 'a', '2': 'e',
+    '3': 'i', '4': 'o',
+    '5': 'u'
+  };
+  for (let i = 0; i < frase_estranha.length; i += 1) {
+    for (const j in trocasAto1) {
+      if (frase_estranha[i] === j) {
+        frase_estranha = frase_estranha.replace(frase_estranha[i], trocasAto1[j]);
+      }
+    }
+  }
+  return frase_estranha;
 }
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  
 }
-
 
 module.exports = {
   calcArea,
