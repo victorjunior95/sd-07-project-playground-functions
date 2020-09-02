@@ -58,7 +58,7 @@ function highestCount(array) {
     
     return repetição;
 }
-
+highestCount([9, 1, 2, 3, 9, 5, 7])
 
 // Desafio 7
 function catAndMouse() {
