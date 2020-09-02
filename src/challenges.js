@@ -1,8 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  if(compareTrue[0] == true && compareTrue[1] == true) {
+function compareTrue(param1, param2) {
+  param1 = true;
+  param2 = true;
+  if(param1 == true && param2 == true) {
     return true;
-  } else if (compareTrue[0] == false && compareTrue[1] == false) {
+  } else if (param1 == false && param2 == false) {
     return false;
   }
 }
@@ -20,8 +22,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  let resultado = (`${array[array.length - 1]}, ${array[0]}`)
+  return resultado;
 }
 
 // Desafio 5
