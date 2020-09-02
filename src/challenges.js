@@ -16,7 +16,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(recebeString) {
-  // seu código aqui
+  // seu código aqui...
   let posicaoDoEspaco = 0;
   let palavraCortada;
   let arrayParaImprimir = [];
