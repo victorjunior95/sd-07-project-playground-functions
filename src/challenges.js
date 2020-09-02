@@ -69,13 +69,57 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let myArray = string.split('');
+  for (let i = 0; i < myArray.length; i += 1) {
+    switch (myArray[i]) {
+      case 'a':
+        myArray[i] = 1;
+        break;
+      case 'e':
+        myArray[i] = 2;
+        break;
+      case 'i':
+        myArray[i] = 3;
+        break;
+      case 'o':
+        myArray[i] = 4;
+        break;
+      case 'u':
+        myArray[i] = 5;
+        break;
+      default:
+    }
+  }
+  return myArray.join('');
 }
 
-function decode() {
-  // seu código aqui
+// //
+function decode(string) {
+  let myArray = string.split('');
+  for (let i = 0; i < myArray.length; i += 1) {
+    switch (myArray[i]) {
+      case '1':
+        myArray[i] = 'a';
+        break;
+      case '2':
+        myArray[i] = 'e';
+        break;
+      case '3':
+        myArray[i] = 'i';
+        break;
+      case '4':
+        myArray[i] = 'o';
+        break;
+      case '5':
+        myArray[i] = 'u';
+        break;
+      default:
+    }
+  }
+  return myArray.join('');
 }
+
 
 // Desafio 10
 function techList() {
@@ -122,3 +166,7 @@ calcArea(51, 1);
 highestCount([0, 0, 0]);
 
 footballPoints(0, 0);
+
+encode("hello there!")
+
+decode("h3 th2r2!");
