@@ -31,6 +31,8 @@ let resultado = frase.split(" ");
 return resultado;
 }
 function splitSentence() {
+// Desafio 4
+function concatName() {
   // seu código aqui
 let frase = ["João","José","Paulo","Fernando"];
 let resultado = [];
@@ -40,7 +42,7 @@ for(let count in frase){
 }
 return resultado;
 }
-console.log(splitSentence());
+console.log(concatName());
 
 // Desafio 5
 function footballPoints() {
