@@ -31,11 +31,10 @@ console.log(area);
 //Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 
 let frase = 'vamo que vamo';
-let separador = ' ';
-function splitSentence(frase, separador) {
-  return frase.split(separador);
+function splitSentence(frase) {
+  return frase.split(' ');
 }
-let arrayDePalavras = splitSentence(frase, separador);
+let arrayDePalavras = splitSentence(frase);
 console.log(arrayDePalavras);
 
 // Desafio 4
@@ -43,24 +42,48 @@ console.log(arrayDePalavras);
 
 function concatName(arrayDeStrings) {
   let stringFinal = arrayDeStrings[arrayDeStrings.length -1] + ", " + arrayDeStrings[0];
-  return stringFinal.toUpperCase();
+  return stringFinal
 }
 let stringUltimoPrimeiro = concatName(['Brenda', 'Richard', 'Kiara', 'Saphira']);
 console.log(stringUltimoPrimeiro);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+//Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
+
+//Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+
+function footballPoints(wins, ties) {
+  return 3 * wins + ties;
 }
+
+let resultadoCampeonato = footballPoints(3, 5);
+console.log(resultadoCampeonato);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+//Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
+
+function highestCount(numeros) {
+  let maiorNumero = Math.max.apply(null, numeros);
+  let contador = 0;
+  for (i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] == maiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
+let quantidadeMaiorNumero = highestCount([1, 3, 15, 4, 15, 8, 15, 6]);
+console.log(quantidadeMaiorNumero);
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+//Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três animais está em uma posição representada por um número.
+
+//Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
+//Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
+
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse)
 }
 
 // Desafio 8
