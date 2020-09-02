@@ -157,9 +157,32 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumbers) {
+  let phoneNumber = "";
+  if(arrayNumbers.length > 11 || arrayNumbers.length < 11){
+      return "Array com tamanho incorreto.";
+  } else{
+      for(let i = 0; i < arrayNumbers.length; i+=1){
+          if(arrayNumbers[i] < 0 || arrayNumbers[i] > 9){
+              return "não é possível gerar um número de telefone com esses valores";
+          }
+          let numRep = 0; 
+          for(let j = 0; j < arrayNumbers.length; j+= 1){
+              if(arrayNumbers[i] === arrayNumbers[j]){
+                  numRep += 1;
+              }
+          }
+          if (numRep >= 3){
+              return "não é possível gerar um número de telefone com esses valores";
+          }
+          phoneNumber += arrayNumbers[i];
+      }
+      
+      return "(" + phoneNumber.substring(0,2) +") "+ phoneNumber.substring(2,7) +"-"+phoneNumber.substring(7); 
+  }
+   
 }
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC ) {
