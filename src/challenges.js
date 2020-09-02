@@ -58,10 +58,10 @@ function footballPoints(wins, ties) {
 // Encontrar o maior número da array
 // Contar quantas vezes se repete
 function highestCount(arrayNumeros) {
-  let maiorNumero = 0;
+  let maiorNumero = "";
   let contNumero = 0;
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (maiorNumero < arrayNumeros[i] && maiorNumero != 0) {
+    if (maiorNumero < arrayNumeros[i]) {
       maiorNumero = arrayNumeros[i];
     }
   }
@@ -73,7 +73,7 @@ function highestCount(arrayNumeros) {
   return contNumero;
 }
 
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 /* ________________________________________________________________________________ */
 
