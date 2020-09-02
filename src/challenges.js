@@ -274,12 +274,27 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(teste, teste1, teste2));
 // -------------------------------------------------------------------
 
-
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  num = 0;
+  for (let i in string) {
+    for (let j = 1; j <= 9; j += 1) {
+      if (string[i] == j) {
+        num = num + j;
+      }
+    }
+  }
+  if (num == 1) {
+    return num + " copo de água";
+  } else {
+    return num + " copos de água";
+  }
 }
+
+// --------------------TESTE DESAFIO 13--------------------------------
+// let teste = "1 cachaça, 5 cervejas e 1 copo de vinho";
+// console.log(hydrate(teste));
+// -------------------------------------------------------------------
 
 module.exports = {
   calcArea,
