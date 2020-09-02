@@ -216,7 +216,7 @@ console.log(testeTechList);
 
 function generatePhoneNumber(numerosTelefone) {
   if (numerosTelefone.length !== 11) {
-    return "Array com tamanho incorreto";
+    return "Array com tamanho incorreto.";
   } else {
     for (i1 = 0; i1 < numerosTelefone.length; i1 += 1) {
       if (numerosTelefone[i1] < 0 || numerosTelefone[i1] > 9 || numerosTelefone.filter(x => x === numerosTelefone[i1]).length >= 3) { //última condição adaptada de https://stackoverflow.com/questions/5667888/counting-the-occurrences-frequency-of-array-elements
