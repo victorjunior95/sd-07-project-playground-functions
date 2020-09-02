@@ -41,7 +41,7 @@ console.log(arrayDePalavras);
 //Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 
 function concatName(arrayDeStrings) {
-  let stringFinal = arrayDeStrings[arrayDeStrings.length -1] + ", " + arrayDeStrings[0];
+  let stringFinal = arrayDeStrings[arrayDeStrings.length - 1] + ", " + arrayDeStrings[0];
   return stringFinal
 }
 let stringUltimoPrimeiro = concatName(['Brenda', 'Richard', 'Kiara', 'Saphira']);
@@ -83,8 +83,16 @@ console.log(quantidadeMaiorNumero);
 //Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
 
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse)
-}
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return "cat1";
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return "cat2";
+  } else if (Math.abs(cat1 - mouse) == Math.abs(cat2 - mouse)){
+    return "os gatos trombam e o rato foge";
+  }
+  }
+  let resultadoCaptura = catAndMouse(1, 4, 4);
+  console.log(resultadoCaptura);
 
 // Desafio 8
 function fizzBuzz() {
