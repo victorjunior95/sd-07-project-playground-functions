@@ -51,17 +51,17 @@ function techList() {
   // seu código aqui
 }
 
-// Desafio 11
+// Desafio bonus 1
 function generatePhoneNumber() {
   // seu código aqui
 }
 
-// Desafio 12
+// Desafio bonus 2
 function triangleCheck() {
   // seu código aqui
 }
 
-// Desafio 13
+// Desafio bonus 3
 function hydrate() {
   // seu código aqui
 }
