@@ -102,7 +102,7 @@ function techList(arrayTechs, name) {
     console.log('Vazio!');
     return 'Vazio!';
   }
-  for (let i = 0; i < arrayTechs.length; += 1 ) {
+  for (let i = 0; i < arrayTechs.length; i += 1 ) {
     techs[i] = {
       tech: arrayTechs[i],
       name: name
