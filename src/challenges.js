@@ -22,9 +22,8 @@ function splitSentence(sentence) {
   // seu código aqui
   return sentence.split(' ');
 }
-console.log(splitSentence('Go Trybe'));
-// Desafio 4
 
+// Desafio 4
 function concatName(array) {
   // seu código aqui
   let firstItem = array[0];
@@ -89,9 +88,17 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+let tecno =  ["React", "Jest", "HTML", "CSS", "JavaScript"];
+function techList(tec, name) {
   // seu código aqui
+  let tecnologies = [];  
+   for(i = 0; i < tec.length; i += 1){
+     tecnologies.push({tech: tec[i], name: name})
+   }
+  return tecnologies;
 }
+
+console.log(techList(tecno, 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
