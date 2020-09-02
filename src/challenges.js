@@ -91,30 +91,49 @@ return arrayfizzbuzzfinal
 
 // Desafio 9
 function encode(arrayenconde) {
-  
-  for (key in arrayenconde){
-    if (arrayenconde[key] == "a"){
-      arrayenconde[key] = 1; 
+  let arrayencondecodado = [];
+  arrayencondecodado = arrayenconde.split("")  
+  for (key in arrayencondecodado){
+    if (arrayencondecodado[key] == "a"){
+      arrayencondecodado[key] = 1; 
     }
-    if (arrayenconde[key] == "e"){
-      arrayenconde[key] = 2;
+    if (arrayencondecodado[key] == "e"){
+      arrayencondecodado[key] = 2;
     }
-    if (arrayenconde[key] == "i"){
-      arrayenconde[key] = 3;
+    if (arrayencondecodado[key] == "i"){
+      arrayencondecodado[key] = 3;
     }
-    if (arrayenconde[key] == "o"){
-      arrayenconde[key] = 4;
+    if (arrayencondecodado[key] == "o"){
+      arrayencondecodado[key] = 4;
     }
-    if (arrayenconde[key] == "u"){
-      arrayenconde[key] = 5;
+    if (arrayencondecodado[key] == "u"){
+      arrayencondecodado[key] = 5;
     }
   }
-  return arrayenconde
+  return arrayencondecodado.join("")
 }
-console.log(encode("amendoim"))
 
-function decode() {
-  // seu código aqui
+function decode(arraydeconde) {
+  let arraydecondecodado = [];
+  arraydecondecodado = arraydeconde.split("")  
+  for (key in arraydecondecodado){
+    if (arraydecondecodado[key] == 1){
+      arraydecondecodado[key] = "a"; 
+    }
+    if (arraydecondecodado[key] == 2){
+      arraydecondecodado[key] = "e";
+    }
+    if (arraydecondecodado[key] == 3){
+      arraydecondecodado[key] = "i";
+    }
+    if (arraydecondecodado[key] == 4){
+      arraydecondecodado[key] = "o";
+    }
+    if (arraydecondecodado[key] == 5){
+      arraydecondecodado[key] = "u";
+    }
+  }
+  return arraydecondecodado.join("")
 }
 
 // Desafio 10
