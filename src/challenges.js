@@ -35,10 +35,10 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   let saida;
-  saida= array[array.length - 1]+', ' + array[0]
+  saida = array[array.length - 1] + ", " + array[0];
   return saida;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -54,12 +54,12 @@ function highestCount(array) {
       maior = array[i];
     }
   }
-  for (let i in array){
-    if (array[i]==maior){
-      contador +=1;
+  for (let i in array) {
+    if (array[i] == maior) {
+      contador += 1;
     }
   }
-  return (contador);
+  return contador;
 }
 //console.log(highestCount([9, 1, 2, 3, 9, 9, 7]));
 // Desafio 7
@@ -75,26 +75,25 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   // seu código aqui
 }
-console.log(catAndMouse(5,1,9))
+console.log(catAndMouse(3, 0, 9));
 
 // Desafio 8
 function fizzBuzz(array) {
   let resposta = [];
   for (let i in array) {
     if (array[i] % 3 == 0 && array[i] % 5 == 0) {
-      resposta.push ("fizzBuzz");
+      resposta.push("fizzBuzz");
     } else if (array[i] % 3 == 0) {
-      resposta.push ("fizz");
+      resposta.push("fizz");
     } else if (array[i] % 5 == 0) {
-      resposta.push ("buzz");
+      resposta.push("buzz");
     } else {
-      resposta.push ("bug!");
+      resposta.push("bug!");
     }
   }
-  ;
-  return (resposta);
+  return resposta;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(entrada) {
@@ -125,6 +124,9 @@ function decode() {
 
 // Desafio 10
 function techList(array, name) {
+  if(array.length==0){
+    return ("Vazio!")
+  }
   let saida = {};
   let emOrdem = array.sort(); //ordena o array da entrada
   let lista = [];
@@ -133,14 +135,14 @@ function techList(array, name) {
   for (let i in emOrdem) {
     saida.tech = emOrdem[i];
     saida.name = name;
-    lista[i] ={ ...saida};
+    lista[i] = { ...saida };
     //console.log(lista);
   }
 
   return lista;
   // seu código aqui
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fernando"));
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fernando"));
 
 // Desafio 11
 function generatePhoneNumber() {
