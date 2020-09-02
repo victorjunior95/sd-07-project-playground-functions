@@ -28,7 +28,7 @@ function concatName(array) {
   let output = '';
   for (let i = 0; i < array.length; i += 1) {
     if (i === 0) {
-      output +=`${array[array.length - 1]}, `;
+      output += `${array[array.length - 1]}, `;
     } else if (i === array.length - 1) {
       output += array[0];
     }
@@ -44,18 +44,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  // seu código aqui
+// seu código aqui
   let count = 0;
-  let maiorNumero = '';
+  let maiorNumero = array[0];
   for (let i = 0; i < array.length; i += 1) {
-      if (array[i] > maiorNumero){
-          maiorNumero = array[i];
-      }
+    if (array[i] > maiorNumero) {
+      maiorNumero = array[i];
+    }
   }
   for (let i = 0; i < array.length; i += 1) {
-      if (array[i] === maiorNumero){
-          count += 1;
-      }
+    if (array[i] === maiorNumero) {
+      count += 1;
+    }
   }
   return count;
 }
