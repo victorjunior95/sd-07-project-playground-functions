@@ -5,7 +5,7 @@ function compareTrue(arg1, arg2) {
     if (arg1 && arg2)
         return test;
     else
-        let test = false;
+        test = false;
     return test;
 }
 
