@@ -29,14 +29,17 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  let concatenando = array.concat();
-  return concatenando
-}console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'))
+  let concatenando = ` ${array[array.length -1]}, ${array[0]}`;
+  return concatenando;
+}
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+
+  }
+
   // seu código aqui
-}
+
 
 // Desafio 6
 function highestCount() {
@@ -49,7 +52,8 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
+
   // seu código aqui
 }
 
