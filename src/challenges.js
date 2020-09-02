@@ -9,14 +9,14 @@ function compareTrue(bool1, bool2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = (base*height)/2;
+  let areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
 // Desafio 3
 function splitSentence(string) {
-    let splits = string.split(' ');
-     return splits;
+  let splits = string.split(' ');
+    return splits;
 }
 
 // Desafio 4
@@ -27,13 +27,25 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins*3 + ties;
-   return points;   
+  let points = (wins * 3) + ties;
+    return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+    let highestNumber = 0;
+    let sum = 0;
+    for (let i = 0; i < arrayNumbers.length - 1; i += 1){
+      if (arrayNumbers[i] > highestNumber){
+        highestNumber = arrayNumbers[i];
+      }
+    }
+    for (let i = 0; i < arrayNumbers.length - 1; i += 1){
+      if (arrayNumbers[i] == highestNumber){
+        sum += 1
+      }
+    }
+    return sum;
 }
 
 // Desafio 7
