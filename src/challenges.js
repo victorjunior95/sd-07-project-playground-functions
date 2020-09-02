@@ -123,8 +123,17 @@ function decode(text) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let objeto = [];
+  array = array.sort();
+  for(let i in array){
+    objeto[i] = {
+      tech: array[i],
+      name: name
+    }
+  }
+  let resultado = objeto.sort();
+  return resultado;
 }
 
 // Desafio 11
