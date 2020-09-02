@@ -1,7 +1,17 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(){
   // seu código aqui
+  let ligado=true;
+  let quente=true;
+  let podeBanhar;
+  if((ligado==true)&&(quente==true)){
+      podeBanhar=true;
+  } else{
+      podeBanhar=false;
+  }
+  return podeBanhar;
 }
+console.log(compareTrue());
 
 // Desafio 2
 function calcArea() {
