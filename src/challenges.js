@@ -41,11 +41,19 @@ function highestCount(numbers) {
     }
 
   return counts;
-}console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+}
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 == cat2) {
+    console.log("os gatos trombam e o rato foge");
+  }
+  else if ((cat1 - mouse) < (cat2 - mouse)) {
+    console.log('cat1');
+  }
+  else {
+    console.log('cat2');
+  }
 }
 
 // Desafio 8
