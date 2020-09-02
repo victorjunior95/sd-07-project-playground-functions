@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-    console.log('true');
+  return('true');
 } else {
-  console.log('false')
+  return('false')
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -15,10 +15,12 @@ function splitSentence(string) {
   return stringSeparada
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let i = (array.length - 1)
+  let ultimo = (array[i])
+  let primeiro = (array[0])
+  return ultimo + ', ' + primeiro
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
