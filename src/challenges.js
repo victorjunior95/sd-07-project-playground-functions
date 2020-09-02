@@ -176,14 +176,14 @@ console.log(decode("h3 th2r2!"))
 //Função Compare tirada da página StcakOverflow:
 // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
 //Explicação: Criada um função com chamada "compare" que possui dois parâmetros. Dentro da estrutura condicional IF,
-//será comparada a propriedade "tech" (com os respectivos valores contidos nos mesmos) com o próximo objeto. Se a propriedade do objeto A, chamada de tech, for menor ao próximo objeto que está sendo comprado, 
-//então A é colocado na posição a frente de B, se assim é feito com os próximo objetos da lista. Acredito que isto aconteça por meio da recursividade. 
+//será comparada a propriedade "tech" (com os respectivos valores contidos nos mesmos) com o próximo objeto. Se a propriedade do objeto A, chamada de tech, for menor ao próximo objeto que está sendo comparado, 
+//então A é colocado na posição a frente de B, e assim por diante, será feito com os próximo objetos da lista. Acredito que isto aconteça por meio da recursividade. 
 
-function compare( a, b ) {
-  if ( a.tech < b.tech ){
+function compare(a, b) {
+  if (a.tech < b.tech) {
     return -1;
   }
-  if ( a.tech> b.tech){
+  if (a.tech > b.tech) {
     return 1;
   }
   return 0;
@@ -195,25 +195,78 @@ function techList(arrayTech, name) {
 
   for (let i in arrayTech) {
 
-    newList.push({tech: arrayTech[i], name: name})
+    newList.push({ tech: arrayTech[i], name: name })
   }
 
-  if(newList.length == 0){
+  if (newList.length == 0) {
     return "Vazio!"
-  }else{
+  } else {
     return newList.sort(compare);
   }
 }
 
-let arrayTecnologies = ["CSS", "HTML", "JavaScript", "Jest","React"];
+let arrayTecnologies = ["CSS", "HTML", "JavaScript", "Jest", "React"];
 let myName = "Lucas";
 
-console.log(techList(arrayTecnologies,myName));
+console.log(techList(arrayTecnologies, myName));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+
+  let stringTel = "";
+  let counterRepeat = 0;
+
+  if (array.length == 11) {
+
+    for (let i = 0; i < array.length; i++) {
+      if (i == 0) {
+        stringTel += "(";
+        stringTel += array[i];
+      } else if (i == 1) {
+        stringTel += array[i];
+      } else if (i == 2) {
+        stringTel += ")";
+        stringTel += " ";
+        stringTel += array[i];
+      } else if (i >= 3 && i <= 6) {
+        stringTel += array[i];
+      } else if (i == 7) {
+        stringTel += "-";
+        stringTel += array[i];
+      } else {
+        stringTel += array[i];
+      }
+    }
+
+  } else {
+    stringTel = "Array com tamanho incorreto."
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < 0 || array[i] > 9) {
+      stringTel = "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    counterRepeat = 0;
+    for (let j = 0; j < array.length; j++) {
+      if (array[i] == array[j]) {
+        counterRepeat += 1;
+        if (counterRepeat >= 3) {
+          stringTel = "não é possível gerar um número de telefone com esses valores";
+          break;
+        }
+      }
+    }
+  }
+
+  return stringTel;
+
 }
+
+let array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(array4));
 
 // Desafio 12
 function triangleCheck() {
