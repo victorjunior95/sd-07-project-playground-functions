@@ -92,9 +92,15 @@ function fizzBuzz(arrayOfNumbers) {
   return arrayFizzBuzzBug
 };
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(anyString) {
+  let string = anyString.replace(/a/g,"1");
+  string = string.replace(/e/g,"2");
+  string = string.replace(/i/g,"3");
+  string = string.replace(/o/g,"4");
+  string = string.replace(/u/g,"5");
+  return string
 }
+
 function decode() {
   // seu código aqui
 }
