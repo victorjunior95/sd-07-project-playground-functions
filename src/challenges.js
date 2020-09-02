@@ -206,9 +206,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(textString) {
   // seu código aqui
+  let glassWater = 0;
+  for(let num in textString){
+    if(textString[num] == Number(textString[num])) glassWater += Number(textString[num])
+  }
+
+  return `${glassWater} copos de água`;
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
 
 module.exports = {
