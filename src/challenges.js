@@ -39,23 +39,21 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(Array) {
   // seu código aqui
-  let uniqueKeys = Array.keys()
-  let index = {};
+  let uniqueKeys = Array.values()
   let greaterValue = 0;
   for (let key of uniqueKeys) {
     let cont = 0;
-    for (let chaves in Array) {
-      if (Array[chaves] == key) {
+    for (let chave in Array) {
+      if (Array[chave] === key) {
         cont += 1;
 
       }
     }
+    
     if (cont > greaterValue) {
       greaterValue = cont;
 
     }
-
-    index[key] = cont;
 
   }
   return greaterValue;
@@ -65,15 +63,17 @@ function highestCount(Array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 - mouse > cat2 - mouse) {
+  let distCat1 = abs(cat1 - mouse)
+  let distCat2 = abs(cat2 - mouse)
+  if (distCat1 > distCat2) {
     return 'cat2';
 
   }
-  else if (cat2 - mouse > cat1 - mouse) {
+  else if (distCat2 > distCat1) {
     return 'cat1';
 
   }
-  else if (cat1 - mouse === cat2 - mouse) {
+  else if (distCat1 === distCat2) {
     return 'os gatos trombam e o rato foge';
 
   }
@@ -85,16 +85,16 @@ function fizzBuzz(numbersArray) {
   // seu código aqui
   let returnArray = []
   for (value of numbersArray) {
-    if (value % 3 === 0) {
-      returnArray.push('fizz')
+    if (value % 3 === 0 && value % 5 === 0) {
+      returnArray.push('fizzBuzz')
 
     }
     else if (value % 3 === 0) {
-      returnArray.push('buzz')
+      returnArray.push('fizz')
 
     }
-    else if (value % 3 === 0 && value % 5 === 0) {
-      returnArray.push('fizzBuzz')
+    else if (value % 5 === 0) {
+      returnArray.push('buzz')
 
     }
     else {
@@ -131,7 +131,7 @@ function encode(string) {
   }
   return auxString.join("");
 }
-function decode() {
+function decode(string) {
   // seu código aqui
   let auxString = string.split("");
   let code = {
@@ -158,6 +158,9 @@ function decode() {
 // Desafio 10
 function techList(technologies, name) {
   // seu código aqui
+  if (technologies === []) {
+    return "Vazio!"
+  }
   let techs = [];
 
   for( let value of technologies){
