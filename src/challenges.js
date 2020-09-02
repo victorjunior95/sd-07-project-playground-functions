@@ -49,20 +49,20 @@ function highestCount(arrayNum) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ( cat1 - mouse === cat2 - mouse ) {
+  
+  if ( ((cat1 - mouse) < 0 ? (( cat1 - mouse ) * - 1) : (cat1 -mouse )) === ((cat2 - mouse) < 0 ? (( cat2 - mouse ) * - 1) : (cat2 -mouse ))) {
     return "os gatos trombam e o rato foge";
   } else {
-    if ( cat1 - mouse < cat2 - mouse ) {
-      return "cat1"
+    if ( ((cat1 - mouse) < 0 ? (( cat1 - mouse ) * - 1) : (cat1 -mouse )) < ((cat2 - mouse) < 0 ? (( cat2 - mouse ) * - 1) : (cat2 -mouse ))) {
+      return "cat1 wins."
     } else {
-      return "cat2"
-    };
-  };
+      return "cat2 wins."
+    }
+  }
 }
 
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
-  arrayFizzBuzz = [2, 15, 7, 9, 45];
   let arrayReturn = [];
   for ( let i in arrayFizzBuzz ) {
     if( arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0 ) {
@@ -80,7 +80,6 @@ function fizzBuzz(arrayFizzBuzz) {
 
 // Desafio 9
 function encode(string) {
-  string = "hi there!" ;
   let stringReturn = "";
 
   for ( i in string ) {
@@ -98,7 +97,6 @@ function encode(string) {
   return stringReturn ;
 }
 function decode(string) {
-  string = "h3 th2r2!" ;
   let stringReturn = "";
 
   for ( i in string ) {
