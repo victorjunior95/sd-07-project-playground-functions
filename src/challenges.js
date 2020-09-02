@@ -1,4 +1,5 @@
 // Desafio 1
+
 function compareTrue(aprovacao, conclusao) {
 
 
@@ -18,6 +19,7 @@ function compareTrue(aprovacao, conclusao) {
 }
 
 // Desafio 2
+
 function calcArea(base, height) {
 
     let areaTriangulo = (base * height) / 2;
@@ -25,11 +27,14 @@ function calcArea(base, height) {
 
 }
 
-
 // Desafio 3
-function splitSentence() {
-    // seu código aqui
+function splitSentence(setenca) {
+
+    arrayPalavras = setenca.split(" ");
+    return arrayPalavras;
+
 }
+console.log(splitSentence("Lucas Nonato de Sá"));
 
 // Desafio 4
 function concatName() {
