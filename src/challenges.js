@@ -73,9 +73,12 @@ function catAndMouse(mouse,cat1, cat2) {
   // seu código aqui
   const msg = "os gatos trombam e o rato foge";
 
-  if(cat1 === cat2){
+  let dist1 = Math.abs(cat1 - mouse);
+  let dist2 = Math.abs(cat2 - mouse);
+
+  if(dist1 === dist2){
     return msg;
-  }else if(cat1 > cat2){
+  }else if(dist1 > dist2){
     return 'cat2';
   }else{
     return 'cat1';
