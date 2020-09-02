@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numeros) {
   // verifica maior valor
-  let maiorValor = "";
+  let maiorValor = 0;
   for (let i in numeros) {
     if (numeros[i] > maiorValor) {
       maiorValor = numeros[i];
@@ -49,7 +49,7 @@ function highestCount(numeros) {
     }
   }
   return repeticao
-}
+}console.log(highestCount([0,0,0]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -70,9 +70,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(numeros) {
+  let msg = [];
+  for (let i in numeros) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0){
+      msg.push("fizzBuzz");
+    } else if (numeros[i] % 3 === 0){
+      msg.push("fizz");
+    } else if (numeros[i] % 5 === 0){
+      msg.push("buzz");
+    } else {
+      msg.push("bug!");
+    }
+  }
+  return msg;
+}console.log(fizzBuzz([27, 2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
