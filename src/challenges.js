@@ -18,11 +18,11 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(word) {
-  let arrayWord = [];
-
-
-
+  let arrayWord = word.split(" ");
+  return arrayWord;
 }
+//console.log(splitSentence("go Trybe"));
+
 
 // Desafio 4
 function concatName(array) {
@@ -98,12 +98,33 @@ return arrayNovo;
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let armazena = [];
+  for (let i = 0; i < word.length; i += 1){
+    armazena.push(word[i]);
+  }
+
+  for (let i = 0; i < armazena.length; i += 1){
+    if (armazena[i] == "a"){
+      armazena[i] = "1";
+    } else if (armazena[i] == "e"){
+      armazena[i] = "2";
+  } else if (armazena[i] == "i"){
+    armazena[i] = "3";
+  } else if (armazena[i] == "o"){
+    armazena[i] = "4";
+  } else if (armazena[i] == "u"){
+    armazena[i] = "5";
+  }
 }
+return armazena.join(' ');
+}
+
 function decode() {
   // seu código aqui
 }
+//console.log(encode("hi there!"));
+
 
 // Desafio 10
 function techList(nomeTech, name) {
