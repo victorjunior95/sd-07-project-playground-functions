@@ -24,13 +24,13 @@ function splitSentence(string) {
   console.log(result);
   return result;
 }
-
 splitSentence('go Trybe');
 
 // Desafio 4
 function concatName(strings) {
   let lastString = strings[strings.length-1];
-  console.log(lastString, strings[0]);
+  let strFinal = `${lastString}, ${strings[0]}`;
+  console.log(strFinal);
   return lastString, strings[0];
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
