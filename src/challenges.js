@@ -17,17 +17,24 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let separator = " ";
-  let array = string.split(separator);  
- 
+  let separator = ' ';
+  let array = string.split(separator); 
   return array;
 }
 
-console.log(splitSentence("go Trybe"));
-
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let output = '';
+  for (let i = 0; i < array.length; i += 1) {
+      if (i == 0){
+          output += array[array.length - 1] + ', ';
+      }        
+      else if (i == array.length - 1) {
+          output += array[0];
+      }
+  }
+  return output;
 }
 
 // Desafio 5
