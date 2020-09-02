@@ -27,14 +27,35 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let first;
+  let last;
+  let newArray=[];
+
+  newArray= array.slice; // copia um array para outro
+
+  first= newArray.shift;
+  last = newArray.pop;
+
+   console.log(first);
+  
+
 }
 
+//let array =[joao, jose, maria, joana];
+
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+
+let resp = wins *3 + ties;
+
+    return resp;
+  
 }
+
+console.log(footballPoints(5,1));
+
 
 // Desafio 6
 function highestCount() {
