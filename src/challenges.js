@@ -1,6 +1,6 @@
 // Desafio 1 - PLAYGROUND | FUNCTIONS
 function compareTrue(param1,param2) {
-  if (param1 > param2) {
+  if (param1 >= 0 && param1 <= param2) {
     console.log(true);
   } else {
     console.log(false);
