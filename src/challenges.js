@@ -1,7 +1,15 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(valueOne, valueTwo) {
+console.log('desafio 1')
+  if(valueOne && valueTwo == true) {
+    return true;
+  } else {
+    return false;
+  }
   // seu código aqui
 }
+
+compareTrue(true, false);
 
 // Desafio 2
 function calcArea() {
@@ -11,6 +19,7 @@ function calcArea() {
 // Desafio 3
 function splitSentence(string) {
   let result = string.split(' ');
+  console.log(result);
   return result;
 }
 
