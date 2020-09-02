@@ -167,8 +167,11 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(order) {
+  let result = (order.match(/[0-9]+/g))
+  result = result.reduce((acumulador, current) => Number(acumulador) + Number(current))
+
+  return  result>1? `${result} copos de água` : `${result} copo de água`;
 }
 
 
