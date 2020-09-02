@@ -18,17 +18,21 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(stringName) {
   // seu código aqui
- return stringName.split(" ", 2);
+ return stringName.split(" ");
 }
+let name = splitSentence("maria joao");
+console.log(name);
 
 // Desafio 4
 function concatName() {
   // seu código aqui
+  
 }
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
+
 }
 
 // Desafio 6
