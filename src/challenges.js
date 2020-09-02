@@ -64,11 +64,12 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode() {
+function encode(string) {
 
-    str.replace(regexp | substr, newSubStr | function)
+    let saida = string.replace("a", "1")
+    console.log(saida)
 
-    // seu código aqui
+
 }
 
 function decode() {
