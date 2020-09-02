@@ -138,12 +138,54 @@ function fizzBuzz(array) {
 // -------------------------------------------------------------------
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let novaString = "";
+  for (let i in string) {
+    if (string[i] == "a") {
+      novaString = novaString + "1";
+    } else if (string[i] == "e") {
+      novaString = novaString + "2";
+    } else if (string[i] == "i") {
+      novaString = novaString + "3";
+    } else if (string[i] == "o") {
+      novaString = novaString + "4";
+    } else if (string[i] == "u") {
+      novaString = novaString + "5";
+    } else {
+      novaString = novaString + string[i];
+    }
+  }
+  return novaString;
 }
-function decode() {
-  // seu código aqui
+// --------------------TESTE DESAFIO 9 encode--------------------------------
+// let teste = "hi there!";
+// console.log(encode(teste));
+// -------------------------------------------------------------------
+
+function decode(string) {
+  let novaString = "";
+  for (let i in string) {
+    if (string[i] == "1") {
+      novaString = novaString + "a";
+    } else if (string[i] == "2") {
+      novaString = novaString + "e";
+    } else if (string[i] == "3") {
+      novaString = novaString + "i";
+    } else if (string[i] == "4") {
+      novaString = novaString + "o";
+    } else if (string[i] == "5") {
+      novaString = novaString + "u";
+    } else {
+      novaString = novaString + string[i];
+    }
+  }
+  return novaString;
 }
+
+// --------------------TESTE DESAFIO 9 decode--------------------------------
+// let teste = "h3 th2r2!";
+// console.log(decode(teste));
+// -------------------------------------------------------------------
 
 // Desafio 10
 function techList() {
