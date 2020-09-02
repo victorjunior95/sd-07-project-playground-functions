@@ -41,7 +41,7 @@ function highestCount(array) {
   let biggest = 0;
   let referenceCount = 0;
   for(let number in array){
-     if(array == 0){
+     if(array[number] == 0){
         biggest = number[array];
      } else if(number[array] > biggest){
         biggest = number[array];
