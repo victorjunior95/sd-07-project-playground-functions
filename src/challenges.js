@@ -139,17 +139,18 @@ function decode(string) {
 function techList(tenologias, nome) {
   let saida = [];
 
-  if (tenologias.lenght === 0) {
-    return "Vazio!";
+  if (tenologias.length === 0) {
+      saida = "Vazio!";
   } else {
-    for (const key in tenologias) {
-      saida.push({
-        tech: tecnologias[key],
-        name: nome,
-      })
-    }
-
+      for (const key in tenologias) {
+          saida.push({
+              tech: tecnologias[key],
+              name: nome,
+          })
+      }
+      console.log("executei aqui")
   }
+
   return saida;
 }
 
