@@ -111,11 +111,16 @@ function decode(string) {
 function techList(arrayTech, name) {
   let arrayTechSorted = arrayTech.sort();
   let novoArray = [];
-  for (let i in arrayTechSorted) {
-    novoArray.push({
-      tech: arrayTechSorted[i],
-      name: name
-    })
+  if (arrayTech.length == 0) {
+    return "Vazio!"
+  } else {
+    for (let i in arrayTechSorted) {
+      novoArray.push({
+        tech: arrayTechSorted[i],
+        name: name
+      })
+    }
+    return novoArray;
   }
 }
 
