@@ -113,9 +113,17 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // 
+function techList(array, name) {
+  new_array = []
+  for (i of array.sort()){
+    new_array.push({
+      tech: i,
+      name: name
+    })
+  }
+  return new_array
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
