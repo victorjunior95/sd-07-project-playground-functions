@@ -10,8 +10,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let split = [];
+  for (let i in phase)
 }
 
 // Desafio 4
@@ -20,8 +21,8 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins*3+ties;
 }
 
 // Desafio 6
