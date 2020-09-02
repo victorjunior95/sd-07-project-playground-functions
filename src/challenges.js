@@ -61,7 +61,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
   let frase;
-  if (distanceCat1 < distanceCat2) {
+  if (cat1 <= 0 || cat2 <= 0) {
+    frase = "os gatos trombam e o rato foge";
+  } else if (distanceCat1 < distanceCat2) {
     frase = "cat1";
   } else if (distanceCat1 > distanceCat2) {
     frase = "cat2";
@@ -143,12 +145,26 @@ function decode(frase) {
     }
   }
   return novaFrase;
-  // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, name) {
+  if (arrayTech == []) {
+    return "Vazio!"
+  } else {
+    let nome = name;
+    let objectResult = [];
+    for (i = 0; i < arrayTech.length; i += 1) {
+      let parameter = {
+        tech: arrayTech[i],
+        name: nome
+      };
+      objectResult = objectResult.concat(parameter)
+    }
+    return objectResult.sort(function(a, b) {
+      return (a.tech > b.tech)
+    })
+  }
 }
 
 // Desafio 11
