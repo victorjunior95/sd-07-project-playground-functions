@@ -39,20 +39,39 @@ function catAndMouse(cat1, cat2, mouse) {
   let distancecat2 = mouse-cat2 
   if (distancecat1 < 0){
     distancecat1 = distancecat1 * (-1)
+    if (distancecat1 === distancecat2){
+      return "os gatos trombam e o rato foge"
+    }
+    else if (distancecat1 < distancecat2){
+      return "cat1"
+    }
+    else{
+      return "cat2"
+    } 
   }
   else if (distancecat2 < 0){
     distancecat2 = distancecat2 * (-1)
+    if (distancecat1 === distancecat2){
+      return "os gatos trombam e o rato foge"
+    }
+    else if (distancecat1 < distancecat2){
+      return "cat1"
+    }
+    else{
+      return "cat2"
+    } 
   }
-  if (distancecat1 === distancecat2){
-    return "os gatos trombam e o rato foge"
+  else {
+    if (distancecat1 === distancecat2){
+      return "os gatos trombam e o rato foge"
+    }
+    else if (distancecat1 < distancecat2){
+      return "cat1"
+    }
+    else{
+      return "cat2"
+    } 
   }
-  else if (distancecat1 < distancecat2){
-    return "cat1"
-  }
-  else{
-    return "cat2"
-  } 
-
 }
 
 // Desafio 8
