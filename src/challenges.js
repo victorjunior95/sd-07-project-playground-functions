@@ -115,7 +115,7 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   new_array = []
-  if (array == []){
+  if (array.length == 0){
     return "Vazio!"
   }
   else{
