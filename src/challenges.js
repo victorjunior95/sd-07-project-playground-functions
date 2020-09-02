@@ -17,18 +17,37 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let lastName = arrayStrings[arrayStrings.length - 1];
+  let resultadoString = "";
+  resultadoString = `${lastName}, ${arrayStrings[0]}`;
+  return resultadoString;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winPoints = wins * 3;
+  let championshipPoints = winPoints + ties;
+  return championshipPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let higherNumber = 0;
+  let countNumber = 0;
+  for (let index in array) {
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[index] > array[i] && array[index] > higherNumber) {
+        higherNumber = array[index];
+      }
+    }
+  }
+  for (let index in array) {
+    if (array[index] === higherNumber) {
+      countNumber += 1;
+    }
+  }
+  return countNumber;
 }
 
 // Desafio 7
