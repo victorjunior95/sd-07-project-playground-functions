@@ -65,15 +65,16 @@ function highestCount(numbers) {
             repetition += 1;
         }
     }
-    console.log("O Numero " + highest + " se repete" + repetition + " vezes");
     return repetition;
 
 }
 
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+    if (cat1 > cat2) {
+
+    }
 }
 
 // Desafio 8
