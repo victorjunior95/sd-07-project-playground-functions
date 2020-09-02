@@ -76,17 +76,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = cat2 - mouse;
 
   if (distanceCat1 < distanceCat2) {
-    console.log(cat1);
+    console.log("cat1");
   }
   else if (distanceCat2 < distanceCat1){
-    console.log(cat2);
+    console.log("cat2");
   }
   else {
     console.log("os gatos trombam e o rato foge");
   }
 }
 
-catAndMouse(1,3,3);
+catAndMouse(10,4,22);
 
 // Desafio 8
 function fizzBuzz() {
