@@ -12,20 +12,29 @@ function calcArea(base,height) {
   return (base*height)/2
 }
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
 
+function splitSentence(palavra) {
+  let array=[];
+  for(key in palavra){
+    if(palavra[key] === " "){
+      array.push(palavra[key])
+    }
+  }
+  return array
+}
+console.log(splitSentence("Guilherme Almeida"))
 // Desafio 4
 function concatName() {
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  wins*=3
+  return wins+ties
+  
 }
+
 
 // Desafio 6
 function highestCount() {
