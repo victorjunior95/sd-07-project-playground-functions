@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (rato > gato1 && rato > gato2) {
     distancia1 = rato - gato1;
     distancia2 = rato - gato2;
-  }else if (rato <= gato1 && rato <= gato2) {
+  }else if (rato <= gato1 || rato <= gato2) {
     distancia1 = gato1;
     distancia2 = gato2;
   }
@@ -82,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-
+console.log(catAndMouse(30, 22, 4))
 // Desafio 8
 function fizzBuzz(num) {
   let numbers = num;
