@@ -44,14 +44,13 @@ function highestCount(arr) {
       counts[arr[key]] = 1;
     }
   }
-  console.log(counts);
   for (let key in counts) {
-      console.log(`${key}, ${mostDuplicated.value}`);
     if (key > mostDuplicated.value) {
       mostDuplicated.value = key;
       mostDuplicated.times = counts[key];
-    } else if (Number(key) === mostDuplicated.value) {
-        mostDuplicated.times += 1;
+    }
+    if (Number(key) === mostDuplicated.value) {
+      mostDuplicated.times = counts[key];
     }
   }
   return mostDuplicated.times;
@@ -62,9 +61,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let firstCatDistance = mouse - cat1;
   let secondCatDistance = mouse - cat2;
   if (firstCatDistance > secondCatDistance) {
-    return 'cat1';
-  } else if (firstCatDistance < secondCatDistance) {
     return 'cat2';
+  } else if (secondCatDistance > firstCatDistance) {
+    return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
 }
@@ -95,8 +94,26 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr) {
+  const sortByName = (a, b) => {
+    if (a > b) {
+      return 1;
+    } else if (a < b){
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+  let sortedArray = arr.sort(sortByName);
+  let newArray = [];
+  for (let key in sortedArray) {
+    let obj = {
+      tech: sortedArray[key],
+      name,
+    }
+    newArray.push(obj);
+  }
+  return newArray;
 }
 
 // Desafio 11
