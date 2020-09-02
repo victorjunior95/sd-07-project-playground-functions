@@ -14,15 +14,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(palavra) {
-  let array = [];
-  for (key in palavra) {
-    if (palavra[key] === " ") {
-      array.push(palavra[key])
-    }
-  }
-  return array
+  
+ 
+ let resultado = palavra.split(" ")
+  
+  return resultado
 }
-console.log(splitSentence("Guilherme Almeida"))
+
 // Desafio 4
 function concatName() {
   // seu código aqui
@@ -166,13 +164,13 @@ function techList(lista, name) {
     return "Vazio!"
   }
   for (key in tecnologias) {
-    for (let i = 0; i < lista.length; i += 1) {
-
-      lista2.push(tecnologias['tech'] = lista[i])
-      lista2.push(tecnologias['name'] = name)
-    }
+    
   }
+  for (let i = 0; i < lista.length; i += 1) {
 
+    lista2.push(tecnologias['tech'] = lista[i])
+    lista2.push(tecnologias['name'] = name)
+  }
 
   return lista2
 }
