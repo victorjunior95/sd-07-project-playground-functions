@@ -80,32 +80,29 @@ if (unidades1 > unidades2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumbers) {
+function fizzBuzz() {
+  let arrNumbers = [2, 15, 7, 9, 45];
+let resultado = [];
 
-  let resultado = [];
+   for (let indice in arrNumbers){
 
-  for (let i in arrayNumbers) {
+      if((arrNumbers[indice]%3==0)&&(arrNumbers[indice]%5==0)){
+          resultado[indice] = "fizzBuzz";
 
-      if ((arrayNumbers[i] % 3 === 0) && (arrayNumbers[i] % 5 === 0)) {
+      } else if (arrNumbers[indice]%5==0) {
+          resultado[indice] = "buzz";
 
-          resultado[i] = "fizzbuzz";
-      }
-      else if(arrayNumbers[i] % 3 === 0) {
+      } else if (arrNumbers[indice]%3==0){
+          resultado[indice] = "fizz";
 
-          resultado[i] = "fizz";
-      }
-      else if (arrayNumbers[i] % 5 === 0) {
-          resultado[i] = "buzz";
       } else {
-
-          resultado[i] = "bug!";
+          resultado[indice]="bug!";
       }
   }
-
   return resultado;
 }
-let array = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(array));
+
+console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {
