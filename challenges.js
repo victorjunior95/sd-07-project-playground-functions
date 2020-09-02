@@ -1,9 +1,5 @@
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return (a && b);
 }
 
 function calcArea(base, height) {
@@ -18,13 +14,3 @@ function splitSentence(sentença) {
   }
   return splitedSentece;
 }
-
-let a = true;
-let b = true;
-let num1 = 10;
-let num2 = 5;
-let sentença = "Olá, hoje está um belo dia.";
-
-console.log(compareTrue(a, b));
-console.log(calcArea(num1, num2));
-console.log(splitSentence(sentença));
