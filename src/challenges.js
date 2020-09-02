@@ -133,12 +133,11 @@ function decode(strings) {
   let cestaDoE = cestaDoD.replace(/5/g, 'u');
   return cestaDoE;
 }
-console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList(tech, name) {
+function techList() {
   // seu código aqui
-
+}
 
 // Desafio 11
 function generatePhoneNumber() {
