@@ -44,7 +44,7 @@ function highestCount(array) {
      if(array == 0){
         biggest = number[array];
      } else if(number[array] > biggest){
-        biggest = i;
+        biggest = number[array];
      }
   }
   for(let count in array){
@@ -151,9 +151,8 @@ function generatePhoneNumber(array) {
   + array[2] + array[3] + array[4] + array[5] + array[6] 
   + '-' 
   + array[7] + array[8] + array[9] + array[10];
-  return reformuledNumber;
+  return reformuledNumber.toString();
 }
-console.log(generatePhoneNumber([1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 5]));
 
 // Desafio 12
 function triangleCheck() {
