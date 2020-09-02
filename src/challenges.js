@@ -121,7 +121,7 @@ function techList(array, theName) {
     return 'Vazio!';
   } else {
     for (let tech in array) {
-      structureArray[tech] = { tech: `${array[tech]}`, name: `${theName}` };
+      structuredArray[tech] = { tech: array[tech], name: theName };
     }
   }
   return structuredArray;
