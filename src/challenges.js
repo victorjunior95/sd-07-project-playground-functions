@@ -163,8 +163,26 @@ console.log(techList(tech, nome));
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  //Verificação 11 números
+  if (array.length != 11) {
+    return "Array com tamanho incorreto";
+  }
+  //Verificação números menores que 0 ou maiores que 9;
+  for (i in array) {
+    if (array[i] < 0 || array [i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (i in array) {
+    for (j in array) {
+      if (array[i] === array[j]) {
+        
+      }
+    }
+  }
+  
 }
 
 // Desafio 12
