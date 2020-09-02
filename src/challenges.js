@@ -1,7 +1,7 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(first, second) {
   // seu código aqui
-  console.log('vamos com tudo!');
+  return first && second ? true : false;
 }
 
 // Desafio 2
