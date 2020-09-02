@@ -11,7 +11,7 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   valorA = ((base*height)%2)
-  if (valorA === 0){
+  if (valorA = 0){
     return true;
   } else {
     return false;
