@@ -55,11 +55,21 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodingString) {
+  let res = encodingString.replace(/a/g , '1');
+  res = res.replace(/e/g , '2');
+  res = res.replace(/i/g , '3');
+  res = res.replace(/o/g , '4');
+  res = res.replace(/u/g , '5');
+  return res;
 }
-function decode() {
-  // seu código aqui
+function decode(decodingString) {
+  let res = decodingString.replace(/1/g , 'a');
+  res = res.replace(/2/g , 'e');
+  res = res.replace(/3/g , 'i');
+  res = res.replace(/4/g , 'o');
+  res = res.replace(/5/g , 'u');
+  return res;
 }
 
 // Desafio 10
