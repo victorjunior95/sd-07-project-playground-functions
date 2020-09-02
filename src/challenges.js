@@ -8,14 +8,11 @@ function compareTrue(valor1, valor2) {
   }
 }
 
-compareTrue();
-
 // Desafio 2
 function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
 
-calcArea();
 
 // Desafio 3
 /*function splitSentence(string) {
@@ -31,11 +28,9 @@ splitSentence();
 // Desafio 4
 function concatName(array) {
   // seuls código aqui
-  let x = array[(array.length - 1)] + ` ` + array[0];
+  let x = array[(array.length - 1)] + `, ` + array[0];
   return x;
 }
-
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints() {
@@ -44,7 +39,6 @@ function footballPoints() {
   return points;
 }
 
-footballPoints();
 
 // Desafio 6
 function highestCount() {
