@@ -156,40 +156,38 @@ function generatePhoneNumber(phoneNumberArray) {
   let phoneNumber = "(";
   if (phoneNumberArray.length > 11)
   {
-    return "Array com tamanho incorreto";
+    return "Array com tamanho incorreto.";
   }
   else
   {
     let count = 0;
     for (let i in phoneNumberArray)
     {
+      const digit = phoneNumberArray[i]
       for (let j in phoneNumberArray)
       {
-        if (phoneNumberArray[i] === phoneNumberArray[j])
+        if (digit === phoneNumberArray[j])
         {
           count += 1;
         }
-        if (count > 3)
+        if (count >= 3)
         {
           return "não é possível gerar um número de telefone com esses valores";
         }
       }
-      if (phoneNumberArray[i] < 0 || phoneNumberArray[i] > 9)
+      if (digit < 0 || digit > 9)
       {
         return "não é possível gerar um número de telefone com esses valores";
       }
-      else if (i != 2 && i != 7)
+      else if (i === "2")
       {
-        phoneNumber += phoneNumberArray[i];
+        phoneNumber += ") ";
       }
-      else if (i = 2)
+      else if (i === "7")
       {
-        phoneNumber = phoneNumber + ")" + phoneNumberArray[i];
+        phoneNumber += "-";
       }
-      else if (i = 7)
-      {
-        phoneNumber = phoneNumber + "-" + phoneNumberArray[i];
-      }
+      phoneNumber += digit;
       count = 0;
     }
   }
