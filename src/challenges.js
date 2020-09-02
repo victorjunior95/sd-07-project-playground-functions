@@ -77,9 +77,9 @@ function fizzBuzz(arrayDeNumeros) {
   let arrayFizzBuzz = [];
   for (let contador = 0; contador < arrayDeNumeros.length; contador += 1) {
     if ((arrayDeNumeros[contador] % 3 == 0) && (arrayDeNumeros[contador] % 5 != 0)) {
-      arrayFizzBuzz.push("Fizz");
+      arrayFizzBuzz.push("fizz");
     } else if ((arrayDeNumeros[contador] % 3 != 0) && (arrayDeNumeros[contador] % 5 == 0)) { 
-      arrayFizzBuzz.push("Buzz");
+      arrayFizzBuzz.push("buzz");
     } else if ((arrayDeNumeros[contador] % 3 == 0) && (arrayDeNumeros[contador] % 5 == 0)) {
       arrayFizzBuzz.push("fizzBuzz");
     } else {
