@@ -80,11 +80,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let modified = [];
+  for (let i in text){
+    if (text[i] === "a"){
+      modified[i] = "1";
+    } else if (text[i] === "e"){
+      modified[i] = "2";
+    } else if (text[i] === "i"){
+      modified[i] = "3";
+    } else if (text[i] === "o"){
+      modified[i] = "4";
+    } else if (text[i] === "u"){
+      modified[i] = "5";
+    } else {
+      modified[i] = text[i];
+    }
+  }
+  modified = modified.join("");
+  return modified;
 }
-function decode() {
-  // seu código aqui
+
+function decode(text) {
+  let modified = [];
+  for (let i in text){
+    if (text[i] === "1"){
+      modified[i] = "a";
+    } else if (text[i] === "2"){
+      modified[i] = "e";
+    } else if (text[i] === "3"){
+      modified[i] = "i";
+    } else if (text[i] === "4"){
+      modified[i] = "o";
+    } else if (text[i] === "5"){
+      modified[i] = "u";
+    } else {
+      modified[i] = text[i];
+    }
+  }
+  modified = modified.join("");
+  return modified;
 }
 
 // Desafio 10
