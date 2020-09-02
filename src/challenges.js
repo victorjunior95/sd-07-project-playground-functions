@@ -51,11 +51,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2_distance = mouse - cat2;
 
   if (cat1_distance < cat2_distance) {
-    return "O gato 1 irá alcançar primeiro o rato";
+    return cat1;
   } else if (cat1_distance > cat2_distance) {
-    return "O gato 2 irá alcançar primeiro o rato";
+    return cat2;
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
