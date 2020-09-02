@@ -96,14 +96,24 @@ function decode(msg) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array,nome) {
+  newArray = []
+  for (let i in array){
+    obj = {}
+    obj.tech = array[i]
+    obj.name = nome
+    newArray.push(obj)
+  } 
+  return newArray 
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(a) {
+  return `(${a[0]}${a[1]})${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
+  
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
