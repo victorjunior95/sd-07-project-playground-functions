@@ -158,7 +158,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   if (array.length !== 0){
     array.sort(function (a, b) {
       return a.localeCompare(b);
@@ -176,8 +176,40 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let numero = '';
+  for(let i in array){
+    if (somaRepeat(array, i) >= 3){
+      numero = 'não é possível gerar um número de telefone com esses valores';
+      break;
+    }
+  }
+  for(let i in array){
+    if (array[i] > 9 || array[i] < 0){
+      numero = 'não é possível gerar um número de telefone com esses valores';
+      break;
+    }
+  }
+  if (array.length === 11){
+    for(let i in array){
+      switch(i){
+        case '0':
+          numero += '(';
+        break;
+        case '2':
+          numero += ')';
+          numero += ' ';
+        break;
+        case '7':
+          numero += ' ';
+        break; 
+      }
+      numero += array[i]
+    }
+  } else {
+    numero = 'Array com tamanho incorreto.';
+  }
+  return numero;
 }
 
 // Desafio 12
