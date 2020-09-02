@@ -12,7 +12,7 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  resultado = ((base*height)/2);
+  let resultado = ((base*height)/2);
   return resultado;
 }
 
@@ -24,14 +24,14 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  resultado = `${array[array.length-1]}, ${array[0]}`;
+  let resultado = `${array[array.length-1]}, ${array[0]}`;
   return resultado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  total = (wins*3) + ties;
+  let total = (wins*3) + ties;
   return total;
 }
 
@@ -55,13 +55,39 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if (cat1 - mouse > cat2 - mouse){
+    let resultado = `cat2`;
+  }
+  else if (cat1 - mouse < cat2 - mouse){
+    let resultado = `cat1`;
+  }
+  else {
+    let resultado = `os gatos trombam e o rato foge`
+  }
+  return resultado;
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let resultado = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if ((array[i] % 3) == 0 && (array[i] % 5) == 0) {
+      resultado = resultado.push(`fizzBuzz`);
+    }
+    else if ((array[i] % 3) == 0){
+      resultado = resultado.push(`fizz`);
+    }
+    else if ((array[i] % 5) == 0)) {
+      resultado = resultado.push(`buzz`);
+    }
+    else {
+      resultado = resultado.push(`bug`);
+    }
+  }
+  return resultado;
 }
 
 // Desafio 9
