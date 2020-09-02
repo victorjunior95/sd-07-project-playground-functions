@@ -109,11 +109,33 @@ function encode(encodando) {
 
 }
 
-console.log(encode("hi there!"));
+function decode(desencodado) {
+  let formPalavra ='';
+  for(let item in desencodado){
+   if(desencodado[item] == '1'){
+    formPalavra += 'a';
+    }else if(desencodado[item] == '2'){
+      formPalavra += 'e';
+    }else if(desencodado[item] == '3'){
+      formPalavra += 'i';
+    }else if(desencodado[item] == '4'){
+      formPalavra += 'o';
+    }else if(desencodado[item] == '5'){
+      formPalavra += 'u';
+    }
+    else{
+      formPalavra +=desencodado[item];
+    }
 
-function decode() {
-  // seu código aqui
+  }
+  return formPalavra;
+
 }
+
+
+//let encodado = encode("hi there!");
+
+//console.log(decode(encodado))
 
 // Desafio 10
 function techList() {
