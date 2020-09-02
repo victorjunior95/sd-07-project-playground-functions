@@ -18,7 +18,7 @@ function calcArea(base, height) {
   // return console.log("resultado do desafio 2", area, "m2");
   return area;
 }
-calcArea(base, height);
+// calcArea(base, height);
 
 // Desafio 3
 let string = "vamo que vam"
@@ -43,14 +43,13 @@ let array = [];
 // }
 // }
 
-
 function splitSentence(string) {
   // seu código aqui
  let array = string.split(" ");
-  return console.log("resultado do desafio 3", array);
+  // return console.log("resultado do desafio 3", array);
   return array;
 } 
-splitSentence(string);
+// splitSentence(string);
 
 
 // Desafio 4
