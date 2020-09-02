@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(boleano1 , boleano2) {
   let boleano = true;
-  if(boleano1 === true && boleano2 === true){
+  if(boleano1 === true && boleano2 === true || boleano2 === true && boleano1 === true){
     boleano = true;
     return boleano;
-  }else if(boleano1 === false && boleano2 === true){
+  }else if(boleano1 === false && boleano2 === true || boleano2 === false && boleano1 === true){
     boleano = false;
     return boleano;
   } else if (boleano1 === false && boleano2 === false){
@@ -23,13 +23,12 @@ function calcArea(base,height) {
 function splitSentence() {
 
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 4
 function concatName(nomes) {
   let n = nomes.length;
-  return `${nomes[0]}, ${nomes[n-1]}`;
+  return `${nomes[n-1]}, ${nomes[0]}`;
 }
-console.log(footballPoints(14,8));
+
 function footballPoints(wins,ties) {
   wins = wins * 3;
   ties = ties;
