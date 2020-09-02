@@ -195,13 +195,16 @@ function techList(arrayTech, name) {
 
     arrayTech[i].name = name;
   }
-  
-  return arrayTech.sort(compare);
 
+  if(arrayTech.length == 0){
+    console.log("Vazio")
+  }else{
+    return arrayTech.sort(compare);
+  }
 }
 
-let arrayTecnologies = [{ tech: "C" }, { tech: "B" }, { tech: "A" }];
-let myName = "Cézar";
+let arrayTecnologies = [{ tech: "CSS" }, { tech: "HTML" }, { tech: "JavaScript" }, {tech: "Jest"}, {tech: "React"}];
+let myName = "Lucas";
 
 console.log(techList(arrayTecnologies,myName));
 
