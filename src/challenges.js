@@ -105,8 +105,17 @@ function decode(senhaDecoder) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tecnologia,nome) {
   // seu código aqui
+  let resultado = [];
+  tecnologia.sort();
+  for(let count in tecnologia){
+    resultado.push({
+      tech: tecnologia[count],
+      name: nome
+    })
+  }
+  return resultado;
 }
 
 // Desafio 11
