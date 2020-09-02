@@ -15,7 +15,7 @@ function validaTelefone(arrayTelefone) {
   retorno = '';
   if (arrayTelefone.length == 11) {
     for (let i in arrayTelefone) {
-      if (arrayTelefone[i] > 9 || arrayTelefone[i] < 0 || somaRepeat(arrayTelefone, i) > 3) {
+      if (arrayTelefone[i] > 9 || arrayTelefone[i] < 0 || somaRepeat(arrayTelefone, i) >= 3) {
         retorno = 'não é possível gerar um número de telefone com esses valores';
       }
     }
