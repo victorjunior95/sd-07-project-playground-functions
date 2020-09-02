@@ -1,21 +1,17 @@
 // Desafio 1
-function compareTrue( a ,b ) {
-  
-  
+function compareTrue(a, b) {
+  a = 12;
+  b = 10;
 
-  a= 10 ;
-  b=12;
+  if (a == 10 && b == 12) {
+    return false;
+  }
 
-  if (a == 10 && b == 12){
-
+  if (a == 12 && b == 10) {
     return true;
   }
- else{
-   return false;
- }
-
 }
- console.log(compareTrue());
+console.log(compareTrue());
 // Desafio 2
 function calcArea() {
   // seu código aqui
@@ -79,7 +75,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -95,4 +90,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
