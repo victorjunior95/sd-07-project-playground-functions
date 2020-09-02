@@ -2,14 +2,13 @@
 function compareTrue(and1, and2) {
   if (and1 === true && and2 === true) {
     return true;
-  } 
+  }
   return false;
-  
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -18,14 +17,12 @@ function splitSentence(string) {
   let word = '';
 
   for (let i in string) {
-
-     if ( string[i] === ' ') {
-       arrayString.push(word);
-       word = '';
-     } else {
+    if (string[i] === ' ') {
+      arrayString.push(word);
+      word = '';
+    } else {
       word += string[i];
-     }
-     
+    }      
   }
   arrayString.push(word);
   return arrayString;
@@ -33,8 +30,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-
-  let result = array[array.length -1] + ", " + array[0];
+  let result = `${array[array.length -1]} , ${array[0]}`;
   return result;
 
 }
@@ -167,7 +163,7 @@ function decode(string) {
 function techList(techs, name) {
   let result = [];
   let techsArray = techs;
-  
+
   if (techs.length === 0){
     result = 'Vazio!';
     return result;
@@ -182,7 +178,7 @@ function techList(techs, name) {
     }
   }
   return result;
-  
+
 }
 
 // Desafio 11
@@ -196,7 +192,7 @@ function generatePhoneNumber(numbers) {
   }
 
   for (let i in numbers) {
-    
+  
     if( numbers[i] < 0 || numbers[i] > 9) {
       result = "não é possível gerar um número de telefone com esses valores";
       return result;
@@ -222,7 +218,7 @@ function generatePhoneNumber(numbers) {
 
   for (let i = 0; i < numbers.length; i += 1 ) {
 
-    
+  
     if ( i === 2) {
       result += ') ' + numbers[i];
     } else if (i === 7) {
@@ -251,7 +247,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  
+
   let result;
   let NumberOfDrinks = drinks.match(/\d+/g).map(Number);  //linha de código retirada da internet https://stackoverflow.com/questions/53897373/js-how-to-got-the-sum-of-numbers-from-a-string
   let sum = 0;
