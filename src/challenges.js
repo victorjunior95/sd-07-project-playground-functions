@@ -15,7 +15,9 @@ function compareTrue(camisaAzul, calcaAzul) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  let calculoArea = (base * height) / 2;
+  return calculoArea
   // seu código aqui
 }
 
