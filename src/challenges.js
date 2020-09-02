@@ -200,6 +200,18 @@ function generatePhoneNumber(phoneNumber) {
     }
   }
 
+  const myArrayValues = phoneNumber;
+  let countRepeatValue = 0;
+
+  for(let i of myArrayValues){
+    for(let j of myArrayValues){
+      if(i === j) countRepeatValue += 1;
+      if(countRepeatValue >= 3) return "não é possível gerar um número de telefone com esses valores";
+    }
+    countRepeatValue = 0;
+  }
+
+
   return phoneFormated;
 }
 
