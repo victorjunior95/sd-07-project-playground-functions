@@ -78,7 +78,7 @@ function fizzBuzz(array) {
     } else if (array[i] % 3 == 0) {
       resposta.push = "fizz";
     } else if (array[i] % 5 == 0) {
-      resposta.push = "Buzz";
+      resposta.push = "buzz";
     } else {
       resposta.push = "bug!";
     }
