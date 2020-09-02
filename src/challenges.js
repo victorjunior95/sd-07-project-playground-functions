@@ -17,14 +17,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let word = "";
+  let word = '';
   let fraseArray = [];
   for (let i = 0; i < frase.length; i += 1) {
-    if (frase[i] !== " ") {
-      word = word + frase[i];
+    if (frase[i] !== ' ') {
+      word += frase[i];
     } else {
       fraseArray.push(word);
-      word = "";
+      word = '';
     }
   }
   fraseArray.push(word);
@@ -32,8 +32,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(paramArray) {
+  let lastItem = paramArray.length-1;
+  let lastFirst = paramArray[lastItem] + ", " + paramArray[0];
+    return lastFirst;
 }
 
 // Desafio 5
