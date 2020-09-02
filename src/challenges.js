@@ -1,6 +1,12 @@
 // Desafio 1
 function compareTrue() {
-  // seu código 
+  let numero = 10;
+  let numero2 = 10;
+  if (numero === 10 && numero2 === 10) {
+    return true
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -42,6 +48,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
