@@ -54,18 +54,18 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let string = "";
   let distanciaCatUm = cat1 - mouse;
   let distanciaCatDois = cat2 - mouse;
   if (distanciaCatUm < distanciaCatDois) {
-    string = "cat1";
+    return 'cat1';
   } else if (distanciaCatUm > distanciaCatDois) {
-    string = "cat2";
+    return 'cat2';
   } else {
-    string = "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
-  return string;
 }
+
+console.log(catAndMouse(10, 4, 22));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -84,10 +84,39 @@ function fizzBuzz(array) {
   return resultado;
 }
 
+let string = "Renan Oliveira";
+console.log(string.charAt(0));
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let arrayChar = [];
+  for (i in string) {
+    if (string[i] === "a") {
+      arrayChar.push("1");
+    } else if (string[i] === "e") {
+      arrayChar.push("2");
+    } else if (string[i] === "i") {
+      arrayChar.push("3");
+    } else if (string[i] === "o") {
+      arrayChar.push("4");
+    } else if (string[i] === "u") {
+      arrayChar.push("5");
+    } else {
+      arrayChar.push(string[i]);
+    }
+  }
+
+  let encoded = "";
+
+  for (i in arrayChar) {
+    encoded.concat(arrayChar[i])
+  }
+  return encoded;
 }
+
+console.log(encode("Renan OLiveira"))
+
+
 function decode() {
   // seu código aqui
 }
