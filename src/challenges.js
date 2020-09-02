@@ -18,12 +18,16 @@ return area;
 function splitSentence(string) {
   let guarda = [];
   guarda = string.split(" ")
-console.log(guarda)
+return guarda;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let ultimo = [];
+let primeiro = [];
+ ultimo=(array[array.length -1]);
+             primeiro=(array[0])
+             return ultimo + " , " + primeiro
 }
 
 // Desafio 5
