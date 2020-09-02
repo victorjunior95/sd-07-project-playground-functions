@@ -109,16 +109,20 @@ function decode(encodedString) {
 
 // Desafio 10
 function techList(technologies, name) {
-  let listOfObjects = []
-  technologies.sort();
-  // making the objects and pushing to the list
-  for (key in technologies) {
-    let tempObject = {};
-    tempObject.name = name;
-    tempObject.tech = technologies[key];
-    listOfObjects.push(tempObject);
+  if (technologies.length > 0) {
+    let listOfObjects = []
+    technologies.sort();
+    // making the objects and pushing to the list
+    for (key in technologies) {
+      let tempObject = {};
+      tempObject.name = name;
+      tempObject.tech = technologies[key];
+      listOfObjects.push(tempObject);
+    }
+    return listOfObjects;
+  } else {
+    return "Vazio!";
   }
-  return listOfObjects;
 }
 
 // Desafio 11
@@ -153,4 +157,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
