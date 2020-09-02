@@ -47,3 +47,17 @@ function splitSentence (frase){
 }
 let a = "go Trybe vamo que vamo";
 console.log (splitSentence(a));
+
+//**4 - Concatenação de strings**
+console.log ('**4 - Concatenação de strings**');
+
+function concatName(array){
+    let saida =[];
+    saida.push (array[array.length-1]);
+    saida.push (array[0]);
+    return (saida)
+}
+let b = ['nando', 'paulo', 'jose', 'treco', 'trem'];
+console.log (concatName(b));
+
+
