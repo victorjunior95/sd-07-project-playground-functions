@@ -1,5 +1,15 @@
 // Desafio 1.
-function compareTrue() {
+function compareTrue(camisaAzul, calcaAzul) {
+  let avaliacao;
+  let camisaAzul = true;
+  let calcaAzul = true;
+  if (camisaAzul === true && calcaAzul === true){
+    avaliacao = true;
+  }
+  else {
+    avaliacao = false;
+  }
+  return avaliacao
   // seu código aqui
 }
 
