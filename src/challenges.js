@@ -87,12 +87,45 @@ function highestCount(numbers) {
     return "Favor verifique os dados inseridos"
   }
 }
-console.log(highestCount(numbers));
+//console.log(highestCount(numbers));
 
 // Desafio 7
-function catAndMouse() {
+let cat1 = 9;
+let cat2 = 8;
+let mouse = 15;
+
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let dist1 = 0;
+  let dist2 = 0;
+  if (cat1 >= 0 && cat2 >= 0 && mouse >=0) {
+    //1) Distância mouse e cat1:
+    if (mouse > cat1) {
+      dist1 = mouse - cat1;
+    } else if (cat1 >= mouse) {
+      dist1 = cat1 - mouse; 
+    }
+    //2) Distância mouse e cat2:
+    if (mouse > cat2) {
+      dist2 = mouse - cat2;
+    } else if (cat2 >= mouse) {
+      dist2 = cat2 - mouse;
+    }
+    //3) Distância entre mouse, cat1 e cat2:
+    if (dist1 === dist2) {
+      return "os gatos trombam e o rato foge"
+    //4) Menor distância:
+    } else if (dist1 < dist2) {
+      return "cat1"
+    } else if (dist2 < dist1) {
+      return "cat2"
+    }
+    } else {
+    return "Favor, insira dados válidos"
+  }
+
 }
+console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
 function fizzBuzz() {
