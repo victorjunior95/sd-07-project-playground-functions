@@ -122,8 +122,8 @@ function techList(array, name) {
   for (let i in emOrdem) {
     saida.tech = emOrdem[i];
     saida.name = name;
-    lista.push(objeto);
-    console.log(lista);
+    lista[i] ={ ...saida};
+    //console.log(lista);
   }
 
   return lista;
