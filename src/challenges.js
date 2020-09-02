@@ -1,19 +1,20 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(aprovacao, conclusao) {
 
-    let aprovacao = true;
-    let conclusao = true;
     let felicidade = true;
 
     if (aprovacao == true && conclusao == true) {
 
         felicidade = true;
-        console.log(felicidade);
+        return felicidade;
+
     } else {
 
         felicidade = false;
-        console.log(felicidade);
+        return felicidade;
+
     }
+
 }
 
 // Desafio 2
