@@ -69,9 +69,23 @@ let bicho = ['mouse', 'cat1', 'cat2'];
 console.log(catAndMouse(bicho));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(div) {
+  let result = [];
+  for (let i = 0; i < div.length; i += 1){
+    if (div[i] % 3 == 0 && div[i] % 5 !== 0){
+      result.push('fizz');
+    }else if (div[i] % 3 !== 0 && div[i] % 5 == 0){
+      result.push('buzz');
+    }else if (div[i] % 3 == 0 && div[i] % 5 == 0){
+      result.push("fizzBuzz");
+    } else {
+      result.push("bug!");
+    }    
+  }
+  return result;
 }
+let div = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(div));
 
 // Desafio 9
 function encode() {
