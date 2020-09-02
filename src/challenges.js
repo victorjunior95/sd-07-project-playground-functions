@@ -66,7 +66,7 @@ function fizzBuzz(vetor) {
 
   for (i = 0; i < array.length; i++) {
     if (array[i] % 5 == 0 && array[i] % 3 == 0) {
-      vetorSaida.push("fizbuzz");
+      vetorSaida.push("fizBuzz");
     } else if (array[i] % 3 == 0) {
       vetorSaida.push("fizz");
       console.log("fizz");
