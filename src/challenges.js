@@ -163,7 +163,7 @@ function techList(techNames, name) {
   // seu código aqui
   
   const lists = techNames.sort();
-  
+
   if(lists.length === 0 ) return "Vazio!";
 
   const listReturned = [];
@@ -183,8 +183,8 @@ function generatePhoneNumber(phoneNumber) {
   if(phoneNumber.length !== 11) return "Array com tamanho incorreto.";
   for(let i of phoneNumber){
     if(
-      i != 0 || i != 1 || i != 2 || i != 3 || i != 4 || i != 5 || i != 6 || i != 7 ||
-      i != 8 || i != 9 
+      i != 0 && i != 1 && i != 2 && i != 3 && i != 4 && i != 5 && i != 6 && i != 7 &&
+      i != 8 && i != 9 
     ) return "não é possível gerar um número de telefone com esses valores";
   }
   let phoneFormated = '(';
