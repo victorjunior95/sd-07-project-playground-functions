@@ -7,53 +7,50 @@ function compareTrue(bolean1, bolean2) {
 // Desafio 2 - OK
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height / 2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3 - OK
 function splitSentence(texto) {
   // seu código aqui
-  return (texto.split(" "));
+  return (texto.split(''));
 }
 
 // Desafio 4 - OK
 function concatName(arrayString) {
   // seu código aqui
-  return (`${arrayString[arrayString.length-1]}, ${arrayString[0]}`);
-} 
+  return (`${arrayString[arrayString.length - 1]}, ${arrayString[0]}`);
+}
 
 // Desafio 5 - OK
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (wins * 3 + ties);
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6 - OK
 function highestCount(arrayNumeros) {
   // seu código aqui
   let count = 0;
-  let highNumber = Math.max.apply(Math, arrayNumeros);
+  let highNumber = Math.max.apply(null, arrayNumeros);
 
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (arrayNumeros[i] == highNumber) {
+    if (arrayNumeros[i] === highNumber) {
       count += 1;
     }
   }
-
   return count;
-
-} 
+}
 
 // Desafio 7 - OK
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return "cat2";
+    return 'cat2';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return "cat1";
-  } else {
-    return "os gatos trombam e o rato foge";
+    return 'cat1';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8 - OK
@@ -61,15 +58,15 @@ function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let arrayString = [];
 
-  for (i = 0; i < arrayNumeros.length; i += 1){
-    if ((arrayNumeros[i] % 3 == 0) && (arrayNumeros[i] % 5 == 0)) {
-      arrayString.push("fizzBuzz");
-    } else if (arrayNumeros[i] % 3 == 0) {
-      arrayString.push("fizz");
-    } else if (arrayNumeros[i] % 5 == 0) {
-      arrayString.push("buzz");
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
+    if ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i] % 5 == 0)) {
+      arrayString.push('fizzBuzz');
+    } else if (arrayNumeros[i] % 3 === 0) {
+      arrayString.push('fizz');
+    } else if (arrayNumeros[i] % 5 === 0) {
+      arrayString.push('buzz');
     } else {
-      arrayString.push("bug!");
+      arrayString.push('bug!');
     }
   }
 
@@ -79,8 +76,8 @@ function fizzBuzz(arrayNumeros) {
 // Desafio 9 - OK
 function encode(arrayWithVowels) {
   // seu código aqui
-  let newString = "";
-  for (let i = 0; i < arrayWithVowels.length; i += 1){
+  let newString = '';
+  for (let i = 0; i < arrayWithVowels.length; i += 1) {
     switch (arrayWithVowels[i]) {
       case 'a':
         newString += '1';
@@ -98,18 +95,16 @@ function encode(arrayWithVowels) {
         newString += '5';
         break;
       default:
-        newString += arrayWithVowels[i];    
+        newString += arrayWithVowels[i];
     }
   }
-
   return newString;
-
 }
 
 function decode(arrayWithNumbers) {
   // seu código aqui
-  let newStringDec = "";
-  for (let i = 0; i < arrayWithNumbers.length; i += 1){
+  let newStringDec = '';
+  for (let i = 0; i < arrayWithNumbers.length; i += 1) {
     switch (arrayWithNumbers[i]) {
       case '1':
         newStringDec += 'a';
@@ -127,35 +122,28 @@ function decode(arrayWithNumbers) {
         newStringDec += 'u';
         break;
       default:
-        newStringDec += arrayWithNumbers[i];    
+        newStringDec += arrayWithNumbers[i];
     }
   }
-
   return newStringDec;
-
 }
 
 // Desafio 10 - OK
 function techList(arrayTech, name) {
   // seu código aqui
 
-  if (arrayTech.length == 0) {
-    return "Vazio!";
+  if (arrayTech.length === 0) {
+    return 'Vazio!';
   }
 
   let arraySorting = arrayTech.sort();
 
   let arrayWithInformation = [];
 
-  for (let i = 0; i < arraySorting.length; i += 1){
-    arrayWithInformation[i] = {
-      tech: arraySorting[i],
-      name: name
-    }
+  for (let i = 0; i < arraySorting.length; i += 1) {
+    arrayWithInformation[i] = {tech: arraySorting[i], name: name}
   }
-
   return arrayWithInformation;
-  
 }
 
 // Desafio 11
