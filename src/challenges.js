@@ -33,21 +33,13 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // retorna repetição do maior número de array
-  const myArrayValues = numbers;
-  let greaterValue = 0;
-  let greaterValueCounts = 0;
+  const nums = numbers;
 
-  for (let index in myArrayValues) {
-    if (myArrayValues[index] > greaterValue) {
-      greaterValue = myArrayValues[index];
-    }
-  }
+  let greaterValue = Math.max.apply(null, nums);
 
-  for (let i of myArrayValues) {
-    if (greaterValue === i) greaterValueCounts += 1;
-  }
+  let greaterValueCounts = nums.filter((a, b) => a == greaterValue);
 
-  return greaterValueCounts;
+  return greaterValueCounts.length;
 }
 
 // Desafio 7
