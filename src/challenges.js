@@ -1,6 +1,11 @@
+console.log(compareTrue(false , false));
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boleano1 , boleano2) {
+  if(boleano1 == true && boleano2 == true){
+    return `true`;
+  }else if(boleano1 == false && boleano2 == false){
+    return `false`;
+  }
 }
 
 // Desafio 2
