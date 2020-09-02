@@ -49,7 +49,19 @@ return console.log("os gatos trombam e o rato foge")
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let numbersArr = [];
+for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
+     numbersArr.push("fizzbuzz")
+} else if (arr[i] % 3 == 0) {
+   numbersArr.push("fizz") 
+} else if(arr[i] % 5 == 0) {
+    numbersArr.push("buzz")
+} else {
+    numbersArr.push("bug!")
+}
+}
+return numbersArr
 }
 
 // Desafio 9
