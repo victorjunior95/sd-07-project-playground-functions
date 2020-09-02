@@ -1,13 +1,13 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
  let boolean = bol1 && bol2;
-
  return boolean;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo = (base * height)/ 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
