@@ -170,8 +170,15 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  
+function triangleCheck(lineA, lineB, lineC) {
+  let condition1 = Math.abs(lineB - lineC) < lineA && lineA < lineB + lineC;
+  let condition2 = Math.abs(lineA - lineC) < lineB && lineB < lineA + lineC;
+  let condition3 = Math.abs(lineA - lineB) < lineC && lineC < lineB + lineA;
+  if (condition1 && condition2 && condition3) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
@@ -196,4 +203,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
