@@ -8,24 +8,18 @@ function calcArea(base, height) {
   result = (base * height) / 2;
   return result;
 }
-/*
+
 // Desafio 3 << Falta fazer.
 function splitSentence(value) {
-  valueArray = value.split(" ")
+  
 }
-splitSentence("Teste", "Oi")
-console.log(valueArray)
-*/
-/*
+
 // Desafio 4
 function concatName(array) {
-  firstItem = array[0];
-  lastItem = array[-1];
-  resultItem = firstItem + lastItem;
+ 
 }
-console.log(resultItem)
-concatName("Teste", "testei")
-*/
+
+
 // Desafio 5
 function footballPoints(wins, ties) {
   points = 0;
@@ -39,7 +33,7 @@ function footballPoints(wins, ties) {
   }
   return points;
 }
-/*
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
@@ -100,4 +94,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-*/
