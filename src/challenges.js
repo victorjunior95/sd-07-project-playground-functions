@@ -1,3 +1,5 @@
+const { calcArea } = require("./calcArea")
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui.
@@ -6,10 +8,10 @@ function compareTrue() {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let basetriangulo = base
-  let heighttriangulo = height
-  let areadotriangulo = number.parsefloat((base+height)/2)
-  return(areadotriangulo)
+  let btriangulo = base;
+  let atriangulo = height;
+  let areadotriangulo = parseFloat((btriangulo + atriangulo) / 2)
+  return (areadotriangulo);
 }
 
 // Desafio 3
