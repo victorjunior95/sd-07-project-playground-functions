@@ -32,8 +32,9 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+   let triple = wins * 3 + ties;
+    return triple;
 }
 
 // Desafio 6
@@ -119,3 +120,5 @@ compareTrue(first = true, second = true);
 calcArea(51, 1);
 
 highestCount([0, 0, 0]);
+
+footballPoints(0, 0);
