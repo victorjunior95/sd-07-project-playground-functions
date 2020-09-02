@@ -101,9 +101,35 @@ function fizzBuzz(arrNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrString) {
+  let encodeString = [];
+
+
+  for (let i = 0; i < arrString.length; i += 1) {
+
+        if(arrString[i] === 'a'){
+            encodeString[i] = 1;
+        }
+        else if(arrString[i] === 'e') {
+            encodeString[i] = 2;
+        }
+        else if(arrString[i] === 'i'){
+            encodeString[i] = 3;
+        }
+        else if (arrString[i] === '0') {
+            encodeString[i] = 4;
+        }
+        else if (arrString[i] === 'u') {
+            encodeString[i] = 5;
+        }
+        else {
+            encodeString[i] = arrString[i];
+        }
+  }
+
+   return encodeString.join('');
 }
+
 function decode() {
   // seu código aqui
 }
