@@ -43,18 +43,49 @@ function highestCount(arrayn) {
   return counter;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(Math.abs(mouse - cat1)>Math.abs(mouse - cat2)){
+    return cat2;
+  }
+  if(Math.abs(mouse - cat1)<Math.abs(mouse - cat2)){
+    return cat1;
+  }
+  return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let fbarray = [];
+  for(let i=0; i<array.length; i+=1){
+    if(array[i]%3===0 && array[i]%5===0){
+      fbarray.push("fizzbuzz");
+    }else{
+      if(array[i]%3===0){
+        fbarray.push("fizz");
+      }else{
+        if(array[i]%5===0){
+          fbarray.push("buzz");
+        }else{
+          fbarray.push("bug!");
+        }
+      }
+    }
+  }
+  return fbarray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  const list = [a=1, e=2, i=3, o=4, u=5];
+  let arrayfrase = frase.split('');
+  for (const key in arrayfrase) {
+    for (const keylist in list) {
+      if(arrayfrase[key] === keylist){
+        arrayfrase[key] = list[keylist];
+      }
+    }
+  }
+  return arrayfrase.join('');
 }
 function decode() {
   // seu código aqui
