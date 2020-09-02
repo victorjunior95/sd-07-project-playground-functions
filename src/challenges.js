@@ -33,7 +33,27 @@ function footballPoints() {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let contador = 0;
+  let contadorAnterior = 0;
+  let maisRepetido = null;
+  let numeroAtual = null;
+  for (let i = 0; i < array.length; i += 1) {
+    numeroAtual = array[i];
+    for (let j = 0; j < array.length; j += 1) {
+      if (array[j] == numeroAtual) {
+        contador += 1;
+      }
+    }
+    if (contadorAnterior == 0) {
+      contadorAnterior = contador;
+      maisRepetido = numeroAtual;
+    }
+    if (contador > contadorAnterior) {
+      maisRepetido = numeroAtual;
+    }
+    contador = 0;
+  }
+  return maisRepetido;
 }
 
 // Desafio 7
