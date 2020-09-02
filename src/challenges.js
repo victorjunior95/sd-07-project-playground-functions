@@ -2,7 +2,6 @@
 let a= false;
 let b= false;
 function compareTrue(a, b) {
-  // seu código aqui
   let resultado = a && b;
   // return console.log("resultado do desafio 1", resultado);
   return resultado;
@@ -13,7 +12,6 @@ function compareTrue(a, b) {
 let base= 1;
 let height= 2;
 function calcArea(base, height) {
-  // seu código aqui
   let area = base*height/2
   // return console.log("resultado do desafio 2", area, "m2");
   return area;
@@ -44,8 +42,7 @@ let array = [];
 // }
 
 function splitSentence(string) {
-  // seu código aqui
- let array = string.split(" ");
+  let array = string.split(" ");
   // return console.log("resultado do desafio 3", array);
   return array;
 } 
@@ -70,7 +67,6 @@ let nomeEmIngles = "";
 
 
 function concatName(nomeCompleto) {
-  // seu código aqui
   let nomeEmIngles = "";
   let primeiro =[];
   let último=[];
@@ -85,9 +81,18 @@ function concatName(nomeCompleto) {
 // concatName(nomeCompleto);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let wins = 3;
+let ties = 2;
+// let total = 3*wins+ties;
+// console.log("resultado do desafio 5 é", total);
+
+function footballPoints(wins, ties) {
+  let total = 3*wins+ties;
+  return total;
+  // return console.log("resultado do desafio 5 é", total);
 }
+
+// footballPoints(wins, ties);
 
 // Desafio 6
 function highestCount() {
