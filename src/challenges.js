@@ -149,7 +149,7 @@ function techList(arrayTech, name) {
 
   let arrayWithInformation = [];
 
-  for (i = 0; i < arraySorting.length; i += 1){
+  for (let i = 0; i < arraySorting.length; i += 1){
     arrayWithInformation[i] = {
       tech: arraySorting[i],
       name: name
@@ -161,8 +161,41 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arrayNumber) {
   // seu código aqui
+  let phoneNumber = "";
+
+  if (arrayNumber.length > 11) {
+    return 'Array com tamanho incorreto';
+  }
+
+  let count = 0;
+
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+    count = 0;
+    for (let j = 0; j < arrayNumber.length; j += 1) {
+      if (arrayNumber[j] == arrayNumber[i]) {
+        count += 1;
+      }
+    }
+
+    if (count >= 3 || arrayNumber[i] < 0 || arrayNumber[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+
+    if (i == 0) {
+      phoneNumber += `(${arrayNumber[i]}`;
+    } else if (i == 1) {
+      phoneNumber += `${arrayNumber[i]}) `;
+    }else if (i == 7) {
+      phoneNumber += `-${arrayNumber[i]}`;
+    } else {
+      phoneNumber += arrayNumber[i];
+    }
+  }
+
+  return phoneNumber;
+
 }
 
 // Desafio 12
