@@ -87,18 +87,34 @@ function encode(frase) {
   }
   return arrayfrase.join('');
 }
-function decode() {
-  const list = [1='a', 2='e', 3='i', 4='o', 5='u'];
+function decode(frase) {
   let arrayfrase = frase.split('');
   for (const key in arrayfrase) {
-    for (const keylist in list) {
-      if(arrayfrase[key] == keylist){
-        arrayfrase[key] = list[keylist];
-      }
+    switch (arrayfrase[key]) {
+      case '1':
+        arrayfrase[key] = 'a';
+        break;
+      case '2':
+        arrayfrase[key] = 'e';
+        break;
+      case '3':
+        arrayfrase[key] = 'i';
+        break;
+      case '4':
+        arrayfrase[key] = 'o';
+        break;
+      case '5':
+        arrayfrase[key] = 'u';
+        break;
+    
+      default:
+        break;
+    }
     }
   }
   return arrayfrase.join('');
-}
+
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
