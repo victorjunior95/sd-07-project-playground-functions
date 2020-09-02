@@ -35,7 +35,7 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  if (cat1 === cat2){
+  if (mouse-cat1 === mouse-cat2){
     return "os gatos trombam e o rato foge"
   }
   else if (mouse-cat1 < mouse-cat2){
@@ -115,13 +115,19 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   new_array = []
-  for (i of array.sort()){
-    new_array.push({
-      tech: i,
-      name: name
-    })
+  if (array == []){
+    return "Vazio!"
   }
-  return new_array
+  else{
+        for (i of array.sort()){
+      new_array.push({
+        tech: i,
+        name: name
+      })
+    }
+    return new_array
+  }
+
 }
 
 
