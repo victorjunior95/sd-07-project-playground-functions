@@ -1,6 +1,8 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aquis
+function compareTrue(bol1, bol2) {
+ let boolean = bol1 && bol2;
+
+ return boolean;
 }
 
 // Desafio 2
