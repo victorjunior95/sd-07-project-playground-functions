@@ -192,6 +192,8 @@ function decode(codigo) {
 function techList(array, name) {
   let arrayObjeto = [];
 
+  array.sort();
+
   for (key in array){
       arrayObjeto.push({tech:array[key], name:name});
   }
