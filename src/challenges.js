@@ -34,7 +34,33 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let maiorRepeticao = 0;
+    let objMaior = {};
+
+    /**Monta um objeto com os valores do array inicial sendo a chave 
+     * do objeto. Dentro do segundo for passo a contar quantas vezes cada 
+     * chave se repete e sigo guardando esse resultado dentro do atributo 
+     * da chave
+     */
+    for (const i in vetor) {
+        objMaior[vetor[i]] = 0;
+
+        for (const j in vetor) {
+            if (vetor[i] === vetor[j]) {
+                objMaior[vetor[i]] += 1;
+            }
+        }
+    }
+
+    maiorRepeticao = objMaior[2];
+    for (const key in objMaior) {
+        if (maiorRepeticao < objMaior[key]) {
+            maiorRepeticao = objMaior[key];
+        }
+    }
+
+
+    return maiorRepeticao;
 }
 
 // Desafio 7
