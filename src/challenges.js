@@ -1,6 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  // lá vai o codigo...
+function compareTrue(bool1, bool2) {
+
+  if(bool1 === true && bool2===true){
+    
+    return true;
+      
+  }else{
+
+    return false;
+  }
+
 }
 
 // Desafio 2
@@ -83,3 +92,5 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+ let resp = compareTrue(false, false);
+ console.log(resp);
