@@ -13,7 +13,7 @@ function calcArea(base, height) {
 // Desafio 3 - OK
 function splitSentence(texto) {
   // seu código aqui
-  return (texto.split(''));
+  return (texto.split(' '));
 }
 
 // Desafio 4 - OK
@@ -158,9 +158,7 @@ function generatePhoneNumber(arrayNumber) {
   let count = 0;
 
   for (let i = 0; i < arrayNumber.length; i += 1) {
-
     count = 0;
-
     for (let j = 0; j < arrayNumber.length; j += 1) {
       if (arrayNumber[j] === arrayNumber[i]) {
         count += 1;
@@ -188,8 +186,8 @@ function generatePhoneNumber(arrayNumber) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)))
-  && ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) 
-  && ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)))) {
+&& ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) 
+&& ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)))) {
     return true;
   }
   return false;
