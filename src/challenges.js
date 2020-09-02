@@ -86,7 +86,7 @@ function fizzBuzz(bus) {
       saida[i] = "bug!";
     }
   }
-  console.log (saida);
+  return saida;
 }
 fizzBuzz([2, 15, 7, 9, 45]);
 // Desafio 9
