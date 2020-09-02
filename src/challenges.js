@@ -267,9 +267,14 @@ function hydrate(texto) {
     contador=contador+numbers[key];
   }
   
-  return `${contador} copos de água`
+  if (contador===1){
+    return `${contador} copo de água`
+  }
+  else {
+    return `${contador} copos de água`
+  }
 }
-//console.log(hydrate(`10 cachaça, 5 cervejas e 3 copo de vinho`));
+//console.log(hydrate(`1 cachaça`));
 
 
 module.exports = {
