@@ -22,7 +22,7 @@ function splitSentence(string) {
       word = '';
     } else {
       word += string[i];
-    }      
+    }
   }
   arrayString.push(word);
   return arrayString;
@@ -30,7 +30,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let result = `${array[array.length -1]} , ${array[0]}`;
+  let result = `${array[array.length -1]}, ${array[0]}`;
   return result;
 }
 
@@ -69,7 +69,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     result = 'cat2';
   }
-  
   return result;
 }
 
@@ -80,14 +79,13 @@ function fizzBuzz(numbers) {
   for (let i in numbers) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
       result.push('fizzBuzz');
-    } else if (numbers[i] % 3 === 0 ) {
+    } else if (numbers[i] % 3 === 0) {
       result.push('fizz');
-    } else if (numbers[i] % 5 === 0 ) {
+    } else if (numbers[i] % 5 === 0) {
       result.push('buzz');
     } else {
-    result.push('bug!');
+      result.push('bug!');
     }
-  
   }
   return result;
 }
@@ -97,7 +95,6 @@ function encode(string) {
   let result = '';
 
   for (let i in string) {
-
     switch (string[i]) {
       case 'a':
         result += '1';
@@ -124,9 +121,7 @@ function encode(string) {
 
 function decode(string) {
   let result = '';
-
   for (let i in string) {
-
     switch (string[i]) {
       case '1':
         result += 'a';
@@ -156,21 +151,20 @@ function techList(techs, name) {
   let result = [];
   let techsArray = techs;
 
-  if (techs.length === 0){
+  if (techs.length === 0) {
     result = 'Vazio!';
     return result;
   }
 
-  techsArray.sort(); //techs em ordem alfabética
+  techsArray.sort(); // techs em ordem alfabética
 
-  for (i in techsArray) {
+  for (let i in techsArray) {
     result[i] = {
       tech: techsArray[i],
       name: name
     }
   }
   return result;
-
 }
 
 // Desafio 11
@@ -178,29 +172,27 @@ function generatePhoneNumber(numbers) {
   let result;
   let repetitions = 0;
 
-  if(numbers.length !== 11){
-    result = "Array com tamanho incorreto.";
+  if(numbers.length !== 11) {
+    result = 'Array com tamanho incorreto.';
     return result;
   }
 
-  for (let i in numbers) {
-  
-    if( numbers[i] < 0 || numbers[i] > 9) {
-      result = "não é possível gerar um número de telefone com esses valores";
+  for (let i in numbers) {  
+    if (numbers[i] < 0 || numbers[i] > 9) {
+      result = 'não é possível gerar um número de telefone com esses valores';
       return result;
     }
   }
 
   for (let i in numbers) {
-
     repetitions = 0;
     for (let j in numbers) {
       if (numbers[i] === numbers[j]) {
         repetitions += 1;
 
-        if(repetitions >= 3) {
-          result = "não é possível gerar um número de telefone com esses valores";
-      return result;
+        if (repetitions >= 3) {
+          result = 'não é possível gerar um número de telefone com esses valores';
+          return result;
         }
       }
     }
@@ -208,17 +200,15 @@ function generatePhoneNumber(numbers) {
 
   result = '(';
 
-  for (let i = 0; i < numbers.length; i += 1 ) {
-
-  
-    if ( i === 2) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (i === 2) {
       result += ') ' + numbers[i];
     } else if (i === 7) {
       result += '-' + numbers[i];
     } else {
         result += numbers[i];
     }
-    }
+  }
   return result;
 
 }
