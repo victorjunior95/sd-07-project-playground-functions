@@ -6,25 +6,24 @@ function compareTrue(a,b) {
     return false;
   }
 }
-
 // Desafio 2
 function calcArea(base,height) {
   result = ((base*height)/2);
   return result;
 }
-
 // Desafio 3
 function splitSentence(phrase) {
   let word1=phrase.split(" ");
   return word1;
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui~
+}
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins=3;
+  ties=1;
 }
 
 // Desafio 6
