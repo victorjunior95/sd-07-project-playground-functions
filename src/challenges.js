@@ -143,18 +143,19 @@ function generatePhoneNumber(arrayNumber) {
   formatedNumber.push(arrayNumber[8]);
   formatedNumber.push(arrayNumber[9]);
   formatedNumber.push(arrayNumber[10]);
-  return formatedNumber.join('');
+  return arrayNumber.length!=11? "Array com tamanho incorreto.":formatedNumber.join('');
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let a = lineA<(lineB+lineC) && lineA>Math.abs(lineB-lineC);
-  let b = lineB<(lineA+lineC) && lineA>Math.abs(lineA-lineC);
+  //let b = lineB<(lineA+lineC) && lineA>Math.abs(lineA-lineC);
   let c = lineC<(lineA+lineB) && lineA>Math.abs(lineA-lineB);
+  console.log(a,b,c);
   return a && b && c;
 }
 
-console.log(triangleCheck(10, 40, 10));
+console.log(triangleCheck(2, 3, 4));
 
 // Desafio 13
 function hydrate() {
