@@ -249,9 +249,9 @@ function hydrate(pedido) {
       number = parseInt(pedido[i], 10); // w3Schools Parseint
       coposDagua += number;
     }
-    coposDagua += ' copos de água';
   }
   return coposDagua;
+  coposDagua += ' copos de água';
 }
 
 
