@@ -111,12 +111,25 @@ function fizzBuzz(array3) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string2) {
+  string2 = string2.replace(/a/g, "1");
+  string2 = string2.replace(/e/g, "2");
+  string2 = string2.replace(/i/g, "3");
+  string2 = string2.replace(/o/g, "4");
+  string2 = string2.replace(/u/g, "5");
+  return string2;
 }
-function decode() {
-  // seu código aqui
+function decode(string3) {
+  string3 = string3.replace(/1/g, "a");
+  string3 = string3.replace(/2/g, "e");
+  string3 = string3.replace(/3/g, "i");
+  string3 = string3.replace(/4/g, "o");
+  string3 = string3.replace(/5/g, "u");
+  return string3;
 }
+
+console.log(encode("hi there!"));
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
