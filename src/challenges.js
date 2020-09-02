@@ -14,7 +14,7 @@ console.log(compareTrue(valorBool1, valorBool2));
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2
+  return (base * height) / 2
 }
 
 let base = 4;
@@ -32,9 +32,18 @@ let sentence = "go Trybe";
 console.log(splitSentence(sentence));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+
+  let array = [] = arrayStrings;
+
+  let firstName = array[0];
+  let lastName = array[array.length-1]
+  return lastName + ', ' + firstName;
+
 }
+
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(array));
 
 // Desafio 5
 function footballPoints() {
