@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 == 1 && number2 == 2) {
+  if (number1 === 1 && number2 === 2) {
     return true
   } else {
     return false
@@ -9,41 +9,56 @@ function compareTrue(number1, number2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2
+  let area = (base * height) / 2
   return area
 }
 
-
 // Desafio 3
 function splitSentence(text) {
-  let initialArray = text.split(" ")
+  let initialArray = text.split(' ')
   let finalArray = []
 
-  for (let counter = 0 ; counter <= initialArray.length - 1; counter += 1) {
-    if (initialArray[counter] !== "") {
+  for (let counter = 0 ; counter <= initialArray.length - 1 ; counter += 1) {
+    if (initialArray[counter] !== '') {
       finalArray.push(initialArray[counter])
     }
   }
   return finalArray
 }
 
-console.log(splitSentence("go   Trybe"))
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let firstItem = names[0]
+  let lastItem = names[names.length - 1]
+  let resultString = lastItem + ', ' + firstItem
+
+  return resultString
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winPoint = 3
+  let tiePoint = 1
+  let totalPoints = wins * winPoint + ties * tiePoint
+
+  return totalPoints
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbers) {
+  let greatestNumber = 0
+  let numberOfTimes = 0
+  /* */
+  for (let counter = 0 ; counter <= numbers.length - 1 ; counter += 1) {
+    if (counter == 0 ) {
+      greatestNumber = numbers[count]
+    } else {
 
+    }
+  }
+  return numberOfTimes
+}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
