@@ -26,10 +26,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
-  let primeiroUltimo = [string[string.length-1], string[0]];
+  let primeiroUltimo = `${string[string.length-1]} , ${string[0]}`;
   return primeiroUltimo;
 }
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
