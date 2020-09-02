@@ -21,20 +21,28 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  arrayString.reverse();
-  let palavra1  = arrayString[0];
-  let palavra2 = arrayString[1];
-  let string = [palavra1, palavra2].join(', ');
 
+  let item1, item2;
+
+  for (let i = 0; i < arrayString.length; i += 1) {
+
+      item1 = arrayString[0];
+        if(arrayString[i + 1] === undefined){
+          item2 = arrayString[i];
+        }
+
+  }
+  let string = [item2, item1].join(', ');
   return string;
 }
+
 // Desafio 5 feito
 function footballPoints(wins, ties) {
   let resultado = (wins * 3) + (ties * 1);
   return resultado;
 }
 
-// Desafio 6
+// Desafio 6 feito
 function highestCount(numbers) {
 
   let maior = Math.max.apply(null, numbers );
