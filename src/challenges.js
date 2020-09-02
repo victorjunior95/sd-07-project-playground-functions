@@ -174,7 +174,49 @@ function triangleCheck(lineA, lineB, lineC ) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  let arrayNumbers = [];
+
+  for(let i = 0; i < string.length; i += 1){
+    switch(string[i]){
+        case '1':
+            arrayNumbers.push(1);
+            break;
+        case '2':
+            arrayNumbers.push(2);
+            break;
+        case '3':
+            arrayNumbers.push(3);
+            break; 
+        case '4':
+            arrayNumbers.push(4);
+            break;
+        case '5':
+            arrayNumbers.push(5);
+            break;
+        case '6':
+            arrayNumbers.push(6);
+            break;
+        case '7':
+            arrayNumbers.push(7);
+            break;
+        case '8':
+            arrayNumbers.push(8);
+            break;
+        case '9':
+            arrayNumbers.push(9);
+            break;                   
+    }
+}
+let sumNumbers = 0;
+
+if(arrayNumbers.length == 1 && arrayNumbers[0] == 1){
+    return "1 copo de água";
+}else{
+     for(let i = 0; i < arrayNumbers.length; i += 1){
+         sumNumbers += arrayNumbers[i];
+     }
+return sumNumbers + " copos de água";    
+}
 }
 
 
