@@ -10,10 +10,10 @@ function compareTrue() {
   }
   else
   {
-    return(false);
+    return (false);
   }
 }
-console.log(compareTrue());
+
 
 // Desafio 2
 function calcArea() {
