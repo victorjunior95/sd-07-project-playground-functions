@@ -136,8 +136,18 @@ function techList(techName, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  let formatedPhoneNumber = "(";
+  for (let i in phoneNumber){
+    if (i == 1) {
+      formatedPhoneNumber += `${phoneNumber[i]}) `;
+    } else if (i == 6) {
+      formatedPhoneNumber += `${phoneNumber[i]}-`;
+    } else {
+      formatedPhoneNumber += `${phoneNumber[i]}`;
+    }
+  }
+  return formatedPhoneNumber;
 }
 
 // Desafio 12
