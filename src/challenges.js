@@ -236,9 +236,13 @@ function hydrate(bebidas) {
   for (let i in matches) {
     total += parseInt(matches[i]);
   }
-
+if (total==1){
+  return (total + " copo de água")
+}else{
   return total + " copos de água";
+
 }
+  }
 
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 module.exports = {
