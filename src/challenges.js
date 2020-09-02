@@ -17,8 +17,11 @@ function calcArea(base, height) {
 // console.log(calcArea(10, 4));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(word) {
+  let arrayWord = [];
+
+
+
 }
 
 // Desafio 4
@@ -38,7 +41,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
+
+
 }
 
 // Desafio 7
@@ -47,9 +52,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(num) {
+  let arrayNovo = [];
+  for (let i = 0; i < num.length; i += 1){
+    if (num[i] % 3 === 0 && num[i] % 5 === 0){
+      arrayNovo.push("fizzBuzz");
+    } else if (num[i] % 3 === 0) {
+      arrayNovo.push("fizz");
+    } else if (num[i] % 5 === 0){
+      arrayNovo.push("buzz");
+    } else {
+      arrayNovo.push("bug!");
+    }
+  }
+return arrayNovo;
 }
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
