@@ -217,9 +217,9 @@ function hydrate(stringText) {
   }
 
   if (coposDeAgua > 1) {
-    return `${coposDeAgua} copos de agua`;
+    return `${coposDeAgua} copos de água`;
   } else {
-    return `${coposDeAgua} copo de agua`;
+    return `${coposDeAgua} copo de água`;
   }
 }
 
