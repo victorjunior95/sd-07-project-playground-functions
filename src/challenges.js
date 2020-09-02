@@ -137,9 +137,9 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let reformuledNumber = "";
+  let reformuledNumber = '';
   if (array.length != 11) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.'
   } else {
     for (let number in array){
       let repeatedNumbs = 0;
@@ -150,13 +150,19 @@ function generatePhoneNumber(array) {
       }
       if (array[number] > 9 || array[number] < 0 || repeatedNumbs >= 3) {
         return 'não é possível gerar um número de telefone com esses valores.';
+      } else {
+        if (number == 0) {
+          reformuledNumber += '(' + array[number];
+        } else if (number == 2) {
+          reformuledNumber += ')'+ ' ' + array[number];
+        } else if (number == 7) {
+          reformuledNumber += '-' + array[number];
+        } else {
+          reformuledNumber += array[number];
+        }
       }
     }
   }
-  reformuledNumber = '(' + array[0] + array[1] + ')' + ' '
-  + array[2] + array[3] + array[4] + array[5] + array[6] 
-  + '-' 
-  + array[7] + array[8] + array[9] + array[10];
   return reformuledNumber;
 }
 
@@ -173,14 +179,13 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let drinkQty = 0;
-  let numbers = string.replace(/[^1-9]/g, "");
+  let numbers = string.replace(/[^1-9]/g, '');
   for (let i = 0; i < numbers.length; i += 1){
     drinkQty += Number(numbers[i]);
   }
   return `${drinkQty} copos de água`;
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
