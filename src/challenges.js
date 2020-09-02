@@ -33,7 +33,7 @@ function footballPoints(wins,ties) {
   pontos = ties + wins;
   return pontos;
 }
-// Desafio 6
+
 function highestCount(lista) {
   let maiorNumero = 0;
   let repeticao = 0;
@@ -45,7 +45,7 @@ function highestCount(lista) {
       repeticao += 1;
     }
   }
-  console.log(repeticao)
+  return repeticao;
 }
 
 // Desafio 7
