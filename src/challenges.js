@@ -1,7 +1,12 @@
 // Desafio 1
 
-function compareTrue(a, b) {
-    a && b ==
+function compareTrue(arg1, arg2) {
+    let test = true;
+    if (arg1 && arg2)
+        return test;
+    else
+        let test = false;
+    return test;
 }
 
 // Desafio 2
