@@ -109,6 +109,9 @@ function decode() {
 function techList(nomeTech, name) {
   let novaLista = [];
   nomeTech.sort(); // Ordenando o Array primeiro
+  if (nomeTech.length == 0){ // Verificando se o array está vazio
+    return "Vazio!";
+  } else {
   for (let i in nomeTech){
     novaLista.push(techNome = {
       tech: nomeTech[i],
@@ -116,6 +119,7 @@ function techList(nomeTech, name) {
     })
   }
   return novaLista;
+}
 }
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 
