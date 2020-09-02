@@ -161,7 +161,11 @@ function decode(textDecode) {
 // Desafio 10
 function techList(techNames, name) {
   // seu código aqui
+  
   const lists = techNames.sort();
+  
+  if(lists.length === 0 ) return "Vazio!";
+
   const listReturned = [];
   for(let list of lists){
     listReturned.push({
