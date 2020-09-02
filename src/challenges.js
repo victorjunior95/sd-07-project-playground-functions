@@ -38,7 +38,7 @@ function enfeitaTelefone(arrayTelefone){
           numeroTelefone += ' ';
           break;
         case '7':
-          numeroTelefone += ' ';
+          numeroTelefone += '-';
           break;
         default:
         break;
