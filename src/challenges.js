@@ -51,14 +51,14 @@ function highestCount(array) {
       contador += 1;
     }
   }
-  return console.log(contador);
+  return contador;
 }
 
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2) {
+
 }
 
 // Desafio 8
