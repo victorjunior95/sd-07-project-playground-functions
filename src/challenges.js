@@ -85,23 +85,18 @@ function fizzBuzz(vetor) {
   let vetorSaida = [];
 
   for (i = 0; i < array.length; i++) {
-    let array = vetor;
-    let vetorSaida = [];
-
-    for (i = 0; i < array.length; i++) {
-      if (array[i] % 5 == 0 && array[i] % 3 == 0) {
-        vetorSaida.push("fizBuzz");
-      } else if (array[i] % 5 !== 0 && array[i] % 3 !== 0) {
-        vetorSaida.push("bug!");
-      } else if (array[i] % 5 == 0) {
-        vetorSaida.push("buzz");
-      } else if (array[i] % 3 == 0) {
-        vetorSaida.push("fizz");
-      }
+    if (array[i] % 5 !== 0 && array[i] % 3 !== 0) {
+      vetorSaida.push("bug!");
+    } else if (array[i] % 5 == 0 && array[i] % 3 == 0) {
+      vetorSaida.push("fizzBuz");
+    } else if (array[i] % 5 == 0) {
+      vetorSaida.push("buzz");
+    } else if (array[i] % 3 == 0) {
+      vetorSaida.push("fizz");
     }
-
-    return vetorSaida;
   }
+
+  return vetorSaida;
 }
 
 // Desafio 9
