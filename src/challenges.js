@@ -144,10 +144,16 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let ref = /\d+/g;
+  let resultado = frase.match(ref);
+  let cont = 0;
+  for(let i=0;i<resultado.length;i+=1){
+    let num = parseInt(resultado[i]);
+    contador+=num;
+  }
+  return contador+" copos de água";
 }
-
 
 module.exports = {
   calcArea,
