@@ -49,6 +49,7 @@ function highestCount(numbers) {
       contador += 1;
     }
   }
+  return contador;
 }
 
 // Desafio 7
