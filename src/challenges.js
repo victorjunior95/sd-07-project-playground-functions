@@ -10,7 +10,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(phrase) {
+function splitSentence() {
 }
 
 // Desafio 4
@@ -27,8 +27,8 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let highest = Math.max(...numbers);
   let count = 0;
-  for (let i = 0; i<numbers.length; i+=1){
-    if (numbers[i] == highest) count += 1;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === highest) count += 1;
   }
   return count;
 }
