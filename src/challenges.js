@@ -77,11 +77,33 @@ function fizzBuzz(numeros) {
 
 
 // Desafio 9
-function encode() {
-   
+function encode(frase) {
+  frase = frase.split("")
+  let codificador = ["a", "e" , "i", "o" , "u"];
+  let codificador1 = [1, 2, 3, 4, 5];
+
+  for(i = 0; i < frase.length; i += 1){
+    for(j = 0; j < codificador.length; j += 1){
+      if(frase[i] == codificador[j]){
+        frase[i] = codificador1[j]
+      }
+    }
+  }
+  return frase.join("")
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  frase = frase.split("")
+  let codificador = ["a", "e" , "i", "o" , "u"];
+  let codificador1 = [1, 2, 3, 4, 5];
+
+  for(i = 0; i < frase.length; i += 1){
+    for(j = 0; j < codificador.length; j += 1){
+      if(frase[i] == codificador1[j]){
+        frase[i] = codificador[j]
+      }
+    }
+  }
+  return frase.join("")
 }
 
 // Desafio 10
