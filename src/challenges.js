@@ -32,7 +32,8 @@ function splitSentence(param) {
 // Desafio 4'
 function concatName(param) {
   let arrayDesafio4 = param;
-  return console.log("'"+arrayDesafio4[arrayDesafio4.length-1] + "," +" "+ arrayDesafio4[0]+"'");
+  console.log("'"+arrayDesafio4[arrayDesafio4.length-1] + "," +" "+ arrayDesafio4[0]+"'");
+  return arrayDesafio4;
 }
 
 // Desafio 5
