@@ -182,10 +182,9 @@ function generatePhoneNumber(phoneNumber) {
 
   if(phoneNumber.length !== 11) return "Array com tamanho incorreto.";
   for(let i of phoneNumber){
-    if(
-      i != 0 && i != 1 && i != 2 && i != 3 && i != 4 && i != 5 && i != 6 && i != 7 &&
-      i != 8 && i != 9 
-    ) return "não é possível gerar um número de telefone com esses valores";
+    for(let j = 0; j < 10; j += 1){
+      if(i !== j)return "não é possível gerar um número de telefone com esses valores";
+    }
   }
   let phoneFormated = '(';
   for(let pos in phoneNumber){
