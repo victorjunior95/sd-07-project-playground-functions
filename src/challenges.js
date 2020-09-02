@@ -64,8 +64,6 @@ function highestCount(numbers) {
   return countRepeatCurrentValue;
 }
 
-console.log(highestCount([1, 2, 3, 3, 2, 2, 3, 3]))
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
