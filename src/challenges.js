@@ -4,10 +4,8 @@ function compareTrue() {
     return true;
   } else if (compareTrue[0] == false && compareTrue[1] == false) {
     return false;
-  } else {
-    return false;
   }
-}
+} console.log(compareTrue())
 
 // Desafio 2
 function calcArea(base, height) {
@@ -22,8 +20,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array) {
-  array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName() { // CORRIGIR
+  
   let resultado = (`${array[array.length - 1]}, ${array[0]}`)
   return resultado;
 } console.log(concatName())
