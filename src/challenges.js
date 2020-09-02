@@ -129,8 +129,15 @@ function generatePhoneNumber(arr) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio bonus 2
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  lineA = Math.abs(lineA)
+  lineB = Math.abs(lineB)
+  lineC = Math.abs(lineC)
+  if(lineA>lineB+lineC || lineB>lineA+lineC ||lineC>lineA+lineB){
+    return false;
+  }
+  return true;
+  
 }
 
 // Desafio bonus 3
@@ -144,8 +151,8 @@ function hydrate(str) {
       }
     }
   }
-  if(out===1){
-    return '1 copo de água'
+  if (out === 1) {
+    return '1 copo de água';
   }
   return `${out} copos de água`;
 }
