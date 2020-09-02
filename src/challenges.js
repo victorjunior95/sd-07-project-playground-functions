@@ -69,7 +69,7 @@ function highestCount(arraysOfNumbers) {
   let bigger = 0;
   let result = 0;
   for (i in arraysOfNumbers) {
-    if (arraysOfNumbers[i] => bigger){
+    if (arraysOfNumbers[i] >= bigger) {
       bigger = arraysOfNumbers[i];
     }
     if (arraysOfNumbers[i] == bigger){
