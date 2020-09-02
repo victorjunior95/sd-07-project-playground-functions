@@ -69,7 +69,6 @@ function fizzBuzz(arrayNumeros) {
       arrayString.push('bug!');
     }
   }
-
   return arrayString;
 }
 
@@ -141,7 +140,7 @@ function techList(arrayTech, name) {
   let arrayWithInformation = [];
 
   for (let i = 0; i < arraySorting.length; i += 1) {
-    arrayWithInformation[i] = { tech: arraySorting[i], name: name }
+    arrayWithInformation[i] = { 'tech': arraySorting[i], 'name': name }
   }
   return arrayWithInformation;
 }
@@ -173,11 +172,11 @@ function generatePhoneNumber(arrayNumber) {
       phoneNumber += `(${arrayNumber[i]}`;
     } else if (i === 1) {
       phoneNumber += `${arrayNumber[i]}) `;
-    }else if (i === 7) {
+    } else if (i === 7) {
       phoneNumber += `-${arrayNumber[i]}`;
     } else {
       phoneNumber += arrayNumber[i];
-    }
+    } 
   }
   return phoneNumber;
 }
@@ -185,9 +184,11 @@ function generatePhoneNumber(arrayNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)))
-&& ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) 
-&& ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)))) {
+  let validaLineA = ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)));
+  let validaLineB = ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC)));
+  let validalineC = ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)));
+
+  if (validaLineA && validaLineB && validalineC) {
     return true;
   }
   return false;
