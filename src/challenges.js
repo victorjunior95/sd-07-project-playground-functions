@@ -201,6 +201,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-
-console.log(encode("hello"))
