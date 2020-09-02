@@ -12,12 +12,14 @@ function compareTrue(valorA, valorB) {
 function calcArea(base,height) {
   return ((base*height)/2);
 }
-console.log(calcArea(5,7));
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(palavra) {
+  let palavraSeparada = palavra.split(' ');
+  return palavraSeparada;
 }
+
 
 // Desafio 4
 function concatName() {
