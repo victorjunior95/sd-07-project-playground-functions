@@ -41,6 +41,9 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  if (mouse < 0){mouse = mouse + (mouse * 2);}
+  if (cat1 < 0) {cat1 = cat1 + (cat1 * 2);}
+  if (cat2 < 0) {cat2 = cat2 + (cat2 * 2);}
   distanceCat1 = cat1 - mouse;
   distanceCat2 = cat2 - mouse;
   if (distanceCat1 < distanceCat2){
@@ -53,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
 }
 
