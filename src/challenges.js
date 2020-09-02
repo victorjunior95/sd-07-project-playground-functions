@@ -76,11 +76,11 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(frase) {
-  const list = [a=1, e=2, i=3, o=4, u=5];
+  const list = ['a'=1, 'e'=2, 'i'=3, 'o'=4, 'u'=5];
   let arrayfrase = frase.split('');
   for (const key in arrayfrase) {
     for (const keylist in list) {
-      if(arrayfrase[key] === keylist){
+      if(arrayfrase[key] == keylist){
         arrayfrase[key] = list[keylist];
       }
     }
@@ -88,7 +88,16 @@ function encode(frase) {
   return arrayfrase.join('');
 }
 function decode() {
-  // seu código aqui
+  const list = ['1'='a', '2'='e', '3'='i', '4'='o', '5'='u'];
+  let arrayfrase = frase.split('');
+  for (const key in arrayfrase) {
+    for (const keylist in list) {
+      if(arrayfrase[key] == keylist){
+        arrayfrase[key] = list[keylist];
+      }
+    }
+  }
+  return arrayfrase.join('');
 }
 
 // Desafio 10
