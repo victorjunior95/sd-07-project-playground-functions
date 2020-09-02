@@ -19,14 +19,18 @@ function splitSentence(palavra) {
 // Desafio 4
 function concatName(nomes) {
   let nomeArray = nomes;
+  let result = [];
   for (let i in nomes){
     nomeArray.splice(i + 1, nomes.length - 2);
   }
-  return nomeArray.join(', ');
+  for (let j = nomeArray.length - 1; j >= 0; j -= 1){
+    result.push(nomeArray[j]);
+  }
+  return result.join(', ');
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
 }
 
