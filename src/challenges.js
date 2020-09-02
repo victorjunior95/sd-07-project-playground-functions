@@ -1,16 +1,24 @@
+// Desafio 1
+
 const valueOneCompareTrue = false;
 const valueTwoCompareTrue = true;
-
-console.log(compareTrue(valueOneCompareTrue, valueTwoCompareTrue));
 
 function compareTrue(testOne, testTwo) {
   return testOne && testTwo;
 }
 
+console.log(compareTrue(valueOneCompareTrue, valueTwoCompareTrue));
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+
+const base = 20;
+const height = 30;
+
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+
+console.log(calcArea(base, height));
 
 // Desafio 3
 function splitSentence() {
