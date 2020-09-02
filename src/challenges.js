@@ -2,25 +2,26 @@
 
 // Desafio 1
 function compareTrue()
-  // seu código aqui
-  function compareTrue(comparar1, comparar2) {
-  if ( comparar1 === true && comparar2 === true){
+// seu código aqui
+function compareTrue(comparar1, comparar2){
+  if (comparar1 === true && comparar2 === true) {
     return true
-  }  else {
+  } else {
     return false
   }
 
 }
 // Desafio 2
 function calcAreab()
-  // seu código aqui
-  function calcArea(base, height) {
+// seu código aqui
+function calcArea(base, height){
   let resultado = (base * height) / 2;
   return resultado;
 }
 // Desafio 3
-function splitSentence() {
+function splitSentence()
   // seu código aqui
+  function splitSentence(){
   let strings = "go Trybe"
   console.log(strings.split(' ');
 }
