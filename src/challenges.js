@@ -60,12 +60,12 @@ function catAndMouse(mouse,cat1,cat2) {
   ptscat1 = Math.abs(mouse - cat1);
   ptscat2 = Math.abs(mouse - cat2);
   if(ptscat1<ptscat2){
-    return cat1
+    return "cat1"
   } else {
     if (ptscat1 == ptscat2) {
     return  "os gatos trombam e o rato foge"
     } else {
-      return cat2
+      return "cat2"
     }
   }
 }
