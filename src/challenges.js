@@ -145,11 +145,86 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let str_low=string.toLowerCase();
+  let array=str_low.split("");
+  let array_encoded = [];
+  let str_encoded="";
+  for (let key in array)
+  {
+    if(array[key]=="a" || array[key]=="e" ||array[key]=="i" ||array[key]=="o" ||array[key]=="u")
+    {
+      switch (array[key])
+      {
+        case "a":
+          array_encoded[key]=1;
+          break;
+        case "e":
+          array_encoded[key]=2;
+          break;
+        case "i":
+          array_encoded[key]=3;
+          break;
+        case "o":
+          array_encoded[key]=4;
+          break;
+        case "u":
+          array_encoded[key]=5;
+          break;
+      }
+    }
+    else
+    {
+      array_encoded[key]=array[key];
+    }
+  }
+  for (let key2 in array_encoded)
+  {
+    str_encoded=str_encoded+array_encoded[key2];
+  }
+  return(str_encoded);
 }
-function decode() {
+
+function decode(string) {
   // seu código aqui
+  let str_low=string.toLowerCase();
+  let array=str_low.split("");
+  let array_decoded = [];
+  let str_decoded="";
+  for (let key in array)
+  {
+    if(array[key]=="1" || array[key]=="2" ||array[key]=="3" ||array[key]=="4" ||array[key]=="5")
+    {
+      switch (array[key])
+      {
+        case "1":
+          array_decoded[key]="a";
+          break;
+        case "2":
+          array_decoded[key]="e";
+          break;
+        case "3":
+          array_decoded[key]="i";
+          break;
+        case "4":
+          array_decoded[key]="o";
+          break;
+        case "5":
+          array_decoded[key]="u";
+          break;
+      }
+    }
+    else
+    {
+      array_decoded[key]=array[key];
+    }
+  }
+  for (let key2 in array_decoded)
+  {
+    str_decoded=str_decoded+array_decoded[key2];
+  }
+  return(str_decoded);
 }
 
 // Desafio 10
