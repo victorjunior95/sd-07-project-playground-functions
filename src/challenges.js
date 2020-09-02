@@ -28,9 +28,13 @@ function splitSentence(string) {
 splitSentence();
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seuls código aqui
+  let x = array[(array.length - 1)] + ` ` + array[0];
+  return x;
 }
+
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints() {
