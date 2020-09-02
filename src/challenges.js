@@ -101,9 +101,34 @@ function decode(numbers) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrTech, name) {
+  let techs = [];
+
+  for(let item of arrTech){
+    techs.push({
+    
+      ["tech"] : item,
+      ["name"] : name
+    
+    });
+  }
+  if(techs.length === 0){
+    return 'Vazio!';
+  }else{
+    return techs;
+  }
 }
+
+console.log(techList
+([
+  "python",
+  "javascript",
+  "node", 
+  "react", 
+  "react-native"
+  
+  ], 'Richard' 
+));
 
 // Desafio 11
 function generatePhoneNumber() {
