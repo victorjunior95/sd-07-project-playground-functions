@@ -1,12 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
-    console.log(true);
-  }
-  else
-  {
-    console.log(false);
-  }
+    console.log(true); }
+  else {
+    console.log(false); }
 }
 
 // Desafio 2
@@ -17,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let resultado = string.split(" ");
+  let resultado = string.split(' ');
   return resultado;
 }
 
@@ -31,7 +28,7 @@ function concatName(arrayString) {
     palavra2 = arrayString[1];
   }
   let string = [palavra1, palavra2];
-  console.log(string.join(", "));
+  console.log(string.join(', '));
 }
 
 // Desafio 5
