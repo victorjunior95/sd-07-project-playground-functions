@@ -37,7 +37,7 @@ function concatName(concatName) {
   return primeiroEUltimo;
 }
 
-console.log(concatName(['Ana', 'Maria', 'Joana', 'Jaquina', 'Francisca']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 /* ________________________________________________________________________________ */
 
