@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(isTrue1, isTrue2) {
-  if (isTrue1 === true && isTrue2 === true){
+  if (isTrue1 === true && isTrue2 === true) {
     return true;
   }
   return false;
@@ -26,10 +26,10 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let winsQt = 0;
   let tiesQt = 0;
-  for (let i = 0; i < wins; i += 1){
+  for (let i = 0; i < wins; i += 1) {
     winsQt += 3;
   }
-  for ( let i = 0; i < ties; i += 1 ){
+  for (let i = 0; i < ties; i += 1) {
     winsQt += 1;
   }
   return winsQt + tiesQt;
@@ -40,24 +40,31 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let mostRepeated = 0;
   let referenceCount = 0;
-    for(let i = 0; i < numbers.length; i += 1){
+    for (let i = 0; i < array.length; i += 1) {
       let count = 0;
-      for(let j = 0; j < numbers.length; j += 1){
-         if(numbers[i] == numbers[j]){
+      for (let j = 0; j < array.length; j += 1) {
+         if (array[i] == array[j]){
             count += 1;
          }
       }
       if (count > referenceCount){
          referenceCount = count;
-         mostRepeated = numbers[i];
+         mostRepeated = array[i];
       }
     }
   return mostRepeated;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseDistanceBetweenCat1 = mouse - cat1;
+  let mouseDistanceBetweenCat2 = mouse - cat2;
+  if (mouseDistanceBetweenCat1 > mouseDistanceBetweenCat2){
+    return 'cat 2 got the mouse';
+  } else if (mouseDistanceBetweenCat1 < mouseDistanceBetweenCat2){
+    return 'cat 1 got the mouse';
+  }
+  return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
