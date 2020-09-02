@@ -8,19 +8,22 @@ function compareTrue(boolean1, boolean2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let triangleArea = (base * height) / 2;
   return triangleArea;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringSentence) {
+  let splitArray = stringSentence.split(" ");
+  return splitArray;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringsArray) {
+  
+  return `${stringsArray[stringsArray.length - 1]}, ${stringsArray[0]}`;
+  
 }
 
 // Desafio 5
