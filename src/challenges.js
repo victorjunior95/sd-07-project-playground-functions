@@ -110,8 +110,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let diferencaCat1;
   let diferencaCat2;
 
-  diferencaCat1 = cat1 - mouse;
-  diferencaCat2 = cat2 - mouse;
+  diferencaCat1 = Math.abs(cat1 - mouse);
+  diferencaCat2 = Math.abs(cat2 - mouse);
 
   if (diferencaCat1 < diferencaCat2) {
     resultado = 'cat1';
