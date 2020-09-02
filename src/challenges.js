@@ -36,7 +36,7 @@ function highestCount(arrayn) {
     }    
   }
   for(let u=0; u<arrayn.length; u+=1){
-    if(arrayn[i] === maior){
+    if(arrayn[u] === maior){
       counter += 1;
     }    
   }
