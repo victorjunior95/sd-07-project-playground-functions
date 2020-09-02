@@ -4,8 +4,12 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let basetriangulo = base
+  let heighttriangulo = height
+  let areadotriangulo = (base+height)/2
+  return(areadotriangulo)
 }
 
 // Desafio 3
