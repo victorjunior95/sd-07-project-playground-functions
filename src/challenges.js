@@ -55,7 +55,7 @@ function highestCount(lista) {
 function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 8
 function fizzBuzz(numeros) {
   let retorno = [];
@@ -73,12 +73,39 @@ function fizzBuzz(numeros) {
   return retorno;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let resultado = frase;
+  for(let i = 0; i < frase.length; i += 1){
+    if(frase.charAt(i) == 'a'){
+      resultado = resultado.replace(/a/,"1");
+    }if(frase.charAt(i) == 'e'){
+      resultado = resultado.replace(/e/,"2");
+    }if(frase.charAt(i) == 'i'){
+      resultado = resultado.replace(/i/,"3");
+    }if(frase.charAt(i) == 'o'){
+      resultado = resultado.replace(/o/,"4");
+    }if(frase.charAt(i) == 'u'){
+      resultado = resultado.replace(/u/,"5");
+    }
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let resultado = frase;
+  for(let i = 0; i < frase.length; i += 1){
+    if(frase.charAt(i) == '1'){
+      resultado = resultado.replace(/1/,"a");
+    }if(frase.charAt(i) == '2'){
+      resultado = resultado.replace(/2/,"e");
+    }if(frase.charAt(i) == '3'){
+      resultado = resultado.replace(/3/,"i");
+    }if(frase.charAt(i) == '4'){
+      resultado = resultado.replace(/4/,"o");
+    }if(frase.charAt(i) == '5'){
+      resultado = resultado.replace(/5/,"u");
+    }
+  }
+  return resultado;
 }
 
 // Desafio 10
