@@ -76,48 +76,73 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  if(mouse == 0){
+  if(mouse === 0){
     if(cat1 > cat2){
-        return cat2
+        return "cat2"
     }
     if(cat2 > cat1){
-        return cat1
+        return "cat1"
     }
 }
 if(cat1 === cat2){
-   console.log("os gatos trombam e o rato foge")
+   return ("os gatos trombam e o rato foge")
 }
-if(cat1 == mouse){
-   return cat1
+if(cat1 === mouse){
+   return "cat1"
 }
-if(cat2 == mouse){
-   return cat2
+if(cat2 === mouse){
+   return "cat2"
 }
 if(mouse > 0 && mouse < cat2 && cat2 < cat1){
-   return cat2
+   return "cat2"
 }
 if(mouse > 0 && mouse < cat1 && cat1 < cat2){
-   return cat1
+   return "cat1"
 }
 if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat1 > cat2){
-    return cat1
+    return "cat1"
 }
 if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat2 > cat1){
-    return cat2
+    return "cat2"
 }
 
 }
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let novaLista = []
+  for(let i = 0; i < lista.length; i += 1) {
+    if (lista[i] % 3 == 0 && lista[i] % 5 != 0) {
+        novaLista.push("fizz");
+    }
+    else if (lista[i] % 5 == 0 && lista[i] % 3 != 0) {
+        novaLista.push("buzz");
+    }
+    else if (lista[i] % 3 == 0 && lista[i] % 5 == 0){
+        novaLista.push("fizzBuzz");
+    }
+    else {
+        novaLista.push("bug!");
+    }
+  }
+  return novaLista;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavraTroca) {
+  palavraTroca = palavraTroca.toLowerCase()
+    for(i=0 ; i <= palavraTroca.length ; i+= 1){
+       palavraTroca = palavraTroca.replace('a','1').replace('e','2').replace('i','3').replace('o','4').replace('u','5')
+    }
+
+    return palavraTroca
 }
-function decode() {
-  // seu código aqui
+function decode(numerosTroca) {
+  numerosTroca = numerosTroca
+  for(i=0 ; i <= numerosTroca.length ; i+= 1){
+      numerosTroca = numerosTroca.toString().replace('1','a').replace('2','e').replace('3','i').replace('4','o').replace('5','u')
+  }
+
+  return numerosTroca
 }
 
 // Desafio 10
