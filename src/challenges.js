@@ -170,9 +170,18 @@ function decode(phraseNumber) {
 decode("h3 th2r2!");
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, name) {
+  let tecnologiasCrescente = tecnologias.sort()
+  let objectTech = [];   
+
+  for (let i = 0; i < tecnologiasCrescente.length; i += 1){
+    objectTech.push({tech: tecnologiasCrescente[i], name: name});
+  }
+  
+  return objectTech;
 }
+
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
