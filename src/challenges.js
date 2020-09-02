@@ -72,17 +72,48 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(5, 2, 3));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumerosFB) {
+  let arrayFB = [];
+  for (let i = 0; i < arrayNumerosFB.length; i+= 1) {
+    let resto3 = arrayNumerosFB[i] % 3;
+    let resto5 = arrayNumerosFB[i] % 5
+    if ((resto3 === 0) || (resto5 === 0)) {
+      if ((resto3 === 0) && (resto5 === 0)) {
+        arrayFB[i] = 'fizzBuzz';
+      } else if (resto3 === 0) {
+        arrayFB[i] = 'fizz';
+      } else {
+        arrayFB[i] = 'buzz';
+      }
+    } else {
+      arrayFB[i] = 'bug!';
+    }
+  }
+  return arrayFB;
 }
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseResultante = frase.replace(/a/g, '1');
+  fraseResultante = fraseResultante.replace(/e/g, '2');
+  fraseResultante = fraseResultante.replace(/i/g, '3');
+  fraseResultante = fraseResultante.replace(/o/g, '4');
+  fraseResultante = fraseResultante.replace(/u/g, '5');
+  return fraseResultante;
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let fraseResultante = frase.replace(/1/g, 'a');
+  fraseResultante = fraseResultante.replace(/2/g, 'e');
+  fraseResultante = fraseResultante.replace(/3/g, 'i');
+  fraseResultante = fraseResultante.replace(/4/g, 'o');
+  fraseResultante = fraseResultante.replace(/5/g, 'u');
+  return fraseResultante;
 }
+
+console.log (encode('hi there!'));
+console.log(decode("h3, th2r2!"));
 
 // Desafio 10
 function techList() {
