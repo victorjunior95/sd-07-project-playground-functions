@@ -73,7 +73,7 @@ function highestCount(arrayNumeros) {
   return contNumero;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+/* console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
 
 /* ________________________________________________________________________________ */
 
@@ -117,8 +117,37 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(stringEncode) {
-  // seu código aqui
-}
+  let arrayEncode = stringEncode.split('');
+  let novoArray = [];
+  let novaString = '';
+  for (let i = 0; i < arrayEncode.length; i += 1) {
+    if (arrayEncode[i] == "a") {
+      novoArray.push(1);
+    } else if (arrayEncode[i] == "e") {
+      novoArray.push(2);
+    } else if (arrayEncode[i] == "i") {
+      novoArray.push(3);
+    } else if (arrayEncode[i] == "o") {
+      novoArray.push(4);
+    } else if (arrayEncode[i] == "u") {
+      novoArray.push(5);
+    } else {
+      novoArray.push(arrayEncode[i]);
+    }
+  }
+  novaString = novoArray.join('');
+  return novaString;
+} 
+
+console.log(encode('Oi, tudo bem?'));
+
+/* 
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5 
+*/
 
 /* ________________________________________________________________________________ */
 
