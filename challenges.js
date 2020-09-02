@@ -9,69 +9,101 @@ function compareTrue(boolean1, boolean2) {
 
 console.log(compareTrue(true, true));
 
+/* ________________________________________________________________________________ */
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
+
+/* ________________________________________________________________________________ */
+
+
+console.log(calcArea(2, 3));
 
 // Desafio 3
 function splitSentence() {
   // seu código aqui
 }
 
+/* ________________________________________________________________________________ */
+
 // Desafio 4
 function concatName() {
   // seu código aqui
 }
+
+/* ________________________________________________________________________________ */
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
 }
 
+/* ________________________________________________________________________________ */
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
 }
+
+/* ________________________________________________________________________________ */
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
 
+/* ________________________________________________________________________________ */
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
 }
 
+/* ________________________________________________________________________________ */
+
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
+/* ________________________________________________________________________________ */
+
 function decode() {
   // seu código aqui
 }
+
+/* ________________________________________________________________________________ */
 
 // Desafio 10
 function techList() {
   // seu código aqui
 }
 
+/* ________________________________________________________________________________ */
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
+
+/* ________________________________________________________________________________ */
 
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
 }
 
+/* ________________________________________________________________________________ */
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
 }
 
+/* ________________________________________________________________________________ */
 
 module.exports = {
   calcArea,
