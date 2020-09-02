@@ -224,11 +224,13 @@ function generatePhoneNumber(numbers) {
 
     
     if ( i === 2) {
-      result += ')' + numbers[i];
+      result += ') ' + numbers[i];
+    } else if (i === 7) {
+      result += '-' + numbers[i];
     } else {
-      result += numbers[i];
+        result += numbers[i];
     }
-  }
+    }
   return result;
 
 }
