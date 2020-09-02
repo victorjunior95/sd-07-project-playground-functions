@@ -32,9 +32,12 @@ console.log(splitSentence("família é amor"));
 /* ________________________________________________________________________________ */
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayPosicoes) {
+  let primeiroEUltimo = arrayPosicoes[arrayPosicoes.length - 1] + ", " + arrayPosicoes[0];
+  return primeiroEUltimo;
 }
+
+console.log(concatName(["Ana", "Maria", "Joana", "Jaquina", "Francisca"]));
 
 /* ________________________________________________________________________________ */
 
