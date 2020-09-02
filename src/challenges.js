@@ -22,26 +22,17 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayString) {
   arrayString.reverse();
-  let palavra1;
-  let palavra2;
-  for (let i = 0; i < arrayString.length; i += 1) {
-    palavra1 = arrayString[0];
-    palavra2 = arrayString[1];
-  }
-  let string = [palavra1, palavra2];
-  return string.join(', ');
-}
+  let palavra1  = arrayString[0];
+  let palavra2 = arrayString[1];
+  let string = [palavra1, palavra2].join(', ');
 
-// Desafio 5
+  return string;
+}
+// Desafio 5 feito
 function footballPoints(wins, ties) {
   let resultado = (wins * 3) + (ties * 1);
   return resultado;
 }
-
-
-
-let numeros= [9, 1, 2, 3, 9, 5, 7];
-highestCount(numeros);
 
 // Desafio 6
 function highestCount(numbers) {
