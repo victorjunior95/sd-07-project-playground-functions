@@ -47,7 +47,7 @@ function highestCount(vetor) {
 
   let maiorRepeticao = 0;
   let indiceRepeticao;
-
+  maior = vetor[0];
   for (let index = 0; index < vetor.length; index++) {
     numero = vetor[index];
 
@@ -195,9 +195,10 @@ function hydrate() {
 }
 
 //let vetor = [0, 4, 4, 4, 9, 2, 1];
+let vetor = [9, 1, 2, 3, 9, 5, 7];
 //let vetor = [0, 0, 0];
 
-//console.log( highestCount(vetor) );
+console.log( highestCount(vetor) );
 
 module.exports = {
   calcArea,
