@@ -142,28 +142,6 @@ function techList(nometech,name) {
   return novaNomeTech;
 }
 
-nometech = [
-  {
-    tech: "CSS"
-  },
-  {
-    tech: "HTML"
-  },
-  {
-    tech: "JavaScript"
-  },
-  {
-    tech: "Jest"
-  },
-  {
-    tech: "React"
-  }
-];
-
-name = 'lucas';
-console.log(techList(nometech,name));
-
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
