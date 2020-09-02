@@ -116,7 +116,7 @@ function decode(sentence) {
 // Desafio 10
 function techList(array, name) {
   let structuredArray = [];
-  if (array === '') {
+  if (array == '') {
     return 'Vazio!';
   } else {
     for (let tech in array) {
@@ -124,7 +124,7 @@ function techList(array, name) {
     }
   }
   // resolução de ordem encontrada no seguinte link ->  https://bit.ly/32RzzTB
-  structuredArray.sort(function(a, b){
+  structuredArray.sort((a, b) => {
     if(a.tech < b.tech) { 
       return -1; 
     } else if(a.tech > b.tech) { 
@@ -134,6 +134,7 @@ function techList(array, name) {
   });
   return structuredArray;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(array) {
