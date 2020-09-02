@@ -1,4 +1,4 @@
-//Função Auxiliar
+//  Função Auxiliar
 function somaRepeat(array, pos) {
   let soma = 0;
   for (let i in array) {
@@ -62,7 +62,7 @@ function highestCount(array) {
       somaMaisF = somaAtual;
     }
   }
-  return soma;
+  return somaMaisF;
 }
 
 // Desafio 7
@@ -87,7 +87,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let arrayPalavras = [];
-  for (let i in array){
+  for (let i in array) {
     let palavra = '';
     if ((array[i] % 3) === 0 && (array[i] % 5) === 0) {
       palavra = 'fizzBuzz';
@@ -106,8 +106,8 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let altString = '';
-  for(let i in string){
-    switch(string[i]){
+  for (let i in string) {
+    switch (string[i]) {
       case 'a':
         altString += '1';
         break;
@@ -119,7 +119,7 @@ function encode(string) {
         break;
       case 'o':
         altString += '4';
-        break; 
+        break;
       case 'u':
         altString += '5';
         break;
@@ -132,8 +132,8 @@ function encode(string) {
 }
 function decode(string) {
   let altString = '';
-  for(let i in string){
-    switch(string[i]){
+  for (let i in string) {
+    switch (string[i]) {
       case '1':
         altString += 'a';
         break;
@@ -145,7 +145,7 @@ function decode(string) {
         break;
       case '4':
         altString += 'o';
-        break; 
+        break;
       case '5':
         altString += 'u';
         break;
@@ -159,14 +159,14 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array.length !== 0){
+  if (array.length !== 0) {
     array.sort(function (a, b) {
       return a.localeCompare(b);
     });
-    for (let i in array){
+    for (let i in array) {
       let object = {}
       object.tech = array[i];
-      object.name = name; 
+      object.name = name;
       array[i] = object;
     }
   } else {
@@ -178,32 +178,32 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let numero = '';
-  for(let i in array){
-    if (somaRepeat(array, i) >= 3){
+  for (let i in array) {
+    if (somaRepeat(array, i) >= 3) {
       numero = 'não é possível gerar um número de telefone com esses valores';
       break;
     }
   }
-  for(let i in array){
-    if (array[i] > 9 || array[i] < 0){
+  for (let i in array) {
+    if (array[i] > 9 || array[i] < 0) {
       numero = 'não é possível gerar um número de telefone com esses valores';
       break;
     }
   }
-  if (array.length === 11){
-    for(let i in array){
-      switch(i){
+  if (array.length === 11) {
+    for (let i in array) {
+      switch(i) {
         case '0':
           numero += '(';
-        break;
+          break;
         case '2':
           numero += ')';
           numero += ' ';
-        break;
+          break;
         case '7':
           numero += ' ';
-        break; 
-      }
+          break;
+      } default:
       numero += array[i]
     }
   } else {
@@ -213,11 +213,11 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   let resultado = false;
-  if (lineA >= 0 || lineB >0 || lineC >= 0){
+  if (lineA >= 0 || lineB > 0 || lineC >= 0) {
     if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
-      if(Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineB - lineC) < lineA){
+      if (Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineB - lineC) < lineA) {
         resultado = true;
       }
     }
@@ -226,14 +226,15 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(pedido) {
   let coposDagua = 0;
-  for(let i in pedido){
+  for (let i in pedido) {
     let numbers = /^[0-9]+$/;
     let number = 0;
-      if(pedido[i].match(numbers))
-        number = parseInt(pedido[i], 10);//w3Schools Parseint
+    if (pedido[i].match(numbers)) {
+      number = parseInt(pedido[i], 10); // w3Schools Parseint
       coposDagua += number;
+    }
   }
   return coposDagua;
 }
