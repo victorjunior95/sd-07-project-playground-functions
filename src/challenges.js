@@ -110,8 +110,9 @@ function decode(string) {
 // Desafio 10
 function techList(arrayTech, name) {
   let arrayTechSorted = arrayTech.sort();
+  let novoArray = [];
   for (let i in arrayTechSorted) {
-    arrayTechSorted.i = {
+    novoArray.push = {
       tech: arrayTechSorted[i],
       name: name
     }
