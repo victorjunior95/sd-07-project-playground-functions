@@ -1,11 +1,15 @@
 // Desafio 1
 function compareTrue(boleano1 , boleano2) {
-  if(boleano1 == true && boleano2 == true){
-    return 'false';
-  }else if(boleano1 == false && boleano2 == true){
-    return `false`;
-  } else if (boleano1 == false && boleano2 == false){
-    return `false`;
+  let boleano = true;
+  if(boleano1 === true && boleano2 === true){
+    boleano = true;
+    return boleano;
+  }else if(boleano1 === false && boleano2 === true){
+    boleano = false;
+    return boleano;
+  } else if (boleano1 === false && boleano2 === false){
+    boleano = false;
+    return boleano;
   } 
 }
 
@@ -26,10 +30,10 @@ function concatName(nomes) {
   return `${nomes[0]}, ${nomes[n-1]}`;
 }
 console.log(footballPoints(14,8));
-// Desafio 5
 function footballPoints(wins,ties) {
   wins = wins * 3;
   ties = ties;
+  re
 }
 
 // Desafio 6
