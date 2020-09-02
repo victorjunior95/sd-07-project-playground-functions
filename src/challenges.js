@@ -1,11 +1,11 @@
 // Desafio 1
-function compareTrue(proposition1,proposition2) {
+function compareTrue(proposition1, proposition2) {
   return proposition1 && proposition2;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height);
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -16,47 +16,65 @@ function splitSentence(string) {
   let finalPosition = 0;
 
   for (let index = 0; index < string.length; index++) {
-    if (string[index] != " " && !newWord ) {
+    if (string[index] != " " && !newWord) {
       initialPosition = index;
       newWord = true;
-    } else if( string[index] != " " && index == string.length - 1) {
+    } else if (string[index] != " " && index == string.length - 1) {
       finalPosition = index;
-      addString(initialPosition,finalPosition);
-    } else if( string[index] != " " ) {
+      addString(initialPosition, finalPosition);
+    } else if (string[index] != " ") {
       finalPosition = index;
-    } else  if( string[index] == " " && newWord){
-      addString(initialPosition,finalPosition);
+    } else if (string[index] == " " && newWord) {
+      addString(initialPosition, finalPosition);
       newWord = false;
-    } 
+    }
   }
-  
+
   return array;
 
-  function addString(initialPosition,finalPosition){
+  function addString(initialPosition, finalPosition) {
     let newString = "";
-    for (let index = 0 ; index <= finalPosition - initialPosition; index++) {
+    for (let index = 0; index <= finalPosition - initialPosition; index++) {
       newString[index] = string[initialPosition + index];
       // console.log(string[index + initialPosition]);
     }
     array.push(newString);
   }
-
 }
 // console.log(splitSentence("go trybe"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3 * wins + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let counter = {};
+
+  for (const index in array) {
+    if (counter.hasOwnProperty(`${array[index]}`)) {
+      counter[`${array[index]}`] += 1;
+    } else {
+      counter[`${array[index]}`] = 1;
+    }
+  }
+
+  let maior = 0;
+  let maiorKey;
+  for (const key in counter) {
+    if (counter[key] > maior) {
+      maiorKey = key;
+      maior = counter[key];
+    }
+  }
+
+  return maior;
 }
 
 // Desafio 7
@@ -97,7 +115,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -113,4 +130,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
