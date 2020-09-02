@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 === 1 && number2 === 2) {
+  if (number1 === true && number2 === false) {
     return true
   } else {
     return false
@@ -68,13 +68,26 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  /*Convert everynumber to positive */
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBuzzList = []
+  
+  for (let number in numbers) {
+    if ((numbers[number] % 3) == 0 && (numbers[number] % 5) == 0 ) {
+      fizzBuzzList.push('fizzBuzz')
+    } else if (numbers[number] % 5 === 0) {
+        fizzBuzzList.push('buzz')
+    } else if ((numbers[number] % 3) === 0) {
+        fizzBuzzList.push('fizz')
+    } else {
+      fizzBuzzList.push('bug!')
+    }
+  }
+  return fizzBuzzList
 }
 
 // Desafio 9
