@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numeros) {
+function highestCount(vetor) {
   let len = vetor.length;
   let swapped;
   let j = 0;
