@@ -39,7 +39,7 @@ function footballPoints(wins,ties) {
 // Desafio 6
 function highestCount(arraynum) {
   let repmax = null
-  let maiornum = null
+  let maiornum = -Infinity
   for (key in arraynum) {
     if (arraynum[key] > maiornum){
       maiornum = arraynum[key];
@@ -52,8 +52,6 @@ function highestCount(arraynum) {
     }
   return repmax  
   }
-
-
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -69,7 +67,6 @@ function catAndMouse(mouse,cat1,cat2) {
     }
   }
 }
-console.log(catAndMouse(11,10,20))
 
 // Desafio 8
 function fizzBuzz(arrayfizzbuzz) {
