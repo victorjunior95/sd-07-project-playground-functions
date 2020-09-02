@@ -1,8 +1,17 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(valor1,valor2) {
   // seu código aqui
+  let comparador;
+  if(valor1 > 10 && valor2 < 10){
+    comparador = true;
+  }
+  else{
+    comparador = false;
+  }
   
+  return comparador;
 }
+
 
 // Desafio 2
 function calcArea() {
