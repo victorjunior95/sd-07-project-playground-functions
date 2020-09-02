@@ -10,12 +10,14 @@ function calcArea(base, height) {
   return (base*height) / 2 ;
 }
 
-console.log(calcArea(10,5));
+//console.log(calcArea(10,5));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(arg) {
+  return arg.split(` `);
 }
+
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName() {
