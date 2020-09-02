@@ -47,12 +47,12 @@ function highestCount(numbers) {
   for (let i in numbers) {
     if (numbers[i] > highest) {
       highest = numbers[i];
+      highestReps = 0;
     }
-  }
-  for (let i in numbers) {
     if (numbers[i] === highest) {
       highestReps += 1;
     }
+    
   }
   return highestReps;
 }
