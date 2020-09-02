@@ -33,15 +33,18 @@ function footballPoints(wins,ties) {
   pontos = ties + wins;
   return pontos;
 }
-
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 function highestCount(lista) {
-  let maiorNumero = 0;
-  let repeticao = 0;
-  for(let i = 0; i < lista.length; i += 1){
-    if(maiorNumero < lista[i]){
-      maiorNumero = lista[i]
+  let repeticao = [];
+  let maiorNumero = lista[0];
+
+  for(let i in lista){
+    if(lista[i] > maiorNumero){
+      maiorNumero = lista[i];
     }
-    if(maiorNumero === lista[i]){
+  }
+  for(let j in lista){
+    if(lista[j] == maiorNumero){
       repeticao += 1;
     }
   }
