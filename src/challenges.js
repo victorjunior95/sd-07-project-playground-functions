@@ -76,18 +76,49 @@ function highestCount(arrayDeInteiros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = mouse - cat1;
-  let distanciaCat2 = mouse - cat2;
-  let resultado = "";
-  if (distanciaCat1 > distanciaCat2) {
-    resultado = "cat2";
+
+  function comparacaoDistancia(distanciaCat1, distanciaCat2) {
+    let resultado = "";
+    if (distanciaCat1 > distanciaCat2) {
+      resultado = "cat2";
+    }
+    else if (distanciaCat1 < distanciaCat2) {
+      resultado = "cat1";
+    }
+    else {
+      resultado = "os gatos trombam e o rato foge";
+    }
+    return resultado;
   }
-  else if (distanciaCat1 < distanciaCat2) {
-    resultado = "cat1";
+
+  let dCat1 = 0;
+  let dCat2 = 0;
+
+  //cat1,cat2,mouse
+  if (mouse > cat1 && mouse > cat2) {
+    dCat1 = mouse - cat1;
+    dCat2 = mouse - cat2;
   }
-  else{
-    resultado = "os gatos trombam e o rato foge";
+
+  //mouse,cat1,cat2
+  if (mouse < cat1 && mouse < cat2) {
+    dCat1 = cat1 - mouse;
+    dCat2 = cat2 - mouse;
   }
+
+  //cat1,mouse,cat2
+  if (mouse > cat1 && mouse < cat2) {
+    dCat1 = mouse - cat1;
+    dCat2 = cat2 - mouse;
+  }
+
+  //cat2,mouse,cat1
+  if (mouse < cat1 && mouse > cat2) {
+    dCat1 = cat1 - mouse;
+    dCat2 = mouse - cat2;
+  }
+
+  return comparacaoDistancia(dCat1, dCat2);
 }
 
 // Desafio 8
