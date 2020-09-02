@@ -95,11 +95,48 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui  
-}
-function decode() {
+function encode(string) {
   // seu código aqui
+  let number = '';
+
+  for(i = 0; i < string.length; i += 1){
+    if(string[i] == 'a'){
+      number += 1;
+    } else if (string[i] == 'e'){
+      number += 2;
+    } else if (string[i] == 'i'){
+      number += 3;
+    } else if (string[i] == 'o'){
+      number += 4;
+    } else if (string[i] == 'u'){
+      number += 5;
+    } else {
+      number += string[i];
+    }
+  }
+  return number;
+}
+
+function decode(number) {
+  // seu código aqui
+  let letter = '';
+
+  for(i = 0; i < number.length; i += 1){
+    if(number[i] == '1'){
+      letter += 'a';
+    } else if (number[i] == '2'){
+      letter += 'e';
+    } else if (number[i] == '3'){
+      letter += 'i';
+    } else if (number[i] == '4'){
+      letter += 'o';
+    } else if (number[i] == '5'){
+      letter += 'u';
+    } else {
+      letter += number[i];
+    }
+  }
+  return letter;
 }
 
 // Desafio 10
