@@ -223,14 +223,14 @@ console.log(triangleCheck(10,4,6))
 // Desafio 13
 function hydrate(bebidas) {
 let matches = bebidas.match(/\d+/g); 
-
-console.log("número total é" + matches)
 let total=0;
+
 for (let i in matches){
   total+= parseInt(matches[i]);
 }
-return (total + " copos de água");
-  // seu código aqui
+let saida = total + " copos de água"
+console.log(saida);
+return (saida);
 }
 
 console.log(hydrate('3 cervejas e 5 vinhos'))
