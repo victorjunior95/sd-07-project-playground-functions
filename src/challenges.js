@@ -33,7 +33,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(vetor) {
   let maiorRepeticao = 0;
     let objMaior = {};
 
@@ -64,7 +64,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   let resultado = 0;
   cat1 = mouse - cat1;
   cat2 = mouse - cat2;
