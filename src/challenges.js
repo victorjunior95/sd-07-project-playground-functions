@@ -123,12 +123,17 @@ function encode(arrayEncode) {
   let novaCesta2 = novaCesta.replace(/,/g,'');
   return novaCesta2;
 }
-console.log(encode("hi there!"));
 
-
-function decode() {
+function decode(strings) {
   // seu código aqui
+  let cestaDoA = strings.replace(/1/g, 'a');
+  let cestaDoB = cestaDoA.replace(/2/g, 'e');
+  let cestaDoC = cestaDoB.replace(/3/g, 'i');
+  let cestaDoD = cestaDoC.replace(/4/g, 'o');
+  let cestaDoE = cestaDoD.replace(/5/g, 'u');
+  return cestaDoE;
 }
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
