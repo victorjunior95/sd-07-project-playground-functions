@@ -5,8 +5,9 @@ function compareTrue(bolean1, bolean2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  // calculando a área de um triângulo
+  return (base * height) / 2;
 }
 
 // Desafio 3
