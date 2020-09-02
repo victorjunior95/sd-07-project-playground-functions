@@ -150,32 +150,60 @@ console.log(encode("hi there!"))
 
 function decode(word) {
 
-    let answer = "";
-  
-    for (let i = 0; i < word.length; i++) {
-      if (word[i] == "1") {
-        answer += "a";
-      } else if (word[i] == "2") {
-        answer += "e";
-      } else if (word[i] == "3") {
-        answer += "i";
-      } else if (word[i] == "4") {
-        answer += "o";
-      } else if (word[i] == "5") {
-        answer += "u";
-      } else {
-        answer += word[i];
-      }
+  let answer = "";
+
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] == "1") {
+      answer += "a";
+    } else if (word[i] == "2") {
+      answer += "e";
+    } else if (word[i] == "3") {
+      answer += "i";
+    } else if (word[i] == "4") {
+      answer += "o";
+    } else if (word[i] == "5") {
+      answer += "u";
+    } else {
+      answer += word[i];
     }
-    return answer
+  }
+  return answer
 }
 
 console.log(decode("h3 th2r2!"))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+//Função Compare tirada da página StcakOverflow:
+// https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+//Explicação: Criada um função com chamada "compare" que possui dois parâmetros. Dentro da estrutura condicional IF,
+//será comparada a propriedade "tech" (com os respectivos valores contidos nos mesmos) com o próximo objeto. Se a propriedade do objeto A, chamada de tech, for menor ao próximo objeto que está sendo comprado, 
+//então A é colocado na posição a frente de B, se assim é feito com os próximo objetos da lista. Acredito que isto aconteça por meio da recursividade. 
+
+function compare( a, b ) {
+  if ( a.tech < b.tech ){
+    return -1;
+  }
+  if ( a.tech> b.tech){
+    return 1;
+  }
+  return 0;
 }
+
+function techList(arrayTech, name) {
+
+  for (let i in arrayTech) {
+
+    arrayTech[i].name = name;
+  }
+  
+  return arrayTech.sort(compare);
+
+}
+
+let arrayTecnologies = [{ tech: "C" }, { tech: "B" }, { tech: "A" }];
+let myName = "Cézar";
+
+console.log(techList(arrayTecnologies,myName));
 
 // Desafio 11
 function generatePhoneNumber() {
