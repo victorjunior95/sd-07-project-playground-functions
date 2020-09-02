@@ -148,7 +148,7 @@ function triangleCheck(lineA,lineB,lineC) {
 function hydrate(frase) {
   let ref = /\d+/g;
   let resultado = frase.match(ref);
-  let cont = 0;
+  let contador = 0;
   for(let i=0;i<resultado.length;i+=1){
     let num = parseInt(resultado[i]);
     contador+=num;
