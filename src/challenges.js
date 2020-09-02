@@ -65,8 +65,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(1, 0, 2));
-
 // Desafio 8
 function fizzBuzz(array) {
   let resultado = [];
@@ -140,9 +138,24 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let objetos = [];
+  let nome = name;
+  for (i in tech) {
+    let objeto = {
+      tech: tech[i],
+      name: nome
+    }
+    objetos.push(objeto);
+  }
+  return objetos;
 }
+
+/*
+let tech = ['CSS', 'JavaScript', 'HTML '];
+let nome = "Renan";
+console.log(techList(tech, nome));
+*/
 
 // Desafio 11
 function generatePhoneNumber() {
