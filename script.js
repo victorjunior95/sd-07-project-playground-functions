@@ -8,15 +8,18 @@ Retorne true se ambos os valores são verdadeiros;
 Retorne false se um ou ambos os parâmetros forem falsos.
 Faça a função utilizando o operador &&. */
 
-let opcao1 = true;
-let opcao2 = false;
-
 function compareTrue(valor1, valor2) {
   let retorno = false;
-  if (valor1 && valor2 === true) {
+  if (valor1 === true && valor2 === true) {
     retorno = true;
   }
   return retorno;
 }
 
-console.log(compareTrue(opcao1, opcao2));
+/* 2 - Área do triângulo
+Escreva uma função com o nome calcArea que receba um valor de base (chamado base)
+e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+Lembre-se que a área de um triângulo é calculada através da seguinte fórmula:
+(base * altura) / 2. */
+
+//function calcArea
