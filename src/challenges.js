@@ -11,8 +11,17 @@ function compareTrue(arg1, arg2) {
 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let solido = base;
+    let altura = height;
+    let ponder = "Valores indefinidos";
+    let area = 0;
+    if (solido == false || altura == false){
+        return ponder;
+    } else {
+        return area = (solido*altura)/2;
+
+    }
 }
 
 // Desafio 3
