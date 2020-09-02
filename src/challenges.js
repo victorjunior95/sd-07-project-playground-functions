@@ -162,12 +162,25 @@ function decode(string) {
   }
   return result;
 }
-console.log(decode("h3 th2r2!"))
-// Desafio 10
-function techList() {
-  // seu código aqui
-}
 
+// Desafio 10
+function techList(techs, name) {
+  let result = [];
+  let techsArray = techs;
+  
+  if (techs.length === 0){
+    result = 'Vazio!'
+    return result;
+  }
+
+  techsArray.sort(); //techs em ordem alfabética
+
+  for (i in techsArray) {
+    
+  }
+
+}
+console.log( techList([1,2],'lucas'))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui

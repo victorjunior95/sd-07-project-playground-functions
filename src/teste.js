@@ -1,5 +1,11 @@
-let a = ['olá'];
+let a = 'olá';
+let b =  'alo';
 
-a[2] = 'o';
 
-console.log(a)
+array = [a , b]
+
+console.log(array)
+
+array.sort()
+
+console.log(array)
