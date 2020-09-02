@@ -12,14 +12,16 @@ function calcArea(base,height) {
     return areaResult
   }
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+ let array = frase.split(' ')
+ return array
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+array = ['Trybe','programação','liberdade','dinheiro']
+
+function concatName(array) {
+  let trocaString = (array[array.length - 1] + ', ' + array[0])
+  return trocaString
 }
 
 // Desafio 5
