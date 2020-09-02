@@ -94,24 +94,24 @@ function decode() {
 
 // Desafio 10
 function techList(arrayTechs, name) {
-  this.arrayTechs = arrayTechs;
-  this.name = name;
-  let techs = [];
-  arrayTechs.sort();
-  if (arrayTechs.length === 0) {
-    console.log('Vazio!');
-    return 'Vazio!';
-  }
-  for (let i = 0; i < arrayTechs.length; += 1 ) {
-    techs[i] = {
-      tech: arrayTechs[i],
-      name: name
-    }
-  }
-  return techs;
+  // this.arrayTechs = arrayTechs;
+  // this.name = name;
+  // let techs = [];
+  // arrayTechs.sort();
+  // if (arrayTechs.length === 0) {
+  //   console.log('Vazio!');
+  //   return 'Vazio!';
+  // }
+  // for (let i = 0; i < arrayTechs.length; += 1 ) {
+  //   techs[i] = {
+  //     tech: arrayTechs[i],
+  //     name: name
+  //   }
+  // }
+  // return techs;
 }
 
-new techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Lucas');
+// new techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Lucas');
 
 // Desafio 11
 function generatePhoneNumber() {
