@@ -23,7 +23,7 @@ function splitSentence(string) {
 function concatName(array) {
   arrayReverse = array.reverse();
   arrayLastFirst = [arrayReverse[0], arrayReverse[array.length-1]];
-  return arrayLastFirst;
+  return arrayLastFirst.join(', ');
 }
 
 // Desafio 5
