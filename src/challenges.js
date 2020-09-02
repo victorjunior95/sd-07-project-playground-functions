@@ -27,7 +27,7 @@ function splitSentence(trybe) {
 // Desafio 4
 function concatName(nameArray) {
   // seu código aqui
-  let newArray = `${nameArray[0]}, ${nameArray[nameArray.length - 1]}`
+  let newArray = `${nameArray[nameArray.length - 1]}, ${nameArray[0]}`
   return newArray.toString()
 }
 
