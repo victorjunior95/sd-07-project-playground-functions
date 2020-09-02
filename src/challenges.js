@@ -20,10 +20,9 @@ function concatName(nome) {
   return `${nome[nome.length - 1]}, ${nome[0]}`
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins *= 3) + (ties *= 1)
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
