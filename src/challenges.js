@@ -32,10 +32,9 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalDePontos = wins + ties
-  return totalDePontos
-
-  }
+ let soma = wins + ties
+ return soma
+}
 
 
 
@@ -69,7 +68,9 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayn, name) {
+
+
   // seu código aqui
 }
 
