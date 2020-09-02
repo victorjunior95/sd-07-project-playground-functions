@@ -116,12 +116,58 @@ function fizzBuzz(arrayNumerosFB) {
 fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+
+  let arrayPhrase = phrase.split('')
+
+  for (let i = 0; i < arrayPhrase.length; i += 1) {
+    if (arrayPhrase[i] === "a") {
+      arrayPhrase[i] = 1;
+    }
+    else if (arrayPhrase[i] === "e") {
+      arrayPhrase[i] = 2;
+    }
+    else if (arrayPhrase[i] === "i") {
+      arrayPhrase[i] = 3;
+    }
+    else if (arrayPhrase[i] === "o") {
+      arrayPhrase[i] = 4;
+    }
+    if (arrayPhrase[i] === "u") {
+      arrayPhrase[i] = 5;
+    }
+  }
+
+  return arrayPhrase.join("");
 }
-function decode() {
-  // seu código aqui
+
+encode("hi there!");
+
+function decode(phraseNumber) {
+  let arrayPhraseNumber = phraseNumber.split('')
+
+  for (let i = 0; i < arrayPhraseNumber.length; i += 1) {
+    if (arrayPhraseNumber[i] == 1) {
+      arrayPhraseNumber[i] = "a";
+    }
+    else if (arrayPhraseNumber[i] == 2) {
+      arrayPhraseNumber[i] = "e";
+    }
+    else if (arrayPhraseNumber[i] == 3) {
+      arrayPhraseNumber[i] = "i";
+    }
+    else if (arrayPhraseNumber[i] == 4) {
+      arrayPhraseNumber[i] = "o";
+    }
+    if (arrayPhraseNumber[i] == 5) {
+      arrayPhraseNumber[i] = "u";
+    }
+  }
+
+  return arrayPhraseNumber.join("");
 }
+
+decode("h3 th2r2!");
 
 // Desafio 10
 function techList() {
