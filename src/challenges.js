@@ -16,7 +16,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(recebeString) {
-  // seu código aqui 
+  // seu código aqui
   return recebeString.split("");
 }
 
@@ -33,18 +33,53 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayDeNumeros) {
   // seu código aqui
+  let maiorNumero = arrayDeNumeros[0];
+  let contadorDeMaiorNumero = 0;
+  //econtrando o maior valor
+  for (let i = 0; i < arrayDeNumeros.length; i += 1) {
+    if (arrayDeNumeros[i] > maiorNumero) {
+      maiorNumero = arrayDeNumeros[i];
+    }
+  }
+
+  for (let i = 0; i < arrayDeNumeros.length; i += 1) {
+    if (arrayDeNumeros[i] === maiorNumero) {
+      contadorDeMaiorNumero += 1;
+    }
+  }
+  return contadorDeMaiorNumero;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if (cat1 - mouse > cat2 - mouse && cat1 - mouse !== cat2 - mouse) {
+    return "cat2";
+  } else if (cat1 - mouse < cat2 - mouse && cat1 - mouse !== cat2 - mouse) {
+    return "cat1";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayFizzBuzz) {
   // seu código aqui
+  let mensagem;
+  for (let i = 0; i < arrayFizzBuzz.length; i = i + 1) {
+    if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0) {
+      mensagem = "fizzBuzz";
+    } else if (arrayFizzBuzz[i] % 3 === 0) {
+      mensagem = "fizz";
+    } else if (arrayFizzBuzz[i] % 5 === 0) {
+      mensagem = "buzz";
+    } else if (arrayFizzBuzz[i] % 3 !== 0 && arrayFizzBuzz[i] % 5 !== 0) {
+      mensagem = "bug!";
+    }
+    return mensagem;
+  }
 }
 
 // Desafio 9
