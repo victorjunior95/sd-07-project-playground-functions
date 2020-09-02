@@ -1,22 +1,22 @@
 //Desafio Raphael Caputo
 
 // Desafio 1
-function compareTrue()
+function compareTrue() {
 // seu código aqui
-function compareTrue(comparar1, comparar2){
-  if (comparar1 === true && comparar2 === true) {
-    return true
+function compareTrue(comparar1, comparar2) {
+  if (comparar1&& comparar2) {
+    return true;
   } else {
-    return false
+    return false;
   }
 
 }
 // Desafio 2
-function calcAreab()
+function calcAreab() {
 // seu código aqui
-function calcArea(base, height){
-  let resultado = (base * height) / 2;
-  return resultado;
+function calcArea(base, height) {
+  let area = (base * height)/2;
+  return area;
 }
 // Desafio 3
 function splitSentence()
