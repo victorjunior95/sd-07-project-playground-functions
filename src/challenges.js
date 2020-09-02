@@ -1,11 +1,7 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  // seu código aquiope  
-  if(valor1===valor2){
-    return true;
-  }
-  else
-    return false;
+// seu código aqui
+  return valor1 && valor2;
 }
 
 // Desafio 2
