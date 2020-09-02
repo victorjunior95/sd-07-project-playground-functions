@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a, b) {
     if ( a === true && b === true ) {
       return true;
     } else {
@@ -8,23 +8,19 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
-  let base = 8;
-  let height = 10;
+function calcArea(base, height) {
   let areaTriangle = (base * height) / 2 ;
   return areaTriangle;
 }
 
 // Desafio 3
 function splitSentence(separator) {
-  separator = "" ;
-  separator = separator.split(" ");
-  return separator;
+  let split = separator.split(' ');
+  return split;
 }
 
 // Desafio 4
 function concatName(arrayStrings) {
-  arrayStrings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
   let last = arrayStrings[arrayStrings.length - 1];
   let first = arrayStrings[0] ;
   return `${last}, ${first}`;
@@ -58,9 +54,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   } else {
     if ( cat1 - mouse < cat2 - mouse ) {
-      return "cat1 wins."
+      return "cat1"
     } else {
-      return "cat2 wins."
+      return "cat2"
     };
   };
 }
