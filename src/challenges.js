@@ -137,6 +137,32 @@ function techList(techName, name) {
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
+  // verifica se o número possui 11 algarismos
+  if (phoneNumber.length != 11){
+    return "Array com tamanho incorreto.";
+  }
+
+  // verifica algarismo menor que zero ou maior que 9
+  for (let i in phoneNumber) {
+    if (phoneNumber[i] < 0 || phoneNumber[i] > 9){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  // verifica se algum algarismo repete mais de 3 vezes
+  for (let i in phoneNumber){
+    let algarismo = phoneNumber[i];
+    let repeticao = 0;
+    for (let i in phoneNumber){
+      if (algarismo == phoneNumber[i]) {
+        repeticao += 1;
+      }
+    }
+    if (repeticao >= 3){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
   let formatedPhoneNumber = "(";
   for (let i in phoneNumber){
     if (i == 1) {
@@ -151,8 +177,14 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ( (lineA <= lineB + lineC) &&
+       (lineB <= lineA + lineC) &&
+       (lineC <= lineB + lineA)) {
+         return true;
+       } else {
+         return false;
+       }
 }
 
 // Desafio 13
