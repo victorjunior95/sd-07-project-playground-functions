@@ -147,7 +147,7 @@ function techList(tech) {
   // essa parte do código ficou confuso, achei a solução no link em :
   // "https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/" mas não ficou claro
   arrayreturn.sort((a,b) => (a.tech > b.tech) ? 1 : -1);
-  if (tech[0] == null) {
+  if (tech[0] == null && tech.length == 1) {
     return "Vazio!"
   }
   return arrayreturn
