@@ -136,7 +136,7 @@ function decode(arraydeconde) {
 
 // Desafio 10
 function techList(tech) {
-  if (tech == undefined) {
+  if (tech == []) {
     return "Vazio!"
   }
   let arrayreturn = [];
