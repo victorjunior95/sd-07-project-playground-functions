@@ -27,14 +27,14 @@ function concatName(array) {
     return array[array.length -1] + ", " + array[0];
   }
 }
-
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(array));
 
 // Desafio 5
-function footballPoints() {
-
-
+function footballPoints(wins, ties) {
+return ((wins * 3) + (ties * 1))
 }
+console.log(footballPoints(5, 3))
 
 // Desafio 6
 function highestCount() {
