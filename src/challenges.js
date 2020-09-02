@@ -21,19 +21,24 @@ function calcArea(base, height) {
 console.log(calcArea(baseTriangulo, alturaTriangulo));
 
 // Desafio 3
-let sentence = "go trybe";
+let sentence = 'go trybe';
 
 function splitSentence(frase) {
-  let arrayPalavras = frase.split(" ");
+  let arrayPalavras = frase.split(' ');
   return arrayPalavras;
 }
 
 console.log(splitSentence(sentence));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let listaPalavras = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
+function concatName(arrayPalavras) {
+  let frase = arrayPalavras[arrayPalavras.length - 1] + ', ' + arrayPalavras[0];
+  return frase;
 }
+
+console.log(concatName(listaPalavras));
 
 // Desafio 5
 function footballPoints() {
