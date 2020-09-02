@@ -26,14 +26,14 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seuls código aqui
   let x = array[(array.length - 1)] + `, ` + array[0];
   return x;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
   var points = (wins * 3) + ties;
   return points;
