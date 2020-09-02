@@ -14,7 +14,15 @@ function calcArea() {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let palavra = '';
+  let arrayPalavras = [];
+  for (let i in frase) {
+    if (frase[i] !== ' ') {
+      palavra += frase[i];
+    } else {
+      arrayPalavras.push(palavra);
+      palavra = '';
+    }
 }
 
 // Desafio 4
