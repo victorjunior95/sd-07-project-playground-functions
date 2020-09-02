@@ -173,7 +173,7 @@ function triangleCheck(lineA, lineB, lineC ) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   let arrayNumbers = [];
 
   for(let i = 0; i < string.length; i += 1){
