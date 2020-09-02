@@ -14,7 +14,7 @@ function compareTrue(bool1, bool2) {
   }
 }
 let function1 = compareTrue(bool1, bool2);
-//console.log(function1);
+console.log(function1);
 
 // Desafio 2
 //Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
@@ -25,13 +25,13 @@ function calcArea(base, height) {
   return (base*height)/2;  
 }
 let area = calcArea(base, height);
-//console.log(area);
+console.log(area);
 
 // Desafio 3
 //Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 
-let frase = "and tonight we can truly say together we're invincible";
-let separador = " ";
+let frase = 'vamo que vamo';
+let separador = ' ';
 function splitSentence(frase, separador) {
   return frase.split(separador);
 }
@@ -39,9 +39,14 @@ let arrayDePalavras = splitSentence(frase, separador);
 console.log(arrayDePalavras);
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+//Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+
+function concatName(arrayDeStrings) {
+  let stringFinal = arrayDeStrings[arrayDeStrings.length -1] + ", " + arrayDeStrings[0];
+  return stringFinal.toUpperCase();
 }
+let stringUltimoPrimeiro = concatName(['Brenda', 'Richard', 'Kiara', 'Saphira']);
+console.log(stringUltimoPrimeiro);
 
 // Desafio 5
 function footballPoints() {
