@@ -141,9 +141,10 @@ function decode(string) {
 function techList(tech, name) {
   let objetos = [];
   let nome = name;
-  for (i in tech) {
+  let tecnologias = tech.sort();
+  for (i in tecnologias) {
     let objeto = {
-      tech: tech[i],
+      tech: tecnologias[i],
       name: nome
     }
     objetos.push(objeto);
@@ -152,8 +153,8 @@ function techList(tech, name) {
 }
 
 /*
-let tech = ['CSS', 'JavaScript', 'HTML '];
-let nome = "Renan";
+let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let nome = "Lucas";
 console.log(techList(tech, nome));
 */
 
