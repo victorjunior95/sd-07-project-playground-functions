@@ -47,23 +47,23 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-    let arraySaida = [];
-    for (let i = 0; i < array.lenght; i++) {
+    let saida = [];
+    for (let i = 0; i < array.length; i++) {
         if (array[i] % 3 == 0 && array[i] % 5 == 0)
-            arraySaida.push('fizzbuzz');
-
-        else if (array[i] % 5 == 0 && array[i] % 3 != 0)
-            arraySaida.push("buzz");
-
-        else if (array[i] % 3 == 0 && array[i] % 5 != 0)
-            arraySaida.push("fizz");
+            saida.push('fizzBuzz');
+        else if (array[i] % 3 == 0)
+            saida.push('fizz');
+        else if (array[i] % 5 == 0)
+            saida.push('buzz');
 
         else
-            arraySaida.push("bug!");
-    }
-    return arraySaida;
+            saida.push('bug!');
 
+    }
+    return saida;
 }
+
+
 
 // Desafio 9
 function encode() {
