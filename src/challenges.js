@@ -41,10 +41,10 @@ function concatName(array) {
   let ultimaPosicaoDaArray = array.length-1
   let string = "";
 
-  string = array[0] + ", " + array[ultimaPosicaoDaArray];
+  string = array[ultimaPosicaoDaArray] + ", " + array[0];
   return string;
 }
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
