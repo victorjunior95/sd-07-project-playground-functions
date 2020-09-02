@@ -26,10 +26,6 @@ function concatName(concatena) {
   return concatena[concatena.length-1] + ", "+  concatena[0];  
 }
 
-arrio = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-
-console.log(concatName(arrio));
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
