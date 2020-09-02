@@ -87,7 +87,7 @@ function fizzBuzz(numbersArray) {
     }else if(num % 3 === 0 && num % 5 === 0){
       fizzBussReturned.push("fizzBuzz");
     }else{
-      fizzBussReturned.push("bug");
+      fizzBussReturned.push("bug!");
     }
   }
   return fizzBussReturned;
