@@ -1,7 +1,11 @@
 //Alexandre Faustino Leite - Turma 7
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolOne,boolTwo) {
+  if(boolOne == 1 && boolTwo == 1){
+    return true;
+  } else{
+    return false;
+  }
 }
 
 // Desafio 2
