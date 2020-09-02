@@ -56,8 +56,21 @@ return contador
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let resultCat1 = Math.abs(cat1 - mouse);
+  let resultCat2 = Math.abs(cat2 - mouse);
+  let resultadoFinal;
+  if(resultCat1 < resultCat2){
+    resultadoFinal = 'cat1';
+  }
+  else if(resultCat1 > resultCat2){
+    resultadoFinal = 'cat2'
+  }
+  else{
+    resultadoFinal = 'os gatos trombam e o rato foge';
+  }
+  return resultadoFinal;
 }
 
 // Desafio 8
