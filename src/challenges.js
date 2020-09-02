@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   // seu código aqui
 }
-console.log(catAndMouse(3, 0, 9));
+//console.log(catAndMouse(3, 0, 9));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -120,7 +120,7 @@ function encode(entrada) {
   }
   return frase;
 }
-console.log(encode("Hi There"));
+//console.log(encode("Hi There"));
 
 function decode(entrada) {
   let array = [];
@@ -148,8 +148,8 @@ function decode(entrada) {
 
  
 }
-console.log("encode funcionando?" + encode('Hi there a e i o u'))
-console.log("decode funcionando?" + decode('H3 Th2r2 11 22 33 44 55'))
+// console.log("encode funcionando?" + encode('Hi there a e i o u'))
+// console.log("decode funcionando?" + decode('H3 Th2r2 11 22 33 44 55'))
 
 // Desafio 10
 function techList(array, name) {
@@ -174,10 +174,38 @@ function techList(array, name) {
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fernando"));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(entrada) {
+  let numeros = entrada;
+  //testando se números são válidos
+  if (numeros.length!==11){
+    return ("Array com tamanho incorreto.")
+  }
+  let frequencia =[0,0,0,0,0,0,0,0,0,0]
+  for (let i in numeros){
+    if (numeros[i]<0 ||numeros[i]>9){
+      return ("não é possível gerar um número de telefone com esses valores");
+    }
+    frequencia[numeros[i]] +=1;
+  }
+  for (let i in frequencia){
+    if (frequencia[i]>=3){
+      return ("não é possível gerar um número de telefone com esses valores");
+    }
+  }
+//números aprovados. Hora de montar o número de telefone
+let montado=[]
+numeros.unshift("(");
+numeros.splice( 3, 0, ")", " ")
+numeros.splice( 10, 0, "-")
+
+let saida = numeros[0]
+for (let i=1;i<numeros.length;i+=1){
+  saida += numeros[i];
+}
+return (saida)
 }
 
+//console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
