@@ -114,9 +114,26 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(mousePosition, catOnePosition, catTwoPostion));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+const arrayForFizzBuzz = [2, 15, 7, 9, 45];
+
+function fizzBuzz(numberList) {
+  let resultArray = [];
+  for (i in numberList) {
+    if (numberList[i] % 5 == 0 && numberList[i] % 3 == 0) {
+      resultArray.push('fizzBuzz');
+    } else if (numberList[i] % 5 == 0) {
+      resultArray.push('buzz');
+    } else if (numberList[i] % 3 == 0) {
+      resultArray.push('fizz');
+    } else {
+      resultArray.push('bug!');
+    }
+  }
+  return resultArray;
 }
+
+console.log(fizzBuzz(arrayForFizzBuzz));
 
 // Desafio 9
 function encode() {
