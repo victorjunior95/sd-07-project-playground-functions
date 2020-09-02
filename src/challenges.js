@@ -23,9 +23,13 @@ let height = 4;
 console.log(calcArea(base, height));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringValue) {
+  let arrayString = [];
+  return arrayString = stringValue.split(" ");
 }
+
+let sentence = "go Trybe";
+console.log(splitSentence(sentence));
 
 // Desafio 4
 function concatName() {
