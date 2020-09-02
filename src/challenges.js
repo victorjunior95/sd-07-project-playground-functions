@@ -32,7 +32,7 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   let contador = 0;
   let contadorAnterior = 0;
   let maisRepetido = null;
@@ -40,11 +40,11 @@ function highestCount() {
   for (let i = 0; i < array.length; i += 1) {
     numeroAtual = array[i];
     for (let j = 0; j < array.length; j += 1) {
-      if (array[j] == numeroAtual) {
+      if (array[j] === numeroAtual) {
         contador += 1;
       }
     }
-    if (contadorAnterior == 0) {
+    if (contadorAnterior === 0) {
       contadorAnterior = contador;
       maisRepetido = numeroAtual;
     }
