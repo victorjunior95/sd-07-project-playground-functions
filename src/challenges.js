@@ -3,14 +3,14 @@
 // Desafio 1
 function compareTrue(comparar1, comparar2) {
   // seu código aqui
-  if(comparar1 && comparar2) {
+  if(comparar1.split('').length && comparar2.split('').length >= [0]) {
     return false;
   } else {
     return true;
   }
   return compareTrue
 }
-console.log(compareTrue("raphael", 2));
+console.log(compareTrue("Raphael", "Caputo"));
 
 
 // Desafio 2
