@@ -159,7 +159,20 @@ function decode(string) {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  if (array.length !== 0){
+    array.sort(function (a, b) {
+      return a.localeCompare(b);
+    });
+    for (let i in array){
+      let object = {}
+      object.tech = array[i];
+      object.name = name; 
+      array[i] = object;
+    }
+  } else {
+    return 'Vazio!';
+  }
+  return array;
 }
 
 // Desafio 11
