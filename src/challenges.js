@@ -2,7 +2,7 @@
 function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2) {
     return true;
-  } 
+  }
   return false;
 }
 
@@ -62,16 +62,14 @@ function fizzBuzz(array) {
   for (let key in array) {
     if (array[key] % 3 === 0 && array[key] % 5 === 0) {
       array[key] = 'fizzBuzz';
+    } else if (array[key] % 3 === 0){
+        array[key] = 'fizz';
+    } else if (array[key] % 5 === 0) {
+        array[key] = 'buzz';
     } else {
-        if (array[key] % 3 === 0) {
-          array[key] = 'fizz';
-      } else if (array[key] % 5 === 0) {
-          array[key] = 'buzz';
-      } else {
-          array[key] = 'bug!';
-      }
+        array[key] = 'bug!';
     }
-  }
+    }
   return array;
 }
 
@@ -80,7 +78,7 @@ function encode(string) {
   let toEncodeArray = string.split('');
   let vowels = {a: '1', e: '2', i: '3', o: '4', u: '5'};
   let finalString = '';
-  for (let i in toEncodeArray) { 
+  for (let i in toEncodeArray) {
     for (let j in vowels) {
       if (string[i].toLowerCase() === j) {
         toEncodeArray[i] = vowels[j];
@@ -94,14 +92,14 @@ function decode(encodedString) {
   let toDecodeArray = encodedString.split('');
   let numbers = {a: '1', e: '2', i: '3', o: '4', u: '5'};
   let finalString = '';
-  for (let i in toDecodeArray) { 
+  for (let i in toDecodeArray) {
     for (let j in numbers) {
       if (toDecodeArray[i] === numbers[j]) {
         toDecodeArray[i] = j;
       }
     }
     finalString += toDecodeArray[i];
-   }
+    }
   return finalString;
 }
 
@@ -111,16 +109,15 @@ function techList(technologies, name) {
     let listOfObjects = []
     technologies.sort();
     // making the objects and pushing to the list
-    for (key in technologies) {
+    for (let key in technologies) {
       let tempObject = {};
       tempObject.name = name;
       tempObject.tech = technologies[key];
       listOfObjects.push(tempObject);
     }
     return listOfObjects;
-  } else {
-    return "Vazio!";
   }
+  return "Vazio!";
 }
 
 // Desafio 11
@@ -165,7 +162,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   stringList = string.split("");
   let listOfIntegers = [];
-  // verificando se cada caracter da string é um numero 
+  // verificando se cada caracter da string é um numero
   //e se for dando push na lista de inteiros
   for (let key in stringList) {
     if (Number(stringList[key])) {
