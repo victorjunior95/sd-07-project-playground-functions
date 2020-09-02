@@ -1,7 +1,12 @@
 // Desafio 1 - PLAYGROUND | FUNCTIONS
-function compareTrue() {
-  // seu código aqui 
+function compareTrue(param1,param2) {
+  if (param1 > param2) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
+compareTrue(30,20);
 
 // Desafio 2
 function calcArea() {
