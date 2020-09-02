@@ -32,14 +32,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numeros) {
-  // verifica maior valor
+
+function maiorValor(numeros){
   let maiorValor = 0;
   for (let i in numeros) {
     if (numeros[i] > maiorValor) {
       maiorValor = numeros[i];
     }
   }
+  return maiorValor;
+}
+
+function highestCount(numeros) {
+  // verifica maior valor
+  let maiorValor = maiorValor(numeros);
 
   // verifica repetição
   let repeticao = 0;
@@ -115,7 +121,6 @@ function decode(frase) {
   } return msg.join("");
 }
 
-
 // Desafio 10
 function techList(techName, name) {
   if (techName == "" || techName.length == 0) {
@@ -131,9 +136,9 @@ function techList(techName, name) {
       obj.name = name;
       objectList.push(obj);
     }
-    return objectList;
+    return objectList.sort();
   }
-}
+}console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
