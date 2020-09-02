@@ -59,25 +59,30 @@ let nomeEmIngles = "";
 // console.log("resultado do desafio 3", ultimo);
 // nomeEmIngles = nomeCompleto[ultimo]+", "+ nomeCompleto[0];
 // nomeEmIngles = nomeCompleto[nomeCompleto.length] + nomeCompleto[0];
-for (i=0; i<nomeCompleto.length; i +=1){
-  if (i=nomeCompleto.length){
-    nomeEmIngles = nomeCompleto[i] +", "+ nomeCompleto[0];
-  }
-}
+// Esse em cima estava dando erro porque o nomecompleto[nomecompleto.length] é realmente undefined, 
+// tem que colocar o -1 pq length de string começa em 0.
+// for (i=0; i<nomeCompleto.length; i +=1){
+//   if (i=nomeCompleto.length){
+//     nomeEmIngles = nomeCompleto[i] +", "+ nomeCompleto[0];
+//   }
+// }
 // console.log("resultado do desafio 3", nomeEmIngles);
 
 
 function concatName(nomeCompleto) {
   // seu código aqui
+  let nomeEmIngles = "";
+  let primeiro =[];
+  let último=[];
   for (i=0; i<nomeCompleto.length; i +=1){
     if (i=nomeCompleto.length){
-      nomeEmIngles = nomeCompleto[i] +", "+ nomeCompleto[0];
+      nomeEmIngles = nomeCompleto[i-1] +", "+ nomeCompleto[0]; 
     }
   }
-  return console.log("resultado do desafio 3", nomeEmIngles);
+  // return console.log("resultado do desafio 4 é", nomeEmIngles);
   return nomeEmIngles;
 }
-
+// concatName(nomeCompleto);
 
 // Desafio 5
 function footballPoints() {
