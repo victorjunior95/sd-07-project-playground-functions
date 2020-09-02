@@ -120,16 +120,57 @@ function fizzBuzz(array) {
   return arrayString;
 }
 
-let array3 = [2,15,7,9,45];
+let array3 = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(array3));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+
+  let answer = "";
+
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] == "a") {
+      answer += "1";
+    } else if (word[i] == "e") {
+      answer += "2";
+    } else if (word[i] == "i") {
+      answer += "3";
+    } else if (word[i] == "o") {
+      answer += "4";
+    } else if (word[i] == "u") {
+      answer += "5";
+    } else {
+      answer += word[i];
+    }
+  }
+  return answer
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode("hi there!"))
+
+function decode(word) {
+
+    let answer = "";
+  
+    for (let i = 0; i < word.length; i++) {
+      if (word[i] == "1") {
+        answer += "a";
+      } else if (word[i] == "2") {
+        answer += "e";
+      } else if (word[i] == "3") {
+        answer += "i";
+      } else if (word[i] == "4") {
+        answer += "o";
+      } else if (word[i] == "5") {
+        answer += "u";
+      } else {
+        answer += word[i];
+      }
+    }
+    return answer
 }
+
+console.log(decode("h3 th2r2!"))
 
 // Desafio 10
 function techList() {
