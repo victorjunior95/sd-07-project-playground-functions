@@ -64,8 +64,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumber) {
   // seu código aqui
+  const divisores = [];
+  for (let i = 0; i < arrayNumber.length; i +=1){
+    if(arrayNumber[i] % 3 && arrayNumber[i] % 5){
+      divisores.push('fizzBuzz');
+    }else if(arrayNumber[i] % 3){
+      divisores.push('fizz');
+    }else if(arrayNumber[i] % 5){
+      divisores.push('buzz');
+    }else {
+      divisores.push('bug!');
+    }
+  }
+  return divisores;
 }
 
 // Desafio 9
