@@ -239,9 +239,9 @@ function generatePhoneNumber(array) {
         newNumber = newNumber + "(" + array[i];
       } else if (i == 2) {
         newNumber = newNumber + ") " + array[i];
-      }else if(i == 6){
+      } else if (i == 7) {
         newNumber = newNumber + "-" + array[i];
-      }else{
+      } else {
         newNumber = newNumber + array[i];
       }
     }
