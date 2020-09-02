@@ -23,7 +23,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(arrayDeStrings) {
   arrayResultado = "";
-  arrayResultado += arrayDeStrings[arrayDeStrings.length-1];
+  arrayResultado += arrayDeStrings[arrayDeStrings.length - 1];
   arrayResultado += ", "
   arrayResultado += arrayDeStrings[0];
   return arrayResultado;
@@ -38,8 +38,40 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayDeInteiros) {
+
+  //funcoes criadas nos exercícios do dia 4.
+  function retornaIndiceMaiorValor(arrayEscolhido) {
+    let indiceMaiorValor = 0;
+    let numeroVitorias = 0;
+    //verifica o maior valor do arrayEscolhido.
+    for (j = 0; j < arrayEscolhido.length; j += 1) {
+      numeroVitorias = 0;
+      for (i = 0; i < arrayEscolhido.length; i += 1) {
+        if (arrayEscolhido[j] >= arrayEscolhido[i]) {
+          numeroVitorias += 1;
+        }
+      }
+
+      if (numeroVitorias === arrayEscolhido.length) {
+        indiceMaiorValor = j;
+      }
+    }
+    return indiceMaiorValor
+  }
+  function numeroRepeticoes(array, indice) {
+    let numeroRepeticoes = 0;
+    for (let i = 0; i < array.length - 1; i += 1) {
+      if (array[indice] === array[i]) {
+        numeroRepeticoes += 1;
+      }
+    }
+    return numeroRepeticoes;
+  }
+
+  let indiceDoElementoMaior = retornaIndiceMaiorValor(arrayDeInteiros);
+
+  return numeroRepeticoes(arrayDeInteiros, indiceDoElementoMaior);
 }
 
 // Desafio 7
