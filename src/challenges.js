@@ -2,11 +2,11 @@
 function compareTrue(boleano1 , boleano2) {
   let resultado = true;
   if(boleano1 == true && boleano2 == true){
-    resultado = true;
+    return resultado = true;
   }else if(boleano1 == false && boleano2 == true){
-    resultado = false;
+    return resultado = false;
   } else if (boleano1 == false && boleano2 == false){
-    resultado = false;
+    return resultado = false;
   } 
 }
 
