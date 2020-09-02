@@ -95,49 +95,62 @@ function encode(string) {
   let saida = String(string).split('');
 
   const codigo = {
-      1: "a",
-      2: "e",
-      3: "i",
-      4: "o",
-      5: "u",
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u",
   };
 
   for (const key in codigo) {
 
-      for (const i in string) {
-          if (saida[i] === codigo[key]) {         
-              saida[i] = key;
-          }
+    for (const i in string) {
+      if (saida[i] === codigo[key]) {
+        saida[i] = key;
       }
+    }
   }
 
   return saida.join('');
 }
 
-function decode(string){
+function decode(string) {
   let saida = String(string).split('');
   const codigo = {
-      1: "a",
-      2: "e",
-      3: "i",
-      4: "o",
-      5: "u",
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u",
   };
 
   for (const key in codigo) {
 
-      for (const i in string) {
-          if (saida[i] === key) {
-              saida[i] = codigo[key];
-          }
+    for (const i in string) {
+      if (saida[i] === key) {
+        saida[i] = codigo[key];
       }
+    }
   }
   return saida.join('');
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tenologias, nome) {
+  let saida = [];
+
+  if (tenologias.lenght === 0) {
+    return "Vazio!";
+  } else {
+    for (const key in tenologias) {
+      saida.push({
+        tech: tecnologias[key],
+        name: nome,
+      })
+    }
+
+  }
+  return saida;
 }
 
 // Desafio 11
