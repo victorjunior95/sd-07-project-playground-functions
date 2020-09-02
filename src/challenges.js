@@ -4,8 +4,6 @@ function compareTrue(valor1,valor2) {
     return true;
   }else return false;
 
-compareTrue(true,true);
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
