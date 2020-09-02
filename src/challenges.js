@@ -26,10 +26,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(lista) {
+function concatName(nomes) {
   let novo = lista[lista.length-1];
-  lista.unshift(novo);
-  lista.pop();
+  nomes.unshift(novo);
+  nomes.pop();
   return lista;
 }
 
@@ -41,8 +41,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(maior) {
+  let top   = maior[0];
+  let count = 0;
+    for(let i in maior){
+      if (top < maior[i]){
+          top = maior[i];
+      }
+    }
+    for(let cnt in maior){
+      if(top == maior[cnt]){
+        count +=1
+      }
+    }
+  return count;
 }
 
 // Desafio 7
