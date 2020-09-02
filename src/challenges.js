@@ -225,7 +225,15 @@ function hydrate(string4) {
    
     }
   }
-  return (count + " copos de água");
+  if (count === 1)
+  {
+    string5 = count + " copo de água";
+  }
+  else
+  {
+    string5 = count + " copos de água";
+  }
+  return string5;
 }
 
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
