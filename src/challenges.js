@@ -5,16 +5,16 @@ function compareTrue(firstValue, secondValue) {
   return compareResult;
 }
 
-
 // Desafio 2
 function calcArea(base, height) {
-  calc = base * height / 2;
+  let calc = base * height / 2;
   return calc;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(inputSentence) {
+  let arraySplit = inputSentence.split(separator);
+  return arraySplit;
 }
 
 // Desafio 4
