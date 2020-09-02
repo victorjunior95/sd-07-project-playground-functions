@@ -203,7 +203,9 @@ function generatePhoneNumber(array) {
         case '7':
           numero += ' ';
           break;
-      } default:
+        default:
+        break;
+      }
       numero += array[i]
     }
   } else {
