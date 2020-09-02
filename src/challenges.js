@@ -108,7 +108,7 @@ function highestCount(numbers) {
       countBigger = countBigger +1
     }
   }
-  return total;
+  return countBigger;
   // return console.log("resultado do desafio 6 é", countBigger);
 }
 // highestCount(numbers);
@@ -121,15 +121,28 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distCat2<0){distCat2=distCat2*-1}
   if (distCat1>distCat2){
     return cat1;
-  } elseif (distCat1=distCat2){
+  } else if (distCat1==distCat2) {//else if escreve separado
     return "os gatos trombam e o rato foge"
   } else {return cat2}
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let fizzBuzzNumbers = [2, 15, 7, 9, 45];
+function fizzBuzz(fizzBuzzNumbers) {
+  let code = [];// o push só funciona se já for uma array e não uma string, 
+  for (let i=0; i<fizzBuzzNumbers.length; i += 1){
+    if (fizzBuzzNumbers[i]%3 == 0 && fizzBuzzNumbers[i]%5 == 0){
+      code.push("fizzBuzz");//a sintaxe do .push é com () e não com =,
+    } else if (fizzBuzzNumbers[i]%3 == 0) {
+      code.push("fizz");//para strings e numeros você somaria ao invés de .push mas não é isso o exercício.
+    } else if (fizzBuzzNumbers[i]%5 == 0) {
+      code.push("buzz");
+    } else {code.push("bug!");} 
+  }
+  return code;//ele anda a function até o primeiro return
+  // return console.log(code);
 }
+// fizzBuzz(fizzBuzzNumbers);
 
 // Desafio 9
 function encode() {
