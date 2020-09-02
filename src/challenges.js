@@ -66,17 +66,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let auxArray = [];
+
   for (key in array) {
     if (array[key] % 3 != 0 && array[key] % 5 != 0) {
-      return `bug!`
+      auxArray.push(`bug!`);
     } else if (array[key] % 3 == 0 && array[key] % 5 == 0) {
-      return `FizzBuzz`
+      auxArray.push(`fizzBuzz`);
     } else if (array[key] % 3 == 0) {
-      return `Fizz`
+      auxArray.push(`fizz`);
     }else if (array[key] % 5 == 0) {
-      return `Buzz`
+      auxArray.push(`buzz`);
     }
   }
+  return auxArray;
 }
 
 // Desafio 9
