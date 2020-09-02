@@ -130,8 +130,14 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let lados = [lineA, lineB, lineC];
+  lados.sort((a, b) => b - a); // encontrei esta forma no StackOverflow: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+  if (lados[0] <= (lados[1] + lados[2])) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 13
