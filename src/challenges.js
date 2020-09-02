@@ -36,7 +36,7 @@ function highestCount(arr) {
   }
   let out = 0;
   for (let j in arr) {
-    if (arr[j] == h) {
+    if (arr[j] === h) {
       out += 1;
     }
   }
@@ -59,11 +59,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arr) {
   let out = [];
   for (let i in arr) {
-    if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
+    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
       out.push('fizzBuzz');
-    } else if (arr[i] % 3 == 0) {
+    } else if (arr[i] % 3 === 0) {
       out.push('fizz');
-    } else if (arr[i] % 5 == 0) {
+    } else if (arr[i] % 5 === 0) {
       out.push('buzz');
     } else {
       out.push('bug!');
@@ -74,7 +74,7 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(str) {
-  a = str.replace(/a/g, '1');
+  let a = str.replace(/a/g, '1');
   a = a.replace(/e/g, '2');
   a = a.replace(/i/g, '3');
   a = a.replace(/o/g, '4');
@@ -82,7 +82,7 @@ function encode(str) {
   return a;
 }
 function decode(str) {
-  a = str.replace(/1/g, 'a');
+  let a = str.replace(/1/g, 'a');
   a = a.replace(/2/g, 'e');
   a = a.replace(/3/g, 'i');
   a = a.replace(/4/g, 'o');
@@ -93,12 +93,14 @@ function decode(str) {
 // Desafio 10
 function techList(arr, name) {
   let out = [];
-  for (let i in arr){
+  if(arr.length <= 0){
+    return 'Vazio!';
+  }
+  for (let i in arr) {
     out.push({
-      tech:arr[i],
-      name:name,
-    })
-    
+      tech: arr[i],
+      name: name,
+    });
   }
   return out;
 }
