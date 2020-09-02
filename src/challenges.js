@@ -97,8 +97,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  dist1 = mouse - cat1;
-  dist2 = mouse - cat2;
+  dist1 = Math.abs(mouse - cat1);
+  dist2 = Math.abs(mouse - cat2);
   if (dist1 > dist2) {
     return "cat2";
   } else if (dist2 > dist1) {
@@ -109,16 +109,33 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // --------------------TESTE DESAFIO 7--------------------------------
-// let teste = 10;
-// let teste2 = 5;
-// let teste3 = 5;
+// let teste = 1;
+// let teste2 = 0;
+// let teste3 = 2;
 // console.log(catAndMouse(teste, teste2, teste3));
 // -------------------------------------------------------------------
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let novoArray = [];
+  for (let i in array) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      novoArray.push("fizzBuzz");
+    } else if (array[i] % 3 == 0) {
+      novoArray.push("fizz");
+    } else if (array[i] % 5 == 0) {
+      novoArray.push("buzz");
+    } else {
+      novoArray.push("bug!");
+    }
+  }
+  return novoArray;
 }
+
+// --------------------TESTE DESAFIO 8--------------------------------
+// let teste = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz(teste));
+// -------------------------------------------------------------------
 
 // Desafio 9
 function encode() {
