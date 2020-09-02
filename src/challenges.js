@@ -30,7 +30,7 @@ let frase = "Dia de festa";
 let resultado = frase.split(" ");
 return resultado;
 }
-function splitSentence() {
+console.log(splitSentence());
 // Desafio 4
 function concatName() {
   // seu código aqui
@@ -57,17 +57,59 @@ console.log(footballPoints());
 // Desafio 6
 function highestCount() {
   // seu código aqui
+  let highestCount = [9, 1, 2, 3, 9, 5, 7,10];
+  let bigger = 0;
+  let result = 0;
+for(let count in highestCount){
+  if(highestCount[count]>bigger){
+      bigger=highestCount[count];
 }
+}
+for(let count in highestCount){
+  if(bigger===highestCount[count]){
+      result+=1;
+  }
+}
+return result;
+}
+console.log(highestCount());
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
+let cat1 = 6;
+let cat2 = 6;
+let mouse = 10;
+let cat1Distance = mouse-cat1;
+let cat2Distance = mouse-cat2;
+if(cat1Distance<cat2Distance){
+  return "cat1";
+} else if(cat2Distance<cat1Distance) {
+  return "cat2";
 }
+return "os gatos trombam e o rato foge";
+}
+console.log(catAndMouse());
 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,30,75,300];
+let fizzBuzzReturn = [];
+  for (let count in numbers){
+      if((numbers[count]%3==0)&&(numbers[count]%5==0)){
+          fizzBuzzReturn[count] = "fizzBuzz";
+      } else if (numbers[count]%5==0) {
+          fizzBuzzReturn[count] = "buzz";
+      } else if (numbers[count]%3==0){
+          fizzBuzzReturn[count] = "fizz";
+      } else {
+          fizzBuzzReturn[count]="bug!";
+      }
+  }
+  return fizzBuzzReturn;
 }
+console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {
