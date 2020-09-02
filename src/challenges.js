@@ -183,7 +183,9 @@ function hydrate(string) {
   for (let i = 0; i < numbers.length; i += 1){
     drinkQty += Number(numbers[i]);
   }
-  return `${drinkQty} copos de água`;
+  if (drinkQty > 0){
+  return drinkQty + ' copos de água';
+  }
 }
 
 
