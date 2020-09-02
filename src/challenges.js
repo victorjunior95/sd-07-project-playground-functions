@@ -58,21 +58,105 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+   
+  let n=[];
+
+  for(let i =0 , j = array.length; i<j; i +=1){
+      if (array[i] % 3 == 0 && array[i] % 5 ==0){
+          n[i] = "fizzBuzz";
+      } else if(array[i] % 3 == 0){ 
+          n[i] = "fizz";
+      } else if (array[i] % 5 == 0){
+          n[i] = "buzz";
+      } else {
+          n[i] = "bug!";
+      }
+
+  }
+  return n
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str1) {
+  let array = [];
+  let str2 = "";
+  array = splitSentence = str1.split("")
+  
+  for(let i = 0, j = array.length; i<j; i +=1 ){
+       switch (array[i]) {
+          case "a":
+              array[i] = "1"
+              break;
+          case "e":
+              array[i] ="2"
+              break;
+          case "i":
+              array[i] ="3"
+              break;
+          case "o":
+              array[i] ="4"
+              break;
+          case "u":
+              array[i] ="5"
+              break;
+           default:
+               break;
+       }
+   }
+
+   for(let i = 0, j = array.length; i<j; i +=1 ){
+   str2 += array[i]}
+   return str2
 }
-function decode() {
-  // seu código aqui
+
+function decode(str1) {
+  let array = [];
+  let str2 = "";
+  array = splitSentence = str1.split("")
+  
+  for(let i = 0, j = array.length; i<j; i +=1 ){
+       switch (array[i]) {
+          case "1":
+              array[i] = "a"
+              break;
+          case "2":
+              array[i] ="e"
+              break;
+          case "3":
+              array[i] ="i"
+              break;
+          case "4":
+              array[i] ="o"
+              break;
+          case "5":
+              array[i] ="u"
+              break;
+           default:
+               break;
+       }
+   }
+
+   for(let i = 0, j = array.length; i<j; i +=1 ){
+   str2 += array[i]}
+   return str2
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array,name) {
+  if(array == 0){
+      return "Vazio!"
+  }
+  array = array.sort()
+  let ob = [];
+  
+
+  for(let i = 0, j = array.length; i<j; i +=1 ){
+      ob[i] = {tech: array[i],
+              name: name,
+      }
+  }
+  return ob;
 }
 
 // Desafio 11
