@@ -11,10 +11,10 @@ function calcArea() {
 // Desafio 3
 function splitSentence(string) {
   let result = string.split(' ');
-  console.log(result);
+  return result;
 }
 
-splitSentence("go Trybe");
+splitSentence('go Trybe');
 
 // Desafio 4
 function concatName() {
