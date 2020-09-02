@@ -12,12 +12,22 @@ function compareTrue(a, b) {
     return false
   }
 }
-console.log(compareTrue(true, true))
+//console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
+let base = 0;
+let height = 0;
+
+function calcArea(base, height) {
   // seu código aqui
+  if (base > 0 && height > 0) {
+    let area = base * height / 2;
+    return area
+  } else {
+    return "Digite um valor válido"
+  }
 }
+console.log(calcArea(4, 5));
 
 // Desafio 3
 function splitSentence() {
