@@ -13,21 +13,21 @@ function calcArea(base, height) {
 // Desafio 3
 
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  let nomes = "";
+  let nomes = '';
   nomes += array[array.length - 1];
-  nomes += ", " + array[0];
+  nomes += ', ' + array[0];
   return nomes;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let total = 0;
-  total = wins * 3 + ties;
+  total = (wins * 3) + ties;
   return total;
 }
 
@@ -65,13 +65,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia2 = Math.abs(cat2 - mouse);
 
   // verifica qual está mais perto
-  let msg = "";
+  let msg = '';
   if (distancia1 > distancia2) {
-    msg = "cat2";
+    msg = 'cat2';
   } else if (distancia1 < distancia2) {
-    msg = "cat1";
+    msg = 'cat1';
   } else {
-    msg = "os gatos trombam e o rato foge";
+    msg = 'os gatos trombam e o rato foge';
   }
   return msg;
 }
@@ -81,13 +81,13 @@ function fizzBuzz(numeros) {
   let msg = [];
   for (let i in numeros) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-      msg.push("fizzBuzz");
+      msg.push('fizzBuzz');
     } else if (numeros[i] % 3 === 0) {
-      msg.push("fizz");
+      msg.push('fizz');
     } else if (numeros[i] % 5 === 0) {
-      msg.push("buzz");
+      msg.push('buzz');
     } else {
-      msg.push("bug!");
+      msg.push('bug!');
     }
   }
   return msg;
@@ -98,84 +98,83 @@ function encode(frase) {
   let msg = [];
   for (let i in frase) {
     switch (frase[i]) {
-      case "a":
-        msg.push("1");
+      case 'a':
+        msg.push('1');
         break;
-      case "e":
-        msg.push("2");
+      case 'e':
+        msg.push('2');
         break;
-      case "i":
-        msg.push("3");
+      case 'i':
+        msg.push('3');
         break;
-      case "o":
-        msg.push("4");
+      case 'o':
+        msg.push('4');
         break;
-      case "u":
-        msg.push("5");
+      case 'u':
+        msg.push('5');
         break;
       default:
         msg.push(frase[i]);
     }
   }
-  return msg.join("");
+  return msg.join('');
 }
 
 function decode(frase) {
   let msg = [];
   for (let i in frase) {
     switch (frase[i]) {
-      case "1":
-        msg.push("a");
+      case '1':
+        msg.push('a');
         break;
-      case "2":
-        msg.push("e");
+      case '2':
+        msg.push('e');
         break;
-      case "3":
-        msg.push("i");
+      case '3':
+        msg.push('i');
         break;
-      case "4":
-        msg.push("o");
+      case '4':
+        msg.push('o');
         break;
-      case "5":
-        msg.push("u");
+      case '5':
+        msg.push('u');
         break;
       default:
         msg.push(frase[i]);
     }
   }
-  return msg.join("");
+  return msg.join('');
 }
 
 // Desafio 10
 function techList(techName, name) {
-  if (techName == "" || techName.length == 0) {
-    return "Vazio!";
-  } else {
-    let objectList = [];
-    for (let i in techName.sort()) {
-      let obj = {
-        tech: "",
-        name: "",
-      };
-      obj.tech = techName[i];
-      obj.name = name;
-      objectList.push(obj);
-    }
-    return objectList;
+  if (techName === '' || techName.length === 0) {
+    return 'Vazio!';
+  } 
+  let objectList = [];
+  for (let i in techName.sort()) {
+    let obj = {
+      tech: '',
+      name: '',
+    };
+    obj.tech = techName[i];
+    obj.name = name;
+    objectList.push(obj);
   }
+  return objectList;
 }
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   // verifica se o número possui 11 algarismos
   if (phoneNumber.length != 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
 
   // verifica algarismo menor que zero ou maior que 9
   for (let i in phoneNumber) {
     if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
@@ -183,21 +182,21 @@ function generatePhoneNumber(phoneNumber) {
   for (let i in phoneNumber) {
     let algarismo = phoneNumber[i];
     let repeticao = 0;
-    for (let i in phoneNumber) {
-      if (algarismo == phoneNumber[i]) {
+    for (let j in phoneNumber) {
+      if (algarismo === phoneNumber[j]) {
         repeticao += 1;
       }
     }
     if (repeticao >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
-  let formatedPhoneNumber = "(";
+  let formatedPhoneNumber = '(';
   for (let i in phoneNumber) {
-    if (i === "1") {
+    if (i === '1') {
       formatedPhoneNumber += `${phoneNumber[i]}) `;
-    } else if (i === "6") {
+    } else if (i === '6') {
       formatedPhoneNumber += `${phoneNumber[i]}-`;
     } else {
       formatedPhoneNumber += `${phoneNumber[i]}`;
@@ -214,9 +213,8 @@ function triangleCheck(lineA, lineB, lineC) {
     lineC <= lineB + lineA
   ) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
 
 // Desafio 13
