@@ -108,7 +108,7 @@ if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat2 > cat1){
 
 }
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(lista) {
   let novaLista = []
   for(let i = 0; i < lista.length; i += 1) {
     if (lista[i] % 3 == 0 && lista[i] % 5 != 0) {
@@ -128,21 +128,21 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(palavraTroca) {
-  palavraTroca = palavraTroca.toLowerCase()
-    for(i=0 ; i <= palavraTroca.length ; i+= 1){
-       palavraTroca = palavraTroca.replace('a','1').replace('e','2').replace('i','3').replace('o','4').replace('u','5')
+function encode(string) {
+  string = string.toLowerCase()
+    for(i=0 ; i <= string.length ; i+= 1){
+       string = string.replace('a','1').replace('e','2').replace('i','3').replace('o','4').replace('u','5')
     }
 
-    return palavraTroca
+    return string
 }
-function decode(numerosTroca) {
-  numerosTroca = numerosTroca
-  for(i=0 ; i <= numerosTroca.length ; i+= 1){
-      numerosTroca = numerosTroca.toString().replace('1','a').replace('2','e').replace('3','i').replace('4','o').replace('5','u')
+function decode(string) {
+  string = string
+  for(i=0 ; i <= string.length ; i+= 1){
+      string = string.toString().replace('1','a').replace('2','e').replace('3','i').replace('4','o').replace('5','u')
   }
 
-  return numerosTroca
+  return string
 }
 
 // Desafio 10
