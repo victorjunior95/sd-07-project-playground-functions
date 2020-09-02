@@ -8,7 +8,7 @@ function compareTrue(yes, no) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = (base * height)/2;
+  let areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
@@ -20,13 +20,14 @@ function splitSentence(sentense) {
 
 // Desafio 4
 function concatName(arr) {
-  let concatElements = `${arr[arr.length -1]}, ${arr[0]}`;
+  let concatElements = `${arr[arr.length - 1]}, ${arr[0]}`;
   return concatElements;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultGame = wins * 3 + ties * 1;
+  return resultGame;
 }
 
 // Desafio 6
