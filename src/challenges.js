@@ -145,8 +145,6 @@ function decode(entrada) {
     frase += array[i];
   }
   return frase;
-
- 
 }
 // console.log("encode funcionando?" + encode('Hi there a e i o u'))
 // console.log("decode funcionando?" + decode('H3 Th2r2 11 22 33 44 55'))
@@ -177,44 +175,54 @@ function techList(array, name) {
 function generatePhoneNumber(entrada) {
   let numeros = entrada;
   //testando se números são válidos
-  if (numeros.length!==11){
-    return ("Array com tamanho incorreto.")
+  if (numeros.length !== 11) {
+    return "Array com tamanho incorreto.";
   }
-  let frequencia =[0,0,0,0,0,0,0,0,0,0]
-  for (let i in numeros){
-    if (numeros[i]<0 ||numeros[i]>9){
-      return ("não é possível gerar um número de telefone com esses valores");
+  let frequencia = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  for (let i in numeros) {
+    if (numeros[i] < 0 || numeros[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
     }
-    frequencia[numeros[i]] +=1;
+    frequencia[numeros[i]] += 1;
   }
-  for (let i in frequencia){
-    if (frequencia[i]>=3){
-      return ("não é possível gerar um número de telefone com esses valores");
+  for (let i in frequencia) {
+    if (frequencia[i] >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
-//números aprovados. Hora de montar o número de telefone
-let montado=[]
-numeros.unshift("(");
-numeros.splice( 3, 0, ")", " ")
-numeros.splice( 10, 0, "-")
+  //números aprovados. Hora de montar o número de telefone
+  let montado = [];
+  numeros.unshift("(");
+  numeros.splice(3, 0, ")", " ");
+  numeros.splice(10, 0, "-");
 
-let saida = numeros[0]
-for (let i=1;i<numeros.length;i+=1){
-  saida += numeros[i];
-}
-return (saida)
+  let saida = numeros[0];
+  for (let i = 1; i < numeros.length; i += 1) {
+    saida += numeros[i];
+  }
+  return saida;
 }
 
 //console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   let A = Math.abs(lineA);
   let B = Math.abs(lineB);
   let C = Math.abs(lineC);
-  if (A<B+C && A> B-C &&A>C-B && B<A+C && B>A-C&&B>C-A && C<A+B&& C>B-A && C>A-B){
-    return (true);
+  if (
+    A < B + C &&
+    A > B - C &&
+    A > C - B &&
+    B < A + C &&
+    B > A - C &&
+    B > C - A &&
+    C < A + B &&
+    C > B - A &&
+    C > A - B
+  ) {
+    return true;
   } else {
-    return (false);
+    return false;
   }
   // seu código aqui
 }
@@ -222,17 +230,17 @@ function triangleCheck(lineA,lineB,lineC) {
 
 // Desafio 13
 function hydrate(bebidas) {
-let matches = bebidas.match(/\d+/g); 
-let total=0;
+  let matches = bebidas.match(/\d+/g);
+  let total = 0;
 
-for (let i in matches){
-  total+= parseInt(matches[i]);
+  for (let i in matches) {
+    total += parseInt(matches[i]);
+  }
+
+  return total + " copos de água";
 }
 
-return (total + " copos de água");
-}
-
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 module.exports = {
   calcArea,
   catAndMouse,
