@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(isTrue1, isTrue2) {
-  if ( isTrue1 === true && isTrue2 === true ){
+  if (isTrue1 === true && isTrue2 === true){
     return true;
-  } 
+  }
   return false;
 }
 
@@ -24,9 +24,9 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winsQt = 0, tiesQt = 0;
-  
-  for ( let i = 0; i < wins; i += 1 ){
+  let winsQt = 0;
+  let tiesQt = 0;
+  for (let i = 0; i < wins; i += 1){
     winsQt += 3;
   }
   for ( let i = 0; i < ties; i += 1 ){
@@ -37,8 +37,22 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let mostRepeated = 0;
+  let referenceCount = 0;
+    for(let i = 0; i < numbers.length; i += 1){
+      let count = 0;
+      for(let j = 0; j < numbers.length; j += 1){
+         if(numbers[i] == numbers[j]){
+            count += 1;
+         }
+      }
+      if (count > referenceCount){
+         referenceCount = count;
+         mostRepeated = numbers[i];
+      }
+    }
+  return mostRepeated;
 }
 
 // Desafio 7
