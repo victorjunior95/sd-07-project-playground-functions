@@ -234,10 +234,19 @@ function generatePhoneNumber(numbers) {
   return result;
 
 }
-console.log(generatePhoneNumber([1, 2, 3, 3, 5, 6, 7, 8, 9, 0, 1]))
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result;
+
+  let bigger = Math.max(lineA, lineB, lineC);
+
+  if (bigger*2 < lineA + lineB + lineC) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 }
 
 // Desafio 13
