@@ -1,21 +1,22 @@
 // Desafio 1
-function compareTrue(valor1,valor2) {
-
-  if ( valor1 && valor2 ){
-    return true;
+function compareTrue(valor1, valor2) {
+  if (valor1 && valor2) {
+    console.log(true);
+  }
+  else
+  {
+    console.log(false);
   }
 }
 
 // Desafio 2
-function calcArea(base,height) {
-
+function calcArea(base, height) {
   let resultado = (base * height) / 2;
   return resultado;
 }
 
 // Desafio 3
 function splitSentence(string) {
-
   let resultado = string.split(" ");
   return resultado;
 }
@@ -25,16 +26,12 @@ function concatName(arrayString) {
   arrayString.reverse();
   let palavra1;
   let palavra2;
-
   for (let i = 0; i < arrayString.length; i += 1) {
     palavra1 = arrayString[0];
     palavra2 = arrayString[1];
   }
-
   let string = [palavra1, palavra2];
-
-  console.log(string.join(", "))
-
+  console.log(string.join(", "));
 }
 
 // Desafio 5
