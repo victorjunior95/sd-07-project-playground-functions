@@ -21,8 +21,9 @@ function splitSentence(words) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let newWords = `${array[array.length - 1]}, ${array[0]}`;
+  return newWords;
 }
 
 // Desafio 5
