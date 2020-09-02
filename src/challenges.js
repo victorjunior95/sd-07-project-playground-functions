@@ -1,22 +1,34 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(seiProgramar) {
+  if ( seiProgramar === "Trybe" && seiProgramar != ""){
+     seiProgramar = true;
+  }else {
+    seiProgramar = false;
+  }
+  return seiProgramar;
 }
+console.log(compareTrue('seiProgramar'));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  return (base * altura) / 2;
 }
+console.log(calcArea(20, 12));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(palavra) {
+  return palavra.split(" ");
 }
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  for (i = 0; i <= array.length; i += 1){
+    return array[array.length -1] + ", " + array[0];
+  }
 }
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(array));
 
 // Desafio 5
 function footballPoints() {
