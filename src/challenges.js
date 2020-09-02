@@ -25,15 +25,22 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let quantidadeDeVezes = 0;
-  let valor = 0;
-  for (let i in numbers) {
-    if (numbers[i] >= valor) {
-      valor = numbers[i];
-      quantidadeDeVezes += 1;
+  let maiorValor = 0;
+
+    for (let i in array) {
+        if (array[i] > array[i-1]) {
+        maiorValor = array[i]
+        }
     }
-  }
-  return quantidadeDeVezes;
+    let counts = 0;
+    
+    for (let i in array) {
+        if (maiorValor == array[i]) {
+            counts += 1;
+        }
+    }
+
+  return counts;
 }
 
 // Desafio 7
