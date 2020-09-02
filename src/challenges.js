@@ -188,9 +188,9 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-let numeros = [9, 1, 2, 3, 9, 5, 7];
+//let numeros = [9, 1, 2, 3, 9, 5, 7];
 
-console.log( splitSentence("go Trybe"));
+//console.log( splitSentence("go Trybe"));
 
 module.exports = {
   calcArea,
