@@ -56,21 +56,30 @@ function highestCount(arrayNumbers) {
       biggerIndex = i;
     }
   }
-  
+
   for (i = 0; i < arrayNumbers.length - 1; i += 1) {
     if (arrayNumbers[i] == arrayNumbers[biggerIndex]) {
       result += 1;
     }
   }
-  
+
   return result;
 }
-let aray = [20,20,25,20,15,25,25]
-console.log(highestCount(aray))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+  let rangeCat1 = Math.abs(mouse - cat1)
+  let rangeCat2 = Math.abs(mouse - cat2)
+  if(cat1 == cat2){
+    result = "os gatos trombam e o rato foge"
+  }
+  else if(rangeCat1>rangeCat2){
+    result = cat1
+  }
+  else(result = cat2)
+
+  return result;
 }
 
 // Desafio 8
