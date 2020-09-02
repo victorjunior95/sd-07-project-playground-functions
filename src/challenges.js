@@ -21,7 +21,7 @@ calcArea();
 function splitSentence(string) {
   // seu código aqui
   var espaços = ` `
-  var x = string.split(espaços);
+  var x = string.splitSentence(espaços);
   return x;
 }
 
