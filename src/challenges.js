@@ -9,39 +9,45 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
-  let arrayFrase = [""];
+function splitSentence(word) {
+  let arrayWord = [""];
   let x = 0;
-  for(let i = 0; i < frase.length; i++){
-    if (frase[i] != " "){
-      arrayFrase[x] += frase[i];
+  for(let i = 0; i < word.length; i++){
+    if (word[i] != " "){
+      arrayWord[x] += word[i];
     }else {
       x += 1;
-      arrayFrase[x] = "";
+      arrayWord[x] = "";
     }
   }
-  return arrayFrase;
+  return arrayWord;
 }
 
-console.log(splitSentence("VAI TRYBE pelo amor de Deus"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length-1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins*3) + (ties*1));
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highest = Math.max(...array);
+  let repetition = 0;
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === highest){
+      repetition += 1;
+    }
+  }
+  return repetition;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
