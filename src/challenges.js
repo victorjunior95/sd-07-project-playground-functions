@@ -80,7 +80,7 @@ function fizzBuzz(bus) {
       saida[i] ="fizz";
     }
     else if (bus[i]%5 === 0){
-      saida[i] ="Buzz";
+      saida[i] ="buzz";
     }
     else {
       saida[i] ="bug!";
@@ -90,8 +90,29 @@ function fizzBuzz(bus) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let codigo = []
+  for (let i = 0; i < palavra.length; i += 1){
+    if (palavra[i] == "a"){
+      codigo[i] = "1"
+    }
+    else if (palavra[i] == "e"){
+      codigo[i] = "2"
+    }
+    else if (palavra[i] == "i"){
+      codigo[i] = "3"
+    }
+    else if (palavra[i] == "o"){
+      codigo[i] = "4"
+    }
+    else if (palavra[i] == "u"){
+      codigo[i] = "5"
+    }
+    else {
+      codigo[i] = palavra[i] 
+    }
+  }
+  return codigo
 }
 function decode() {
   // seu código aqui
