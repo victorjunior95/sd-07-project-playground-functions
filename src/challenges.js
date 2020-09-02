@@ -112,10 +112,10 @@ function techList(arrayTech, name) {
   let arrayTechSorted = arrayTech.sort();
   let novoArray = [];
   for (let i in arrayTechSorted) {
-    novoArray.push = {
+    novoArray.push({
       tech: arrayTechSorted[i],
       name: name
-    }
+    })
   }
 }
 
