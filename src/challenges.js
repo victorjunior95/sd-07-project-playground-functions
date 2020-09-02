@@ -26,8 +26,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let novo = lista[lista.length-1];
+  lista.unshift(novo);
+  lista.pop();
+  return lista;
 }
 
 // Desafio 5
