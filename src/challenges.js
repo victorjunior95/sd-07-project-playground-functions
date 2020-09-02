@@ -121,33 +121,78 @@ function decode(string) {
 // Desafio 10
 function techList(array, string) {
   
-  array=array.sort();
-  let retorno=[];
-  let aux={};
-  
-
-  for (i in array)
+  if (array != null || array.length!=0)
   {
-    retorno[i]={
-      tech: array[i],
-      name: string,};
+    array=array.sort();
+    let retorno=[];
+    let aux={};
+    
+
+    for (i in array)
+    {
+      retorno[i]={
+        tech: array[i],
+        name: string,};
+    }
+    return retorno;
   }
-  return retorno;
+  else
+  {return "Vazio!"}
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if (array.length != 11)
+  {
+    return "Array com tamanho incorreto.";
+  }
+  else
+  {
+    for (i in array)
+    {
+      let repete=0;
+
+      if (array[i]<0 || array[i]>9)
+      {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+      for (j in array)
+      {
+        if (array[i]==array[j])
+        {
+          repete++;
+        }
+      }
+      if (repete>=3)
+      {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+      return "("+array[0]+array[1]+") "+array[2]+array[3]+array[4]+array[5]+array[6]+"-"+array[7]+array[8]+array[9]+array[10];
+    }
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a,b,c) {
+  return Math.abs(b-c)<a && a<b+c && Math.abs(a-c)<b && b<a+c && Math.abs(a-b)<c && c<a+b;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numeros=[1,2,3,4,5,6,7,8,9];
+  let agua=0;
+
+  for (i=0;i<string.length;i++)
+  {
+    for (j in numeros)
+    {
+      if (string.slice(i,i+1)==numeros[j])
+      {
+        agua+=numeros[j];
+      }
+    }
+  }
+  return agua+" copos de água";
 }
 
 
@@ -181,7 +226,8 @@ module.exports = {
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 //console.log(encode("hi there!"));
 //console.log(decode("h3 th2r2!"));
-console.log(highestCount([0, 0, 0]));
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-//console.log();
-//console.log();
+//console.log(highestCount([0, 0, 0]));
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+//console.log(generatePhoneNumber([2, 2, 2, 4, 5, 6, 7, 8, 9, 0, 1]));
+//console.log(triangleCheck(100,14,8));
+console.log(hydrate("0 1 2 3 4 5 6 7 8 9 "));
