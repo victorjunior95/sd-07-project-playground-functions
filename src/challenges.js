@@ -49,12 +49,23 @@ function concatName(arrayStr) {
   newStr = last + ", " + first;
   return newStr
 }
-console.log(concatName(arrayStr));
+//console.log(concatName(arrayStr));
 
 // Desafio 5
-function footballPoints() {
+let wins = 0;
+let ties = 0;
+
+function footballPoints(wins, ties) {
   // seu código aqui
+  if (wins >= 0 && ties >= 0) {
+    let winsTotal = wins * 3;
+    let pontos = winsTotal + ties;
+    return "Pontos totais: " + pontos
+  } else {
+    return "Favor verifique os dados inseridos"
+  }
 }
+console.log(footballPoints(7, 1));
 
 // Desafio 6
 function highestCount() {
