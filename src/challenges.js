@@ -74,14 +74,18 @@ function decode(decodingString) {
 
 // Desafio 10
 function techList(techs, studantName) {
-  if (techs === null) return 'Vazio!';
-  techs.sort();
-  let list = [];
-  for (let i in techs) {
-    let obj = {tech:techs[i], name:studantName}
-    list.push(obj);
+  if (techs && techs.length){ 
+    techs.sort();
+    let list = [];
+    for (let i in techs) {
+      let obj = {tech:techs[i], name:studantName}
+      list.push(obj);
+    }
+    return list;
   }
-  return list;
+  else {
+    return 'Vazio!';
+  }
 }
 
 // Desafio 11
