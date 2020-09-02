@@ -19,13 +19,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  output = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`
+  let output = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`
   return output
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  points = (wins * 3) + ties
+  let points = (wins * 3) + ties
   return points
 }
 
@@ -48,17 +48,29 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((mouse - cat1) > (mouse - cat2)) {
-    return cat2
+    return "cat2"
   } else if ((mouse - cat1) < (mouse - cat2)) {
-    return cat1
+    return "cat1"
   } else if (cat1 === cat2) {
     return "os gatos trombam e o rato foge"
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let output = []
+  for (num in array) {
+    if (array[num] % 3 === 0 && array[num] % 5 === 0) {
+      output.push("fizzBuzz")
+    } else if (array[num] % 3 === 0) {
+      output.push("fizz")
+    } else if (array[num] % 5 === 0) {
+      output.push("buzz")
+    } else {
+      output.push("bug!")
+    }
+  }
+  return output
 }
 
 // Desafio 9
