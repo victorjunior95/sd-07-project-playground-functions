@@ -71,12 +71,11 @@ function catAndMouse(cat1, cat2, mouse) {
     dist2 *= -1;
   }
   if (dist1 < dist2) {
-    return `cat1`;
+    return 'cat1';
   } else if (dist2 < dist1) {
-    return `cat2`;
-  } else {
-    return `os gatos trombam e o rato foge`;
+    return 'cat2';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
