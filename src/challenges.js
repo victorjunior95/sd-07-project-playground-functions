@@ -7,16 +7,24 @@ function compareTrue(a, b) {
   }
 }
 
+console.log(compareTrue(true, true));
+
 // Desafio 2
 function calcArea(base, heigth) {
-   (base * heigth) / 2   
+  console.log((base * heigth) / 2);   
   
 }
 
+console.log(calcArea(10, 50));
+
 // Desafio 3
-function splitSentence() {
-  
+function splitSentence(string, separador) {
+  let arrayDeStrings = string.split(separador)
 }
+
+let separador = " ";
+let string = "Go Trybe";
+console.log(splitSentence(string, separador));
 
 // Desafio 4
 function concatName() {
