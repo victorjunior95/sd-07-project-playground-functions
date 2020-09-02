@@ -189,7 +189,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array == []) {
+  if (array == "") {
     return "Vazio!";
   } else {
     let novoArray = [];
@@ -217,7 +217,7 @@ function techList(array, name) {
 }
 
 // --------------------TESTE DESAFIO 10--------------------------------
-// let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let teste = [""];
 // let teste1 = "Lucas";
 // console.log(techList(teste, teste1));
 // -------------------------------------------------------------------
