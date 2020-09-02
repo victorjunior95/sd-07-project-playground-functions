@@ -102,15 +102,56 @@ function fizzBuzz(numeros) {
   }
   return relatorio
 }
- 
+
 
 // Desafio 9
 function encode(palavra) {
-
- 
+  let palavra1 = "";
+  for (let i = 0; i < palavra.length; i += 1) {
+    if (palavra[i] === "a") {
+      palavra1 += "1"
+    }
+    else if (palavra[i] === "e") {
+      palavra1 += "2"
+    }
+    else if (palavra[i] === "i") {
+      palavra1 += "3"
+    }
+    else if (palavra[i] === "o") {
+      palavra1 += "4"
+    }
+    else if (palavra[i] === "u") {
+      palavra1 += "5"
+    } else {
+      palavra1 += palavra[i]
+    }
+  }
+  return palavra1
 }
-function decode() {
-  // seu código aqui
+
+function decode(palavra2) {
+  let palavra1 = "";
+  for (let j = 0; j < palavra2.length; j += 1) {
+    if (palavra2[j] === "1") {
+      palavra1 += "a"
+    }
+    else if (palavra2[j] === "2") {
+      palavra1 += "e"
+    }
+    else if (palavra2[j] === "3") {
+      palavra1 += "i"
+    }
+    else if (palavra2[j] === "4") {
+      palavra1 += "o"
+    }
+    else if (palavra2[j] === "5") {
+      palavra1 += "u"
+    } else {
+      palavra1+=palavra2[j]
+    }
+  }
+return palavra1
+
 }
 
 // Desafio 10
