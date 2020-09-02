@@ -16,14 +16,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
-  string = splitSentence(string);
+
   let contaString = 0;
 
   for (const key in string) {
-    contaString += 1;
+    contaString = key;
   }
 
-  let newString = `${string[(contaString - 1)]}, ${string[0]}`;
+  let newString = `${string[contaString]}, ${string[0]}`;
   return newString;
 }
 
@@ -75,7 +75,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
