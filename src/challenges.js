@@ -55,7 +55,7 @@ function highestCount(numeros) {
     }
   }
 
-  console.log(j);
+  return j;
 }
 
 // Desafio 7
