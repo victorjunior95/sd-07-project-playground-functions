@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
-  if ( bol1 == bol2 ) {
-    return true
+  if (bol1 === true && bol2 === true) {
+      return true;
   } else {
-    return false
+      return false;
   }
-}
+} 
 
 // Desafio 2
 function calcArea(base, height) {
@@ -20,9 +20,14 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {
+  let array = [];
+  array.push(strings[strings.length - 1]);
+  array.push(strings[0]);
+  let result = array.toString();
+  return result;
 }
+
 
 // Desafio 5
 function footballPoints() {
