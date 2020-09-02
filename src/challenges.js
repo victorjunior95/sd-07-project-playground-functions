@@ -7,7 +7,6 @@ function compareTrue(a,b) {
 // Desafio 2
 function calcArea(base,height) {
   return base*height/2
-  
 }
 
 // Desafio 3
@@ -17,10 +16,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(array) {
-  let newArray = []
-  newArray.push(array[array.length-1])
-  newArray.push(array[0])
-  return newArray
+  return `${array[array.length-1]}, ${array[0]}`
 }
 
 // Desafio 5
@@ -42,10 +38,16 @@ function highestCount(array) {
   return quant
 }
 
-// Desafio 7
+// Desafio 7 
 function catAndMouse(mouse, cat1, cat2) {
-  let dcat1 = mouse-cat1
-  let dcat2 = mouse-cat2
+  let dcat1 = 0
+  let dcat2 = 0
+  if (mouse>cat1){
+    dcat1 = mouse-cat1
+  } else dcat1 = cat1-mouse
+  if (mouse>cat2){
+    dcat2 = mouse-cat1
+  } else dcat2 = cat2-mouse
   if (dcat1<dcat2) {
     return "cat1"
   } else if (dcat1> dcat2) { 
@@ -69,11 +71,28 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(msg) {
+  let msgNew = msg
+  let code = {a:"1",e:"2",i:"3",o:"4",u:"5"}
+  for (let i in msg) {
+    for (let k in code){
+      if (msg[i]==k){msgNew = msgNew.replace(k, code[k])
+      }
+    } 
+  }
+  return msgNew
 }
-function decode() {
-  // seu código aqui
+
+function decode(msg) {
+  let msgNew = msg
+  let code = {1:"a",2:"e",3:"i",4:"o",5:"u"}
+  for (let i in msg) {
+    for (let k in code){
+      if (msg[i]==k){msgNew = msgNew.replace(k, code[k])
+      }
+    } 
+  }
+  return msgNew
 }
 
 // Desafio 10
@@ -113,3 +132,5 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+//"runtimeExecutable": "/home/danwhat/.nvm/versions/node/v14.9.0/bin/node"
