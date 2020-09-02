@@ -4,7 +4,7 @@ function compareTrue(valor1,valor2) {
   let b = valor2;
   let resposta = false;
   if (a == true && b == true){
-    resposta = 'true'
+    resposta = true;
     console.log(resposta);
   }else{
     console.log(resposta);
