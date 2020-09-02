@@ -66,19 +66,16 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(numbers) {
+  let newArray = [];
   for (let index in numbers) {
     if(numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      console.log('fizzBuzz');
-      return 'fizzBuzz';
+      newArray.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
-      console.log('fizz');
-      return 'fizz';
+      newArray.push('fizz');
     } else if (numbers[index] % 5 === 0) {
-      console.log('buzz');
-      return 'buzz';
+      newArray.push('buzz');
     } else {
-      console.log('bug!');
-      return 'bug!';
+      newArray.push('bug!');
     }
   }
 }
