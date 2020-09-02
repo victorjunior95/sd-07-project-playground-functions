@@ -6,9 +6,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ### 🗒 ANTES DE COMEÇAR A DESENVOLVER:
 
-#### Vídeo passo a passo de como preparar o ambiente no GitHub
-Ps. Tutorial escrito logo abaixo.
-
 https://vimeo.com/453822377
 
 1. Clone o repositório
