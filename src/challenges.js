@@ -87,3 +87,4 @@ module.exports = {
   triangleCheck,
 }
 
+compareTrue(first = true, second = true);
