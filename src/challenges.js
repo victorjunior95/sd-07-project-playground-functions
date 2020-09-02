@@ -191,19 +191,21 @@ function compare( a, b ) {
 
 function techList(arrayTech, name) {
 
+  let newList = [];
+
   for (let i in arrayTech) {
 
-    arrayTech[i].name = name;
+    newList.push({tech: arrayTech[i], name: name})
   }
 
-  if(arrayTech.length == 0){
+  if(newList.length == 0){
     return "Vazio!"
   }else{
-    return arrayTech.sort(compare);
+    return newList.sort(compare);
   }
 }
 
-let arrayTecnologies = [{ tech: "CSS" }, { tech: "HTML" }, { tech: "JavaScript" }, {tech: "Jest"}, {tech: "React"}];
+let arrayTecnologies = ["CSS", "HTML", "JavaScript", "Jest","React"];
 let myName = "Lucas";
 
 console.log(techList(arrayTecnologies,myName));
