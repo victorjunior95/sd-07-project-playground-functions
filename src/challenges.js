@@ -65,7 +65,7 @@ function fizzBuzz(array) {
   let phraseFizzBuzz = [];
   for (let x = 0; x < array.length; x += 1){
     if((array[x] % 3 === 0)&&(array[x] % 5 === 0)){
-      phraseFizzBuzz.push("fizzbuzz");
+      phraseFizzBuzz.push("fizzBuzz");
     }else if(array[x] % 3 === 0){
       phraseFizzBuzz.push("fizz");
     }else if(array[x] % 5 === 0){
@@ -92,10 +92,10 @@ function encode(crypt) {
         crypted += '3';
         break;
       case 'o':
-        crypted[x] += '4';
+        crypted += '4';
         break;
       case 'u':
-        crypted[x] += '5';
+        crypted += '5';
         break;
       default:
         crypted += crypt[x];
@@ -104,6 +104,7 @@ function encode(crypt) {
   }
   return crypted;
 }
+
 function decode(crypt) {
   let crypted = "";
   for(let x = 0;x < crypt.length; x += 1){
@@ -133,6 +134,10 @@ function decode(crypt) {
 
 // Desafio 10
 function techList(array, name) {
+  if(array === null || array === undefined || array.length === 0){
+    return "Vazio!";
+  }
+  array.sort();
   let objectTech = [];
   for(let x = 0; x < array.length; x += 1){
     objectTech.push({
