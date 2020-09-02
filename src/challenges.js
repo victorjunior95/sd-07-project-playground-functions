@@ -156,19 +156,3 @@ module.exports = {
   triangleCheck,
 } 
 
-
-
-
-console.log(compareTrue(true, true));
-console.log(calcArea(10, 20));
-console.log(splitSentence("qwe ert tyu cgh asdf asd sdzf"));
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(footballPoints(100, 4));
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(catAndMouse(-10, 11, 8));
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(encode("hi there!"));
-console.log(decode("h3 th2r2!"));
-console.log();
-console.log();
-console.log();
