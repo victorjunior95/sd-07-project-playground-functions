@@ -16,22 +16,41 @@ console.log(compareTrue());
 // Desafio 2
 function calcArea() {
   // seu código aqui
+  let base = 5;
+  let height = 5;
+  let area = (base*height)/2;
+  return area;
 }
+console.log(calcArea());
 
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+let frase = "Dia de festa";
+let resultado = frase.split(" ");
+return resultado;
 }
-
-// Desafio 4
-function concatName() {
+function splitSentence() {
   // seu código aqui
+let frase = ["João","José","Paulo","Fernando"];
+let resultado = [];
+for(let count in frase){
+  resultado[0]=frase[frase.length-1];
+  resultado[1]=frase[0];
 }
+return resultado;
+}
+console.log(splitSentence());
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
+  let wins = 7;
+  let ties = 7;
+  let totalPoints = (wins*3) + ties;
+  return totalPoints
 }
+console.log(footballPoints());
 
 // Desafio 6
 function highestCount() {
