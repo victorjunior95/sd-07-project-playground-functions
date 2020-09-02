@@ -179,6 +179,8 @@ function techList(techNames, name) {
 function generatePhoneNumber(phoneNumber) {
   // return phone number formated
 
+  if(phoneNumber.length > 11) return "Array com tamanho incorreto.";
+
   let phoneFormated = '(';
   for(let pos in phoneNumber){
     if(pos >= 0 && pos <= 1){
