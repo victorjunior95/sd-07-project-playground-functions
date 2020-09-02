@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(bolean1, bolean2) {
-  if(bolean1 && bolean2) return true;
+  if (bolean1 && bolean2) return true;
   return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -20,26 +20,26 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins*3+ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(numbers) {
   let highest = Math.max(...numbers);
   let count = 0;
-  for(let i = 0; i<numbers.length; i+=1){
-    if(numbers[i] == highest) count += 1;
+  for (let i = 0; i<numbers.length; i+=1){
+    if (numbers[i] == highest) count += 1;
   }
   return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = abs(cat1 - mouse);
-  let distance2 = abs(cat2 - mouse);
-  if(distance1 > distance2) return cat1;
-    else if(distance2 > distance1) return cat2;
-      else return "os gatos trombam e o rato foge";
+  let distance1 = Math.abs((cat1 - mouse));
+  let distance2 = Math.abs((cat2 - mouse));
+  if (distance1 > distance2) return cat1;
+  else if (distance2 > distance1) return cat2;
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
