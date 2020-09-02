@@ -29,11 +29,10 @@ function splitSentence(textString) {
   return palavras;
 }
 
-console.log(splitSentence('eu não sei'));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(textString) {
+  // retornando posição final + inicial do array
+  return `${textString[textString.length - 1]}, ${textString[0]}`;
 }
 
 // Desafio 5
