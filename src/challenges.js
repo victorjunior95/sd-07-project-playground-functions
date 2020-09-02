@@ -136,9 +136,6 @@ function decode(arraydeconde) {
 
 // Desafio 10
 function techList(tech) {
-  if (tech == []) {
-    return "Vazio!"
-  }
   let arrayreturn = [];
   let name = "Lucas"
   for ( key in tech)
@@ -150,6 +147,9 @@ function techList(tech) {
   // essa parte do código ficou confuso, achei a solução no link em :
   // "https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/" mas não ficou claro
   arrayreturn.sort((a,b) => (a.tech > b.tech) ? 1 : -1);
+  if (tech[0] == null) {
+    return "Vazio!"
+  }
   return arrayreturn
 }
 
