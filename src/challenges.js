@@ -20,9 +20,13 @@ function calcArea(base, height) {
 calcArea (2, 4);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let stringArray = string.split(" ");
+
+  return stringArray;
 }
+
+splitSentence("go trybe");
 
 // Desafio 4
 function concatName() {
