@@ -35,12 +35,12 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(vetor) {
-  let arr = [];
+  let armazem = {};
   let ultimoItem = vetor.length - 1;
-  let ultimoItem1 = vetor[ultimoItem];
-  let primeiroItem = vetor[0];
-  arr = [ultimoItem1, primeiroItem];
-  return arr;
+  armazem.ultimoItem1 = vetor[ultimoItem];
+  armazem.primeiroItem = vetor[0];
+  return armazem.ultimoItem1 + ', ' + armazem.primeiroItem; 
+  
 }
 
 // Desafio 5

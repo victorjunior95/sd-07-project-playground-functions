@@ -1,10 +1,11 @@
 // Desafio 4
 function concatName(vetor) {
-let arr = [];
-let ultimoItem = vetor.length - 1;
-let ultimoItem1 = vetor[ultimoItem];
-let primeiroItem = vetor[0];
-return arr = [ultimoItem1, primeiroItem];
+    let armazem = {};
+    let ultimoItem = vetor.length - 1;
+    armazem.ultimoItem1 = vetor[ultimoItem];
+    armazem.primeiroItem = vetor[0];
+    return armazem.ultimoItem1 + ', ' + armazem.primeiroItem; 
+    
 } 
 
 console.log(concatName(['Go', 'Trybe', 'Vai', 'Atras']));
