@@ -51,16 +51,47 @@ function highestCount(maior) {
     }
     for(let cnt in maior){
       if(top == maior[cnt]){
-        count +=1
+        count += 1
       }
     }
   return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let dist1 = 0
+let dist2 = 0
+
+if(mouse > cat1){
+  dist1 = (mouse - cat1);
 }
+else if (mouse < cat1){
+  dist1 = (cat1 -mouse);
+}
+else{
+  distcat1 = mouse;
+}
+if(mouse > cat2){
+  dist2 = (mouse - cat2);
+}
+else if (mouse < cat2){
+  dist2 = (cat2 - mouse);
+}
+else{
+  dist2 = mouse;
+}
+
+if(dist1 > dist2){
+  return cat1;
+}
+else if(dist1 < dist2){
+  return cat2;
+}
+else{
+  return "os gatos trombam e o rato foge";
+}
+
+
 
 // Desafio 8
 function fizzBuzz() {
