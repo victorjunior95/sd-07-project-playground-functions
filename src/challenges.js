@@ -1,4 +1,3 @@
-// Desafio 1
 function compareTrue(boleano1 , boleano2) {
   let boleano = true;
   if(boleano1 === true && boleano2 === true || boleano2 === true && boleano1 === true){
@@ -13,17 +12,17 @@ function compareTrue(boleano1 , boleano2) {
   } 
 }
 
-// Desafio 2
 function calcArea(base,height) {
   resultado = (base * height) / 2;
   return resultado;
 }
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(palavra) {
+  let dividindoPalavras = palavra.split();
+  return dividindoPalavras;
 }
-// Desafio 4
+
 function concatName(nomes) {
   let n = nomes.length;
   return `${nomes[n-1]}, ${nomes[0]}`;
