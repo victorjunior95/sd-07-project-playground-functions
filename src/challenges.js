@@ -28,7 +28,7 @@ let resultado = [];
 let retornoToString;
 for(let count in frase){
   resultado[0]=frase[frase.length-1];
-  resultado[1]=frase[0];
+  resultado[1]=" " + frase[0];
   resultado=resultado.toString();
 }
 retornoToString = resultado.toString();
