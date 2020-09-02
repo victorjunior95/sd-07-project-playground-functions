@@ -125,15 +125,18 @@ function decode(text) {
 // Desafio 10
 function techList(array, name) {
   let objeto = [];
-  array = array.sort();
-  for(let i in array){
-    objeto[i] = {
-      tech: array[i],
-      name: name
+  if (array.length === 0){
+    return "Vazio!"
+  } else{
+    array = array.sort();
+    for(let i in array){
+      objeto[i] = {
+        tech: array[i],
+        name: name
+      }
     }
-  }
-  let resultado = objeto.sort();
-  return resultado;
+    return objeto;
+  }  
 }
 
 // Desafio 11
