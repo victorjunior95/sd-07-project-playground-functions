@@ -30,7 +30,7 @@ function highestCount(numeros) {
   let maiornumb = 0;
   for(u = 0; u < numeros.length; u += 1){
     if(numeros[u] > maiornumb){
-      numeros[u] = maiornumb
+      maiornumb = numeros[u];
     }
   }
   for(i = 0; i < numeros.length; i += 1){
@@ -38,9 +38,8 @@ function highestCount(numeros) {
         maiornumerorep += 1
     }
   }
-  return maiornumerorep;
+  return maiornumb
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
