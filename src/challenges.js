@@ -192,6 +192,7 @@ function decode(string) {
   let array=str_low.split("");
   let array_decoded = [];
   let str_decoded="";
+  let str_decoded_low="";
   for (let key in array)
   {
     if(array[key]=="1" || array[key]=="2" ||array[key]=="3" ||array[key]=="4" ||array[key]=="5")
@@ -224,7 +225,8 @@ function decode(string) {
   {
     str_decoded=str_decoded+array_decoded[key2];
   }
-  return(str_decoded);
+  str_decoded_low=str_decoded.toLowerCase();
+  return(str_decoded_low);
 }
 
 // Desafio 10
