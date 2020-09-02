@@ -26,7 +26,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let aux=array.sort(function(a, b){return a-b}).slice();
   let repete=1;
-  for (i=aux.length-2;i>0;i--)
+  for (i=aux.length-2;i>=0;i--)
   {
     if (aux[i]==array[array.length-1])
     {
@@ -119,8 +119,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  
+  array=array.sort();
+  let retorno=[];
+  let aux={};
+  
+
+  for (i in array)
+  {
+    retorno[i]={
+      tech: array[i],
+      name: string,};
+  }
+  return retorno;
 }
 
 // Desafio 11
@@ -156,3 +168,20 @@ module.exports = {
   triangleCheck,
 } 
 
+
+
+
+//console.log(compareTrue(true, true));
+//console.log(calcArea(10, 20));
+//console.log(splitSentence("qwe ert tyu cgh asdf asd sdzf"));
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(footballPoints(100, 4));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+//console.log(catAndMouse(-10, 11, 8));
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
+//console.log(encode("hi there!"));
+//console.log(decode("h3 th2r2!"));
+console.log(highestCount([0, 0, 0]));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+//console.log();
+//console.log();
