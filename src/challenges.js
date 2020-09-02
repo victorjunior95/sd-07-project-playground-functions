@@ -74,21 +74,21 @@ function fizzBuzz(bus) {
   let saida = []
   for (let i = 0; i < bus.length; i += 1) {
     if (bus[i]%3 === 0 && bus[i]%5 === 0) {
-      saida[i] = "fizzBuzz";
+      saida[i] ="fizzBuzz";
     }
     else if (bus[i]%3 === 0){
-      saida[i] = "fizz";
+      saida[i] ="fizz";
     }
     else if (bus[i]%5 === 0){
-      saida[i] = "Buzz";
+      saida[i] ="Buzz";
     }
     else {
-      saida[i] = "bug!";
+      saida[i] ="bug!";
     }
   }
   return saida;
 }
-fizzBuzz([2, 15, 7, 9, 45]);
+
 // Desafio 9
 function encode() {
   // seu código aqui
