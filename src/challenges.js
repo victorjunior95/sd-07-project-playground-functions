@@ -44,8 +44,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = mouse - cat1;
   let dist2 = mouse - cat2;
 
-  let dist1 = Math.abs(dist1);
-  let dist2 = Math.abs(dist2);
+  dist1 = Math.abs(dist1);
+  dist2 = Math.abs(dist2);
 
   if (dist1 < dist2) {
     return 'cat1';
@@ -153,7 +153,7 @@ function generatePhoneNumber(array) {
     }
   }
 
-  const stringNumber = (array.map(function (n) {return n.toString() };)).join('');
+  const stringNumber = (array.map(function (n) {return n.toString(); })).join('');
 
   const dddNum = stringNumber.slice(0, 2);
   const part1Num = stringNumber.slice(2, 7);
