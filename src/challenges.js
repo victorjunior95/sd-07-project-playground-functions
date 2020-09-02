@@ -80,7 +80,7 @@ return(resultado)
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   let string = [];
 for (let i = 0; i < array.length; i += 1)
     if (array[i] % 3 != 0) {
