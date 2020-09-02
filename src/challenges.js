@@ -66,7 +66,7 @@ return numbersArr
 }
 
 // Desafio 9
-//referencia de conteúdo no dev media sobre o replace()
+//referencia de conteúdo no dev media sobre o .replace()
 function encode(str) {
     str = str.replace(/a/g, 1);
     str = str.replace(/e/g, 2);
@@ -76,15 +76,17 @@ function encode(str) {
 
 return str
 }
+
 function decode(str) {
-    str = str.replace(/1/g, a);
-    str = str.replace(/2/g, e);
-    str = str.replace(/3/g, i);
-    str = str.replace(/4/g, o);
-    str = str.replace(/5/g, u);
+    str = str.replace(/1/g, "a");
+    str = str.replace(/2/g, "e");
+    str = str.replace(/3/g, "i");
+    str = str.replace(/4/g, "o");
+    str = str.replace(/5/g, "u");
 
 return str
 }
+console.log(decode("Br5n1 M1rq52s d2 4l3v23r1 F4ns2c1"))
 
 // Desafio 10
 function techList() {
