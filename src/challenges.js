@@ -23,7 +23,7 @@ calcArea(base, height)
 
 
 // Desafio 3
-let sentence = "Go Trybe"
+let sentence = 'Go Trybe';
 function splitSentence(a) {
   // seu código aqui
   return a.split(' ');
@@ -65,7 +65,7 @@ function fizzBuzz(a) {
       message.push("fizzBuzz");
     } else if (a[i] % 3 === 0) {
       message.push("fizz");
-    } else if (a[i] % 5 === 0) { 
+    }else if(a[i] % 5 === 0){ 
       message.push("buzz");
     } else {
       message.push("bug!");
