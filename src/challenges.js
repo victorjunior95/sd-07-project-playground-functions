@@ -171,7 +171,7 @@ function generatePhoneNumber(phoneNumber) {
   if(phoneNumber.length !== 11) return "Array com tamanho incorreto.";
   for(let i of phoneNumber){
     for(let j = 0; j < 10; j += 1){
-      if(i !== j)return "não é possível gerar um número de telefone com esses valores";
+      if(i != j)return "não é possível gerar um número de telefone com esses valores";
     }
   }
   let phoneFormated = '(';
