@@ -24,8 +24,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome) {
+  let nomeInvertido = [];
+  nomeInvertido = nome[nome.length - 1];
+  nomeInvertido += ", " + nome[0];
+  return nomeInvertido;
 }
 
 // Desafio 5
