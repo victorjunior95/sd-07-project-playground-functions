@@ -19,9 +19,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  // seu código aqui  
+  // seu código aqui
+  return sentence.split(' ');
 }
-
+console.log(splitSentence('Go Trybe'));
 // Desafio 4
 
 function concatName(array) {
@@ -81,14 +82,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
-  let coding = {
-    a : 1,
-    e : 2,
-    i : 3,
-    o : 4,
-    u : 5,
-  }
+  // seu código aqui  
 }
 function decode() {
   // seu código aqui
