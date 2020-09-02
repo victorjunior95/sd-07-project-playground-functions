@@ -35,8 +35,6 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   let saida;
-  //saida.push(array[array.length - 1]);
-  //saida.push(array[0]);
   saida= array[array.length - 1]+', ' + array[0]
   return saida;
 }
@@ -63,20 +61,21 @@ function highestCount(array) {
   }
   return (contador);
 }
-console.log(highestCount([9, 1, 2, 3, 9, 9, 7]));
+//console.log(highestCount([9, 1, 2, 3, 9, 9, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = math.abs(cat1 - mouse);
-  let dist2 = math.abs(cat2 - mouse);
+  let dist1 = Math.abs(cat1 - mouse);
+  let dist2 = Math.abs(cat2 - mouse);
   if (dist1 < dist2) {
-    return cat1;
+    return (cat1);
   } else if (dist2 < dist1) {
-    return cat2;
+    return (cat2);
   } else {
     return "os gatos trombam e o rato foge";
   }
   // seu código aqui
 }
+console.log(catAndMouse(5,1,9))
 
 // Desafio 8
 function fizzBuzz(array) {
