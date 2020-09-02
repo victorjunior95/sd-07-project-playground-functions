@@ -152,8 +152,6 @@ function techList(tech) {
   return arrayreturn
 }
 
-console.log(techList(["macarrão","css","mandioca","amendoim","andy a fofinha maioral"]))
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
