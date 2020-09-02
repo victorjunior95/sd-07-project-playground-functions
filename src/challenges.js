@@ -23,7 +23,7 @@ function calcArea(base,height) {
 function splitSentence() {
 
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 4
 function concatName(nomes) {
   let n = nomes.length;
@@ -33,7 +33,6 @@ console.log(footballPoints(14,8));
 function footballPoints(wins,ties) {
   wins = wins * 3;
   ties = ties;
-  re
 }
 
 // Desafio 6
