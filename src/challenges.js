@@ -33,7 +33,6 @@ function highestCount(arrayNumeros) {
   // seu código aqui
   let count = 0;
   let higherCount = 0;
-  let highestCountNumber = 0;
 
   for (i = 0; i < arrayNumeros.length; i += 1) {
     count = 0;
@@ -45,11 +44,10 @@ function highestCount(arrayNumeros) {
 
     if (count > higherCount) {
       higherCount = count;
-      highestCountNumber = arrayNumeros[i];
     }
   }
 
-  return highestCountNumber;
+  return higherCount;
 
 }
 
