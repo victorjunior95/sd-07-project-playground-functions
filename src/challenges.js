@@ -161,9 +161,50 @@ let testeDecode = decode(testeEncode);
 console.log(testeDecode);
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+//Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
+
+//Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
+
+//{
+//  tech: "NomeTech",
+//  name: name
+//}
+//Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
+
+//A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
+
+function techList(tecnologias, name) {
+
+  let arrayTech = [];
+
+  for (i = 0; i < tecnologias.length; i += 1) {
+    objeto = {
+      tech: tecnologias[i],
+      name: name
+    }
+    arrayTech.push(objeto);
+  }
+
+  function compare(a, b) {
+    let tech1 = a.tech;
+    let tech2 = b.tech;
+  
+    let comparison = 0;
+    if (tech1 > tech2) {
+      comparison = 1;
+    } else if (tech1 < tech2) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+  arrayTech.sort(compare);
+  return arrayTech;
 }
+
+
+
+let testeTechList = techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+console.log(testeTechList);
 
 // Desafio 11
 function generatePhoneNumber() {
