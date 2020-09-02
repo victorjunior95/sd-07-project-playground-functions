@@ -84,9 +84,6 @@ function fizzBuzz(array) {
   return resultado;
 }
 
-let string = "Renan Oliveira";
-console.log(string.charAt(0));
-
 // Desafio 9
 function encode(string) {
   let arrayChar = [];
@@ -109,16 +106,37 @@ function encode(string) {
   let encoded = "";
 
   for (i in arrayChar) {
-    encoded.concat(arrayChar[i])
+    encoded += arrayChar[i];
   }
+
   return encoded;
 }
 
-console.log(encode("Renan OLiveira"))
+function decode(string) {
+  let arrayChar = [];
+  for (i in string) {
+    if (string[i] === "1") {
+      arrayChar.push("a");
+    } else if (string[i] === "2") {
+      arrayChar.push("e");
+    } else if (string[i] === "3") {
+      arrayChar.push("i");
+    } else if (string[i] === "4") {
+      arrayChar.push("o");
+    } else if (string[i] === "5") {
+      arrayChar.push("u");
+    } else {
+      arrayChar.push(string[i]);
+    }
+  }
 
+  let decoded = "";
 
-function decode() {
-  // seu código aqui
+  for (i in arrayChar) {
+    decoded += arrayChar[i];
+  }
+
+  return decoded;
 }
 
 // Desafio 10
