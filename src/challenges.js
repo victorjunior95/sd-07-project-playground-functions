@@ -21,10 +21,10 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   return 3*wins,ties;
-
+}
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  aux=array.sort(function(a, b){return a-b}).slice;
 }
 
 // Desafio 7
