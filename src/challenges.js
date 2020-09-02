@@ -30,12 +30,14 @@ function splitSentence(param) {
 }
 
 // Desafio 4
+let nomes = ["Vitor","Higor","Lucas","Silvia"]
 function concatName(param) {
   let Array_inverte = param.reverse();
-  let tamanho = Array_inverte.length -1;
+  let tamanho = param.length -1;
   let Array_reverse = Array_inverte.reverse();
-  console.log(Array_reverse[tamanho]+','+Array_inverte[0]);
+  console.log("'"+Array_reverse[tamanho]+','+''+Array_inverte[0]+"'");
 }
+concatName(nomes);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
