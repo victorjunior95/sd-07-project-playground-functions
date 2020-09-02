@@ -36,18 +36,47 @@ function concatName(array) {
 }
 
 // Desafio 5
-let wins=4
-let ties=3
+
 function footballPoints(wins,ties) {
   // seu código aqui
   let pontos=((wins*3)+ties);
   return(pontos)
 }
-console.log(footballPoints(wins,ties));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(array) {
+  let maior=0,c=0;
+  for (let key in array)
+  {
+      for (let key2 in array)
+          if (array[key]>array[key2]){
+              if (array[key]>maior){
+                  maior=array[key];
+              }
+              else{
+                  maior=maior;
+              }
+          }
+          else
+          {   
+              if (array[key2>maior]){
+                  maior=array[key2];
+                 
+              }
+              else{
+                  maior=maior;
+              }
+          }
+  }
+  for (let i=0; i<array.length; i++)
+  {
+    if (maior == array[i])
+    {
+      c++;
+    }
+  }
+  return(c);
 }
 
 // Desafio 7
