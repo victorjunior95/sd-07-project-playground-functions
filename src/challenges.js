@@ -20,8 +20,8 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-    lastAndFirst = word[word.length - 1] + "," + word[0];
+function concatName(word) {
+    lastAndFirst = word[word.length - 1] + ", " + word[0];
     return lastAndFirst;
 }
 
