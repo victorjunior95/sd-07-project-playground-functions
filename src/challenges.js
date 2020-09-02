@@ -102,16 +102,71 @@ function fizzBuzz(array) {
   return stringArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let array = [];
+  let newString = "";
+  for (let index = 0; index < string.length; index++) {
+    switch (string[index]) {
+      case "a":
+        array.push("1");
+        break;
+      case "e":
+        array.push("2");
+        break;
+      case "i":
+        array.push("3");
+        break;
+      case "o":
+        array.push("4");
+        break;
+      case "u":
+        array.push("5");
+        break;
+
+      default:
+        array.push(string[index]);
+        break;
+    }
+  }
+  for (let index = 0; index < array.length; index++) {
+    newString = `${newString}${array[index]}`;
+  }
+  return newString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let array = [];
+  let newString = "";
+  for (let index = 0; index < string.length; index++) {
+    switch (string[index]) {
+      case "1":
+        array.push("a");
+        break;
+      case "2":
+        array.push("e");
+        break;
+      case "3":
+        array.push("i");
+        break;
+      case "4":
+        array.push("o");
+        break;
+      case "5":
+        array.push("u");
+        break;
+
+      default:
+        array.push(string[index]);
+        break;
+    }
+  }
+  for (let index = 0; index < array.length; index++) {
+    newString = `${newString}${array[index]}`;
+  }
+  return newString;
 }
 
+console.log(decode("h3 th2r2!"));
 // Desafio 10
 function techList() {
   // seu código aqui
