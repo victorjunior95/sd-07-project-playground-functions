@@ -84,11 +84,32 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentence) {
+  let newSentence = "";
+  for (let letter in sentence) {
+    if (sentence[letter] === sentence[letter].toLowerCase()) {
+      sentence[letter] === 'a' ? newSentence += '1' : 
+      sentence[letter] === 'e' ? newSentence += '2' : 
+      sentence[letter] === 'i' ? newSentence += '3' :
+      sentence[letter] === 'o' ? newSentence += '4' : 
+      sentence[letter] === 'u' ? newSentence += '5' : newSentence += sentence[letter];
+    } else {
+      newSentence += sentence[letter]
+    }
+  }
+  return newSentence;
 }
-function decode() {
-  // seu código aqui
+
+function decode(sentence) {
+  let newSentence = "";
+  for (let letter in sentence) {
+    sentence[letter] === '1' ? newSentence += 'a' : 
+    sentence[letter] === '2' ? newSentence += 'e' : 
+    sentence[letter] === '3' ? newSentence += 'i' :
+    sentence[letter] === '4' ? newSentence += 'o' : 
+    sentence[letter] === '5' ? newSentence += 'u' : newSentence += sentence[letter];
+  }
+  return newSentence;
 }
 
 // Desafio 10
