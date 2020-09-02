@@ -3,12 +3,14 @@ function compareTrue(arg1, arg2) {
   return (arg1 && arg2);
 }
 
-console.log(compareTrue(false,false));
+//console.log(compareTrue(false,false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height) / 2 ;
 }
+
+console.log(calcArea(10,5));
 
 // Desafio 3
 function splitSentence() {
