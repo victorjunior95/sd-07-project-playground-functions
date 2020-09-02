@@ -1,8 +1,10 @@
 // Começando...
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firstValue, secondValue) {
+  let compareResult = firstValue && secondValue;
+  return compareResult;
 }
+
 
 // Desafio 2
 function calcArea() {
