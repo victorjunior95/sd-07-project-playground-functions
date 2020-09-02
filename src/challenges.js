@@ -1,7 +1,6 @@
 // Desafio 1
-function compareTrue() {
-  let temDinheiro = true;
-  let temVacinaDeCovid = true;
+function compareTrue(temDinheiro, temVacinaDeCovid) {
+
   let podeViajar = true;
   
   if (temDinheiro && temVacinaDeCovid) {
@@ -9,21 +8,28 @@ function compareTrue() {
   }
   return podeViajar; 
 }
-console.log(compareTrue());
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+ 
+  let area = (base*height/2);
+
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(umaString) {
+  umaString = "go Trybe";
+  umArray = umaString.split(" ")
+
+  return umArray;
 }
+
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
 }
 
 // Desafio 5
