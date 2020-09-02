@@ -178,10 +178,15 @@ function techList(tecnologias, name) {
     objectTech.push({tech: tecnologiasCrescente[i], name: name});
   }
   
+  if (tecnologias.length === 0){
+    return "Vazio!";
+  }
+  else{
   return objectTech;
+  }
 }
 
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+techList([], "Lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
