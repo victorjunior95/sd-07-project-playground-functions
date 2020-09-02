@@ -9,5 +9,24 @@ function compareTrue(val1,val2){
     }
 }
 console.log(compareTrue (true,false))
-console.log(compareTrue (false,false))
-console.log(compareTrue (true,true))
+
+//**2 - Área do triângulo** 
+console.log ('**2 - Área do triângulo** ')
+
+function calcArea(base,height){
+    return(base *height/2)
+}
+
+//**3 - Dividindo a frase** 
+console.log ('**3 - Dividindo a frase**')
+//Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['go', 'Trybe']`.
+
+function splitSentence (frase){
+    let copia = frase;
+    let partida=[]
+    let palavra
+    for (let i=0;i<copia;length;i+=1){
+        for (let j=0;)
+        if ()
+    }
+}
