@@ -71,17 +71,19 @@ function highestCount(listaNumeros) {
 console.log(highestCount(numeros));
 
 // Desafio 7
-let gato1 = 10;
-let gato2 = 15;
-let rato = 25;
+let gato1 = 4;
+let gato2 = 22;
+let rato = 10;
 
 function catAndMouse(mouse, cat1, cat2) {
   let retorno = '';
-  if ((mouse - cat1) < (mouse - cat2)) {
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
+  if ((distCat1) < (distCat2)) {
     retorno = 'cat1';
-  } else if ((mouse - cat1) > (mouse - cat2)) {
+  } else if ((distCat1) > (distCat2)) {
     retorno = 'cat2';
-  } else if ((mouse - cat1) === (mouse - cat2)) {
+  } else if ((distCat1) === (distCat2)) {
     retorno = 'os gatos trombam e o rato foge';
   }
   return retorno;
