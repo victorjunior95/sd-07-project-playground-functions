@@ -150,8 +150,8 @@ function generatePhoneNumber(arrayNumber) {
 function triangleCheck(lineA, lineB, lineC) {
   let a = lineA<(lineB+lineC) && lineA>Math.abs(lineB-lineC);
   //let b = lineB<(lineA+lineC) && lineA>Math.abs(lineA-lineC);
+  let b = true;
   let c = lineC<(lineA+lineB) && lineA>Math.abs(lineA-lineB);
-  console.log(a,b,c);
   return a && b && c;
 }
 
