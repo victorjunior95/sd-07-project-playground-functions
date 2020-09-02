@@ -116,7 +116,7 @@ function encode(arrString) {
         else if(arrString[i] === 'i'){
             encodeString[i] = 3;
         }
-        else if (arrString[i] === '0') {
+        else if (arrString[i] === 'o') {
             encodeString[i] = 4;
         }
         else if (arrString[i] === 'u') {
