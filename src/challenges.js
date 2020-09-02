@@ -30,9 +30,12 @@ function splitSentence(param) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param) {
+  let Array_inverte = param.reverse();
+  let tamanho = Array_inverte.length -1;
+  console.log(Array_inverte[0]+','+testDesafio4[tamanho]);
 }
+concatName(testDesafio4);
 
 // Desafio 5
 function footballPoints() {
