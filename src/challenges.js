@@ -1,8 +1,15 @@
-
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  let temDinheiro = true;
+  let temVacinaDeCovid = true;
+  let podeViajar = true;
+  
+  if (temDinheiro && temVacinaDeCovid) {
+    podeViajar = true
+  }
+  return podeViajar; 
 }
+console.log(compareTrue());
 
 // Desafio 2
 function calcArea() {
