@@ -12,7 +12,7 @@ function calcArea(base, height) {
   return (base * height) / 2
 }
 
-
+// Desafio 3
 function splitSentence(palavra) {
   let array = [];
   for (key in palavra) {
@@ -147,31 +147,65 @@ function decode(palavra2) {
     else if (palavra2[j] === "5") {
       palavra1 += "u"
     } else {
-      palavra1+=palavra2[j]
+      palavra1 += palavra2[j]
     }
   }
-return palavra1
+  return palavra1
 
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(lista, name) {
+  let tecnologias = {
+    tech: '',
+    name: ''
 
+  }
+  let lista2 = []
+  if (lista.length === 0) {
+    return "Vazio!"
+  }
+  for (key in tecnologias) {
+    for (let i = 0; i < lista.length; i += 1) {
+
+      lista2.push(tecnologias['tech'] = lista[i])
+      lista2.push(tecnologias['name'] = name)
+    }
+  }
+
+
+  return lista2
+}
+console.log(techList(["JS", "React", "HTML", "CSS"], "Guilherme"))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  if(lineA < lineB+lineC && lineA > lineA -(lineB+lineC)){
+      return true
+  }
+  else if(lineB < lineA+lineC && lineB > lineB -(lineA+lineC)){
+    return true
+  }
+  else if(lineC < lineB+lineA && lineC > lineC -(lineB+lineA)){
+ return true
+  } else {
+    return false
+  }
 }
-
+console.log(triangleCheck(10,10,10))
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+  let soma = 0;
+  for (let i = 0; i < bebida.length; i += 1) {
+    if (!isNaN(bebida[i]) === true) {
+      soma += Number(bebida[i])
+    }
+  }
+  return `${soma} copos de água`
 }
 
 
