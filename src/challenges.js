@@ -136,21 +136,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(tenologias, nome) {
+function techList(tecnologias, nome) {
   let saida = [];
 
-  if (tenologias.length === 0) {
-      saida = "Vazio!";
+  if (tecnologias.length === 0) {
+    saida = "Vazio!";
   } else {
-      for (const key in tenologias) {
-          saida.push({
-              tech: tecnologias[key],
-              name: nome,
-          })
-      }
-      console.log("executei aqui")
+    for (const key in tecnologias) {
+      saida.push({
+        tech: tecnologias[key],
+        name: nome,
+      })
+    }
+    console.log("executei aqui")
   }
-
   return saida;
 }
 
