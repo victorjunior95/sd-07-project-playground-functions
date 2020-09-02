@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distancia2 < 0) {
     distancia2 *= -1;
   }
-  if (cat1 === cat2) {
+  if (distancia1 === distancia2) {
     return "os gatos trombam e o rato foge";
   }
   else{
@@ -70,8 +70,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(bus) {
+  let saida = []
+  for (let i = 0; i < bus; i += 1) {
+    if (bus[i]%3 === 0 && bus[i]%5 === 0) {
+      saida[i] = "fizzBuzz";
+    }
+    else if (bus[i]%3 === 0){
+      saida[i] = "fizz";
+    }
+    else if (bus[i]%5 === 0){
+      saida[i] = "Buzz";
+    }
+    else {
+      saida[i] ="bug!"
+    }
+  }
+  return saida;
 }
 
 // Desafio 9
