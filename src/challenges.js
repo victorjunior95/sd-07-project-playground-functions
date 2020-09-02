@@ -20,8 +20,8 @@ function splitSentence(phrase) {
 function concatName(arraysname) {
   // seu código aqui
   const firstPos = arraysname[0];
-  const secondPos = arraysname[arraysname.lenght - 1];
-  const final = firstPos + ', ' + secondPos;
+  const finalPos = arraysname[arraysname.lenght - 1];
+  const final = finalPos + ', ' + firstPos;
   return final;
 }
 
