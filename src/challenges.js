@@ -49,10 +49,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let rato = mouse;
   let gato1 = cat1;
   let gato2 = cat2;
+  let distanciaGato1 = Math.abs(rato - gato1);
+  let distanciaGato2 = Math.abs(rato - gato2);
 
-  if (rato - gato1 < rato - gato2) {
+  if (distanciaGato1 < distanciaGato2) {
     return gato1;
-  } else if (rato - gato1 > rato - gato2) return cat2;
+  } else if (distanciaGato1 > distanciaGato2) return cat2;
 
   return "os gatos trombam e o rato foge";
 }
