@@ -46,12 +46,12 @@ function highestCount(array) {
 
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  if ((mouse - cat1) > (mouse - cat2)) {
+function catAndMouse(mouse, gato1, gato2) {
+  if ((mouse - gato1) > (mouse - gato2)) {
     return "cat1"
-  } else if ((mouse - cat1) < (mouse - cat2)) {
+  } else if ((mouse - gato1) < (mouse - gato2)) {
     return "cat2"
-  } else if (cat1 === cat2) {
+  } else if (gato1 === gato2) {
     return "os gatos trombam e o rato foge"
   }
 }
@@ -110,8 +110,12 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, nome) {
+  for (obj in array) {
+    array[obj] = new Object(array[obj])
+    array[obj].name = nome
+  }
+  return array
 }
 
 // Desafio 11
