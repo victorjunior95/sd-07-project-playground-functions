@@ -34,16 +34,22 @@ console.log(splitSentence(sentence));
 let listaPalavras = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 
 function concatName(arrayPalavras) {
-  let frase = arrayPalavras[arrayPalavras.length - 1] + ', ' + arrayPalavras[0];
+  let frase = `${arrayPalavras[arrayPalavras.length - 1]}, ${arrayPalavras[0]}`;
   return frase;
 }
 
 console.log(concatName(listaPalavras));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let vitorias = 5;
+let empates = 10;
+
+function footballPoints(wins, ties) {
+  totalPontos = (wins * 3) + ties;
+  return totalPontos;
 }
+
+console.log(footballPoints(vitorias, empates));
 
 // Desafio 6
 function highestCount() {
