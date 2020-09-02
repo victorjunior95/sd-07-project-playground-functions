@@ -39,11 +39,11 @@ function highestCount(numeros) {
     }
   }
   for (let j = 0; j < numeros.length; j += 1){
-    if (mairo === numeros.length){
+    if (maior === numeros.length){
       repeticao += 1;
     }
   }
-  return repeticao
+  return repeticao;
 }
 
 // Desafio 7
