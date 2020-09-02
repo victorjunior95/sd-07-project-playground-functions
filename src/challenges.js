@@ -22,11 +22,12 @@ function splitSentence(texto) {
   return result;
 }
 
-console.log(splitSentence("Go Trybe"))
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let ultimo = names[names.length-1];
+  let primeiro = names[0];
+  let result = `${ultimo}, ${primeiro}`;
+  return result;
 }
 
 // Desafio 5
