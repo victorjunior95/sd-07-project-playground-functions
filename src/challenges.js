@@ -2,9 +2,9 @@
 function compareTrue(a, b) {
   let co = true;
   if ( a === co && b === co ) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 
@@ -70,7 +70,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-compareTrue (false, false);
+
 
 module.exports = {
   calcArea,
