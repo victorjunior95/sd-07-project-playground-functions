@@ -1,5 +1,6 @@
 // Desafio 1
 function compareTrue(B1 , B2) {
+
     if (B1 && B2){
       return true;
     } else {
@@ -29,7 +30,7 @@ function compareTrue(B1 , B2) {
     return array;
     // seu código aqui
   }
-  
+
   // Desafio 4
   function concatName(arrays) {
         return [arrays[arrays.length-1] , arrays[0]];
@@ -99,9 +100,7 @@ function compareTrue(B1 , B2) {
     return vogaisnum;
     // seu código aqui
   }
-  let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-    let nome = "Lucas";
-    console.log(techList(tech , nome));
+
   // Desafio 10
   function techList(tech , name) {
      name = new Object(name);
