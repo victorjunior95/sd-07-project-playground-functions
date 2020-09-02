@@ -1,24 +1,24 @@
 // Desafio 1
 function compareTrue(param, param1) {
   // Função opedor de lógico 
-  if(param == true && param1 == true){
+  if(param === true && param1 === true) {
     return true;
-  }else{
-    return false;
+  }else {
+    return false; 
   }
 }
-compareTrue(false,true)
+
 // Desafio 2
 function calcArea(base, height) {
-  // Função que calcula a área
-  let area = (base*height) / 2;
+// Função que calcula a área
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(text) {
   // Função separa frases em palavras
-  let result = text.split(" ");
+  let result = text.split(' ');
 
   return result;
 }
@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
   for (let i = 0; i < wins; i+=1){
       victory += 3;
   }
-  for (let i = 0; i < ties; i+=1){
+  for (let i = 0; i < ties; i +=1){
       scoreTies +=1
   }
   let points = scoreTies + victory;
@@ -48,12 +48,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-let numbers = [9, 1, 2, 3, 9, 5, 7];
-let bignumber = 0;
-function highestCount() {
-  // seu código aqui
+//Função descobre qual maior numero do array e conta quantas vezes ele se repete dentro do mesmo.
+function highestCount(numbers) {
+  let bigNumber = Math.max.apply(null, numbers)//Maior numero 
+  let numberRepeat = 0;
+  for (let i in numbers) {//verifica ocorrencias
+     if (bigNumber === numbers[i]) {
+       numberRepeat++;
+         }
+     }
+     return numberRepeat;
 }
-
+    
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
