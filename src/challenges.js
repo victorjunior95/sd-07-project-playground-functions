@@ -116,14 +116,12 @@ function decode(sentence) {
 // Desafio 10
 function techList(array, theName) {
   let structuredArray = [];
-  let structureObjects = {};
   array.sort();
   if (array === '') {
     return 'Vazio!';
   } else {
     for (let tech in array) {
-      structureObjects = { tech: `${array[tech]}`, name: `${theName}` };
-      structuredArray.push(structureObjects);
+      structureArray[tech] = { tech: `${array[tech]}`, name: `${theName}` };
     }
   }
   return structuredArray;
