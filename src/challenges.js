@@ -23,7 +23,7 @@ function concatName(string) {
     contaString += 1;
   }
 
-  let newString = `${string[(contaString - 1)]} ${string[0]}`;
+  let newString = `${string[(contaString - 1)]}, ${string[0]}`;
   return newString;
 }
 
