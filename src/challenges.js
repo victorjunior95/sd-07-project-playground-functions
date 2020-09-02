@@ -179,7 +179,7 @@ function techList(techNames, name) {
 function generatePhoneNumber(phoneNumber) {
   // return phone number formated
 
-  if(phoneNumber.length > 11) return "Array com tamanho incorreto.";
+  if(phoneNumber.length !== 11) return "Array com tamanho incorreto.";
   for(let i of phoneNumber){
     if(
       i != 0 || i != 1 || i != 2 || i != 3 || i != 4 || i != 5 || i != 6 || i != 7 ||
