@@ -40,7 +40,6 @@ function splitSentence(string) {
     array.push(newString);
   }
 }
-console.log(splitSentence("go trybe"))
 
 // Desafio 4
 function concatName(array) {
@@ -166,7 +165,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(array,name) {
+function techList(array, name) {
   if (array.length == 0) {
     return "Vazio!";
   }
@@ -174,15 +173,15 @@ function techList(array,name) {
   let newArray = array;
 
   for (let i = 1; i < array.length; i++) {
-  for (let j = 0; j < i; j++) {
-    if (newArray[i] < newArray[j]) {
-      let position = newArray[i];
-      newArray[i] = newArray[j];
-      newArray[j] = position;
+    for (let j = 0; j < i; j++) {
+      if (newArray[i] < newArray[j]) {
+        let position = newArray[i];
+        newArray[i] = newArray[j];
+        newArray[j] = position;
+      }
     }
   }
-}
-  
+
   for (let index = 0; index < newArray.length; index++) {
     let object = {};
     object.tech = newArray[index];
@@ -192,9 +191,53 @@ function techList(array,name) {
   return returnArray;
 }
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let counter = {};
+  let stringPhone = "(";
+
+  if (array.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] < 0 || array[index] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (const index in array) {
+    if (counter.hasOwnProperty(`${array[index]}`)) {
+      counter[`${array[index]}`] += 1;
+    } else {
+      counter[`${array[index]}`] = 1;
+    }
+  }
+
+  for (const key in counter) {
+    if (counter[key] >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (let index = 0; index < 2; index++) {
+    stringPhone = `${stringPhone}${array[index]}`;    
+  }
+
+  stringPhone = `${stringPhone}) `;
+
+  for (let index = 2; index < 7; index++) {
+    stringPhone = `${stringPhone}${array[index]}`;    
+  }
+
+  stringPhone = `${stringPhone}-`;
+  
+  for (let index = 7; index < 11; index++) {
+    stringPhone = `${stringPhone}${array[index]}`;    
+  }
+
+  return stringPhone;
 }
+
+console.log(generatePhoneNumber( [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
