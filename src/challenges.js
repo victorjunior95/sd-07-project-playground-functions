@@ -56,7 +56,14 @@ function highestCount(array) {
       maior = array[i];
     }
   }
+  for (let i in array){
+    if (array[i]==maior){
+      contador +=1;
+    }
+  }
+  return (contador);
 }
+console.log(highestCount([9, 1, 2, 3, 9, 9, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = math.abs(cat1 - mouse);
