@@ -237,9 +237,23 @@ return isTriangle;
 //console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(comanda) {
+  let numBebidas = comanda.match(/\d/g);
+  let somaComanda = 0;
+  for (let i in numBebidas){
+      somaComanda += parseInt(numBebidas[i]);
+  }
+  if (somaComanda == 1){
+  return `${somaComanda} copo de água`;
+} else {
+  return `${somaComanda} copos de água`;
 }
+}
+//console.log(hydrate("1 cachaça"));
+
+//let teste = "1 copo, 2 copos de suco, 5 refri";
+//let retorno = teste.match(/\d/g);
+//console.log(retorno);
 
 
 module.exports = {
