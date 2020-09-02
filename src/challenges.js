@@ -1,9 +1,9 @@
 // Desafio 1
-function compareTrue(a, b) {
-  a = 10;
-  b = '10';
-  if (a === 10 && b === 10) {
-    return true
+function compareTrue() {
+  let dormir = true;
+  let acordado = false;
+  if (dormir == true && acordado == true) {
+    return true;
   } else {
     return false;
   }
