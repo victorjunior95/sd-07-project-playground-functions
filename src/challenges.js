@@ -91,13 +91,27 @@ function footballPoints(wins, ties) {
   return total;
   // return console.log("resultado do desafio 5 é", total);
 }
-
 // footballPoints(wins, ties);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+let numbers = [1,3,5,6,7,8,8,7,8,3,4,5,7];
+function highestCount(numbers) {
+  let maior =0;
+  for (let i=0; i<numbers.length; i += 1){
+    if (numbers [i] > maior){
+        maior = numbers [i];
+    }
+  }
+  let countBigger = 0;
+  for (let j=0; j<numbers.length; j += 1){
+    if (numbers [j] == maior){
+      countBigger = countBigger +1
+    }
+  }
+  return total;
+  // return console.log("resultado do desafio 6 é", countBigger);
 }
+// highestCount(numbers);
 
 // Desafio 7
 function catAndMouse() {
