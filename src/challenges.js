@@ -132,19 +132,19 @@ function decode(string) {
     switch (stringChange[i]) {
       case '1':
         stringChange[i] = 'a';
-          break;
+            break;
       case '2':
         stringChange[i] = 'e';
-          break;
+            break;
       case '3':
         stringChange[i] = 'i';
-          break;
+            break;
       case '4':
         stringChange[i] = 'o';
-          break;
+            break;
       case '5':
         stringChange[i] = 'u';
-          break;
+            break;
       default:
         stringChange[i] = stringChange[i];
     }
@@ -155,17 +155,17 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  let obj = new Object();
+  let obj = {};
   let newArray = [];
-  for (let x in array) {
+  for (let i = 0; i < array.length; i += 1) {
     obj = {
-      tech: array[x],
-      name: name
-      }
+      tech: array[i],
+      name: name,
+    }
     newArray.push(obj);
   }
   if (newArray.length === 0 && newArray[0] == null) {
-    return 'Vazio';
+    return 'Vazio!';
   }
   return newArray;
 }
