@@ -27,22 +27,37 @@ function splitSentence(string) {
   arrayString.push(word);
   return arrayString;
 }
-console.log(splitSentence("go trybe"))
+
 // Desafio 4
 function concatName() {
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties * 1;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbers) {
 
+  let highest = 0;
+  let highestCount = 0;
+
+  for (let i in numbers) {
+
+    if (numbers[i] > highest) {
+      highest = numbers[i];
+    }
+  }
+  for (let i in numbers) {
+    if (numbers[i] === highest) {
+      highestCount += 1;
+    }
+  }
+  return highestCount
+}
+console.log(highestCount([9, 1, 9, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
