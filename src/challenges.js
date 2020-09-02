@@ -108,7 +108,11 @@ function decode(name) {
   let decodeName = "";
 
   for (letter in name){
-    decodeName += encrypt[name[letter]] ?? name[letter];
+    if (encrypt[name[letter]] === null) {
+      decodeName += name[letter]
+    } else {
+      decodeName += encrypt[name[letter]]
+    }
   }
 
   return decodeName;
