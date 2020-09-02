@@ -70,7 +70,7 @@ function fizzBuzz(arrayNumbers) {
     } else if (arrayNumbers[i] % 5 === 0) {
       arrayResult.push('buzz');
     } else if (arrayNumbers[i] % 3 !== 0 && arrayNumbers[i] % 5 !== 0) {
-      arrayResult.push('bug');
+      arrayResult.push('bug!');
     }
   }
   return arrayResult;
