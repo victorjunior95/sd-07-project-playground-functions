@@ -44,9 +44,21 @@ pontosDeVitoria= wins*3;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorValor= 0;
+    let repetição = 0;
+    for (let i = 0; i < array.length; i++) {
+  if (array[i] > maiorValor) {
+    maiorValor = array[i];
+  }
+  if(maiorValor == array[i]){
+        repetição= repetição += 1;
+    }
 }
+    
+    return repetição;
+}
+
 
 // Desafio 7
 function catAndMouse() {
