@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  result = value1 && value2;
+  let result = value1 && value2;
   return result;
 }
 // Desafio 2
 function calcArea(base, height) {
-  result = (base * height) / 2;
+  let result = (base * height) / 2;
   return result;
 }
 
@@ -22,21 +22,29 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  points = 0;
-  eachWin = 3;
-  eachTies = 1;
-  for ( i = 0; i < wins; i += 1) {
+  let points = 0;
+  let eachWin = 3;
+  let eachTies = 1;
+  for (let i = 0; i < wins; i += 1) {
     points += eachWin;
   }
-  for ( i = 0; i < ties; i += 1) {
+  for (let i = 0; i < ties; i += 1) {
     points += eachTies;
   }
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highNumer = 0;
+  let repeatHighNumer = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] >= highNumer) {
+      highNumer = array[i];
+      repeatHighNumer += 1;
+    }
+  }
+  return repeatHighNumer;
 }
 
 // Desafio 7
