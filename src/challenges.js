@@ -23,9 +23,13 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(word) {
   // seu código aqui
+  let result = word[word.length-1]+", "+word[0]
+  return result;
+  
 }
+
 
 // Desafio 5
 function footballPoints() {
