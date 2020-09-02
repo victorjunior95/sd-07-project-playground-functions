@@ -33,14 +33,14 @@ return vencidos + empatados;
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  greaterNumber = 0;
-    for (let i = 0; i < numbers.length; i += 1) {
-        if (greaterNumber < numbers[i]) {
-    greaterNumber = numbers[i]
-  }
-return 
-}
+// function highestCount(numbers) {
+//   greaterNumber = 0;
+//     for (let i = 0; i < numbers.length; i += 1) {
+//         if (greaterNumber < numbers[i]) {
+//     greaterNumber = numbers[i]
+//   }
+// return 
+// }
 
 // Desafio 7
 function catAndMouse() {
