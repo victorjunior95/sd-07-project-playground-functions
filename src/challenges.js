@@ -241,6 +241,15 @@ function generatePhoneNumber(numeros) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 
+  if(
+    (lineA  < (lineB + lineC) && lineA > Math.abs(lineB - lineC )) &&
+    (lineB  < (lineA + lineC) && lineB > Math.abs(lineA - lineC )) &&
+    (lineC  < (lineB + lineA) && lineC > Math.abs(lineB - lineA )) ){
+    return true;
+  }else{
+    return false;
+  }
+
 }
 
 // Desafio 13
@@ -248,9 +257,9 @@ function hydrate() {
   // seu código aqui
 }
 
-let numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// let numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
-console.log( generatePhoneNumber(numero) );
+// console.log( triangleCheck(1, 5, 2) );
 
 module.exports = {
   calcArea,
