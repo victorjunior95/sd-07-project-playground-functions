@@ -102,8 +102,29 @@ function encode(stringToEncode) {
   return codedString.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(stringToDecode) {
+  let codedString = stringToDecode.split('');
+
+  for (let character in codedString) {
+    switch (codedString[character]) {
+      case '1':
+        codedString[character] = 'a';
+        break;
+      case '2':
+        codedString[character] = 'e';
+        break;
+      case '3':
+        codedString[character] = 'i';
+        break;
+      case '4':
+        codedString[character] = 'o';
+        break;
+      case '5':
+        codedString[character] = 'u';
+        break;
+    }
+  }
+  return codedString.join('');
 }
 
 // Desafio 10
