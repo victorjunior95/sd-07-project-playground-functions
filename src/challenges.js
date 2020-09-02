@@ -15,8 +15,10 @@ return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let guarda = [];
+  guarda = string.split(" ")
+console.log(guarda)
 }
 
 // Desafio 4
