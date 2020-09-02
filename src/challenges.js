@@ -250,14 +250,31 @@ function generatePhoneNumber(array) {
 }
 
 // --------------------TESTE DESAFIO 11--------------------------------
-let teste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(teste));
+// let teste = [1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8];
+// console.log(generatePhoneNumber(teste));
 // -------------------------------------------------------------------
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let checkLadoA = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
+  let checkLadoB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
+  let checkLadoC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
+
+  if (checkLadoA == true && checkLadoB == true && checkLadoC == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+// --------------------TESTE DESAFIO 12--------------------------------
+// let teste = 6;
+// let teste1 = 2;
+// let teste2 = 2;
+// console.log(triangleCheck(teste, teste1, teste2));
+// -------------------------------------------------------------------
+
+
 
 // Desafio 13
 function hydrate() {
