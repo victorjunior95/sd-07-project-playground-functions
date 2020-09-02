@@ -1,29 +1,26 @@
 // Desafio 1
-let boolean1 = false;
-let boolean2 = true;
-
 function compareTrue(a, b) {
   let compare = a && b;
   return compare;
 }
 
-console.log(compareTrue(boolean1, boolean2));
+console.log(compareTrue(true, true));
 
 // Desafio 2
-let b = 8;
-let h = 4;
-
 function calcArea(base, height) {
   let trianguloArea = ((base * height)/2);
   return trianguloArea;
 }
 
-console.log(calcArea(b, h));
+console.log(calcArea(8, 4));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let aPalavras = frase.split(' ');
+  return aPalavras;
 }
+
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName() {
