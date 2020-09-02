@@ -12,14 +12,14 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height / 2);
+  let area = ((base * height) / 2);
   return area;
 }
 
 
 // Desafio 3
 function splitSentence(umaString) {
-  umArray = umaString.split(" ")
+  let umArray = umaString.split(' ')
   return umArray;
 }
 
@@ -78,7 +78,7 @@ function fizzBuzz(numeros) {
           retorno.push("fizzBuzz")
       } else {
           retorno.push("bug!")
-      }     
+      }
   }
   return retorno;
 }
@@ -91,19 +91,19 @@ function encode(palavra) {
       switch (palavraArray[i]) {
       case "a":
           newArray.push("1")
-          break;  
+          break; 
       case "e":
           newArray.push("2")
-          break; 
+          break;
       case "i":
           newArray.push("3")
-          break; 
+          break;
       case "o":
           newArray.push("4")
-          break; 
+          break;
       case "u":
           newArray.push("5")
-          break; 
+          break;
       default:
           newArray.push(palavraArray[i])
       }
@@ -119,19 +119,19 @@ function decode(palavra) {
       switch (palavraArray[i]) {
       case "1":
           newArray.push("a")
-          break;  
+          break;
       case "2":
           newArray.push("e")
-          break; 
+          break;
       case "3":
           newArray.push("i")
-          break; 
+          break;
       case "4":
           newArray.push("o")
-          break; 
+          break;
       case "5":
           newArray.push("u")
-          break; 
+          break;
       default:
           newArray.push(palavraArray[i])
       }
@@ -141,8 +141,26 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, name) {
+  let objetos = [];
+  let objeto = {
+      tech: "NomeTech",
+      name: "nome",
+  }
+  let tecnologiasEmOrdem = tecnologias.sort();
+  for (let i in tecnologiasEmOrdem) {
+      objeto = {
+          tech: tecnologiasEmOrdem[i],
+          name: name,
+      }
+      objetos.push(objeto);
+      objeto = 0;
+  }
+  if (tecnologias.length === 0){
+      return 'Vazio!';
+  } else {
+      return objetos;
+  }
 }
 
 // Desafio 11
