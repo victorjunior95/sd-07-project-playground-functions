@@ -13,8 +13,9 @@ function compareTrue(bool1, bool2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  
+  return (base * height)/2
 }
 
 // Desafio 3
@@ -92,5 +93,9 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
- let resp = compareTrue(false, false);
+ let resp=0;
+ //resp = compareTrue(false, false);
+ //console.log(resp);
+
+ resp = calcArea(4,4);
  console.log(resp);
