@@ -217,7 +217,7 @@ function hydrate(textString) {
     if(textString[num] == Number(textString[num])) glassWater += Number(textString[num])
   }
 
-  return `${glassWater} copos de água`;
+  return `${glassWater} copo${glassWater === 1 ? '' : 's'} de água`;
 }
 
 module.exports = {
