@@ -41,30 +41,33 @@ function highestCount(Array) {
   // seu código aqui
   let uniqueKeys = Array.values()
   let greaterValue = 0;
+  let greaterValueCont = 0
   for (let key of uniqueKeys) {
     let cont = 0;
+
     for (let chave in Array) {
       if (Array[chave] === key) {
         cont += 1;
 
       }
     }
-    
-    if (cont > greaterValue) {
-      greaterValue = cont;
+
+    if (key > greaterValue) {
+      greaterValue = key
+      greaterValueCont = cont;
 
     }
 
   }
-  return greaterValue;
+  return greaterValueCont;
 
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distCat1 = abs(cat1 - mouse)
-  let distCat2 = abs(cat2 - mouse)
+  let distCat1 = Math.abs(cat1 - mouse)
+  let distCat2 = Math.abs(cat2 - mouse)
   if (distCat1 > distCat2) {
     return 'cat2';
 
@@ -163,7 +166,7 @@ function techList(technologies, name) {
   }
   let techs = [];
 
-  for( let value of technologies){
+  for( let value of technologies.sort()){
     techs.push({
       tech: value,
       name: name
