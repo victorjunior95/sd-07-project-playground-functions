@@ -122,9 +122,25 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
+  let saida={};
+  let emOrdem = array.sort(); //ordena o array da entrada
+  let lista =[]; 
+  let objeto={};
+
+  for(let i in emOrdem) {
+    saida.tech = emOrdem[i];
+    saida.name = name;
+    objeto = saida;
+    lista.push(objeto);
+    objeto = {};
+    console.log(lista);
+  }
+  
+  return (lista)
   // seu código aqui
 }
+console.log (techList(["java", "css","totó","algo"], 'Fernando'))
 
 // Desafio 11
 function generatePhoneNumber() {
