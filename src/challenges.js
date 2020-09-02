@@ -45,10 +45,17 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(1,0,2));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(lista) {
+  let fizzOrBuzz = [];
+  for (let i = 0; i < lista.length; i += 1){
+    if ((lista[i] % 2 === 0) && (lista[i] % 3 !== 0)) fizzOrBuzz[i] = 'fizz';
+    else if ((lista[i] % 2 !== 0) && (lista[i] % 3 === 0)) fizzOrBuzz[i] = 'buzz'
+    else if ((lista[i] % 2 === 0) && (lista[i] % 3 === 0)) fizzOrBuzz[i] = 'fizzBuzz'
+    else fizzOrBuzz[i] = 'bug!'
+  }
+  return fizzOrBuzz;
 }
 
 // Desafio 9
