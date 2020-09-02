@@ -1,12 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let resposta = true;
-  if (a == true && b == true) {
-
+  let co = true;
+  if ( a === co && b === co ) {
+    console.log(true);
   } else {
-    resposta = false;
+    console.log(false);
   }
-  console.log (resposta);
 }
 
 // Desafio 2
@@ -71,7 +70,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
+compareTrue (false, false);
 
 module.exports = {
   calcArea,
