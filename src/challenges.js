@@ -10,7 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(setence) {
-  return setence.split(" ");
+  return setence.split(' ');
 }
 
 // Desafio 4
@@ -37,7 +37,7 @@ function highestCount(arr) {
     value: arr[0],
     times: 1,
   }
-  for (let key in arr ) {
+  for (let key in arr) {
     if (counts[arr[key]]) {
       counts[arr[key]] += 1;
     } else {
@@ -45,17 +45,24 @@ function highestCount(arr) {
     }
   }
   for (let key in counts) {
-    if (counts[key] > mostDuplicated['times']) {
-      mostDuplicated['value'] = key;
-      mostDuplicated['times'] = counts[key];
+    if (counts[key] > mostDuplicated.times && counts[key] > mostDuplicated.value) {
+      mostDuplicated.value = key;
+      mostDuplicated.times = counts[key];
     }
   }
   return mostDuplicated.times;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let firstCatDistance = mouse - cat1;
+  let secondCatDistance = mouse - cat2;
+  if (firstCatDistance > secondCatDistance) {
+    return 'cat2';
+  } else if (firstCatDistance < secondCatDistance) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
