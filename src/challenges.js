@@ -1,3 +1,6 @@
+//User github - mustang-roy
+//Nome: Luiz Filipe Sampaio Mariz
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
