@@ -265,8 +265,8 @@ function generatePhoneNumber(array) {
 }
 
 // --------------------TESTE DESAFIO 11--------------------------------
-// let teste = [5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0];
-// console.log(generatePhoneNumber(teste));
+let teste = [1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1];
+console.log(generatePhoneNumber(teste));
 // -------------------------------------------------------------------
 
 // Desafio 12
