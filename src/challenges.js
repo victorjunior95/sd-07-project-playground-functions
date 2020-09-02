@@ -137,16 +137,38 @@ function decode(paramString2) {
 // Desafio 10
 function techList(tech, name) {
   let endList = [];
-  for (let i = 0; i < tech.length; i += 1) {
-    endList.push({tech: tech[i], name: name});
+  tech.sort();
+  if (tech.length <= 0) {
+    endList = 'Vazio!';
+  } else {
+    for (let i = 0; i < tech.length; i += 1) {
+      endList.push({ tech: tech[i], name: name });
+    }
   }
   return endList;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(phone) {
+  let newphone;
+
+  for (let i = 0; i < phone.length; i += 1) {
+      if (phone[i] < 0 || phone[i] > 9) {
+        newphone = 'não é possível gerar um número de telefone com esses valores';
+      } else if ( phone.length > 11 || phone.length < 11) {
+        newphone = 'Array com tamanho incorreto.';
+      }
+    }
+    newphone = `(${phone[0]}${phone[1]}) `
+    for (let index = 2; index <= 6; index += 1) {
+        newphone += `${phone[index]}`;
+    }
+    newphone += `-`
+    for (let index = 7; index < phone.length; index += 1) {
+      newphone += `${phone[index]}`;
+    }
+  return newphone;
+} //incompleto;
 
 // Desafio 12
 function triangleCheck() {
