@@ -132,21 +132,18 @@ function triangleCheck(lineA,lineB,lineC) {
   let verific01;
   let verific02;
   let verific03;
-if((lineA<(lineB+lineC))&&(lineA>(lineB+lineC))){
-    verific01=true;
-}
-if((lineB<(lineA+lineC))&&(lineB>(lineA+lineC))){
-  verific02=true;
-}
-if((lineC<(lineA+lineB))&&(lineC>(lineA+lineB))){
+if((lineA<(lineB+lineC))&&(lineA>Math.abs(lineB-lineC))){
   verific01=true;
-}
-if((verific01==true) && (verific02==true) && (verific03==true)){
-  return true
+  } if((lineB<(lineA+lineC))&&(lineB>Math.abs(lineA-lineC))){
+      verific02=true;
+      } if((lineC<(lineA+lineB))&&(lineC>Math.abs(lineA-lineB))){
+        verific01=true;
+          }
+if((verific01==true) || (verific02==true) || (verific03==true)){
+      return true
   }
   return false;
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
