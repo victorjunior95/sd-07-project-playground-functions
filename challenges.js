@@ -8,6 +8,8 @@ Retorne false se um ou ambos os parâmetros forem falsos.
 Faça a função utilizando o operador &&. */
 function compareTrue(a , b){
 
-    a === true && b === true ? true : false ;
+   return a === true && b === true ? true : false ;
 
 };
+
+
