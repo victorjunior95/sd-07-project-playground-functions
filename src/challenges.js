@@ -56,16 +56,13 @@ let numeros = [9, 1, 2, 3, 9, 5, 7];
 
 function highestCount(listaNumeros) {
   let qtdRepeticao = 0;
-  for (let i = 0; i < listaNumeros.length; i+= 1) {
-    let num = listaNumeros[i];
-    let qtdRepeticaoAtual = 0;
-    for (let j = 0; j < listaNumeros.length; j+= 1) {
-      if (num === listaNumeros[j]) {
-        qtdRepeticaoAtual += 1;
-      }
-    }
-    if (qtdRepeticaoAtual > qtdRepeticao) {
-      qtdRepeticao = qtdRepeticaoAtual;
+  let maiorNum = 0;
+  for (let i = 0; i < listaNumeros.length; i += 1) {
+    if (listaNumeros[i] > maiorNum) {
+      maiorNum = listaNumeros[i];
+      qtdRepeticao = 1;
+    } else if (listaNumeros[i] === maiorNum) {
+      qtdRepeticao += 1;
     }
   }
   return qtdRepeticao
@@ -74,9 +71,23 @@ function highestCount(listaNumeros) {
 console.log(highestCount(numeros));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+let gato1 = 10;
+let gato2 = 15;
+let rato = 25;
+
+function catAndMouse(mouse, cat1, cat2) {
+  let retorno = '';
+  if ((mouse - cat1) < (mouse - cat2)) {
+    retorno = 'cat1';
+  } else if ((mouse - cat1) > (mouse - cat2)) {
+    retorno = 'cat2';
+  } else if ((mouse - cat1) === (mouse - cat2)) {
+    retorno = 'os gatos trombam e o rato foge';
+  }
+  return retorno;
 }
+
+console.log(catAndMouse(rato, gato1, gato2));
 
 // Desafio 8
 function fizzBuzz() {
