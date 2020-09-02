@@ -116,7 +116,6 @@ function decode(sentence) {
 // Desafio 10
 function techList(array, name) {
   let structuredArray = [];
-  array.sort();
   if (array === '') {
     return 'Vazio!';
   } else {
@@ -124,6 +123,15 @@ function techList(array, name) {
       structuredArray[tech] = { tech: array[tech], name: name };
     }
   }
+  // resolução de ordem encontrada no seguinte link ->  https://bit.ly/32RzzTB
+  structuredArray.sort(function(a, b){
+    if(a.tech < b.tech) { 
+      return -1; 
+    } else if(a.tech > b.tech) { 
+      return 1; 
+    }
+    return 0;
+  });
   return structuredArray;
 }
 
