@@ -28,11 +28,14 @@ function concatName(nomes) {
 }
 
 // Desafio 5
-function footballPoints(vitorias , empates) {
-  let empates = 0;
-  let vitorias = 0; 
-  vitorias = vitorias + (vitorias * 3);
-  empates = empates;
+function footballPoints(wins,ties) {
+  if(ties > 0){
+    return ties;
+  }
+  if(wins > 0){
+    wins = wins * 3;
+    return wins;
+  }
 }
 
 // Desafio 6
@@ -41,7 +44,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
 }
 
