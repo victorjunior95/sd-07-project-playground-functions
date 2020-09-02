@@ -62,14 +62,14 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let conclusion = '';
-  if (cat1 - mouse  < cat2 - mouse) {
-      conclusion = 'cat1';
-    } else if (cat1 - mouse > cat2 - mouse) {
-    conclusion = 'cat2';
-  } else {
-    conclusion = 'os gatos trombam e o rato foge';
-  }
-  return (conclusion);
+    if (cat1 - mouse  < cat2 - mouse) {
+        conclusion = 'cat1';
+    } else if (cat1 - mouse > cat2 - mouse){
+        conclusion = 'cat2';
+    } else {
+        conclusion = 'os gatos trombam e o rato foge';
+    }
+    return (conclusion);
 }
 
 
