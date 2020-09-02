@@ -20,13 +20,14 @@ function splitSentence(stringName) {
   // seu código aqui
  return stringName.split(" ");
 }
-let name = splitSentence("maria joao");
-console.log(name);
 
 // Desafio 4
-function concatName() {
+function concatName(arrayString) {
   // seu código aqui
-  
+  let first = arrayString[0];
+  let last = arrayString[arrayString.length-1];
+  let fullName= last + ", " + first; 
+  return fullName;
 }
 
 // Desafio 5
