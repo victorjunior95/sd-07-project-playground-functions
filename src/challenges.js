@@ -15,9 +15,10 @@ return area
 
 // Desafio 3
 function splitSentence(string) {
-  let arrayString = string.split('');
+  let arrayString = string.split(' ');
   return arrayString;
 };
+
 // Desafio 4
 function concatName(arrayOfString) {
   let lastAndFirstName = arrayOfString[arrayOfString.length-1]+", "+arrayOfString[0]
@@ -26,14 +27,25 @@ function concatName(arrayOfString) {
 };
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
+  let winsPoints = (wins*3);
+  let tiesPoints = ties;
+  let totalPoints = (winsPoints + tiesPoints);
+  return totalPoints
   // seu código aqui
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(arrayNumbers) {
+  let numbers = arrayNumbers.sort();
+  let timesHits = 0;
+  for(i=0; i < numbers.length; i+=1) {
+    if (numbers[numbers.length-1] === numbers[i]) {
+      timesHits +=1;
+    }; 
+  };
+  return timesHits
+};
 
 // Desafio 7
 function catAndMouse() {
