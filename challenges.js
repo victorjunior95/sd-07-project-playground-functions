@@ -1,6 +1,5 @@
-// teste
 
-/* // Desafio 1
+ // Desafio 1 - Usando o operador &&
 function compareTrue(a, b) {
  if (a == true && b == true) {
     return(true)
@@ -8,15 +7,21 @@ function compareTrue(a, b) {
     return(false)
  }
 }
- */
-// Desafio 2
 
-let = a = 20;
-let = b = 40;
+// Desafio 2 - Área do triângulo
 
 function calcArea(base, height) {
-    aux = base*height/ 2
+  let aux = base*height/ 2
     return(aux)
 }
 
-calcArea(a, b);
+/* 3 - Dividindo a frase
+Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+
+Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe']. */
+
+function splitSentence(trybe) {
+let transArray = trybe;
+let resultado = transArray.split(" ");
+return(resultado)
+}
