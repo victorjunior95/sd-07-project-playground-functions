@@ -1,18 +1,18 @@
 // Desafio 1
 
-function compareTrue(aprovacao, conclusao) {
+function compareTrue(approval, conclusion) {
 
 
 
-    if (aprovacao == true && conclusao == true) {
+    if (approval == true && conclusion == true) {
 
-        let felicidade = true;
-        return felicidade;
+        let happiness = true;
+        return happiness;
 
     } else {
 
-        let felicidade = false;
-        return felicidade;
+        let happiness = false;
+        return happiness;
 
     }
 
@@ -22,24 +22,26 @@ function compareTrue(aprovacao, conclusao) {
 
 function calcArea(base, height) {
 
-    let areaTriangulo = (base * height) / 2;
-    return areaTriangulo
+    let triangleArea = (base * height) / 2;
+    return triangleArea
 
 }
 
 // Desafio 3
 function splitSentence(setenca) {
 
-    arrayPalavras = setenca.split(" ");
-    return arrayPalavras;
+    wordsArray = setenca.split(" ");
+    return wordsArray;
 
 }
-console.log(splitSentence("Lucas Nonato de Sá"));
 
 // Desafio 4
-function concatName() {
-    // seu código aqui
+function concatName(names) {
+
+    let initialFinalName = names[0] + " " + names[names.length - 1];
+    return initialFinalName;
 }
+console.log(concatName(["Lucas", "Nonato", "de", "Sá"]));
 
 // Desafio 5
 function footballPoints() {
