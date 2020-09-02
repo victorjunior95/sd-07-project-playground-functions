@@ -5,7 +5,7 @@ function compareTrue(boolean1, boolean2) {
   } else {
     return false;
   }
-} 
+}
 
 console.log(compareTrue(true, true));
 
@@ -23,21 +23,21 @@ console.log(calcArea(2, 3));
 
 // Desafio 3
 function splitSentence(string) {
-  let arrayStrings = string.split(" ");
+  let arrayStrings = string.split(' ');
   return arrayStrings;
 }
 
-console.log(splitSentence("família é amor"));
+console.log(splitSentence('família é amor'));
 
 /* ________________________________________________________________________________ */
 
 // Desafio 4
 function concatName(arrayPosicoes) {
-  let primeiroEUltimo = arrayPosicoes[arrayPosicoes.length - 1] + ", " + arrayPosicoes[0];
+  let primeiroEUltimo = arrayPosicoes[arrayPosicoes.length - 1] + ', ' + arrayPosicoes[0];
   return primeiroEUltimo;
 }
 
-console.log(concatName(["Ana", "Maria", "Joana", "Jaquina", "Francisca"]));
+console.log(concatName(['Ana', 'Maria', 'Joana', 'Jaquina', 'Francisca']));
 
 /* ________________________________________________________________________________ */
 
@@ -55,9 +55,25 @@ console.log(footballPoints(3, 11));
 /* ________________________________________________________________________________ */
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// Encontrar o maior número da array
+// Contar quantas vezes se repete
+function highestCount(arrayNumeros) {
+  let maiorNumero = 0;
+  let contNumero = 0;
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
+    if (maiorNumero < arrayNumeros[i]) {
+      maiorNumero = arrayNumeros[i];
+    } else {
+      maiorNumero = maiorNumero;
+    }
+    if (maiorNumero === arrayNumeros[i]) {
+      contNumero = contNumero + 1;              
+    } 
+  }
+  return contNumero;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 /* ________________________________________________________________________________ */
 
