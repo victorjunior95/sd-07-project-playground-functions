@@ -1,4 +1,3 @@
-//JS projeto 1
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
@@ -7,7 +6,7 @@ function compareTrue(boolean1, boolean2) {
     return false;
   }
 }
-
+console.log(compareTrue(true,true))
 // Desafio 2
 function calcArea(base, height) {
   let calculoArea = (base * height) / 2;
@@ -33,24 +32,13 @@ return vencidos + empatados;
 }
 
 // Desafio 6
-// function highestCount(numbers) {
-//   greaterNumber = 0;
-//     for (let i = 0; i < numbers.length; i += 1) {
-//         if (greaterNumber < numbers[i]) {
-//     greaterNumber = numbers[i]
-//   }
-// return 
-// }
+function highestCount() {
+ // seu código aqui
+}
 
 // Desafio 7
 function catAndMouse() {
-  if (cat1 > cat2) {
-    return cat1
-    } else if (cat2 > cat1) {
-    return cat2
-    } else {
-return console.log("os gatos trombam e o rato foge")
-}
+  // seu código aqui
 }
 
 // Desafio 8
