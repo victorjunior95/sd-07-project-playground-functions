@@ -1,27 +1,45 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool_1, bool_2) {
+  if (bool_1 === true && bool_2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(compareTrue(true, false))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = 0
+  return area = ((base * height) / 2);
 }
+console.log(calcArea(2, 3))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let separator = ' '
+  let arrayOfStrings = frase.split(separator);
+  return frase = arrayOfStrings
+
 }
+console.log(splitSentence("go trybe"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeStrings) {
+  return stringFinal = arrayDeStrings[arrayDeStrings.length - 1] + ' , ' + arrayDeStrings[0]
 }
 
+let arrayDeStrings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+console.log(concatName(arrayDeStrings))
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  vitoria = 3;
+  empate = 1;
+  return pontuacao = wins * vitoria + ties * empate;
 }
+
+console.log(footballPoints(3, 1))
 
 // Desafio 6
 function highestCount() {
