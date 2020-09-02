@@ -47,14 +47,30 @@ function catAndMouse(cat1, cat2, mouse) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // 
+function fizzBuzz(array) {
+  for (let i = 0; i < array.length; i++){
+    if (array[i] % 3 == 0 && array[i] % 5 == 0){
+      array[i] = "fizzBuzz"
+    }
+    else if (array[i] % 3 == 0){
+      array[i] = "fizz"
+    }
+    else if (array[i] % 5 == 0){
+      array[i] = "buzz"
+    }
+    else{
+      array[i] = "bug!"
+    }
+  }
+  return array
 }
+
 
 // Desafio 9
 function encode() {
   // 
 }
+
 function decode() {
   // 
 }
