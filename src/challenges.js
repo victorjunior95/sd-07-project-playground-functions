@@ -21,8 +21,12 @@ function splitSentence(vetorString) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetorString) {
+  let vetorFuncao = vetorString;
+  let primeiroNome = vetorFuncao[0];
+  let ultimoNome = vetorFuncao[vetorFuncao.length - 1];
+  let concatenado = ultimoNome + ", " + primeiroNome;
+  return concatenado;
 }
 
 // Desafio 5
