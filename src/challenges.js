@@ -12,10 +12,10 @@ function calcArea(base, height) {
   return (base * height) / 2
 }
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(gru) {
+  gru = "go Trybe"
+  return gru.split(" ")
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
