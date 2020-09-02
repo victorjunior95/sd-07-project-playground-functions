@@ -186,7 +186,7 @@ function techList(tecnologias, name) {
       }
       arrayTech.push(objeto);
     }
-
+// função compare a seguir foi adapatada de https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
     function compare(a, b) {
       let tech1 = a.tech;
       let tech2 = b.tech;
@@ -208,9 +208,42 @@ let testeTechList = techList([], "Lucas");
 console.log(testeTechList);
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+//Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+
+//Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
+
+//Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
+
+function generatePhoneNumber(numerosTelefone) {
+  if (numerosTelefone.length !== 11) {
+    return "Array com tamanho incorreto";
+  } else {
+    for (i1 = 0; i1 < numerosTelefone.length; i1 += 1) {
+      if (numerosTelefone[i1] < 0 || numerosTelefone[i1] > 9 || numerosTelefone.filter(x => x === numerosTelefone[i1]).length >= 3) { //última condição adaptada de https://stackoverflow.com/questions/5667888/counting-the-occurrences-frequency-of-array-elements
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+    }
+  }
+  
+      let conversao = numerosTelefone.toString();
+      let part1 = "(";
+      let part2 = ") ";
+      let part3 = "-";
+      for (i2 = 0; i2 < conversao.length - 18; i2 += 2) {
+        part1 = part1.concat(conversao[i2]);
+      }
+      for (i3 = 4; i3 < conversao.length - 8; i3 += 2) {
+        part2 = part2.concat(conversao[i3]);
+      }
+      for (i4 = 14; i4 < conversao.length; i4 += 2) {
+        part3 = part3.concat(conversao[i4]);
+      }
+      return part1 + part2 + part3;
 }
+
+let testeGenerator = generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 1, 3, 2]);
+console.log(testeGenerator);
+
 
 // Desafio 12
 function triangleCheck() {
