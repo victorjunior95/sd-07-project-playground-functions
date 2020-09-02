@@ -45,12 +45,12 @@ function highestCount(numbers) {
   let maiorNumero = 0
   let repeticao = 0;
   for (let index in numbers) {
-    if(numbers[index] > maiorNumero) {
+    if (numbers[index] > maiorNumero) {
       maiorNumero = numbers[index];
     }
   }
   for (let indice in numbers) {
-    if(numbers[indice] == maiorNumero) {
+    if (numbers[indice] == maiorNumero) {
       repeticao += 1;
     }
   }
@@ -68,7 +68,7 @@ function catAndMouse() {
 function fizzBuzz(numbers) {
   let newArray = [];
   for (let index in numbers) {
-    if(numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
       newArray.push('fizz');
@@ -98,7 +98,7 @@ function techList(arrayTechs, name) {
   this.name = name;
   let techs = [];
   arrayTechs.sort();
-  if(arrayTechs.length === 0) {
+  if (arrayTechs.length === 0) {
     console.log('Vazio!');
     return 'Vazio!';
   }
@@ -108,7 +108,7 @@ function techList(arrayTechs, name) {
       name: name
     }
   }
-  console.log(techs);
+  return techs;
 }
 
 new techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Lucas');
