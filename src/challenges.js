@@ -48,17 +48,25 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let greatestNumber = 0
   let numberOfTimes = 0
-  /* */
+  /*Check greatest Number */
   for (let counter = 0 ; counter <= numbers.length - 1 ; counter += 1) {
     if (counter == 0 ) {
-      greatestNumber = numbers[count]
+      greatestNumber = numbers[counter]
     } else {
-
+      if (numbers[counter] > greatestNumber) {
+        greatestNumber = numbers[counter]
+      }
+    }
+  }
+  /*Count greatest Number */
+  for (let i in numbers) {
+    if (numbers[i] === greatestNumber) {
+      numberOfTimes += 1
     }
   }
   return numberOfTimes
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
