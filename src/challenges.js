@@ -27,21 +27,21 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let maiorValor = 0;
 
-    for (let i in array) {
-        if (array[i] > array[i-1]) {
-        maiorValor = array[i]
+    for (let i in numbers) {
+        if (numbers[i] > maiorValor) {
+        maiorValor = numbers[i]
         }
     }
     let counts = 0;
     
-    for (let i in array) {
-        if (maiorValor == array[i]) {
+    for (let i in numbers) {
+        if (numbers[i] == maiorValor) {
             counts += 1;
         }
     }
 
   return counts;
-}
+}console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 
 // Desafio 7
 function catAndMouse() {
