@@ -38,38 +38,49 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let mostRepeated = 0;
   let referenceCount = 0;
-    for (let i = 0; i < array.length; i += 1) {
-      let count = 0;
-      for (let j = 0; j < array.length; j += 1) {
-         if (array[i] == array[j]){
-            count += 1;
-         }
-      }
-      if (count > referenceCount){
-         referenceCount = count;
-         mostRepeated = array[i];
-      }
+  for (let i = 0; i < array.length; i += 1) {
+    let count = 0;
+    for (let j = 0; j < array.length; j += 1) {
+        if (array[i] == array[j]){
+          count += 1;
+        }
     }
-  return mostRepeated;
+    if (count > referenceCount){
+        referenceCount = count;
+    }
+  }
+  return referenceCount;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mouseDistanceBetweenCat1 = mouse - cat1;
-  let mouseDistanceBetweenCat2 = mouse - cat2;
-  if (mouseDistanceBetweenCat1 > mouseDistanceBetweenCat2){
+  let mouseDistanceBetweenCat1 = mouse > cat1 ? (mouse - cat1) : (cat1 - mouse);
+  let mouseDistanceBetweenCat2 = mouse > cat2 ? (mouse - cat2) : (cat2 - mouse);
+  if (mouseDistanceBetweenCat1 > mouseDistanceBetweenCat2) {
     return 'cat 2 got the mouse';
-  } else if (mouseDistanceBetweenCat1 < mouseDistanceBetweenCat2){
+  } else if (mouseDistanceBetweenCat1 < mouseDistanceBetweenCat2) {
     return 'cat 1 got the mouse';
   }
-  return "os gatos trombam e o rato foge";
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let arrayOfNumbs = [2, 15, 7, 9, 45];
+function fizzBuzz(array) {
+  let wordsCollections = [];
+  for (let number in array) {
+    if (array[number] % 3 === 0 && array[number] % 5 === 0) {
+      wordsCollections.push('fizzBuzz');
+    } else if (array[number] % 3 === 0) {
+      wordsCollections.push('fizz');
+    } else if (array[number] % 5 === 0) {
+      wordsCollections.push('buzz');
+    } else {
+      wordsCollections.push('bug!');
+    }
+  }
+  return wordsCollections;
 }
 
 // Desafio 9
