@@ -151,6 +151,7 @@ function decode(codigo) {
 
 // Desafio 10
 function techList(nomesTec, name) {
+  nomesTec.sort();
   let arrayDeAulas = [];
   for (i in nomesTec) {
     let aulas = {
