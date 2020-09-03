@@ -4,7 +4,7 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo === true) {
     return true;
-  } 
+  }
   return false;
 }
 
@@ -131,7 +131,7 @@ function techList(arrayTechs, name) {
   for (let i = 0; i < arrayTechs.length; i += 1) {
     techs[i] = {
       tech: arrayTechs[i],
-      name: name,
+      name,
     }
   }
   return techs;
