@@ -158,22 +158,18 @@ function decode(palavra2) {
 
 // Desafio 10
 function techList(lista, name) {
-  let tecnologias = {
-    tech: '',
-    name: ''
+  let tecnologias = {}
 
-  }
   let lista2 = []
   if (lista.length === 0) {
     return "Vazio!"
   }
-  for (key in tecnologias) {
-
-  }
+  
   for (let i = 0; i < lista.length; i += 1) {
 
-    lista2.push(tecnologias['tech'] = lista[i])
-    lista2.push(tecnologias['name'] = name)
+    tecnologias.tech = lista[i]
+    tecnologias.name = name
+    lista2.push(Object.assign({}, tecnologias))
   }
 
   return lista2
