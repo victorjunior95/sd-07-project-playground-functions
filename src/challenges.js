@@ -4,6 +4,7 @@ function compareTrue(n1, n2) {
   if (n1 && n2) {
     return true;
   }
+  return false
 }
 
 // Desafio 2
@@ -45,13 +46,13 @@ function highestCount(numbers) {
   // seu código aqui
   let highNumber = 0;
   let counting = 0;
-  for (let i = 0; i < numbers.length; i += 1){ 
+  for (let i = 0; i < numbers.length; i += 1) {
     if (highNumber < numbers[i]) {
       highNumber = numbers[i]
     }
   }
   for (let j = 0; j < numbers.length; j += 1) {
-    if (highNumber == numbers[j]) {
+    if (highNumber === numbers[j]) {
       counting += 1;
     }
   }
@@ -68,21 +69,20 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (catOne > catTwo) {
     return 'cat2';
-  } else {
-    return `os gatos trombam e o rato foge`;
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   // seu código aqui
   let arrayStrings = [];
-  for( let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 3 == 0 && numbers[i] % 5 != 0) {
-      arrayStrings.push('fizz') ;
-    } else if (numbers[i] % 3 != 0 && numbers[i] % 5 == 0) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
+      arrayStrings.push('fizz');
+    } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
       arrayStrings.push('buzz');
-    } else if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
+    } else if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
       arrayStrings.push('fizzBuzz');
     } else {
       arrayStrings.push('bug!');
@@ -96,16 +96,16 @@ function encode(string) {
   // seu código aqui
   let number = '';
 
-  for(let i = 0; i < string.length; i += 1) {
-    if (string[i] == 'a') {
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
       number += 1;
-    } else if (string[i] == 'e') {
+    } else if (string[i] === 'e') {
       number += 2;
-    } else if (string[i] == 'i') {
+    } else if (string[i] === 'i') {
       number += 3;
-    } else if (string[i] == 'o') {
+    } else if (string[i] === 'o') {
       number += 4;
-    } else if (string[i] == 'u') {
+    } else if (string[i] === 'u') {
       number += 5;
     } else {
       number += string[i];
@@ -118,8 +118,8 @@ function decode(number) {
   // seu código aqui
   let letter = '';
 
-  for(let i = 0; i < number.length; i += 1) {
-    if(number[i] == '1'){
+  for (let i = 0; i < number.length; i += 1) {
+    if (number[i] === '1') {
       letter += 'a';
     } else if (number[i] == '2') {
       letter += 'e';
@@ -142,8 +142,8 @@ function techList(tec, name) {
   // seu código aqui
   let tecnos = tec.sort();
   let tecnologies = [];
-  if(tec.length > 0){
-    for(let i = 0; i < tecnos.length; i += 1) {
+  if (tec.length > 0){
+    for (let i = 0; i < tecnos.length; i += 1) {
       tecnologies.push({tech: tec[i], name: name})
     }
   } else {
