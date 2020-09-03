@@ -148,6 +148,7 @@ function techList(tech, name) {
   }
   return techArray;
 }
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 // Desafio 11
 function generatePhoneNumber(n) {
   let numero;
@@ -181,10 +182,30 @@ function generatePhoneNumber(n) {
   }
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let a = Math.abs(lineB) % Math.abs(lineC);
+  let b = Math.abs(lineA) % Math.abs(lineC);
+  let c = Math.abs(lineA) % Math.abs(lineB);
+  let sA = lineB + lineC;
+  let sB = lineC + lineA;
+  let sC = lineA + lineB;
+  let lado = false;
+  let somaAbsoluto = false;
+  let resultado = false;
+  console.log(sA)
+  if(lineA < sC || lineA < sB || lineB < sA || lineB < sC || lineC < sA || lineC < sB){
+    lado = true;
+  }
+  if(lineA > b || lineA > c || lineB > a || lineB >c || lineC > a || lineC >b){
+    somaAbsoluto = true;
+  }
+  if(lado == true && somaAbsoluto == true){
+    return resultado = true;
+  }else{
+    return resultado = false;
+  }
+
 }
 
 // Desafio 13
