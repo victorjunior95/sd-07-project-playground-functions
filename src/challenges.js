@@ -182,7 +182,7 @@ function decode(number) {
       }
     }
     if(cont == 0) {
-      result += letters[key];
+      result += number[key];
     }
   }
   return result;
@@ -199,8 +199,9 @@ const nameTechArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 const name = "Lucas";
 
 function techList(nameArray, name) {
-  let emptyArray = [];
-
+  let emptyArray = []; 
+  nameArray = nameArray.sort();
+  
   if (nameArray.length == 0) {
     return 'Vazio!'
   } else {
