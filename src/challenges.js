@@ -69,8 +69,25 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  /*Convert everynumber to positive */
+  let cat1Distance = mouse - cat1
+  let cat2Distance = mouse - cat2
+  /*Convert distance to positive if necessary */
+  if (cat1Distance < 0) {
+    cat1Distance *= -1
+  }
+  if (cat2Distance < 0) {
+    cat2Distance *= -1
+  }
+  /*Compare Distance */
+  if (cat1Distance === cat2Distance) {
+    return 'os gatos trombam e o rato foge'
+  } else if (cat1Distance < cat2Distance) {
+    return cat1
+  } else {
+    return cat2
+  }
 }
+console.log(catAndMouse(0,3,2))
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -154,10 +171,11 @@ function decode(word) {
 // Desafio 10
 function techList(tech, name) {
   let newTechList = []
+  let sortedTechList = tech.sort()
 
-  for (let item in tech) {
+  for (let item in sortedTechList) {
     let newTechItem = {
-      tech: tech[item],
+      tech: sortedTechList[item],
       name: name,
     }
     newTechList.push(newTechItem)
@@ -170,8 +188,50 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let checkList = ['(','X', 'X', ')', ' ','X','X', 'X', 'X', 'X', '-', 'X', 'X', 'X', 'X']
+  let phoneNumber = ""
+
+  /*Checking if the arrays.lenght is greater than 11 */
+  if (numbers.length !== 11 ) {
+    return 'Array com tamanho incorreto.'
+  }
+  /*Checking if there is any number less than 0 or greater than nine */
+  for (let number in numbers ) {
+    if (numbers[number] > 9 || numbers[number] < 0 ) {
+      return 'não é possível gerar um número de telefone com esses valores'
+      break
+    }
+  }
+  /*Checking if any number repeats greater or equal 3*/
+  for (let i in numbers) {
+    let currentNumber = numbers[i]
+    let numberOfTimesRepeat = 0
+    for (let j in numbers ) {
+      if (currentNumber == numbers[j]) {
+        numberOfTimesRepeat += 1
+      }
+    }
+    if (numberOfTimesRepeat >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+      break
+    }
+  }
+  /*Generating phone-number in the right format*/
+  for (let number in numbers) {
+    currentNumber = numbers[number]
+    for (let item in checkList) {
+      if (checkList[item] === 'X') {
+        checkList[item] = currentNumber
+        break
+      }
+    }
+  }
+  for (let i in checkList) {
+    phoneNumber += checkList[i]
+  }
+  return phoneNumber
+
 }
 
 // Desafio 12
