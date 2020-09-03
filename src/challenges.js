@@ -129,7 +129,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList([],name) {
+function techList(listaAprender,name) {
   if (listaAprender == ""){
     return "Vazio!"
 }
@@ -147,6 +147,7 @@ for(objetos in listaAprender){
 }
 return listaNova;
 }
+
 
 // Desafio 11
 function generatePhoneNumber(tel) {
