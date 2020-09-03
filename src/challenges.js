@@ -49,7 +49,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
     return 'cat1';
-  } 
+  }
   return 'cat2';
 }
 
@@ -99,7 +99,7 @@ function techList(tecnologias, name) {
   for (let i = 0; i < tecnologias.length; i += 1) {
     arrayDeObjetos[i] = {
       tech: tecnologias[i],
-      name
+      name,
     };
   }
   arrayDeObjetos.sort();
