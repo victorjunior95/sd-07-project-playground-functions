@@ -31,7 +31,9 @@ function highestCount(arr) {
   let count = 0;
   let maior = arr[arr.length - 1];
   for (let pos of arr) {
-    pos === maior ? count = count + 1 : count;
+    if (pos === maior) {
+      count = count + 1;
+    }
   }
   return count;
 }
