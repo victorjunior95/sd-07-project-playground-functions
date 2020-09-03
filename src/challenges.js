@@ -231,10 +231,10 @@ function generatePhoneNumber(array) {
   let count = 1;
   for (let j = 0; j < array.length - 1; j += 1) {
     for (let k = j + 1; k < array.length; k += 1) {
-      if (array[j] === array[k]) {
+      if (array[j] == array[k]) {
         count += 1;
       }
-      if (k === array.length - 1) {
+      if (k == array.length - 1) {
         if (count >= 3) {
           return "não é possível gerar um número de telefone com esses valores";
         } else {
@@ -248,11 +248,11 @@ function generatePhoneNumber(array) {
     if (array[i] < 0 || array[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     } else {
-      if (i === 0) {
+      if (i == 0) {
         newNumber = newNumber + "(" + array[i];
-      } else if (i === 2) {
+      } else if (i == 2) {
         newNumber = newNumber + ") " + array[i];
-      } else if (i === 7) {
+      } else if (i == 7) {
         newNumber = newNumber + "-" + array[i];
       } else {
         newNumber = newNumber + array[i];
@@ -263,7 +263,7 @@ function generatePhoneNumber(array) {
 }
 
 // --------------------TESTE DESAFIO 11--------------------------------
-// let teste = [0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7];
+// let teste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // console.log(generatePhoneNumber(teste));
 // -------------------------------------------------------------------
 
