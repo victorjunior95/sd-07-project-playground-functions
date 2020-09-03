@@ -1,17 +1,15 @@
-// Eduardo Pizorno - turma 07
-// Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(vl1, vl2) {
+  return (vl1 && vl2);
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return ((base * height) / 2);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  return text.split(' ');
 }
 
 // Desafio 4
@@ -66,7 +64,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
