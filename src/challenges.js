@@ -16,7 +16,7 @@ function splitSentence(string) {
   let arrayString = [];
   let word = '';
 
-  for (let i in string) {
+  for (let i = 0; i < string.length; i+= 1) {
     if (string[i] === ' ') {
       arrayString.push(word);
       word = '';
@@ -52,7 +52,6 @@ function highestCount(numbers) {
     if (numbers[i] === highest) {
       highestReps += 1;
     }
-    
   }
   return highestReps;
 }
@@ -174,7 +173,7 @@ function generatePhoneNumber(numbers) {
     result = 'Array com tamanho incorreto.';
     return result;
   }
-  for (let i in numbers) {  
+  for (let i in numbers) {
     if (numbers[i] < 0 || numbers[i] > 9) {
       result = 'não é possível gerar um número de telefone com esses valores';
       return result;
