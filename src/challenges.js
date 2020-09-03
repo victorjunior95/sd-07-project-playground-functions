@@ -137,16 +137,21 @@ function decode(texto) {
 
 // Desafio 10
 function techList(tecnologias, name) {
-  let capsula = [];
-  for(i in tecnologias)
-  {
+  if(tecnologias.length != 0 ){
+    let capsula = [];
+    for(i in tecnologias)
+    {
       capsula[i] = dicionario =
       {
       tech: tecnologias[i],
       name: name,
       }
-  }
+    }
   return capsula
+  }
+  else{
+    return "Vazio"
+  }
 }
 
 // Desafio 11
