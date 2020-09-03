@@ -42,7 +42,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(lista[]) {
+function highestCount(lista) {
   // seu código aqui
   lista.sort();
 
@@ -84,7 +84,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numeros[]) {
+function fizzBuzz(numeros) {
   // seu código aqui
   let FizzBuzz = []
 
