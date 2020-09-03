@@ -238,10 +238,23 @@ function hydrate(bebidas) {
   let result = "";
   let reg = /\d+/g;
   let num = drink.match(reg);
-  for (let i of num){
-    count += parseInt(i);
+  if (num === null){
+    num = [0];
   }
-  result = `${count} copos de água`;
+  for (let i of num){
+    if (parseInt(i) > 0 && parseInt(i) < 9) {
+      count += parseInt(i);    
+    }
+  }
+  if (count === 0) {
+    result = "Não bebeu nada!";
+  }else {
+    if (count > 1) {
+      result = `${count} copos de água`;
+    }else {
+      result = `${count} copo de água`;      
+    }    
+  }  
   return result;
 }
 
