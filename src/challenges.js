@@ -149,7 +149,7 @@ function generatePhoneNumber(array) {
         }
       }
       if (array[number] > 9 || array[number] < 0 || repeatedNumbs >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores.';
+        return 'não é possível gerar um número de telefone com esses valores';
       } else {
         if (number == 0) {
           reformuledNumber += '(' + array[number];
