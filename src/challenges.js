@@ -20,7 +20,8 @@ function splitSentence(frase) {
 function concatName(array) {
   let nomes = '';
   nomes += array[array.length - 1];
-  nomes += ', ' + array[0];
+  nomes += ', ';
+  nomes += array[0];
   return nomes;
 }
 
@@ -150,7 +151,7 @@ function decode(frase) {
 function techList(techName, name) {
   if (techName === '' || techName.length === 0) {
     return 'Vazio!';
-  } 
+  }
   let objectList = [];
   for (let i in techName.sort()) {
     let obj = {
@@ -167,7 +168,7 @@ function techList(techName, name) {
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   // verifica se o número possui 11 algarismos
-  if (phoneNumber.length != 11) {
+  if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
@@ -213,7 +214,7 @@ function triangleCheck(lineA, lineB, lineC) {
     lineC <= lineB + lineA
   ) {
     return true;
-  } 
+  }
   return false;
 }
 
