@@ -100,19 +100,18 @@ fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
-  let vogals = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5
-  }
-  
+  let finalString = string.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5);
+  return finalString;
 }
 
-function decode() {
-  // seu código aqui
+encode('hi there!');
+
+function decode(string) {
+  let finalString = string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return finalString;
 }
+
+decode('h3 th2r2!');
 
 // Desafio 10
 function techList(arrayTechs, name) {
