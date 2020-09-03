@@ -269,13 +269,26 @@ let array4 = [1, 2, 3, 4, 5, 6, 7, 8, 1, 0, 1];
 console.log(generatePhoneNumber(array4));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let answer = false;
+
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)) {
+    answer = true;
+  }
+
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+    answer = true;
+  }
+
+  return answer;
+
 }
+
+console.log(triangleCheck(3, 5, 2));
+
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
 }
 
 
