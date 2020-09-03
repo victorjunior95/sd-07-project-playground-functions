@@ -40,8 +40,8 @@ function highestCount(array) {
     } else if (array[i] === biggestNum){
       repetition += 1
     }
-  return repetition
   }
+  return repetition
 }
 
 
@@ -122,14 +122,6 @@ function techList(array, nome) {
     return 'Vazio!'
   }
   let newArray = array.sort()
-  newArray = newArray.sort((a, b) => {
-  if (a.length > b.length) {
-    return 1
-  } else if (b.length > a.length) {
-    return -1
-  }
-  return 0
-  })
   for (let obj in newArray) {
     newArray[obj] = {
       tech: newArray[obj],
@@ -149,7 +141,7 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
     let repetition = 0
-    for(let i = 0; i < array.length; i += 1) {
+    for (let i = 0; i < array.length; i += 1) {
       if (array[num] === array[i]) {
         repetition += 1
       }
@@ -177,7 +169,7 @@ function hydrate(phrase) {
   let input = phrase.match(/[0-9]+/g)
   let total = 0
   for (let num in input) {
-    total += parseInt(input[num, 10])
+    total += parseInt(input[num], 10)
   }
   if (total === 1) {
     return '1 copo de água'
