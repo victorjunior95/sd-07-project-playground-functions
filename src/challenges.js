@@ -51,18 +51,21 @@ function highestCount(maiorNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(cat1 == cat2){
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
+
+  if(distanciaCat1 == distanciaCat2){
     return "os gatos trombam e o rato foge";
   }
-  if(cat1 > cat2){
+  if(distanciaCat1 > distanciaCat2){
     return "cat1";
   }
-  else if(cat2 > cat1){
+  else if(distanciaCat1 < distanciaCat2){
     return "cat2";
   }
 }
 
-//console.log(catAndMouse(1, 1, 1));
+console.log(catAndMouse(1, 8, 6));
 
 // Desafio 8
 function fizzBuzz(ArrayBuzz) {
@@ -144,17 +147,6 @@ function techList(nometech,name) {
   }
   return novaNomeTech;
 }
-
-nometech = [ 
-  "CSS",
-  "HTML",
-  "JavaScript",
-  "Jest",
-  "React"
-];
-
-name = 'herika';
-console.log(techList(nometech,name))
 
 
 // Desafio 11
