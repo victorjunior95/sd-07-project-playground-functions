@@ -69,11 +69,11 @@ function catAndMouse(mouse, cat1, cat2) {
   if (situation1 < situation2) {
     resultado = 'cat1';
   } else if (situation2 < situation1) {
-  resultado = 'cat2';
-} else {
-  resultado = 'os gatos trombam e o rato foge';
-}
-return (resultado)
+    resultado = 'cat2';
+  } else {
+    resultado = 'os gatos trombam e o rato foge';
+  }
+  return (resultado)
 }
 
 
@@ -82,12 +82,12 @@ function fizzBuzz(array) {
   let string = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
-    string.push('bug!');
-  } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-  string.push('fizzBuzz');
-} else if (array[i] % 3 === 0) {
-      string.push('fizz');
-    } else if (array[i] % 5 === 0) {
+      string.push('bug!');
+    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+    string.push('fizzBuzz');
+  } else if (array[i] % 3 === 0) {
+  string.push('fizz');
+} else if (array[i] % 5 === 0) {
       string.push('buzz');
     }
   }
