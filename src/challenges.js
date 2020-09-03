@@ -124,28 +124,26 @@ function techList(tecnologia,nome) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let checkRepeat=0;
-  let currentNumber=0;
   let formatnumber=0;
   if (numbers.length!== 11) {
     return "Array com tamanho incorreto.";
   }
-  for(let count in numbers){    
-    if ((numbers[count] > 9) || (numbers[count] < 0)) {
+    for(let count in numbers){    
+    if ((numbers[count]>9)||(numbers[count]<0)) {
             return "não é possível gerar um número de telefone com esses valores";
         }
-  }
-    for (let count in numbers) {
-       currentNumber = numbers[count];
-      for (let count2 in numbers) {
-        if (currentNumber === numbers[count2]) {
-        checkRepeat += 1
+    }
+    for (let count=0;count<numbers.length;count++) {
+      for (let count2=count+1;count2<numbers.length;count2++) {
+        if (numbers[count]===numbers[count2]) {
+          checkRepeat += 1;
         }
-      }
+              if (checkRepeat >= 3) {
+                return "não é possível gerar um número de telefone com esses valores";
+              }
+        }
     }
-    if (checkRepeat >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
-    }
-    formatnumber=`(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[10]}${numbers[11]}`
+    formatnumber=`(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
     return formatnumber;
   }
 
