@@ -65,9 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanciaCat1 = 0
   let distanciaCat2 = 0
-  if (cat1 === cat2) {
-    console.log('os gatos trombam e o rato foge')
-  }
+  
   if (mouse > cat1) {
     distanciaCat1 = (cat1 - mouse)
   }
@@ -81,13 +79,13 @@ function catAndMouse(mouse, cat1, cat2) {
     distanciaCat2 = (mouse - cat2)
   }
   if (distanciaCat1 > distanciaCat2) {
-    console.log('cat1')
+    return console.log('cat1')
   }
   if (distanciaCat2 > distanciaCat1) {
-    console.log('cat2')
+    return console.log('cat2')
   }
-  if (distanciaCat2 === distanciaCat1) {
-    console.log('os gatos trombam e o rato foge')
+  if ((cat1 === cat2) ||  (distanciaCat2 === distanciaCat1)) {
+    return console.log('os gatos trombam e o rato foge')
   }
 }
 
@@ -102,9 +100,9 @@ function fizzBuzz(numeros) {
       FizzBuzz.push('fizz')
     } else if ((numeros[i] % 5) === 0) {
       FizzBuzz.push('buzz')
-    }
-    else FizzBuzz.push('bug!')
+    } else FizzBuzz.push('bug!')
   }
+  return console.log(FizzBuzz)
 }
 
 // Desafio 9
