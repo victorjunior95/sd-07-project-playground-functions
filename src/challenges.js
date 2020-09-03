@@ -4,21 +4,21 @@ function compareTrue(dormir, acordado) {
     return true;
   } else {
     return false;
-  }
-}
+  };
+};
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
-  return area
-}
+  return area;
+};
 
 // Desafio 3
-let frase = 'go Trybe'
+let frase = 'go Trybe';
 
 function splitSentence(frase) {
   return frase.split(" ");
-}
+};
 
 // Desafio 4
 let wordConcat = ['Raphael', 'Cicero', 'Rodrigues', 'Araujo'];
@@ -27,7 +27,7 @@ function concatName(wordConcat) {
   let firstWord = wordConcat[0];
   let lastWord = wordConcat[wordConcat.length - 1];
   return lastWord + ', ' + firstWord;
-}
+};
 
 // Desafio 5
 let wins = 10;
@@ -35,12 +35,22 @@ let ties = 3;
 
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
-}
+};
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+let arrayNumeros = [9, 1, 2, 3, 9, 5, 7];
+
+function highestCount(arrayNumeros) {
+  let maiorNumero = 0;
+  let repeticoes = 0;
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
+    if (arrayNumeros[i] >= maiorNumero) {
+      maiorNumero = arrayNumeros[i];
+      repeticoes += 1;
+    }
+  }
+  return repeticoes;
+};
 
 // Desafio 7
 function catAndMouse() {
