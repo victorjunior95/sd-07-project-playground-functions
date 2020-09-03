@@ -150,7 +150,7 @@ function encode(letters) {
   for (key in letters) {
     cont = 0;
     for (k in lettersForNumbers) {
-      if (letters[key] == k) {
+      if (letters[key].toLowerCase() == k) {
         result += lettersForNumbers[k];
         cont = 1;
       }
@@ -190,10 +190,13 @@ function decode(number) {
 }
 
 console.log(decode('11113221222214444'));
-console.log(encode("aaaaieeaeeeeaoooo"));
+console.log(encode("LoL lOl"));
 
 
 // Desafio 10
+
+
+
 function techList() {
   // seu código aqui
 }
