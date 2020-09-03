@@ -90,7 +90,7 @@ function highestCount(arr) {
   return contador;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9]));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9]));
 
 // Desafio 7
 function catAndMouse() {
