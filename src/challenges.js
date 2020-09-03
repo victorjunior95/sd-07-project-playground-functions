@@ -32,7 +32,7 @@ function highestCount(arr) {
   let maior = arr[arr.length - 1];
   for (let pos of arr) {
     if (pos === maior) {
-      count = count + 1;
+      count++;
     }
   }
   return count;
