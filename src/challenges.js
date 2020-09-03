@@ -135,12 +135,27 @@ function decode(desencodado) {
 
 // Desafio 10
 function techList(nometech,name) {
-  novaNomeTech = nometech;
-  for(let item in novaNomeTech){
-    novaNomeTech[item].name = name;
+  let novaNomeTechAux = {};
+  let novaNomeTech = [];
+  for(let i =0; i < nometech.length;i++){
+      novaNomeTechAux.tech = nometech[i];
+      novaNomeTechAux.name = name;
+      novaNomeTech.push(Object.assign({}, novaNomeTechAux));
   }
   return novaNomeTech;
 }
+
+nometech = [ 
+  "CSS",
+  "HTML",
+  "JavaScript",
+  "Jest",
+  "React"
+];
+
+name = 'herika';
+console.log(techList(nometech,name))
+
 
 // Desafio 11
 function generatePhoneNumber() {
