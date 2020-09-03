@@ -137,7 +137,7 @@ function decode(dec) {
     } else if (dec[i] === '5') {
       newDec += 'u';
     } else {
-      newDec += decode[i];
+      newDec += dec[i];
     }
   }
   return newDec;
