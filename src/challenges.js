@@ -253,13 +253,58 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(frase) {
   // seu código aqui
+  let soma = 0;
+  let copo = '';
+
+  for(let i=0;i < frase.length; i += 1){
+    switch (frase[i]) {
+      case '1':
+        soma += Number(frase[i]);
+        break;
+      case '2':
+        soma += Number(frase[i]);
+        break;
+      case '3':
+        soma += Number(frase[i]);
+        break;
+      case '4':
+        soma += Number(frase[i]);
+        break;
+      case '5':
+        soma += Number(frase[i]);
+        break;
+      case '6':
+        soma += Number(frase[i]);
+        break;
+      case '7':
+        soma += Number(frase[i]);
+        break;
+      case '8':
+        soma += Number(frase[i]);
+        break;
+      case '9':
+        soma += Number(frase[i]);
+        break;
+      default:
+        break;
+    }
+  }
+
+
+  if (soma === 1){
+    copo = 'copo';
+  }else{
+    copo = 'copos';
+  }
+
+  return `${soma} ${copo} de água`;
 }
 
 // let numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
-// console.log( triangleCheck(1, 5, 2) );
+console.log( hydrate("1 cachaça, 5 cervejas e 1 copo de vinho") );
 
 module.exports = {
   calcArea,
