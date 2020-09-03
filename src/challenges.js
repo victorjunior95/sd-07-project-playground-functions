@@ -18,16 +18,21 @@ console.log(calcArea(2, 4)); // 4
 
 // Desafio 3
 function splitSentence(string) {
-  arrayString = string.split(' ');
+  let arrayString = string.split(' ');
   return arrayString;
 }
-console.log(splitSentence("go Trybe")); // ['go', 'Trybe']
+console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let firstItem = arrayString[0];
+  let lastItem = arrayString[arrayString.length-1];
+  let string = lastItem.concat(', ', firstItem);
+  return string;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); // Paolillo, Lucas
+
 
 // Desafio 5
 function footballPoints() {
