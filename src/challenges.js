@@ -1,20 +1,32 @@
 // Começando...
 // Desafio 1
+compareTrue(true, false);
+
 function compareTrue(firstValue, secondValue) {
-  let compareResult = firstValue && secondValue;
-  return compareResult;
+  if (firstValue === true && secondValue === true) {
+    console.log("As duas variáveis são verdadeiras!!!");
+    return true;
+  } else if (firstValue === false || secondValue === false) {
+    let compare = false;
+    console.log("Pelo menos uma das variáveis não é verdadeira!!!");
+    return false;
+  } else {
+    console.log("Erro!!! Pelo menos uma das variáveis não são booleanas");
+  }
 }
 
 // Desafio 2
+calcArea(2, 3);
+
 function calcArea(base, height) {
   let calc = base * height / 2;
+  console.log("A área do triângulo é " + calc);
   return calc;
 }
 
 // Desafio 3
-function splitSentence(inputSentence) {
-  let arraySplit = inputSentence.split(separator);
-  return arraySplit;
+function splitSentence() {
+  // seu código aqui
 }
 
 // Desafio 4
