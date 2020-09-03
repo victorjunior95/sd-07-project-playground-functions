@@ -160,8 +160,8 @@ function ordenaArray(listaTech) {
 }
 
 function techList(tecnologias, name) {
-  let arrayTech = '';
-  if (tecnologias.length > 0){
+  let arrayTech = [];
+  if (tecnologias.length > 0) {
     for (let i = 0; i < tecnologias.length; i += 1) {
       let techObjeto = { tech: tecnologias[i], name: name };
       arrayTech[i] = techObjeto;
@@ -169,7 +169,7 @@ function techList(tecnologias, name) {
     arrayTech = ordenaArray(arrayTech);
   } else {
     arrayTech = 'Vazio!';
-  }  
+  }
   return arrayTech;
 }
 
