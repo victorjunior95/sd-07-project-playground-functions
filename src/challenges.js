@@ -60,11 +60,11 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
-  if (distanciaCat1 > distanciaCat2) {
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
+  if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if (distanciaCat1 < distanciaCat2) {
+  } else if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
   } else {
     return "os gatos se trombam e o rato foge"
