@@ -1,12 +1,12 @@
 // Funções Auxiliares
 // Soma repetidos
-function retornarMaior(arrayGenerico){
+function retornarMaior(arrayGenerico) {
   let maior = 0;
   let posMaior = 0;
   for (let i in arrayGenerico) {
     if (arrayGenerico[i] > maior) {
       maior = arrayGenerico[i]
-      posMaior= i;
+      posMaior = i;
     }
   }
   return posMaior;
@@ -25,7 +25,7 @@ function somaRepeat(arrayGenerico, pos) {
 
 // Valida array e dá uma resposta em strings
 function validaTelefone(arrayTelefone) {
-  retorno = '';
+  let retorno = '';
   if (arrayTelefone.length == 11) {
     for (let i in arrayTelefone) {
       if (arrayTelefone[i] > 9 || arrayTelefone[i] < 0 || somaRepeat(arrayTelefone, i) >= 3) {
@@ -254,9 +254,15 @@ function hydrate(pedido) {
       coposDagua += number;
     }
   }
-  coposDagua += ' copos de água';
+  if(coposDagua === 1){
+    coposDagua += ' copo de água';
+  } else {
+    coposDagua += ' copos de água';
+}
   return coposDagua;
 }
+
+console.log(hydrate('2 cervejas 3 cachaças'));
 
 
 module.exports = {
