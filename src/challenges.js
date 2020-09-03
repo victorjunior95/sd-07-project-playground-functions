@@ -142,8 +142,9 @@ function techList(nometech,name) {
   let novaNomeTechAux = {};
   let novaNomeTech = [];
   let ordenado = nometech.sort();
-  if(ordenado ==={}){
-    return "Vazio!";
+  if(ordenado === {}){
+    let vazio = "Vazio!"
+    return vazio ;
   }
   for(let item in ordenado){
       novaNomeTechAux.tech = ordenado[item];
