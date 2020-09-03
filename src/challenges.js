@@ -1,10 +1,13 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 === true && number2 === true) {
-    return true
+  let message = ''
+  let isTrue = (number1 === true && number2 === true)
+  if  (isTrue) {
+    message = isTrue
   } else {
-    return false
+    message = false
   }
+  return message
 }
 
 // Desafio 2
@@ -18,7 +21,7 @@ function splitSentence(text) {
   let initialArray = text.split(' ')
   let finalArray = []
 
-  for (let counter = 0 ; counter <= initialArray.length - 1 ; counter += 1) {
+  for (let counter = 0; counter <= initialArray.length - 1; counter += 1) {
     if (initialArray[counter] !== '') {
       finalArray.push(initialArray[counter])
     }
@@ -30,7 +33,7 @@ function splitSentence(text) {
 function concatName(names) {
   let firstItem = names[0]
   let lastItem = names[names.length - 1]
-  let resultString = lastItem + ', ' + firstItem
+  let resultString = `${lastItem}, ${firstItem}`
 
   return resultString
 }
@@ -39,7 +42,7 @@ function concatName(names) {
 function footballPoints(wins, ties) {
   let winPoint = 3
   let tiePoint = 1
-  let totalPoints = wins * winPoint + ties * tiePoint
+  let totalPoints = (wins * winPoint) + (ties * tiePoint)
 
   return totalPoints
 }
@@ -48,17 +51,15 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let greatestNumber = 0
   let numberOfTimes = 0
-  /*Check greatest Number */
-  for (let counter = 0 ; counter <= numbers.length - 1 ; counter += 1) {
-    if (counter == 0 ) {
+  /* Check greatest Number */
+  for (let counter = 0; counter <= numbers.length - 1; counter += 1) {
+    if (counter === 0) {
       greatestNumber = numbers[counter]
-    } else {
-      if (numbers[counter] > greatestNumber) {
+    } else if (numbers[counter] > greatestNumber) {
         greatestNumber = numbers[counter]
-      }
     }
   }
-  /*Count greatest Number */
+  /* Count greatest Number */
   for (let i in numbers) {
     if (numbers[i] === greatestNumber) {
       numberOfTimes += 1
@@ -66,33 +67,35 @@ function highestCount(numbers) {
   }
   return numberOfTimes
 }
-
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = Math.abs(mouse - cat1)
   let cat2Distance = Math.abs(mouse - cat2)
+  let message = ''
 
-  /*Compare Distance */
+  /* Compare Distance */
   if (cat1Distance === cat2Distance) {
-    return 'os gatos trombam e o rato foge'
+    message = 'os gatos trombam e o rato foge'
   } else if (cat1Distance < cat2Distance) {
-    return 'cat1'
+    message = 'cat1'
   } else {
-    return 'cat2'
+    message = 'cat2'
   }
+  return message
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzList = []
-  
+
   for (let number in numbers) {
-    if ((numbers[number] % 3) == 0 && (numbers[number] % 5) == 0 ) {
+    if ((numbers[number] % 3) === 0 && (numbers[number] % 5) === 0) {
       fizzBuzzList.push('fizzBuzz')
     } else if (numbers[number] % 5 === 0) {
-        fizzBuzzList.push('buzz')
+      fizzBuzzList.push('buzz')
     } else if ((numbers[number] % 3) === 0) {
-        fizzBuzzList.push('fizz')
+      fizzBuzzList.push('fizz')
     } else {
       fizzBuzzList.push('bug!')
     }
@@ -102,8 +105,8 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(word) {
-  let newString = ""
-  let finalString = ""
+  let newString = ''
+  let finalString = ''
   let vogais = {
     a: 1,
     e: 2,
@@ -112,17 +115,17 @@ function encode(word) {
     u: 5,
   }
 
-  for (let counter = 0 ; counter <= word.length - 1 ; counter += 1) {
+  for (let counter = 0; counter <= word.length - 1; counter += 1) {
     let counterVogais = 0
     let currentLetter = word[counter]
-    for (key in vogais) {
+    for (let key in vogais) {
       let currentVogal = key
       if (currentLetter === currentVogal) {
         newString = vogais[key]
         counterVogais += 1
       }
     }
-    if (counterVogais > 0 ) {
+    if (counterVogais > 0) {
       finalString += newString
     } else {
       finalString += currentLetter
@@ -132,8 +135,8 @@ function encode(word) {
 }
 
 function decode(word) {
-  let newString = ""
-  let finalString = ""
+  let newString = ''
+  let finalString = ''
   let vogais = {
     1: 'a',
     2: 'e',
@@ -142,20 +145,20 @@ function decode(word) {
     5: 'u',
   }
 
-  for (let counter = 0 ; counter <= word.length - 1 ; counter += 1) {
-    let counterVogais = 0
-    let currentLetter = word[counter]
-    for (key in vogais) {
+  for (let counter = 0; counter <= word.length - 1; counter += 1) {
+    let counterItem = 0
+    let currentItem = word[counter]
+    for (let key in vogais) {
       let currentVogal = key
-      if (currentLetter === currentVogal) {
+      if (currentItem === currentVogal) {
         newString = vogais[key]
-        counterVogais += 1
+        counterItem += 1
       }
     }
-    if (counterVogais > 0 ) {
+    if (counterItem > 0) {
       finalString += newString
     } else {
-      finalString += currentLetter
+      finalString += currentItem
     }
   }
   return finalString
@@ -165,43 +168,46 @@ function decode(word) {
 function techList(tech, name) {
   let newTechList = []
   let sortedTechList = tech.sort()
+  let message = ''
 
   for (let item in sortedTechList) {
     let newTechItem = {
       tech: sortedTechList[item],
       name: name,
-    }
+    };
     newTechList.push(newTechItem)
   }
   if (newTechList.length > 0) {
-    return newTechList
+    message = newTechList
   } else {
-    return 'Vazio!'
+    message = 'Vazio!'
   }
+  return message
 }
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  let checkList = ['(','X', 'X', ')', ' ','X','X', 'X', 'X', 'X', '-', 'X', 'X', 'X', 'X']
-  let phoneNumber = ""
+  let checkList = ['(', 'X', 'X', ')', ' ', 'X', 'X', 'X', 'X', 'X', '-', 'X', 'X', 'X', 'X']
+  let phoneNumber = ''
+  let currentNumber = 0
 
-  /*Checking if the arrays.lenght is greater than 11 */
-  if (numbers.length !== 11 ) {
+  /* Checking if the arrays.lenght is greater than 11 */
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  /*Checking if there is any number less than 0 or greater than nine */
-  for (let number in numbers ) {
-    if (numbers[number] > 9 || numbers[number] < 0 ) {
+  /* Checking if there is any number less than 0 or greater than nine */
+  for (let number in numbers) {
+    if (numbers[number] > 9 || numbers[number] < 0) {
       return 'não é possível gerar um número de telefone com esses valores'
       break
     }
   }
-  /*Checking if any number repeats greater or equal 3*/
+  /* Checking if any number repeats greater or equal 3*/
   for (let i in numbers) {
     let currentNumber = numbers[i]
     let numberOfTimesRepeat = 0
-    for (let j in numbers ) {
-      if (currentNumber == numbers[j]) {
+    for (let j in numbers) {
+      if (currentNumber === numbers[j]) {
         numberOfTimesRepeat += 1
       }
     }
@@ -210,7 +216,7 @@ function generatePhoneNumber(numbers) {
       break
     }
   }
-  /*Generating phone-number in the right format*/
+  /* Generating phone-number in the right format*/
   for (let number in numbers) {
     currentNumber = numbers[number]
     for (let item in checkList) {
@@ -224,11 +230,10 @@ function generatePhoneNumber(numbers) {
     phoneNumber += checkList[i]
   }
   return phoneNumber
-
 }
 
 // Desafio 12
-function triangleCheck(lineA , lineB , lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   let lineACheck = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
   let lineBCheck = (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))
   let lineCCheck = (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA))
@@ -241,16 +246,18 @@ function triangleCheck(lineA , lineB , lineC) {
 function hydrate(text) {
   let drinkList = text.replace(/\D/g, '')
   let total = 0
+  let message = ''
 
   for (let number in drinkList) {
-    total += parseInt(drinkList[number])
+    total += parseInt(drinkList[number], 10)
   }
 
   if (total > 1) {
-    return `${total} copos de água`
+    message = `${total} copos de água`
   } else {
-    return `${total} copo de água`
+    message = `${total} copo de água`
   }
+  return message
 }
 
 module.exports = {
