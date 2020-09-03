@@ -124,7 +124,7 @@ function techList(array, name) {
       arrayObjetos.push(object);
     }
 
-    return obejct;
+    return arrayObjetos;
   }
 }
 
