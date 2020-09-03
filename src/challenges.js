@@ -179,12 +179,14 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let drinkQty = 0;
-  let numbers = string.replace(/[^1-9]/g, '');
-  for (let i = 0; i < numbers.length; i += 1){
-    drinkQty += Number(numbers[i]);
+  for (let i = 0; i < string.length; i += 1) {
+    for (let i = 0; i <= 9; i++) {
+    if (string[i] == i) {
+      drinkQty += i;
+      }
+    }
   }
-
-  return (Number(drinkQty)) + 'copos de água';
+  return `${drinkQty} copo(s) de água`;
 }
 
 module.exports = {
