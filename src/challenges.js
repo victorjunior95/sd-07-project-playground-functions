@@ -111,19 +111,31 @@ function techList(techArray, name) {
   return resultArray;
 }
 
-// Desafio 11
-function generatePhoneNumber(numberArray) {
+// Help 11
+function checkLength(numberArray) {
   let result = '';
   // check length
   if (numberArray.length !== 11) {
     result = 'Array com tamanho incorreto.';
   }
+  return result;
+}
+
+// Help 11
+function checkNumbers(numberArray) {
+  let result = '';
   // check rule < 0 OR > 9
   for (let number of numberArray) {
     if (number < 0 || number > 9) {
       result = 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  return result;
+}
+
+// Help 11
+function checkRepeat(numberArray) {
+  let result = '';
   // chek rule repeat 3 times or more
   let numberArraySorted = numberArray.slice(0);
   numberArraySorted.sort(function (a, b) { return a - b });
@@ -132,11 +144,21 @@ function generatePhoneNumber(numberArray) {
       result = 'não é possível gerar um número de telefone com esses valores';
     }
   }
+}
+
+// Desafio 11
+function generatePhoneNumber(numberArray) {
+  let result = '';
+
+  result = checkLength(numberArray);
+  result = checkNumbers(numberArray);
+  result = checkRepeat(numberArray);
+  
   // format number
   let textDDD = numberArray.slice(0, 2).join('');
   let textBegin = numberArray.slice(2, 7).join('');
   let textEnd = numberArray.slice(7).join('');
-  rresult = `(${textDDD}) ${textBegin}-${textEnd}`;
+  result = `(${textDDD}) ${textBegin}-${textEnd}`;
 
   return result;
 }
