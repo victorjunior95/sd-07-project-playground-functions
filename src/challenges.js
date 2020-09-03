@@ -63,8 +63,6 @@ function fizzBuzzText(num) {
   return result;
 }
 
-
-
 // Desafio 8
 function fizzBuzz(numArray) {
   let result = [];
@@ -115,14 +113,15 @@ function techList(techArray, name) {
 
 // Desafio 11
 function generatePhoneNumber(numberArray) {
+  let result = '';
   // check length
   if (numberArray.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    result = 'Array com tamanho incorreto.';
   }
   // check rule < 0 OR > 9
   for (let number of numberArray) {
     if (number < 0 || number > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      result = 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // chek rule repeat 3 times or more
@@ -130,11 +129,16 @@ function generatePhoneNumber(numberArray) {
   numberArraySorted.sort(function (a, b) { return a - b });
   for (let i = 0; i <= 8; i += 1) {
     if (numberArraySorted[i] === numberArraySorted[i + 2]) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      result = 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // format number
-  return `(${numberArray.slice(0, 2).join('')}) ${numberArray.slice(2, 7).join('')}-${numberArray.slice(7).join('')}`;
+  let textDDD = numberArray.slice(0, 2).join('');
+  let textBegin = numberArray.slice(2, 7).join('');
+  let textEnd = numberArray.slice(7).join('');
+  rresult = `(${textDDD}) ${textBegin}-${textEnd}`;
+
+  return result;
 }
 
 // Desafio 12
