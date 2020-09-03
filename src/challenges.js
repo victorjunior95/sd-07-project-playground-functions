@@ -1,5 +1,18 @@
 // Funções Auxiliares
 // Soma repetidos
+function retornarMaior(arrayGenerico){
+  let maior = 0;
+  let posMaior = 0;
+  for (let i in arrayGenerico) {
+    if (arrayGenerico[i] > maior) {
+      maior = arrayGenerico[i]
+      posMaior= i;
+    }
+  }
+  return posMaior;
+}
+
+
 function somaRepeat(arrayGenerico, pos) {
   let soma = 0;
   for (let i in arrayGenerico) {
@@ -90,18 +103,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let posMaisF = 0;
-  let somaMaisF = somaRepeat(array, posMaisF);
-  let posAtual = posMaisF + 1;
-  let somaAtual = 0;
-  for (posAtual; posAtual < array.length; posAtual += 1) {
-    somaAtual = somaRepeat(array, posAtual);
-    if (somaAtual > somaMaisF) {
-      posMaisF = posAtual;
-      somaMaisF = somaAtual;
-    }
-  }
-  return somaMaisF;
+  let posMaior = retornarMaior(array);
+  let somax = somaRepeat(array, posMaior);
+  return somax;
 }
 
 // Desafio 7
@@ -250,8 +254,8 @@ function hydrate(pedido) {
       coposDagua += number;
     }
   }
-  return coposDagua;
   coposDagua += ' copos de água';
+  return coposDagua;
 }
 
 
