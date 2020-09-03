@@ -3,9 +3,7 @@ function compareTrue(boolOne, boolTwo) {
   if (boolOne === true && boolTwo === true) {
     return true;
   }
-  else {
-    return false;
-  }
+  else return false;
 }
 
 // Desafio 2
@@ -67,9 +65,10 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (disMouseCat2 < disMouseCat1) {
     return 'cat2';
   }
-  else if(disMouseCat1 === disMouseCat2) {
+  else if (disMouseCat1 === disMouseCat2) {
     return 'os gatos trombam e o rato foge';
   }
+  return;
 }
 
 // Desafio 8
@@ -94,12 +93,12 @@ let code = {
   e: 2,
   i: 3,
   o: 4,
-  u: 5
+  u: 5,
 }
 
 // Função auxiliar01 do Desafio 9
 function changeLetterNumber(char) {
-  for (let key in code){
+  for (let key in code) {
     if (char === key) {
       return code[key];
     }
@@ -118,10 +117,9 @@ function changeNumberLetter(number) {
 }
 
 function encode(words) {
-  let newWords = "";
-  words = words.toLowerCase();
+  let newWords = '';
 
-  for (let char of words)  {
+  for (let char of words) {
     let value = changeLetterNumber(char);
     newWords += value;
   }
@@ -129,10 +127,9 @@ function encode(words) {
 }
 
 function decode(words) {
-  let newWords = "";
-  words = words.toLowerCase();
+  let newWords = '';
 
-  for (let char of words)  {
+  for (let char of words) {
     let value = changeNumberLetter(char);
     newWords += value;
   }
