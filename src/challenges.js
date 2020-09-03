@@ -96,7 +96,7 @@ function fizzBuzz(arrayNumbers) {
       result[i] += "fizz"
     } else if (arrayNumbers[i] % 5 == 0) {
       result[i] += "buzz"
-    } else(result = "bug")
+    } else(result[i] = "bug!")
 
   }
   return result;
