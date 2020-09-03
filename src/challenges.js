@@ -119,7 +119,7 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(array, nome) {
-  if (array === []) {
+  if (array.length === 0) {
     return "Vazio!"
   }else {
     for (obj in array) {
@@ -135,7 +135,7 @@ function techList(array, nome) {
 // Desafio 11
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
-    return "Array com tamanho incorreto"
+    return "Array com tamanho incorreto."
   } else {
     for (num in array) {
       if(array[num] > 9 || array[num] < 0) {
