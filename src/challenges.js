@@ -226,8 +226,6 @@ function decode(string) {
 }
 
 // Desafio 10
-let tecnologias=["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name="Lucas"
 function techList(tecnologias,name) {
   // seu código aqui
   let array=[];
@@ -249,7 +247,6 @@ function techList(tecnologias,name) {
   }
   return(array);
 }
-console.log(techList(tecnologias,name));
 
 // Desafio 11
 function generatePhoneNumber() {
