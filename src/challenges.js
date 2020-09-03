@@ -25,7 +25,7 @@ function splitSentence(umaString) {
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  let stringFinal = (arrayDeStrings[(arrayDeStrings.length-1)] + ', ' + arrayDeStrings[0])
+  let stringFinal = (arrayDeStrings[(arrayDeStrings.length - 1)] + ', ' + arrayDeStrings[0])
   return stringFinal;
 }
 
@@ -56,9 +56,9 @@ function catAndMouse(posicao1, posicao2, posicao3) {
   if (cat1 < cat2) {
     retorno = 'cat1'
   } else if (cat2 < cat1) {
-      retorno = 'cat2'
+    retorno = 'cat2'
   } else {
-      retorno = 'os gatos trombam e o rato foge'
+    retorno = 'os gatos trombam e o rato foge'
   }
   return retorno;
 }
@@ -68,13 +68,13 @@ function fizzBuzz(numeros) {
   let retorno = [];
   for (let i in numeros) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 !== 0) {
-        retorno.push('fizz')
+      retorno.push('fizz')
     } else if (numeros[i] % 5 === 0 && numeros[i] % 3 !== 0) {
-        retorno.push('buzz')
+      retorno.push('buzz')
     } else if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-        retorno.push('fizzBuzz')
+      retorno.push('fizzBuzz')
     } else {
-        retorno.push('bug!')
+      retorno.push('bug!')
     }
   }
   return retorno;
@@ -84,24 +84,24 @@ function fizzBuzz(numeros) {
 function encode(palavra) {
   let palavraArray = palavra.split('');
   let newArray = [];
-  for (i in palavraArray) {
+  for (let i in palavraArray) {
     switch (palavraArray[i]) {
-    case 'a':
-      newArray.push('1')
-      break;
-    case 'e':
-      newArray.push('2')
-      break;
-    case 'i':
-      newArray.push('3')
-      break;
-    case 'o':
-      newArray.push('4')
-      break;
-    case 'u':
-      newArray.push('5')
-      break;
-    default:
+      case 'a':
+        newArray.push('1')
+        break;
+      case 'e':
+        newArray.push('2')
+        break;
+      case 'i':
+        newArray.push('3')
+        break;
+      case 'o':
+        newArray.push('4')
+        break;
+      case 'u':
+        newArray.push('5')
+        break;
+      default:
       newArray.push(palavraArray[i])
     }
   }
@@ -112,24 +112,24 @@ function encode(palavra) {
 function decode(palavra) {
   let palavraArray = palavra.split('');
   let newArray = [];
-  for (i in palavraArray) {
+  for (let i in palavraArray) {
     switch (palavraArray[i]) {
-    case '1':
-      newArray.push('a')
-      break;
-    case '2':
-      newArray.push('e')
-      break;
-    case '3':
-      newArray.push('i')
-      break;
-    case '4':
-      newArray.push('o')
-      break;
-    case '5':
-      newArray.push('u')
-      break;
-    default:
+      case '1':
+        newArray.push('a')
+        break;
+      case '2':
+        newArray.push('e')
+        break;
+      case '3':
+        newArray.push('i')
+        break;
+      case '4':
+        newArray.push('o')
+        break;
+      case '5':
+        newArray.push('u')
+        break;
+      default:
       newArray.push(palavraArray[i])
     }
   }
@@ -147,13 +147,13 @@ function techList(tecnologias, name) {
   let tecnologiasEmOrdem = tecnologias.sort();
   for (let i in tecnologiasEmOrdem) {
     objeto = {
-    tech: tecnologiasEmOrdem[i],
-    name: name,
+      tech: tecnologiasEmOrdem[i],
+      name: name,
     }
     objetos.push(objeto);
     objeto = 0;
   }
-  if (tecnologias.length === 0){
+  if (tecnologias.length === 0) {
     return 'Vazio!';
   } else {
     return objetos;
@@ -165,22 +165,20 @@ function generatePhoneNumber(numero) {
   if (numero.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  for (i in numero) {
+  for (let i in numero) {
     if (numero[i] < 0 || numero[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
-      break;
     }
   }
   for (let i = 0; i < numero.length; i += 1) {
     let rep = 0;
     for (let j = i; j < numero.length; j += 1) {
-      if (numero[i] == numero[j]) {
-      rep += 1
+      if (numero[i] === numero[j]) {
+        rep += 1
       }
     }
     if (rep >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores'
-        break;
+      return 'não é possível gerar um número de telefone com esses valores'
     }
   }
   let numeroString = '';
@@ -215,9 +213,9 @@ function hydrate(drink) {
   for (let i in num) {
     newNum.push(parseInt(num[i]))
   }
-  let total = newNum.reduce(function(acumulador, valorAtual, index, array) {
+  let total = newNum.reduce (function(acumulador, valorAtual, index) {
     return acumulador + valorAtual;
-    });
+  });
   if (total === 1) {
     return total + ' copo de água'
   } else {
