@@ -151,15 +151,10 @@ function generatePhoneNumber(array) {
       if (array[number] > 9 || array[number] < 0 || repeatedNumbs >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       } else {
-        if (number == 0) {
-          reformuledNumber += '(' + array[number];
-        } else if (number == 2) {
-          reformuledNumber += ')'+ ' ' + array[number];
-        } else if (number == 7) {
-          reformuledNumber += '-' + array[number];
-        } else {
-          reformuledNumber += array[number];
-        }
+        number == 0 ? reformuledNumber += '(' + array[number] :
+        number == 2 ? reformuledNumber += ')'+ ' ' + array[number] :
+        number == 7 ? reformuledNumber += '-' + array[number] :
+        reformuledNumber += array[number];
       }
     }
   }
@@ -180,16 +175,11 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let drinkQty = 0;
   let numbers = string.replace(/[^1-9]/g, '');
-  for (let i = 0; i < numbers.length; i += 1){
+  for (let i = 0; i < numbers.length; i += 1) {
     drinkQty += Number(numbers[i]);
   }
-  if (drinkQty == 1){
-  return (drinkQty) + ' copo de água';
-  } else {
-  return (drinkQty) + ' copos de água';
-  }
+  return drinkQty == 1 ? (drinkQty) + ' copo de água' : (drinkQty) + ' copos de água';
 }
-
 
 module.exports = {
   calcArea,
