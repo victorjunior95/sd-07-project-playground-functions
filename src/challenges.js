@@ -122,7 +122,9 @@ function techList(array, name) {
   let nArray = [];
   let nItem = '';
   let sArray = [];
-
+if(array.length == 0) {
+  return('Vazio!')
+} else {
   sArray = array.sort();
 
   for (let i in sArray) {
@@ -132,7 +134,8 @@ function techList(array, name) {
       }
   nArray.push(nItem);
   }
-return(nArray)
+  return(nArray)
+}
 }
 
 // Desafio 11
