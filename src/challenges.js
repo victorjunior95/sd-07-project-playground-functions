@@ -141,7 +141,7 @@ function techList(tec, names) {
   let tecnologies = [];
   if (tec.length > 0) {
     for (let i = 0; i < tecnos.length; i += 1) {
-      tecnologies.push( {tech: tec[i], name: names} );
+      tecnologies.push({ tech: tec[i], name: names });
     }
   } else {
     return 'Vazio!';
