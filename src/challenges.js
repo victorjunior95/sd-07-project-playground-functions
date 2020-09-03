@@ -24,7 +24,8 @@ function splitSentence(frase) {
 
 // 4
 function concatName(array_de_strings) {
-    let strings_concatenadas = array__de_strings[0] + ', ' + array__de_strings[array__de_strings.length-1] + ".";
+    let strings_concatenadas = "";
+    strings_concatenadas = array_de_strings[0] + ', ' + array_de_strings[array_de_strings.length-1];
     return strings_concatenadas;
 }
 
@@ -48,12 +49,13 @@ function highestCount(numeros) {
 
 // 7
 function catAndMouse(mouse, cat1, cat2) {
+    let vencedor = "";
     if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
-        let vencedor = "cat1";
+        vencedor = "cat1";
     } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
-        let vencedor = "cat2";
+        vencedor = "cat2";
     } else {
-        let vencedor = "os gatos trombam e o rato foge";
+        vencedor = "os gatos trombam e o rato foge";
     }
     return vencedor;
 }
@@ -123,11 +125,11 @@ function decode(string_codificada) {
 
 // 10
 function techList(tecnologias, name) {
+    let tech_objetos = [];
     if (tecnologias == 0 || tecnologias == null){
         console.log('Vazio!');
     } else {
         let item = {};
-        let tech_objetos = [];
         lista_tech = tecnologias.sort();
         for (i in lista_tech){
             item = {
@@ -144,16 +146,39 @@ function techList(tecnologias, name) {
 // BÔNUS
 // 11
 function generatePhoneNumber(numbers) {
-    let is_number = true;
-    for (let i in numbers){
-        if (numbers[i] < 0 || numbers[i] > 9){
-            let telephone_number = "não é possível gerar um número de telefone com esses valores";
-            is_number = false;        
-            break;
-        };
+    let telephone_number = "";    
+    let is_number = true;    
+    if (numbers.length != 11){
+        telephone_number = "Array com tamanho incorreto.";
+        is_number = false;
     }
     if (is_number === true){
-        let telephone_number = "(";            
+        for (let i in numbers){
+            if (numbers[i] < 0 || numbers[i] > 9){
+                telephone_number = "não é possível gerar um número de telefone com esses valores";
+                is_number = false;        
+                break;
+            };
+        }
+    }
+    if (is_number === true){
+        let contador = 0;
+        for (let i in numbers){
+            contador = 0;
+            for (let j in numbers){
+                if (numbers[i] === numbers[j]){
+                    contador += 1;
+                }
+            }
+            if (contador >= 3){
+                telephone_number = "não é possível gerar um número de telefone com esses valores"
+                is_number = false;
+                break;
+            }
+        }
+    }
+    if (is_number === true){
+            telephone_number = "(";            
             for (i = 0; i < 2; i +=1){
                 telephone_number += numbers[i];
             }
@@ -175,16 +200,18 @@ function generatePhoneNumber(numbers) {
 
 // 12
 function triangleCheck(lineA, lineB, lineC) {
+    let se_e_triangulo = true;
     if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB && Math.abs(lineA - lineB) < lineC){
-        let se_e_triangulo = true;
+        se_e_triangulo = true;
     } else {
-        let se_e_triangulo = false;
+        se_e_triangulo = false;
     }
     return se_e_triangulo;
 }
 
 // 13
 function hydrate(bebidas) {
+    let copos_de_agua = 0;
     let quantidades = bebidas.match(/\d+/g).map(Number);
     for (let i in quantidades){
         copos_de_agua += quantidades[i];
