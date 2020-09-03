@@ -19,7 +19,7 @@ calcArea();
 // Desafio 3
 function splitSentence(frase) {
   let res = [];
-  res = frase.split(" ");
+  res = frase.split(' ');
   return res;
 }
 
@@ -37,33 +37,7 @@ function footballPoints() {
 
 // Desafio 6
 function highestCount(array) {
-  let contador = 0;
-  let contadorAnterior = 0;
-  let maisRepetido = null;
-  let numeroAtual = null;
-
-  function testaContador(valor) {
-    if (contadorAnterior === 0) {
-      contadorAnterior = contadorAnterior;
-    }
-  }
-  for (let i = 0; i < array.length; i += 1) {
-    numeroAtual = array[i];
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[j] === numeroAtual) {
-        contador += 1;
-      }
-    }
-    if (contadorAnterior === 0) {
-      contadorAnterior = contador;
-      maisRepetido = numeroAtual;
-    }
-    if (contador > contadorAnterior) {
-      maisRepetido = numeroAtual;
-    }
-    contador = 0;
-  }
-  return maisRepetido;
+  
 }
 
 // Desafio 7
