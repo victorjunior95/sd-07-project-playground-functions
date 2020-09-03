@@ -156,34 +156,70 @@ function techList(tech, name) {
   }
 }
 
-
-let tech = [];
-let nome = "Lucas";
-console.log(techList(tech, nome));
-
-
 // Desafio 11
 function generatePhoneNumber(array) {
+  let verificacaoUm = true;
+  let verificacaoDois = true;
+  let verificacaoTres = true;
+
+  //Verificação de repetição dos números
+  let contNumero = 0;
+  let contRepete = 0;
+  for (index in array) {
+    for (i in array) {
+      if (array[index] == array[i]) {
+        contNumero += 1;
+      }
+      if (contNumero > contRepete) {
+        contRepete = contNumero;
+      }
+    }
+    contNumero = 0;
+  }
+  if (contRepete >= 3) {
+    verificacaoUm = false;
+    return "não é possível gerar um número de telefone com esses valores";   
+  }
+  
   //Verificação 11 números
   if (array.length != 11) {
+    verificacaoDois = false;
     return "Array com tamanho incorreto";
   }
   //Verificação números menores que 0 ou maiores que 9;
   for (i in array) {
     if (array[i] < 0 || array [i] > 9) {
+      verificacaoTres = false;
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
-
-  for (i in array) {
-    for (j in array) {
-      if (array[i] === array[j]) {
-        
-      }
-    }
-  }
   
+  //Montagem de número de telefone
+  if (verificacaoUm && verificacaoDois && verificacaoTres) {
+    let phoneNumber = '';
+    phoneNumber += '(';
+    phoneNumber += array[0];
+    phoneNumber += array[1];
+    phoneNumber += ')';
+    phoneNumber += ' ';
+    phoneNumber += array[2];
+    phoneNumber += array[3];
+    phoneNumber += array[4];
+    phoneNumber += array[5];
+    phoneNumber += array[6];
+    phoneNumber += '-';
+    phoneNumber += array[7];
+    phoneNumber += array[8];
+    phoneNumber += array[9];
+    phoneNumber += array[10];
+
+    return phoneNumber;
+  }  
 }
+/*
+let numeroCel = [5, 3, 9, 9, 1, 8, 1, 7, 2, 4, 5];
+console.log(generatePhoneNumber(numeroCel));
+*/
 
 // Desafio 12
 function triangleCheck() {
