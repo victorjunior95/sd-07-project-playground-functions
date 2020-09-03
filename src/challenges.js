@@ -105,14 +105,14 @@ function encode(string) {
   return (newString4)
 }
 function decode(string) {
-    let newString = '';
+  let newString = '';
     newString = string.replace(/1/g, 'a');
-    let newString1 = newString.replace(/2/g, 'e');
-    let newString2 = newString1.replace(/3/g, 'i');
-    let newString3 = newString2.replace(/4/g, 'o');
-    let newString4 = newString3.replace(/5/g, 'u');
-    return (newString4)
-  }
+  let newString1 = newString.replace(/2/g, 'e');
+  let newString2 = newString1.replace(/3/g, 'i');
+  let newString3 = newString2.replace(/4/g, 'o');
+  let newString4 = newString3.replace(/5/g, 'u');
+  return (newString4)
+}
 
 // Desafio 10
 function techList(array, name) {
@@ -122,14 +122,14 @@ function techList(array, name) {
   if (array.length === 0) {
     return ('Vazio!')
   }
-    sArray = array.sort();
+  sArray = array.sort();
   for (let i in sArray) {
-      nItem = {
-      tech: sArray[i],
+    nItem = {
+        tech: sArray[i],
       name: name
-    }
-      nArray.push(nItem);
-    }
+      }
+    nArray.push(nItem);
+  }
   return (nArray)
 }
 
