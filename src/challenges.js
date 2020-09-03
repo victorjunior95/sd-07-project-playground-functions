@@ -122,6 +122,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(techName, name) {
+  techName.sort();
   let techNameList = [];
   if (techName.length == 0 ){
     return "Vazio!";
