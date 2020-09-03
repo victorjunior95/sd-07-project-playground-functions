@@ -16,7 +16,6 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
-
   let contaString = 0;
 
   for (const key in string) {
@@ -35,7 +34,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function maiorValor(valores) {
   let maior = 0;
-  for (valor of valores) {
+  for (let valor of valores) {
     if (valor > maior) {
       maior = valor;
     }
@@ -64,9 +63,9 @@ function catAndMouse(mouse, cat1, cat2) {
   cat2 = Math.abs(cat2 - mouse);
 
   if (cat1 === cat2) {
-    resultado = "os gatos trombam e o rato foge";
+    resultado = 'os gatos trombam e o rato foge';
   } else {
-    resultado = (cat1 > cat2) ? "cat2" : "cat1";
+    resultado = (cat1 > cat2) ? 'cat2' : 'cat1';
   }
 
   return resultado;
@@ -77,13 +76,13 @@ function fizzBuzz(array) {
   let arrayRetorno = [];
   for (const key in array) {
     if (array[key] % 5 === 0 && array[key] % 3 === 0) {
-      arrayRetorno.push("fizzBuzz");
+      arrayRetorno.push('fizzBuzz');
     } else if (array[key] % 3 === 0) {
-      arrayRetorno.push("fizz");
+      arrayRetorno.push('fizz');
     } else if (array[key] % 5 === 0) {
-      arrayRetorno.push("buzz");
+      arrayRetorno.push('buzz');
     } else if (!(array[key] % 5 === 0 && array[key] % 3 === 0)) {
-      arrayRetorno.push("bug!");
+      arrayRetorno.push('bug!');
     }
   }
 
@@ -95,11 +94,11 @@ function encode(string) {
   let saida = String(string).split('');
 
   const codigo = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u",
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
 
   for (const key in codigo) {
@@ -117,15 +116,14 @@ function encode(string) {
 function decode(string) {
   let saida = String(string).split('');
   const codigo = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u",
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
 
   for (const key in codigo) {
-
     for (const i in string) {
       if (saida[i] === key) {
         saida[i] = codigo[key];
@@ -142,7 +140,7 @@ function techList(tecnologias, nome) {
   tecnologias = tecnologias.sort();
 
   if (tecnologias.length === 0) {
-    saida = "Vazio!";
+    saida = 'Vazio!';
   } else {
     for (const key in tecnologias) {
       saida.push({
@@ -158,9 +156,9 @@ function techList(tecnologias, nome) {
 function procuraRepetidos(array) {
   let qtdRepetidos = 0;
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
 
-    for (let j = 0; j < array.length && qtdRepetidos < 3; j++) {
+    for (let j = 0; j < array.length && qtdRepetidos < 3; j += 1) {
       if (array[i] === array[j]) {
         qtdRepetidos += 1;
       }
@@ -168,9 +166,8 @@ function procuraRepetidos(array) {
 
     if (qtdRepetidos >= 3) {
       return false;
-    } else {
-      qtdRepetidos = 0;
     }
+    qtdRepetidos = 0;
   }
 
   return true;
@@ -189,23 +186,23 @@ function verificaIntervalo(array, inferior, superior) {
 function generatePhoneNumber(array) {
   let saida = [];
 
-  if (array.length != 11) {
-    return "Array com tamanho incorreto.";
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   } else if (!(procuraRepetidos(array) && verificaIntervalo(array, -1, 10))) {
-    return "não é possível gerar um número de telefone com esses valores";
+    return 'não é possível gerar um número de telefone com esses valores';
   } else {
 
     let key = 0;
 
     for (let i = 0; i < 15; i += 1) {
       if (i === 0) {
-        saida[i] = "(";
+        saida[i] = '(';
       } else if (i === 3) {
-        saida[i] = ")";
+        saida[i] = ')';
       } else if (i === 4) {
-        saida[i] = " "
+        saida[i] = ' '
       } else if (i === 10) {
-        saida[i] = "-"
+        saida[i] = '-'
       } else {
         saida[i] = array[key];
         key += 1;
@@ -218,21 +215,21 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC){
+function triangleCheck(lineA, lineB, lineC) {
   return (lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineC + lineB) > lineA && Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineC - lineB) < lineA;
 }
 
 // Desafio 13
-function hydrate(phrase){
+function hydrate(phrase) {
   let reg = /\d+/g;
   let numbers = phrase.match(reg);
   let sum = 0;
 
-  for(const key in numbers){
-      sum += parseInt(numbers[key]);
+  for (const key in numbers) {
+    sum += parseInt(numbers[key]);
   }
 
-  return sum > 1 ? `${sum} copos de água`: `${sum} copo de água`;
+  return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
 }
 
 module.exports = {
