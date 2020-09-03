@@ -97,7 +97,7 @@ function fizzBuzz(array) {
 function encode(string) {
   let saida = String(string).split('');
 
-  const codigo = {
+  let codigo = {
     1: 'a',
     2: 'e',
     3: 'i',
@@ -105,14 +105,10 @@ function encode(string) {
     5: 'u',
   };
 
-  for (const key in codigo) {
-    if (Object.prototype.hasOwnProperty.call(codigo, key)) {
-      for (const i in string) {
-        if (Object.prototype.hasOwnProperty.call(string, key)) {
-          if (saida[i] === codigo[key]) {
-            saida[i] = key;
-          }
-        }
+  for (let key = 0; key < codigo.length; key += 1) {
+    for (let i = 0; i < string.length; i += 1) {
+      if (saida[i] === codigo[key]) {
+        saida[i] = key;
       }
     }
   }
@@ -143,20 +139,20 @@ function decode(string) {
 // Desafio 10
 function techList(tecnologias, nome) {
   let saida = [];
-
   tecnologias = tecnologias.sort();
 
   if (tecnologias.length === 0) {
-    saida = 'Vazio!';
+      saida = "Vazio!";
   } else {
-    for (const key in tecnologias) {
-      if (Object.prototype.hasOwnProperty.call(codigo, key)) {
-        saida.push({
-          tech: tecnologias[key],
-          name: nome,
-        })
+      for (const key in tecnologias) {
+        if (Object.prototype.hasOwnProperty.call(tecnologias, key)) {
+          saida.push({
+            tech: tecnologias[key],
+            name: nome,
+          })
+        }
       }
-    }
+      console.log("executei aqui")
   }
   return saida;
 }
