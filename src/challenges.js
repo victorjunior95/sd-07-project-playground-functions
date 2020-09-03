@@ -108,6 +108,7 @@ function decode(frase) {
 
 // Desafio 10
 function techList(tech, name) {
+tech.sort()
   arrayresultado = []
   for(let key in tech){
     let novoObjeto = {
@@ -118,6 +119,7 @@ function techList(tech, name) {
   }
     return arrayresultado
 }
+console.log(techList())
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
