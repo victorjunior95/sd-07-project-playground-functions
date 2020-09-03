@@ -116,9 +116,36 @@ console.log (encode('hi there!'));
 console.log(decode("h3, th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  if (tech.length == 0 ) {
+    console.log("Vazio!");
+  } else {
+    let arrayTech = [];
+    for (let i = 0; i < tech.length; i += 1) {
+      let techObjeto = {tech: tech[i], name: name};
+      arrayTech[i] = techObjeto;
+    }
+    arrayTech = ordenaArray(arrayTech);
+    return arrayTech;
+  }
+
+  function ordenaArray(listaTech) {
+    for (let i = 0; i < listaTech.length; i += 1) {
+      let propiedade = listaTech[i].tech;
+      for (let j = 0; j < listaTech.length; j += 1) {
+        let propiedadeAtual = listaTech[j].tech;
+        if (propiedade < propiedadeAtual) {
+          let itemArray = listaTech[i];
+          listaTech[i] = listaTech[j];
+          listaTech[j] = itemArray;
+        }
+      }
+    }
+    return listaTech;
+  }
 }
+
+console.log (techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
