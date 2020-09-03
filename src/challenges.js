@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
- let boolean = bol1 && bol2;
- return boolean;
+  let boolean = bol1 && bol2;
+  return boolean;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = (base * height)/ 2;
+  let areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
@@ -20,10 +20,10 @@ function splitSentence(palavra) {
 function concatName(nomes) {
   let nomeArray = nomes;
   let result = [];
-  for (let i in nomes){
+  for (let i in nomes) {
     nomeArray.splice(i + 1, nomes.length - 2);
   }
-  for (let j = nomeArray.length - 1; j >= 0; j -= 1){
+  for (let j = nomeArray.length - 1; j >= 0; j -= 1) {
     result.push(nomeArray[j]);
   }
   return result.join(', ');
@@ -45,7 +45,7 @@ function highestCount(repeat) {
   let array = repeat;
   let maior = 0;
   let count = 0;
-  for (let i of array){
+  for (let i of array) {
     if (i > maior) {
       maior = i;
     }   
@@ -65,16 +65,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato2 = cat2;
   let distancia1 = 0;
   let distancia2 = 0;
-  let result = "";
+  let result = ""; 
   if ((rato > gato1 && rato > gato2) || (rato > gato1 && rato < gato2) ||
   (rato < gato1 && rato > gato2) || (rato < gato1 && rato < gato2) || 
-  (rato === gato1 && rato === gato2)) {
-    distancia1 = rato - gato1;
+  (rato === gato1 && rato === gato2)) { 
+    distancia1 = rato - gato1; 
     distancia2 = rato - gato2;
     if (distancia1 < 0) {
-      distancia1 = distancia1 * (-1);
+      distancia1 *= (-1);
     }else if (distancia2 < 0) {
-      distancia2 = distancia2 * (-1);
+      distancia2 *= (-1);
     }
   }
   if (distancia1 > distancia2) {
@@ -83,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
     result = "cat1";
     }else if (distancia1 === distancia2) {
     result = "os gatos trombam e o rato foge";
-    }
+  }
   return result;
 }
 
@@ -93,13 +93,13 @@ function fizzBuzz(num) {
   let palavra = "";
   let result = [];
   for(let i of numbers) {
-    if (i % 3 === 0 && i % 5 !== 0){
+    if (i % 3 === 0 && i % 5 !== 0) {
       palavra = "fizz";
       result.push(palavra);
-    }else if (i % 5 === 0 && i % 3 !== 0){
+    }else if (i % 5 === 0 && i % 3 !== 0) {
       palavra = "buzz";
       result.push(palavra);
-    }else if (i % 3 === 0 && i % 5 === 0){
+    }else if (i % 3 === 0 && i % 5 === 0) {
       palavra = "fizzBuzz";
       result.push(palavra);
     }else if (i % 3 !== 0 && i % 5 !== 0) {
@@ -167,7 +167,7 @@ function techList(tech, name) {
     return vazio;
   }else {
     stack.sort();
-    for (let valor of stack){
+    for (let valor of stack) {
       let objeto = {
         tech: valor,
         name: nome
@@ -200,8 +200,7 @@ function generatePhoneNumber(phone) {
         if (count > 2) {
           mensagem = "não é possível gerar um número de telefone com esses valores";
           return mensagem;        
-        }
-        
+        }        
       }
     }
     for (let k of tel) {
