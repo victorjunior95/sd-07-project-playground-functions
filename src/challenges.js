@@ -36,7 +36,8 @@ function splitSentence(frase) {
 function concatName(array) {
   let saida;
   saida = array[array.length - 1] + ', ' + array[0];
-  return saida;}
+  return saida;
+}
 // Desafio 5
 function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
@@ -213,7 +214,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   // seu código aqui
 }
-//console.log(triangleCheck(10,4,6))
+// console.log(triangleCheck(10,4,6))
 
 // Desafio 13
 function hydrate(bebidas) {
@@ -221,12 +222,12 @@ function hydrate(bebidas) {
   let total = 0;
 
   for (let i in matches) {
-    total += parseInt(matches[i]);
+    total += parseInt(matches[i], 10); // O '10' é para indicar a base decimal. 
   }
   if (total === 1) {
-    return total + ' copo de água';
+    return (total + ' copo de água');
   } else {
-    return total + ' copos de água';
+    return (total + ' copos de água');
   }
 }
 
