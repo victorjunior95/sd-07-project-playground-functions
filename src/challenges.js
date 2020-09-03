@@ -104,7 +104,7 @@ function fizzBuzz(array) {
       resultado.push(`buzz`);
     }
     else {
-      resultado.push(`bug`);
+      resultado.push(`bug!`);
     }
   }
   return resultado;
