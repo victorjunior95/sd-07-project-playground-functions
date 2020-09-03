@@ -57,65 +57,37 @@ function fizzBuzz(lista) {
   }
   return fizzOrBuzz;
 }
-
+function subistitui(palavra,isso,por) {
+  for (let i = 0; i < por.length; i += 1){
+    for(let j = 0; j < por.length; j += 1){
+      palavra = palavra.replace(isso[i],por[i])
+    }
+  }
+  return palavra;
+}
 // Desafio 9
 function encode(word) {
-  for (let j = 0; j < word.length; j += 1) {
-    switch (word[j]) {
-      case 'a':
-        code += '1';
-        break;
-      case 'e':
-        code += '2';
-        break;
-      case 'i':
-        code += '3';
-        break;
-      case 'o':
-        code += '4';
-        break;
-      case 'u':
-        code += '5';
-        break;
-      default:
-        code += word[j];
-        break;
-    }
-  }
-  return code
+  let isso = ['a', 'e', 'i', 'o', 'u'];
+  let por = ['1', '2', '3', '4', '5']
+  return subistitui(word, isso, por)
 }
-
-function decode(code) {
-  let word = '';
-  for (let i = 0; i < code.length; i += 1) {
-    switch (code[i]) {
-      case '5':
-        word += 'u';
-        break;
-      case '4':
-        word += 'o';
-        break;
-      case '3':
-        word += 'i';
-        break;
-      case '2':
-        word += 'e';
-        break;
-      case '1':
-        word += 'a';
-        break;
-      default:
-        word += code[i];
-        break;
-    }
-  }
-  return word;
+console.log(decode('t2st2 f3n1l?'));
+function decode(word) {
+  let isso = ['1', '2', '3', '4', '5'];
+  let por = ['a', 'e', 'i', 'o', 'u'];
+  return subistitui(word, isso, por)  
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let lista = [];
+  for (let i = 0; i < tech.length; i += 1){
+    if (tech[i] == "" ) break;
+    lista[i] = {tech: ''+tech[i], name: name} 
+  }
+  return lista;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
