@@ -119,7 +119,7 @@ function decode(string) {
       str += string[i];
     }
   }
-  console.log(str);
+  return str
 }
 
 // Desafio 10
