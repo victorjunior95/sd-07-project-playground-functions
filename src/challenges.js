@@ -56,7 +56,7 @@ function highestCount(lista) {
   }
   return repeticao.length;
 }
-// Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Pos = cat1 - mouse;
   let cat2Pos = cat2 - mouse;
@@ -75,7 +75,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
 function fizzBuzz(numeros) {
   let retorno = [];
   for (let i in numeros) {
@@ -113,6 +112,7 @@ function encode(frase) {
   }
   return resultado;
 }
+
 function decode(frase) {
   let resultado = frase;
   for (let i = 0; i < frase.length; i += 1) {
@@ -134,6 +134,7 @@ function decode(frase) {
   }
   return resultado;
 }
+
 function techList(tech, name) {
   techArray = [];
   techObj = {};
@@ -148,40 +149,34 @@ function techList(tech, name) {
   }
   return techArray;
 }
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
-// Desafio 11
+
 function generatePhoneNumber(n) {
-  let numero;
-  let qtdRepeticao = 0;
-  let rep = false;
-  let maiorMenor = false;
-
-  for (let i = 0; i < n.length; i += 1) {
-    numero = n[i];
-
-    if (n[i] < 0 || n[i] > 9) {
-      maiorMenor = true;
-    }
-
-    for (let j = 0; j < n.length; j += 1) {
-      if (n[j] === numero) {
-        qtdRepeticao++;
-      }
-    }
-
-    if (qtdRepeticao >= 3) {
-      rep = true;
-    }
-    qtdRepeticao = 0;
-  }
+  //Valida se tem 11 numeros
   if (n.length != 11) {
     return `Array com tamanho incorreto.`;
   }
-  if(maiorMenor == true || rep == true){
-    return `não é possível gerar um número de telefone com esses valores`;
+  //Valida se é maior que -1 e menor que 10
+  for (let i = 0; i < n.length; i += 1) {
+    if (n[i] < 0 || n[i] > 9) {
+      return `não é possível gerar um número de telefone com esses valores`;
+    }
   }
+  //Valida numeros repetidos
+  //fonte: https://medium.com/@amirdanish126/how-to-count-duplicate-value-in-an-array-in-javascript-e942b59af8f2
+  let resultado = {};
+  n.forEach(function (x) {
+    resultado[x] = (resultado[x] || 0) + 1;
+  });
+  //Retorna mensagem caso 3 ou mais numeros repetidos
+  for (let i in resultado) {
+    if (resultado[i] > 2) {
+      return `não é possível gerar um número de telefone com esses valores`;
+    }
+  }
+  //Retorna numero caso passe na validação
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let a = Math.abs(lineB) % Math.abs(lineC);
@@ -193,19 +188,32 @@ function triangleCheck(lineA, lineB, lineC) {
   let lado = false;
   let somaAbsoluto = false;
   let resultado = false;
-  console.log(sA)
-  if(lineA < sC || lineA < sB || lineB < sA || lineB < sC || lineC < sA || lineC < sB){
+  console.log(sA);
+  if (
+    lineA < sC ||
+    lineA < sB ||
+    lineB < sA ||
+    lineB < sC ||
+    lineC < sA ||
+    lineC < sB
+  ) {
     lado = true;
   }
-  if(lineA > b || lineA > c || lineB > a || lineB >c || lineC > a || lineC >b){
+  if (
+    lineA > b ||
+    lineA > c ||
+    lineB > a ||
+    lineB > c ||
+    lineC > a ||
+    lineC > b
+  ) {
     somaAbsoluto = true;
   }
-  if(lado == true && somaAbsoluto == true){
-    return resultado = true;
-  }else{
-    return resultado = false;
+  if (lado == true && somaAbsoluto == true) {
+    return (resultado = true);
+  } else {
+    return (resultado = false);
   }
-
 }
 
 // Desafio 13
