@@ -77,8 +77,17 @@ function catAndMouse(mouse, cat1, cat2) {
     else {
       result = "os gatos trombam e o rato foge"
     }
-  } else {
+  } 
+  else {
+    if (mouse == cat1 && mouse !== cat2) {
+      result = "cat1"
+    }
+    else if ((mouse !== cat1 && mouse == cat2)) {
+      result = "cat2"
+    }
+    else {
       result = "os gatos trombam e o rato foge"
+    }
   }
   return result;
 }
