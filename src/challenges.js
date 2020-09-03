@@ -132,14 +132,8 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(a, b, c) {
-    let condicion1 = a < b + c && a > Math.abs(b - c);
-    let condicion2 = b < a + c && b > Math.abs(a - c);
-    let condicion3 = c < b + a && b > Math.abs(b - a);
-    if condicion1 && condicion2 && condicion3 === true,
-        return true;
-
-
+function triangleCheck() {
+    // seu código aqui
 }
 
 // Desafio 13
