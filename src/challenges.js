@@ -114,17 +114,21 @@ function highestCount(numbers) {
 // highestCount(numbers);
 
 // Desafio 7
+let mouse =20;
+let cat1 = 10;
+let cat2 = 47;
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = mouse-cat1;
   let distCat2 = mouse-cat2;
   if (distCat1<0){distCat1=distCat1*-1}
   if (distCat2<0){distCat2=distCat2*-1}
   if (distCat1>distCat2){
-    return cat1;
+    return "cat1";
   } else if (distCat1==distCat2) {//else if escreve separado
     return "os gatos trombam e o rato foge"
-  } else {return cat2}
+  } else {return "cat2"}
 }
+// catAndMouse(mouse, cat1, cat2);
 
 // Desafio 8
 let fizzBuzzNumbers = [2, 15, 7, 9, 45];
@@ -178,8 +182,8 @@ let message = "hi there"
 // console.log(messageArray.length);
 // for (j=0; j<messageArray.length; j+=1){
 //       let x = messageArray[j];
-//       messageEncoded = messageEncode + x;
-//       // messageEncoded.push(x);
+//       messageEncode = messageEncode + x;
+//       // messageEncode.push(x);
 //       console.log(x);
 //       console.log(messageArray[j]);
 //       console.log(messageEncode);    
@@ -215,16 +219,16 @@ function encode(message) {
   for (j=0; j<messageArray.length; j+=1){
     messageEncode = messageEncode + messageArray[j];
   }
-  return messageEncode;
-  // return console.log(messageEncode);
+  // return messageEncode;
+  return console.log(messageEncode);
 }
 // encode(message);
 
 messageEncode = "h3 th2r2";
 
 function decode(messageEncode) {
-  messageEncode = message.split("");
-  for (let i=0; i<message.length; i += 1){
+  messageEncode = messageEncode.split("");
+  for (let i=0; i<messageEncode.length; i += 1){
     if (messageEncode[i] == "1"){
         messageEncode[i] = "a";  }
     if (messageEncode[i] == "2"){
@@ -240,15 +244,17 @@ function decode(messageEncode) {
   for (j=0; j<messageEncode.length; j+=1){
     messageDecode = messageDecode + messageEncode[j];
   }
-  return messageDecode;
-  // return console.log(messageDecode);
+  // return messageDecode;
+  return console.log(messageDecode);
 }
 
-// decode(messageEncode);
+decode(messageEncode);
 
 // Desafio 10
+let techArray = ["Js", "Git", "Facebook"];
+let name = "Virgílio";
 function techList() {
-  // seu código aqui
+  
 }
 
 // Desafio 11
