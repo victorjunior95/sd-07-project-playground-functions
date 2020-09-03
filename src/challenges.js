@@ -7,21 +7,15 @@ function compareTrue(valor1, valor2) {
   return retorno;
 }
 
-compareTrue();
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-calcArea();
-
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
 }
-
-splitSentence();
 
 // Desafio 4
 function concatName(frase) {
@@ -31,15 +25,11 @@ function concatName(frase) {
   return res;
 }
 
-concatName();
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
 }
-
-footballPoints();
 
 // Desafio 6
 function highestCount() {
