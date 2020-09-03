@@ -126,7 +126,6 @@ function generatePhoneNumber( a ) {
   } ;
   for( let i in a )
   {
-    console.log("i: "+i)
     if ( a[i] < 0 || a[i] > 9 )
     {
       result = "não é possível gerar um número de telefone com esses valores" ;
