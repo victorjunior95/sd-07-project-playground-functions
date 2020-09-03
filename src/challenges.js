@@ -188,11 +188,13 @@ function techList(array, name) {
   // seu código aqui
   const arraySorted = array.sort()
   let objectTechs = []
-  for (let key in arraySorted) {
-    objectTechs.push({
-      tech: arraySorted[key],
-      name: name,
-    })
+  if (arraySorted.length !== 0) {
+    for (let key in arraySorted) {
+      objectTechs.push({
+        tech: arraySorted[key],
+        name: name,
+      })
+    }
   }
   return objectTechs
 }
