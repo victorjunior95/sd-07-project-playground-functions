@@ -176,22 +176,22 @@ function generatePhoneNumber(phone) {
       }
     }
   }
+  repeat = repeat - 1;
   for (let j = 0; j < phone.length; j += 1) {
-    if (phone[j] < 0 || phone[j] > 9 || repeat >= 3) {
+    if (phone[j] < 0 || phone[j] > 9) {
       answer = 'não é possível gerar um número de telefone com esses valores';
     } 
   }
-  if (answer === 'não é possível gerar um número de telefone com esses valores') {
-    answer === 'não é possível gerar um número de telefone com esses valores';
-  } else if (phone.length !== 11) {
+  if (phone.length !== 11) {
     answer = 'Array com tamanho incorreto.';
-  } else {
+  } else if (repeat >= 3) {
+    answer === 'não é possível gerar um número de telefone com esses valores'
+  } else if (answer !== 'Array com tamanho incorreto.' && answer !== 'não é possível gerar um número de telefone com esses valores') {
       suport(phone);
   }
     
   lastReturn = answer;
   return lastReturn;
-  
 }
 
 // Desafio 12
