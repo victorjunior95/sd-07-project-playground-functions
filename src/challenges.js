@@ -1,12 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
+  if (a == true && b == true) {
     return true;
   } else {
     return false;
   }
 }
-
 
 // Desafio 2
 function calcArea(base, height) {
@@ -40,9 +39,25 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arrayString = [ ];
+  for(i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+      arrayString.push('fizz');
+    } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+      arrayString.push('buzz');
+    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      arrayString.push('fizzBuzz');
+    } else {
+      arrayString.push('bug!')
+    }
+  }
+  return arrayString;
 }
+let array = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(array));
+
+
 
 // Desafio 9
 function encode() {
