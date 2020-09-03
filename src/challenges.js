@@ -134,12 +134,64 @@ function fizzBuzz(numberList) {
 console.log(fizzBuzz(arrayForFizzBuzz));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(letters) {
+  const lettersForNumbers = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+
+  let result = '';
+  let cont = 0;
+  
+  for (key in letters) {
+    cont = 0;
+    for (k in lettersForNumbers) {
+      if (letters[key] == k) {
+        result += lettersForNumbers[k];
+        cont = 1;
+      }
+    }
+    if(cont == 0) {
+      result += letters[key];
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+function decode(number) {
+  const numbersForLetters = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u"
+  };
+
+  let result = '';
+  let cont = 0;
+  
+  for (key in number) {
+    cont = 0;
+    for (k in numbersForLetters) {
+      if (number[key] == k) {
+        result += numbersForLetters[k];
+        cont = 1;
+      }
+    }
+    if(cont == 0) {
+      result += letters[key];
+    }
+  }
+  return result;
+
 }
+
+console.log(decode('11113221222214444'));
+console.log(encode("aaaaieeaeeeeaoooo"));
+
 
 // Desafio 10
 function techList() {
