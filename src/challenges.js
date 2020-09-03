@@ -34,8 +34,8 @@ let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(a) {
   // seu código aqui
   let newString = '';
-  for (let i = 0; i < a.length; i += 1){
-    if (i === a.length - 1){
+  for (let i = 0; i < a.length; i += 1) {
+    if (i === a.length - 1) {
       newString += a[i]
     }
   }
@@ -50,7 +50,7 @@ let victory = 5;
 let draw = 3;
 function footballPoints(wins, ties) {
   // seu código aqui
-  wins = wins * 3;
+  wins *= 3;
   return wins + ties;
 }
 footballPoints(victory, draw)
@@ -70,7 +70,7 @@ function highestCount(a) {
   let highNumbersFinal = 0;
   for (let j = 0; j < a.length; j += 1) {
     if (highNumbers[0] === a[j]) {
-      highNumbersFinal = highNumbersFinal + 1;
+      highNumbersFinal += 1;
     }
   }
   return highNumbersFinal;
@@ -87,10 +87,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = mouse - cat2;
 
   if (distanceCat1 < 0) {
-    distanceCat1 = distanceCat1 * -1;
+    distanceCat1 *= -1;
   }
   if (distanceCat2 < 0) {
-    distanceCat2 = distanceCat2 * -1;
+    distanceCat2 *= -1;
   }
 
   if (distanceCat1 < distanceCat2) {
@@ -112,7 +112,7 @@ function fizzBuzz(a) {
       message.push('fizzBuzz');
     } else if (a[i] % 3 === 0) {
       message.push('fizz');
-    } else if (a[i] % 5 === 0) { 
+    } else if (a[i] % 5 === 0) {
       message.push('buzz');
     } else {
       message.push('bug!');
@@ -135,12 +135,6 @@ let techsNames = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let myName = 'Josiel';
 function techList(a, b) {
   // seu código aqui
-  let techsObjects = []
-  for (let i = 0; i < a.length; i += 1){
-    techsObjects.push({tech: a[i], name: b})
-  }
-  return techsObjects
-
 }
 
 // Desafio 11
