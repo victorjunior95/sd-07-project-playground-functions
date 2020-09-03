@@ -98,7 +98,7 @@ function encode(string) {
   let saida = String(string).split('');
   const codigo = ['a', 'e', 'i', 'o', 'u'];
 
-  for (let key = 0; key < 5; key += 1) {
+  for (let key = 0; key < codigo.length; key += 1) {
     for (let i = 0; i < string.length; i += 1) {
       if (saida[i] === codigo[key]) {
         saida[i] = key + 1;
@@ -115,7 +115,7 @@ function decode(string) {
 
   for (let key = 0; key < 5; key += 1) {
     for (let i = 0; i < string.length; i += 1) {
-      if (parseInt(saida[i]) === key + 1) {
+      if (parseInt(saida[i], 10) === key + 1) {
         saida[i] = codigo[key];
       }
     }
@@ -149,7 +149,7 @@ function procuraRepetidos(array) {
   let qtdRepetidos = 0;
 
   for (let i = 0; i < array.length; i += 1) {
-    for (let j = 0; j < array.length && qtdRepetidos < 3; j += 1) {
+    for (let j = 0; j < array.length; j += 1) {
       if (array[i] === array[j]) {
         qtdRepetidos += 1;
       }
