@@ -78,9 +78,23 @@ function highestCount(a) {
 highestCount(highNumberList)
 
 // Desafio 7
-function catAndMouse() {
+let mouse = 3;
+let cat1 = 4;
+let cat2 = 4;
+function catAndMouse(a, b, c) {
   // seu código aqui
+  let distanceCat1 = b - a;
+  let distanceCat2 = c - a;
+
+  if (distanceCat1 > distanceCat2) {
+    return 'cat1';
+  }else if (distanceCat2 > distanceCat1){
+    return 'cat2';
+  }
+    return 'os gatos trombam e o rato foge';
 }
+catAndMouse(mouse, cat1, cat2)
+
 
 // Desafio 8
 let dataFizzBuzz = [2, 15, 7, 9, 45]
