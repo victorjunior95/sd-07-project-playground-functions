@@ -137,25 +137,33 @@ function decode(strings) {
 // Desafio 10
 function techList(nameTech, name) {
   // seu código aqui
-  let objeto = [];
-  for(let indice in nameTech){
-    objeto[indice] = { tech: nameTech[indice], name: name };
+  
+  if (nameTech.length == 0){
+    return 'Vazio!'
   }
-  //return objeto.sort();
-  function compare(a,b){
-    if(a.tech < b.tech){
-      return -1;
+  else {
+    // parte de cima
+    let objeto = [];
+    for(let indice in nameTech){
+      objeto[indice] = { tech: nameTech[indice], name: name };
     }
-    else if(a.tech > b.tech){
-      return 1;
+    // parte de baixo
+    //objeto.sort();
+    function compare(a,b){
+      if(a.tech < b.tech){
+        return -1;
+      }
+      else if(a.tech > b.tech){
+        return 1;
+      }
+      else{
+        return 0;
+      }
     }
-    else{
-      return 0;
-    }
+    return objeto.sort(compare);
   }
-  return objeto.sort(compare);
+  
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
