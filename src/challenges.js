@@ -1,14 +1,13 @@
+console.log(compareTrue(true , false));
 function compareTrue(boleano1, boleano2) {
   let boleano = true;
   if (
-    (boleano1 === true && boleano2 === true) ||
-    (boleano2 === true && boleano1 === true)
+    (boleano1 === true && boleano2 === true)
   ) {
     boleano = true;
     return boleano;
   } else if (
-    (boleano1 === false && boleano2 === true) ||
-    (boleano2 === false && boleano1 === true)
+    (boleano1 != boleano2)
   ) {
     boleano = false;
     return boleano;
