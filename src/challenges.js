@@ -39,20 +39,20 @@ function highestCount(array) {
       contador += 1
     }
   }
-  let resultado = highestCount
+  let resultado = contador
   return resultado;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
-  if (distanciaCat1 < distanciaCat2) {
-    return "cat1"
+  if (distanciaCat1 === distanciaCat2) {
+    return "Os gatos trombam e o rato foge"
   } 
   else if (distanciaCat1 > distanciaCat2) {
     return "cat2"
   } else {
-    return "Os gatos trombam e o rato foge" 
+    return "cat1" 
   }
 }
 // Desafio 8
