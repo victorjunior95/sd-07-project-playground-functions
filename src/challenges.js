@@ -157,7 +157,7 @@ function decode(palavra2) {
 }
 
 // Desafio 10
-function techList(lista, name) {
+function techList(lista,name) {
   let tecnologias = {}
 
   let lista2 = []
@@ -170,10 +170,20 @@ function techList(lista, name) {
     tecnologias.tech = lista[i]
     tecnologias.name = name
     lista2.push(Object.assign({}, tecnologias))
+    
   }
-
+  function compare(a,b){
+    if(a.tech < b.tech){
+      return -1;
+    }
+    if(a.tech > b.tech){
+      return 1;
+    }
+  }
+  lista2.sort(compare)
   return lista2
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
