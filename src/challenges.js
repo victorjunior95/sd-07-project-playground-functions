@@ -29,14 +29,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maior = 0, contador = 0;
-  for (let i = 0; i < array.length; i += 1){
-    if (maior < array[i]){
-      maior = array[i];
-    }
-  }
+  let maior = Math.max(...array);
+  let contador = 0;
   for (let i = 0; i < array.length; i +=1 ){
-    if (maior == array[i]){
+    if (maior === array[i]){
       contador += 1;
     }
   }
@@ -59,11 +55,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let armazena = [];
   for (let i = 0; i < array.length; i += 1){
-    if ((array[i] % 3) == 0 && (array[i] % 5) == 0){
+    if ((array[i] % 3) === 0 && (array[i] % 5) === 0){
       armazena[i] = "fizzBuzz";
-    }else if ((array[i] % 3) == 0){
+    }else if ((array[i] % 3) === 0){
       armazena[i] = "fizz";
-    }else if ((array[i] % 5) == 0){
+    }else if ((array[i] % 5) === 0){
       armazena[i] = "buzz";
     }else{
       armazena[i] = "bug!";
@@ -110,20 +106,16 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let aux = 0;
-  if (array.length != 11){
-    return "Array com tamanho incorreto.";
-  }
+  if (array.length != 11){ return "Array com tamanho incorreto.";}
   for (let i = 0; i < array.length; i += 1){
     if (array[i] < 0 || array[i] > 9) return "não é possível gerar um número de telefone com esses valores";
     let contador = 0;
-    aux = array[i];
     for (let j = 0; j < array.length; j += 1){
-      if (aux == array[j]){
+      if (array[i] == array[j]){
         contador += 1;
       }
     }
-    if (contador >= 3){ return "não é possível gerar um número de telefone com esses valores";}
+    if (contador >= 3) return "não é possível gerar um número de telefone com esses valores";
   }
   return "(" + array[0] + array[1] + ") " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10];
 }
