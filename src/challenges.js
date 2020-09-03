@@ -36,7 +36,7 @@ function concatName(nomes) {
 // Desafio 5
 function footballPoints(wins, ties) {
   wins = (wins * 3 );
-  ties = (ties * 3 );
+  ties = (ties * 1 );
   return (wins + ties);
 }
 
@@ -146,7 +146,7 @@ function decode(texto) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tecnologias, name) {
   // seu código aqui
 }
 
