@@ -118,7 +118,7 @@ function generatePhoneNumber(a) {
     if (a[i]>9 || a[i]<0){return "não é possível gerar um número de telefone com esses valores"}
   }
 
-  if (a.length < 0 || a.length > 9){return "Array com tamanho incorreto."}
+  if (a.length < 0 || a.length > 11){return "Array com tamanho incorreto."}
 
   //Repete 3x ou Mais
   let repMais = 0
@@ -133,7 +133,7 @@ function generatePhoneNumber(a) {
   return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}` 
 }
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
