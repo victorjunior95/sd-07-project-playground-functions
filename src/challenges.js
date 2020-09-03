@@ -262,8 +262,6 @@ function hydrate(pedido) {
   return coposDagua;
 }
 
-console.log(hydrate('2 cervejas 3 cachaças'));
-
 
 module.exports = {
   calcArea,
