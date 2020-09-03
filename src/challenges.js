@@ -78,9 +78,6 @@ function catAndMouse(mouse, cat1, cat2) {
       return resultadoFinal;
   // seu código aqui
 }
-console.log(catAndMouse(15, 5, 5));
-
-
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
