@@ -140,6 +140,9 @@ function decode(desencodado) {
 
 // Desafio 10
 function techList(nometech,name) {
+  if(nometech ==={}){
+    return'Vazio!';
+  }
   let novaNomeTechAux = {};
   let novaNomeTech = [];
   for(let i =0; i < nometech.length;i++){
