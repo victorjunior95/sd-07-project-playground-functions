@@ -144,22 +144,33 @@ function techList(tecnologias, name) {
 // BÔNUS
 // 11
 function generatePhoneNumber(numbers) {
-    let telephone_number = "(";
-    for (i = 0; i < 2; i +=1){
-        telephone_number += numbers[i];
+    let is_number = true;
+    for (let i in numbers){
+        if (numbers[i] < 0 || numbers[i] > 9){
+            let telephone_number = "não é possível gerar um número de telefone com esses valores";
+            is_number = false;        
+            break;
+        };
     }
-    telephone_number += ") ";
-    for (i = 2; i < 3; i +=1){
-        telephone_number += numbers[i];
+    if (is_number === true){
+        let telephone_number = "(";            
+            for (i = 0; i < 2; i +=1){
+                telephone_number += numbers[i];
+            }
+            telephone_number += ") ";
+            for (i = 2; i < 3; i +=1){
+                telephone_number += numbers[i];
+            }
+            telephone_number += ".";
+            for (i = 3; i < 7; i +=1){
+                telephone_number += numbers[i];         
+            }
+            telephone_number += "-";
+            for (i = 7; i < 11; i +=1){
+                telephone_number += numbers[i];            
+            }
     }
-    telephone_number += ".";
-    for (i = 3; i < 7; i +=1){
-        telephone_number += numbers[i];         
-    }
-    telephone_number += "-";
-    for (i = 7; i < 11; i +=1){
-        telephone_number += numbers[i];
-    }
+    return telephone_number;
 }
 
 // 12
