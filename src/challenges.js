@@ -142,17 +142,7 @@ console.log(fraseCodada);
 console.log(decode(fraseCodada))
 
 // Desafio 10
-let listaTech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-
-function techList(tecnologias, name) {
-  let arrayTech = [];
-  for (let i = 0; i < tecnologias.length; i += 1) {
-    let techObjeto = {tech: tecnologias[i], name: name};
-    arrayTech[i] = techObjeto;
-  }
-  arrayTech = ordenaArray(arrayTech);
-  return arrayTech;
-}
+let listaTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 
 function ordenaArray(listaTech) {
   for (let i = 0; i < listaTech.length; i += 1) {
@@ -169,7 +159,21 @@ function ordenaArray(listaTech) {
   return listaTech;
 }
 
-console.log(techList(listaTech, 'Lucas'));
+function techList(tecnologias, name) {
+  let arrayTech = '';
+  if (tecnologias.length > 0){
+    for (let i = 0; i < tecnologias.length; i += 1) {
+      let techObjeto = { tech: tecnologias[i], name: name };
+      arrayTech[i] = techObjeto;
+    }
+    arrayTech = ordenaArray(arrayTech);
+  } else {
+    arrayTech = 'Vazio!';
+  }  
+  return arrayTech;
+}
+
+console.log(techList(listaTecnologias, 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
