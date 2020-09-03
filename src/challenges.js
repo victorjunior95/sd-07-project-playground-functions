@@ -57,13 +57,13 @@ function highestCount(numbers) {
   // check count
     let countNumber = 0;
     for (let k = 0; k < numbers.length; k += 1) {
-      if(numbers[k] === highestNumber) {
-      countNumber += 1;
+      if (numbers[k] === highestNumber) {
+        countNumber += 1;
       }
     }
     return countNumber;
   }
-}  
+}
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) // 2
 
 
@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
-  } 
+  }
 }
 console.log(catAndMouse(0, 1, 2)) // cat1
 console.log(catAndMouse(0, 2, 1)) // cat2
@@ -104,43 +104,43 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))  // ["bug!", "fizzBuzz", "bug!", "fizz"
 
 
 // Desafio 9
-function encode(code) {
-  let newCode = '';
-  for (let i = 0; i < code.length; i += 1) {
-    if (code[i] === 'a') {
-      newCode += '1';
-    } else if (code[i] === 'e') {
-      newCode += '2';
-    } else if (code[i] === 'i') {
-      newCode += '3';
-    } else if (code[i] === 'o') {
-      newCode += '4';
-    } else if (code[i] === 'u') {
-      newCode += '5';
+function encode(cod) {
+  let newCod = '';
+  for (let i = 0; i < cod.length; i += 1) {
+    if (cod[i] === 'a') {
+      newCod += '1';
+    } else if (cod[i] === 'e') {
+      newCod += '2';
+    } else if (cod[i] === 'i') {
+      newCod += '3';
+    } else if (cod[i] === 'o') {
+      newCod += '4';
+    } else if (cod[i] === 'u') {
+      newCod += '5';
     } else {
-      newCode += code[i];
+      newCod += cod[i];
     }
   }
-  return newCode;
+  return newCod;
 }
-function decode(decode) {
-  let newDecode = '';
-  for (let i = 0; i < decode.length; i += 1) {
-    if (decode[i] === '1') {
-      newDecode += 'a';
-    } else if (decode[i] === '2') {
-      newDecode += 'e';
-    } else if (decode[i] === '3') {
-      newDecode += 'i';
-    } else if (decode[i] === '4') {
-      newDecode += 'o';
-    } else if (decode[i] === '5') {
-      newDecode += 'u';
+function decode(dec) {
+  let newDec = '';
+  for (let i = 0; i < dec.length; i += 1) {
+    if (dec[i] === '1') {
+      newDec += 'a';
+    } else if (dec[i] === '2') {
+      newDec += 'e';
+    } else if (dec[i] === '3') {
+      newDec += 'i';
+    } else if (dec[i] === '4') {
+      newDec += 'o';
+    } else if (dec[i] === '5') {
+      newDec += 'u';
     } else {
-      newDecode += decode[i];
+      newDec += decode[i];
     }
   }
-  return newDecode;
+  return newDec;
 }
 console.log(encode('hi there!'))  // h3 th2r2!
 console.log(decode('h3 th2r2!'))  // hi there!
@@ -148,21 +148,20 @@ console.log(decode('h3 th2r2!'))  // hi there!
 
 // Desafio 10
 function techList(array, name) {
-  if (array.length === 0) {
-    return 'Vazio!';
-  } else {
+  if (array.length !== 0) {
     let createObject = [];
     array.sort();
     for (let item in array) {
-      createObject.push ({ 
-          tech: array[item],
-          name: name
-        });
-    } 
-    return createObject; 
-  }      
+      createObject.push({
+        tech: array[item],
+        name: name,
+      });
+    } return createObject;
+  } else {
+    return 'Vazio!';
+  }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Ana")) 
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Ana'))
 /* Saída:
 
 [
