@@ -16,7 +16,7 @@ function splitSentence(string) {
   let arrayString = [];
   let word = '';
 
-  for (let i = 0; i < string.length; i+= 1) {
+  for (let i = 0; i < string.length; i += 1) {
     if (string[i] === ' ') {
       arrayString.push(word);
       word = '';
@@ -93,7 +93,7 @@ function fizzBuzz(numbers) {
 function encode(string) {
   let result = '';
 
-  for (let i in string) {
+  for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
       case 'a':
         result += '1';
@@ -120,7 +120,7 @@ function encode(string) {
 
 function decode(string) {
   let result = '';
-  for (let i in string) {
+  for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
       case '1':
         result += 'a';
@@ -157,10 +157,10 @@ function techList(techs, name) {
 
   techsArray.sort(); // techs em ordem alfabética
 
-  for (let i in techsArray) {
+  for (let i = 0; i < techsArray.length; i += 1) {
     result[i] = {
       tech: techsArray[i],
-      name: name
+      name: name,
     }
   }
   return result;
@@ -169,7 +169,7 @@ function techList(techs, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let result;
-  if(numbers.length !== 11) {
+  if (numbers.length !== 11) {
     result = 'Array com tamanho incorreto.';
     return result;
   }
@@ -223,7 +223,7 @@ function hydrate(drinks) {
   let NumberOfDrinks = drinks.match(/\d+/g).map(Number);  //  linha de código retirada da internet https://stackoverflow.com/questions/53897373/js-how-to-got-the-sum-of-numbers-from-a-string
   let sum = 0;
 
-  for (let i in NumberOfDrinks) {
+  for (let i = 0; i < NumberOfDrinks.length; i +=1) {
     sum += NumberOfDrinks[i];
   }
 
