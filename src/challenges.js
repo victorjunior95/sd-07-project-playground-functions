@@ -72,12 +72,15 @@ function catAndMouse(mouse, cat1, cat2) {
     else if ( resultado2 < resultado1) {
       resultadoFinal = cat2;
     }
-    else ( 
-      resultadoFinal = "os gatos trombam e o rato foge"
-    )
+    else {
+      resultadoFinal = "os gatos trombam e o rato foge";
+    }
       return resultadoFinal;
   // seu código aqui
 }
+console.log(catAndMouse(15, 5, 5));
+
+
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
@@ -102,15 +105,20 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
+function encode(vogais) {
+  let encodeResultado1 = vogais.replace("a", "1");
+  let encodeResultado = vogais.replace("a", "1");
+  return encodeResultado;
   // seu código aqui
 }
-function decode() {
+function decode(numeros) {
+  let decodeResultado = numeros.replace("1", "a");
+  return decodeResultado;
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
 }
 
@@ -136,7 +144,7 @@ module.exports = {
   compareTrue,
   concatName,
   decode,
-  encode,
+  encode: encodeResultado,
   fizzBuzz,
   footballPoints,
   generatePhoneNumber,
