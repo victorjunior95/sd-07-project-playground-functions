@@ -11,34 +11,28 @@ function compareTrue(a,b) {
   }
     else if( a == false && b == true){
     return false;
-  }
-}
+  }}
 
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
-}
+  return (base * height) / 2;}
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
-}
+  return string.split(" ");}
 
 // Desafio 4
 function concatName(nomes) {
-  let novo = nomes[nomes.length-1];
-  nomes.unshift(novo);
-  nomes.pop();
-  return nomes;
-}
+    cName = nomes;
+    cName.splice(1, nomes.length-2 );
+    return cName.reverse();}
 
 // Desafio 5
 function footballPoints(wins, ties) {
   wins = (wins * 3 );
   ties = (ties * 1 );
-  return (wins + ties);
-}
+  return (wins + ties);}
 
 // Desafio 6
 function highestCount(maior) {
@@ -54,68 +48,49 @@ function highestCount(maior) {
         count += 1
       }
     }
-  return count;
-}
+  return count;}
 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = 0
-  let dist2 = 0
-
-  if(mouse > cat1){
-    dist1 = (mouse - cat1);
-  }
-  else if (mouse < cat1){
-    dist1 = (cat1 -mouse);
-  }
-  else{
-    distcat1 = mouse;
-  }
-  if(mouse > cat2){
-    dist2 = (mouse - cat2);
-  }
-  else if (mouse < cat2){
-    dist2 = (cat2 - mouse);
-  }
-  else{
-    dist2 = mouse;
-  }
-
-  if(dist1 > dist2){
-    return cat1;
-  }
-  else if(dist1 < dist2){
-    return cat2;
-  }
-  else{
-    return "os gatos trombam e o rato foge";
-  }
-}
+  if(cat1 && cat2 < mouse && cat1 != cat2){
+    if((mouse - cat1) < (mouse - cat2)){
+      return "cat1"
+    }else if((mouse - cat2) < (mouse - cat1)){
+      return "cat2";
+    }
+  }if(cat1 && cat2 > mouse && cat1 != cat2){
+      if((mouse + cat1) < (mouse + cat2)){
+        return "cat1"
+      }else if((mouse + cat2) < (mouse + cat1)){
+        return "cat2"
+      }
+  }if(cat1 == cat2){
+    return "os gatos trombam e o rato foge"
+  }}  
 
 // Desafio 8
 function fizzBuzz(numeros) {
   let multiplos = [];
   for(let n in numeros){
-    if (numeros[n] % 3 == 0 ){
-      multiplos.push("fizz");
+    if (numeros[n] % 3 ==0 && numeros[n] % 5 == 0){
+      multiplos.push("fizzBuzz");
     }
     else if(numeros[n] % 5 == 0){
       multiplos.push("buzz");
     }
-    else if(numeros[n] % 3 ==0 && numeros[n] % 5 == 0){
-      multiplos.push("fizzBuzz");
+    else if(numeros[n] % 3 == 0 ){
+      multiplos.push("fizz");
     }
     else{
       multiplos.push("bug!");
     }
   }
-  return multiplos
-}
+  return multiplos}
 
 // Desafio 9
 function encode(texto) {
-  let vogais = {a:1,e:2,i:3,o:4,u:5};
+  let vogais = {"a":1,"e":2,"i":3,"o":4,"u":5};
   let encod = texto;
   for(let letra in encod){
     for(let vog in vogais){
@@ -126,12 +101,11 @@ function encode(texto) {
       }
     }
   }
-  return encod;
-}
+  return encod;}
 
 function decode(texto) {
   // seu código aqui
-  let vogais = {1:a,2:e,3:i,4:o,5:u};
+  let vogais = {1:"a",2:"e",3:"i",4:"o",5:"u"};
   let encod = texto;
   for(let letra in encod){
     for(let vog in vogais){
@@ -142,8 +116,7 @@ function decode(texto) {
       }
     }
   }
-  return encod;
-}
+  return encod;}
 
 // Desafio 10
 function techList(tecnologias, name) {
