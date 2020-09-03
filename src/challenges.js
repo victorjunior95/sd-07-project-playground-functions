@@ -95,7 +95,6 @@ function fizzBuzz(numbers) {
 function encode(string) {
   // seu código aqui
   let number = '';
-
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] === 'a') {
       number += 1;
@@ -117,17 +116,16 @@ function encode(string) {
 function decode(number) {
   // seu código aqui
   let letter = '';
-
   for (let i = 0; i < number.length; i += 1) {
     if (number[i] === '1') {
       letter += 'a';
-    } else if (number[i] == '2') {
+    } else if (number[i] === '2') {
       letter += 'e';
-    } else if (number[i] == '3') {
+    } else if (number[i] === '3') {
       letter += 'i';
-    } else if (number[i] == '4') {
+    } else if (number[i] === '4') {
       letter += 'o';
-    } else if (number[i] == '5') {
+    } else if (number[i] === '5') {
       letter += 'u';
     } else {
       letter += number[i];
@@ -137,22 +135,19 @@ function decode(number) {
 }
 
 // Desafio 10
-
-function techList(tec, name) {
+function techList(tec, names) {
   // seu código aqui
   let tecnos = tec.sort();
   let tecnologies = [];
-  if (tec.length > 0){
+  if (tec.length > 0) {
     for (let i = 0; i < tecnos.length; i += 1) {
-      tecnologies.push({tech: tec[i], name: name})
+      tecnologies.push( {tech: tec[i], name: names} );
     }
   } else {
-    return 'Vazio!'
+    return 'Vazio!';
   }
   return tecnologies;
 }
-
-
 
 // Desafio 11
 function generatePhoneNumber() {
