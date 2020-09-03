@@ -165,61 +165,69 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function generatePhoneNumber(numero) {
-  function numeroRepete(numero) {
-      let retorno = 0;
+  if (numero.length !== 11) {
+      return "Array com tamanho incorreto."
+  }
+  
+  for (i in numero) {
+      if (numero[i] < 0 || numero[i] > 9) {
+          return "não é possível gerar um número de telefone com esses valores"
+          break;
+      }
+  }
+  
+  for (i=0; i<numero.length; i+=1) {
       let rep = 0;
-      for (i in numero) {
-          for (j in numero) {
-              if (numero[i] = numero[j]) {
-              rep += 1
-              }
+      for (j=i; j<numero.length; j+=1) {
+          if (numero[i] == numero[j]) {
+          rep += 1
           }
-      } 
+      }
       if (rep >= 3){
-          retorno = 1
+          return "não é possível gerar um número de telefone com esses valores"
+          break;
       }
-      return retorno;
-  }
-  function numeroZeroNove(numero) {
-      let retorno = 0;
-      for (i in numero) {
-          if (numero[i] < 0 || numero[i] > 9) {
-              retorno = 1
-          }
-      }
-      return retorno;
-  }
-  function numeroNaoOnze(numero) {
-      retorno = 0;
-      if (numero.length !== 11) {
-          retorno = 1
-      }
-      return retorno;
-  }
-  let retorno = 0;
+  } 
+     
   let numeroString = "";
-  if (numeroRepete === 1 || numeroZeroNove === 1) {
-      retorno = "não é possível gerar um número de telefone com esses valores"
-  } else if (numeroNaoOnze === 1) {
-      retorno = "Array com tamanho incorreto."
+  numero.unshift("(");
+  numero.splice(3, 0, ")");
+  numero.splice(9, 0, "-");
+  numeroString = numero.join("")
+  return numeroString;
+}
+
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  let retorno = false;
+  if (lineA < (lineB + lineC) &&
+      lineB < (lineA + lineC) &&
+      lineC < (lineB + lineA) &&
+      lineA > Math.abs(lineB - lineC) &&
+      lineB > Math.abs(lineA - lineC) &&
+      lineC > Math.abs(lineB - lineA)) {
+          retorno = true
   } else {
-      numero.unshift("(");
-      numero.splice(3, 0, ")");
-      numero.splice(9, 0, "-");
-      numeroString = numero.join("")
-      retorno = numeroString;
+          retorno = false
   }
   return retorno;
 }
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  let num = drink.match(/\d/g);
+  let newNum = []
+  for (i in num){
+      newNum.push(parseInt(num[i]))
+  }
+  let total = newNum.reduce(function(acumulador, valorAtual, index, array) {
+      return acumulador + valorAtual;
+    });
+  if (total === 1) {
+      return total + " copo de água"
+  } else {
+      return total + " copos de água"
+  }
 }
 
 
