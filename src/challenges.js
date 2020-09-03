@@ -76,7 +76,10 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  if(mouse === 0){
+  if((cat1 - mouse)**2 === (cat2 - mouse)**2){
+    return "os gatos trombam e o rato foge"
+}
+if(mouse === 0){
     if(cat1 > cat2){
         return "cat2"
     }
@@ -105,7 +108,9 @@ if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat1 > cat2){
 if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat2 > cat1){
     return "cat2"
 }
-
+if(mouse > 0 && mouse > cat1 && mouse < cat2 && cat2 > cat1){
+    return "cat2"
+}
 }
 // Desafio 8
 function fizzBuzz(lista) {
@@ -128,14 +133,16 @@ function fizzBuzz(lista) {
 }
 
 // Desafio 9
-function encode(string) {
-  string = string.toLowerCase()
-    for(i=0 ; i <= string.length ; i+= 1){
-       string = string.replace('a','1').replace('e','2').replace('i','3').replace('o','4').replace('u','5')
+function encode(palavraTroca) {
+  palavraTroca = palavraTroca
+    for(i=0 ; i <= palavraTroca.length ; i+= 1){
+       palavraTroca = palavraTroca.replace('a','1').replace('e','2').replace('i','3').replace('o','4').replace('u','5')
     }
 
-    return string
+    return palavraTroca
 }
+
+
 function decode(string) {
   string = string
   for(i=0 ; i <= string.length ; i+= 1){
