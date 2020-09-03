@@ -123,7 +123,7 @@ function techList(array, nome) {
     return "Vazio!"
   } else {
     let newArray = array.sort() 
-    newArray = array.sort((a, b) => {
+    newArray = newArray.sort((a, b) => {
       if (a.length > b.length) {
       return 1
     } else if (b.length > a.length) {
