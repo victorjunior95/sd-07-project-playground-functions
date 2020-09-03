@@ -43,8 +43,8 @@ function highestCount(array) {
       maiorNumero = array[i];
     }
   }
-  for (let j in array) {
-    if (maiorNumero === array[j]) {
+  for (let i in array) {
+    if (maiorNumero === array[i]) {
       numeroRepeat += 1;
     }
   }
