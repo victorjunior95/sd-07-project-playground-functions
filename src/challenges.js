@@ -62,7 +62,20 @@ function highestCount(arrayDeNumeros) {
   }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let resultado1 = mouse - cat1;
+  let resultado2 = mouse - cat2;
+  let resultadoFinal = "";
+    if(resultado1 < resultado2) {
+      resultadoFinal = "cat1";
+    }
+    else if ( resultado2 < resultado1) {
+      resultadoFinal = "cat2";
+    }
+    else ( 
+      resultadoFinal = "os gatos trombam e o rato foge"
+    )
+      return resultadoFinal;
   // seu código aqui
 }
 
