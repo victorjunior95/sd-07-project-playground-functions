@@ -39,13 +39,22 @@ function highestCount(array) {
       contador += 1
     }
   }
-  return contador;
+  let resultado = highestCount
+  return resultado;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  if (distanciaCat1 < distanciaCat2) {
+    return cat1
+  } 
+  else if (distanciaCat1 > distanciaCat2) {
+    return cat2
+  } else {
+    return "Os gatos trombam e o rato foge"
+  }
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
