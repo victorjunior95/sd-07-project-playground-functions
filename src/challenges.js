@@ -99,9 +99,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(list) {
+function techList(array, name) {
+    let saida = [];
+    if (array.length == 0)
+        return 'Vazio!';
 
+    for (let i = 0; i < array.length; i++) {
+        saida.push({
+            tech: array[i],
+            name: name,
+        })
+    }
+    return saida;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
