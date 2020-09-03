@@ -1,62 +1,62 @@
-// // Desafio 1
-// function compareTrue(a, b) {
-//   if (a === true && b === true) return true
-//   return false;
-// }
+// Desafio 1
+function compareTrue(a, b) {
+  if (a === true && b === true) return true
+  return false;
+}
 
-// // Desafio 2
-// function calcArea(base, height) {
-//   return (base * height) / 2;
-// }
+// Desafio 2
+function calcArea(base, height) {
+  return (base * height) / 2;
+}
 
-// // Desafio 3
-// function splitSentence(palavra) {
-//   return palavra.split(' ');
-// }
+// Desafio 3
+function splitSentence(palavra) {
+  return palavra.split(' ');
+}
 
-// // Desafio 4
-// function concatName(palavras) {
-//   return palavras[palavras.length - 1] + palavras[0]
-// }
+// Desafio 4
+function concatName(palavras) {
+  return palavras[palavras.length - 1] + palavras[0]
+}
 
-// // Desafio 5
-// function footballPoints(wins, ties) {
-//   return (wins * 3) + ties;
-// }
+// Desafio 5
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
+}
 
-// // Desafio 6
-// function highestCount(numbers) {
-//   let maior = numbers[0];
-//   let contador = 0;
-//   for (let i = 0; i < numbers.length; i += 1) {
-//     if (maior === numbers[i]) contador += 1;
-//     if (maior < numbers[i]) {
-//       maior = numbers[i];
-//       contador = 0;
-//       i = 0;
-//     }
-//   }
-//   return contador;
-// }
+// Desafio 6
+function highestCount(numbers) {
+  let maior = numbers[0];
+  let contador = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (maior === numbers[i]) contador += 1;
+    if (maior < numbers[i]) {
+      maior = numbers[i];
+      contador = 0;
+      i = 0;
+    }
+  }
+  return contador;
+}
 
-// // Desafio 7
-// function catAndMouse(mouse, cat1, cat2) {
-//   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return 'cat1';
-//   else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
-//   return 'os gatos trombam e o rato foge';
-// }
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return 'cat1';
+  else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
+  return 'os gatos trombam e o rato foge';
+}
 
-// // Desafio 8
-// function fizzBuzz(lista) {
-//   let fizzOrBuzz = [];
-//   for (let i = 0; i < lista.length; i += 1) {
-//     if (lista[i] % 15 === 0) fizzOrBuzz[i] = 'fizzBuzz';
-//     else if (lista[i] % 5 === 0) fizzOrBuzz[i] = 'buzz';
-//     else if (lista[i] % 3 === 0) fizzOrBuzz[i] = 'fizz';
-//     else fizzOrBuzz[i] = 'bug!';
-//   }
-//   return fizzOrBuzz;
-// }
+// Desafio 8
+function fizzBuzz(lista) {
+  let fizzOrBuzz = [];
+  for (let i = 0; i < lista.length; i += 1) {
+    if (lista[i] % 15 === 0) fizzOrBuzz[i] = 'fizzBuzz';
+    else if (lista[i] % 5 === 0) fizzOrBuzz[i] = 'buzz';
+    else if (lista[i] % 3 === 0) fizzOrBuzz[i] = 'fizz';
+    else fizzOrBuzz[i] = 'bug!';
+  }
+  return fizzOrBuzz;
+}
 
 // Desafio 9
 function encode(word) {
@@ -85,7 +85,6 @@ function encode(word) {
   }
   return code
 }
-console.log(decode('P1l1vr1'))
 
 function decode(code) {
   let word = '';
@@ -135,19 +134,19 @@ function hydrate() {
 }
 
 
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   generatePhoneNumber,
-//   techList,
-//   highestCount,
-//   hydrate,
-//   splitSentence,
-//   triangleCheck,
-// }
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
