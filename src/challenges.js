@@ -112,12 +112,13 @@ function techList(array,nome) {
 // Desafio 11
 function generatePhoneNumber(a) {
 
+  if (a.length != 11){return "Array com tamanho incorreto."}
+
   for (let i in a) {
     if (a[i]>9 || a[i]<0){return "não é possível gerar um número de telefone com esses valores"}
   }
-  if (a.length < 0 || a.length > 9){return "Array com tamanho incorreto."}
 
-  if (a.length != 11){return "Array com tamanho incorreto."}
+  if (a.length < 0 || a.length > 9){return "Array com tamanho incorreto."}
 
   //Repete 3x ou Mais
   let repMais = 0
