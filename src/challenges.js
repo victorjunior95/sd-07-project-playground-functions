@@ -122,7 +122,8 @@ function techList(array, nome) {
   if (array.length === 0) {
     return "Vazio!"
   } else {
-    let newArray = array.sort((a, b) => {
+    let newArray = array.sort() 
+    newArray = array.sort((a, b) => {
       if (a.length > b.length) {
       return 1
     } else if (b.length > a.length) {
@@ -169,7 +170,7 @@ function triangleCheck(lineA, lineB, lineC) {
   lineA = Math.abs(lineA)
   lineB = Math.abs(lineB)
   lineC = Math.abs(lineC)
-  if (lineA + lineB < lineC || lineC + lineB < lineB || lineA + lineC < lineB) {
+  if (lineA + lineB < lineC || lineC + lineB < lineA || lineA + lineC < lineB) {
     return false
   } else {
     return true
@@ -177,8 +178,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let input = phrase.match(/[0-9]+/g)
+  let total = 0
+  for (num in input) {
+    total += parseInt(input[num])
+  }
+  if (total === 1) {
+    return "1 copo de água"
+  } else {
+    return `${total} copos de água`
+  }
 }
 
 
