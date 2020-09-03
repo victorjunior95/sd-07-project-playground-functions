@@ -17,10 +17,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arrayStrings) {
-  let lastName = arrayStrings[arrayStrings.length - 1];
+function concatName(posicoesStrings) {
+  let lastName = posicoesStrings[posicoesStrings.length - 1];
   let resultadoString = "";
-  resultadoString = `${lastName}, ${arrayStrings[0]}`;
+  resultadoString = `${lastName}, ${posicoesStrings[0]}`;
   return resultadoString;
 }
 
@@ -32,18 +32,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount(posicoes) {
   let higherNumber = 0;
   let countNumber = 0;
-  for (let index in array) {
-    for (let i = 0; i < array.length; i += 1) {
-      if (array[index] > array[i] && array[index] > higherNumber) {
-        higherNumber = array[index];
+  for (let index in posicoes) {
+    for (let i = 0; i < posicoes.length; i += 1) {
+      if (posicoes[index] > posicoes[i] && posicoes[index] > higherNumber) {
+        higherNumber = posicoes[index];
       }
     }
   }
-  for (let index in array) {
-    if (array[index] === higherNumber) {
+  for (let index in posicoes) {
+    if (posicoes[index] === higherNumber) {
       countNumber += 1;
     }
   }
@@ -51,13 +51,40 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let jerry = 0;
+  let tom = 0;
+  let garfield = 0;
+  jerry = mouse;
+  tom = cat1;
+  garfield = cat2;
+  if (garfield - jerry === tom - jerry) {
+    console.log("Jerry fugiu! XD");
+    return "os gatos trombam e o rato foge";
+  } else if (garfield - jerry < tom - jerry) {
+    console.log("Garfield jantou o Jerry :'(");
+    return `cat2`;
+  } else {
+    console.log("Tom jantou o Jerry :'(");
+    return `cat1`;
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let fizzBuzz = [];
+  for (let number in arrayNumbers) {
+    if (arrayNumbers[number] % 3 === 0 && arrayNumbers[number] % 5 === 0) {
+      fizzBuzz.push("fizzBuzz");
+    } else if (arrayNumbers[number] % 3 === 0) {
+      fizzBuzz.push("fizz");
+    } else if (arrayNumbers[number] % 5 === 0) {
+      fizzBuzz.push("buzz");
+    } else {
+      fizzBuzz.push("bug!");
+    }
+  }
+  return fizzBuzz;
 }
 
 // Desafio 9
