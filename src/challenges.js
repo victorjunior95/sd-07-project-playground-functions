@@ -22,10 +22,14 @@ function splitSentence(recebeString) {
   let arrayParaImprimir = [];
 
   for (let i = 0; i < recebeString.length; i += 1) {
+    if (recebeString[0]===" "){
+      i += 1; 
+  } else if (recebeString[recebeString.length-1]===" "){
+      recebeString = recebeString.slice(0,recebeString.length-1);
+  } 
     if (recebeString[i] === " ") {
       palavraCortada = recebeString.slice(posicaoDoEspaco, i);
       arrayParaImprimir.push(palavraCortada);
-
       posicaoDoEspaco = i;
     }
   }
