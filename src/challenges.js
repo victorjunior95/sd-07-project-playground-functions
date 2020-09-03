@@ -122,7 +122,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = mouse-cat2;
   if (distCat1<0){distCat1=distCat1*-1}
   if (distCat2<0){distCat2=distCat2*-1}
-  if (distCat1>distCat2){
+  if (distCat1<distCat2){
     return "cat1";
   } else if (distCat1==distCat2) {//else if escreve separado
     return "os gatos trombam e o rato foge"
@@ -219,8 +219,8 @@ function encode(message) {
   for (j=0; j<messageArray.length; j+=1){
     messageEncode = messageEncode + messageArray[j];
   }
-  // return messageEncode;
-  return console.log(messageEncode);
+  return messageEncode;
+  // return console.log(messageEncode);
 }
 // encode(message);
 
@@ -244,11 +244,11 @@ function decode(messageEncode) {
   for (j=0; j<messageEncode.length; j+=1){
     messageDecode = messageDecode + messageEncode[j];
   }
-  // return messageDecode;
-  return console.log(messageDecode);
+  return messageDecode;
+  // return console.log(messageDecode);
 }
 
-decode(messageEncode);
+// decode(messageEncode);
 
 // Desafio 10
 let techArray = ["Js", "Git", "Facebook"];
@@ -258,8 +258,17 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+let numberForPhone = [1,2,3,4,5,6,7,8,9,0,1];
+function generatePhoneNumber(numberForPhone) {
+  if (numberForPhone.lengtht !== 11){
+    return "Array com tamanho incorreto."
+  }
+  for (i=0; i<numberForPhone.length; i +=1){
+    if (numberForPhone[i]<0 || numberForPhone>9){
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+    // else if ()//qualquer numero repetir 3 vezes
+  }
 }
 
 // Desafio 12
