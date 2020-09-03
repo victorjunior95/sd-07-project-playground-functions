@@ -113,7 +113,7 @@ function decode(anyString) {
 // Desafio 10
 function techList(anyArray,name) {
   if(anyArray.length == 0){
-  return "Vazio";
+  return "Vazio!";
   } 
   else {
     let array = anyArray.sort();
@@ -124,8 +124,6 @@ function techList(anyArray,name) {
     return toLearn;
   }
 };
-let tech = []
-console.log(techList(tech,"Bruna"))
 
 // Desafio 11
 function generatePhoneNumber() {
