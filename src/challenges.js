@@ -23,9 +23,9 @@ function splitSentence(palavra) {
 
 // Desafio 4
 function concatName(array) {
-  let names="";
-  for (let i = 0; i < array.length; i += 1){
-       names =`${array[0]},${array[array.length-1]}`
+  let names = "";
+  for (let i = 0; i < array.length; i += 1) {
+    names = `${array[array.length - 1]}, ${array[0]}`
   }
   return names
 }
@@ -178,7 +178,7 @@ function techList(lista, name) {
 
   return lista2
 }
-console.log(techList(["JS", "React", "HTML", "CSS"], "Guilherme"))
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -198,7 +198,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false
   }
 }
-console.log(triangleCheck(10, 10, 10))
+
 // Desafio 13
 function hydrate(bebida) {
   let copo = "copos"
@@ -207,10 +207,11 @@ function hydrate(bebida) {
     if (!isNaN(bebida[i]) === true) {
       soma += Number(bebida[i])
     }
-    if (soma === 1) {
-      copo = "copo"
-    }
   }
+  if (soma === 1) {
+    copo = "copo"
+  }
+
   return `${soma} ${copo} de água`
 }
 
