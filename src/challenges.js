@@ -151,9 +151,22 @@ function decode(string) {
 console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let result = [];
+  tech.sort();
+  if (tech.length === 0) {
+    result = "Vazio!"
+  } else {
+    for (let i in tech) {
+      result.push({ 
+        tech: tech[i],
+        name: name,
+      })
+    }
+  }
+  return result;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
