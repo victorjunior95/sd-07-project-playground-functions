@@ -192,9 +192,9 @@ function techList(array, name) {
     for (let key in arraySorted) {
       let object = {
         tech: arraySorted[key],
-        name
+        name,
       }
-    objectTechs.push(object)
+      objectTechs.push(object)
     }
   }
   return objectTechs
