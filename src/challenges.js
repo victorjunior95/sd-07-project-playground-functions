@@ -83,8 +83,7 @@ function fizzBuzz(array) {
       }
     }
   }
-
-  console.log(newArray);
+  return newArray;
 }
 
 
