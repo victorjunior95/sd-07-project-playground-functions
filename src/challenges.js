@@ -141,9 +141,9 @@ function triangleCheck(lineA, lineB, lineC) {
   lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) &&
   lineC < lineB + lineA && lineC > Math.abs(lineB - lineA) :
   false;
-  
   return checkLines;
 }
+
 // Desafio 13
 function hydrate(string) {
   let drinkQty = 0;
