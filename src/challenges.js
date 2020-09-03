@@ -56,22 +56,36 @@ function highestCount(array) {
 }
 
 // Desafio 7
-let mouse = 0
-let cat1 = 3
-let cat2 = 2
+
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let resultado;
-  if ((cat1 - mouse) > (cat2 - mouse)){
-    resultado = `cat2`;
-  }
-  else if ((cat1 - mouse) < (cat2 - mouse)){
-    resultado = `cat1`;
+  cat1Mouse = cat1 - mouse; 
+  mouseCat1 = mouse - cat1;
+  cat2Mouse = cat2 - mouse;
+  mouseCat2 = mouse - cat2;
+  if (cat1Mouse > mouseCat1) {
+    resp1 = cat1Mouse;
   }
   else {
-    resultado = `os gatos trombam e o rato foge`;
+    resp1 = mouseCat1;
   }
-  console.log(resultado);
+
+  if (cat2Mouse > mouseCat2) {
+    resp2 = cat2Mouse;
+  }
+  else {
+    resp2 = mouseCat2;
+  }
+
+  if (resp1 === resp2){
+    resultado = `os gatos trombam e o rato foge`;;
+  }
+  else if (resp1 > resp2){
+    resultado = `cat2`;
+  }
+  else {
+    resultado = `cat1`
+  }
   return resultado;
 }
 
@@ -80,7 +94,7 @@ function fizzBuzz(array) {
   // seu código aqui
   let resultado = [];
   for (let i = 0; i < array.length; i += 1) {
-    if ((array[i] % 3) == 0 && (array[i] % 5) == 0) {
+    if ((array[i] % 3) === 0 && (array[i] % 5) === 0) {
       resultado.push(`fizzBuzz`);
     }
     else if ((array[i] % 3) == 0){
