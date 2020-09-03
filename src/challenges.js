@@ -1,4 +1,3 @@
-console.log(compareTrue(true , false));
 function compareTrue(boleano1, boleano2) {
   let boleano = true;
   if (
@@ -7,7 +6,7 @@ function compareTrue(boleano1, boleano2) {
     boleano = true;
     return boleano;
   } else if (
-    (boleano1 != boleano2)
+    (boleano1 !== boleano2)
   ) {
     boleano = false;
     return boleano;
@@ -18,12 +17,12 @@ function compareTrue(boleano1, boleano2) {
 }
 
 function calcArea(base, height) {
-  resultado = (base * height) / 2;
+  let resultado = (base * height) / 2;
   return resultado;
 }
 
 function splitSentence(palavra) {
-  let dividindoPalavras = palavra.split(" ");
+  let dividindoPalavras = palavra.split(' ');
   return dividindoPalavras;
 }
 
@@ -34,7 +33,7 @@ function concatName(nomes) {
 
 function footballPoints(wins, ties) {
   let pontos = 0;
-  wins = wins * 3;
+  wins *= 3;
   pontos = ties + wins;
   return pontos;
 }
@@ -49,7 +48,7 @@ function highestCount(lista) {
     }
   }
   for (let j in lista) {
-    if (lista[j] == maiorNumero) {
+    if (lista[j] === maiorNumero) {
       repeticao += 1;
     }
   }
@@ -65,12 +64,12 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat2Pos < 1) {
     cat2Pos = 1;
   }
-  if (cat1Pos == cat2Pos) {
-    return "os gatos trombam e o rato foge";
+  if (cat1Pos === cat2Pos) {
+    return 'os gatos trombam e o rato foge';
   } else if (cat1Pos > cat2Pos) {
-    return `cat2`;
+    return `'cat2'`;
   } else if (cat1Pos < cat2Pos) {
-    return `cat1`;
+    return `'cat1'`;
   }
 }
 
