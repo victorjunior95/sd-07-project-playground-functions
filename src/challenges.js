@@ -173,11 +173,11 @@ function generatePhoneNumber(n) {
     }
     qtdRepeticao = 0;
   }
-  if(maiorMenor == true || rep == true){
-    return `não é possível gerar um número de telefone com esses valores`;
-  }
   if (n.length != 11) {
     return `Array com tamanho incorreto.`;
+  }
+  if(maiorMenor == true || rep == true){
+    return `não é possível gerar um número de telefone com esses valores`;
   }
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
