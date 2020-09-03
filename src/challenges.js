@@ -234,7 +234,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-// Desafio 13
+// Desafioo 13
 function hydrate(bebida) {
   let copo = "copos"
   let soma = 0;
