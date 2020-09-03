@@ -46,9 +46,11 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 > mouse - cat2) {
+  let cat1Position = Math.abs(mouse - cat1);
+  let cat2Position = Math.abs(mouse - cat2);
+  if (cat1Position > cat2Position) {
     return "cat2";
-  } else if (mouse - cat1 < mouse - cat2) {
+  } else if (cat1Position < cat2Position) {
     return "cat1";
   } else {
     return "os gatos trombam e o rato foge"
@@ -56,7 +58,6 @@ function catAndMouse(mouse, cat1, cat2) {
 };
 
 // Desafio 8
-
 function fizzBuzz(arrayDeNumeros) {
   arrayDeStrings = [];
   for (let i = 0; i < arrayDeNumeros.length; i++){
@@ -74,15 +75,26 @@ function fizzBuzz(arrayDeNumeros) {
 };
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let replaceA = string.replace(/a/g, "1"); 
+  let replaceE = replaceA.replace(/e/g, "2"); 
+  let replaceI = replaceE.replace(/i/g, "3"); 
+  let replaceO = replaceI.replace(/o/g, "4"); 
+  let replaceU = replaceO.replace(/u/g, "5");
+  return replaceU; 
+};
+
+function decode(replaceU) {
+  let placeA =  replaceU.replace(/1/g, "a");
+  let placeE = placeA.replace(/2/g, "e");
+  let placeI = placeE.replace(/3/g, "i");
+  let placeO = placeI.replace(/4/g, "o");
+  let placeU = placeO.replace(/5/g, "u");
+  return placeU;
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
 }
 
