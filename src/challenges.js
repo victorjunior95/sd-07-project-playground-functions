@@ -186,12 +186,16 @@ function techList(arrayTech, name) {
   let aux = {};
 /*   let object = {}; */
   let objects = new Array();
-  for (let i = 0; i < arrayOrdenado.length; i += 1) {
-    aux.tech = arrayOrdenado[i]; 
-    aux.name = name;
-    objects[i] = Object.assign({},aux);
-  }
-  return objects;
+  if (arrayOrdenado.length == 0) {
+    return 'Vazio!';
+  } else {
+      for (let i = 0; i < arrayOrdenado.length; i += 1) {
+        aux.tech = arrayOrdenado[i]; 
+        aux.name = name;
+        objects[i] = Object.assign({},aux);
+      }
+      return objects;
+  } 
 }
 
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Jessica'));
