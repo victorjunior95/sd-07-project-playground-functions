@@ -60,7 +60,7 @@ function fizzBuzz(lista) {
 function subistitui(palavra, isso, por) {
   for (let i = 0; i < por.length; i += 1) {
     for (let j = 0; j < por.length; j += 1) {
-      palavra = palavra.replace(isso[i],por[i])
+      palavra = palavra.replace(isso[i], por[i])
     }
   }
   return palavra;
@@ -69,21 +69,21 @@ function subistitui(palavra, isso, por) {
 function encode(word) {
   let isso = ['a', 'e', 'i', 'o', 'u'];
   let por = ['1', '2', '3', '4', '5']
-  return subistitui (word, isso, por)
+  return subistitui(word, isso, por)
 }
 
 function decode(word) {
   let isso = ['1', '2', '3', '4', '5'];
   let por = ['a', 'e', 'i', 'o', 'u'];
-  return subistitui (word, isso, por)
+  return subistitui(word, isso, por)
 }
 
 // Desafio 10
 function techList(tech, name) {
   let lista = [];
-  for (let i = 0; i < tech.length; i += 1){
-    if (tech[i] === '' ) break;
-    lista[i] = {tech: '' + tech[i], name: name }
+  for (let i = 0; i < tech.length; i += 1) {
+    if (tech === '') return 'Vazio!';
+    lista[i] = { tech: '${tech}', name }
   }
   return lista;
 }
