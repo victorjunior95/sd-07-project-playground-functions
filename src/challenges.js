@@ -63,7 +63,7 @@ let nomeEmIngles = "";
 //     nomeEmIngles = nomeCompleto[i] +", "+ nomeCompleto[0];
 //   }
 // }
-// console.log("resultado do desafio 3", nomeEmIngles);
+// console.log("resultado do desafio 4", nomeEmIngles);
 
 
 function concatName(nomeCompleto) {
@@ -145,9 +145,81 @@ function fizzBuzz(fizzBuzzNumbers) {
 // fizzBuzz(fizzBuzzNumbers);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let message = "hi there"
+// console.log(message);
+// console.log(message[5]);
+// console.log("---");
+// if (message[5] === "e"){
+//   message[5] = "2";
+// }
+// console.log(message);
+// message[5] = "2";
+// console.log(message);
+
+// console.log(" ----- como array -------");
+// let messagem = ["h","i"," ","t","h","e"];
+// console.log(messagem);
+// console.log(messagem[5]);
+// console.log("---");
+// if (messagem[5] === "e"){
+//   messagem[5] = "2";
+// }
+// console.log(messagem);
+// messagem[5] = "2";
+// console.log(messagem);
+
+// let messageArray = message.split("");
+// for (let i=0; i<message.length; i += 1){
+//     if (messageArray[i] == "e"){
+//         messageArray[i] = "2";
+//     }
+// }
+// let messageEncode = ""
+// console.log(messageArray.length);
+// for (j=0; j<messageArray.length; j+=1){
+//       let x = messageArray[j];
+//       messageEncoded = messageEncode + x;
+//       // messageEncoded.push(x);
+//       console.log(x);
+//       console.log(messageArray[j]);
+//       console.log(messageEncode);    
+// }
+// console.log();
+
+// let banana = "banana";
+// let maça = "maça";
+// let result = banana + maça;
+// console.log(result);
+
+
+function encode(message) {
+  let messageArray = message.split("");
+  for (let i=0; i<message.length; i += 1){
+    if (messageArray[i] == "a"){
+        messageArray[i] = "1";
+    }
+    if (messageArray[i] == "e"){
+      messageArray[i] = "2";
+    }
+    if (messageArray[i] == "i"){
+      messageArray[i] = "3";
+    }
+    if (messageArray[i] == "o"){
+    messageArray[i] = "4";
+    }
+    if (messageArray[i] == "u"){
+    messageArray[i] = "5";
+    }
+  }
+  let messageEncode = ""
+  for (j=0; j<messageArray.length; j+=1){
+    messageEncode = messageEncode + messageArray[j];
+  }
+  return message;
+  // return console.log(messageEncode);
 }
+// encode(message);
+
 function decode() {
   // seu código aqui
 }
