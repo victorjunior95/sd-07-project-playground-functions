@@ -13,13 +13,13 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  return (arr.pop() + ', ' + arr.shift());
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3 + ties ) + ' points');
 }
 
 // Desafio 6
