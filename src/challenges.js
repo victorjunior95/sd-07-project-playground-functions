@@ -215,14 +215,36 @@ function encode(message) {
   for (j=0; j<messageArray.length; j+=1){
     messageEncode = messageEncode + messageArray[j];
   }
-  return message;
+  return messageEncode;
   // return console.log(messageEncode);
 }
 // encode(message);
 
-function decode() {
-  // seu código aqui
+messageEncode = "h3 th2r2";
+
+function decode(messageEncode) {
+  messageEncode = message.split("");
+  for (let i=0; i<message.length; i += 1){
+    if (messageEncode[i] == "1"){
+        messageEncode[i] = "a";  }
+    if (messageEncode[i] == "2"){
+      messageEncode[i] = "e";    }
+    if (messageEncode[i] == "3"){
+      messageEncode[i] = "i";    }
+    if (messageEncode[i] == "4"){
+    messageEncode[i] = "o";    }
+    if (messageEncode[i] == "5"){
+    messageEncode[i] = "u";    }
+  }
+  let messageDecode = ""
+  for (j=0; j<messageEncode.length; j+=1){
+    messageDecode = messageDecode + messageEncode[j];
+  }
+  return messageDecode;
+  // return console.log(messageDecode);
 }
+
+// decode(messageEncode);
 
 // Desafio 10
 function techList() {
