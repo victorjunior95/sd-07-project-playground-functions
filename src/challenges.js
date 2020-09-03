@@ -214,6 +214,7 @@ function generatePhoneNumber(phone) {
     else if (cont == 1) {
       formatedPhone.push(phone[cont]);
       formatedPhone.push(")");
+      formatedPhone.push(" ");
 
     }
     else if (cont == 6) {
@@ -260,7 +261,7 @@ function hydrate(string) {
       auxString += Number(char);
     }
   }
-  return `${auxString} copo de água`;
+  return `${auxString} copos de água`;
 
 }
 
