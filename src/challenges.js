@@ -79,12 +79,12 @@ highestCount(highNumberList)
 
 // Desafio 7
 let mouse = 3;
-let cat1 = 4;
+let cat1 = 3;
 let cat2 = 4;
 function catAndMouse(a, b, c) {
   // seu código aqui
-  let distanceCat1 = b - a;
-  let distanceCat2 = c - a;
+  let distanceCat1 = a - b;
+  let distanceCat2 = a - c;
 
   if (distanceCat1 > distanceCat2) {
     return 'cat1';
@@ -93,7 +93,7 @@ function catAndMouse(a, b, c) {
   }
     return 'os gatos trombam e o rato foge';
 }
-catAndMouse(mouse, cat1, cat2)
+console.log(catAndMouse(mouse, cat1, cat2))
 
 
 // Desafio 8
