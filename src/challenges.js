@@ -107,10 +107,17 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  arrayresultado = []
+  for(let key in tech){
+    let novoObjeto = {
+      tech: tech[key],
+      name: name,
+    }
+    arrayresultado.push(novoObjeto)
+  }
+    return arrayresultado
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
