@@ -45,14 +45,40 @@ function highestCount() {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let result;
-  if (mouse - cat1 < mouse - cat2) {
-    result = "cat1";
-  }
-  else if (mouse - cat1 > mouse - cat2) {
-    result = "cat2";
+  if(mouse > cat1 && mouse > cat2 || mouse < cat1 && mouse < cat2) {
+    if(mouse - cat1 < mouse - cat2) {
+      result = "cat1";
+    }
+    else if (mouse - cat1 > mouse - cat2) {
+      result = "cat2";
+    }
+    else {
+      result = "os gatos trombam e o rato foge"
+    }
   } 
-  else {
-    result = "os gatos trombam e o rato foge";
+  else if (mouse < cat1 && mouse > cat2) {
+    if (cat1 - mouse < mouse - cat2) {
+      result = "cat1"
+    } 
+    else if (cat1 - mouse > mouse - cat2) {
+      result = "cat2"
+    }
+    else {
+      result = "os gatos trombam e o rato foge"
+    }
+  } 
+  else if (mouse > cat1 && mouse < cat2) {
+    if (mouse - cat1 < cat2 - mouse) {
+      result = "cat1"
+    }
+    else if (mouse - cat1 > cat2 - mouse) {
+      result = "cat2"
+    }
+    else {
+      result = "os gatos trombam e o rato foge"
+    }
+  } else {
+      result = "os gatos trombam e o rato foge"
   }
   return result;
 }
