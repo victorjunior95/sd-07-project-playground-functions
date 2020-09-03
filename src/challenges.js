@@ -1,35 +1,57 @@
 // Desafio 1
 function compareTrue(a, b) {
-  a = 12;
-  b = 10;
-
-  if (a == 10 && b == 12) {
-    return false;
-  }
-
-  if (a == 12 && b == 10) {
+  if (a === true && b === true) {
     return true;
   }
+
+  if (a === false && b === true) {
+    return false;
+  } else {
+    return false;
+  }
 }
-console.log(compareTrue());
+console.log(compareTrue(false, false));
 // Desafio 2
 function calcArea() {
   // seu código aqui
+  let formula = (base * heigth) / 2;
+
+  return formula;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
+  str = "go Trybe";
+  let res = str.split(" ");
+
+  
+  return res ;
 }
 
 // Desafio 4
 function concatName() {
   // seu código aqui
+  let lastItem = [];
+  let firstItem = [];
+  let array = ["Lucas", "Cassiano", "Ferraz", "Paolillo"];
+
+  firstItem = array[0];
+  lastItem = array[array.length - 1];
+
+  // for (const key in array) {lastItem = array[key];}
+  array = [firstItem];
+  
+
+   adicionar = array.push(lastItem);
+
+  return array;
 }
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
+  
 }
 
 // Desafio 6
