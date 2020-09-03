@@ -31,8 +31,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(...param) {
   // seu código aqui
+  let arr = [];
+  arr.push(param.splice(param.length - 1, 1)[0]);
+  arr.push(param.splice(0, 1)[0]);
+  return arr.join(", ");
 }
 
 // Desafio 5
@@ -99,4 +103,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
-splitSentence("Eduardo Lima da Silva Souza");
