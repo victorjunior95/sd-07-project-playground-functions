@@ -272,8 +272,29 @@ function generatePhoneNumber(numberForPhone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+let triangle1 = 10;
+let triangle2 = 14;
+let triangle3 = 8;
+function triangleCheck(triangle1, triangle2, triangle3) {
+  if (triangle1>(triangle2+triangle3)){
+    return false
+  }
+  if (triangle2>(triangle1+triangle3)){
+    return false
+  }
+  if (triangle3>(triangle2+triangle1)){
+    return false
+  }
+  let dif3 = triangle1 - triangle2;
+  let dif2 = triangle1 - triangle3;
+  let dif1 = triangle2 - triangle3;
+  if (dif1<0){dif1=dif1*-1};
+  if (dif2<0){dif2=dif2*-1};
+  if (dif3<0){dif3=dif3*-1};
+  if (triangle1<dif1){return false};
+  if (triangle2<dif2){return false};
+  if (triangle3<dif3){return false};
+  return true;
 }
 
 // Desafio 13
