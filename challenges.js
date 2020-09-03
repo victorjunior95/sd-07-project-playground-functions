@@ -1,12 +1,21 @@
 // Desafio 4
-function footballPoints(wins, ties) {
-let valorTotalVitoria = wins;
-let valorTotalEmpates = ties;
-let valorDePontosVitoria = valorTotalVitoria * 3;
-let valorDePontosEmpate = valorTotalEmpates * 1;
-let valorTotalPontos = valorDePontosVitoria + valorDePontosEmpate;
-return valorTotalPontos;
-
+function highestCount(numeros) {
+    let idcMaior = 0;
+    for (let indice in numeros) {
+      if (numeros[idcMaior] < numeros[indice]) {
+        idcMaior = indice;
+      }
+    }
+  let contRepet = 0;
+  for(i in numeros){
+      if (numeros[i] == numeros[idcMaior]){
+          contRepet++;
+      }
 }
-console.log(footballPoints(0, 1));
+return contRepet;
+}    
 
+
+console.log(highestCount([2, 10, 6, 7, 10, 1]));
+
+  
