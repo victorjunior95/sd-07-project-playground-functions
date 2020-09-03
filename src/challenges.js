@@ -2,9 +2,8 @@
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
     return true
-  } else {
-    return false
   }
+  return false
 }
 
 // Desafio 2
@@ -38,10 +37,11 @@ function highestCount(array) {
       biggestNum = array[i]
       repetition = 0
       repetition += 1
-    } else if (array[i] === biggestNum)
-    repetition += 1
-  }
+    } else if (array[i] === biggestNum){
+      repetition += 1
+    }
   return repetition
+  }
 }
 
 
@@ -59,9 +59,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   } else if ((dist1) < (dist2)) {
     return 'cat1'
-  } else if (dist1 === dist2) {
-    return 'os gatos trombam e o rato foge'
   }
+  return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
@@ -93,7 +92,7 @@ function encode(word) {
       array[i] = 3
     } else if (array[i] === 'o') {
       array[i] = 4
-    }  else if (array[i] === 'u') {
+    } else if (array[i] === 'u') {
       array[i] = 5
     }
   }
@@ -121,48 +120,45 @@ function decode(phrase) {
 function techList(array, nome) {
   if (array.length === 0) {
     return 'Vazio!'
-  } else {
-    let newArray = array.sort()
-    newArray = newArray.sort((a, b) => {
-      if (a.length > b.length) {
-      return 1
-    } else if (b.length > a.length) {
-      return -1
-    } else
-      return 0
-    })
-    for (const obj in newArray) {
-      newArray[obj] = {
-        tech: newArray[obj],
-        name: nome
-      }
-    }
-    return newArray
   }
+  let newArray = array.sort()
+  newArray = newArray.sort((a, b) => {
+  if (a.length > b.length) {
+    return 1
+  } else if (b.length > a.length) {
+    return -1
+  }
+  return 0
+  })
+  for (let obj in newArray) {
+    newArray[obj] = {
+      tech: newArray[obj],
+      name: nome,
+    }
+  }
+  return newArray
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.'
-  } else {
-    for (const num in array) {
-      if (array[num] > 9 || array[num] < 0) {
-        return 'não é possível gerar um número de telefone com esses valores'
-      } else { 
-        let repetition = 0
-        for(let i = 0; i < array.length; i += 1) {
-          if (array[num] === array[i]) {
-          repetition += 1
-          }   
-        }
-        if (repetition >= 3) {
-          return 'não é possível gerar um número de telefone com esses valores'
-        }
-      }  
-    }
-    return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
   }
+  for (const num in array) {
+    if (array[num] > 9 || array[num] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+    let repetition = 0
+    for(let i = 0; i < array.length; i += 1) {
+      if (array[num] === array[i]) {
+        repetition += 1
+      }
+    }
+    if (repetition >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
 }
 
 // Desafio 12
