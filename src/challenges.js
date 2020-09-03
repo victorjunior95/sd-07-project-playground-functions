@@ -53,8 +53,8 @@ function highestCount(arrayNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distCat1 = mouse - cat1;
-  distCat2 = mouse - cat2;
+  distCat1 = Math.abs(mouse - cat1);
+  distCat2 = Math.abs(mouse - cat2);
 
   if (distCat1 < distCat2) {
     return "cat1";
