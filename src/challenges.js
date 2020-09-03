@@ -69,9 +69,9 @@ function fizzBuzz(array) {
   for (let i = 0; i < array.length; i += 1) {
 
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      newArray.push('fizzbuzz');
+      newArray.push('fizzBuzz');
     }
-    if (newArray[i] !== "fizzbuzz") {
+    if (newArray[i] !== "fizzBuzz") {
       if (array[i] % 3 === 0) {
         newArray.push('fizz');
       }
@@ -84,7 +84,7 @@ function fizzBuzz(array) {
     }
   }
 
-  return newArray;
+  console.log(newArray);
 }
 
 
