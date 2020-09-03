@@ -29,24 +29,51 @@ function footballPoints(wins, ties) {
   return Points
 }
 
-numbers = [5,7,5,8,1,2,4,9]
+
+// Desafio 6
+
+numbers = [9,5,7,5,9,8,9,1,2,4]
 
 function highestCount(numbers) {
   let maior = numbers[0]
-  for(let i = 1;i < numbers.length;i += 1)
-    if (maior < numbers[i]) {
-        maior = numbers[i]
-        return maior
+  repeticoes = {}
+  for(let i = 0;i < numbers.length;i += 1){
+    const elemento = numbers[i]
+    if(repeticoes[elemento]) {
+      repeticoes[elemento] += 1
+    } else {
+      repeticoes[elemento] = 1
     }
+    if (maior < elemento) {
+      maior = elemento
+    } 
+  }  
+  return repeticoes[maior]
 }
+  
 
 let resultado = highestCount(numbers)
 console.log(resultado)
 
+
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+
+
+function catAndMouse(mouse, cat1, cat2) {
+  const dist1 = mouse - cat1
+  const dist2 = mouse - cat2
+  if ( dist1 < dist2 ) {
+    return 'cat1'
+  } else if ( dist1 > dist2 ) {
+    return 'cat2'
+  }else {
+    return 'os gatos trombam e o rato foge'
+    
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
