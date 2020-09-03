@@ -98,15 +98,60 @@ function fizzBuzz(arrayQuestion08) {
   }
   return arrayQuestion08;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let arrayString = string.split("");
+
+  let object = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let i in object) {
+    let key = i;
+    let keyValue = object[i];
+    for (let j in arrayString) {
+      if (arrayString[j] == key) {
+        arrayString[j] = keyValue;
+      }
+    }
+  }
+  let join = arrayString.join("");
+
+  return join;
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"));
+
+function decode(string2) {
+  let arrayString2 = string2.split("");
+
+  let object2 = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (let i in object2) {
+    let key2 = i;
+    let keyValue2 = object2[i];
+
+    for (let j = 0; j < arrayString2.length; j += 1) {
+      if (arrayString2[j] == key2) {
+        arrayString2[j] = keyValue2;
+      }
+    }
+  }
+  let join2 = arrayString2.join("");
+  return join2;
 }
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
