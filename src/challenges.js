@@ -75,21 +75,21 @@ function fizzBuzz(arrayDeNumeros1) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode(string1) {
-  let mudaVogais = string1.split("a").join("1")
-  mudaVogais = string1.split("e").join("2")
-  mudaVogais = string1.split("i").join("3")
-  mudaVogais = string1.split("o").join("4")
-  mudaVogais = string1.split("u").join("5")
-  return mudaVogais;
+  let mudaVogais = string1.replace(/a/g, "1");
+  let mudaVogai = mudaVogais.replace(/e/g, "2");
+  let mudaVoga = mudaVogai.replace(/i/g, "3");
+  let mudaVog = mudaVoga.replace(/o/g, "4");
+  let mudaVo = mudaVog.replace(/u/g, "5");
+  return mudaVo;
 }
 
 function decode(string1) {
-  let mudaVogais = string1.split("1").join("a")
-  mudaVogais = string1.split("2").join("e")
-  mudaVogais = string1.split("3").join("i")
-  mudaVogais = string1.split("4").join("o")
-  mudaVogais = string1.split("5").join("u")
-  return mudaVogais;
+  let mudaVogais = string1.replace(/1/g, "a");
+  let mudaVogai = mudaVogais.replace(/2/g, "e");
+  let mudaVoga = mudaVogai.replace(/3/g, "i");
+  let mudaVog = mudaVoga.replace(/4/g, "o");
+  let mudaVo = mudaVog.replace(/5/g, "u");
+  return mudaVo;
 }
 
 // Desafio 10
