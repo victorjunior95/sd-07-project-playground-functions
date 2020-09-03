@@ -27,7 +27,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nomes) {
-  let novo = lista[lista.length-1];
+  let novo = nomes[nomes.length-1];
   nomes.unshift(novo);
   nomes.pop();
   return lista;
