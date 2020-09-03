@@ -42,7 +42,6 @@ function highestCount(numeros) {
       higherNumber = numeros[i];
     }    
   }
-
   for (let j = 0; j < numeros.length; j += 1) {
     if (higherNumber === numeros[j]) {
       numberOfTimes += 1;
@@ -86,11 +85,70 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(string) {
+  let encoding = "";
+  for (let i in string) {
+    switch (string[i]) {
+      case "a":
+      encoding += "1";
+      break;
+
+      case "e":
+      encoding += "2";
+      break;
+
+      case "i":
+      encoding += "3";
+      break
+
+      case "o":
+      encoding += "4";
+      break;
+
+      case "u":
+      encoding += "5";
+      break;
+
+      default:
+      encoding += string[i];
+      break;
+    }
+  }
+  return encoding;
 }
+console.log(encode("Hi there!"));
 
 function decode(string) {
-  // seu código aqui
+  let decoding = "";
+  for (let i in string) {
+    switch (string[i]) {
+      case "1":
+      decoding += "a";
+      break;
+
+      case "2":
+      decoding += "e";
+      break;
+
+      case "3":
+      decoding += "i";
+      break;
+
+      case "4":
+      decoding += "o";
+      break;
+
+      case "5":
+      decoding += "u";
+      break;
+
+      default:
+      decoding += string[i];
+      break;
+    }
+  }
+  return decoding;
 }
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
