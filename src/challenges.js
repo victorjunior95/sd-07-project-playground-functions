@@ -223,8 +223,16 @@ function triangleCheck(lineA, lineB, lineC){
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase){
+  let reg = /\d+/g;
+  let numbers = phrase.match(reg);
+  let sum = 0;
+
+  for(const key in numbers){
+      sum += parseInt(numbers[key]);
+  }
+
+  return `${sum} copo de água`;
 }
 
 module.exports = {
