@@ -129,27 +129,67 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(listaAprender,name) {
-  if (listaAprender == []){
-    return 'Vazio!'
+function techList([],name) {
+  if (listaAprender == ""){
+    return "Vazio!"
 }
 listaAprender = listaAprender.sort()
 let listaNova = []
-let object1={"tech":listaAprender[0],"name":name};
-let object2={"tech":listaAprender[1],"name":name};
-let object3={"tech":listaAprender[2],"name":name};
-let object4={"tech":listaAprender[3],"name":name};
-let object5={"tech":listaAprender[4],"name":name};
-
-
-listaNova.push(object1,object2,object3,object4,object5); 
-
+//let object1={"tech":listaAprender[0],"name":name};
+//let object2={"tech":listaAprender[1],"name":name};
+//let object3={"tech":listaAprender[2],"name":name};
+//let object4={"tech":listaAprender[3],"name":name};
+//let object5={"tech":listaAprender[4],"name":name};
+//listaNova.push(object1,object2,object3,object4,object5); 
+for(objetos in listaAprender){
+    listaNova[objetos] = { "tech" : listaAprender[objetos] , "name" : name
+    }
+}
 return listaNova;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(tel) {
+  if(tel.length > 11 || tel.length < 11){
+    return ("Array com tamanho incorreto.")
+}
+let contador = 0
+
+for(i = 0 ; i <= 11 -1; i += 1){
+    for(valores in tel){
+        if(tel[valores] === tel[i]){
+            contador += 1
+        }
+    }    
+}if(contador >= 3){
+    return "não é possível gerar um número de telefone com esses valores" 
+}
+
+for(i = 0 ; i <= 11 -1; i += 1){
+    if( tel[i] < 0 || tel[i] > 9){
+        return "não é possível gerar um número de telefone com esses valores" 
+    }
+}
+let numeroTel = []
+
+for(i = 0 ; i <= 11 -1; i += 1){
+    if( i == 0){
+        numeroTel += "(" + tel[i] 
+    }
+    else if( i == 1 ){
+        numeroTel +=  tel[i] + ")" 
+    }
+    else if(i < 7 && i > 1){
+        numeroTel += (tel[i])
+    }
+    if(i == 6){
+        numeroTel += "-"
+    }
+    if(i > 6 ){
+        numeroTel += tel[i]
+    } 
+}
+return numeroTel
 }
 
 // Desafio 12
