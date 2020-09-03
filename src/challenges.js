@@ -217,10 +217,20 @@ function generatePhoneNumber(phone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let ladoUm = lineA;
+  let ladoDois = lineB;
+  let ladoTres = lineC;
+  let result = false;
+  if ((ladoUm < ladoDois + ladoTres) && (ladoDois < ladoUm + ladoTres) &&
+  (ladoTres < ladoDois + ladoUm)) {
+    result = true;
+  }else {
+    result = false;
+  }
+  return result;
 }
-
+//console.log(triangleCheck(10, 14, 8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
