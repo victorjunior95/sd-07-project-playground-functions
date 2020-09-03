@@ -1,13 +1,12 @@
 // Desafio 1
-let first= false;
-let second= false;
+let first = false;
+let second = false;
 function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
     return true;
-  } else {
+  }
     return false;
-  };
 }
 compareTrue(first, second)
 
@@ -35,13 +34,13 @@ let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(a) {
   // seu código aqui
   let newString = '';
-  newString += a[0]
+  //newString = a[0] 
   for (let i = 0; i < a.length; i += 1){
     if (i == a.length - 1) {
-      newString += ', ' + a[i]
+      newString += a[i]
     }
   }
-  return newString
+  return newString + ', ' + a[0]
 }
 concatName(names)
 
