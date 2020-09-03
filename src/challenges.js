@@ -212,8 +212,8 @@ function testUnity(array) {
     if ((value < 0) || (value > 9)) {
       return (false);
     }
-    return (true);
   }
+  return (true);
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -230,7 +230,7 @@ function hydrate(string) {
   for (let value of numbers) {
     sum += parseInt(value);
   }
-  return (sum);
+  return (`${sum} copos de água`);
 }
 
 module.exports = {
