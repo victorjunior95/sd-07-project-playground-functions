@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(primeiroBooleano, segundoBooleano) {
   // seu código aqui
   if (primeiroBooleano && segundoBooleano) {
     return true
@@ -17,14 +17,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
   converteArray = frase.split(' ');
   return converteArray
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nomes[]) {
   // seu código aqui
   let objeto = {
     ultimo: nomes[nomes.length-1],
@@ -38,11 +38,11 @@ return console.log(objeto.ultimo + ', ' + objeto.primeiro)
 function footballPoints(wins, ties) {
   // seu código aqui
   pontos = ((wins * 3) + ties)
-  return = pontos
+  return pontos
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(lista[]) {
   // seu código aqui
   lista.sort();
 
@@ -76,15 +76,15 @@ function catAndMouse(mouse, cat1, cat2) {
     distanciaCat2 = (mouse - cat2)
   }
   if (distanciaCat1 > distanciaCat2) {
-    console.log('cat1')
+    console.log("cat1")
   }
   if (distanciaCat2 > distanciaCat1) {
-    console.log('cat2')
+    console.log("cat2")
 }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros[]) {
   // seu código aqui
   let FizzBuzz = []
 
