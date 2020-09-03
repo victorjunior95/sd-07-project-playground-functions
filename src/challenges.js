@@ -61,7 +61,7 @@ function fizzBuzz(lista) {
 // Desafio 9
 function encode(word) {
   let code = '';
-  for (let i in word) {
+  for (let i  = 0; i < word.length; i += 1) {
     console.log(i)
     switch (word[i]) {
       case 'a':
@@ -89,8 +89,8 @@ function encode(word) {
 
 function decode(code) {
   let word = '';
-  for (let i in code) {
-    switch (word[i]) {
+  for (let i = 0; i < code.length; i += 1 ) {
+    switch (code[i]) {
       case '1':
         word += '1a';
         break;
