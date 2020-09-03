@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let rangeCat1 = Math.abs(cat1 - mouse) 
   let rangeCat2 = Math.abs(cat2 - mouse) 
-  if (cat1 == cat2) {
+  if (rangeCat1 == rangeCat2) {
     result = "os gatos trombam e o rato foge"
   } else if (rangeCat1 < rangeCat2) {
     result = "cat1"
@@ -80,6 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return result;
 }
+
 
 // Desafio 8
 function fizzBuzz() {
