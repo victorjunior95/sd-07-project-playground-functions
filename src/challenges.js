@@ -230,6 +230,9 @@ function hydrate(string) {
   for (let value of numbers) {
     sum += parseInt(value);
   }
+  if (sum == 1) {
+    return (`${sum} copo de água`);
+  }
   return (`${sum} copos de água`);
 }
 
