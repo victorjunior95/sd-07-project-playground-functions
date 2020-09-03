@@ -29,10 +29,11 @@ function concatName(nomes) {
   // seu código aqui
   let objeto = {
     ultimo: nomes[nomes.length - 1],
+    meio: ', ',
     primeiro: nomes[0],
   }
 
-  return objeto.ultimo + objeto.primeiro
+  return objeto.ultimo + objeto.meio + objeto.primeiro
 }
 
 // Desafio 5
