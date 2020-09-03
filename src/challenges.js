@@ -4,7 +4,7 @@ function compareTrue(primeiroBooleano, segundoBooleano) {
   if (primeiroBooleano && segundoBooleano) {
     return true
   }
-    return false
+  return false
 }
 
 // Desafio 2
@@ -28,11 +28,11 @@ function splitSentence(frase) {
 function concatName(nomes) {
   // seu código aqui
   let objeto = {
-    ultimo: nomes[nomes.length - 1 ],
+    ultimo: nomes[nomes.length - 1],
     primeiro: nomes[0],
   }
 
-return console.log(objeto.ultimo + ', ' + objeto.primeiro)
+  return console.log(objeto.ultimo + ', ' + objeto.primeiro)
 }
 
 // Desafio 5
@@ -54,9 +54,10 @@ function highestCount(lista) {
 
   for (let x in lista) {
     if (maior === lista[x]) {
-        repeticao += 1
+      repeticao += 1
     }
   }
+  return repeticao
 }
 
 // Desafio 7
@@ -86,7 +87,7 @@ function catAndMouse(mouse, cat1, cat2) {
     console.log('cat2')
   }
   if (distanciaCat2 === distanciaCat1) {
-  console.log('os gatos trombam e o rato foge')
+    console.log('os gatos trombam e o rato foge')
   }
 }
 
@@ -94,14 +95,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   // seu código aqui
   let FizzBuzz = []
-  for ( let i=0; i < numeros.length; i += 1) {
+  for (let i = 0; i < numeros.length; i += 1) {
     if (((numeros[i] % 3) === 0) && ((numeros[i] % 5) === 0)) {
       FizzBuzz.push('fizzBuzz')
-    }
-    else if ((numeros[i] % 3) === 0) {
+    } else if ((numeros[i] % 3) === 0) {
       FizzBuzz.push('fizz')
-    }
-    else if ((numeros[i] % 5) === 0) {
+    } else if ((numeros[i] % 5) === 0) {
       FizzBuzz.push('buzz')
     }
     else FizzBuzz.push('bug!')
