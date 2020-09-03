@@ -114,8 +114,9 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   // seu código aqui
+
   let arrResult = [];
-  for (let i in arr) {
+  for (let i of arr) {
     if (i % 3 === 0 && i % 5 === 0) {
       arrResult.push(`fizzBuzz`);
     } else if (i % 3 === 0) {
@@ -129,7 +130,7 @@ function fizzBuzz(arr) {
   return arrResult;
 }
 
-//console.log(fizzBuzz([33, 12, 77, 4, 1]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
