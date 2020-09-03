@@ -109,12 +109,27 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(5, 3, 10));
+//console.log(catAndMouse(5, 3, 10));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arr) {
   // seu código aqui
+  let arrResult = [];
+  for (let i in arr) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arrResult.push(`fizzBuzz`);
+    } else if (i % 3 === 0) {
+      arrResult.push(`fizz`);
+    } else if (i % 5 === 0) {
+      arrResult.push(`buzz`);
+    } else {
+      arrResult.push(`bug!`);
+    }
+  }
+  return arrResult;
 }
+
+//console.log(fizzBuzz([33, 12, 77, 4, 1]));
 
 // Desafio 9
 function encode() {
