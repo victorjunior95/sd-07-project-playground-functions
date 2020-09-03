@@ -183,11 +183,9 @@ function hydrate(string) {
   for (let i = 0; i < numbers.length; i += 1){
     drinkQty += Number(numbers[i]);
   }
-  if (drinkQty > 0){
-  return drinkQty + ' copos de água';
-  }
-}
 
+  return (Number(drinkQty)) + 'copos de água';
+}
 
 module.exports = {
   calcArea,
