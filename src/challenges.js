@@ -100,7 +100,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(mouseOut, cat1Out, cat2Out))
+catAndMouse(mouseOut, cat1Out, cat2Out)
 
 // Desafio 8
 let dataFizzBuzz = [2, 15, 7, 9, 45]
@@ -131,9 +131,7 @@ function decode() {
 }
 
 // Desafio 10
-let techsNames = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let myName = 'Josiel';
-function techList(a, b) {
+function techList() {
   // seu código aqui
 }
 
