@@ -204,14 +204,25 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
-console.log(triangleCheck(10, 1, 8));
+console.log(triangleCheck(10, 14, 8));
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.match(/\d+/g).map(Number);
+  let sum = 0;
+  let answer = "";
+  for (let i = 0; i < numbers.length; i += 1) {
+    sum += numbers[i];
+  }
+  if (sum < 2 && sum != 0) {
+    answer = "1 copo de água";
+  } else {
+    answer = sum + " copos de água";
+  }
+  return answer
 }
-
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   calcArea,
