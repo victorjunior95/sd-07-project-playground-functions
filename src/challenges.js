@@ -80,13 +80,13 @@ function catAndMouse(mouse, cat1, cat2) {
     distanciaCat2 = (mouse - cat2)
   }
   if (distanciaCat1 > distanciaCat2) {
-    return resultado = 'cat1'
+    resultado = 'cat1'
   }
   if (distanciaCat2 > distanciaCat1) {
-    return resultado = 'cat2'
+    resultado = 'cat2'
   }
   if ((cat1 === cat2) || (distanciaCat2 === distanciaCat1)) {
-    return resultado = 'os gatos trombam e o rato foge'
+    resultado = 'os gatos trombam e o rato foge'
   }
   return resultado
 }
