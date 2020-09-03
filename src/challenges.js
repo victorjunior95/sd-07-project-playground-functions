@@ -112,6 +112,13 @@ function techList(array,nome) {
 // Desafio 11
 function generatePhoneNumber(a) {
 
+  for (let i in a) {
+    if (a[i]>9 || a[i]<0){return "não é possível gerar um número de telefone com esses valores"}
+  }
+  if (a.length < 0 || a.length > 9){return "Array com tamanho incorreto."}
+
+  if (a.length != 11){return "Array com tamanho incorreto."}
+
   //Repete 3x ou Mais
   let repMais = 0
   for (let i in a) {
@@ -122,16 +129,10 @@ function generatePhoneNumber(a) {
   if (repAtual>repMais) { repMais = repAtual}}
   if (repMais>=3) {return "não é possível gerar um número de telefone com esses valores"}
 
-
-  if (a.length < 0 || a.length > 9){
-    return "Array com tamanho incorreto."
-  } else if (a.length != 11){
-    return "não é possível gerar um número de telefone com esses valores"
-  } else 
   return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}` 
 }
 
-console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]))
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
