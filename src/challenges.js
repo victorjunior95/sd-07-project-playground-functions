@@ -40,8 +40,8 @@ function highestCount(array) {
   for (let i in array) {
   maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero = maiorNumero;
   }
-  for (let j in array) {
-  numeroRepeat = (maiorNumero === array [j]) ? numeroRepeat += 1 : numeroRepeat += 0;
+  for (let i in array) {
+  numeroRepeat = (maiorNumero === array [i]) ? numeroRepeat += 1 : numeroRepeat += 0;
     }
     return numeroRepeat;
   }
