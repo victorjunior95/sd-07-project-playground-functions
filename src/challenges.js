@@ -37,14 +37,26 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(...param) {
+function concatName(arr) {
   // seu código aqui
   let palavra;
+  let arr2 = [];
+  arr = arr.split(" ");
+
+  console.log(arr);
+  arr2.push(arr.splice(arr.length - 1, 1)[0]);
+  arr2.push(arr.splice(0, 1)[0]);
+  palavra = arr2.join(", ");
+  console.log(palavra);
+
+  return palavra;
+
+  /* let palavra;
   let arr = [];
   arr.push(param.splice(param.length - 1, 1)[0]);
   arr.push(param.splice(0, 1)[0]);
-  arr.join(", ");
-  return palavra;
+  palavra = arr.join(", ");
+  return palavra; */
 }
 
 // Desafio 5
@@ -117,4 +129,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
-console.log(footballPoints(3, 1));
