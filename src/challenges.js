@@ -1,14 +1,11 @@
 // Desafio 1
 function compareTrue(isTrue1, isTrue2) {
-  if (isTrue1 === true && isTrue2 === true) {
-    return true;
-  }
-  return false;
+  return isTrue1 && isTrue2;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2);
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -24,31 +21,20 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winsQt = 0;
-  let tiesQt = 0;
-  for (let i = 0; i < wins; i += 1) {
-    winsQt += 3;
-  }
-  for (let i = 0; i < ties; i += 1) {
-    winsQt += 1;
-  }
-  return winsQt + tiesQt;
+  return (wins * 3) + ties;
 }
-
 
 // Desafio 6
 function highestCount(array) {
-  let biggest = 0;
+  let highest = 0;
   let referenceCount = 0;
-  for(let i = 0; i < array.length; i += 1){
-     if(i == 0){
-        biggest = array[i];
-     } else if(array[i] > biggest){
-        biggest = array[i];
-     }
+  for(let i = 0; i < array.length; i += 1) {
+    if (array[i] > highest ) {
+      highest = array[i]; 
+    }
   }
-  for(let count in array){
-    if (biggest == array[count]){
+  for(let count in array) {
+    if (highest == array[count]) {
       referenceCount += 1;
     }
   }
@@ -57,11 +43,11 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mouseDistanceBetweenCat1 = mouse > cat1 ? (mouse - cat1) : (cat1 - mouse);
-  let mouseDistanceBetweenCat2 = mouse > cat2 ? (mouse - cat2) : (cat2 - mouse);
-  if (mouseDistanceBetweenCat1 > mouseDistanceBetweenCat2) {
+  let mouseDistC1 = mouse > cat1 ? (mouse - cat1) : (cat1 - mouse);
+  let mouseDistC2 = mouse > cat2 ? (mouse - cat2) : (cat2 - mouse);
+  if (mouseDistC1 > mouseDistC2) {
     return 'cat2';
-  } else if (mouseDistanceBetweenCat1 < mouseDistanceBetweenCat2) {
+  } else if (mouseDistC1 < mouseDistC2) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
@@ -71,16 +57,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let wordsCollections = [];
   for (let number in array) {
-    if (array[number] % 3 === 0 && array[number] % 5 === 0) {
-      wordsCollections.push('fizzBuzz');
-    } else if (array[number] % 3 === 0) {
-      wordsCollections.push('fizz');
-    } else if (array[number] % 5 === 0) {
-      wordsCollections.push('buzz');
-    } else {
-      wordsCollections.push('bug!');
+    array[number] % 3 === 0 && array[number] % 5 === 0 ? wordsCollections.push('fizzBuzz') :
+    array[number] % 3 === 0 ? wordsCollections.push('fizz') :
+    array[number] % 5 === 0 ? wordsCollections.push('buzz') :
+    wordsCollections.push('bug!');
     }
-  }
   return wordsCollections;
 }
 
@@ -125,9 +106,9 @@ function techList(array, name) {
   }
   // resolução de ordem encontrada no seguinte link ->  https://bit.ly/32RzzTB
   structuredArray.sort((a, b) => {
-    if(a.tech < b.tech) { 
+    if (a.tech < b.tech) { 
       return -1; 
-    } else if(a.tech > b.tech) { 
+    } else if (a.tech > b.tech) { 
       return 1; 
     }
     return 0;
