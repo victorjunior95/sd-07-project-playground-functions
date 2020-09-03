@@ -144,22 +144,26 @@ function checkRepeat(numberArray) {
       result = 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  return result;
 }
 
 // Desafio 11
 function generatePhoneNumber(numberArray) {
   let result = '';
-
   result = checkLength(numberArray);
-  result = checkNumbers(numberArray);
-  result = checkRepeat(numberArray);
-  
-  // format number
-  let textDDD = numberArray.slice(0, 2).join('');
-  let textBegin = numberArray.slice(2, 7).join('');
-  let textEnd = numberArray.slice(7).join('');
-  result = `(${textDDD}) ${textBegin}-${textEnd}`;
-
+  if (result.length === 0) {
+    result = checkNumbers(numberArray);
+  }
+  if (result.length === 0) {
+    result = checkRepeat(numberArray);
+  }
+  if (result.length === 0) {
+    // format number
+    let textDDD = numberArray.slice(0, 2).join('');
+    let textBegin = numberArray.slice(2, 7).join('');
+    let textEnd = numberArray.slice(7).join('');
+    result = `(${textDDD}) ${textBegin}-${textEnd}`;
+  }
   return result;
 }
 
