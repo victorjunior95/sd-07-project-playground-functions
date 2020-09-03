@@ -1,12 +1,10 @@
 // Desafio 1
 
-function compareTrue(arg1, arg2) {
-    let test = true;
-    if (arg1 && arg2)
-        return test;
+function compareTrue(a, b) {
+    if (a && b)
+        return true;
     else
-        test = false;
-    return test;
+        return false;
 }
 
 // Desafio 2
@@ -27,7 +25,7 @@ function concatName(array) {
     let primeiro = array[0];
     let ultimo = array[array.length - 1];
 
-    return `${primeiro}, ${ultimo}`
+    return `${ultimo}, ${primeiro}`
 }
 
 // Desafio 5
