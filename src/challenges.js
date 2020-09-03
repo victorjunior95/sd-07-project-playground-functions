@@ -150,24 +150,22 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(phone) {
+  let answer = '';
   let lastReturn;
   function suport(phone2) {
-    let parenteses = 0, firstPart = 0, completePhone = 0;
-    parenteses = `(${phone2[0]}${phone2[1]}) `;
-    firstPart = parenteses
+    let firstPart = `(${phone2[0]}${phone2[1]}) `;
     for (let i = 2; i <= 6; i += 1) {
       firstPart += `${phone2[i]}`;
     }
-      firstPart += '-';
-      completePhone = firstPart;
+    firstPart += '-';
+    let completePhone = firstPart;
     for (let i = 7; i < phone2.length; i += 1) {
       completePhone += `${phone2[i]}`;
     }
     answer = completePhone;
-  return answer;
+    return answer;
   }
 
-  let answer = '';
   let repeat = 0;
   for (let k = 0; k < phone.length; k += 1) {
     for (let l = k + 1; l < phone.length; l += 1) {
@@ -176,20 +174,20 @@ function generatePhoneNumber(phone) {
       }
     }
   }
-  repeat = repeat - 1;
+  repeat -= 1;
   for (let j = 0; j < phone.length; j += 1) {
     if (phone[j] < 0 || phone[j] > 9) {
       answer = 'não é possível gerar um número de telefone com esses valores';
-    } 
+    }
   }
   if (phone.length !== 11) {
     answer = 'Array com tamanho incorreto.';
   } else if (repeat >= 3) {
-    answer === 'não é possível gerar um número de telefone com esses valores'
+    answer = 'não é possível gerar um número de telefone com esses valores';
   } else if (answer !== 'Array com tamanho incorreto.' && answer !== 'não é possível gerar um número de telefone com esses valores') {
-      suport(phone);
+    suport(phone);
   }
-    
+
   lastReturn = answer;
   return lastReturn;
 }
