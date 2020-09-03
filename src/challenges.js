@@ -78,13 +78,20 @@ function highestCount(a) {
 highestCount(highNumberList)
 
 // Desafio 7
-let mouseOut = 3;
-let cat1Out = 3;
-let cat2Out = 4;
+let mouse = 3;
+let cat1 = -1;
+let cat2 = 4;
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
+
+  if (distanceCat1 < 0) {
+    distanceCat1 = distanceCat1 * -1;
+  }
+  if (distanceCat2 < 0) {
+    distanceCat2 = distanceCat2 * -1;
+  }
 
   if (distanceCat1 > distanceCat2) {
     return 'cat1';
@@ -93,8 +100,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
     return 'os gatos trombam e o rato foge';
 }
-catAndMouse(mouseOut, cat1Out, cat2Out)
-
+console.log(catAndMouse(mouse, cat1, cat2))
 
 // Desafio 8
 let dataFizzBuzz = [2, 15, 7, 9, 45]
@@ -133,9 +139,10 @@ function techList(a, b) {
   for (let i = 0; i < a.length; i += 1){
     techsObjects.push({tech: a[i], name: b})
   }
-  return techsObjects;
+  
+  return techsObjects
+
 }
-techList(techsNames, myName)
 
 // Desafio 11
 function generatePhoneNumber() {
