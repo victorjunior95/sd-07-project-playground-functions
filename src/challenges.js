@@ -14,8 +14,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(exemplo) {
+  return exemplo.split(' '); //take a look inside the apostrophe, there's a space inside
 }
 
 // Desafio 4
