@@ -137,25 +137,35 @@ function decode(frase) {
 function techList(tech, name) {
   techArray = [];
   techObj = {};
-  if(tech.length < 1){
+  if (tech.length < 1) {
     return `Vazio!`;
   }
   tech.sort();
-  for(let i = 0; i < tech.length; i += 1){
+  for (let i = 0; i < tech.length; i += 1) {
     techObj.tech = tech[i];
     techObj.name = name;
-    techArray.push(Object.assign({},techObj));
+    techArray.push(Object.assign({}, techObj));
   }
   return techArray;
 }
 // Desafio 11
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 function generatePhoneNumber(n) {
+  let counts = {},
+    duplicate = 0;
+  n.forEach(function (x) {
+    counts[x] = (counts[x] || 0) + 1;
+  });
+  for (let key in counts) {
+    if (counts.hasOwnProperty(key)) {
+      counts[key] > 1 ? duplicate++ : duplicate;
+    }
+  }
   let teste = n.some((el) => el > 9 || el < 0);
   if (n.length != 11) {
     return `Array com tamanho incorreto.`;
   }
-  if (teste == true) {
+  if (teste == true || duplicate >= 3) {
     return `não é possível gerar um número de telefone com esses valores`;
   }
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
@@ -167,8 +177,7 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate(bebidas) {
-}
+function hydrate(bebidas) {}
 
 module.exports = {
   calcArea,
