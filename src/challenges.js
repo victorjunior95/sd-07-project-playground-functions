@@ -123,12 +123,73 @@ function fizzBuzz(a) {
 fizzBuzz(dataFizzBuzz)
 
 // Desafio 9
-function encode() {
+let paramString = 'Go Tribe'
+function encode(a) {
   // seu código aqui
+  let encodeString = '';
+  for (let i = 0; i < a.length; i += 1){  
+    switch (a[i]) {
+      case 'a':
+        encodeString += 1;
+        break;
+
+      case 'e':
+        encodeString += 2;
+        break;
+        
+      case 'i':
+        encodeString += 3;
+        break;
+        
+      case 'o':
+        encodeString += 4;
+        break;
+        
+      case 'u':
+        encodeString += 5;
+        break;
+
+      default:
+        encodeString += a[i]
+    }
+  }
+  return encodeString;
 }
-function decode() {
+encode(paramString)
+
+let decryp = 'G4 Tr3b2'
+function decode(b) {
   // seu código aqui
+  let decodeString = '';
+  for (let i = 0; i < b.length; i += 1){  
+    switch (b[i]) {
+      case '1':
+        decodeString += 'a';
+        break;
+
+      case '2':
+        decodeString += 'e';
+        break;
+        
+      case '3':
+        decodeString += 'i';
+        break;
+        
+      case '4':
+        decodeString += 'o';
+        break;
+        
+      case '5':
+        decodeString += 'u';
+        break;
+
+      default:
+        decodeString += b[i]
+    }
+  }
+  return decodeString;
 }
+decode(decryp)
 
 // Desafio 10
 function techList() {
