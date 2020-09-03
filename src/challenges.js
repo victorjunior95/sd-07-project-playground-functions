@@ -24,9 +24,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nomes) {
-    cName = nomes;
-    cName.splice(1, nomes.length-2 );
-    return cName.reverse();}
+  nomes.splice(1, nomes.length-2 );
+  nomes = nomes.reverse();
+  ret =  nomes.join(", ");
+  return ret;}
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -53,20 +55,26 @@ function highestCount(maior) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(cat1 && cat2 < mouse && cat1 != cat2){
-    if((mouse - cat1) < (mouse - cat2)){
-      return "cat1"
-    }else if((mouse - cat2) < (mouse - cat1)){
-      return "cat2";
-    }
-  }if(cat1 && cat2 > mouse && cat1 != cat2){
-      if((mouse + cat1) < (mouse + cat2)){
-        return "cat1"
-      }else if((mouse + cat2) < (mouse + cat1)){
-        return "cat2"
-      }
-  }if(cat1 == cat2){
-    return "os gatos trombam e o rato foge"
+  let distCat1 = 0
+  let distCat2 = 0
+  if(cat1&&cat2<mouse||cat1<mouse&&cat2>mouse||cat1>mouse&& cat2<mouse||cat1&&cat2>mouse&&cat1!=cat2)
+  {
+      if(mouse - cat1 < 0)
+          {distCat1 = ((mouse - cat1) * -1 )}
+      else
+          {distCat1 = (mouse - cat1)}
+      if(mouse - cat2 < 0)
+          {distCat2 = ((mouse - cat2) * -1 )}
+      else
+          {distCat2 = (mouse - cat2)}
+      if(distCat1 > distCat2)
+          {return "Cat2"}
+      else if(distCat2 > distCat1)
+          {return "Cat1"}
+      else if (distCat1 == distCat2)
+          {return"os gatos trombam e o rato foge"}
+  }else if(cat1 == cat2)
+      {{return"os gatos trombam e o rato foge"}
   }}  
 
 // Desafio 8
