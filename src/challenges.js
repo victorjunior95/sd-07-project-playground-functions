@@ -8,7 +8,7 @@ console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  let trianguloArea = ( (base * height) / 2 );
+  let trianguloArea = ((base * height) / 2);
   return trianguloArea;
 }
 
@@ -24,7 +24,8 @@ console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(nomes) {
-  let tamanho = nomes[nomes.length -1] +`, `+ nomes[0];
+  let tamanho = 0;
+  tamanho = nomes[nomes.length -1]+', '+nomes[0];
 
   return tamanho;
 }
@@ -63,9 +64,9 @@ function catAndMouse(mouse, cat1, cat2) {
   cat2 = Math.abs(cat2 - mouse)
 
   if (cat1 === cat2) {
-    retorno = "os gatos trombam e o rato foge";
+    retorno = 'os gatos trombam e o rato foge';
   } else {
-    retorno = (cat1 > cat2) ? "cat2" : "cat1";
+    retorno = (cat1 > cat2) ? 'cat2' : 'cat1';
   }
   return retorno;
 }
@@ -73,24 +74,21 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(5, 3, 9));
 
 // Desafio 8
-function fizzBuzz(arrayNumerosFB) {
-  let arrayFB = [];
-  for (let i = 0; i < arrayNumerosFB.length; i += 1) {
-    let resto3 = arrayNumerosFB[i] % 3;
-    let resto5 = arrayNumerosFB[i] % 5
-    if ((resto3 === 0) || (resto5 === 0)) {
-      if ((resto3 === 0) && (resto5 === 0)) {
-        arrayFB[i] = 'fizzBuzz';
-      } else if (resto3 === 0) {
-        arrayFB[i] = 'fizz';
-      } else {
-        arrayFB[i] = 'buzz';
-      }
-    } else {
-      arrayFB[i] = 'bug!';
+function fizzBuzz(array) {
+  let arrayReturn = [];
+  for (const key in array) {
+    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
+      arrayReturn.push('fizzBuzz');
+    } else if (array[key] % 3 === 0) {
+        arrayReturn.push('fizz');
+    } else if (array[key] % 5 === 0) {
+        arrayReturn.push('buzz');
+    } else if (!(array[key] % 5 === 0 && array[key] % 3 === 0)) {
+        arrayReturn.push('bug!');
     }
   }
-  return arrayFB;
+
+  return arrayReturn;
 }
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
