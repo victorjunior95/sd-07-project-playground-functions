@@ -25,7 +25,7 @@ function splitSentence(frase) {
 // 4
 function concatName(array_de_strings) {
     let strings_concatenadas = "";
-    strings_concatenadas = array_de_strings[0] + ', ' + array_de_strings[array_de_strings.length-1];
+    strings_concatenadas = array_de_strings[array_de_strings.length-1] + ', ' + array_de_strings[0];
     return strings_concatenadas;
 }
 
@@ -127,7 +127,7 @@ function decode(string_codificada) {
 function techList(tecnologias, name) {
     let tech_objetos = [];
     if (tecnologias == 0 || tecnologias == null){
-        console.log('Vazio!');
+        tech_objetos = 'Vazio!';
     } else {
         let item = {};
         lista_tech = tecnologias.sort();
@@ -137,7 +137,6 @@ function techList(tecnologias, name) {
                 name: name
             }
             tech_objetos.push(item);
-            console.log(tech_objetos[i]);
         };
     };
     return tech_objetos;
@@ -182,12 +181,7 @@ function generatePhoneNumber(numbers) {
             for (i = 0; i < 2; i +=1){
                 telephone_number += numbers[i];
             }
-            telephone_number += ") ";
-            for (i = 2; i < 3; i +=1){
-                telephone_number += numbers[i];
-            }
-            telephone_number += ".";
-            for (i = 3; i < 7; i +=1){
+            for (i = 2; i < 7; i +=1){
                 telephone_number += numbers[i];         
             }
             telephone_number += "-";
@@ -215,6 +209,11 @@ function hydrate(bebidas) {
     let quantidades = bebidas.match(/\d+/g).map(Number);
     for (let i in quantidades){
         copos_de_agua += quantidades[i];
+    }
+    if (copos_de_agua == 1){
+        copos_de_agua += " copo de água";
+    } else {
+    copos_de_agua += " copos de água";        
     }
     return copos_de_agua;
 }
