@@ -63,20 +63,24 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (disMouseCat1 < disMouseCat2) {
     return 'cat1';
-  } else if (disMouseCat2 < disMouseCat1) {
-      return 'cat2';
-    } else return 'os gatos trombam e o rato foge';
+  }
+  else if (disMouseCat2 < disMouseCat1) {
+    return 'cat2';
+  }
+  else if(disMouseCat1 === disMouseCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (let number of array){
-    if ((number % 5 === 0) && number % 3 === 0){
+  for (let number of array) {
+    if ((number % 5 === 0) && number % 3 === 0) {
       newArray.push('fizzBuzz');
     } else if (number % 5 === 0) {
       newArray.push('buzz');
-    } else if (number % 3 === 0){
+    } else if (number % 3 === 0) {
       newArray.push('fizz');
     } else newArray.push('bug!');
   }
@@ -85,11 +89,54 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let code = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5
 }
-function decode() {
-  // seu código aqui
+
+// Função auxiliar01 do Desafio 9
+function changeLetterNumber(char) {
+  for (let key in code){
+    if (char === key) {
+      return code[key];
+    }
+  }
+  return char;
+}
+
+// Função auxiliar02 do Desafio 9
+function changeNumberLetter(number) {
+  for (let key in code){
+    if (number == code[key]) {
+      return key;
+    }
+  }
+  return number;
+}
+
+function encode(words) {
+  let newWords = "";
+  words = words.toLowerCase();
+
+  for (let char of words)  {
+    let value = changeLetterNumber(char);
+    newWords += value;
+  }
+  return newWords;
+}
+
+function decode(words) {
+  let newWords = "";
+  words = words.toLowerCase();
+
+  for (let char of words)  {
+    let value = changeNumberLetter(char);
+    newWords += value;
+  }
+  return newWords;
 }
 
 // Desafio 10
