@@ -74,11 +74,22 @@ function fizzBuzz(arrayDeNumeros1) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string1) {
+  let mudaVogais = string1.split("a").join("1")
+  mudaVogais = string1.split("e").join("2")
+  mudaVogais = string1.split("i").join("3")
+  mudaVogais = string1.split("o").join("4")
+  mudaVogais = string1.split("u").join("5")
+  return mudaVogais;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string1) {
+  let mudaVogais = string1.split("1").join("a")
+  mudaVogais = string1.split("2").join("e")
+  mudaVogais = string1.split("3").join("i")
+  mudaVogais = string1.split("4").join("o")
+  mudaVogais = string1.split("5").join("u")
+  return mudaVogais;
 }
 
 // Desafio 10
