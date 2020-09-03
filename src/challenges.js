@@ -115,7 +115,7 @@ function decode(string) {
 
   for (let key = 0; key < 5; key += 1) {
     for (let i = 0; i < string.length; i += 1) {
-      if (saida[i] == key + 1) {
+      if (parseInt(saida[i]) === key + 1) {
         saida[i] = codigo[key];
       }
     }
