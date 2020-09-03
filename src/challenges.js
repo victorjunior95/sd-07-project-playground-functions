@@ -3,7 +3,7 @@ function compareTrue(boolOne, boolTwo) {
   if (boolOne === true && boolTwo === true) {
     return true;
   }
-  else return false;
+  return false;
 }
 
 // Desafio 2
@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (disMouseCat1 === disMouseCat2) {
     return 'os gatos trombam e o rato foge';
   }
-  return;
+  return 0;
 }
 
 // Desafio 8
@@ -108,7 +108,7 @@ function changeLetterNumber(char) {
 
 // Função auxiliar02 do Desafio 9
 function changeNumberLetter(number) {
-  for (let key in code){
+  for (let key in code) {
     if (number == code[key]) {
       return key;
     }
@@ -137,8 +137,20 @@ function decode(words) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let technologies = {
+  };
+  let increasingArray = array.sort();
+  let newArray = [];
+  for (let techName of increasingArray) {
+    let obj = {
+      tech: techName,
+      name: name,
+    }
+    newArray.push(obj)
+  }
+  technologies = newArray;
+  return technologies;
 }
 
 // Desafio 11
