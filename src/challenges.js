@@ -4,9 +4,8 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo === true) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
 
 compareTrue(true, false);
@@ -66,15 +65,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
   let distCat2 = Math.abs(mouse - cat2);
   if (distCat1 > distCat2) {
-    console.log('cat2');
     return 'cat2';
-  } if (distCat2 > distCat1) {
-    console.log('cat1');
+  } else if (distCat2 > distCat1) {
     return 'cat1';
-  } else {
-    console.log('os gatos trombam e o rato foge');
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 catAndMouse(0, 3, 2);
@@ -100,14 +95,24 @@ fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
-  let finalString = string.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5);
+  let finalString = string
+                    .replace(/a/g, 1)
+                    .replace(/e/g, 2)
+                    .replace(/i/g, 3)
+                    .replace(/o/g, 4)
+                    .replace(/u/g, 5);
   return finalString;
 }
 
 encode('hi there!');
 
 function decode(string) {
-  let finalString = string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  let finalString = string
+                    .replace(/1/g, 'a')
+                    .replace(/2/g, 'e')
+                    .replace(/3/g, 'i')
+                    .replace(/4/g, 'o')
+                    .replace(/5/g, 'u');
   return finalString;
 }
 
