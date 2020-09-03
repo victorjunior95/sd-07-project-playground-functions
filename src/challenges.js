@@ -4,7 +4,7 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo === true) {
     return true;
-  }else {
+  } else {
     return false;
   }
 }
@@ -28,7 +28,7 @@ splitSentence('go Trybe');
 
 // Desafio 4
 function concatName(strings) {
-  let lastString = strings[strings.length-1];
+  let lastString = strings[strings.length - 1];
   let strFinal = `${lastString}, ${strings[0]}`;
   console.log(strFinal);
   return strFinal;
@@ -37,7 +37,7 @@ concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (3 * wins)+(1 * ties);
+  let points = (3 * wins) + (1 * ties);
   return points;
 }
 footballPoints(2, 1);
@@ -71,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } if (distCat2 > distCat1) {
     console.log('cat1');
     return 'cat1';
-  }else {
+  } else {
     console.log('os gatos trombam e o rato foge');
     return 'os gatos trombam e o rato foge';
   }
@@ -85,11 +85,11 @@ function fizzBuzz(numbers) {
   for (let index in numbers) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       newArray.push('fizzBuzz');
-    }else if (numbers[index] % 3 === 0) {
+    } else if (numbers[index] % 3 === 0) {
       newArray.push('fizz');
-    }else if (numbers[index] % 5 === 0) {
+    } else if (numbers[index] % 5 === 0) {
       newArray.push('buzz');
-    }else {
+    } else {
       newArray.push('bug!');
     }
   }
@@ -99,8 +99,15 @@ function fizzBuzz(numbers) {
 fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vogals = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }
+  
 }
 
 function decode() {
@@ -126,7 +133,7 @@ function techList(arrayTechs, name) {
   return techs;
 }
 
-techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas');
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
 
 // Desafio 11
 function generatePhoneNumber() {
