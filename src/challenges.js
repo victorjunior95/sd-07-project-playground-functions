@@ -66,20 +66,24 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = 0;
   let distancia2 = 0;
   let result = "";
-  if (rato > gato1 && rato > gato2) {
+  if ((rato > gato1 && rato > gato2) || (rato > gato1 && rato < gato2) ||
+  (rato < gato1 && rato > gato2) || (rato < gato1 && rato < gato2) || 
+  (rato === gato1 && rato === gato2)) {
     distancia1 = rato - gato1;
     distancia2 = rato - gato2;
-  }else if (rato <= gato1 || rato <= gato2) {
-    distancia1 = gato1;
-    distancia2 = gato2;
+    if (distancia1 < 0) {
+      distancia1 = distancia1 * (-1);
+    }else if (distancia2 < 0) {
+      distancia2 = distancia2 * (-1);
+    }
   }
   if (distancia1 > distancia2) {
     result = "cat2";
-  }else if (distancia1 < distancia2){
+    }else if (distancia1 < distancia2) {
     result = "cat1";
-  }else if (distancia1 === distancia2) {
+    }else if (distancia1 === distancia2) {
     result = "os gatos trombam e o rato foge";
-  }
+    }
   return result;
 }
 
