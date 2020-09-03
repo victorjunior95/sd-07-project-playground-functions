@@ -10,8 +10,21 @@ function calcArea(base , height) {
 }
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(s) {
+  let result = [] , a = "" ;
+  for( let i in s )
+  {
+      if ( s.length - 1 == i || s[i] === ' ' )
+      {
+        result.push(a) ;
+        a = "" ;
+      }
+      else
+      {
+        a += s[i] ;
+      };
+  };
+  return result ;
 }
 
 // Desafio 4
@@ -79,7 +92,23 @@ function encode(s) {
   return result ;
 }
 function decode(s) {
-  // seu código aqui
+  let convList = [ '' ,'a' , 'e' , 'i' , 'o' , 'u' ], result = "" ;
+    for( let i in s)
+    {
+      for( let j =  1 ; j < 6 ; j++ )
+      {       
+        if( s[i] == j )
+        {
+          result += convList[j] ;
+          break ;
+        } 
+        else if ( j === 5 )
+        {
+          result += s[i] ;
+        };
+      } ;
+    } ;
+    return result ;
 }
 
 // Desafio 10
