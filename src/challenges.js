@@ -249,9 +249,45 @@ function techList(tecnologias,name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+let numeros=[1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 1];
+function generatePhoneNumber(numeros) {
   // seu código aqui
+  let iguais=0;
+  let numero_tel="";
+  if (numeros.length<11)
+  {
+    return("Array com tamanho incorreto.");
+  }
+  else
+  {
+    for (let key in numeros)
+    {
+      if ( numeros[key] < 0 || numeros[key] > 9 )
+      {
+        return("não é possível gerar um número de telefone com esses valores");
+      }
+    }
+    for (let key2 in numeros)
+    {
+      iguais=0;
+      for (let key3 in numeros)
+      {
+        if ( numeros [ key2 ] == numeros [ key3 ] )
+        {
+          iguais++;
+          if (iguais==3)
+          {
+            return("não é possível gerar um número de telefone com esses valores")
+          }
+        }  
+      }
+    }
+  }
+numero_tel=('(' + numeros[0] + numeros[1] + ')' + numeros[2] + numeros[3] + numeros[4] + numeros[5] + numeros[6] + '-' + numeros[7] + numeros[8] + numeros[9] + numeros[10])
+return(numero_tel);
 }
+
+console.log(generatePhoneNumber(numeros));
 
 // Desafio 12
 function triangleCheck() {
