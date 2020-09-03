@@ -97,23 +97,41 @@ function decode(msg) {
 
 // Desafio 10
 function techList(array,nome) {
-  newArray = []
-  for (let i in array){
-    obj = {}
-    obj.tech = array[i]
-    obj.name = nome
-    newArray.push(obj)
-  } 
-  return newArray 
+  if (array.length == 0) { return "Vazio!"
+ } else 
+ newArray = []
+ for (let i in array){
+   obj = {}
+   obj.tech = array[i]
+   obj.name = nome
+   newArray.push(obj) 
+  return newArray
+ }
 }
 
 // Desafio 11
 function generatePhoneNumber(a) {
-  return `(${a[0]}${a[1]})${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
-  
+
+  //Repete 3x ou Mais
+  let repMais = 0
+  for (let i in a) {
+    let atual = a[i]
+    let repAtual = 0
+  for (let j in a) {
+    if (atual == a[j]) {repAtual++}}
+  if (repAtual>repMais) { repMais = repAtual}}
+  if (repMais>=3) {return "não é possível gerar um número de telefone com esses valores"}
+
+
+  if (a.length < 0 || a.length > 9){
+    return "Array com tamanho incorreto."
+  } else if (a.length != 11){
+    return "não é possível gerar um número de telefone com esses valores"
+  } else 
+  return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}` 
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]))
 
 // Desafio 12
 function triangleCheck() {
@@ -142,5 +160,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-//"runtimeExecutable": "/home/danwhat/.nvm/versions/node/v14.9.0/bin/node"
