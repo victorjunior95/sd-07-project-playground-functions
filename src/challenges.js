@@ -61,6 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge"
   }
 }
+console.log(catAndMouse(1, 0, 2))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -141,40 +142,40 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(phone) {
-  let repeticoes = 0;  
-  for (let i in phone) {
-    repeticoes = 0;
+//   let repeticoes = 0;  
+//   for (let i in phone) {
+//     repeticoes = 0;
 
-    for (let j in phone) {
-      if (phone[i] === phone[j]){
-        repeticoes += 1;
-      }
-    }
-  }
-  return repeticoes;
+//     for (let j in phone) {
+//       if (phone[i] === phone[j]){
+//         repeticoes += 1;
+//       }
+//     }
+//   }
+//   return repeticoes;
 
-  // --------------------------------------------
-  if (phone.length!==11){
-    return `Array com tamanho incorreto`
-  }
+//   // --------------------------------------------
+//   if (phone.length!==11){
+//     return `Array com tamanho incorreto`
+//   }
 
-  // --------------------------------------------
-  let ddd = "";
-  let primeiroBloco = "";
-  let segundoBloco = "";
+//   // --------------------------------------------
+//   let ddd = "";
+//   let primeiroBloco = "";
+//   let segundoBloco = "";
 
-  for (let i = 0; i<2; i+=1){
-    ddd += phone[i];
-  }
-  for (i = 2; i<7; i+=1){
-    primeiroBloco += phone[i];
-  }
-  for (i = 7; i<phone.length; i+=1){
-    segundoBloco += phone[i];
-  }
-  return `(${ddd}) ${primeiroBloco}-${segundoBloco}`
+//   for (let i = 0; i<2; i+=1){
+//     ddd += phone[i];
+//   }
+//   for (i = 2; i<7; i+=1){
+//     primeiroBloco += phone[i];
+//   }
+//   for (i = 7; i<phone.length; i+=1){
+//     segundoBloco += phone[i];
+//   }
+//   return `(${ddd}) ${primeiroBloco}-${segundoBloco}`
 }
-console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
