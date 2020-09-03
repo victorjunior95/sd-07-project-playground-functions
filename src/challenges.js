@@ -10,16 +10,19 @@ console.log(compareTrue(0 !== 1, 1 > 2)); // false
 
 // Desafio 2
 function calcArea(base, height) {
-  area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 console.log(calcArea(2, 4)); // 4
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  arrayString = string.split(' ');
+  return arrayString;
 }
+console.log(splitSentence("go Trybe")); // ['go', 'Trybe']
+
 
 // Desafio 4
 function concatName() {
