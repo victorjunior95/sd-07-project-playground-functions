@@ -39,19 +39,23 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(...param) {
   // seu código aqui
+  let palavra;
   let arr = [];
   arr.push(param.splice(param.length - 1, 1)[0]);
   arr.push(param.splice(0, 1)[0]);
-  return arr.join(", ");
+  arr.join(", ");
+  return palavra;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let winsCal = 3;
-  let tiesCal = 1;
 
-  return wins * winsCal - ties * tiesCal;
+  let pontosWins = wins * 3;
+  let pontosEmpate = ties * 1;
+  let total = pontosWins - pontosEmpate;
+
+  return total;
 }
 
 // Desafio 6
