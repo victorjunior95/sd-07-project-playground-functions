@@ -190,7 +190,7 @@ function generatePhoneNumber(phone) {
   }else {
     for (let i = 0; i < tel.length; i += 1) {
       if (tel[i] < 0 || tel[i] > 9) {
-        mensagem = "Não é possível gerar um número de telefone com esses valores";
+        mensagem = "não é possível gerar um número de telefone com esses valores";
         return mensagem;
       }
       for (let j = 1; j < i; j += 1) {
@@ -198,7 +198,7 @@ function generatePhoneNumber(phone) {
           count += 1;
         }
         if (count > 1) {
-          mensagem = "Não é possível gerar um número de telefone com esses valores";
+          mensagem = "não é possível gerar um número de telefone com esses valores";
           return mensagem;        
         }
         
@@ -212,7 +212,7 @@ function generatePhoneNumber(phone) {
   let parte1 = telefone.slice(0, 2);
   let parte2 = telefone.slice(2, 7);
   let parte3 = telefone.slice(7, 11);
-  let numberPhone = `(${parte1.join('')})${parte2.join('')}-${parte3.join('')}`;
+  let numberPhone = `(${parte1.join('')}) ${parte2.join('')}-${parte3.join('')}`;
   return numberPhone;
 }
 
