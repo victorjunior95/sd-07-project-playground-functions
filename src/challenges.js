@@ -8,8 +8,7 @@ function compareTrue(value, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-  return area;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -24,8 +23,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + (ties * 1);
-  return points;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -55,20 +53,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let por3;
-  let por5;
-  por3 = array % 3 === 0;
-  por5 = array % 5 === 0;
+  retorno = [];
   for (let i in array) {
-    if (array[i] === por3) {
-      return ("fizz");
-    } else if (array[i] === por5) {
-      return ("buzz");
-    } else if (array[i] === por3 && array[i] === por5){
-      return ("fizzBuzz");
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      retorno.push('fizzBuzz');
+    } else if (array[i] % 5 === 0) {
+      retorno.push('buzz');
+    } else if (array[i] % 3 === 0) {
+      retorno.push('fizz');
+    } else {
+    retorno.push('bug!');
     }
-    return ("bug!");
   }
+  return retorno;
 }
 
 // Desafio 9
