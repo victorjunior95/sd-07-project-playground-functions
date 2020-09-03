@@ -33,27 +33,25 @@ function footballPoints() {
 
 // Desafio 6
 function highestCount(array) {
-  let contador = 0;
-  let contadorAnterior = 0;
-  let maisRepetido = null;
-  let numeroAtual = null;
-  for (let i = 0; i < array.length; i += 1) {
-    numeroAtual = array[i];
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[j] === numeroAtual) {
-        contador += 1;
-      }
+  //posicao 0 = contador, 1 contadorAnterior, 2 maisRepetido, 3 numeroAtual]
+  let varAuxiliar = [0, 0, 0, 0]; 
+  for(let i = 0; i < array.length; i += 1){
+    varAuxiliar[3] = array[i];
+    for(let j = 0; j < array.length; j += 1){
+        if(array[j] === varAuxiliar[3]){
+            varAuxiliar[0] += 1;
+        }
     }
-    if (contadorAnterior === 0) {
-      contadorAnterior = contador;
-      maisRepetido = numeroAtual;
+    if(varAuxiliar[1] === 0){
+      varAuxiliar[1] = varAuxiliar[0];
+      varAuxiliar[2] = varAuxiliar[3];
     }
-    if (contador > contadorAnterior) {
-      maisRepetido = numeroAtual;
+    if(varAuxiliar[0] > varAuxiliar[1]){
+      varAuxiliar[2] = varAuxiliar[3];
     }
-    contador = 0;
+    varAuxiliar[0] = 0;
   }
-  return maisRepetido;
+  return varAuxiliar[2];
 }
 
 // Desafio 7
