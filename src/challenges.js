@@ -12,9 +12,7 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   let arrayStrings = [];
   let separatedString = "";
-
   for(let characterIndex = 0; characterIndex < sentence.length; characterIndex += 1){
-      
       if(sentence[characterIndex] !== " "){
           separatedString += sentence[characterIndex];
       } else{//guarda as strings do meio
@@ -43,7 +41,6 @@ function highestCount(arrayNumbers) {
   let repeatTimes = 0;
   let maxNumber = 0;
   for(index = 0; index < arrayNumbers.length; index += 1){
-      
       maxNumber = Math.max(maxNumber, arrayNumbers[index]);
   }
   for(let index = 0; index < arrayNumbers.length; index += 1){
@@ -75,8 +72,7 @@ function fizzBuzz(arrayNumbers) {
           arrayResult.push("fizz");
       }else if(arrayNumbers[i]%3 !== 0 && arrayNumbers[i]%5 === 0){
           arrayResult.push("buzz");
-      }
-       else{
+      }else{
           arrayResult.push("bug!");
       }
   }
