@@ -26,8 +26,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  arr.sort();
+  let count = 0;
+  let maior = arr[arr.length - 1];
+  for (let pos of arr) {
+    pos == maior ? count++ : null;
+  };
+  return count;
 }
 
 // Desafio 7
@@ -67,7 +73,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(highestCount([9,9,9, 1, 2, 3, 9, 5, 7]));
 module.exports = {
   calcArea,
   catAndMouse,
