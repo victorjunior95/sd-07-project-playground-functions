@@ -14,8 +14,10 @@ function splitSentence(text) {
 
 // Desafio 4
 function concatName(arr) {
-  let str = arr.pop() + ', ' + arr.shift();
-  return (str);
+  let str =[];
+  str.push(arr.pop());
+  str.push(arr.shift());
+  return (str.join(', '));
 }
 
 // Desafio 5
@@ -65,7 +67,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 module.exports = {
   calcArea,
   catAndMouse,
