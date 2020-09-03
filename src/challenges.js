@@ -197,7 +197,7 @@ function generatePhoneNumber(phone) {
         if (tel[i] === tel[j]) {
           count += 1;
         }
-        if (count > 1) {
+        if (count > 2) {
           mensagem = "não é possível gerar um número de telefone com esses valores";
           return mensagem;        
         }
