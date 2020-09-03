@@ -14,30 +14,48 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(a) {
-  let arrayS = a.split(" ")
+  let arrayS = a.split(' ')
+  return arrayS
 }
 
 // Desafio 4
 function concatName(a) {
   let primeiroA = a[0]
   let ultimoA = a[a.length - 1]
-  return ultimoA + ', ' + primeiroA
+  return `${ultimoA}, ${primeiroA}`
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = wins * 3 + ties
+  let pontos = (wins * 3) + ties
   return pontos
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(listN) {
+  listN.sort()
+  let highest = listN[listN.length - 1]
+  let count = 0
+  for (let i in listN) {
+    if (listN[i] === highest) {
+      count += 1
+    }
+  }
+  return count
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = Math.abs(cat1 - cat2)
+  let dist2 = Math.abs(cat2 - cat1)
+  if (dist1 === dist2) {
+    return 'os gatos trombam e o rato foge'
+  } else if (dis1 < dist2) {
+    return 'cat1'
+  } else {
+    return 'cat2'
+  }
+
 }
 
 // Desafio 8
