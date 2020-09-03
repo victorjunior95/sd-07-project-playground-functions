@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(8, 10, 3));
+//console.log(catAndMouse(8, 10, 3));
 
 // Desafio 8
 
@@ -141,17 +141,16 @@ function decode(desencodado) {
 function techList(nometech,name) {
   let novaNomeTechAux = {};
   let novaNomeTech = [];
-  let ordenado;
-  if(nometech ==={}){
+  let ordenado = nometech.sort();
+  if(ordenado ==={}){
     return'Vazio!';
   }
-  for(let item in nometech){
-      novaNomeTechAux.tech = nometech[item];
+  for(let item in ordenado){
+      novaNomeTechAux.tech = ordenado[item];
       novaNomeTechAux.name = name;
       novaNomeTech.push(Object.assign({}, novaNomeTechAux));
   }
-  ordenado = novaNomeTech.sort((a, b) => a - b);
-  return ordenado;
+  return novaNomeTech;
 }
 
 novaNomeTech = ["React", "Jest", "HTML", "CSS", "JavaScript"]
