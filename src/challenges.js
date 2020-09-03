@@ -35,27 +35,40 @@ function footballPoints(wins, ties) {
 let pontos = (wins * 3) + (ties * 1)
 return pontos
 }
-console.log(footballPoints(6,4))
 
 
+function maiorValor(array) {
+  let maiorNumero = array[0];
 
+  for (let i = 1; i < array.length; i += 1) {
+    if (array[i] > maiorNumero) {
+      maiorNumero = array[i];
 
-
-
-
+    }
+  }
+  return maiorNumero;
+}
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array){
+  let maior = maiorValor(array);
+  let contador= 0;
+  for (let j = 0; j < array.length; j += 1) {
+    if (maior === array[j]){
+      contador += 1;
+    }
+  }
+  return contador;
 }
+
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function fizzBuzz() {
 
   // seu código aqui
 }
