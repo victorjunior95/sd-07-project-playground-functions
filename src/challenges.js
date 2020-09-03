@@ -62,6 +62,17 @@ for(let j = 0; j < array.length; j++){
 
 
 // Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  if(mouse-cat1 == mouse-cat2){
+        return "os gatos trombam e o rato foge";
+    } else if (mouse-cat1 < mouse-cat2){
+        return "cat1";
+    } else{
+        return "cat2";
+    }
+}
+
+// Desafio 8
 function fizzBuzz (array){
     let percorrido= 0;
     let resp = "";
@@ -80,11 +91,6 @@ function fizzBuzz (array){
    adicionar.push(resp);
   }
   console.log(adicionar)
-}
-
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
 }
 
 // Desafio 9
