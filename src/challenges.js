@@ -66,21 +66,22 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
 
-    let saida = string.replace("a", "1");
-    let said = saida.replace("e", "2");
-    let sai = said.replace("i", "3");
-    let sa = sai.replace("o", "4");
-    let s = sa.replace("u", "5");
+    let saida = string.replace(/a/g, "1");
+    let said = saida.replace(/e/g, "2");
+    let sai = said.replace(/i/g, "3");
+    let sa = sai.replace(/o/g, "4");
+    let s = sa.replace(/u/g, "5");
     return (s);
 
 }
 
+
 function decode(string) {
-    let saida = string.replace("1", "a");
-    let said = saida.replace("2", "e");
-    let sai = said.replace("3", "i");
-    let sa = sai.replace("4", "o");
-    let s = sa.replace("5", "u");
+    let saida = string.replace(/1/g, "a");
+    let said = saida.replace(/2/g, "e");
+    let sai = said.replace(/3/g, "i");
+    let sa = sai.replace(/4/g, "o");
+    let s = sa.replace(/5/g, "u");
     return (s);
 }
 
