@@ -121,8 +121,19 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techName, name) {
+  let techNameList = [];
+  if (techName.length == 0 ){
+    return "Vazio!";
+  } else {
+    for (let i in techName) { /* objeto[propriedade] = "valor da propriedade" */
+      techNameList[i] = { 
+      tech: `${techName[i]}`,
+      name: `${name}`
+      }
+    }
+    return techNameList;
+  }
 }
 
 // Desafio 11
