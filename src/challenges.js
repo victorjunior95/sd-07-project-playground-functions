@@ -43,12 +43,10 @@ function highestCount(array) {
     }
   }
   for (let j in array) {
-    if (maiorNumero === array[j]) {
-      numeroRepeat += 1;
+  numeroRepeat = (maiorNumero === array [j]) ? numeroRepeat += 1 : numeroRepeat += 0;
     }
+    return numeroRepeat;
   }
-  return numeroRepeat;
-}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
