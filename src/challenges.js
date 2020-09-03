@@ -125,9 +125,17 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+let techsNames = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let myName = 'Josiel';
+function techList(a, b) {
   // seu código aqui
+  let techsObjects = []
+  for (let i = 0; i < a.length; i += 1){
+    techsObjects.push({tech: a[i], name: b})
+  }
+  return techsObjects;
 }
+techList(techsNames, myName)
 
 // Desafio 11
 function generatePhoneNumber() {
