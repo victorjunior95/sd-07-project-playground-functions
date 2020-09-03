@@ -82,7 +82,7 @@ function fizzBuzz(array) {
 function encode(stringToEncode) {
   // seu código aqui
   let arrayToEncode = stringToEncode.split('')
-  let encoded;
+  let encoded = '';
   for(let i = 0; i < arrayToEncode.length; i += 1) {
     switch (arrayToEncode[i]){
       case 'a':
@@ -110,26 +110,26 @@ function encode(stringToEncode) {
 function decode(stringToDecode) {
   // seu código aqui
   let arrayToDecode = stringToDecode.split('')
-  let decoded;
+  let decoded = '';
   for(let i = 0; i < arrayToDecode.length; i += 1) {
-    switch (arrayToEncode[i]){
+    switch (arrayToDecode[i]){
       case '1':
-        dencoded += 'a';  
+        decoded += 'a';  
       break;
       case '2':
-        dencoded += 'e';
+        decoded += 'e';
       break;
       case '3': 
-        dencoded += 'i';
+        decoded += 'i';
       break;
       case '4':
-        dencoded += 'o';
+        decoded += 'o';
       break;
       case '5': 
-        dencoded += 'u';
+        decoded += 'u';
       break;
       default:
-        dencoded += arrayToDecode[i];
+        decoded += arrayToDecode[i];
       break;
     }
   }
