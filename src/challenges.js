@@ -211,7 +211,7 @@ function generatePhoneNumber(numeros) {
 telefone+=numeros[k]
     }
    else if (k === 1) {
-telefone+=numeros[k]+")"
+telefone+=numeros[k]+")"+" "
     } else {
       telefone+=numeros[k] +"-"
     }
