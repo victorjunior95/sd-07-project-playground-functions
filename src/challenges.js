@@ -31,9 +31,20 @@ function splitSentence(a) {
 splitSentence(sentence)
 
 // Desafio 4
-function concatName() {
+let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+function concatName(a) {
   // seu código aqui
+  let newString = '';
+  newString += a[0]
+  for (let i = 0; i < a.length; i += 1){
+    if (i == a.length - 1) {
+      newString += ', ' + a[i]
+    }
+  }
+  return newString
 }
+concatName(names)
+
 
 // Desafio 5
 let victory = 5;
@@ -73,7 +84,7 @@ function fizzBuzz(a) {
   }
   return message;
 }
-console.log(fizzBuzz(dataFizzBuzz))
+fizzBuzz(dataFizzBuzz)
 
 // Desafio 9
 function encode() {
