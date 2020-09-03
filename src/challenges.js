@@ -157,26 +157,26 @@ function decode(palavra2) {
 }
 
 // Desafio 10
-function techList(lista,name) {
+function techList(lista, name) {
   let tecnologias = {}
 
   let lista2 = []
   if (lista.length === 0) {
     return "Vazio!"
   }
-  
+
   for (let i = 0; i < lista.length; i += 1) {
 
     tecnologias.tech = lista[i]
     tecnologias.name = name
     lista2.push(Object.assign({}, tecnologias))
-    
+
   }
-  function compare(a,b){
-    if(a.tech < b.tech){
+  function compare(a, b) {
+    if (a.tech < b.tech) {
       return -1;
     }
-    if(a.tech > b.tech){
+    if (a.tech > b.tech) {
       return 1;
     }
   }
@@ -186,8 +186,37 @@ function techList(lista,name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeros) {
+  let telefone = "(";
+
+  if (numeros.length !== 11) {
+    return "Array com tamanho incorreto."
+  }
+  for (let i = 0; i < numeros.length; i += 1) {
+    let repeticoes = 0;
+    for (let j = 0; j < numeros.length; j += 1) {
+      if (numeros[j] < 0) {
+        return "não é possível gerar um número de telefone com esses valores"
+      }
+      if (numeros[j] === numeros[i]) {
+        repeticoes += 1
+      }
+      if (repeticoes >= 3) {
+        return "não é possível gerar um número de telefone com esses valores"
+      }
+    }
+  }
+  for (let k = 0; k < numeros.length; k += 1) {
+    if( k !==1 && k !== 6){
+telefone+=numeros[k]
+    }
+   else if (k === 1) {
+telefone+=numeros[k]+")"
+    } else {
+      telefone+=numeros[k] +"-"
+    }
+  }
+  return telefone
 }
 
 // Desafio 12
