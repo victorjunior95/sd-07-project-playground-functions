@@ -47,35 +47,35 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = mouse - cat1 
+  let dist1 = mouse - cat1
   let dist2 = mouse - cat2
-  if(dist1 < 0) {
+  if (dist1 < 0) {
     dist1 *= -1
   }
-  if(dist2 < 0) {
+  if (dist2 < 0) {
     dist2 *= -1
   }
   if ((dist1) > (dist2)) {
-    return "cat2"
+    return 'cat2'
   } else if ((dist1) < (dist2)) {
-    return "cat1"
+    return 'cat1'
   } else if (dist1 === dist2) {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let output = []
-  for (num in array) {
+  for (const num in array) {
     if (array[num] % 3 === 0 && array[num] % 5 === 0) {
-      output.push("fizzBuzz")
+      output.push('fizzBuzz')
     } else if (array[num] % 3 === 0) {
-      output.push("fizz")
+      output.push('fizz')
     } else if (array[num] % 5 === 0) {
-      output.push("buzz")
+      output.push('buzz')
     } else {
-      output.push("bug!")
+      output.push('bug!')
     }
   }
   return output
@@ -83,8 +83,8 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(word) {
-  array = word.split('')
-  for(let i = 0; i < array.length; i += 1) {
+  let array = word.split('')
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] === 'a') {
       array[i] = 1
     } else if (array[i] === 'e') {
@@ -100,8 +100,8 @@ function encode(word) {
   return array.join('')
 }
 function decode(phrase) {
-  array = phrase.split('')
-  for(let i = 0; i < array.length; i += 1) {
+  let array = phrase.split('')
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] === '1') {
       array[i] = 'a'
     } else if (array[i] === '2') {
@@ -120,10 +120,18 @@ function decode(phrase) {
 // Desafio 10
 function techList(array, nome) {
   if (array.length === 0) {
-    return "Vazio!"
+    return 'Vazio!'
   } else {
-    let newArray = array.sort() 
-    for(obj in newArray) {
+    let newArray = array.sort()
+    newArray = newArray.sort((a, b) => {
+      if (a.length > b.length) {
+      return 1
+    } else if (b.length > a.length) {
+      return -1
+    } else
+      return 0
+    })
+    for (const obj in newArray) {
       newArray[obj] = {
         tech: newArray[obj],
         name: nome
@@ -136,11 +144,11 @@ function techList(array, nome) {
 // Desafio 11
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.'
   } else {
-    for (num in array) {
-      if(array[num] > 9 || array[num] < 0) {
-        return "não é possível gerar um número de telefone com esses valores"
+    for (const num in array) {
+      if (array[num] > 9 || array[num] < 0) {
+        return 'não é possível gerar um número de telefone com esses valores'
       } else { 
         let repetition = 0
         for(let i = 0; i < array.length; i += 1) {
@@ -149,7 +157,7 @@ function generatePhoneNumber(array) {
           }   
         }
         if (repetition >= 3) {
-          return "não é possível gerar um número de telefone com esses valores"
+          return 'não é possível gerar um número de telefone com esses valores'
         }
       }  
     }
@@ -173,14 +181,13 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(phrase) {
   let input = phrase.match(/[0-9]+/g)
   let total = 0
-  for (num in input) {
+  for (const num in input) {
     total += parseInt(input[num])
   }
   if (total === 1) {
-    return "1 copo de água"
-  } else {
-    return `${total} copos de água`
+    return '1 copo de água'
   }
+  return `${total} copos de água`
 }
 
 
