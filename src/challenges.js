@@ -109,14 +109,40 @@ function fizzBuzz(numeros) {
     else{
       multiplos.push("bug!");
     }
+  }
+  return multiplos
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+  let vogais = {a:1,e:2,i:3,o:4,u:5};
+  let encod = texto;
+  for(let letra in encod){
+    for(let vog in vogais){
+      if(encod[letra] != " "){
+        if (encod[letra] == vog){
+          encod = encod.replace(texto[letra],vogais[vog]);
+        }
+      }
+    }
+  }
+  return encod;
 }
-function decode() {
+
+function decode(texto) {
   // seu código aqui
+  let vogais = {1:a,2:e,3:i,4:o,5:u};
+  let encod = texto;
+  for(let letra in encod){
+    for(let vog in vogais){
+      if(encod[letra] != " "){
+        if (encod[letra] == vog){
+          encod = encod.replace(texto[letra],vogais[vog]);
+        }
+      }
+    }
+  }
+  return encod;
 }
 
 // Desafio 10
