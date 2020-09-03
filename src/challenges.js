@@ -52,17 +52,14 @@ function highestCount(arrayDeNumeros) {
   let contagem = 0;
 
   for( i = 0; i < arrayDeNumeros.length; i += 1){
-    if( arrayDeNumeros[i] >= maiorNumero){
-      maiorNumero = arrayDeNumeros[i]
-
-      contagem = contagem + 1;
-    }
+    if( arrayDeNumeros[i] >= maiorNumero) {
+      maiorNumero = arrayDeNumeros[i];
+      contagem += 1;
+      }
     }
   return contagem;
   // seu código aqui
-}
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
+  }
 
 // Desafio 7
 function catAndMouse() {
