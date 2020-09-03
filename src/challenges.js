@@ -46,8 +46,12 @@ function concatName(...param) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winsCal = 3;
+  let tiesCal = 1;
+
+  return wins * winsCal - ties * tiesCal;
 }
 
 // Desafio 6
@@ -109,3 +113,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
+console.log(footballPoints(3, 1));
