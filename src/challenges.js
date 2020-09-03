@@ -167,20 +167,71 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let str = "";
+  if (array.length != 11) {
+    str = "Array com tamanho incorreto.";
+  }
+  else if ((!testUnity(array)) || testRepeat(array)) {
+    str = "não é possível gerar um número de telefone com esses valores";
+  }
+  else {
+    str = "(";
+    for (let value of array) {
+      if (str.length == 3) {
+        str += ") ";
+      }
+      if (str.length == 10) {
+        str += "-";
+      }
+      str += value;
+    }
+  }
+  return (str);
 }
 
+function testRepeat(array) {
+  let cont = 0;
+  let flag = false
+  for (let valueCheck of array) {
+    for (let value of array) {
+      if (value == valueCheck) {
+        cont += 1;
+      }
+    }
+    if (cont > 2) {
+      flag = true;
+    }
+    cont = 0
+  }
+  return (flag);
+}
+
+function testUnity(array) {
+  for (let value of array) {
+    if ((value < 0) || (value > 9)) {
+      return (false);
+    }
+    return (true);
+  }
+}
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA < (lineB + lineC)) && (lineB < (lineA + lineC)) && (lineC < (lineB + lineA))) {
+    return (true);
+  }
+  return (false);
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.replace(/\D/g, '');
+  let sum = 0;
+  for (let value of numbers) {
+    sum += parseInt(value);
+  }
+  return (sum);
 }
-
 
 module.exports = {
   calcArea,
