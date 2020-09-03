@@ -56,6 +56,9 @@ function highestCount(array) {
 }
 
 // Desafio 7
+let mouse = 0
+let cat1 = 3
+let cat2 = 2
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let resultado;
@@ -66,8 +69,9 @@ function catAndMouse(mouse, cat1, cat2) {
     resultado = `cat1`;
   }
   else {
-    resultado = `os gatos trombam e o rato foge`
+    resultado = `os gatos trombam e o rato foge`;
   }
+  console.log(resultado);
   return resultado;
 }
 
