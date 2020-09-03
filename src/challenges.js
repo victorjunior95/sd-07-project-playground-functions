@@ -52,18 +52,17 @@ function highestCount(arrayNumeros) {
 };
 
 // Desafio 7
-let cat1 = 3;
-let cat2 = 3;
-let mouse = 1;
-
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 > mouse && cat1 < cat2) {
+  distCat1 = mouse - cat1;
+  distCat2 = mouse - cat2;
+
+  if (distCat1 < distCat2) {
     return "cat1";
-  } else if (cat2 > mouse && cat2 < cat1) {
+  } else if (distCat2 < distCat1) {
     return "cat2";
-  } else if (cat1 == cat2) {
-    return "os gatos trombam e o rato foge";
-  };
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
