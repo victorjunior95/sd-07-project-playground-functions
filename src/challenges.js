@@ -169,7 +169,7 @@ function hydrate(phrase) {
   let input = phrase.match(/[0-9]+/g)
   let total = 0
   for (let i = 0 ; i < input.length; i += 1) {
-    total += parseInt(input[num], 10)
+    total += parseInt(input[i], 10)
   }
   if (total === 1) {
     return '1 copo de água'
