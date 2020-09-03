@@ -60,9 +60,6 @@ function fizzBuzz(array) {
   }
   return arrayString;
 }
-let array = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(array));
-
 
 
 // Desafio 9
