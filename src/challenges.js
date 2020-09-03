@@ -168,17 +168,16 @@ function triangleCheck(lineA, lineB, lineC) {
   lineC = Math.abs(lineC)
   if (lineA + lineB < lineC || lineC + lineB < lineA || lineA + lineC < lineB) {
     return false
-  } else {
-    return true
   }
+  return true
 }
 
 // Desafio 13
 function hydrate(phrase) {
   let input = phrase.match(/[0-9]+/g)
   let total = 0
-  for (const num in input) {
-    total += parseInt(input[num])
+  for (let num in input) {
+    total += parseInt(input[num, 10])
   }
   if (total === 1) {
     return '1 copo de água'
