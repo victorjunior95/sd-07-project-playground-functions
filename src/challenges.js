@@ -30,9 +30,7 @@ function splitSentence(sentence) {
 
 
 // Desafio 4
-function concatName() {
-  let sentenceArray = ["Ricardo", "Augusto", "Lima", "Da", "Silva"]; 
-
+function concatName(sentenceArray = []) {
   let last = sentenceArray.pop();
   let first = sentenceArray.shift();
 
