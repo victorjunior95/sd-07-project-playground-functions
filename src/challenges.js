@@ -53,10 +53,14 @@ function highestCount(arrayDeNumeros) {
 
   for( i = 0; i < arrayDeNumeros.length; i += 1){
     if( arrayDeNumeros[i] >= maiorNumero) {
-      maiorNumero = arrayDeNumeros[i];
-      contagem += 1;
-      }
+        maiorNumero = arrayDeNumeros[i];
     }
+  }
+  for ( i = 0; i < arrayDeNumeros.length; i += 1) {
+    if (arrayDeNumeros[i] >= maiorNumero) {
+      contagem += 1;
+    }
+  }
   return contagem;
   // seu código aqui
   }
