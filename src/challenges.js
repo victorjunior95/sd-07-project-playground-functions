@@ -51,35 +51,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Funções Auxiliares para diminuir a complexidade - codeclimate
-function ehDiv5Apenas(num) {
-  return num % 5 === 0 && num % 3 !== 0;
+function fizzBuzzText(num) {
+  let result = '';
+  if (num % 3 === 0) {
+    result = 'fizz';
+  } else if (num % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
 }
 
-function ehDiv3Apenas(num) {
-  return num % 3 === 0 && num % 5 !== 0;
-}
 
-function ehDiv3e5(num) {
-  return num % 5 === 0 && num % 3 === 0;
-}
 
 // Desafio 8
 function fizzBuzz(numArray) {
   let result = [];
   for (let num of numArray) {
-    if (ehDiv3e5(num)) {
+    if (num % 5 === 0 && num % 3 === 0) {
       result.push('fizzBuzz');
-      continue;
+    } else {
+      result.push(fizzBuzzText(num))
     }
-    if (ehDiv3Apenas(num)) {
-      result.push('fizz');
-      continue;
-    } 
-    if (ehDiv5Apenas(num)) {
-      result.push('buzz');
-      continue;
-    } 
-    result.push('bug!');
   }
   return result;
 }
