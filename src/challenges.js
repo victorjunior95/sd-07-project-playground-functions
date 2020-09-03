@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 == true && boolean2 == true) {
+  if (boolean1 === true && boolean2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // --------------------TESTE DESAFIO 1--------------------------------
@@ -27,7 +26,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  resultado = string.split(" ");
+  let resultado = string.split(" ");
   return resultado;
 }
 
@@ -40,10 +39,10 @@ function splitSentence(string) {
 function concatName(array) {
   let novoArray = "";
   for (let i = array.length - 1; i >= 0; i -= 1) {
-    if (i == array.length - 1) {
+    if (i === array.length - 1) {
       novoArray = novoArray + array[i] + ", ";
     }
-    if (i == 0) {
+    if (i === 0) {
       novoArray = novoArray + array[i];
     }
   }
@@ -83,7 +82,7 @@ function highestCount(array) {
     }
   }
   for (let i in array) {
-    if (array[i] == maior) {
+    if (array[i] === maior) {
       count += 1;
     }
   }
@@ -97,15 +96,14 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  dist1 = Math.abs(mouse - cat1);
-  dist2 = Math.abs(mouse - cat2);
+  let dist1 = Math.abs(mouse - cat1);
+  let dist2 = Math.abs(mouse - cat2);
   if (dist1 > dist2) {
     return "cat2";
   } else if (dist2 > dist1) {
     return "cat1";
-  } else {
-    return "os gatos trombam e o rato foge";
   }
+  return "os gatos trombam e o rato foge";
 }
 
 // --------------------TESTE DESAFIO 7--------------------------------
@@ -119,11 +117,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let novoArray = [];
   for (let i in array) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       novoArray.push("fizzBuzz");
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       novoArray.push("fizz");
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       novoArray.push("buzz");
     } else {
       novoArray.push("bug!");
@@ -141,15 +139,15 @@ function fizzBuzz(array) {
 function encode(string) {
   let novaString = "";
   for (let i in string) {
-    if (string[i] == "a") {
+    if (string[i] === "a") {
       novaString = novaString + "1";
-    } else if (string[i] == "e") {
+    } else if (string[i] === "e") {
       novaString = novaString + "2";
-    } else if (string[i] == "i") {
+    } else if (string[i] === "i") {
       novaString = novaString + "3";
-    } else if (string[i] == "o") {
+    } else if (string[i] === "o") {
       novaString = novaString + "4";
-    } else if (string[i] == "u") {
+    } else if (string[i] === "u") {
       novaString = novaString + "5";
     } else {
       novaString = novaString + string[i];
@@ -165,15 +163,15 @@ function encode(string) {
 function decode(string) {
   let novaString = "";
   for (let i in string) {
-    if (string[i] == "1") {
+    if (string[i] === "1") {
       novaString = novaString + "a";
-    } else if (string[i] == "2") {
+    } else if (string[i] === "2") {
       novaString = novaString + "e";
-    } else if (string[i] == "3") {
+    } else if (string[i] === "3") {
       novaString = novaString + "i";
-    } else if (string[i] == "4") {
+    } else if (string[i] === "4") {
       novaString = novaString + "o";
-    } else if (string[i] == "5") {
+    } else if (string[i] === "5") {
       novaString = novaString + "u";
     } else {
       novaString = novaString + string[i];
@@ -222,7 +220,7 @@ function techList(array, name) {
 // console.log(techList(teste, teste1));
 // -------------------------------------------------------------------
 
-// Desafio 11 [1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]
+// Desafio 11
 function generatePhoneNumber(array) {
   let newNumber = "";
 
@@ -233,10 +231,10 @@ function generatePhoneNumber(array) {
   let count = 1;
   for (let j = 0; j < array.length - 1; j += 1) {
     for (let k = j + 1; k < array.length; k += 1) {
-      if (array[j] == array[k]) {
+      if (array[j] === array[k]) {
         count += 1;
       }
-      if (k == array.length - 1) {
+      if (k === array.length - 1) {
         if (count >= 3) {
           return "não é possível gerar um número de telefone com esses valores";
         } else {
@@ -250,11 +248,11 @@ function generatePhoneNumber(array) {
     if (array[i] < 0 || array[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     } else {
-      if (i == 0) {
+      if (i === 0) {
         newNumber = newNumber + "(" + array[i];
-      } else if (i == 2) {
+      } else if (i === 2) {
         newNumber = newNumber + ") " + array[i];
-      } else if (i == 7) {
+      } else if (i === 7) {
         newNumber = newNumber + "-" + array[i];
       } else {
         newNumber = newNumber + array[i];
@@ -265,8 +263,8 @@ function generatePhoneNumber(array) {
 }
 
 // --------------------TESTE DESAFIO 11--------------------------------
-let teste = [0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7];
-console.log(generatePhoneNumber(teste));
+// let teste = [0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7];
+// console.log(generatePhoneNumber(teste));
 // -------------------------------------------------------------------
 
 // Desafio 12
@@ -275,7 +273,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let checkLadoB = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
   let checkLadoC = lineC < lineB + lineA && lineC > Math.abs(lineB - lineA);
 
-  if (checkLadoA == true && checkLadoB == true && checkLadoC == true) {
+  if (checkLadoA === true && checkLadoB === true && checkLadoC === true) {
     return true;
   } else {
     return false;
@@ -299,7 +297,7 @@ function hydrate(string) {
       }
     }
   }
-  if (num == 1) {
+  if (num === 1) {
     return num + " copo de água";
   } else {
     return num + " copos de água";
