@@ -37,19 +37,18 @@ function highestCount(array) {
   let maiorNumero = array[0];
   let numeroRepeat = 0;
   for (let i in array) {
-    maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero ;
-    }
-  for (let i in array) {
-  numeroRepeat = (maiorNumero === array [i]) ? numeroRepeat += 1 : numeroRepeat += 0;
-    }
-    return numeroRepeat;
+    maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
   }
+  for (let i in array) {
+    numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat += 0;
+  }
+  return numeroRepeat;
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
   let resultado = '';
-
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     resultado = 'cat1';
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
