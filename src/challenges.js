@@ -80,11 +80,10 @@ function decode(word) {
 
 // Desafio 10
 function techList(tech, name) {
-  let lista = [];
+  let lista = []
   for (let i = 0; i < tech.length; i += 1) {
     if (tech === '') return 'Vazio!';
-    lista[i] = { tech: `${tech}`, name }
-  
+    lista[i] = { tech: `${tech}`, name};
   }
   return lista;
 }
