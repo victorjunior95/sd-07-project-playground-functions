@@ -230,10 +230,19 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return result;
 }
-//console.log(triangleCheck(10, 14, 8))
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let drink = bebidas
+  let count = 0;
+  let result = "";
+  let reg = /\d+/g;
+  let num = drink.match(reg);
+  for (let i of num){
+    count += parseInt(i);
+  }
+  result = `${count} copos de água`;
+  return result;
 }
 
 
