@@ -43,8 +43,8 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = 0;
   let dist2 = 0;
-  dist1 = Math.abs (mouse-cat1);
-  dist2 = Math.abs (mouse-cat2);
+  dist1 = Math.abs(mouse - cat1);
+  dist2 = Math.abs(mouse - cat2);
   if (dist1 === dist2){
     return 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
@@ -118,7 +118,7 @@ function generatePhoneNumber(array) {
     }
     if (contador >= 3) return 'não é possível gerar um número de telefone com esses valores';
   }
-  return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
 // Desafio 12
@@ -144,8 +144,8 @@ function hydrate(frase) {
     let num = parseInt(resultado[i]);
     contador += num;
   }
-  if (contador === 1){ return contador + ' copo de água'; }
-  return contador + ' copos de água';
+  if (contador === 1){ return `${contador} copo de água`; }
+  return `${contador} copos de água`;
 }
 
 module.exports = {
