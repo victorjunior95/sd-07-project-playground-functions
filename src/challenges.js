@@ -50,18 +50,27 @@ function highestCount(lista) {
   }
   return repeticao.length;
 }
-console.log(catAndMouse(1 , 7 , 6))
+
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let cat1Pos = cat1 - mouse;
-  let cat2Pos = cat2 - mouse;
-
-  if(cat1Pos < cat2Pos){
-    return cat1;
+  let cat1Pos = 0;
+  let cat2Pos = 0;
+  if(cat1Pos == 0){
+    cat1Pos = 1;
+  }else{
+    cat1Pos = cat1 - mouse;
+  }
+  if(cat2Pos == 0){
+    cat2Pos = 1;
+  }else{
+    cat2Pos = cat2 - mouse;
+  }
+  if(cat1Pos == cat2Pos){
+    return 'os gatos trombam e o rato foge'
   }else if(cat1Pos > cat2Pos){
-    return cat2;
-  } else if(cat1 == cat2){
-    'os gatos trombam e o rato foge'
+    return `cat2`;
+  } else if(cat1 < cat2){
+    return `cat1`;
   }
 }
 
