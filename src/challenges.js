@@ -9,26 +9,26 @@ function compareTrue(comparar1, comparar2) {
     return false;
   }
 
-};
+}
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   let area = (base * height) / 2;
 
   return area;
-};
+}
 // Desafio 3
 function splitSentence(separando) {
   // seu código aqui
   return separando.split(' ');
-};
+}
 
 
 // Desafio 4
 function concatName(arrayNome) {
   // seu código aqui
   return (arrayNome[arrayNome.length - 1] + ', ' + arrayNome[0])
-};
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -37,7 +37,7 @@ function footballPoints(wins, ties) {
   let quantidadeEmpates = ties * 1;
   let resultadoTabela = quantidadeVitorias + quantidadeEmpates;
   return resultadoTabela;
-};
+}
 
 // Desafio 6
 function highestCount(numeros) {
@@ -55,7 +55,7 @@ function highestCount(numeros) {
     }
   }
   return contador;
-};
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return "os gatos trombam e o rato foge"
   }
-};
+}
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -87,7 +87,7 @@ function fizzBuzz(array) {
     }
   }
   return novoArray;
-};
+}
 
 // Desafio 9
 function encode() {
