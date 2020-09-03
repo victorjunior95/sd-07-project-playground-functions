@@ -65,11 +65,11 @@ highestCount([9, 1, 2, 3, 9, 5, 7]);
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
   let distCat2 = Math.abs(mouse - cat2);
-  if(distCat1 > distCat2) {
-    console.log('cat 2');
+  if (distCat1 > distCat2) {
+    console.log('cat2');
     return 'cat 2';
   } if (distCat2 > distCat1) {
-    console.log('cat 1');
+    console.log('cat1');
     return'cat 1';
   } else {
     console.log('os gatos trombam e o rato foge');
