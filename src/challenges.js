@@ -138,6 +138,10 @@ function decode(words) {
 
 // Desafio 10
 function techList(array, name) {
+  if (array.length === 0){
+    return 'Vazio!'
+  }
+
   let technologies = {
   };
   let increasingArray = array.sort();
