@@ -84,12 +84,12 @@ function fizzBuzz(vetor) {
   let array = vetor;
   let vetorSaida = [];
 
-  for (i = 0; i < array.length; i++) {
-    if (array[i] % 5 === 0 && array[i] % 3 === 0) {
+  for (let i in array) {
+    if (array[i] % 5 == 0 && array[i] % 3 == 0) {
       vetorSaida.push("fizzBuz");
-    } else if (array[i] % 5 === 0) {
+    } else if (array[i] % 5 == 0) {
       vetorSaida.push("buzz");
-    } else if (array[i] % 3 === 0) {
+    } else if (array[i] % 3 == 0) {
       vetorSaida.push("fizz");
     } else {
       vetorSaida.push("bug!");
