@@ -216,14 +216,18 @@ function generatePhoneNumber(array) {
     return phoneNumber;
   }  
 }
-/*
-let numeroCel = [5, 3, 9, 9, 1, 8, 1, 7, 2, 4, 5];
-console.log(generatePhoneNumber(numeroCel));
-*/
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let medidaA = Math.abs(lineA);
+  let medidaB = Math.abs(lineB);
+  let medidaC = Math.abs(lineC);
+
+  if ((medidaA < (medidaB + medidaC) && medidaA > (medidaB - medidaC)) || (medidaB < (medidaA + medidaC) && medidaB > (medidaA - medidaC)) || (medidaC < (medidaB + medidaA) && medidaC > (medidaB - medidaA))) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
