@@ -2,7 +2,7 @@
 function compareTrue(number1, number2) {
   let message = ''
   let isTrue = (number1 === true && number2 === true)
-  if  (isTrue) {
+  if (isTrue) {
     message = isTrue
   } else {
     message = false
@@ -56,7 +56,7 @@ function highestCount(numbers) {
     if (counter === 0) {
       greatestNumber = numbers[counter]
     } else if (numbers[counter] > greatestNumber) {
-        greatestNumber = numbers[counter]
+      greatestNumber = numbers[counter]
     }
   }
   /* Count greatest Number */
@@ -114,7 +114,6 @@ function encode(word) {
     o: 4,
     u: 5,
   }
-
   for (let counter = 0; counter <= word.length - 1; counter += 1) {
     let counterVogais = 0
     let currentLetter = word[counter]
@@ -144,7 +143,6 @@ function decode(word) {
     4: 'o',
     5: 'u',
   }
-
   for (let counter = 0; counter <= word.length - 1; counter += 1) {
     let counterItem = 0
     let currentItem = word[counter]
@@ -219,14 +217,14 @@ function generatePhoneNumber(numbers) {
   /* Generating phone-number in the right format*/
   for (let number in numbers) {
     currentNumber = numbers[number]
-    for (let item in checkList) {
+    for (let item = 0; item <= checkList.length - 1; item += 1) {
       if (checkList[item] === 'X') {
         checkList[item] = currentNumber
         break
       }
     }
   }
-  for (let i in checkList) {
+  for (let i = 0; i <= checkList.length - 1; i += 1) {
     phoneNumber += checkList[i]
   }
   return phoneNumber
@@ -248,8 +246,8 @@ function hydrate(text) {
   let total = 0
   let message = ''
 
-  for (let number in drinkList) {
-    total += parseInt(drinkList[number], 10)
+  for (let counter = 0; counter <= drinkList.length - 1; counter +=1) {
+    total += parseInt(drinkList[counter], 10)
   }
 
   if (total > 1) {
