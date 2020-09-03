@@ -60,6 +60,7 @@ function highestCount(numbers) {
     for (let i = 0; i < numbers.length; i += 1) {
 
         if (numbers[i] > highest) {
+            repetition = 1
             highest = numbers[i];
         } else if (highest === numbers[i]) {
             repetition += 1;
@@ -69,6 +70,7 @@ function highestCount(numbers) {
 
 }
 
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
