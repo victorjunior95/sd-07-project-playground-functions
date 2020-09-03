@@ -110,15 +110,21 @@ function decode(frase) {
 function techList(tech, name) {
 let arraysort = tech.sort()
   arrayresultado = []
-  for(let key in arraysort){
-    let novoObjeto = {
-      tech: tech[key],
-      name: name,
-    }
-    arrayresultado.push(novoObjeto)
+  if(tech.length <= 0){
+    return 'Vazio!'
   }
+  else{
+ for(let key in arraysort){
+        let novoObjeto = {
+        tech: tech[key],
+        name: name,
+         }
+     arrayresultado.push(novoObjeto)
+   }
     return arrayresultado
+  }
 }
+ 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
