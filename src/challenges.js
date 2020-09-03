@@ -102,9 +102,10 @@ function decode(numbers) {
 
 // Desafio 10
 function techList(arrTech, name) {
+  let tectsSorted = arrTech.sort();
   let techs = [];
 
-  for(let item of arrTech){
+  for(let item of tectsSorted){
     techs.push({
     
       ["tech"] : item,
