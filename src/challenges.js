@@ -97,7 +97,7 @@ if (array[i] % 3 != 0 && array[i] % 5 != 0) {
 // Desafio 9
 function encode(string) {
   let newString = '';
-  let newString = string.replace(/a/g, '1');
+  newString = string.replace(/a/g, '1');
   let newString1 = newString.replace(/e/g, '2');
   let newString2 = newString1.replace(/i/g, '3');
   let newString3 = newString2.replace(/o/g, '4');
