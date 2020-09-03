@@ -184,7 +184,7 @@ function generatePhoneNumber(array) {
   //Verificação 11 números
   if (array.length != 11) {
     verificacaoDois = false;
-    return "Array com tamanho incorreto";
+    return "Array com tamanho incorreto.";
   }
   //Verificação números menores que 0 ou maiores que 9;
   for (i in array) {
