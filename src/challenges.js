@@ -25,7 +25,7 @@ console.log(splitSentence('go trybe'));
 // Desafio 4
 function concatName(nomes) {
   let tamanho = 0;
-  tamanho = nomes[nomes.length -1]+', '+nomes[0];
+  tamanho = `${nomes[nomes.length -1]},  ${nomes[0]}`;
 
   return tamanho;
 }
@@ -80,11 +80,11 @@ function fizzBuzz(array) {
     if (array[key] % 5 === 0 && array[key] % 3 === 0) {
       arrayReturn.push('fizzBuzz');
     } else if (array[key] % 3 === 0) {
-        arrayReturn.push('fizz');
+      arrayReturn.push('fizz');
     } else if (array[key] % 5 === 0) {
-        arrayReturn.push('buzz');
+      arrayReturn.push('buzz');
     } else if (!(array[key] % 5 === 0 && array[key] % 3 === 0)) {
-        arrayReturn.push('bug!');
+      arrayReturn.push('bug!');
     }
   }
 
