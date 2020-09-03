@@ -18,9 +18,7 @@ calcArea();
 
 // Desafio 3
 function splitSentence(frase) {
-  let res = [];
-  res = frase.split(' ');
-  return res;
+  return frase.split(' ');
 }
 
 splitSentence();
