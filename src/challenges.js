@@ -121,14 +121,22 @@ function decode(phrase) {
 function techList(array, nome) {
   if (array.length === 0) {
     return "Vazio!"
-  }else {
-    for (obj in array) {
-      array[obj] = {
-        tech: array[obj],
+  } else {
+    let newArray = array.sort((a, b) => {
+      if (a.length > b.length) {
+      return 1
+    } else if (b.length > a.length) {
+      return -1
+    } else
+      return 0
+    })
+    for(obj in newArray) {
+      newArray[obj] = {
+        tech: newArray[obj],
         name: nome
       }
     }
-    return array
+    return newArray
   }
 }
 
@@ -157,8 +165,15 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  lineA = Math.abs(lineA)
+  lineB = Math.abs(lineB)
+  lineC = Math.abs(lineC)
+  if (lineA + lineB < lineC || lineC + lineB < lineB || lineA + lineC < lineB) {
+    return false
+  } else {
+    return true
+  }
 }
 
 // Desafio 13
