@@ -75,12 +75,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz (array){
     let percorrido= 0;
-    let resp = "";
+    let resp ="";
     let adicionar = [];
     for(let i = 0; i < array.length; i +=1){
     percorrido= array[i];
     if((percorrido % 3)==0 && (percorrido % 5)==0){
-        resp="fizzbuzz";
+        resp="fizzBuzz";
     } else if((percorrido % 3)==0){
         resp="fizz";
     } else if ((percorrido % 5)==0){
