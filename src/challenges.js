@@ -80,8 +80,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(vetor) {
-  let array = vetor;
+function fizzBuzz(array) {
+
   let vetorSaida = [];
 
   for (let i in array) {
