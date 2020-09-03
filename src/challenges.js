@@ -224,7 +224,9 @@ function hydrate(phrase) {
   let sum = 0;
 
   for (const key in numbers) {
-    sum += parseInt(numbers[key], 10);
+    if (Object.prototype.hasOwnProperty.call(numbers, key)) {
+      sum += parseInt(numbers[key], 10);
+    }
   }
 
   return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
