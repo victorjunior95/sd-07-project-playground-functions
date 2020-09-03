@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resposta = [];
   for (let i in array) {
-    if (array[i] % 3 === 0 && array[i] % 5 == 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       resposta.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
       resposta.push('fizz');
@@ -186,7 +186,7 @@ function generatePhoneNumber(entrada) {
   }
   // números aprovados. Hora de montar o número de telefone
   numeros.unshift('(');
-  numeros.splice(3, 0, '')'', ' ');
+  numeros.splice(3, 0, ')', ' ');
   numeros.splice(10, 0, '-');
 
   let saida = numeros[0];
@@ -205,7 +205,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (
     A < B + C &&
     B < A + C &&
-    C < A + B 
+    C < A + B
   ) {
     return true;
   } else {
@@ -223,14 +223,14 @@ function hydrate(bebidas) {
   for (let i in matches) {
     total += parseInt(matches[i]);
   }
-  if (total == 1) {
-    return total + " copo de água";
+  if (total === 1) {
+    return total + ' copo de água';
   } else {
-    return total + " copos de água";
+    return total + ' copos de água';
   }
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 module.exports = {
   calcArea,
   catAndMouse,
