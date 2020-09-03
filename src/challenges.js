@@ -69,25 +69,18 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = mouse - cat1
-  let cat2Distance = mouse - cat2
-  /*Convert distance to positive if necessary */
-  if (cat1Distance < 0) {
-    cat1Distance *= -1
-  }
-  if (cat2Distance < 0) {
-    cat2Distance *= -1
-  }
+  let cat1Distance = Math.abs(mouse - cat1)
+  let cat2Distance = Math.abs(mouse - cat2)
+
   /*Compare Distance */
   if (cat1Distance === cat2Distance) {
     return 'os gatos trombam e o rato foge'
   } else if (cat1Distance < cat2Distance) {
-    return cat1
+    return 'cat1'
   } else {
-    return cat2
+    return 'cat2'
   }
 }
-console.log(catAndMouse(0,3,2))
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -235,15 +228,30 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA , lineB , lineC) {
+  let lineACheck = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
+  let lineBCheck = (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))
+  let lineCCheck = (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA))
+  let isTriangle = (lineACheck && lineBCheck && lineCCheck === true)
+
+  return isTriangle
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(text) {
+  let drinkList = text.replace(/\D/g, '')
+  let total = 0
 
+  for (let number in drinkList) {
+    total += parseInt(drinkList[number])
+  }
+
+  if (total > 1) {
+    return `${total} copos de água`
+  } else {
+    return `${total} copo de água`
+  }
+}
 
 module.exports = {
   calcArea,
