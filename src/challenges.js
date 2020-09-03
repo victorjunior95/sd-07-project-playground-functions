@@ -30,7 +30,7 @@ function concatName(nomes) {
   let novo = nomes[nomes.length-1];
   nomes.unshift(novo);
   nomes.pop();
-  return lista;
+  return nomes;
 }
 
 // Desafio 5
@@ -57,41 +57,41 @@ function highestCount(maior) {
   return count;
 }
 
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let dist1 = 0
-let dist2 = 0
+  let dist1 = 0
+  let dist2 = 0
 
-if(mouse > cat1){
-  dist1 = (mouse - cat1);
-}
-else if (mouse < cat1){
-  dist1 = (cat1 -mouse);
-}
-else{
-  distcat1 = mouse;
-}
-if(mouse > cat2){
-  dist2 = (mouse - cat2);
-}
-else if (mouse < cat2){
-  dist2 = (cat2 - mouse);
-}
-else{
-  dist2 = mouse;
-}
+  if(mouse > cat1){
+    dist1 = (mouse - cat1);
+  }
+  else if (mouse < cat1){
+    dist1 = (cat1 -mouse);
+  }
+  else{
+    distcat1 = mouse;
+  }
+  if(mouse > cat2){
+    dist2 = (mouse - cat2);
+  }
+  else if (mouse < cat2){
+    dist2 = (cat2 - mouse);
+  }
+  else{
+    dist2 = mouse;
+  }
 
-if(dist1 > dist2){
-  return cat1;
+  if(dist1 > dist2){
+    return cat1;
+  }
+  else if(dist1 < dist2){
+    return cat2;
+  }
+  else{
+    return "os gatos trombam e o rato foge";
+  }
 }
-else if(dist1 < dist2){
-  return cat2;
-}
-else{
-  return "os gatos trombam e o rato foge";
-}
-
-
 
 // Desafio 8
 function fizzBuzz(numeros) {
