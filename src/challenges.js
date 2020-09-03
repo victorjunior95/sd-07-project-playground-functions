@@ -51,22 +51,21 @@ function highestCount(maiorNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = mouse - cat1;
-  let distanciaCat2 = mouse - cat2;
+  let distanciaCat1= Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
 
-
-  if(math.obs(distanciaCat1) == math.obs(distanciaCat2)){
+  if(distanciaCat1 == distanciaCat2){
     return "os gatos trombam e o rato foge";
   }
-  if(math.obs(distanciaCat1) > math.obs(distanciaCat2)){
+  if(distanciaCat1 > distanciaCat2){
     return "cat1";
   }
-  else if(math.obs(distanciaCat1) < math.obs(distanciaCat2)){
+  else if(distanciaCat1 < distanciaCat2){
     return "cat2";
   }
 }
 
-
+console.log(catAndMouse(8, 10, 3));
 
 // Desafio 8
 
@@ -140,19 +139,24 @@ function decode(desencodado) {
 
 // Desafio 10
 function techList(nometech,name) {
+  let novaNomeTechAux = {};
+  let novaNomeTech = [];
+  let ordenado;
   if(nometech ==={}){
     return'Vazio!';
   }
-  let novaNomeTechAux = {};
-  let novaNomeTech = [];
-  for(let i =0; i < nometech.length;i++){
-      novaNomeTechAux.tech = nometech[i];
+  for(let item in nometech){
+      novaNomeTechAux.tech = nometech[item];
       novaNomeTechAux.name = name;
       novaNomeTech.push(Object.assign({}, novaNomeTechAux));
   }
-  return novaNomeTech;
+  ordenado = novaNomeTech.sort((a, b) => a - b);
+  return ordenado;
 }
 
+novaNomeTech = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+
+console.log(techList(novaNomeTech,"lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
