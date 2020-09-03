@@ -96,19 +96,12 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let saida = String(string).split('');
+  const codigo = ["a", "e", "i", "o", "u"];
 
-  let codigo = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
-
-  for (let key = 0; key < codigo.length; key += 1) {
+  for (let key = 0; key < 5; key += 1) {
     for (let i = 0; i < string.length; i += 1) {
       if (saida[i] === codigo[key]) {
-        saida[i] = key;
+        saida[i] = key + 1;
       }
     }
   }
@@ -118,21 +111,17 @@ function encode(string) {
 
 function decode(string) {
   let saida = String(string).split('');
-  const codigo = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
+  const codigo = ["a", "e", "i", "o", "u"];
 
-  for (const key in codigo) {
-    for (const i in string) {
-      if (saida[i] === key) {
+  for (let key = 0; key < 5; key += 1) {
+    for (let i = 0; i < string.length; i += 1) {
+      if (saida[i] == key + 1) {
         saida[i] = codigo[key];
       }
+
     }
   }
+
   return saida.join('');
 }
 
