@@ -59,21 +59,21 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1 - mouse < 0) {
     situation1 = -1 * (cat1 - mouse);
   } else {
-  situation1 = cat1 - mouse;
-}
+    situation1 = cat1 - mouse;
+  }
   if (cat2 - mouse < 0) {
-  situation2 = -1 * (cat2 - mouse);
+    situation2 = -1 * (cat2 - mouse);
   } else {
     situation2 = cat2 - mouse;
   }
   if (situation1 < situation2) {
     resultado = 'cat1';
-} else if (situation2 < situation1) {
-    resultado = 'cat2';
+  } else if (situation2 < situation1) {
+  resultado = 'cat2';
 } else {
-    resultado = 'os gatos trombam e o rato foge';
+  resultado = 'os gatos trombam e o rato foge';
 }
-return(resultado)
+return (resultado)
 }
 
 
@@ -81,11 +81,11 @@ return(resultado)
 function fizzBuzz(array) {
   let string = [];
   for (let i = 0; i < array.length; i += 1) {
-  if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
-  string.push('bug!');
-} else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      string.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
+    if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
+    string.push('bug!');
+  } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+  string.push('fizzBuzz');
+} else if (array[i] % 3 === 0) {
       string.push('fizz');
     } else if (array[i] % 5 === 0) {
       string.push('buzz');
@@ -106,7 +106,7 @@ function encode(string) {
 }
 function decode(string) {
   let newString = '';
-    newString = string.replace(/1/g, 'a');
+  newString = string.replace(/1/g, 'a');
   let newString1 = newString.replace(/2/g, 'e');
   let newString2 = newString1.replace(/3/g, 'i');
   let newString3 = newString2.replace(/4/g, 'o');
@@ -125,9 +125,9 @@ function techList(array, name) {
   sArray = array.sort();
   for (let i in sArray) {
     nItem = {
-        tech: sArray[i],
+      tech: sArray[i],
       name: name
-      }
+    }
     nArray.push(nItem);
   }
   return (nArray)
