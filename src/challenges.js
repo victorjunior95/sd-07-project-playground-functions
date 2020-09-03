@@ -14,7 +14,7 @@ function splitSentence(text) {
 
 // Desafio 4
 function concatName(arr) {
-  let str =[ ];
+  let str = [];
   str.push(arr.pop());
   str.push(arr.shift());
   return (str.join(', '));
