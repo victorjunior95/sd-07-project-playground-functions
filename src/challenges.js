@@ -190,15 +190,16 @@ function techList(array, name) {
   let objectTechs = []
   if (arraySorted.length !== 0) {
     for (let key in arraySorted) {
-      objectTechs.push({
+      let object = {
         tech: arraySorted[key],
-        name: name,
-      })
+        name
+      }
+    objectTechs.push(object)
     }
   }
   return objectTechs
 }
-console.log(techList(ArrayTechsList, nameOut))
+techList(ArrayTechsList, nameOut)
 
 // Desafio 11
 function generatePhoneNumber() {
