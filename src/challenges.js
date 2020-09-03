@@ -127,8 +127,8 @@ function techList(array, nome) {
         tech: array[obj],
         name: nome
       }
-  }
-  return array
+    }
+    return array
   }
 }
 
@@ -138,7 +138,7 @@ function generatePhoneNumber(array) {
     return "Array com tamanho incorreto"
   } else {
     for (num in array) {
-      if(array[num] > 9) {
+      if(array[num] > 9 || array[num] < 0) {
         return "não é possível gerar um número de telefone com esses valores"
       } else { 
         let repetition = 0
