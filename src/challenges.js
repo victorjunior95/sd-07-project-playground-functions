@@ -195,7 +195,7 @@ function generatePhoneNumber(numeros) {
   for (let i = 0; i < numeros.length; i += 1) {
     let repeticoes = 0;
     for (let j = 0; j < numeros.length; j += 1) {
-      if (numeros[j] < 0) {
+      if (numeros[j] < 0 || numeros[j] > 9) {
         return "não é possível gerar um número de telefone com esses valores"
       }
       if (numeros[j] === numeros[i]) {
