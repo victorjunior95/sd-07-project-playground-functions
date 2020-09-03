@@ -20,7 +20,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(trybe) {
   // seu código aqui
-  let trybeSplit = trybe.split(" ");
+  let trybeSplit = trybe.split(' ');
   return trybeSplit;
 }
 
@@ -37,14 +37,13 @@ function footballPoints(wins, ties) {
   let totalPoints = 0;
   let pointsForWin = 3;
   if (wins > 0) {
-    for (i = 1; i <= wins; i += 1) {
-      totalPoints = totalPoints += pointsForWin;
+    for (let i = 1; i <= wins; i += 1) {
+      totalPoints += pointsForWin;
     }
   }
-  totalPoints = totalPoints += ties
+  totalPoints += ties
   return totalPoints;
 }
-console.log(footballPoints(0, 3));
 
 // Desafio 6
 function highestCount() {
