@@ -71,26 +71,29 @@ function highestCount(arr) {
 
   //organizando a array e depois invertendo
 
-  arr.sort(function (a, b) {
-    //console.log(`o numero foi a ${a}`);
-    //console.log(`o numero foi b ${b}`);
-    //console.log(`a diferença foi ${b - a}`);
-    return b - a;
-  });
+  console.log(
+    arr.sort(function (a, b) {
+      //console.log(`o numero foi a ${a}`);
+      //console.log(`o numero foi b ${b}`);
+      //console.log(`a diferença foi ${b - a}`);
+      return b - a;
+    })
+  );
 
-  for (let i = 1; i <= arr.length; i += 1) {
+  /* for (let i = 1; i < arr.length; i += 1) {
     if (arr[i - 1] === arr[i]) {
       contador++;
+      console.log(arr[i]);
     }
-  }
+  } */
   // ou podemos fazer um loop mais otimizado
-  /* for (let i = 1; arr[i-1] === array[i]; i +=1 ) {
+  for (let i = 1; arr[i - 1] === arr[i]; i += 1) {
     contador++;
-  }; */
+  }
   return contador;
 }
 
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse() {
