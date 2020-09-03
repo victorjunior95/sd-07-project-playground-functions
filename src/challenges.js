@@ -127,7 +127,7 @@ let paramString = 'Go Tribe'
 function encode(a) {
   // seu código aqui
   let encodeString = '';
-  for (let i = 0; i < a.length; i += 1) {  
+  for (let i = 0; i < a.length; i += 1) {
     switch (a[i]) {
       case 'a':
         encodeString += 1;
@@ -156,17 +156,17 @@ let decryp = 'G4 Tr3b2'
 function decode(b) {
   // seu código aqui
   let decodeString = '';
-  for (let i = 0; i < b.length; i += 1) {  
+  for (let i = 0; i < b.length; i += 1) {
     switch (b[i]) {
       case '1':
         decodeString += 'a';
         break;
       case '2':
         decodeString += 'e';
-        break; 
+        break;
       case '3':
         decodeString += 'i';
-        break; 
+        break;
       case '4':
         decodeString += 'o';
         break;
