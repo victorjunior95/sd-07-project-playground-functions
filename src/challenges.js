@@ -69,15 +69,15 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) // 2
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1 - mouse;
-  let distanceCat2 = cat2 - mouse;
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
   if (distanceCat1 > distanceCat2) {
     return 'cat2';
   } else if (distanceCat1 < distanceCat2) {
     return 'cat1';
   } else if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
-  } return 0;
+  } 
 }
 console.log(catAndMouse(0, 1, 2)) // cat1
 console.log(catAndMouse(0, 2, 1)) // cat2
@@ -147,9 +147,49 @@ console.log(decode('h3 th2r2!'))  // hi there!
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  } else {
+    let createObject = [];
+    array.sort();
+    for (let item in array) {
+      createObject.push ({ 
+          tech: array[item],
+          name: name
+        });
+    } 
+    return createObject; 
+  }      
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Ana")) 
+/* Saída:
+
+[
+  {
+    tech: "CSS",
+    name: "Ana"
+  },
+  {
+    tech: "HTML",
+    name: "Ana"
+  },
+  {
+    tech: "JavaScript",
+    name: "Ana"
+  },
+  {
+    tech: "Jest",
+    name: "Ana"
+  },
+  {
+    tech: "React",
+    name: "Ana"
+  }
+]
+
+*/
+
 
 // Desafio 11
 function generatePhoneNumber() {
