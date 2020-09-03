@@ -128,7 +128,18 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-    // seu código aqui
+
+    function getCount(str) {
+        let vowelsCount = 0;
+        let vowels = ['a', 'e', 'i', 'o', 'u'];
+          for (let i = 0; i < str.length; i++ ) {
+              if(vowels.indexOf(str[i]) != -1) {
+                  vowelsCount++;
+              }
+          }
+      
+          return vowelsCount;
+      } 
 }
 
 // Desafio 12
