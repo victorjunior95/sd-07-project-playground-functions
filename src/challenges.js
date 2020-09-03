@@ -14,12 +14,12 @@ function splitSentence(text) {
 
 // Desafio 4
 function concatName(arr) {
-  return (arr.pop() + ', ' + arr.shift());
+  return (str = arr.pop() + ', ' + arr.shift());
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3 + ties ) + ' points');
+  return (wins * 3 + ties );
 }
 
 // Desafio 6
