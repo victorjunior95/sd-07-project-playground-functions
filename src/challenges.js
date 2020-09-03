@@ -24,12 +24,12 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(nomes[]) {
+function concatName(nomes) {
   // seu código aqui
   let objeto = {
     ultimo: nomes[nomes.length-1],
     primeiro: nomes[0]
-} 
+}
 
 return console.log(objeto.ultimo + ', ' + objeto.primeiro)
 }
