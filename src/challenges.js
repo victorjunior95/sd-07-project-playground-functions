@@ -95,7 +95,7 @@ function fizzBuzzHelp(number) {
   let message = ''
   let buzzText = number % 3 === 0
   let fizzText = number % 5 === 0
-  let bugText = 'bug'
+  let bugText = 'bug!'
 
   if (buzzText) {
     message = 'buzz'
@@ -121,9 +121,25 @@ function fizzBuzz(numbers) {
   return fizzBuzzList
 }
 
+// Apoio Desafio 9
+function encodeCounter(vogais, letter) {
+  let counterVogais = 0
+  let newString = ''
+
+  for (let key in vogais) {
+    let currentVogal = key
+    if (letter === currentVogal) {
+      newString = vogais[key]
+      counterVogais += 1
+    }
+  }
+  let message = [counterVogais, newString]
+  return message
+}
+
+
 // Desafio 9
 function encode(word) {
-  let newString = ''
   let finalString = ''
   let vogais = {
     a: 1,
@@ -133,17 +149,11 @@ function encode(word) {
     u: 5,
   }
   for (let counter = 0; counter <= word.length - 1; counter += 1) {
-    let counterVogais = 0
     let currentLetter = word[counter]
-    for (let key in vogais) {
-      let currentVogal = key
-      if (currentLetter === currentVogal) {
-        newString = vogais[key]
-        counterVogais += 1
-      }
-    }
-    if (counterVogais > 0) {
-      finalString += newString
+    /* CounterVogais calls a function that will return a string and number*/
+    let counterVogais = encodeCounter(vogais, currentLetter)
+    if (counterVogais[0] > 0) {
+      finalString += counterVogais[1]
     } else {
       finalString += currentLetter
     }
@@ -151,8 +161,23 @@ function encode(word) {
   return finalString
 }
 
+// Apoio desafio decode
+function decodeCounter(vogais, item) {
+   let counterItem = 0
+   let newString = ''
+
+   for (let key in vogais) {
+    let currentVogal = key
+    if (item === currentVogal) {
+      newString = vogais[key]
+      counterItem += 1
+    }
+  }
+  message = [counterItem, newString]
+  return message
+}
+
 function decode(word) {
-  let newString = ''
   let finalString = ''
   let vogais = {
     1: 'a',
@@ -162,24 +187,17 @@ function decode(word) {
     5: 'u',
   }
   for (let counter = 0; counter <= word.length - 1; counter += 1) {
-    let counterItem = 0
     let currentItem = word[counter]
-    for (let key in vogais) {
-      let currentVogal = key
-      if (currentItem === currentVogal) {
-        newString = vogais[key]
-        counterItem += 1
-      }
-    }
-    if (counterItem > 0) {
-      finalString += newString
+    counterItem = decodeCounter(vogais, currentItem)
+    if (counterItem[0] > 0) {
+      finalString += counterItem[1]
     } else {
       finalString += currentItem
     }
   }
   return finalString
 }
-
+console.log(decode('h3 th2r2!'))
 // Desafio 10
 function techList(tech, name) {
   let newTechList = []
