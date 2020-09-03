@@ -97,44 +97,42 @@ if (array[i] % 3 != 0 && array[i] % 5 != 0) {
 // Desafio 9
 function encode(string) {
   let newString = '';
-  newString = string.replace(/a/g, '1');
-  newString1 = newString.replace(/e/g, '2');
-  newString2 = newString1.replace(/i/g, '3');
-  newString3 = newString2.replace(/o/g, '4');
-  newString4 = newString3.replace(/u/g, '5');
+  let newString = string.replace(/a/g, '1');
+  let newString1 = newString.replace(/e/g, '2');
+  let newString2 = newString1.replace(/i/g, '3');
+  let newString3 = newString2.replace(/o/g, '4');
+  let newString4 = newString3.replace(/u/g, '5');
   return(newString4)
   }
   function decode(string) {
   let newString = '';
   newString = string.replace(/1/g, 'a');
-  newString1 = newString.replace(/2/g, 'e');
-  newString2 = newString1.replace(/3/g, 'i');
-  newString3 = newString2.replace(/4/g, 'o');
-  newString4 = newString3.replace(/5/g, 'u');
+  let newString1 = newString.replace(/2/g, 'e');
+  let newString2 = newString1.replace(/3/g, 'i');
+  let newString3 = newString2.replace(/4/g, 'o');
+  let newString4 = newString3.replace(/5/g, 'u');
     return (newString4)
   }
 
 // Desafio 10
 function techList(array, name) {
-
   let nArray = [];
   let nItem = '';
   let sArray = [];
   if (array.length === 0) {
-  return ('Vazio!')
-} else {
-  sArray = array.sort();
+    return ('Vazio!')
+}
+    sArray = array.sort();
 
-  for (let i in sArray) {
+    for (let i in sArray) {
     nItem = {
-        tech: sArray[i],
-        name: name
+      tech: sArray[i],
+      name: name
       }
     nArray.push(nItem);
   }
-  return (nArray)
-}
-}
+    return (nArray)
+  }
 
 // Desafio 11
 function generatePhoneNumber() {
