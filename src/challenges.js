@@ -149,7 +149,7 @@ function decode(frase) {
 
 // Desafio 10
 function techList(arrayTech, name) {
-  if (arrayTech === []) {
+  if (arrayTech.length == 0) {
     return "Vazio!"
   } else {
     let nome = name;
@@ -167,6 +167,8 @@ function techList(arrayTech, name) {
     return result
   }
 }
+
+console.log(techList([], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
