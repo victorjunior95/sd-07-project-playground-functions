@@ -286,10 +286,30 @@ function triangleCheck(lineA, lineB, lineC) {
 
 console.log(triangleCheck(3, 5, 2));
 
-
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
+
+  var numbers = string.match(/\d+/g).map(Number);
+  var adder = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    adder += numbers[i]
+  }
+
+  if (adder == 1) {
+
+    return adder + " copo de água"
+
+  } else {
+
+    return adder + " copos de água"
+
+  }
+
 }
+
+var stringhydrate = "1 cachaça";
+console.log(hydrate(stringhydrate));
 
 
 module.exports = {
