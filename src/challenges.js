@@ -150,7 +150,7 @@ function techList(tecnologias, name) {
   return capsula
   }
   else{
-    return "Vazio"
+    return "Vazio!"
   }
 }
 
