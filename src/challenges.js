@@ -30,10 +30,17 @@ function footballPoints(wins, ties) {
   return pontos = vitoria + empate
 }
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = 0;
+  let contador = 0;
+  for (i = 0; i < array.length; i += 1){
+    if (array[i] >= maiorNumero) {
+      maiorNumero = array[i];
+      contador += 1
+    }
+  }
+  return contador;
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
