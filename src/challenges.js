@@ -60,23 +60,23 @@ function fizzBuzz(lista) {
 
 // Desafio 9
 function encode(word) {
-  let code='';
-  for (let i in word){
+  let code = '';
+  for (let i in word) {
     console.log(i)
     switch (word[i]) {
       case 'a':
         code += '1';
         break;
-    case 'e':
+      case 'e':
         code += '2';
         break;
-    case 'i':
+      case 'i':
         code += '3';
         break;
-    case 'o':
+      case 'o':
         code += '4';
         break;
-    case 'u':
+      case 'u':
         code += '5';
         break;
       default:
@@ -87,32 +87,31 @@ function encode(word) {
   return code
 }
 
-function decode() {
-  let code='';
-  for (let i in word){
-    console.log(i)
+function decode(code) {
+  let word = '';
+  for (let i in code) {
     switch (word[i]) {
       case '1':
-        code += '1a';
+        word += '1a';
         break;
-    case '2':
-        code += 'e';
+      case '2':
+        word += 'e';
         break;
-    case '3':
-        code += 'i';
+      case '3':
+        word += 'i';
         break;
-    case '4':
-        code += 'o';
+      case '4':
+        word += 'o';
         break;
-    case '5':
-        code += 'u';
+      case '5':
+        word += 'u';
         break;
       default:
-        code += word[i];
+        word += word[i];
         break;
     }
   }
-  return code// seu código aqui
+  return word;
 }
 
 // Desafio 10
