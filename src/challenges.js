@@ -86,7 +86,7 @@ function fizzBuzz(numbers) {
     } else if ((numbers[i] % 3) === 0 && (numbers[i] % 5) === 0) {
       texts.push("fizzBuzz");
     } else {
-      texts.push("bug");
+      texts.push("bug!");
     }
   }
   return texts;
