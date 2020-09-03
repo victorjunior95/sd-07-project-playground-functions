@@ -182,9 +182,21 @@ function decode(b) {
 decode(decryp)
 
 // Desafio 10
-function techList() {
+let ArrayTechsList = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+function techList(a) {
   // seu código aqui
+  const arraySorted = a.sort()
+  let objectTechs = []
+  for (key in arraySorted) {
+    objectTechs.push({
+      tech: arraySorted[key],
+      name: 'Josiel'
+    })
+  }
+  return objectTechs
+
 }
+console.log(techList(ArrayTechsList))
 
 // Desafio 11
 function generatePhoneNumber() {
