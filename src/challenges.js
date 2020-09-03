@@ -36,7 +36,7 @@ function highestCount(array) {
   for (i = 0; i < array.length; i += 1){
     if (array[i] >= maiorNumero) {
       maiorNumero = array[i];
-      contador += 1
+      contador = 1
     }
   }
   let resultado = contador
@@ -46,7 +46,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
-  if (distanciaCat1 === distanciaCat2) {
+  if (distanciaCat1 == distanciaCat2) {
     return "Os gatos trombam e o rato foge"
   } 
   else if (distanciaCat1 > distanciaCat2) {
