@@ -174,22 +174,53 @@ function decode(stringDecode) {
   return novaString;
 }
 
-console.log(decode('12345'));
+/* console.log(decode('12345')); */
 
 /* ________________________________________________________________________________ */
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+/* https://www.it-swarm.dev/pt/javascript/como-criar-um-objeto-dinamico-em-um-loop/968021744/  */
+
+function techList(arrayTech, name) {
+  let arrayOrdenado = arrayTech.sort();
+  let aux = {};
+/*   let object = {}; */
+  let objects = new Array();
+  for (let i = 0; i < arrayOrdenado.length; i += 1) {
+    aux.tech = arrayOrdenado[i]; 
+    aux.name = name;
+    objects[i] = Object.assign({},aux);
+  }
+  return objects;
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Jessica'));
 
 /* ________________________________________________________________________________ */
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayTelefone) {
+  let contador = 0;
+  if (arrayTelefone.length > 11) {
+    return 'Array com tamanho incorreto';
+  } 
+  for (let i = 0; i < arrayTelefone.length; i += 1) {
+    if (arrayTelefone[i] < 0 || arrayTelefone[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } 
+    for (let j = 0; j < arrayTelefone.length; j += 1) {
+      if (arrayTelefone[j] === arrayTelefone[i]) {
+        contador = contador + 1;          
+        if (contador >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }    
+      }    
+    }
+  }
 }
 
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+ */
 /* ________________________________________________________________________________ */
 
 // Desafio 12
