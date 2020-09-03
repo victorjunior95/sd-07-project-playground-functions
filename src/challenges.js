@@ -68,18 +68,27 @@ function catAndMouse(mouse , cat1 , cat2) {
 // Desafio 8
 function fizzBuzz(a) {
   let result = [] ;
+
   for( let i in a )
   {
-      if ( a[i] % 3 === 0 || a[i] % 5 === 0 )
+
+      if ( a[i] % 3 === 0 )
       {
-        a[i] % 3 === 0 && a[i] % 5 === 0 ? result[i] = "fizzBuzz" : result[i] = "fizz" ;
+
+          a[i] % 3 === 0 && a[i] % 5 === 0 ? result[i] = "fizzBuzz" : result[i] = "fizz" ;
+  
       }
       else
       {
-        a[i] % 5 === 0 ? result[i] = "buzz" : result[i] = "bug!" ;
+
+          a[i] % 5 === 0 ? result[i] = "buzz" : result[i] = "bug!" ;
+
       } ;
+
   } ;
+
   return result ;
+
 }
 
 // Desafio 9
