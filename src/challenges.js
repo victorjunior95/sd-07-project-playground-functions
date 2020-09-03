@@ -56,12 +56,12 @@ let num = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(num));
 
 // Desafio 7
-function catAndMouse(bicho) {
+function catAndMouse(mouse, cat1, cat2) {
   let maisProximo;
   for (let i = 1; i <= bicho.length; i += 1){
-    if (bicho[1] === 'cat1'){
+    if ((mouse - cat1) < (mouse - cat2)){
       maisProximo = 'cat1';
-    } else if (bicho[2] === 'cat2'){
+    } else if ((mouse - cat1) > (mouse - cat2)){
       maisProximo = 'cat2';
     }else {
       maisProximo = 'os gatos trombam e o rato foge';
@@ -92,9 +92,17 @@ let div = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(div));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  saida = frase.replace(/a/g, '1');
+  let said = saida.replace(/e/g, '2');
+  let sai = said.replace(/i/g, '3');
+  let sa = sai.replace(/o/g, '4');
+  let s = sa.replace(/u/g, '5');
+  return (s)
 }
+let vogal = 'Hi There!'
+console.log(encode(vogal));
+
 function decode() {
   // seu código aqui
 }
