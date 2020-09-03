@@ -222,7 +222,7 @@ function techList(array, name) {
 // console.log(techList(teste, teste1));
 // -------------------------------------------------------------------
 
-// Desafio 11
+// Desafio 11 [1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]
 function generatePhoneNumber(array) {
   let newNumber = "";
 
@@ -232,15 +232,15 @@ function generatePhoneNumber(array) {
 
   let count = 1;
   for (let j = 0; j < array.length - 1; j += 1) {
-    for (let k = 1; k < array.length; k += 1) {
+    for (let k = j + 1; k < array.length; k += 1) {
       if (array[j] == array[k]) {
         count += 1;
-        if (k == array.length - 1) {
-          if (count >= 3) {
-            return "não é possível gerar um número de telefone com esses valores";
-          } else {
-            count = 1;
-          }
+      }
+      if (k == array.length - 1) {
+        if (count >= 3) {
+          return "não é possível gerar um número de telefone com esses valores";
+        } else {
+          count = 1;
         }
       }
     }
@@ -265,7 +265,7 @@ function generatePhoneNumber(array) {
 }
 
 // --------------------TESTE DESAFIO 11--------------------------------
-let teste = [1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1];
+let teste = [0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7];
 console.log(generatePhoneNumber(teste));
 // -------------------------------------------------------------------
 
