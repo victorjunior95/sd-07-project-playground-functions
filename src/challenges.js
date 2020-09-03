@@ -1,3 +1,4 @@
+// Eduardo Pizorno - turma 07
 // Desafio 1
 function compareTrue() {
   // seu código aqui
