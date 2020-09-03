@@ -52,11 +52,11 @@ return console.log("os gatos trombam e o rato foge")
 function fizzBuzz(arr) {
   let numbersArr = [];
 for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
+    if ((arr[i] % 3) == 0 && (arr[i] % 5) == 0) {
      numbersArr[i] = "fizzbuzz"
-} else if (arr[i] % 3 == 0) {
+} else if ((arr[i] % 3) == 0) {
   numbersArr[i] = "fizz" 
-} else if(arr[i] % 5 == 0) {
+} else if((arr[i] % 5) == 0) {
   numbersArr[i] = "buzz"
 } else {
   numbersArr[i] = "bug!"
@@ -86,7 +86,6 @@ function decode(str) {
 
 return str
 }
-console.log(decode("Br5n1 M1rq52s d2 4l3v23r1 F4ns2c1"))
 
 // Desafio 10
 function techList() {
