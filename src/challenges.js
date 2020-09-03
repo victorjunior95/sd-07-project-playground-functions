@@ -125,13 +125,17 @@ function generatePhoneNumber(telephone) {
     return "Array com tamanho incorreto.";
   }
   
-  let countRepeated = 0;
+  let countRepeated = {};
   for(let i = 0; i < telephone.length; i += 1){
-    if(telephone[i] < 0 || telephone[i] > 9 || countRepeated >= 2){
+    if(telephone[i] < 0 || telephone[i] > 9){
       return "não é possível gerar um número de telefone com esses valores";
     }
-    if(i !== telephone.indexOf(telephone[i])){
-      countRepeated += 1;
+    countRepeated[telephone[i]] = 
+    (countRepeated[telephone[i]] || 0) + 1;
+  }
+  for(let key in countRepeated){
+    if(countRepeated[key] >= 3){
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
   return telephone
