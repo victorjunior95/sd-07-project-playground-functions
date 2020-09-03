@@ -181,6 +181,7 @@ function generatePhoneNumber(numbers) {
             for (i = 0; i < 2; i +=1){
                 telephone_number += numbers[i];
             }
+            telephone_number = ") ";             
             for (i = 2; i < 7; i +=1){
                 telephone_number += numbers[i];         
             }
