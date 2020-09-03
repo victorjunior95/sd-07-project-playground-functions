@@ -19,7 +19,9 @@ function concatName(string) {
   let contaString = 0;
 
   for (const key in string) {
-    contaString = key;
+    if (Object.prototype.hasOwnProperty.call(string, key)) {
+      contaString = key;
+    }
   }
 
   let newString = `${string[contaString]}, ${string[0]}`;
@@ -48,11 +50,12 @@ function highestCount(vetor) {
   let contaMaior = 0;
 
   for (const key in vetor) {
-    if (maior === vetor[key]) {
-      contaMaior += 1;
+    if (Object.prototype.hasOwnProperty.call(vetor, key)) {
+      if (maior === vetor[key]) {
+        contaMaior += 1;
+      }
     }
   }
-
   return contaMaior;
 }
 
@@ -75,15 +78,18 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayRetorno = [];
   for (const key in array) {
-    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
-      arrayRetorno.push('fizzBuzz');
-    } else if (array[key] % 3 === 0) {
-      arrayRetorno.push('fizz');
-    } else if (array[key] % 5 === 0) {
-      arrayRetorno.push('buzz');
-    } else if (!(array[key] % 5 === 0 && array[key] % 3 === 0)) {
-      arrayRetorno.push('bug!');
+    if (Object.prototype.hasOwnProperty.call(array, key)) {
+      if (array[key] % 5 === 0 && array[key] % 3 === 0) {
+        arrayRetorno.push('fizzBuzz');
+      } else if (array[key] % 3 === 0) {
+        arrayRetorno.push('fizz');
+      } else if (array[key] % 5 === 0) {
+        arrayRetorno.push('buzz');
+      } else if (!(array[key] % 5 === 0 && array[key] % 3 === 0)) {
+        arrayRetorno.push('bug!');
+      }
     }
+
   }
 
   return arrayRetorno;
@@ -103,8 +109,12 @@ function encode(string) {
 
   for (const key in codigo) {
     for (const i in string) {
-      if (saida[i] === codigo[key]) {
-        saida[i] = key;
+      if (Object.prototype.hasOwnProperty.call(codigo, key)) {
+        if (Object.prototype.hasOwnProperty.call(string, key)) {
+          if (saida[i] === codigo[key]) {
+            saida[i] = key;
+          }
+        }
       }
     }
   }
@@ -210,9 +220,13 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let lados = (lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineC + lineB) > lineA;
+  let lados = (lineA + lineB) > lineC;
+  lados = lados && (lineA + lineC) > lineB;
+  lados = lados && (lineC + lineB) > lineA;
 
-  let modulo = Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineC - lineB) < lineA;
+  let modulo = Math.abs(lineA - lineB) < lineC;
+  modulo = modulo && Math.abs(lineA - lineC) < lineB;
+  modulo = modulo && Math.abs(lineC - lineB) < lineA;
 
   return lados && modulo;
 }
