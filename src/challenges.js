@@ -110,22 +110,24 @@ function decode() {
 function techList(array, name) {
   let arrayObjetos = [];
 
-  let nome = name;
+    let nome = name;
 
-  if (array.length == 0) {
-    return "Vazio";
-  } else {
-    let habilidades = array.sort();
-    for (i in habilidades) {
-      let object = {
-        tech: habilidades[i],
-        name: nome,
-      };
-      arrayObjetos.push(object);
+    if (array.length == 0) {
+      return "Vazio";
+    } else {
+      let habilidades = array.sort();
+      for (i in habilidades) {
+        let objeto = {
+          tech: habilidades[i],
+          name: nome,
+        }
+        arrayObjetos.push(objeto);
+      }
+
+
     }
 
     return arrayObjetos;
-  }
 }
 
 // Desafio 11
