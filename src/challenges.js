@@ -151,18 +151,23 @@ return listaNova;
 
 // Desafio 11
 function generatePhoneNumber(tel) {
-  if(tel.length > 11 || tel.length < 11){
+  if(tel.length != 11){
     return ("Array com tamanho incorreto.")
 }
-let contador = 0
 
-for(i = 0 ; i <= 11 -1; i += 1){
-    for(valores in tel){
-        if(tel[valores] === tel[i]){
-            contador += 1
-        }
-    }    
-}if(contador >= 3){
+let cont = {}
+for (let valores of tel) {
+    // se o número já tinha uma contagem, atualiza somando 1
+    if (cont.hasOwnProperty(valores)) {
+        cont[valores] += 1;
+    } else cont[valores] = 1; // senão, inicia a contagem do número com 1
+}
+
+// encontrar a maior ocorrência
+let max = Math.max.apply(null, Object.values(cont));//conta os valores e não os indices
+console.log(max)
+if(max >= 3 ){
+  
     return "não é possível gerar um número de telefone com esses valores" 
 }
 
@@ -178,7 +183,7 @@ for(i = 0 ; i <= 11 -1; i += 1){
         numeroTel += "(" + tel[i] 
     }
     else if( i == 1 ){
-        numeroTel +=  tel[i] + ")" 
+        numeroTel +=  tel[i] + ")" + " "
     }
     else if(i < 7 && i > 1){
         numeroTel += (tel[i])
@@ -191,8 +196,8 @@ for(i = 0 ; i <= 11 -1; i += 1){
     } 
 }
 return numeroTel
-}
 
+}
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
