@@ -80,18 +80,18 @@ return(resultado)
 // Desafio 8
 function fizzBuzz(array) {
   let string = [];
-for (let i = 0; i < array.length; i += 1)
-if (array[i] % 3 != 0 && array[i] % 5 != 0) {
-        string.push('bug!');
-    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-        string.push('fizzBuzz');
+  for (let i = 0; i < array.length; i += 1) {
+  if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
+  string.push('bug!');
+} else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      string.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
-        string.push('fizz');
+      string.push('fizz');
     } else if (array[i] % 5 === 0) {
-        string.push('buzz');
+      string.push('buzz');
     }
-    return (string);
-    console.log(string);
+  }
+  return (string);
 }
 
 // Desafio 9
@@ -102,15 +102,15 @@ function encode(string) {
   let newString2 = newString1.replace(/i/g, '3');
   let newString3 = newString2.replace(/o/g, '4');
   let newString4 = newString3.replace(/u/g, '5');
-  return(newString4)
-  }
-  function decode(string) {
-  let newString = '';
-  newString = string.replace(/1/g, 'a');
-  let newString1 = newString.replace(/2/g, 'e');
-  let newString2 = newString1.replace(/3/g, 'i');
-  let newString3 = newString2.replace(/4/g, 'o');
-  let newString4 = newString3.replace(/5/g, 'u');
+  return (newString4)
+}
+function decode(string) {
+    let newString = '';
+    newString = string.replace(/1/g, 'a');
+    let newString1 = newString.replace(/2/g, 'e');
+    let newString2 = newString1.replace(/3/g, 'i');
+    let newString3 = newString2.replace(/4/g, 'o');
+    let newString4 = newString3.replace(/5/g, 'u');
     return (newString4)
   }
 
@@ -121,18 +121,17 @@ function techList(array, name) {
   let sArray = [];
   if (array.length === 0) {
     return ('Vazio!')
-}
+  }
     sArray = array.sort();
-
-    for (let i in sArray) {
-    nItem = {
+  for (let i in sArray) {
+      nItem = {
       tech: sArray[i],
       name: name
-      }
-    nArray.push(nItem);
-  }
-    return (nArray)
-  }
+    }
+      nArray.push(nItem);
+    }
+  return (nArray)
+}
 
 // Desafio 11
 function generatePhoneNumber() {
