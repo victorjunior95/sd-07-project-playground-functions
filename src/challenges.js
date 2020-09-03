@@ -149,24 +149,35 @@ function techList(tech, name) {
   return techArray;
 }
 // Desafio 11
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 function generatePhoneNumber(n) {
-  let counts = {},
-    duplicate = 0;
-  n.forEach(function (x) {
-    counts[x] = (counts[x] || 0) + 1;
-  });
-  for (let key in counts) {
-    if (counts.hasOwnProperty(key)) {
-      counts[key] > 1 ? duplicate++ : duplicate;
+  let numero;
+  let qtdRepeticao = 0;
+  let rep = false;
+  let maiorMenor = false;
+
+  for (let i = 0; i < n.length; i += 1) {
+    numero = n[i];
+
+    if (n[i] < 0 || n[i] > 9) {
+      maiorMenor = true;
     }
+
+    for (let j = 0; j < n.length; j += 1) {
+      if (n[j] === numero) {
+        qtdRepeticao++;
+      }
+    }
+
+    if (qtdRepeticao >= 3) {
+      rep = true;
+    }
+    qtdRepeticao = 0;
   }
-  let teste = n.some((el) => el > 9 || el < 0);
+  if(maiorMenor == true || rep == true){
+    return `não é possível gerar um número de telefone com esses valores`;
+  }
   if (n.length != 11) {
     return `Array com tamanho incorreto.`;
-  }
-  if (teste == true || duplicate >= 3) {
-    return `não é possível gerar um número de telefone com esses valores`;
   }
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
