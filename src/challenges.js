@@ -81,15 +81,14 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-
   let vetorSaida = [];
 
   for (let i in array) {
-    if (((array[i] % 5) == 0 ) &&((array[i] % 3) == 0)) {
+    if (array[i] % 5 == 0 && array[i] % 3 == 0) {
       vetorSaida.push("fizzBuz");
-    } else if ((array[i] % 3) == 0) {
+    } else if (array[i] % 3 == 0) {
       vetorSaida.push("fizz");
-    } else if ((array[i] % 5) == 0) {
+    } else if (array[i] % 5 == 0) {
       vetorSaida.push("buzz");
     } else {
       vetorSaida.push("bug!");
@@ -109,14 +108,23 @@ function decode() {
 
 // Desafio 10
 function techList(array, name) {
-  let arrayHabilidades = array;
-  let arraySaida = [];
+  let arrayObjetos = [];
+
   let nome = name;
 
-  for (let i in array) {
-    let habilidade = new Object();
-    habilidade.tech = array[i];
-    habilidade.name = nome;
+  if (array.length == 0) {
+    return "Vazio";
+  } else {
+    let habilidades = array.sort();
+    for (i in habilidades) {
+      let obejct = {
+        tech: habilidades[i],
+        name: nome,
+      };
+      arrayObjetos.push(object);
+    }
+
+    return obejct;
   }
 }
 
