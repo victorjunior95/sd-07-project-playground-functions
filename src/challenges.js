@@ -102,15 +102,10 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode(vogais) {
-  let encodeResultado1 = vogais.replace("a", "1");
-  let encodeResultado = vogais.replace("a", "1");
-  return encodeResultado;
+function encode() {
   // seu código aqui
 }
-function decode(numeros) {
-  let decodeResultado = numeros.replace("1", "a");
-  return decodeResultado;
+function decode() {
   // seu código aqui
 }
 
@@ -141,7 +136,6 @@ module.exports = {
   compareTrue,
   concatName,
   decode,
-  encode: encodeResultado,
   fizzBuzz,
   footballPoints,
   generatePhoneNumber,
