@@ -157,20 +157,28 @@ return array.join('');
 }
 
 // Desafio 10
-
 function techList(array, name) {
 
-  let result = [];
+  let result
 
-  for (let i = 0; i < array.length; i += 1) {
+  if (array[0] == undefined) {
+      result = 'Vazio!';
+
+  } else if (array != []) {
+
+      let result = [];
       
-      let object = {tech: array[i], name: name};
-      result.push(object);
-      object = {};
-
-  }
-
-  result.sort((a, b) => (a.tech > b.tech) ? 1 : -1); // To sort the object by a property I searched in the following link: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
+          for (let i = 0; i < array.length; i += 1) {
+              
+              let object = {tech: array[i], name: name};
+              result.push(object);
+              object = {};
+      
+          }
+      
+          result.sort((a, b) => (a.tech > b.tech) ? 1 : -1); // To sort the object by a property I searched in the following link: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
+          return result;
+      }
   return result;
 }
 
@@ -214,7 +222,6 @@ function generatePhoneNumber(array) {
   let result = arrayResult.join('');
   return result;
   }
-  
 }
 
 // Desafio 12
