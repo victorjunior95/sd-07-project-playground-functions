@@ -84,7 +84,7 @@ function fizzBuzz(array) {
     }
   }
 
-  return newArray.join(', ');
+  return newArray;
 }
 
 
@@ -191,5 +191,5 @@ encode("hello there!")
 
 decode("h3 th2r2!");
 
-fizzBuzz([9, 25]);
+fizzBuzz([2, 15, 7, 9, 45]);
 
