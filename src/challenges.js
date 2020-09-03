@@ -79,38 +79,14 @@ function catAndMouse(mouse,cat1,cat2) {
   if((cat1 - mouse)**2 === (cat2 - mouse)**2){
     return "os gatos trombam e o rato foge"
 }
-if(mouse === 0){
-    if(cat1 > cat2){
-        return "cat2"
-    }
-    if(cat2 > cat1){
-        return "cat1"
-    }
+if((cat1 - mouse)**2 > (cat2 - mouse)**2){
+    return "cat2"
 }
-if(cat1 === cat2){
-   return ("os gatos trombam e o rato foge")
-}
-if(cat1 === mouse){
-   return "cat1"
-}
-if(cat2 === mouse){
-   return "cat2"
-}
-if(mouse > 0 && mouse < cat2 && cat2 < cat1){
-   return "cat2"
-}
-if(mouse > 0 && mouse < cat1 && cat1 < cat2){
-   return "cat1"
-}
-if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat1 > cat2){
+if((cat1 - mouse)**2 < (cat2 - mouse)**2){
     return "cat1"
 }
-if(mouse > 0 && mouse > cat1 && mouse > cat2 && cat2 > cat1){
-    return "cat2"
-}
-if(mouse > 0 && mouse > cat1 && mouse < cat2 && cat2 > cat1){
-    return "cat2"
-}
+
+
 }
 // Desafio 8
 function fizzBuzz(lista) {
@@ -153,8 +129,22 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(listaAprender,name) {
+  if (listaAprender == []){
+    return 'Vazio!'
+}
+listaAprender = listaAprender.sort()
+let listaNova = []
+let object1={"tech":listaAprender[0],"name":name};
+let object2={"tech":listaAprender[1],"name":name};
+let object3={"tech":listaAprender[2],"name":name};
+let object4={"tech":listaAprender[3],"name":name};
+let object5={"tech":listaAprender[4],"name":name};
+
+
+listaNova.push(object1,object2,object3,object4,object5); 
+
+return listaNova;
 }
 
 // Desafio 11
