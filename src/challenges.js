@@ -83,7 +83,8 @@ function techList(tech, name) {
   let lista = [];
   for (let i = 0; i < tech.length; i += 1) {
     if (tech === '') return 'Vazio!';
-    lista[i] = { tech: '${tech}', name }
+    lista[i] = { tech: `${tech}`, name }
+  
   }
   return lista;
 }
