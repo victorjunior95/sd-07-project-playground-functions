@@ -193,7 +193,7 @@ function generatePhoneNumber(numero) {
   numero.unshift("(");
   numero.splice(3, 0, ")");
   numero.splice(4, 0, " ");
-  numero.splice(9, 0, "-");
+  numero.splice(10, 0, "-");
   numeroString = numero.join("")
   return numeroString;
 }
