@@ -8,7 +8,7 @@ console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  let trianguloArea = ((base * height)/2);
+  let trianguloArea = ( (base * height) / 2 );
   return trianguloArea;
 }
 
@@ -24,7 +24,7 @@ console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(nomes) {
-  let tamanho = nomes[nomes.length -1] + `, ` + nomes[0];
+  let tamanho = nomes[nomes.length -1] +`, `+ nomes[0];
 
   return tamanho;
 }
@@ -32,8 +32,8 @@ function concatName(nomes) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints(wins, ties ) {
-  pontos = (wins * 3) + ties;
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
   return pontos;
 }
 
@@ -58,7 +58,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let retorno ='';
+  let retorno = '';
   cat1 = Math.abs(cat1 - mouse);
   cat2 = Math.abs(cat2 - mouse)
 
@@ -75,7 +75,7 @@ console.log(catAndMouse(5, 3, 9));
 // Desafio 8
 function fizzBuzz(arrayNumerosFB) {
   let arrayFB = [];
-  for (let i = 0; i < arrayNumerosFB.length; i+= 1) {
+  for (let i = 0; i < arrayNumerosFB.length; i += 1) {
     let resto3 = arrayNumerosFB[i] % 3;
     let resto5 = arrayNumerosFB[i] % 5
     if ((resto3 === 0) || (resto5 === 0)) {
@@ -113,8 +113,8 @@ function decode(frase) {
   return fraseResultante;
 }
 
-console.log (encode('hi there!'));
-console.log(decode("h3, th2r2!"));
+console.log(encode('hi there!'));
+console.log(decode('h3, th2r2!'));
 
 // Desafio 10
 function techList(tecnologias, nome) {
@@ -123,7 +123,7 @@ function techList(tecnologias, nome) {
   tecnologias = tecnologias.sort();
 
   if (tecnologias.length === 0) {
-    saida = "Vazio!";
+    saida = 'Vazio!';
   } else {
     for (const key in tecnologias) {
       saida.push({
@@ -135,7 +135,7 @@ function techList(tecnologias, nome) {
   return saida;
 }
 
-console.log (techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
