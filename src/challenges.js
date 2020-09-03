@@ -123,14 +123,6 @@ function techList(array, nome) {
     return "Vazio!"
   } else {
     let newArray = array.sort() 
-    newArray = newArray.sort((a, b) => {
-      if (a.length > b.length) {
-      return 1
-    } else if (b.length > a.length) {
-      return -1
-    } else
-      return 0
-    })
     for(obj in newArray) {
       newArray[obj] = {
         tech: newArray[obj],
