@@ -93,19 +93,26 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  // string = string.split("");
-
-  for (let i = 0; i < string.length; i += 1) {
-    console.log(string[i])
-  }
+  string = string.replace(/a/gi, "1");
+  string = string.replace(/e/gi, "2");
+  string = string.replace(/i/gi, "3");
+  string = string.replace(/o/gi, "4");
+  string = string.replace(/u/gi, "5");
+  return string;
 }
 
-// console.log(encode("hi there!"));
-encode("hi there!")
+console.log(encode("hi there!"));
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  string = string.replace(/1/gi, "a");
+  string = string.replace(/2/gi, "e");
+  string = string.replace(/3/gi, "i");
+  string = string.replace(/4/gi, "o");
+  string = string.replace(/5/gi, "u");
+  return string;
 }
+
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
