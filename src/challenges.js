@@ -113,8 +113,8 @@ function encode(string) {
   newString2 = newString1.replace(/3/g, 'i');
   newString3 = newString2.replace(/4/g, 'o');
   newString4 = newString3.replace(/5/g, 'u');
-  return(newString4)
-    }
+    return (newString4)
+  }
 
 // Desafio 10
 function techList(array, name) {
@@ -122,19 +122,19 @@ function techList(array, name) {
   let nArray = [];
   let nItem = '';
   let sArray = [];
-if(array.length == 0) {
-  return('Vazio!')
+  if (array.length === 0) {
+  return ('Vazio!')
 } else {
   sArray = array.sort();
 
   for (let i in sArray) {
-      nItem = {
-          tech: sArray[i],
-          name: name
+    nItem = {
+        tech: sArray[i],
+        name: name
       }
-  nArray.push(nItem);
+    nArray.push(nItem);
   }
-  return(nArray)
+  return (nArray)
 }
 }
 
