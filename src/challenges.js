@@ -49,16 +49,16 @@ function footballPoints(wins, ties) {
 
 // Função apoio highest Count
 function greatestNumber(numbers) {
-  let greatestNumber = 0
+  let greatest = 0
   /* Check greatest Number */
   for (let counter = 0; counter <= numbers.length - 1; counter += 1) {
     if (counter === 0) {
-      greatestNumber = numbers[counter]
-    } else if (numbers[counter] > greatestNumber) {
-      greatestNumber = numbers[counter]
+      greatest = numbers[counter]
+    } else if (numbers[counter] > greatest) {
+      greatest = numbers[counter]
     }
   }
-  return greatestNumber
+  return greatest
 }
 
 // Desafio 6
@@ -96,7 +96,7 @@ function fizzBuzzHelp(number) {
   let buzzText = number % 3 === 0
   let fizzText = number % 5 === 0
   let bugText = 'bug'
-  
+
   if (buzzText) {
     message = 'buzz'
   } else if (fizzText) {
@@ -117,7 +117,7 @@ function fizzBuzz(numbers) {
     } else {
       fizzBuzzList.push(fizzBuzzHelp(numbers[number]))
     }
-  }  
+  }
   return fizzBuzzList
 }
 
@@ -264,7 +264,7 @@ function hydrate(text) {
   let total = 0
   let message = ''
 
-  for (let counter = 0; counter <= drinkList.length - 1; counter +=1) {
+  for (let counter = 0; counter <= drinkList.length - 1; counter += 1) {
     total += parseInt(drinkList[counter], 10)
   }
 
