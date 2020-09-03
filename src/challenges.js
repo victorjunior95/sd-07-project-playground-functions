@@ -31,8 +31,8 @@ function highestCount(arr) {
   let count = 0;
   let maior = arr[arr.length - 1];
   for (let pos of arr) {
-    pos == maior ? count++ : null;
-  };
+    pos === maior ? count = count + 1 : count;
+  }
   return count;
 }
 
@@ -73,7 +73,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-console.log(highestCount([9,9,9, 1, 2, 3, 9, 5, 7]));
+
 module.exports = {
   calcArea,
   catAndMouse,
