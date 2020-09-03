@@ -81,6 +81,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanciaCat2 > distanciaCat1) {
     console.log("cat2")
 }
+if (distanciaCat2 === distanciaCat1) {
+  console.log("os gatos trombam e o rato foge")
+}
 }
 
 // Desafio 8
