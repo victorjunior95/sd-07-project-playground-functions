@@ -139,20 +139,37 @@ function fizzBuzz(arrayNumeros) {
     }
   return resultado;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  // podemos percorrer a string armazenando cada elemento.
+  //podemos também utilizar condições.
 }
-function decode() {
+function decode(codigo) {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nomesTec, name) {
+  let arrayDeAulas = [];
+  for (i in nomesTec) {
+    let aulas = {
+      tech: nomesTec[i],
+      name: name,
+    };
+    arrayDeAulas.push(aulas);
+  }
+  if (nomesTec.length === 0) {
+    let resultado = "";
+    resultado = 'Vazio!'
+    return resultado;
+  }
+  else {
+    return arrayDeAulas;
+  }
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"
+));
 
 // Desafio 11
 function generatePhoneNumber() {
