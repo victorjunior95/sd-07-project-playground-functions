@@ -38,6 +38,8 @@ function concatName(sentenceArray = []) {
   return lastFirst;
 }
 console.log(concatName());
+
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
