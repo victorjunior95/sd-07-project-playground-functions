@@ -32,7 +32,7 @@ function concatName(nomes) {
     primeiro: nomes[0],
   }
 
-  return objeto.ultimo, objeto.primeiro
+  return objeto.ultimo + objeto.primeiro
 }
 
 // Desafio 5
