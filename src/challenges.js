@@ -118,7 +118,7 @@ function techList(array, name) {
             name: name,
         })
     }
-    return saida;
+    return saida.sort();
 }
 
 
