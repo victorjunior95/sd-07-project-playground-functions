@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  return string.split(" ");
+  return string.split(' ');
 
 }
 
@@ -112,7 +112,7 @@ function fizzBuzz(numbersArray) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let auxString = string.split("");
+  let auxString = string.split('');
   let code = {
     'a': 1,
     'e': 2,
@@ -132,11 +132,11 @@ function encode(string) {
     }
 
   }
-  return auxString.join("");
+  return auxString.join('');
 }
 function decode(string) {
   // seu código aqui
-  let auxString = string.split("");
+  let auxString = string.split('');
   let code = {
     'a': 1,
     'e': 2,
@@ -155,14 +155,14 @@ function decode(string) {
 
     }
   }
-  return auxString.join("");
+  return auxString.join('');
 }
 
 // Desafio 10
 function techList(technologies, name) {
   // seu código aqui
   if (technologies.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   let techs = [];
 
@@ -182,14 +182,14 @@ function generatePhoneNumber(phone) {
   let uniqueKeys = phone.values()
   let formatedPhone = []
   if (phone.length != 11) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.'
   }
 
   for (let key of uniqueKeys) {
     let cont = 0;
 
     if (key < 0 || key > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
 
     for (let chave in phone) {
@@ -200,26 +200,26 @@ function generatePhoneNumber(phone) {
     }
 
     if (cont >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
 
   }
 
   for (let cont = 0; cont<11; cont += 1) {
     if (cont== 0) {
-      formatedPhone.push("(");
+      formatedPhone.push('(');
       formatedPhone.push(phone[cont]);
 
     }
     else if (cont == 1) {
       formatedPhone.push(phone[cont]);
-      formatedPhone.push(")");
-      formatedPhone.push(" ");
+      formatedPhone.push(')');
+      formatedPhone.push(' ');
 
     }
     else if (cont == 6) {
       formatedPhone.push(phone[cont]);
-      formatedPhone.push("-");
+      formatedPhone.push('-');
 
     }
     else {
@@ -229,7 +229,7 @@ function generatePhoneNumber(phone) {
 
   }
 
-  return formatedPhone.join("");
+  return formatedPhone.join('');
 
 }
 
