@@ -70,14 +70,14 @@ function highestCount(arr) {
   let contador = 1;
 
   //organizando a array e depois invertendo
-  console.log(
-    arr.sort(function (a, b) {
-      //console.log(`o numero foi a ${a}`);
-      //console.log(`o numero foi b ${b}`);
-      //console.log(`a diferença foi ${b - a}`);
-      return b - a;
-    })
-  );
+
+  arr.sort(function (a, b) {
+    //console.log(`o numero foi a ${a}`);
+    //console.log(`o numero foi b ${b}`);
+    //console.log(`a diferença foi ${b - a}`);
+    return b - a;
+  });
+
   for (let i = 1; i <= arr.length; i += 1) {
     if (arr[i - 1] === arr[i]) {
       contador++;
