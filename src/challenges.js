@@ -52,14 +52,19 @@ function highestCount(posicoes) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let jerry = 0;
-  let tom = 0;
-  let garfield = 0;
+  let jerry = 1;
+  let tom = 1;
+  let garfield = 1;
   jerry = mouse;
   tom = cat1;
   garfield = cat2;
+  if (jerry === 1 && tom === 0) {
+    tom = 2;
+  }
+  if (jerry === 1 && garfield === 0) {
+    garfield = 2;
+  }
   if (garfield - jerry === tom - jerry) {
-    console.log("Jerry fugiu! XD");
     return "os gatos trombam e o rato foge";
   } else if (garfield - jerry < tom - jerry) {
     console.log("Garfield jantou o Jerry :'(");
@@ -69,6 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return `cat1`;
   }
 }
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
