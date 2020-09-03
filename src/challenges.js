@@ -102,7 +102,6 @@ function encode(string) {
   };
 
   for (const key in codigo) {
-
     for (const i in string) {
       if (saida[i] === codigo[key]) {
         saida[i] = key;
@@ -157,7 +156,6 @@ function procuraRepetidos(array) {
   let qtdRepetidos = 0;
 
   for (let i = 0; i < array.length; i += 1) {
-
     for (let j = 0; j < array.length && qtdRepetidos < 3; j += 1) {
       if (array[i] === array[j]) {
         qtdRepetidos += 1;
@@ -174,7 +172,6 @@ function procuraRepetidos(array) {
 }
 
 function verificaIntervalo(array, inferior, superior) {
-
   for (const key in array) {
     if (array[key] <= inferior || array[key] >= superior) {
       return false;
@@ -190,25 +187,22 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   } else if (!(procuraRepetidos(array) && verificaIntervalo(array, -1, 10))) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
+  }
+  let key = 0;
 
-    let key = 0;
-
-    for (let i = 0; i < 15; i += 1) {
-      if (i === 0) {
-        saida[i] = '(';
-      } else if (i === 3) {
-        saida[i] = ')';
-      } else if (i === 4) {
-        saida[i] = ' '
-      } else if (i === 10) {
-        saida[i] = '-'
-      } else {
-        saida[i] = array[key];
-        key += 1;
-      }
+  for (let i = 0; i < 15; i += 1) {
+    if (i === 0) {
+      saida[i] = '(';
+    } else if (i === 3) {
+      saida[i] = ')';
+    } else if (i === 4) {
+      saida[i] = ' '
+    } else if (i === 10) {
+      saida[i] = '-'
+    } else {
+      saida[i] = array[key];
+      key += 1;
     }
-
   }
 
   return saida.join('');
@@ -216,11 +210,11 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-   let lados = (lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineC + lineB) > lineA;
+  let lados = (lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineC + lineB) > lineA;
 
-   let modulo = Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineC - lineB) < lineA;
+  let modulo = Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineC - lineB) < lineA;
 
-   return lados && modulo;
+  return lados && modulo;
 }
 
 // Desafio 13
