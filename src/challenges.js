@@ -46,22 +46,24 @@ console.log(footballPoints(2, 1)); // 7
 
 // Desafio 6
 function highestCount(numbers) {
-  /* check number */
+  // check number
   let i = 0;
-  let countNumber = 0;
+  let highestNumber = 0;
   for (let j in numbers) {
     if (numbers[i] < numbers[j]) {
       i = j;
     }
-  }
-  /* check count */
-  for (let k = 0; k < numbers.length; k += 1) {
-    if (numbers[k] === numbers[i]) {
+    highestNumber = numbers[i];
+  // check count
+    let countNumber = 0;
+    for (let k = 0; k < numbers.length; k += 1) {
+      if(numbers[k] === highestNumber) {
       countNumber += 1;
+      }
     }
+    return countNumber;
   }
-  return countNumber;
-}
+}  
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) // 2
 
 
@@ -73,7 +75,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } return 'os gatos trombam e o rato foge';
+  } else if (distanceCat1 === distanceCat2) {
+    return 'os gatos trombam e o rato foge';
+  } return 0;
 }
 console.log(catAndMouse(0, 1, 2)) // cat1
 console.log(catAndMouse(0, 2, 1)) // cat2
@@ -92,20 +96,55 @@ function fizzBuzz(array) {
       newArray.push('fizz');
     } else {
       newArray.push('bug!');
-    }  
-  } 
+    }
+  }
   return newArray;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]))  // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(code) {
+  let newCode = '';
+  for (let i = 0; i < code.length; i += 1) {
+    if (code[i] === 'a') {
+      newCode += '1';
+    } else if (code[i] === 'e') {
+      newCode += '2';
+    } else if (code[i] === 'i') {
+      newCode += '3';
+    } else if (code[i] === 'o') {
+      newCode += '4';
+    } else if (code[i] === 'u') {
+      newCode += '5';
+    } else {
+      newCode += code[i];
+    }
+  }
+  return newCode;
 }
-function decode() {
-  // seu código aqui
+function decode(decode) {
+  let newDecode = '';
+  for (let i = 0; i < decode.length; i += 1) {
+    if (decode[i] === '1') {
+      newDecode += 'a';
+    } else if (decode[i] === '2') {
+      newDecode += 'e';
+    } else if (decode[i] === '3') {
+      newDecode += 'i';
+    } else if (decode[i] === '4') {
+      newDecode += 'o';
+    } else if (decode[i] === '5') {
+      newDecode += 'u';
+    } else {
+      newDecode += decode[i];
+    }
+  }
+  return newDecode;
 }
+console.log(encode('hi there!'))  // h3 th2r2!
+console.log(decode('h3 th2r2!'))  // hi there!
+
 
 // Desafio 10
 function techList() {
