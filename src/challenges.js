@@ -155,8 +155,66 @@ function techList(tecnologias, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function procuraRepetidos(array) {
+  let qtdRepetidos = 0;
+
+  for (let i = 0; i < array.length; i++) {
+
+    for (let j = 0; j < array.length && qtdRepetidos < 3; j++) {
+      if (array[i] === array[j]) {
+        qtdRepetidos += 1;
+      }
+    }
+
+    if (qtdRepetidos >= 3) {
+      return false;
+    } else {
+      qtdRepetidos = 0;
+    }
+  }
+
+  return true;
+}
+
+function verificaIntervalo(array, inferior, superior) {
+
+  for (const key in array) {
+    if (array[key] <= inferior || array[key] >= superior) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function generatePhoneNumber(array) {
+  let saida = [];
+
+  if (array.length != 11) {
+    return "Array com tamanho incorreto.";
+  } else if (!(procuraRepetidos(array) && verificaIntervalo(array, -1, 10))) {
+    return "não é possível gerar um número de telefone com esses valores";
+  } else {
+
+    let key = 0;
+
+    for (let i = 0; i < 15; i += 1) {
+      if (i === 0) {
+        saida[i] = "(";
+      } else if (i === 3) {
+        saida[i] = ")";
+      } else if (i === 4) {
+        saida[i] = " "
+      } else if (i === 10) {
+        saida[i] = "-"
+      } else {
+        saida[i] = array[key];
+        key += 1;
+      }
+    }
+
+  }
+
+  return saida.join('');
 }
 
 // Desafio 12
