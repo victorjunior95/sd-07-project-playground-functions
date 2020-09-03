@@ -111,8 +111,12 @@ function decode(anyString) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(anyArray,name) {
+  let toLearn = [];
+  for(let indice in anyArray) {
+  toLearn[indice] = { tech: anyArray[indice], name: name };
+  }
+      return toLearn;
 }
 
 // Desafio 11
