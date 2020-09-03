@@ -57,8 +57,8 @@ console.log(highestCount([9, 4, 4, 4, 9, 4, 9, 13, 13, 1, 4, 13]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanciaCat1 = mouse - cat1;
-  distanciaCat2 = mouse - cat2;
+  distanciaCat1 = Math.abs(mouse - cat1);
+  distanciaCat2 = Math.abs(mouse - cat2);
 
   if (distanciaCat1 < distanciaCat2) {
     return "cat1";
