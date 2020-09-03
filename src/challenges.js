@@ -93,8 +93,8 @@ function catAndMouse(mouse, cat1, cat2) {
 // Apoio para o Desafio 8
 function fizzBuzzHelp(number) {
   let message = ''
-  let buzzText = number % 3 === 0
-  let fizzText = number % 5 === 0
+  let buzzText = number % 5 === 0
+  let fizzText = number % 3 === 0
   let bugText = 'bug!'
 
   if (buzzText) {
@@ -120,16 +120,16 @@ function fizzBuzz(numbers) {
   }
   return fizzBuzzList
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Apoio Desafio 9
 function encodeCounter(vogais, letter) {
   let counterVogais = 0
   let newString = ''
 
-  for (let key in vogais) {
-    let currentVogal = key
-    if (letter === currentVogal) {
-      newString = vogais[key]
+  for (let i = 0; i <= vogais.length - 1; i +=1) {
+    let currentVowel = i
+    if (letter === currentVowel) {
+      newString = vogais[i]
       counterVogais += 1
     }
   }
@@ -163,17 +163,17 @@ function encode(word) {
 
 // Apoio desafio decode
 function decodeCounter(vogais, item) {
-   let counterItem = 0
-   let newString = ''
+  let counterItem = 0
+  let newString = ''
 
-   for (let key in vogais) {
-    let currentVogal = key
+  for (let key in vogais) {
+     let currentVogal = key
     if (item === currentVogal) {
       newString = vogais[key]
       counterItem += 1
     }
-  }
-  message = [counterItem, newString]
+  }  
+  let message = [counterItem, newString]
   return message
 }
 
@@ -188,7 +188,7 @@ function decode(word) {
   }
   for (let counter = 0; counter <= word.length - 1; counter += 1) {
     let currentItem = word[counter]
-    counterItem = decodeCounter(vogais, currentItem)
+    let counterItem = decodeCounter(vogais, currentItem)
     if (counterItem[0] > 0) {
       finalString += counterItem[1]
     } else {
@@ -197,7 +197,7 @@ function decode(word) {
   }
   return finalString
 }
-console.log(decode('h3 th2r2!'))
+
 // Desafio 10
 function techList(tech, name) {
   let newTechList = []
