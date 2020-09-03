@@ -47,10 +47,9 @@ function footballPoints(wins, ties) {
   return totalPoints
 }
 
-// Desafio 6
-function highestCount(numbers) {
+// Função apoio highest Count
+function greatestNumber(numbers) {
   let greatestNumber = 0
-  let numberOfTimes = 0
   /* Check greatest Number */
   for (let counter = 0; counter <= numbers.length - 1; counter += 1) {
     if (counter === 0) {
@@ -59,15 +58,21 @@ function highestCount(numbers) {
       greatestNumber = numbers[counter]
     }
   }
-  /* Count greatest Number */
+  return greatestNumber
+}
+
+// Desafio 6
+function highestCount(numbers) {
+  let numberOfTimes = 0
+  /* Count greatest Number with a greates number function*/
   for (let i in numbers) {
-    if (numbers[i] === greatestNumber) {
+    if (numbers[i] === greatestNumber(numbers)) {
       numberOfTimes += 1
     }
   }
   return numberOfTimes
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = Math.abs(mouse - cat1)
@@ -85,6 +90,23 @@ function catAndMouse(mouse, cat1, cat2) {
   return message
 }
 
+// Apoio para o Desafio 8
+function fizzBuzzHelp(number) {
+  let message = ''
+  let buzzText = number % 3 === 0
+  let fizzText = number % 5 === 0
+  let bugText = 'bug'
+  
+  if (buzzText) {
+    message = 'buzz'
+  } else if (fizzText) {
+    message = 'fizz'
+  } else {
+    message = bugText
+  }
+  return message
+}
+
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzList = []
@@ -92,14 +114,10 @@ function fizzBuzz(numbers) {
   for (let number in numbers) {
     if ((numbers[number] % 3) === 0 && (numbers[number] % 5) === 0) {
       fizzBuzzList.push('fizzBuzz')
-    } else if (numbers[number] % 5 === 0) {
-      fizzBuzzList.push('buzz')
-    } else if ((numbers[number] % 3) === 0) {
-      fizzBuzzList.push('fizz')
     } else {
-      fizzBuzzList.push('bug!')
+      fizzBuzzList.push(fizzBuzzHelp(numbers[number]))
     }
-  }
+  }  
   return fizzBuzzList
 }
 
@@ -171,7 +189,7 @@ function techList(tech, name) {
   for (let item in sortedTechList) {
     let newTechItem = {
       tech: sortedTechList[item],
-      name: name,
+      name: `${name}`,
     };
     newTechList.push(newTechItem)
   }
