@@ -188,8 +188,8 @@ function techList(array, name) {
   // seu código aqui
   const arraySorted = array.sort()
   let objectTechs = []
-  if (arraySorted.length !== 0) {
-    for (let key in arraySorted) {
+  for (let key in arraySorted) {
+    if (key.length !== 0) {
       let object = {
         tech: arraySorted[key],
         name,
@@ -199,7 +199,7 @@ function techList(array, name) {
   }
   return objectTechs
 }
-techList(ArrayTechsList, nameOut)
+console.log(techList(ArrayTechsList, nameOut))
 
 // Desafio 11
 function generatePhoneNumber() {
