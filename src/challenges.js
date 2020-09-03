@@ -2,7 +2,7 @@
 
 // Desafio 1
 function compareTrue(comparar1, comparar2) {
-// seu código aqui
+  // seu código aqui
   if (comparar1 && comparar2) {
     return true;
   } else {
@@ -11,20 +11,18 @@ function compareTrue(comparar1, comparar2) {
 
 }
 // Desafio 2
-function calcArea() {
-// seu código aqui
 function calcArea(base, height) {
-  let area = (base * height)/2;
-  
+  // seu código aqui
+  let area = (base * height) / 2;
+
   return area;
 }
 // Desafio 3
-function splitSentence()
+function splitSentence(separando) {
   // seu código aqui
-  function splitSentence() {
-  let strings = "go Trybe"
-  console.log(strings.split(' ');
+  return separando.split(' '); 
 }
+
 
 // Desafio 4
 function concatName() {
