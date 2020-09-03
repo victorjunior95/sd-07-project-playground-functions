@@ -27,7 +27,7 @@ console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
 // Desafio 4
 function concatName(arrayString) {
   let firstItem = arrayString[0];
-  let lastItem = arrayString[arrayString.length-1];
+  let lastItem = arrayString[arrayString.length - 1];
   let string = lastItem.concat(', ', firstItem);
   return string;
 }
@@ -35,9 +35,14 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); // Paolill
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+  let totalPoints = winsPoints + tiesPoints;
+  return totalPoints;
 }
+console.log(footballPoints(2, 1)); // 7
+
 
 // Desafio 6
 function highestCount() {
