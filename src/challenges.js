@@ -113,7 +113,7 @@ function techList(array, name) {
     let nome = name;
 
     if (array.length == 0) {
-      return "Vazio";
+      return "Vazio!";
     } else {
       let habilidades = array.sort();
       for (i in habilidades) {
