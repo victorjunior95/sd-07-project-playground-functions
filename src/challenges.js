@@ -17,9 +17,13 @@ function calcArea(base, height) {
 calcArea();
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let res = [];
+  res = frase.split(" ");
+  return res;
 }
+
+splitSentence();
 
 // Desafio 4
 function concatName() {
@@ -33,25 +37,33 @@ function footballPoints() {
 
 // Desafio 6
 function highestCount(array) {
-  //posicao 0 = contador, 1 contadorAnterior, 2 maisRepetido, 3 numeroAtual]
-  let varAuxiliar = [0, 0, 0, 0]; 
-  for(let i = 0; i < array.length; i += 1){
-    varAuxiliar[3] = array[i];
-    for(let j = 0; j < array.length; j += 1){
-        if(array[j] === varAuxiliar[3]){
-            varAuxiliar[0] += 1;
-        }
+  let contador = 0;
+  let contadorAnterior = 0;
+  let maisRepetido = null;
+  let numeroAtual = null;
+
+  function testaContador(valor) {
+    if (contadorAnterior === 0) {
+      contadorAnterior = contadorAnterior;
     }
-    if(varAuxiliar[1] === 0){
-      varAuxiliar[1] = varAuxiliar[0];
-      varAuxiliar[2] = varAuxiliar[3];
-    }
-    if(varAuxiliar[0] > varAuxiliar[1]){
-      varAuxiliar[2] = varAuxiliar[3];
-    }
-    varAuxiliar[0] = 0;
   }
-  return varAuxiliar[2];
+  for (let i = 0; i < array.length; i += 1) {
+    numeroAtual = array[i];
+    for (let j = 0; j < array.length; j += 1) {
+      if (array[j] === numeroAtual) {
+        contador += 1;
+      }
+    }
+    if (contadorAnterior === 0) {
+      contadorAnterior = contador;
+      maisRepetido = numeroAtual;
+    }
+    if (contador > contadorAnterior) {
+      maisRepetido = numeroAtual;
+    }
+    contador = 0;
+  }
+  return maisRepetido;
 }
 
 // Desafio 7
