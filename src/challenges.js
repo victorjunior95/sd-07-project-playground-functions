@@ -11,7 +11,8 @@ function compareTrue(a,b) {
   }
     else if( a == false && b == true){
     return false;
-  }}
+  }
+}
 
 
 // Desafio 2
@@ -20,21 +21,24 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");}
+  return string.split(" ");
+}
 
 // Desafio 4
 function concatName(nomes) {
   nomes.splice(1, nomes.length-2 );
   nomes = nomes.reverse();
   ret =  nomes.join(", ");
-  return ret;}
+  return ret;
+}
 
 
 // Desafio 5
 function footballPoints(wins, ties) {
   wins = (wins * 3 );
   ties = (ties * 1 );
-  return (wins + ties);}
+  return (wins + ties);
+}
 
 // Desafio 6
 function highestCount(maior) {
@@ -47,16 +51,17 @@ function highestCount(maior) {
     }
     for(let cnt in maior){
       if(top == maior[cnt]){
-        count += 1
+        count += 1;
       }
     }
-  return count;}
+  return count;
+}
 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = 0
-  let distCat2 = 0
+  let distCat1 = 0;
+  let distCat2 = 0;
   if(cat1&&cat2<mouse||cat1<mouse&&cat2>mouse||cat1>mouse&& cat2<mouse||cat1&&cat2>mouse&&cat1!=cat2)
   {
       if(mouse - cat1 < 0)
@@ -68,14 +73,15 @@ function catAndMouse(mouse, cat1, cat2) {
       else
           {distCat2 = (mouse - cat2)}
       if(distCat1 > distCat2)
-          {return "Cat2"}
+          {return "cat2"}
       else if(distCat2 > distCat1)
-          {return "Cat1"}
+          {return "cat1"}
       else if (distCat1 == distCat2)
           {return"os gatos trombam e o rato foge"}
-  }else if(cat1 == cat2)
+  }else if(cat1 == cat2);;
       {{return"os gatos trombam e o rato foge"}
-  }}  
+    }
+}  
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -94,7 +100,8 @@ function fizzBuzz(numeros) {
       multiplos.push("bug!");
     }
   }
-  return multiplos}
+  return multiplos;
+}
 
 // Desafio 9
 function encode(texto) {
@@ -109,7 +116,8 @@ function encode(texto) {
       }
     }
   }
-  return encod;}
+  return encod;
+}
 
 function decode(texto) {
   // seu código aqui
@@ -124,11 +132,21 @@ function decode(texto) {
       }
     }
   }
-  return encod;}
+  return encod;
+}
 
 // Desafio 10
 function techList(tecnologias, name) {
-  // seu código aqui
+  let capsula = [];
+  for(i in tecnologias)
+  {
+      capsula[i] = dicionario =
+      {
+      tech: tecnologias[i],
+      name: name,
+      }
+  }
+  return capsula
 }
 
 // Desafio 11
