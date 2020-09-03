@@ -37,7 +37,7 @@ function highestCount(array) {
       biggestNum = array[i]
       repetition = 0
       repetition += 1
-    } else if (array[i] === biggestNum){
+    } else if (array[i] === biggestNum) {
       repetition += 1
     }
   }
@@ -109,7 +109,7 @@ function decode(phrase) {
       array[i] = 'i'
     } else if (array[i] === '4') {
       array[i] = 'o'
-    }  else if (array[i] === '5') {
+    } else if (array[i] === '5') {
       array[i] = 'u'
     }
   }
@@ -122,9 +122,9 @@ function techList(array, nome) {
     return 'Vazio!'
   }
   let newArray = array.sort()
-  for (let obj in newArray) {
-    newArray[obj] = {
-      tech: newArray[obj],
+  for (let i = 0; i < newArray.length; i += 1) {
+    newArray[i] = {
+      tech: newArray[i],
       name: nome,
     }
   }
@@ -168,7 +168,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(phrase) {
   let input = phrase.match(/[0-9]+/g)
   let total = 0
-  for (let num in input) {
+  for (let i = 0 ; i < input.length; i += 1) {
     total += parseInt(input[num], 10)
   }
   if (total === 1) {
