@@ -26,9 +26,8 @@ function splitSentence(word) {
 
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+//Desafio 4
+function concatName(array) {
 }
 
 // Desafio 5
@@ -64,9 +63,30 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+  let myArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      newArray.push('fizzbuzz');
+    }
+    if (newArray[i] !== "fizzbuzz") {
+      if (array[i] % 3 === 0) {
+        newArray.push('fizz');
+      }
+      if (array[i] % 5 === 0) {
+        newArray.push("buzz");
+      }
+      if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
+        newArray.push("bug!");
+      }
+    }
+  }
+
+  return newArray.join(', ');
 }
+
 
 // Desafio 9
 function encode(string) {
@@ -170,3 +190,6 @@ footballPoints(0, 0);
 encode("hello there!")
 
 decode("h3 th2r2!");
+
+fizzBuzz([9, 25]);
+
