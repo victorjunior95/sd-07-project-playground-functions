@@ -46,25 +46,29 @@ function highestCount(listN) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = Math.abs(cat1 - cat2)
-  let dist2 = Math.abs(cat2 - cat1)
+  let dist1 = Math.abs(cat1 - mouse)
+  let dist2 = Math.abs(cat2 - mouse)
   if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
-  } else if (dist1 < dist2) {
+  }
+  if (dist1 < dist2) {
     return 'cat1';
-  } else {
+  } 
+  if (dist2 < dist1) {
     return 'cat2';
   }
 }
 
 // Desafio 8
 function fizzBuzz(arrayNum) {
-  for (let i = 1; i <= arrayNum.length; i += 1) {
-    if (i % 3 === 0 && i % 5 === 0) {
+  for (let i in arrayNum) {
+    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
       return 'FizzBuzz'
-    } else if (i % 3 === 0 && i % 5 !== 0) {
+    } 
+    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
       return 'Fizz'
-    } else if (i % 5 === 0 && i % 3 !== 0) {
+    }
+    if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
       return 'Buzz'
     } else {
       return 'bug!'
