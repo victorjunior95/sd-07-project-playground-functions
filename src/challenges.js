@@ -97,22 +97,14 @@ function decode(sentence) {
 // Desafio 10
 function techList(array, name) {
   let structuredArray = [];
-  if (array == '') {
+  if (array == undefined || array == '') {
     return 'Vazio!';
   } else {
+    array.sort();
     for (let tech in array) {
-      structuredArray[tech] = { tech: array[tech], name: name };
+      structuredArray.push({ tech: array[tech], name: name });
     }
   }
-  // resolução de ordem encontrada no seguinte link ->  https://bit.ly/32RzzTB
-  structuredArray.sort((a, b) => {
-    if (a.tech < b.tech) { 
-      return -1; 
-    } else if (a.tech > b.tech) { 
-      return 1; 
-    }
-    return 0;
-  });
   return structuredArray;
 }
 
