@@ -67,10 +67,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultado2 = mouse - cat2;
   let resultadoFinal = "";
     if(resultado1 < resultado2) {
-      resultadoFinal = "cat1";
+      resultadoFinal = cat1;
     }
     else if ( resultado2 < resultado1) {
-      resultadoFinal = "cat2";
+      resultadoFinal = cat2;
     }
     else ( 
       resultadoFinal = "os gatos trombam e o rato foge"
@@ -80,7 +80,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayDeNumeros) {
+
+
   // seu código aqui
 }
 
