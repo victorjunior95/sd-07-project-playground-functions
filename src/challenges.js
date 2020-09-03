@@ -285,7 +285,7 @@ Entradas da função:
   }
 ]
 Caso o array venha vazio sua função deve retornar 'Vazio!' */
-if (namesTech != []) {
+if (namesTech.length != 0) {
   whoWillLearn = [];
   for (i in namesTech) {
     whoWillLearn[i] = {tech: namesTech[i], name: who}
@@ -293,22 +293,140 @@ if (namesTech != []) {
 } else {
   whoWillLearn = "Vazio!"
 }
-return whoWillLearn
+return whoWillLearn;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(telNumber) {
   // seu código aqui
+  /* Crie uma função chamada generatePhoneNumber que receba uma array com 11 
+  números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+
+Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], 
+generatePhoneNumber deverá retornar (12) 34567-8901.
+
+Se a função receber um array com tamanho diferente de 11, a mesma deve retornar 
+"Array com tamanho incorreto.".
+
+Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes 
+ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número 
+de telefone com esses valores". */
+let erro = [];
+let tamanho = telNumber.length;
+let repeat = 0;
+let telefone = [];
+
+if (tamanho != 11) {
+  erro = "Array com tamanho incorreto.";
+}
+
+for (i = 0; i < telNumber.length; i += 1) {
+  if (telNumber[i] > 9 || telNumber[i] < 0) {
+    erro = "não é possível gerar um número de telefone com esses valores";
+  }
+}
+
+for (j = 0; j < telNumber.length; j += 1) {
+  for (k = 0; k < telNumber.length; k += 1) {
+    if (telNumber[i] == telNumber[j]) {
+      repeat += 1;
+    }
+  }
+  if (repeat > 2) {
+    erro = "não é possível gerar um número de telefone com esses valores";
+  }
+}
+
+for (n = 0; n <telNumber.length; n += 1) {
+    telefone += telNumber[n];
+}
+let tel = "(" + telefone.slice(0,2) + ") " + telefone.slice(2,7) + "-" + telefone.slice(7);
+
+if (erro.length == 0) {
+  return tel;
+} else {
+  return erro;
+}
+
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  /* 12 - Condição de existência de um triângulo
+Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função 
+chamada triangleCheck que deverá receber as três linhas como parâmetro e 
+retornar se é possível formar um triângulo com os valores apresentados de 
+cada linha
+
+Para tanto, tenha em mente algumas considerações:
+
+Para que seja possível formar um triângulo, é necessário que a medida 
+de qualquer um dos lados seja menor que a soma das medidas dos outros 
+dois e maior que o valor absoluto da diferença entre essas medidas.
+
+Para obter o valor absoluto de um número em JavaScript, pesquise pela 
+função Math.abs.
+
+O retorno da sua função deverá ser um booleano.
+
+Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true. */
+function compare(A, B, C){
+  let check = false;
+  if (A + B > C && C > Math.abs(A-B)) {
+    check = true;
+  }
+return check;
+}
+
+compa = compare(lineA, lineB, lineC);
+compb = compare(lineB, lineC, lineA);
+compc = compare(lineC, lineA, lineB);
+let finalCheck = false;
+if (compa == true && compb == true && compc) {
+  finalCheck = true;
+}
+return finalCheck;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(order) {
   // seu código aqui
+/* 13 - Bem vindo ao Bar da Trybe!
+Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+
+Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
+
+String recebida:
+  "1 cerveja"
+String retornada:
+  "1 copo de água"
+String recebida:
+  "1 cachaça, 5 cervejas e 1 copo de vinho"
+String retornada:
+  "7 copos de água"
+String recebida:
+  "1 cachaça, 5 cervejas e 1 copo de vinho"
+String retornada:
+  "7 copos de água"
+Notas
+
+Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
+
+O número na frente de cada bebida está no intervalo entre 1 e 9.
+
+Dica: pesquise por algo similar a get all integers inside a string js. */
+let matches = [];
+let glassOfWater = 0;
+matches = order.match(/\d+/g);
+for (i in matches) {
+  glassOfWater += parseInt(matches[i],8);
+}
+if (glassOfWater > 1) {
+  return glassOfWater + " copos de água";
+} else if (glassOfWater == 1) {
+  return glassOfWater + " copo de água";
+}
 }
 
 
