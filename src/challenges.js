@@ -49,7 +49,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(lista) {
   let fizzOrBuzz = [];
-  for (let i = 0; i < lista.length; i += 1){
+  for (let i = 0; i < lista.length; i += 1) {
     if (lista[i] % 15 === 0) fizzOrBuzz[i] = 'fizzBuzz';
     else if (lista[i] % 5 === 0) fizzOrBuzz[i] = 'buzz';
     else if (lista[i] % 3 === 0) fizzOrBuzz[i] = 'fizz';
@@ -59,11 +59,60 @@ function fizzBuzz(lista) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let code='';
+  for (let i in word){
+    console.log(i)
+    switch (word[i]) {
+      case 'a':
+        code += '1';
+        break;
+    case 'e':
+        code += '2';
+        break;
+    case 'i':
+        code += '3';
+        break;
+    case 'o':
+        code += '4';
+        break;
+    case 'u':
+        code += '5';
+        break;
+      default:
+        code += word[i];
+        break;
+    }
+  }
+  return code
 }
+
 function decode() {
-  // seu código aqui
+  let code='';
+  for (let i in word){
+    console.log(i)
+    switch (word[i]) {
+      case '1':
+        code += '1a';
+        break;
+    case '2':
+        code += 'e';
+        break;
+    case '3':
+        code += 'i';
+        break;
+    case '4':
+        code += 'o';
+        break;
+    case '5':
+        code += 'u';
+        break;
+      default:
+        code += word[i];
+        break;
+    }
+  }
+  return code// seu código aqui
 }
 
 // Desafio 10
