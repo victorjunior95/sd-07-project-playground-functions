@@ -216,7 +216,11 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return (lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineC + lineB) > lineA && Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineC - lineB) < lineA;
+   let lados = (lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineC + lineB) > lineA;
+
+   let modulo = Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineC - lineB) < lineA;
+
+   return lados && modulo;
 }
 
 // Desafio 13
@@ -226,7 +230,7 @@ function hydrate(phrase) {
   let sum = 0;
 
   for (const key in numbers) {
-    sum += parseInt(numbers[key]);
+    sum += parseInt(numbers[key], 10);
   }
 
   return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
