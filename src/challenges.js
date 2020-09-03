@@ -19,7 +19,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -32,7 +32,7 @@ function highestCount(array) {
   let maior = Math.max(...array);
   let contador = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (maior === array[i]){
+    if (maior === array[i]) {
       contador += 1;
     }
   }
@@ -45,11 +45,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = 0;
   dist1 = Math.abs(mouse - cat1);
   dist2 = Math.abs(mouse - cat2);
-  if (dist1 === dist2){
+  if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
     return 'cat1';
-  } else { return 'cat2';}
+  } 
+  return 'cat2';
 }
 
 // Desafio 8
@@ -95,10 +96,10 @@ function techList(tecnologias, name) {
     return 'Vazio!'
   }
   tecnologias.sort();
-  for(let i = 0; i < tecnologias.length; i += 1) {
+  for (let i = 0; i < tecnologias.length; i += 1) {
     arrayDeObjetos[i] = {
       tech: tecnologias[i],
-      name: name,
+      name
     };
   }
   arrayDeObjetos.sort();
@@ -122,7 +123,7 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)) {
     return false;
   }
@@ -141,10 +142,10 @@ function hydrate(frase) {
   let resultado = frase.match(ref);
   let contador = 0;
   for (let i = 0; i < resultado.length; i += 1) {
-    let num = parseInt(resultado[i]);
+    let num = parseInt(resultado[i], 10);
     contador += num;
   }
-  if (contador === 1){ return `${contador} copo de água`; }
+  if (contador === 1) { return `${contador} copo de água`; }
   return `${contador} copos de água`;
 }
 
