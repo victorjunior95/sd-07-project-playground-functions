@@ -183,20 +183,21 @@ decode(decryp)
 
 // Desafio 10
 let ArrayTechsList = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-function techList(a) {
+let name = 'Josiel'
+function techList(a, b) {
   // seu código aqui
   const arraySorted = a.sort()
   let objectTechs = []
-  for (key in arraySorted) {
+  for (let key in arraySorted) {
     objectTechs.push({
       tech: arraySorted[key],
-      name: 'Josiel'
+      name: b
     })
   }
   return objectTechs
 
 }
-console.log(techList(ArrayTechsList))
+console.log(techList(ArrayTechsList, name))
 
 // Desafio 11
 function generatePhoneNumber() {
