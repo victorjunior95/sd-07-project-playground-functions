@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a === b) {
-    return true;
-  }
-  return false;
+
+  return a && b;
 }
+
+//console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -13,11 +13,13 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
+//console.log(calcArea(3, 10));
+
 // Desafio 3
-function splitSentence(string) {
+function splitSentence(name) {
   // seu código aqui
 
-  let arr = string.split(" ");
+  let arr = name.split(" ");
 
   return arr;
 
@@ -36,28 +38,23 @@ function splitSentence(string) {
   return arrayString; */
 }
 
+//console.log(splitSentence("go Trybe"));
+
 // Desafio 4
-function concatName(arr) {
+function concatName(names) {
   // seu código aqui
-  let palavra;
-  let arr2 = [];
-  arr = arr.split(" ");
+  return `${names[names.length - 1]}, ${names[0]}`;
 
-  console.log(arr);
-  arr2.push(arr.splice(arr.length - 1, 1)[0]);
-  arr2.push(arr.splice(0, 1)[0]);
-  palavra = arr2.join(", ");
-  console.log(palavra);
-
-  return palavra;
-
-  /* let palavra;
+  /*
+  utilize como parâmetro "...param"
   let arr = [];
   arr.push(param.splice(param.length - 1, 1)[0]);
   arr.push(param.splice(0, 1)[0]);
-  palavra = arr.join(", ");
-  return palavra; */
+  return arr.join(", ");
+   */
 }
+
+//console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
