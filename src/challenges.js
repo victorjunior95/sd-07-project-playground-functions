@@ -26,38 +26,38 @@ function somaRepeat(arrayGenerico, pos) {
 // Valida array e dá uma resposta em strings
 function validaTelefone(arrayTelefone) {
   let retorno = '';
-  if (arrayTelefone.length == 11) {
+  if (arrayTelefone.length === 11) {
     for (let i in arrayTelefone) {
       if (arrayTelefone[i] > 9 || arrayTelefone[i] < 0 || somaRepeat(arrayTelefone, i) >= 3) {
         retorno = 'não é possível gerar um número de telefone com esses valores';
       }
     }
-  }  else {
+  } else {
     retorno = 'Array com tamanho incorreto.';
   }
   return retorno;
 }
 
 // Separa e enfeita Telefone
-function enfeitaTelefone(arrayTelefone){
+function enfeitaTelefone(arrayTelefone) {
   let numeroTelefone = '';
-    for (let i in arrayTelefone) {
-      switch(i) {
-        case '0':
-          numeroTelefone += '(';
-          break;
-        case '2':
-          numeroTelefone += ')';
-          numeroTelefone += ' ';
-          break;
-        case '7':
-          numeroTelefone += '-';
-          break;
-        default:
+  for (let i in arrayTelefone) {
+    switch (i) {
+      case '0':
+        numeroTelefone += '(';
         break;
-      }
-      numeroTelefone += arrayTelefone[i]
+      case '2':
+        numeroTelefone += ')';
+        numeroTelefone += ' ';
+        break;
+      case '7':
+        numeroTelefone += '-';
+        break;
+      default:
+        break;
     }
+    numeroTelefone += arrayTelefone[i]
+  }
   return numeroTelefone;
 }
 
@@ -221,16 +221,14 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
   let resposta = validaTelefone(arrayTelefone)
-  if (resposta === ''){
+  if (resposta === '') {
     resposta = enfeitaTelefone(arrayTelefone)
   }
   return resposta;
 }
 
 // Desafio 12
-let lineA = 3;
-let lineB = 4;
-let lineC = 5;
+
 function triangleCheck(lineA, lineB, lineC) {
   let resultado = false;
   if (lineA >= 0 || lineB > 0 || lineC >= 0) {
@@ -254,14 +252,13 @@ function hydrate(pedido) {
       coposDagua += number;
     }
   }
-  if(coposDagua === 1){
+  if (coposDagua === 1) {
     coposDagua += ' copo de água';
   } else {
     coposDagua += ' copos de água';
-}
+  }
   return coposDagua;
 }
-
 
 module.exports = {
   calcArea,
