@@ -1,9 +1,8 @@
 //Desafio Raphael Caputo
 
 // Desafio 1
-function compareTrue() {
-// seu código aqui
 function compareTrue(comparar1, comparar2) {
+// seu código aqui
   if (comparar1 && comparar2) {
     return true;
   } else {
@@ -12,16 +11,17 @@ function compareTrue(comparar1, comparar2) {
 
 }
 // Desafio 2
-function calcAreab() {
+function calcArea() {
 // seu código aqui
 function calcArea(base, height) {
   let area = (base * height)/2;
+  
   return area;
 }
 // Desafio 3
 function splitSentence()
   // seu código aqui
-  function splitSentence(){
+  function splitSentence() {
   let strings = "go Trybe"
   console.log(strings.split(' ');
 }
