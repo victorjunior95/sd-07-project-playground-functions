@@ -4,7 +4,7 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo === true) {
     return true;
-  } else {
+  }else {
     return false;
   }
 }
@@ -13,7 +13,7 @@ compareTrue(true, false);
 
 // Desafio 2
 function calcArea(base, height) {
-  let cal = (base*height)/2;
+  let cal = (base * height) / 2;
   return cal;
 }
 
@@ -36,15 +36,15 @@ function concatName(strings) {
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
-function footballPoints(wins, ties) { 
-  let points = (3*wins)+(1*ties);
+function footballPoints(wins, ties) {
+  let points = (3 * wins)+(1 * ties);
   return points;
 }
-footballPoints(2, 1)
+footballPoints(2, 1);
 
 // Desafio 6
 function highestCount(numbers) {
-  let maiorNumero = 0
+  let maiorNumero = 0;
   let repeticao = 0;
   for (let index in numbers) {
     if (numbers[index] > maiorNumero) {
@@ -56,7 +56,7 @@ function highestCount(numbers) {
       repeticao += 1;
     }
   }
-  return repeticao
+  return repeticao;
 }
 
 highestCount([9, 1, 2, 3, 9, 5, 7]);
@@ -67,11 +67,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = Math.abs(mouse - cat2);
   if (distCat1 > distCat2) {
     console.log('cat2');
-    return 'cat 2';
+    return 'cat2';
   } if (distCat2 > distCat1) {
     console.log('cat1');
-    return'cat 1';
-  } else {
+    return 'cat1';
+  }else {
     console.log('os gatos trombam e o rato foge');
     return 'os gatos trombam e o rato foge';
   }
@@ -85,11 +85,11 @@ function fizzBuzz(numbers) {
   for (let index in numbers) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
+    }else if (numbers[index] % 3 === 0) {
       newArray.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
+    }else if (numbers[index] % 5 === 0) {
       newArray.push('buzz');
-    } else {
+    }else {
       newArray.push('bug!');
     }
   }
@@ -117,16 +117,16 @@ function techList(arrayTechs, name) {
     console.log('Vazio!');
     return 'Vazio!';
   }
-  for (let i = 0; i < arrayTechs.length; i += 1 ) {
+  for (let i = 0; i < arrayTechs.length; i += 1) {
     techs[i] = {
       tech: arrayTechs[i],
-      name: name
+      name: name,
     }
   }
   return techs;
 }
 
-new techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Lucas');
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas');
 
 // Desafio 11
 function generatePhoneNumber() {
