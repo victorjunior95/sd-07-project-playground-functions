@@ -112,12 +112,20 @@ function decode(anyString) {
 
 // Desafio 10
 function techList(anyArray,name) {
-  let toLearn = [];
-  for(let indice in anyArray) {
-  toLearn[indice] = { tech: anyArray[indice], name: name };
+  if(anyArray.length == 0){
+  return "Vazio";
+  } 
+  else {
+    let array = anyArray.sort();
+    let toLearn = [];
+    for(let indice in array) {
+      toLearn[indice] = { tech: array[indice], name: name };
+      }
+    return toLearn;
   }
-      return toLearn;
-}
+};
+let tech = []
+console.log(techList(tech,"Bruna"))
 
 // Desafio 11
 function generatePhoneNumber() {
