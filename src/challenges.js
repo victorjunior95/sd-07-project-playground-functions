@@ -45,21 +45,19 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maior = array[0];
+  let maior = Math.max.apply(Math, array)
   let contador = 0;
-  for (let i in array) {
-    if (array[i] > maior) {
-      maior = array[i];
-    }
-  }
+
   for (let i in array) {
     if (array[i] === maior) {
       contador += 1;
     }
   }
+  console.log (maior);
   return contador;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 9, 7]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
