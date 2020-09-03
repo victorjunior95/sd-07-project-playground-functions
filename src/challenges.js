@@ -50,10 +50,19 @@ function highestCount(lista) {
   }
   return repeticao.length;
 }
-
+console.log(catAndMouse(1 , 7 , 6))
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  // seu código aqui
+  let cat1Pos = cat1 - mouse;
+  let cat2Pos = cat2 - mouse;
+
+  if(cat1Pos < cat2Pos){
+    return cat1;
+  }else if(cat1Pos > cat2Pos){
+    return cat2;
+  } else if(cat1 == cat2){
+    'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
@@ -109,8 +118,8 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech,name) {
+
 }
 
 // Desafio 11
