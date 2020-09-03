@@ -218,8 +218,8 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC){
+  return (lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineC + lineB) > lineA && Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineC - lineB) < lineA;
 }
 
 // Desafio 13
