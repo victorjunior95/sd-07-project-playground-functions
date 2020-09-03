@@ -195,11 +195,29 @@ console.log(encode("LoL lOl"));
 
 // Desafio 10
 
+const nameTechArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+const name = "Lucas";
 
+function techList(nameArray, name) {
+  let emptyArray = [];
 
-function techList() {
-  // seu código aqui
+  if (nameArray.length == 0) {
+    return 'Vazio!'
+  } else {
+    for (i in nameArray) {
+      
+      //https://stackoverflow.com/questions/1290131/how-to-create-an-array-of-object-literals-in-a-loop (RaYell)
+
+      emptyArray.push({
+        'tech': nameArray[i],
+        'name': name
+      });
+    }
+  }
+  return emptyArray;
 }
+
+console.log(techList(nameTechArray, name));
 
 // Desafio 11
 function generatePhoneNumber() {
