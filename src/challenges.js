@@ -152,15 +152,33 @@ function fizzBuzz(numbersArr) {
     return "Favor verifique os dados inseridos"
   }
 }
-console.log(fizzBuzz(numbersArr));
+//console.log(fizzBuzz(numbersArr));
 
 // Desafio 9
-function encode() {
+let myStr = "hi there!";
+
+function encode(myStr) {
   // seu código aqui
+  let vowels = myStr.replace(/a/gi, "1");
+  let vowel = vowels.replace(/e/gi, "2");
+  let vowe = vowel.replace(/i/gi, "3");
+  let vow = vowe.replace(/o/gi, "4");
+  let vo = vow.replace(/u/gi, "5");
+  return  vo
 }
-function decode() {
+console.log(encode(myStr));
+let myOtherStr = "h3 th2r2!";
+
+function decode(myOtherStr) {
   // seu código aqui
+  let myNumbers = myOtherStr.replace(/1/g, "a");
+  let myNumber = myNumbers.replace(/2/g, "e");
+  let myNumbe = myNumber.replace(/3/g, "i");
+  let myNumb = myNumbe.replace(/4/g, "o");
+  let myNum = myNumb.replace(/5/g, "u");
+  return myNum
 }
+console.log(decode(myOtherStr));
 
 // Desafio 10
 function techList() {
