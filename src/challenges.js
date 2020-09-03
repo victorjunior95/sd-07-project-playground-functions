@@ -117,8 +117,22 @@ function encode(string) {
     }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+
+  let nArray = [];
+  let nItem = '';
+  let sArray = [];
+
+  sArray = array.sort();
+
+  for (let i in sArray) {
+      nItem = {
+          tech: sArray[i],
+          name: name
+      }
+  nArray.push(nItem);
+  }
+return(nArray)
 }
 
 // Desafio 11
