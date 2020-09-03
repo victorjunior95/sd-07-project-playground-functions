@@ -16,7 +16,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let arrayString = [];
+
+  let arr = string.split(" ");
+
+  return arr;
+
+  //OU PODEMOS USAR O QUE PENSEI ABAIXO O/ :)
+  /*  let arrayString = [];
   let palavraSeparada = "";
   for (let i in string) {
     if (string[i] != " ") {
@@ -27,7 +33,7 @@ function splitSentence(string) {
     }
   }
   arrayString.push(palavraSeparada);
-  return arrayString;
+  return arrayString; */
 }
 
 // Desafio 4
