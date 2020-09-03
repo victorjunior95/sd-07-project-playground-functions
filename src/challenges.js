@@ -23,7 +23,7 @@ function splitSentence(name) {
 
   return arr;
 
-  //OU PODEMOS USAR O QUE PENSEI ABAIXO O/ :)
+  //OU PODEMOS USAR O ABAIXO O/ :) srsrsrsr
   /*  let arrayString = [];
   let palavraSeparada = "";
   for (let i in string) {
@@ -59,13 +59,10 @@ function concatName(names) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-
-  let pontosWins = wins * 3;
-  let pontosEmpate = ties * 1;
-  let total = pontosWins - pontosEmpate;
-
-  return total;
+  return wins * 3 + ties * 1;
 }
+
+//console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
