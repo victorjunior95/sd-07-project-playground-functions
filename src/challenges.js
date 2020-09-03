@@ -117,7 +117,7 @@ function techList(array, name) {
   } else {
     let habilidades = array.sort();
     for (i in habilidades) {
-      let obejct = {
+      let object = {
         tech: habilidades[i],
         name: nome,
       };
