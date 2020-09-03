@@ -1,3 +1,5 @@
+// https://github.com/tryber/sd-07-project-playground-functions
+
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo === true) {
@@ -60,9 +62,20 @@ function highestCount(numbers) {
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(cat1 > cat2) {
+    console.log('cat 2');
+    return 'cat 2';
+  } if (cat1 < cat2) {
+    console.log('cat 1');
+    return'cat 1';
+  } else {
+    console.log('os gatos trombam e o rato foge');
+    return 'os gatos trombam e o rato foge';
+  }
 }
+
+catAndMouse(0, 3, 2);
 
 // Desafio 8
 function fizzBuzz(numbers) {
