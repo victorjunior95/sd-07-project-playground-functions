@@ -31,9 +31,15 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
-}
+  let sentenceArray = ["Ricardo", "Augusto", "Lima", "Da", "Silva"]; 
 
+  let last = sentenceArray.pop();
+  let first = sentenceArray.shift();
+
+  let lastFirst = last + ", " + first;
+  return lastFirst;
+}
+console.log(concatName());
 // Desafio 5
 function footballPoints() {
   // seu código aqui
