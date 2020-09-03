@@ -134,7 +134,6 @@ function decode(frase) {
   }
   return resultado;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 function techList(tech, name) {
   techArray = [];
   techObj = {};
@@ -150,14 +149,16 @@ function techList(tech, name) {
   return techArray;
 }
 // Desafio 11
-function generatePhoneNumber(numeros) {
-  let teste = numeros.some((el) => el > 9 || el < 0);
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+function generatePhoneNumber(n) {
+  let teste = n.some((el) => el > 9 || el < 0);
   if (teste == true) {
     return `não é possível gerar um número de telefone com esses valores`;
   }
-  if (numeros.length != 11) {
+  if (n.length != 11) {
     return `Array com tamanho incorreto.`;
   }
+  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 
 // Desafio 12
@@ -166,8 +167,7 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
 }
 
 module.exports = {
