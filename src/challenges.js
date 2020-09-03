@@ -41,14 +41,18 @@ function highestCount(num) {
   let maior = 0;
   let count = 0;
   for (let i = 0; i < num.length; i += 1){
-    if (num[i] >= maior) {
+    if (maior < num[i]) {
     maior = num[i]; 
-    count = count + 1;
+    }
+  }
+  for (let i = 0; i < num.length; i += 1){
+    if (maior === num[i]){
+      count ++;
     }
   }
   return count;
 }
-let num = [9, 1, 2, 3, 9, 5, 7];
+let num = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(num));
 
 // Desafio 7
