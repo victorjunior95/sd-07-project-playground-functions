@@ -40,8 +40,22 @@ return  resultadoTabela;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
   // seu código aqui
+  let maiorNumero = 0;
+  let contador = 0;
+  for(let i = 0; i < numeros.length; i += 1){
+    if(maiorNumero < numeros[i]){
+      maiorNumero = numeros[i];
+    }
+  }
+  for(let j = 0; j < numeros.length; j += 1){
+    if(maiorNumero == numeros[j]){
+      contador += 1;
+    }
+  }
+
+  return contador;
 }
 
 // Desafio 7
