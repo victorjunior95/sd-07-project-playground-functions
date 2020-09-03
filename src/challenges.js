@@ -76,13 +76,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayRetorno = [];
   for (const key in array) {
-    if (array[key] % 5 == 0 && array[key] % 3 == 0) {
+    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
       arrayRetorno.push("fizzBuzz");
-    } else if (array[key] % 3 == 0) {
+    } else if (array[key] % 3 === 0) {
       arrayRetorno.push("fizz");
-    } else if (array[key] % 5 == 0) {
+    } else if (array[key] % 5 === 0) {
       arrayRetorno.push("buzz");
-    } else if (!(array[key] % 5 == 0 && array[key] % 3 == 0)) {
+    } else if (!(array[key] % 5 === 0 && array[key] % 3 === 0)) {
       arrayRetorno.push("bug!");
     }
   }
@@ -232,7 +232,7 @@ function hydrate(phrase){
       sum += parseInt(numbers[key]);
   }
 
-  return `${sum} copo de água`;
+  return sum > 1 ? `${sum} copos de água`: `${sum} copo de água`;
 }
 
 module.exports = {
