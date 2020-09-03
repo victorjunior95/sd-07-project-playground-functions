@@ -261,7 +261,12 @@ function hydrate(string) {
       auxString += Number(char);
     }
   }
-  return `${auxString} copos de água`;
+  if (auxString === 1 ){
+    return `${auxString} copo de água`;
+  }
+  else {
+    return `${auxString} copos de água`;
+  }
 
 }
 
