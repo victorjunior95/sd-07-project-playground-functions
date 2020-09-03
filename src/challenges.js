@@ -6,19 +6,19 @@ function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
   }
-    return false;
+  return false;
 }
 compareTrue(first, second)
 
 // Desafio 2
-let base = 10;
-let height = 5
+let baseOut = 10;
+let heightOut = 5
 function calcArea(base, height) {
   // seu código aqui
   let area = (base * height) / 2;
   return area;
 }
-calcArea(base, height)
+calcArea(baseOut, heightOut)
 
 
 // Desafio 3
@@ -34,13 +34,13 @@ let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(a) {
   // seu código aqui
   let newString = '';
-  //newString = a[0] 
   for (let i = 0; i < a.length; i += 1){
-    if (i == a.length - 1) {
+    if (i === a.length - 1){
       newString += a[i]
     }
   }
-  return newString + ', ' + a[0]
+  let stringReturn = newString + ', ' + a[0];
+  return stringReturn
 }
 concatName(names)
 
@@ -50,8 +50,8 @@ let victory = 5;
 let draw = 3;
 function footballPoints(wins, ties) {
   // seu código aqui
-    wins = wins * 3;
-    return wins + ties;
+  wins = wins * 3;
+  return wins + ties;
 }
 footballPoints(victory, draw)
 
@@ -61,7 +61,7 @@ function highestCount(a) {
   // seu código aqui
   let highNumbers = [0];
   for (let i = 0; i < a.length; i += 1) {
-    if (a[i] > highNumbers[0]){
+    if (a[i] > highNumbers[0]) {
       highNumbers.shift()
       highNumbers.push(a[i])
     }
@@ -69,7 +69,7 @@ function highestCount(a) {
 
   let highNumbersFinal = 0;
   for (let j = 0; j < a.length; j += 1) {
-    if (highNumbers[0] === a[j]){
+    if (highNumbers[0] === a[j]) {
       highNumbersFinal = highNumbersFinal + 1;
     }
   }
@@ -78,9 +78,9 @@ function highestCount(a) {
 highestCount(highNumberList)
 
 // Desafio 7
-let mouse = 3;
-let cat1 = -1;
-let cat2 = 4;
+let mouseOut = 3;
+let cat1Out = 30;
+let cat2Out = 30;
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = mouse - cat1;
@@ -95,12 +95,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  }else if (distanceCat2 < distanceCat1){
+  } else if (distanceCat2 < distanceCat1) {
     return 'cat2';
   }
-    return 'os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(mouse, cat1, cat2))
+console.log(catAndMouse(mouseOut, cat1Out, cat2Out))
 
 // Desafio 8
 let dataFizzBuzz = [2, 15, 7, 9, 45]
@@ -109,13 +109,13 @@ function fizzBuzz(a) {
   let message = [];
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] % 3 === 0 && a[i] % 5 === 0) {
-      message.push("fizzBuzz");
+      message.push('fizzBuzz');
     } else if (a[i] % 3 === 0) {
-      message.push("fizz");
-    }else if(a[i] % 5 === 0){ 
-      message.push("buzz");
+      message.push('fizz');
+    } else if (a[i] % 5 === 0) { 
+      message.push('buzz');
     } else {
-      message.push("bug!");
+      message.push('bug!');
     }
   }
   return message;
@@ -139,7 +139,6 @@ function techList(a, b) {
   for (let i = 0; i < a.length; i += 1){
     techsObjects.push({tech: a[i], name: b})
   }
-  
   return techsObjects
 
 }
