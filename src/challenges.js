@@ -1,8 +1,8 @@
 
 // Desafio 1
 function compareTrue(value1, value2) {
-    if(value1 && value2){
-      return true;;
+    if (value1&&value2) {
+      return true;
     }
 
   return false;
@@ -37,13 +37,18 @@ function concatName(sentenceArray = []) {
   let lastFirst = last + ", " + first;
   return lastFirst;
 }
-console.log(concatName());
+//console.log(concatName());
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsWins = wins * 3;
+  let teamPoints = pointsWins + ties;
+
+  return teamPoints;
 }
+//console.log(footballPoints());
+
 
 // Desafio 6
 function highestCount() {
