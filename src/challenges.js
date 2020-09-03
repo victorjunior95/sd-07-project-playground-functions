@@ -89,9 +89,7 @@ function fizzBuzz(array) {
         arrayRetorno.push('bug!');
       }
     }
-
   }
-
   return arrayRetorno;
 }
 
@@ -108,8 +106,8 @@ function encode(string) {
   };
 
   for (const key in codigo) {
-    for (const i in string) {
-      if (Object.prototype.hasOwnProperty.call(codigo, key)) {
+    if (Object.prototype.hasOwnProperty.call(codigo, key)) {
+      for (const i in string) {
         if (Object.prototype.hasOwnProperty.call(string, key)) {
           if (saida[i] === codigo[key]) {
             saida[i] = key;
@@ -152,10 +150,12 @@ function techList(tecnologias, nome) {
     saida = 'Vazio!';
   } else {
     for (const key in tecnologias) {
-      saida.push({
-        tech: tecnologias[key],
-        name: nome,
-      })
+      if (Object.prototype.hasOwnProperty.call(codigo, key)) {
+        saida.push({
+          tech: tecnologias[key],
+          name: nome,
+        })
+      }
     }
   }
   return saida;
