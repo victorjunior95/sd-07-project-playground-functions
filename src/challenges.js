@@ -14,16 +14,20 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(palavra) {
-  
- 
- let resultado = palavra.split(" ")
-  
+
+
+  let resultado = palavra.split(" ")
+
   return resultado
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let names="";
+  for (let i = 0; i < array.length; i += 1){
+       names =`${array[0]},${array[array.length-1]}`
+  }
+  return names
 }
 
 // Desafio 5
@@ -164,7 +168,7 @@ function techList(lista, name) {
     return "Vazio!"
   }
   for (key in tecnologias) {
-    
+
   }
   for (let i = 0; i < lista.length; i += 1) {
 
@@ -181,30 +185,30 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
-  if(lineA < lineB+lineC && lineA > lineA -(lineB+lineC)){
-      return true
-  }
-  else if(lineB < lineA+lineC && lineB > lineB -(lineA+lineC)){
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > lineA - (lineB + lineC)) {
     return true
   }
-  else if(lineC < lineB+lineA && lineC > lineC -(lineB+lineA)){
- return true
+  else if (lineB < lineA + lineC && lineB > lineB - (lineA + lineC)) {
+    return true
+  }
+  else if (lineC < lineB + lineA && lineC > lineC - (lineB + lineA)) {
+    return true
   } else {
     return false
   }
 }
-console.log(triangleCheck(10,10,10))
+console.log(triangleCheck(10, 10, 10))
 // Desafio 13
 function hydrate(bebida) {
-  let copo="copos"
+  let copo = "copos"
   let soma = 0;
   for (let i = 0; i < bebida.length; i += 1) {
     if (!isNaN(bebida[i]) === true) {
       soma += Number(bebida[i])
     }
-    if(soma === 1){
-      copo="copo"
+    if (soma === 1) {
+      copo = "copo"
     }
   }
   return `${soma} ${copo} de água`
