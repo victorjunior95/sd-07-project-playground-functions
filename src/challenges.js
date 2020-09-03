@@ -19,7 +19,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length-1] + ', ' + array[0];
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maior = Math.max(...array);
   let contador = 0;
-  for (let i = 0; i < array.length; i += 1 ) {
+  for (let i = 0; i < array.length; i += 1) {
     if (maior === array[i]){
       contador += 1;
     }
@@ -43,13 +43,13 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = 0;
   let dist2 = 0;
-  dist1 = Math.abs( mouse-cat1 );
-  dist2 = Math.abs( mouse-cat2 );
+  dist1 = Math.abs (mouse-cat1);
+  dist2 = Math.abs (mouse-cat2);
   if (dist1 === dist2){
     return 'os gatos trombam e o rato foge';
-  }else if (dist1 < dist2){
+  } else if (dist1 < dist2) {
     return 'cat1';
-  }else{ return 'cat2';}
+  } else { return 'cat2';}
 }
 
 // Desafio 8
@@ -58,11 +58,11 @@ function fizzBuzz(array) {
   for (let i = 0; i < array.length; i += 1) {
     if ((array[i] % 3) === 0 && (array[i] % 5) === 0) {
       armazena[i] = 'fizzBuzz';
-    }else if ((array[i] % 3) === 0) {
+    } else if ((array[i] % 3) === 0) {
       armazena[i] = 'fizz';
-    }else if ((array[i] % 5) === 0) {
+    } else if ((array[i] % 5) === 0) {
       armazena[i] = 'buzz';
-    }else {
+    } else {
       armazena[i] = 'bug!';
     }
   }
@@ -91,14 +91,14 @@ function decode(word) {
 // Desafio 10
 function techList(tecnologias, name) {
   let arrayDeObjetos = [];
-  if (tecnologias.length == 0) {
+  if (tecnologias.length === 0) {
     return 'Vazio!'
   }
   tecnologias.sort();
   for(let i = 0; i < tecnologias.length; i += 1) {
     arrayDeObjetos[i] = {
       tech: tecnologias[i],
-      name: name
+      name: name,
     };
   }
   arrayDeObjetos.sort();
@@ -107,12 +107,12 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if (array.length != 11) { return 'Array com tamanho incorreto.';}
-  for (let i = 0; i < array.length; i += 1){
+  if (array.length !== 11) { return 'Array com tamanho incorreto.'; }
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
     let contador = 0;
-    for (let j = 0; j < array.length; j += 1){
-      if (array[i] === array[j]){
+    for (let j = 0; j < array.length; j += 1) {
+      if (array[i] === array[j]) {
         contador += 1;
       }
     }
@@ -123,13 +123,13 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
-  if (lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)){
+  if (lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)) {
     return false;
   }
-  if (lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)){
+  if (lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)) {
     return false;
   }
-  if (lineC > (lineB + lineA) || lineC < Math.abs(lineB - lineA)){
+  if (lineC > (lineB + lineA) || lineC < Math.abs(lineB - lineA)) {
     return false;
   }
   return true;
@@ -140,11 +140,11 @@ function hydrate(frase) {
   let ref = /\d+/g;
   let resultado = frase.match(ref);
   let contador = 0;
-  for (let i = 0; i < resultado.length; i += 1){
+  for (let i = 0; i < resultado.length; i += 1) {
     let num = parseInt(resultado[i]);
     contador += num;
   }
-  if (contador === 1){ return contador + ' copo de água';}
+  if (contador === 1){ return contador + ' copo de água'; }
   return contador + ' copos de água';
 }
 
