@@ -42,13 +42,33 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
+  if (cat1 > cat2) {
+    return 'cat2';
+  } else if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  return 'cat1';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let por3;
+  let por5;
+  por3 = array % 3 === 0;
+  por5 = array % 5 === 0;
+  for (let i in array) {
+    if (array[i] === por3) {
+      return ("fizz");
+    } else if (array[i] === por5) {
+      return ("buzz");
+    } else if (array[i] === por3 && array[i] === por5){
+      return ("fizzBuzz");
+    }
+    return ("bug!");
+  }
 }
 
 // Desafio 9
