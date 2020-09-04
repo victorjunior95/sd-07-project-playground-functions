@@ -125,8 +125,14 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayDeNumeros) {
+  if (validaNumero(arrayDeNumeros) != "Número válido") {
+    console.log(validaNumero(arrayDeNumeros));
+    return validaNumero(arrayDeNumeros);
+  } else {
+    let numeroConvertido = "(" + arrayDeNumeros[0] + arrayDeNumeros[1] + ")" + " " + arrayDeNumeros[2] + arrayDeNumeros[3] + arrayDeNumeros[4] + arrayDeNumeros[5] + arrayDeNumeros[6] + "-" + arrayDeNumeros[7] + arrayDeNumeros[8] + arrayDeNumeros[9] + arrayDeNumeros[10];
+    return numeroConvertido;
+  }
 }
 
 // Função auxiliar para o Desafio 11
