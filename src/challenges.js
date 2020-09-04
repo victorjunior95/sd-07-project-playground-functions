@@ -220,7 +220,7 @@ function generatePhoneNumber(a) {
   for (let i = 0; i < a.length; i += 1) {
     let searching = a[i]
     for (let j = 0; j < a.length; j += 1) {
-      if (a[j] === searching ) countRepeated += 1
+      if (a[j] === searching) countRepeated += 1
       if (countRepeated >= 3) return 'não é possível gerar um número de telefone com esses valores'
     }
     countRepeated = 0
@@ -244,7 +244,7 @@ function triangleCheck(lineA, lineB, lineC) {
   } else if (lineB + lineC < lineA) {
     return true
   }
-    return false
+  return false
 }
 triangleCheck(10, 10, 8)
 
