@@ -113,13 +113,13 @@ function fizzBuzz(numbers) {
   }
   return fizzBuzzList
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 // Apoio Desafio 9
 function encodeCounter(vogais, letter) {
   let counterVogais = 0
   let newString = ''
 
-  for (let i = 0; i <= vogais.length - 1; i += 1) {
+  for (let i in vogais) {
     let currentVowel = i
     if (letter === currentVowel) {
       newString = vogais[i]
@@ -129,7 +129,6 @@ function encodeCounter(vogais, letter) {
   let message = [counterVogais, newString]
   return message
 }
-
 
 // Desafio 9
 function encode(word) {
@@ -159,7 +158,7 @@ function decodeCounter(vogais, item) {
   let counterItem = 0
   let newString = ''
 
-  for (let key = 0; key <= vogais.length; key += 1) {
+  for (let key in vogais) {
     let currentVogal = key
     if (item === currentVogal) {
       newString = vogais[key]
@@ -197,7 +196,7 @@ function techList(tech, name) {
   let sortedTechList = tech.sort()
   let message = ''
 
-  for (let item = 0; item <= sortedTechList.length; item +=1) {
+  for (let item = 0; item <= sortedTechList.length - 1; item += 1) {
     let newTechItem = {
       tech: sortedTechList[item],
       name: `${name}`,
@@ -230,7 +229,7 @@ function generatePhoneNumber(numbers) {
     }
   }
   /* Checking if any number repeats greater or equal 3*/
-  for (let i = 0; i <= numbers.length; i +=1) {
+  for (let i = 0; i <= numbers.length; i += 1) {
     currentNumber = numbers[i]
     let numberOfTimesRepeat = 0
     for (let j in numbers) {
