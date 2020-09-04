@@ -30,7 +30,6 @@ function splitSentence(param) {
 }
 
 // Desafio 4
-let nomes = ["lucas","Silvia","Vitor"];
 function concatName(param) {
   let arrayDesafio4 = param[0];
   let ultimoNome = arrayDesafio4.toString();
@@ -39,7 +38,6 @@ function concatName(param) {
   console.log("'"+ultimoNome+","+" "+primeiroNome+"'");
   return arrayDesafio4;
 }
-concatName(nomes);
 
 // Desafio 5
 function footballPoints(wins,ties) {
