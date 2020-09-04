@@ -173,7 +173,7 @@ function decode(string) {
 // Desafio 10
 let tech = ['JavaScript','NodeJs', 'Python','Docker','AWS', 'React', 'ReactNative', 'Electron']
 function techList(array, name) {
-if(array.length == 1){
+if(array.length >= 1){
   let result = [];
   let user = name;
   let techOrd = array.sort();
