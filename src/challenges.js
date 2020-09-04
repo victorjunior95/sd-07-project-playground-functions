@@ -72,6 +72,8 @@ let numbers = [9, 1, 2, 3, 9, 5, 7];
 
 function highestCount(numbers) {
   // seu código aqui
+  numbers.sort((a,b)=>b-a);
+
   if (numbers.length > 0) {
     let biggest = 0;
     let counts = 0;
@@ -87,7 +89,7 @@ function highestCount(numbers) {
     return "Favor verifique os dados inseridos"
   }
 }
-//console.log(highestCount(numbers));
+console.log(highestCount(numbers));
 
 // Desafio 7
 let cat1 = 9;
@@ -152,7 +154,7 @@ function fizzBuzz(numbersArr) {
     return "Favor verifique os dados inseridos"
   }
 }
-console.log(fizzBuzz(numbersArr));
+//console.log(fizzBuzz(numbersArr));
 
 // Desafio 9
 let myStr = "hi there!";
