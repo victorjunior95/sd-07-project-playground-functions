@@ -171,7 +171,7 @@ function hydrate(strbear) {
   for(let aux = 0; aux<strbear.length; aux+=1){
     sun += parseInt(strbear[aux], 10) ;
   }
-  return strbear.length==0?`${sun} copo de água`:`${sun} copos de água`;
+  return sun==1?`${sun} copo de água`:`${sun} copos de água`;
 }
 
 hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
