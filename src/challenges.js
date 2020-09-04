@@ -77,38 +77,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  // seu código aqui
-  let arrayString = fizzOrBuzz(numbers);
-  let strings = {
-    3: 'fizz',
-    5: 'buzz',
-    '35': 'fizzBuzz',
-    2: 'bug!'
-  }
-  let sentence = [];
-  for (let indice in arrayString) {
-    if (arrayString[indice] === 5 || arrayString[indice] === 3 || arrayString[indice] === '35' || arrayString[indice] === 2) {
-      sentence.push(strings[arrayString[indice]]);
-    } else {
-      sentence.push(arrayString[indice]);
-    }
-  }
-  return sentence;
-}
-function fizzOrBuzz(numbers){
-     
-  for (let i = 0; i < numbers.length; i += 1) {    
+  // seu código aqui  
+  let arrayStrings = [];
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
-      numbers.splice(i, 1, 3);
+      arrayStrings.push('fizz');
     } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
-      numbers.splice(i, 1, 5);
+      arrayStrings.push('buzz');
     } else if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-      numbers.splice(i, 1, '35');
-    } else{
-      numbers.splice(i, 1, 2);
+      arrayStrings.push('fizzBuzz');
+    } else {
+      arrayStrings.push('bug!');
     }
   }
-  return numbers;
+  return arrayStrings;
 }
 
 // Desafio 9
