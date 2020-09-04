@@ -44,18 +44,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let arrayNumbers = numbers.split();
-  let maxNum = numbers[0];
+  let arrayNumbers = numbers.join();
+  let maxNum = arrayNumbers[0];
   let count = 0;
 
-  for (let i = 1; i < numbers.length; i += 1) {
+  for (let i = 1; i < arrayNumbers.length; i += 1) {
 
-    if (numbers[i] > maxNum) {
-      maxNum = numbers[i];
+    if (arrayNumbers[i] > maxNum) {
+      maxNum = arrayNumbers[i];
     }
   }
-  for (let j = 0; j < numbers.length; j += 1) {
-    if (maxNum === numbers[j]) {
+  for (let j = 0; j < arrayNumbers.length; j += 1) {
+    if (maxNum === arrayNumbers[j]) {
       count += 1;
     }
   }
@@ -208,7 +208,7 @@ module.exports = {
 //
 // calcArea(51, 1);
 //
-// highestCount([0, 0, 0]);
+//highestCount([9, 1, 2, 3, 9, 5, 7]);
 //
 // footballPoints(0, 0);
 //
