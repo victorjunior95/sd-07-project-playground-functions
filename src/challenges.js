@@ -71,7 +71,6 @@ function fizzBuzz(numbers) {
   let fizzBussReturned = [];
 
   for (let num of numbers) {
-
     let isDiv3 = num % 3 === 0;
     let isDiv5 = num % 5 === 0;
 
