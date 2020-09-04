@@ -153,19 +153,12 @@ function generatePhoneNumber(arrayNumber) {
     if (count >= 3 || arrayNumber[i] < 0 || arrayNumber[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-
-    if (i === 0) {
-      phoneNumber += `(${arrayNumber[i]}`;
-    } else if (i === 1) {
-      phoneNumber += `${arrayNumber[i]}) `;
-    } else if (i === 7) {
-      phoneNumber += `-${arrayNumber[i]}`;
-    } else {
-      phoneNumber += arrayNumber[i];
-    }
   }
+
+  phoneNumber = `(${arrayNumber.slice(0, 2)}) ${arrayNumber.slice(2, 7)}-${arrayNumber.slice(7, 11)}`;
+
   return phoneNumber;
-}
+} console.log(generatePhoneNumber('47996478022'))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -187,7 +180,7 @@ function hydrate(stringText) {
   let coposDeAgua = 0;
 
   for (let i = 0; i < result.length; i += 1) {
-    if (Number.isInteger(+result[i])){
+    if (Number.isInteger(+result[i])) {
       coposDeAgua += +result[i];
     }
   }
