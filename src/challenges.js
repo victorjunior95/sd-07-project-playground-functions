@@ -9,13 +9,11 @@ function compareTrue(number1, number2) {
   }
   return message
 }
-
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2
   return area
 }
-
 // Desafio 3
 function splitSentence(text) {
   let initialArray = text.split(' ')
@@ -28,13 +26,11 @@ function splitSentence(text) {
   }
   return finalArray
 }
-
 // Desafio 4
 function concatName(names) {
   let firstItem = names[0]
   let lastItem = names[names.length - 1]
   let resultString = `${lastItem}, ${firstItem}`
-
   return resultString
 }
 
@@ -43,7 +39,6 @@ function footballPoints(wins, ties) {
   let winPoint = 3
   let tiePoint = 1
   let totalPoints = (wins * winPoint) + (ties * tiePoint)
-
   return totalPoints
 }
 
@@ -60,7 +55,6 @@ function greatestNumber(numbers) {
   }
   return greatest
 }
-
 // Desafio 6
 function highestCount(numbers) {
   let numberOfTimes = 0
@@ -106,7 +100,6 @@ function fizzBuzzHelp(number) {
   }
   return message
 }
-
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzList = []
@@ -126,7 +119,7 @@ function encodeCounter(vogais, letter) {
   let counterVogais = 0
   let newString = ''
 
-  for (let i = 0; i <= vogais.length - 1; i +=1) {
+  for (let i = 0; i <= vogais.length - 1; i += 1) {
     let currentVowel = i
     if (letter === currentVowel) {
       newString = vogais[i]
@@ -166,13 +159,13 @@ function decodeCounter(vogais, item) {
   let counterItem = 0
   let newString = ''
 
-  for (let key in vogais) {
-     let currentVogal = key
+  for (let key = 0; key <= vogais.length; key += 1) {
+    let currentVogal = key
     if (item === currentVogal) {
       newString = vogais[key]
       counterItem += 1
     }
-  }  
+  }
   let message = [counterItem, newString]
   return message
 }
@@ -204,7 +197,7 @@ function techList(tech, name) {
   let sortedTechList = tech.sort()
   let message = ''
 
-  for (let item in sortedTechList) {
+  for (let item = 0; item <= sortedTechList.length; item +=1) {
     let newTechItem = {
       tech: sortedTechList[item],
       name: `${name}`,
@@ -237,8 +230,8 @@ function generatePhoneNumber(numbers) {
     }
   }
   /* Checking if any number repeats greater or equal 3*/
-  for (let i in numbers) {
-    let currentNumber = numbers[i]
+  for (let i = 0; i <= numbers.length; i +=1) {
+    currentNumber = numbers[i]
     let numberOfTimesRepeat = 0
     for (let j in numbers) {
       if (currentNumber === numbers[j]) {
@@ -251,7 +244,7 @@ function generatePhoneNumber(numbers) {
     }
   }
   /* Generating phone-number in the right format*/
-  for (let number in numbers) {
+  for (let number = 0; number <= numbers.length; number += 1) {
     currentNumber = numbers[number]
     for (let item = 0; item <= checkList.length - 1; item += 1) {
       if (checkList[item] === 'X') {
