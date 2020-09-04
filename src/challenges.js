@@ -189,10 +189,14 @@ function generatePhoneNumber(numeros) {
  * números maiores que zero e se são menores que 9
  *
  */
-  for (let key in numeros) {
-    if ((numeros.length != 11) ||(numeros[key] < 0) || (numeros[key] > 9)) {
+  if(numeros.length != 11){
+      return "Array com tamanho incorreto.";
+  }
 
-        return 'Array com tamanho incorreto.';
+  for (let key in numeros) {
+    if ((numeros[key] < 0) || (numeros[key] > 9)) {
+
+        return 'não é possível gerar um número de telefone com esses valores';
     }
   }
  /* verifica se o array contém números
@@ -229,6 +233,7 @@ function generatePhoneNumber(numeros) {
   let string = part1.concat(part2, part3);
 
   return string.join(''); //(12) 34567-8901
+
 }
 
 // Desafio 12
