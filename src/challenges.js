@@ -39,15 +39,19 @@ function highestCount(numbers) {
   let CounterRepetitions = 0;
 
   for (i = 0; i< inAscendingOrder.length; i++){
-    if (inAscendingOrder[i]>=inAscendingOrder[i +1]){
+    if (inAscendingOrder[i] == inAscendingOrder[i +1]){
       CounterRepetitions += 1
     }else if(inAscendingOrder[i +1] === undefined ){
+      if( inAscendingOrder[i] == inAscendingOrder[i -1]){
+       CounterRepetitions += 1 
+      }
       return CounterRepetitions
-     }else{
-        CounterRepetitions = 1
+    }else{
+        CounterRepetitions = 0
      } 
   }
 }
+highestCount([0,0,0])
 
 // Desafio 7
 function catAndMouse() {
