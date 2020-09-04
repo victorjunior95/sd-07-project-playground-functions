@@ -134,7 +134,6 @@ function techList(arrayTech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // seu código aqui
-  let phoneNumber = '';
 
   if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -155,10 +154,12 @@ function generatePhoneNumber(arrayNumber) {
     }
   }
 
-  phoneNumber = `(${arrayNumber.slice(0, 2)}) ${arrayNumber.slice(2, 7)}-${arrayNumber.slice(7, 11)}`;
+  arrayNumber = arrayNumber.join("");
+
+  let phoneNumber = `(${arrayNumber.slice(0, 2)}) ${arrayNumber.slice(2, 7)}-${arrayNumber.slice(7, 11)}`;
 
   return phoneNumber;
-} console.log(generatePhoneNumber('47996478022'))
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
