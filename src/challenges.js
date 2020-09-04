@@ -148,24 +148,25 @@ function techList(tech, firstName) {
   return endList;
 }
 
+// Função suporte para Desafio 11
+function suport(phone2) {
+  let firstPart = `(${phone2[0]}${phone2[1]}) `;
+  for (let i = 2; i <= 6; i += 1) {
+    firstPart += `${phone2[i]}`;
+  }
+  firstPart += '-';
+  let completePhone = firstPart;
+  for (let i = 7; i < phone2.length; i += 1) {
+    completePhone += `${phone2[i]}`;
+  }
+  answer = completePhone;
+  return answer;
+}
+
 // Desafio 11
 function generatePhoneNumber(phone) {
   let answer = '';
   let lastReturn;
-  function suport(phone2) {
-    let firstPart = `(${phone2[0]}${phone2[1]}) `;
-    for (let i = 2; i <= 6; i += 1) {
-      firstPart += `${phone2[i]}`;
-    }
-    firstPart += '-';
-    let completePhone = firstPart;
-    for (let i = 7; i < phone2.length; i += 1) {
-      completePhone += `${phone2[i]}`;
-    }
-    answer = completePhone;
-    return answer;
-  }
-
   let repeat = 0;
   for (let k = 0; k < phone.length; k += 1) {
     for (let l = k + 1; l < phone.length; l += 1) {
@@ -211,22 +212,21 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let takeNumbers = drinks.match(/\d+/g); //encontra só os números da frase e os coloca em um array, mas eles ainda são como strings
+  let takeNumbers = drinks.match(/\d+/g); // encontra só os números da frase e os coloca em um array, mas eles ainda são como strings
   let justNumber = 0;
   let sum = 0;
   for (let i = 0; i < takeNumbers.length; i += 1) {
-    justNumber = parseInt(takeNumbers[i]); //para transformar de string para número
-    sum += justNumber; //para somar os números
+    justNumber = parseInt(takeNumbers[i]); // para transformar de string para número
+    sum += justNumber; // para somar os números
   }
   let result;
-  if (sum == 1) {
-    result = `1 copo de água`;
+  if (sum === 1) {
+    result = '1 copo de água';
   } else {
     result = `${sum} copos de água`;
   }
   return result;
 }
-console.log(hydrate("1 cerveja, 2"));
 
 module.exports = {
   calcArea,
