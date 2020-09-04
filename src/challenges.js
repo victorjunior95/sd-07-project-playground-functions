@@ -201,13 +201,13 @@ const name = "Lucas";
 function techList(nameArray, name) {
   let emptyArray = []; 
   nameArray = nameArray.sort();
-  
+
   if (nameArray.length == 0) {
     return 'Vazio!'
   } else {
     for (i in nameArray) {
       
-      //https://stackoverflow.com/questions/1290131/how-to-create-an-array-of-object-literals-in-a-loop (RaYell)
+      // https://stackoverflow.com/questions/1290131/how-to-create-an-array-of-object-literals-in-a-loop (RaYell)
 
       emptyArray.push({
         'tech': nameArray[i],
@@ -221,9 +221,50 @@ function techList(nameArray, name) {
 console.log(techList(nameTechArray, name));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+const phoneNumber =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
+function generatePhoneNumber(phoneNumber) {
+
+  let contRept = 0;
+  let rept = phoneNumber[0];
+  let phoneResult = '';
+
+  if(phoneNumber.length != 11){
+    return "Array com tamanho incorreto.";
+  } else {
+    for (i in phoneNumber) {
+      
+      if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+      if (i > 0 && rept == phoneNumber[i]) {
+        contRept += 1;
+        if (contRept == 3) {
+          return "não é possível gerar um número de telefone com esses valores";
+        }
+      }
+    }
+    for(let i = 0; i < 11; i += 1) {
+      if (i == 0) {
+        phoneResult += "(";
+        phoneResult += phoneNumber[i];
+      } else if (i == 2) {
+        phoneResult += ")";
+        phoneResult += " ";
+        phoneResult += phoneNumber[i];
+      } else if (i == 7) {
+        phoneResult += "-";
+        phoneResult += phoneNumber[i];
+      } else {
+        phoneResult += phoneNumber[i];
+      }
+    }
+    return phoneResult;
+  }
 }
+
+console.log(generatePhoneNumber(phoneNumber));
 
 // Desafio 12
 function triangleCheck() {
