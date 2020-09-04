@@ -32,14 +32,23 @@ return vencidos + empatados;
 }
 
 // Desafio 6
+// Referência Freecode Camp material sobre Math.max.apply() 
 function highestCount() {
- // seu código aqui
- // Math.max.apply()
+  let greaterNumber = Math.max.apply(null, numbers);
+  let counter = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+      if (numbers[i] === greaterNumber) {
+          counter += 1;
+}
+}
+return counter
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 > cat2) {
+  let catUmResultado = Math.abs(mouse - cat1)
+  let catDoisReultado = 
+  if (cat1 - cat2) {
     return console.log("cat1")
     } else if (cat2 > cat1) {
     return console.log("cat2")
@@ -52,11 +61,11 @@ return console.log("os gatos trombam e o rato foge")
 function fizzBuzz(arr) {
   let numbersArr = [];
 for (let i = 0; i < arr.length; i += 1) {
-    if ((arr[i] % 3) == 0 && (arr[i] % 5) == 0) {
+    if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
      numbersArr[i] = "fizzbuzz"
-} else if ((arr[i] % 3) == 0) {
+} else if (arr[i] % 3 == 0) {
   numbersArr[i] = "fizz" 
-} else if((arr[i] % 5) == 0) {
+} else if(arr[i] % 5 == 0) {
   numbersArr[i] = "buzz"
 } else {
   numbersArr[i] = "bug!"
