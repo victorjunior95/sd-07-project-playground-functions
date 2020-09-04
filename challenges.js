@@ -1,21 +1,28 @@
 // Desafio 4
-function highestCount(numeros) {
-    let idcMaior = 0;
-    for (let indice in numeros) {
-      if (numeros[idcMaior] < numeros[indice]) {
-        idcMaior = indice;
+function catAndMouse(mouse, cat1, cat2) {
+    let positions = [];
+    positions[0] = mouse;
+    positions[1] = cat1;
+    positions[2] = cat2;
+    let result;
+    let highestDistance;
+      if (positions[1] == positions[2]) {
+        return result = "os gatos trombam e o rato foge";
       }
+      if (positions[0] - positions[1] < positions[0] - positions[2]){
+        result = "cat1";
+        return result;
+      }
+      if (positions[0]- positions[2] < positions[0] - positions[1]){
+        result = 'cat2';
+        return result;
+      }
+
     }
-  let contRepet = 0;
-  for(i in numeros){
-      if (numeros[i] == numeros[idcMaior]){
-          contRepet++;
-      }
-}
-return contRepet;
-}    
+
+    
 
 
-console.log(highestCount([2, 10, 6, 7, 10, 1]));
+console.log(catAndMouse(5, 5, 5));
 
   
