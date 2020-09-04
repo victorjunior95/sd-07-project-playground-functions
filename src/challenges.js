@@ -171,9 +171,10 @@ function generatePhoneNumber(array) {
     if(array[number] < 0 || array[number] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
+
     if(number == 1) {
       phoneNumber += array[number];
-      phoneNumber += ")";
+      phoneNumber += ") ";
     } else if(number == 6) {
       phoneNumber += array[number];
       phoneNumber += "-";
