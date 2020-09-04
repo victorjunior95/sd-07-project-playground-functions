@@ -110,9 +110,7 @@ function techList(array, name) {
   }
   array.sort()
   for (let i of array) {
-    obj.push({
-      tech: i,
-      name: name })
+    obj.push({ tech: i, name})
   }
   return obj
 }
@@ -121,23 +119,24 @@ function generatePhoneNumber(arrayN) {
   let res = ''
   for (let num in arrayN) {
     let dup = 0
+    if (arrayN.length !== 11) {
+      res = 'Array com tamanho incorreto.'
+    }
     for (let numD in arrayN) {
       if (arrayN[num] === arrayN[numD]) {
         dup += 1;
       }
-    } if (arrayN.length !== 11) {
-      res = 'Array com tamanho incorreto.'
-    } else if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
+    } if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
       res = 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  res = `(${arrayN[0]} ${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
+  res = `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
   return res
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return a + b > c && a + c > b && b + c > a
 }
 
 // Desafio 13
