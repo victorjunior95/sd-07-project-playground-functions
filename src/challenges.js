@@ -153,16 +153,16 @@ function triangleCheck() {
 function hydrate(string) {
   let numbers = string.match(/\d+/g);
   let totalNumbers = 0;
+  let integer;
   for (let index in numbers) {
     integer = parseInt(numbers[index]);
     totalNumbers += integer;
     console.log(integer);
   }
-  if(totalNumbers === 1) {
+  if (totalNumbers === 1) {
     return `${totalNumbers} copo de água`;
-  } else {
-    return `${totalNumbers} copos de água`;
   }
+  return `${totalNumbers} copos de água`;
 }
 
 hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
