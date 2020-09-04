@@ -150,9 +150,22 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.match(/\d+/g);
+  let totalNumbers = 0;
+  for (let index in numbers) {
+    integer = parseInt(numbers[index]);
+    totalNumbers += integer;
+    console.log(integer);
+  }
+  if(totalNumbers === 1) {
+    return `${totalNumbers} copo de água`;
+  } else {
+    return `${totalNumbers} copos de água`;
+  }
 }
+
+hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
 
 
 module.exports = {
