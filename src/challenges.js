@@ -189,7 +189,6 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!'
   }
-  
   const arraySorted = array.sort()
   let objectTechs = []
   for (let key in arraySorted) {
@@ -206,9 +205,31 @@ function techList(array, name) {
 techList(ArrayTechsList, nameOut)
 
 // Desafio 11
-function generatePhoneNumber() {
+let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
+function generatePhoneNumber(a) {
   // seu código aqui
+  
+  if (a.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] < 0 || a[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  let countRepeated = 0;
+  for (let i = 0; i < a.length; i += 1) {
+    let searching = a[i]
+    for (let j = 0; j < a.length; j += 1) {
+        if (a[j] === searching ) countRepeated += 1
+        if (countRepeated >= 3) return 'não é possível gerar um número de telefone com esses valores'
+    }
+    countRepeated = 0
+  }
+  let phoneComplete = '(' + a[0] + a[1] + ') ' + a[2] + a[3] + a[4] + a[5] + a[6] + '-' + a[7] + a[8] + a[9] + a[10] 
+  return phoneComplete
 }
+generatePhoneNumber(numbersForPhones)
 
 // Desafio 12
 function triangleCheck() {
