@@ -127,6 +127,14 @@ function techList(arrayTech, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
+  if(arrayNumber.length!=11){
+    return "Array com tamanho incorreto.";
+  }
+  for (const key in arrayNumber) {
+    if(arrayNumber[key] < 0){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
   let formatedNumber = [];
   formatedNumber.push('(');
   formatedNumber.push(arrayNumber[0]);
@@ -143,7 +151,7 @@ function generatePhoneNumber(arrayNumber) {
   formatedNumber.push(arrayNumber[8]);
   formatedNumber.push(arrayNumber[9]);
   formatedNumber.push(arrayNumber[10]);
-  return arrayNumber.length!=11? "Array com tamanho incorreto.":formatedNumber.join('');
+  return formatedNumber.join('');
 }
 
 // Desafio 12
@@ -155,12 +163,18 @@ function triangleCheck(lineA, lineB, lineC) {
   return a && b && c;
 }
 
-console.log(triangleCheck(2, 3, 4));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(strbear) {
+  let sun = 0;
+  strbear = strbear.replace(/\D/g,'');
+  strbear = strbear.split('');
+  for(let aux = 0; aux<strbear.length; aux+=1){
+    sun += parseInt(strbear[aux], 10) ;
+  }
+  return `${sun} copos de água`;
 }
+
+hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
 
 
 module.exports = {
