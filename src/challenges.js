@@ -213,7 +213,7 @@ function generatePhoneNumber(numeros) {
     }
   ret = listSaida.join("")    
   }else{
-    return "não é possível gerar um número de telefone com esses valores"
+    return "Array com tamanho incorreto."
   }
 return ret        
 }
