@@ -237,16 +237,16 @@ function triangleCheck(lineA, lineB, lineC) {
   lineB = Math.abs(lineB)
   lineC = Math.abs(lineC)
 
-  if (lineA + lineB < lineC) {
+  if (lineA < lineB + lineC) {
     return true
-  } else if (lineA + lineC < lineB) {
+  } else if (lineA < lineC + lineB) {
     return true
-  } else if (lineB + lineC < lineA) {
+  } else if (lineB < lineC + lineA) {
     return true
   }
   return false
 }
-triangleCheck(10, 10, 8)
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
