@@ -102,28 +102,14 @@ function encode(arrayWithVowels) {
 
 function decode(arrayWithNumbers) {
   // seu código aqui
-  let newStringDec = '';
-  for (let i = 0; i < arrayWithNumbers.length; i += 1) {
-    switch (arrayWithNumbers[i]) {
-      case '1':
-        newStringDec += 'a';
-        break;
-      case '2':
-        newStringDec += 'e';
-        break;
-      case '3':
-        newStringDec += 'i';
-        break;
-      case '4':
-        newStringDec += 'o';
-        break;
-      case '5':
-        newStringDec += 'u';
-        break;
-      default:
-        newStringDec += arrayWithNumbers[i];
-    }
-  }
+  let newStringDec = arrayWithNumbers;
+
+  newStringDec = newStringDec.replace(/['1']/g, 'a');
+  newStringDec = newStringDec.replace(/['2']/g, 'e');
+  newStringDec = newStringDec.replace(/['3']/g, 'i');
+  newStringDec = newStringDec.replace(/['4']/g, 'o');
+  newStringDec = newStringDec.replace(/['5']/g, 'u');
+
   return newStringDec;
 }
 
@@ -201,8 +187,8 @@ function hydrate(stringText) {
   let coposDeAgua = 0;
 
   for (let i = 0; i < result.length; i += 1) {
-    if (Number.isInteger(parseInt(result[i]))){
-      coposDeAgua += parseInt(result[i]);
+    if (Number.isInteger(+result[i])){
+      coposDeAgua += +result[i];
     }
   }
 
@@ -210,7 +196,6 @@ function hydrate(stringText) {
     return `${coposDeAgua} copos de água`;
   }
   return `${coposDeAgua} copo de água`;
-
 }
 
 module.exports = {
