@@ -73,10 +73,10 @@ function fizzBuzz(numbers) {
     let isDiv3 = numbers[num] % 3 === 0;
     let isDiv5 = numbers[num] % 5 === 0;
 
-    if (isDiv3 && !isDiv5) fizzBussReturned.push('fizz');
-    else if (!isDiv3 && isDiv5) fizzBussReturned.push('buzz');
-    else if (isDiv3 && isDiv5) fizzBussReturned.push('fizzBuzz');
-    else fizzBussReturned.push('bug!');
+    if (isDiv3 && !isDiv5) fizzBussReturned[num] = 'fizz';
+    else if (!isDiv3 && isDiv5) fizzBussReturned[num] = 'buzz';
+    else if (isDiv3 && isDiv5) fizzBussReturned[num] = 'fizzBuzz';
+    else fizzBussReturned[num] = 'bug!';
   }
 
   return fizzBussReturned;
