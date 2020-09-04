@@ -154,7 +154,7 @@ function generatePhoneNumber(phoneNum) {
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
-  let phoneFormat = (`(${phoneNum[0]}`+`${phoneNum[1]})`+`${phoneNum.slice(2,6).join("")}`+`-${phoneNum.slice(7,12).join("")}`)
+  let phoneFormat = (`(${phoneNum[0]}`+`${phoneNum[1]}) `+`${phoneNum.slice(2,6).join("")}`+`-${phoneNum.slice(7,12).join("")}`)
     return phoneFormat;
 }
 
