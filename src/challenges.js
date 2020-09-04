@@ -81,11 +81,11 @@ function encode(string) {
 }
 
 function decode(string) {
-  let a = string.replace(/1/g, "a");
-  let b = a.replace(/2/g, "e");
-  let c = b.replace(/3/g, "i");
-  let d = c.replace(/4/g, "o");
-  let e = d.replace(/5/g, "u");
+  let saida = string.replace(/1/g, "a");
+  let said = saida.replace(/2/g, "e");
+  let sai = said.replace(/3/g, "i");
+  let sa = sai.replace(/4/g, "o");
+  let s = sa.replace(/5/g, "u");
   return s;
 }
 
