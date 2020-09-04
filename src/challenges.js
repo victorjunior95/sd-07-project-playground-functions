@@ -173,20 +173,20 @@ function decode(string) {
 // Desafio 10
 let tech = ['JavaScript','NodeJs', 'Python','Docker','AWS', 'React', 'ReactNative', 'Electron']
 function techList(array, name) {
-    if(array == []){
-      return 'Vazio!'
-    }else{
-      let result = [];
-      let user = name;
-      let techOrd = array.sort();
-      for (let i = 0; i < techOrd.length; i+=1) {
-        var obj = {"tech":techOrd[i],"name":user};  
-        result.push(obj);  
+if(array.length == 1){
+  let result = [];
+  let user = name;
+  let techOrd = array.sort();
+  for (let i = 0; i < techOrd.length; i+=1) {
+    var obj = {"tech":techOrd[i],"name":user};  
+    result.push(obj);  
     }
-    
-    return result;
+  return result;
+}else{
+  let out = "Vazio!";
+ return out;
+} 
 }
-    }
     
 techList(tech , 'Filipi')
 
