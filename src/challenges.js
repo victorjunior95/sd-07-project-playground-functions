@@ -126,7 +126,7 @@ function decode(s) {
 }
 
 // Desafio 10
-function techList() {
+function techList(a , name) {
   let result = [] , alfabetizada = a.sort() ;
   if(a.length == 0)
   {
