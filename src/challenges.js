@@ -188,7 +188,7 @@ function techList(array, name) {
 }
     }
     
-
+techList(tech , 'Filipi')
 
 // Desafio 11
 function generatePhoneNumber() {
