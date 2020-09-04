@@ -1,14 +1,9 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  let message = ''
   let isTrue = (number1 === true && number2 === true)
-  if (isTrue) {
-    message = isTrue
-  } else {
-    message = false
-  }
-  return message
+  return isTrue
 }
+
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2
@@ -118,7 +113,6 @@ function fizzBuzz(numbers) {
 function encodeCounter(vogais, letter) {
   let counterVogais = 0
   let newString = ''
-
   for (let i in vogais) {
     let currentVowel = i
     if (letter === currentVowel) {
