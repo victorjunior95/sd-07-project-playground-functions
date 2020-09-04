@@ -81,8 +81,19 @@ let cat2Number = 0;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+   for (item in numbers)
+    if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
+       numbers[item] = 'fizzBuzz' 
+      }else if (numbers[item] % 5 === 0) {
+          numbers[item] = 'buzz'      
+      }else if (numbers[item] % 3 === 0){
+        numbers[item] = 'fizz'      
+    }else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
+      numbers[item] = 'bug!'      
+  }
+ return numbers
+
 }
 
 // Desafio 9
