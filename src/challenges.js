@@ -3,6 +3,7 @@
 compareTrue(true, false);
 
 function compareTrue(firstValue, secondValue) {
+  console.log("");
   if (firstValue === true && secondValue === true) {
     console.log("As duas variáveis são verdadeiras!!!");
     return true;
@@ -25,8 +26,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+splitSentence("Go Trybe")
+
+function splitSentence(inputString) {
+  let arrayOfStrings = inputString.split([' ']);
+
+  console.log("A string original é: " + inputString);
+  console.log("Array: " + arrayOfStrings);
+  return arrayOfStrings;
 }
 
 // Desafio 4
