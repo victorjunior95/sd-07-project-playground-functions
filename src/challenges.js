@@ -152,7 +152,7 @@ function techList(array, name) {
   for (let techName of increasingArray) {
     let obj = {
       tech: techName,
-      name: ,
+      name: name,
     }
     newArray.push(obj)
   }
