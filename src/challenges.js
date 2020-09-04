@@ -158,8 +158,8 @@ function decode(string) {
 function techList(arrayOfTechs, name) {
   let result = [];
   let techs = [];
-  let nameOfStudent = '';
-  nameOfStudent = name;
+  let student = '';
+  student = name;
   techs = arrayOfTechs;
   if (techs.length === 0) {
     return 'Vazio!';
@@ -167,7 +167,7 @@ function techList(arrayOfTechs, name) {
   for (let tech in techs) {
     result.push({
       tech: techs[tech],
-      name: nameOfStudent,
+      name: student,
     })
   }
   return result;
