@@ -117,11 +117,11 @@ function encode(vogais) {
   // seu código aqui
 }
 function decode(numeros) {
-  let numeros1 = numeros.replace("1", "a");
-  let numeros2 = numeros1.replace("2", "e");
-  let numeros3 = numeros2.replace("3", "i");
-  let numeros4 = numeros3.replace("4", "o");
-  let numeros5 = numeros4.replace("5", "u");
+  let numeros1 = numeros.replace(/1/g, "a");
+  let numeros2 = numeros1.replace(/2/g, "e");
+  let numeros3 = numeros2.replace(/3/g, "i");
+  let numeros4 = numeros3.replace(/4/g, "o");
+  let numeros5 = numeros4.replace(/5/g, "u");
 
   return numeros5;
   // seu código aqui
