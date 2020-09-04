@@ -171,19 +171,23 @@ function decode(string) {
 
 // Desafio 10
 // Desafio 10
-let tech = ['JavaScript','NodeJs', 'Python','Docker','AWS', 'React', 'ReactNative', 'Electron']
-function techList(array, name) {
-    
-    let result = [];
-    let user = name;
-    let techOrd = array.sort();
-    for (let i = 0; i < techOrd.length; i+=1) {
-       var obj = {"tech":techOrd[i],"name":user};  
-       result.push(obj);  
+//let tech = ['JavaScript','NodeJs', 'Python','Docker','AWS', 'React', 'ReactNative', 'Electron']
+function techList(tech, name) {
+    if(array == ''){
+      return 'Vazio!'
+    }else{
+      let result = [];
+      let user = name;
+      let techOrd = array.sort();
+      for (let i = 0; i < techOrd.length; i+=1) {
+        var obj = {"tech":techOrd[i],"name":user};  
+        result.push(obj);  
     }
     
     return result;
 }
+    }
+    
 
 
 // Desafio 11
