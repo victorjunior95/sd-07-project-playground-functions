@@ -160,7 +160,7 @@ function techList(nomesDeTecnologia, name) {
 
 
     if (nomesDeTecnologia.length === 0) {
-      console.log("Vazio!");
+       return "Vazio!";
     } else {
 
     listaDeNomes = {
@@ -176,8 +176,9 @@ function techList(nomesDeTecnologia, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(conjuntoDeNumeros) {
   // seu código aqui
+  
 }
 
 // Desafio 12
