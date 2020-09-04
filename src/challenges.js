@@ -1,9 +1,12 @@
 // Desafio 1
 function compareTrue(a, b) {
+  let res = ''
   if (a && b === true) {
-    return true;
+    res.push(true)
+  } else {
+    res.push(false)
   }
-  return false;
+  return res
 }
 
 // Desafio 2
@@ -50,13 +53,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = Math.abs(cat2 - mouse)
   let res = ''
   if (dist1 === dist2) {
-    res = 'os gatos trombam e o rato foge';
+    res = 'os gatos trombam e o rato foge'
   }
   if (dist1 < dist2) {
-    res = 'cat1';
+    res = 'cat1'
   }
   if (dist2 < dist1) {
-    res = 'cat2';
+    res = 'cat2'
   }
   return res
 }
@@ -67,10 +70,9 @@ function fizzBuzz(arrayNum) {
   for (let i = 0; i < arrayNum.length; i += 1) {
     if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
       res.push('fizzBuzz')
-    }
-    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
+    } if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) { //atencao aki
       res.push('fizz')
-    } else if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
+    } if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
       res.push('buzz')
     } else res.push('bug!')
   }
@@ -81,40 +83,57 @@ function fizzBuzz(arrayNum) {
 function encode(string) {
   let res = string
   let code = { a: 1, e: 2, i: 3, o: 4, u: 5 }
-  for (let letra = 0; letra < string.length; letra += 1) {
-    for (let i in code) {
-      res = res.replace(i, code[i]);
+  for (let letra of string) {
+    for (let i in code) { 
+      if (letra === i) {
+        res = res.replace(i, code[i])
+      }
     }
   }
   return res
 }
 function decode(string) {
   let res = string
-  res = res.replace(/1/g, 'a');
-  res = res.replace(/2/g, 'e');
-  res = res.replace(/3/g, 'i');
-  res = res.replace(/4/g, 'o');
-  res = res.replace(/5/g, 'u');
-  return res;
+  res = res.replace(/1/g, 'a')
+  res = res.replace(/2/g, 'e')
+  res = res.replace(/3/g, 'i')
+  res = res.replace(/4/g, 'o')
+  res = res.replace(/5/g, 'u')
+  return res
 }
 
 // Desafio 10
 function techList(array, name) {
   let obj = []
   if (array.length === 0) {
-    return "Vazio!"
-  } else {
-    array.sort()
-    for (let i of array) {
-      obj.push({ tech: i, name: name })
-    }
+    return 'Vazio!'
+  }
+  array.sort()
+  for (let i of array) {
+    obj.push({
+      tech: i,
+      name: name 
+    })
   }
   return obj
 }
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayN) {
+  let res = ''
+  for (num in arrayN) {
+    let dup = 0
+    for (numD in arrayN) {
+      if (arrayN[num]==arrayN[numD]) {
+        dup += 1;
+      }
+    } if (arrayN.length !== 11) {
+      res = 'Array com tamanho incorreto.'
+    } else if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
+      res = 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  res = `(${arrayN[0]} ${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
+  return res
 }
 
 // Desafio 12
