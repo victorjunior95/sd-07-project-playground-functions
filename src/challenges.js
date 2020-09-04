@@ -87,7 +87,7 @@ function highestCount(numbers) {
     return "Favor verifique os dados inseridos"
   }
 }
-console.log(highestCount(numbers));
+//console.log(highestCount(numbers));
 
 // Desafio 7
 let cat1 = 9;
@@ -136,7 +136,7 @@ function fizzBuzz(numbersArr) {
   let nArr = [];
   if (numbersArr.length > 0) {
     for (let i = 0; i < numbersArr.length; i += 1) {
-      if (numbersArr[i] % 15 === 0) {
+      if (numbersArr[i] % 5 === 0 && numbersArr[i] % 3 === 0) {
         nStr = "fizzbuzz";
       } else if (numbersArr[i] % 5 === 0) {
         nStr = "buzz";
@@ -152,7 +152,7 @@ function fizzBuzz(numbersArr) {
     return "Favor verifique os dados inseridos"
   }
 }
-//console.log(fizzBuzz(numbersArr));
+console.log(fizzBuzz(numbersArr));
 
 // Desafio 9
 let myStr = "hi there!";
