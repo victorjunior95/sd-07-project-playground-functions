@@ -225,10 +225,34 @@ function generatePhoneNumber(a) {
     }
     countRepeated = 0
   }
-  let phoneComplete = '(' + a[0] + a[1] + ') ' + a[2] + a[3] + a[4] + a[5] + a[6] + '-' + a[7] + a[8] + a[9] + a[10]
+  let phoneComplete = ''
+  if (phoneComplete === ''){
+    phoneComplete += '('
+  }
+  for(let i = 0; i < a.length; i += 1) {
+    if (phoneComplete.length < 4){
+      phoneComplete += a[i]
+    }
+    if (phoneComplete.length === 3) {
+      phoneComplete += ') '
+    }
+    if (phoneComplete.length === 5 && phoneComplete.length <= 7) {
+      phoneComplete += a[2],
+      phoneComplete += a[3],
+      phoneComplete += a[4],
+      phoneComplete += a[5],
+      phoneComplete += a[6],
+      phoneComplete += '-',
+      phoneComplete += a[7],
+      phoneComplete += a[8],
+      phoneComplete += a[9],
+      phoneComplete += a[10]
+    }
+  }
+  //let phoneComplete = '(' + a[0] + a[1] + ') ' + a[2] + a[3] + a[4] + a[5] + a[6] + '-' + a[7] + a[8] + a[9] + a[10]
   return phoneComplete
 }
-generatePhoneNumber(numbersForPhones)
+console.log(generatePhoneNumber(numbersForPhones))
 
 // Desafio 12
 function triangleCheck() {
