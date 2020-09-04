@@ -91,9 +91,7 @@ function fizzBuzz(array) {
 }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-function convert (array,X){  //convert X=1 encode, X=0 decode;
-  if (X === 1){
-
+function convert1 (array,X){  //convert X=1 encode, X=0 decode;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === 'a') {
       array[i] = '1';
@@ -107,7 +105,10 @@ function convert (array,X){  //convert X=1 encode, X=0 decode;
       array[i] = '5';
     }
   }
-}else{
+  return (array);
+}
+  
+  function convert0 (array,X){
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === '1') {
       array[i] = 'a';
@@ -121,9 +122,8 @@ function convert (array,X){  //convert X=1 encode, X=0 decode;
       array[i] = 'u';
     }
   }
-}
   return (array)
-}
+  }
 
 // Desafio 9
 function encode(entrada) {
@@ -131,7 +131,7 @@ function encode(entrada) {
   for (let i = 0; i < entrada.length; i += 1) {
     array.push(entrada[i]);
   }
-  convert (array, 1);
+  convert1 (array, 1);
   let frase = array[0];
   for (let i = 1; i < array.length; i += 1) {
     frase += array[i];
@@ -145,7 +145,7 @@ function decode(entrada) {
   for (let i = 0; i < entrada.length; i += 1) {
     array.push(entrada[i]);
   }
-  convert (array, 0)
+  convert0 (array, 0)
   let frase = array[0];
   for (let i = 1; i < array.length; i += 1) {
     frase += array[i];
