@@ -9,7 +9,7 @@ function compareTrue(first, second) {
   if (first === false && second === false) {
     return false;
   }
-  if (first === true && second === true){
+  if (first === true && second === true) {
     return true;
   }
 }
@@ -17,13 +17,16 @@ function compareTrue(first, second) {
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height) / 2;
-    return result;
+  return result;
 }
 
 //Desafio 3
 function splitSentence(word) {
-
-
+  let array = word.split(" ");
+  for (let i = 0; i < array.length - 1; i += 1) {
+    array[i] += " ";
+  }
+  return array;
 }
 
 //Desafio 4
@@ -32,8 +35,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-   let triple = wins * 3 + ties;
-    return triple;
+  let triple = wins * 3 + ties;
+  return triple;
 }
 
 // Desafio 6
@@ -65,7 +68,6 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  let myArray = [];
   for (let i = 0; i < array.length; i += 1) {
 
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
@@ -113,7 +115,6 @@ function encode(string) {
   return myArray.join('');
 }
 
-// //
 function decode(string) {
   let myArray = string.split('');
   for (let i = 0; i < myArray.length; i += 1) {
@@ -139,7 +140,6 @@ function decode(string) {
   return myArray.join('');
 }
 
-
 // Desafio 10
 function techList() {
   // seu código aqui
@@ -147,7 +147,31 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+//   let newFormat = array;
+//   let double = 0;
+//
+//   if (newFormat.length !== 11) {
+//     console.log("Array com tamanho incorreto.");
+//   } else {
+//     for (let i = 0; i < newFormat.length; i += 1) {
+//       let increase = 1;
+//       for (let j = i + 1; j < newFormat.length; j += 1) {
+//         if (newFormat[i] === newFormat[j]) {
+//           increase += 1;
+//         }
+//         if (increase > double) {
+//           double = increase;
+//         }
+//       }
+//       if (increase > 3) {
+//         console.log("não é possível gerar um número de telefone com esses valores");
+//       } else {
+//         newFormat = array.join('');
+//         newFormat = newFormat.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+//       }
+//     }
+//     console.log(newFormat);
+//   }
 }
 
 // Desafio 12
@@ -159,7 +183,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
@@ -192,3 +215,6 @@ decode("h3 th2r2!");
 
 fizzBuzz([2, 15, 7, 9, 45]);
 
+generatePhoneNumber([2, 11, 3, 4, 5, 6, 7, 8, 9, 1, 2, 9]);
+
+splitSentence("go Trybe");
