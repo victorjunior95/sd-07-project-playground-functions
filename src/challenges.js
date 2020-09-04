@@ -30,7 +30,6 @@ function concatName(arrDeString) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-
 let vit = wins * 3;
 let emp = ties * 2;
 let points = vit + emp
@@ -38,7 +37,6 @@ return(points)
 }
 
 // Desafio 6
-let valores = [9, 1, 2, 3, 9, 5, 7]
 function highestCount(arrayNumbers) {
   let count = 0
   for (let i = 0; i < arrayNumbers.length; i++) {
@@ -52,11 +50,9 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function fizzBuzz() {
+function catAndMouse() {
   // seu código aqui
 }
-
-
 
 // Desafio 8
 function fizzBuzz() {
