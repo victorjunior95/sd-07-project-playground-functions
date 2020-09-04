@@ -114,10 +114,9 @@ function encodeCounter(vowels, letter) {
   let counterVowels = 0
   let newText = ''
 
-  for (let i in vowels) {
-    let currentVowel = i
-    if (letter === currentVowel) {
-      newText = vowels[i]
+  for (let indice in vowels) {
+    if (letter === indice) {
+      newText = vowels[indice]
       counterVowels += 1
     }
   }
@@ -147,7 +146,6 @@ function encode(word) {
   }
   return finalString
 }
-
 function decode(word) {
   let finalString = ''
   let vogais = {
@@ -192,8 +190,6 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  let checkList = ['(', 'X', 'X', ')', ' ', 'X', 'X', 'X', 'X', 'X', '-', 'X', 'X', 'X', 'X']
-  let phoneNumber = ''
   let currentNumber = 0
 
   /* Checking if the arrays.lenght is greater than 11 */
@@ -220,18 +216,7 @@ function generatePhoneNumber(numbers) {
     }
   }
   /* Generating phone-number in the right format*/
-  for (let number = 0; number <= numbers.length; number += 1) {
-    currentNumber = numbers[number]
-    for (let item = 0; item <= checkList.length - 1; item += 1) {
-      if (checkList[item] === 'X') {
-        checkList[item] = currentNumber
-        break
-      }
-    }
-  }
-  for (let i = 0; i <= checkList.length - 1; i += 1) {
-    phoneNumber += checkList[i]
-  }
+  let phoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
   return phoneNumber
 }
 
