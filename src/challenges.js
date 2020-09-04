@@ -236,11 +236,23 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
+function hydrate(array) {
   // seu código aqui
-
+  let capturandoNum = /\d+/g;
+  let arrayNum = array;
+  let novoArray = arrayNum.match(capturandoNum); //virou um array com elementos numéricos
+  let soma = 0;
+  // fazendo a verificação e unificando os valores:
+  for(index in novoArray){
+    soma = soma + Math.abs(novoArray[index])
+  }
+  if(soma == 1){
+    return `${soma} copo de água`;
+  }
+  else {
+    return `${soma} copos de água`
+  }
 }
-
 
 module.exports = {
   calcArea,
