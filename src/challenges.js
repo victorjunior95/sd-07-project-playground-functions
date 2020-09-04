@@ -40,6 +40,7 @@ function highestCount(numbers) {
           counter += 1;
     }
   }
+  return counter
 }
 
 // Desafio 7
