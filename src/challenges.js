@@ -133,8 +133,18 @@ function techList(array, name) {
       list.push(techObject);
       techObject = "";
   }
+  for (let i = 0; i <= list.length; i += 1) {
+    list.sort((a, b) => {
+      if (a.tech > b.tech) {
+        return 1;
+      } else {
+        return -1;
+      }
+    })
+  }
   return list;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
