@@ -69,8 +69,15 @@ function highestCount(param) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let mouse = mouse;
+  let cat1 = cat1;
+  let cat2 = cat2;
+  let dist_cat1;
+  let dist_cat2;
+  let retorno;
+  
+  return retorno;
 }
 
 // Desafio 8
