@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(bolean1, bolean2) {
   // testando se o resultado é verdadeiro ou falso
-  return bolean1 && bolean2 ? true : false;
+  return bolean1 && bolean2;
 }
 
 // Desafio 2
@@ -36,11 +36,11 @@ function highestCount(numbers) {
   // retorna repetição do maior número de array
   const nums = numbers;
 
-  //pega o maior valor do array
+  // pega o maior valor do array
   const greaterValue = Math.max.apply(null, nums);
 
-  //fitra o array apenas com o maior valor
-  const greaterValueCounts = nums.filter((a, b) => a == greaterValue);
+  // fitra o array apenas com o maior valor
+  const greaterValueCounts = nums.filter(a => a === greaterValue);
 
   //retorna quantos valores eeiste dentro do array que contém apenas o maior valor
   return greaterValueCounts.length;
