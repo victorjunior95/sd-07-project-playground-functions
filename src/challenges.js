@@ -95,54 +95,54 @@ function fizzBuzz(evenOddArray) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode(string1) {
   let encodeString = '';
   let letter;
-  for (let i in string) {
-    if (string[i] === 'a') {
+  for (let i in string1) {
+    if (string1[i] === 'a') {
       letter = '1';
       encodeString += letter;
-    } else if (string[i] === 'e') {
+    } else if (string1[i] === 'e') {
       letter = '2';
       encodeString += letter;
-    } else if (string[i] === 'i') {
+    } else if (string1[i] === 'i') {
       letter = '3';
       encodeString += letter;
-    } else if (string[i] === 'o') {
+    } else if (string1[i] === 'o') {
       letter = '4';
       encodeString += letter;
-    } else if (string[i] === 'u') {
+    } else if (string1[i] === 'u') {
       letter = '5';
       encodeString += letter;
     } else {
-      letter = string[i];
+      letter = string1[i];
       encodeString += letter;
     }
   }
   return encodeString;
 }
 
-function decode(string) {
+function decode(string2) {
   let decodeString = '';
   let letter;
-  for (let i in string) {
-    if (string[i] === '1') {
+  for (let i in string2) {
+    if (string2[i] === '1') {
       letter = 'a';
       decodeString += letter;
-    } else if (string[i] === '2') {
+    } else if (string2[i] === '2') {
       letter = 'e';
       decodeString += letter;
-    } else if (string[i] === '3') {
+    } else if (string2[i] === '3') {
       letter = 'i';
       decodeString += letter;
-    } else if (string[i] === '4') {
+    } else if (string2[i] === '4') {
       letter = 'o';
       decodeString += letter;
-    } else if (string[i] === '5') {
+    } else if (string2[i] === '5') {
       letter = 'u';
       decodeString += letter;
     } else {
-      letter = string[i];
+      letter = string2[i];
       decodeString += letter;
     }
   }
@@ -150,8 +150,12 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  let newTechArray = techArray.sort();
+  let techObject = {};
+  for (let i in techArray){
+    
+  }
 }
 
 // Desafio 11
