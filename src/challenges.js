@@ -222,23 +222,23 @@ console.log(techList(nameTechArray, name));
 
 // Desafio 11
 
-const phoneNumber =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+const phoneNumber =  [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
 
 function generatePhoneNumber(phoneNumber) {
 
   let contRept = 0;
-  let rept = phoneNumber[0];
   let phoneResult = '';
 
   if(phoneNumber.length != 11){
     return "Array com tamanho incorreto.";
   } else {
     for (i in phoneNumber) {
-      
+      contRept = 0;
       if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
         return "não é possível gerar um número de telefone com esses valores";
       }
-      if (i > 0 && rept == phoneNumber[i]) {
+      for (j in phoneNumber)
+      if (phoneNumber[i] == phoneNumber[j]) {
         contRept += 1;
         if (contRept == 3) {
           return "não é possível gerar um número de telefone com esses valores";
