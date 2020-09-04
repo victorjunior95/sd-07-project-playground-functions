@@ -84,11 +84,10 @@ function techList(tech, name) {
   if (tech === 0) return 'Vazio!';
   if (tech.length === 0) return 'Vazio!';
   for (let i = 0; i < tech.length; i += 1) {
-    lista[i] = { tech: `"${tech[i]}"`, name:`"${name}"` };
+    lista[i] = { tech: tech[i], name };
   }
   return lista;
 }
-console
 
 // Desafio 11
 function generatePhoneNumber() {
