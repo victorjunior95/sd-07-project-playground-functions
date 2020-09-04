@@ -125,13 +125,16 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let list = [];
-    for (let i = 0; i < array.length; i += 1) {
-      let techObject = {
-        tech: array[i],
-        name: name
-      }
-      list.push(techObject);
-      techObject = "";
+  if (array.length == 0) {
+    return 'Vazio!';
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    let techObject = {
+      tech: array[i],
+       name: name
+    }
+    list.push(techObject);
+    techObject = "";
   }
   for (let i = 0; i <= list.length; i += 1) {
     list.sort((a, b) => {
@@ -140,7 +143,7 @@ function techList(array, name) {
       } else {
         return -1;
       }
-    })
+    });
   }
   return list;
 }
