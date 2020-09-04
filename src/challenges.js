@@ -59,7 +59,7 @@ function fizzBuzz(lista) {
 }
 function subistitui(palavra, isso, por) {
   for (let i = 0; i < por.length; i += 1) {
-    for (let j = 0; j < por.length; j += 1) {
+    for (let j = 0; j < palavra.length; j += 1) {
       palavra = palavra.replace(isso[i], por[i])
     }
   }
@@ -73,6 +73,7 @@ function encode(word) {
 }
 
 function decode(word) {
+  word = word.toLowerCase()
   let isso = ['1', '2', '3', '4', '5'];
   let por = ['a', 'e', 'i', 'o', 'u'];
   return subistitui(word, isso, por)
@@ -80,14 +81,14 @@ function decode(word) {
 
 // Desafio 10
 function techList(tech, name) {
-  let lista = []
+  let lista = [];
+  if (tech.length === 0) return 'Vazio!';
   for (let i = 0; i < tech.length; i += 1) {
-    if (tech === '') return 'Vazio!';
-    lista[i] = { tech: `${tech}`, name };
+  
+    lista[i] = { tech: `${tech[i]}`, name };
   }
   return lista;
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
