@@ -59,11 +59,11 @@ function catAndMouse(mouse, cat1, cat2) {
      return 'cat1'
    }else if( cat2 - mouse < cat1 - mouse ){
     return 'cat2'
-   }else{
+   }else if (cat2 - mouse == cat1 - mouse ){
     return 'os gatos trombam e o rato foge'
    }
 }
-// catAndMouse(0, 3, 2)
+// catAndMouse(1, 0, 2)
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
