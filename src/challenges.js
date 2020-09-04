@@ -178,7 +178,11 @@ function hydrate(water) {
   for ( i in waterNum ){
     waterCount = parseInt(waterNum[i]) + waterCount;
   }
+  if ( waterCount > 1){
   return `${waterCount} copos de água`;
+  } else {
+    return `${waterCount} copos de água`;
+  }
 }
 
 
