@@ -192,7 +192,7 @@ function generatePhoneNumber(telefone) {
   }
   // Verificando se os valores estão entre 0 e 9:
   for(let verif = 0; verif < 11; verif += 1 ){
-    if(telefone[verif] < 0 && telefone[verif] > 9){
+    if(telefone[verif] < 0 || telefone[verif] > 9){
       return "não é possível gerar um número de telefone com esses valores";
     }
   } 
@@ -201,7 +201,7 @@ function generatePhoneNumber(telefone) {
   telefone[7] + telefone[8] + telefone[9] + telefone[10];
   }
 
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+  console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 
 // Desafio 12
