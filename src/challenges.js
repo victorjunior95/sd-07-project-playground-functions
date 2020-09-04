@@ -103,7 +103,7 @@ function fizzBuzz(array) {
 function encode(string) {
   // seu código aqui
 if(typeof string == "string" ){ //Verifica se o parametro é string
- let str = string.toLowerCase().split(""); // Passa todos os carateres para minusculo e transforma em array
+ let str = string.split(""); // Passa todos os carateres para minusculo e transforma em array
  for(let i in str){ // Looping para percorrer todo array
     if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o'|| str[i] == 'u'){
       switch (str[i]){
@@ -129,62 +129,44 @@ if(typeof string == "string" ){ //Verifica se o parametro é string
       }
     }
  }
- str.join('')
- if(str == string){
-   return str;
- }else{
-   str[0] = str[0].toUpperCase();
-   return str
- }
+return  str.join('')
+
 }else {
  return('Não é um texto')
 }
 }
 
 function decode(string) {
-    // seu código aqui
-if(typeof string == "string" ){ //Verifica se o parametro é string
-  let str = string.toLowerCase().split(""); // Passa todos os carateres para minusculo e transforma em array
-  for(let i in str){ // Looping para percorrer todo array
-     if(str[i] == '1' || str[i] == '2' || str[i] == '3' || str[i] == '4'|| str[i] == '5'){
-       switch (str[i]){
-           case '1':
-           str[i] = 'a'
-           break;
-
-           case '2':
-           str[i] = 'e'
-           break;
-
-           case '3':
-           str[i] = 'i'
-           break;
-
-           case '4':
-           str[i] = 'o'
-           break;
-
-           case '5':
-           str[i] = 'u'
-           break;
-
-       }
-     }
+  if(typeof string == "string" ){ //Verifica se o parametro é string
+      let str = string.split(""); // Passa todos os carateres para minusculo e transforma em array
+      for(let i in str){ // Looping para percorrer todo array
+          if(str[i] == '1' || str[i] == '2' || str[i] == '3' || str[i] == '4'|| str[i] == '5'){
+              switch (str[i]){
+                  case '1':
+                  str[i] = 'a'
+                  break;
+       
+                  case '2':
+                  str[i] = 'e'
+                  break;
+       
+                  case '3':
+                  str[i] = 'i'
+                  break;
+       
+                  case '4':
+                  str[i] = 'o'
+                  break;
+       
+                  case '5':
+                  str[i] = 'u'
+                  break;
+       
+              } 
+          }
+      }
   }
-  
-  
-  str.join('')
-  if(str == string){
-    return str;
-  }else{
-    str[0] = str[0].toUpperCase();
-    return str
-  }
-    
- }else {
-
-  return('Não é um texto')
- }
+  return str.join('')
 }
 
 // Desafio 10
