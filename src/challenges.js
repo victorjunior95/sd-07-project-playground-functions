@@ -58,12 +58,12 @@ let cat1Number = 0;
 let cat2Number = 0;
 
   if (  cat1 - mouse < 0) {
-    cat1Number = cat1 - mouse * -1 
+    cat1Number = (cat1 - mouse) * (-1) 
   }else{
     cat1Number = cat1 - mouse
   }
   if (  cat2 - mouse < 0) {
-    cat2Number = cat2 - mouse * -1 
+    cat2Number = (cat2 - mouse) * (-1) 
   }else{
   }cat2Number = cat2 - mouse
 
@@ -79,7 +79,6 @@ let cat2Number = 0;
 
    }
 }
-
 
 // Desafio 8
 function fizzBuzz() {
