@@ -102,9 +102,10 @@ function techList(array, name) {
   let sArray = [];
   if (array.length === 0) {
     return ('Vazio!')
-  } else if (array.length !== 0) {
+  }
   sArray = array.sort();
   for (let i in sArray) {
+    if (sArray.length !== 0){
     nItem = {
       tech: sArray[i],
       name: `${name}`,
@@ -112,6 +113,7 @@ function techList(array, name) {
     nArray.push(nItem);
   }
   }
+
   return (nArray)
 }
 
