@@ -220,9 +220,27 @@ return ret
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(number1,number2,number3) {
+    number1 = Math.abs(number1)
+    number2 = Math.abs(number2)
+    number3 = Math.abs(number3)
+    let rediferença = Math.abs(number1 - number2)
+    let resoma = Math.abs(number1 + number2)
+    if(rediferença < number3 && number3 < resoma){
+        let rediferença = Math.abs(number2 - number3)
+        let resoma = Math.abs(number2 + number3)
+            if(rediferença < number1 && number1 < resoma){
+                let rediferença = Math.abs(number3 - number1)
+                let resoma = Math.abs(number3 + number1)
+            }
+            if(rediferença < number2 && number2 < resoma){
+                return true
+            }
+    }else{
+        return false
+    }    
 }
+
 
 // Desafio 13
 function hydrate() {
