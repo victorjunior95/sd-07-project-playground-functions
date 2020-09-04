@@ -131,11 +131,11 @@ function decode(string2) {
   let arrayString2 = string2.split("");
 
   let object2 = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u",
   };
 
   for (let i in object2) {
@@ -154,25 +154,50 @@ function decode(string2) {
 //console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList(arrayNames,name) {
+function techList(arrayNames, name) {
   let arrayNames2 = arrayNames.sort();
   let result = [];
 
-  for(let i = 0; i < arrayNames2.length; i += 1) {
-    result[i] = {tech:arrayNames2[i], name:name};
+  for (let i = 0; i < arrayNames2.length; i += 1) {
+    result[i] = { tech: arrayNames2[i], name: name };
   }
-  if(arrayNames.length == 0) {
+  if (arrayNames.length == 0) {
     return "Vazio!";
   } else {
     return result;
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array11) {
+  let phoneNumber1 = `(${array11[0]}${array11[1]}) `;
+  let phoneNumber2 = [];
+  let phoneNumber3 = [];
+
+  let object = {};
+  let count = 0;
+
+  for (let i = 0; i < array11.length; i += 1) {
+    object[array11[i]] = object[array11[i]] ? object[array11[i]] + 1 : 0;
+
+    if (array11.length !== 11) {
+      return "Array com tamanho incorreto";
+    } else if (array11[i] < 0 && array11[i] > 9 && count >= 3) {
+return "não é possível gerar um número de telefone com esses valores";
+    } else if (i >= 2 && i < 7) {
+      phoneNumber2.push(array11[i]);
+    } else if (i >= 7) {
+      phoneNumber3.push(array11[i]);
+    }
+  }
+
+  let phoneNumber2Join = phoneNumber2.join("");
+  let phoneNumber3Join = phoneNumber3.join("");
+
+  return count;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
