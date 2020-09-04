@@ -184,7 +184,6 @@ function decode(stringDecode) {
 function techList(arrayTech, name) {
   let arrayOrdenado = arrayTech.sort();
   let aux = {};
-/*   let object = {}; */
   let objects = new Array();
   if (arrayOrdenado.length == 0) {
     return 'Vazio!';
@@ -198,39 +197,73 @@ function techList(arrayTech, name) {
   } 
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Jessica'));
+/* console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Jessica')); */
 
 /* ________________________________________________________________________________ */
 
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
   let contador = 0;
-  if (arrayTelefone.length > 11) {
+  let numerosArray = [];
+  let numeroTelefone = "";
+  if (arrayTelefone.length != 11) {
     return 'Array com tamanho incorreto';
-  } 
-  for (let i = 0; i < arrayTelefone.length; i += 1) {
-    if (arrayTelefone[i] < 0 || arrayTelefone[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } 
-    for (let j = 0; j < arrayTelefone.length; j += 1) {
-      if (arrayTelefone[j] === arrayTelefone[i]) {
-        contador = contador + 1;          
-        if (contador >= 3) {
-          return 'não é possível gerar um número de telefone com esses valores';
-        }    
-      }    
+  } else {
+    for (let i = 0; i < arrayTelefone.length; i += 1) {
+      if (arrayTelefone[i] < 0 || arrayTelefone[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      } else if (arrayTelefone[i] == 1) {
+        contador = contador + 1;
+          if (contador >= 3) {
+            return 'não é possível gerar um número de telefone com esses valores';
+        } else {
+          numerosArray.push(i);
+          numeroTelefone = numerosArray.join();  
+        }
+      }
     }
   }
 }
+/* se array [0] = 0 conta 1 é 1
+se array [1] = 1 conta 1 é 2
+se array [2] = 2 conta 1 é 3
 
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
- */
+for (let i = 0; i < arrayNumeros.length; i += 1) {
+  if (maiorNumero < arrayNumeros[i]) {
+    maiorNumero = arrayNumeros[i];
+  } 
+}
+for (let j = 0; j < arrayNumeros.length; j += 1) {
+  if (maiorNumero === arrayNumeros[j]) {
+    contNumero = contNumero + 1;              
+  } 
+}
+return contNumero;
+} */
+
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 /* ________________________________________________________________________________ */
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  lado1 = lineA + lineB;
+  lado2 = lineB + lineC;
+  lado3 = lineC + lineA;
+  diflado1 = Math.abs(lineA - lineB);
+  diflado2 = Math.abs(lineB - lineC);
+  diflado3 = Math.abs(lineC - lineA);
+  if ((lineC < lado1 && lineC > diflado1) || (lineB < lado3 && lineB > diflado3) || (lineA < lado2 && lineA > diflado2)) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+console.log(triangleCheck(10, 14, 8));
+
+
 
 /* ________________________________________________________________________________ */
 
