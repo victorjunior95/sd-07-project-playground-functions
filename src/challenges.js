@@ -5,7 +5,7 @@ function compareTrue(a , b) {
 
 // Desafio 2
 function calcArea(base , height) {
-  let area = (base * altura) / 2 ;
+  let area = (base * height) / 2 ; 
   return  area ;
 }
 
@@ -14,15 +14,20 @@ function splitSentence(s) {
   let result = [] , a = "" ;
   for( let i in s )
   {
-      if ( s.length - 1 == i || s[i] === ' ' )
-      {
-        result.push(a) ;
-        a = "" ;
-      }
-      else
-      {
-        a += s[i] ;
-      };
+    if ( s[i] === ' ' )
+    {
+      result.push(a) ;
+      a = "" ;
+    }
+    else if (i == s.length - 1)
+    {
+      a += s[i] ;
+      result.push(a) ;
+    }
+    else
+    {
+    a += s[i] ;
+    };
   };
   return result ;
 }
