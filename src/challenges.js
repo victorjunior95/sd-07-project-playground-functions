@@ -165,8 +165,8 @@ function decode(string) {
               } 
           }
       }
+      return str.join('')
   }
-  return str.join('')
 }
 
 // Desafio 10
