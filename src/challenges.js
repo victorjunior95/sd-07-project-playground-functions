@@ -35,13 +35,13 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maiorNumero = array[0];
   let numeroRepeat = 0;
-  if (array.lenght !== 0){
+  if (array.lenght !== 0) {
   for (let i in array) {
     maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
   }
-  }
   for (let i in array) {
     numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat;
+  }
   }
   return numeroRepeat;
 }
@@ -102,7 +102,7 @@ function techList(array, name) {
   let sArray = [];
   if (array.length === 0) {
     return ('Vazio!')
-  }
+  } else if (array.length !== 0) {
   sArray = array.sort();
   for (let i in sArray) {
     nItem = {
@@ -110,6 +110,7 @@ function techList(array, name) {
       name: `${name}`,
     }
     nArray.push(nItem);
+  }
   }
   return (nArray)
 }
