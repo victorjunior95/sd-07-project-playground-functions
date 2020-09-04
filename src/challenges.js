@@ -60,12 +60,12 @@ function footballPoints(wins, ties) {
   if (wins >= 0 && ties >= 0) {
     let winsTotal = wins * 3;
     let pontos = winsTotal + ties;
-    return "Pontos totais: " + pontos
+    return pontos
   } else {
     return "Favor verifique os dados inseridos"
   }
 }
-//console.log(footballPoints(7, 1));
+console.log(footballPoints(7, 1));
 
 // Desafio 6
 let numbers = [9, 1, 2, 3, 9, 5, 7];
@@ -226,7 +226,7 @@ function techList(tech, name) {
     return "Tem alguma coisa muito errada aí"
   }
 }
-console.log(techList(tech, name));
+//console.log(techList(tech, name));
 
 // Desafio 11
 function generatePhoneNumber() {
