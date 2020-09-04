@@ -258,13 +258,24 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return res;
 }
-console.log(triangleCheck(lineA, lineB, lineC));
+//console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+let drink = "1 cachaça, 5 cervejas e 1 copo de vinho";
 
+function hydrate(drink) {
+  // seu código aqui
+  let total = 0;
+
+  if (drink.length > 0) {
+    var water = drink.match(/\d+/g).map(Number); //water é array
+    total = water.reduce((total, currentElement) => total + currentElement)
+  } else {
+    total = 0;
+  }
+  return total + " copos de água"
+}
+console.log (hydrate(drink));
 
 module.exports = {
   calcArea,
