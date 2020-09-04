@@ -127,7 +127,15 @@ function decode(s) {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  let result = [] , alfabetizada = a.sort() ;
+  for ( let i in a )
+  {
+      result[i] = {
+          tech : alfabetizada[i] ,
+          "name" : name 
+      } ;
+  }
+  return result ;
 }
 
 // Desafio 11
