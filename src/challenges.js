@@ -203,23 +203,23 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-compareTrue(first = true, second = true);
-
-calcArea(51, 1);
-
-highestCount([0, 0, 0]);
-
-footballPoints(0, 0);
-
-encode("hello there!")
-
-decode("h3 th2r2!");
-
-fizzBuzz([2, 15, 7, 9, 45]);
-
-generatePhoneNumber([2, 11, 3, 4, 5, 6, 7, 8, 9, 1, 2, 9]);
-
-splitSentence('foguete');
-hydrate("9 copos de cerveja, 10 copos de vodka");
-concatName(["marcos", "eduardo", "murilo", "Silva"]);
+//
+// compareTrue(first = true, second = true);
+//
+// calcArea(51, 1);
+//
+// highestCount([0, 0, 0]);
+//
+// footballPoints(0, 0);
+//
+// encode("hello there!")
+//
+// decode("h3 th2r2!");
+//
+// fizzBuzz([2, 15, 7, 9, 45]);
+//
+// generatePhoneNumber([2, 11, 3, 4, 5, 6, 7, 8, 9, 1, 2, 9]);
+//
+// splitSentence('foguete');
+// hydrate("9 copos de cerveja, 10 copos de vodka");
+//concatName(["marcos", "eduardo", "murilo", "Silva"]);
