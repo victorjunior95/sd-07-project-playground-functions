@@ -129,34 +129,34 @@ function rep(tester){
   const repetition = [0,0,0,0,0,0,0,0,0,0];
   for (let aux = 0; aux < tester.length; aux++) {
     switch (tester[aux]) {
-      case '1':
+      case 1:
         repetition[0] +=1;
         break;
-      case '2':
+      case 2:
         repetition[1] +=1;
         break;
-      case '3':
+      case 3:
         repetition[2] +=1;
         break;
-      case '4':
+      case 4:
         repetition[3] +=1;
         break;
-      case '5':
+      case 5:
         repetition[4] +=1;
         break; 
-      case '6':
+      case 6:
         repetition[5] +=1;
         break;
-      case '7':
+      case 7:
         repetition[6] +=1;
         break;
-      case '8':
+      case 8:
         repetition[7] +=1;
         break;
-      case '9':
+      case 9:
         repetition[8] +=1;
         break;   
-      case '0':
+      case 0:
         repetition[9] +=1;
         break; 
       default:
