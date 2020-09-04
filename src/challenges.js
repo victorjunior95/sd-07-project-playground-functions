@@ -20,7 +20,6 @@ function splitSentence(trybe) {
   return(resultado)
 }
 
-
 // Desafio 4
 function concatName(arrDeString) {
   let first = [...arrDeString].shift();
@@ -29,11 +28,9 @@ function concatName(arrDeString) {
   return(concatLastFirst);
 }
 
-
 // Desafio 5
-
 function footballPoints(wins, ties) {
-  // seu código aqui
+
 let vit = wins * 3;
 let emp = ties * 2;
 let points = vit + emp
@@ -41,14 +38,25 @@ return(points)
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+let valores = [9, 1, 2, 3, 9, 5, 7]
+function highestCount(arrayNumbers) {
+  let count = 0
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    if ((i < arrayNumbers.length)) {
+      if (arrayNumbers[1] == arrayNumbers[i+1]) {
+       count = arrayNumbers[1] + arrayNumbers[i+1]
+      }
+    }
+  }
+  return(count)  
 }
 
 // Desafio 7
-function catAndMouse() {
+function fizzBuzz() {
   // seu código aqui
 }
+
+
 
 // Desafio 8
 function fizzBuzz() {
