@@ -89,8 +89,6 @@ function techList(tech, name) {
   }
   return lista;
 }
-let tech=["1",'4','3'], nome="asda"
-console.log(techList(tech, nome));
 
 // Desafio 11
 function generatePhoneNumber() {
