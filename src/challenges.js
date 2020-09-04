@@ -38,12 +38,12 @@ function highestCount(array) {
   for (let i in array) {
     if (array.lenght !== 0) {
       maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
-  }
+    }
   }
   for (let i in array) {
     if (maiorNumero === true) {
       numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat;
-  }
+    }
   }
   return numeroRepeat;
 }
@@ -111,7 +111,7 @@ function techList(array, name) {
       nItem = {
         tech: sArray[i],
         name: `${name}`,
-    }
+      }
       nArray.push(nItem);
     }
   }
