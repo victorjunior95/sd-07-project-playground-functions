@@ -54,33 +54,33 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouseAndCats) {
-  // let { mouse, cat1, cat2 } = mouseAndCats
+  let [ mouse, cat1, cat2 ] = [...mouseAndCats]
  
  
-  let numbersOfMouseAndCats = mouseAndCats
-  let mouse = 0;
-  let cat1 = 0;
-  let cat2 = 0;
+  // let numbersOfMouseAndCats = mouseAndCats
+  // let mouse = 0;
+  // let cat1 = 0;
+  // let cat2 = 0;
 
-   for ( i = 0; i < numbersOfMouseAndCats.length ; i+=1){
-      if ( i == 0 ){ 
-      mouse = numbersOfMouseAndCats[i]
-    }else if ( i == 1 ){
-      cat1 = numbersOfMouseAndCats[i]
-    }else if ( i == 2 ){
-      cat2 = numbersOfMouseAndCats[i]
+  //  for ( i = 0; i < numbersOfMouseAndCats.length ; i+=1){
+  //     if ( i == 0 ){ 
+  //     mouse = numbersOfMouseAndCats[i]
+  //   }else if ( i == 1 ){
+  //     cat1 = numbersOfMouseAndCats[i]
+  //   }else if ( i == 2 ){
+  //     cat2 = numbersOfMouseAndCats[i]
 
-    }
-   }
-   if ( mouse == 0 ){
-     return 'cat2'
-   }else if( mouse == 10 ){
-    return 'cat1'
-   }else {
+  //   }
+  //  }
+   if ( cat1 - mouse  < cat2 - mouse ){
+     return 'cat1'
+   }else if( cat2 - mouse < cat1 - mouse ){
+    return 'cat2'
+   }else{
     return 'os gatos trombam e o rato foge'
    }
 }
-// catAndMouse( [0, 1, 3])
+catAndMouse( [0, 1, 3])
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
