@@ -17,13 +17,13 @@ function fizzBuzz(vetor) {
   result.push('bug!');
 }
 }
-console.log(result);
+return result;
 } 
 
 
     
 
 
-fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 30, 45, 90, 100, 105, 110, 115, 120]);
+console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 30, 45, 90, 100, 105, 110, 115, 120]));
 
   

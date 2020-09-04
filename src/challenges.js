@@ -115,8 +115,9 @@ function fizzBuzz(vetor) {
   result.push('bug!');
 }
 }
-console.log(result);
-}
+return result;
+} 
+
 
 // Desafio 9
 function encode() {
