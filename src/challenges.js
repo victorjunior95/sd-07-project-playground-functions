@@ -267,9 +267,22 @@ function generatePhoneNumber(phoneNumber) {
 console.log(generatePhoneNumber(phoneNumber));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+let lineA = 2;
+let lineB = 2;
+let lineC = 1000;
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true
+  } else {
+    return lineC < lineA + lineB && lineC > Math.abs(lineA - lineB);
+  }
 }
+
+console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
 function hydrate() {
