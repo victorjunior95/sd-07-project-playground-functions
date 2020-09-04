@@ -51,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let rtn = [];
-  for (let pos of arr){
+  for (let pos of arr) {
     if (pos % 15 === 0) rtn.push('fizzBuzz');
     else if (pos % 3 === 0) rtn.push('fizz');
     else if (pos % 5 === 0) rtn.push('buzz');
