@@ -80,7 +80,7 @@ function catAndMouse(mouseAndCats) {
     return 'os gatos trombam e o rato foge'
    }
 }
-catAndMouse( [0, 1, 3])
+// catAndMouse( [0, 1, 3])
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
