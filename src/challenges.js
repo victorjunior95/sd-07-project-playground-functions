@@ -70,14 +70,13 @@ function catAndMouse(mouseAndCats) {
     }
    }
    if ( cat1 - mouse < cat2 - mouse ){
-     return "cat1"
+     return 'cat1'
    }else if( cat2 - mouse < cat1 - mouse ){
-    return "cat2"
+    return 'cat2'
    }else{
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
    }
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -109,9 +108,6 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
   // seu código aqui
-}
-
-
 module.exports = {
   calcArea,
   catAndMouse,
