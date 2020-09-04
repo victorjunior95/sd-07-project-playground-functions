@@ -137,7 +137,7 @@ function fizzBuzz(numbersArr) {
   if (numbersArr.length > 0) {
     for (let i = 0; i < numbersArr.length; i += 1) {
       if (numbersArr[i] % 5 === 0 && numbersArr[i] % 3 === 0) {
-        nStr = "fizzbuzz";
+        nStr = "fizzBuzz";
       } else if (numbersArr[i] % 5 === 0) {
         nStr = "buzz";
       } else if (numbersArr[i] % 3 === 0) {
