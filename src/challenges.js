@@ -201,13 +201,39 @@ function generatePhoneNumber(telefone) {
   telefone[7] + telefone[8] + telefone[9] + telefone[10];
   }
 
-  console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
-
-
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let triangulo;
+  let verificador = 0;
+  let verificadorLado = 0;
+  let arrayTriang = [lineA, lineB, lineC];
+  // Verificando se lado > que a diferença absoluta:
+  for(let i in arrayTriang){
+    if(arrayTriang[i] > Math.abs(lineA - lineB - lineC)){
+      verificador ++;
+    }
+  }
+  // Verificando se lado x é maior que a soma dos demais lados:
+  if(lineA < lineB + lineC){
+    verificadorLado++;
+  }
+  else if(lineB < lineC + lineA){
+    verificadorLado++;
+  }
+  else if(lineC < lineA + lineB){
+    verificadorLado++;
+  }
+  // Verificando os dois verificadores:
+  if(verificadorLado > 0 && verificador > 0){
+    triangulo = true;
+  }
+  else{
+    triangulo = false;
+  }
+  return triangulo;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
