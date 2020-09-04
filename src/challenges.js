@@ -107,7 +107,7 @@ function techList(array, name) {
   for (let i in sArray) {
     nItem = {
       tech: sArray[i],
-      name: name,
+      name: `${name}`,
     }
     nArray.push(nItem);
   }
