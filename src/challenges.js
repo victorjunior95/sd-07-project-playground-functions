@@ -230,7 +230,7 @@ function hydrate(s) {
 
   } ;
 
-  return result + " copos de água";
+  return result == 1 ? "1 copo de água" : result + " copos de água";
 }
 
 
