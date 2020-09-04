@@ -64,7 +64,8 @@ function fizzBuzz(arr) {
 function encode(str) {
   let trn = str.split('');
   for (let pos = 0; pos < trn.length; pos += 1) {
-    switch (trn[pos]) {
+    let op = trn[pos];
+    switch (op) {
       case 'a' :
         trn[pos] = '1';
         break;
@@ -82,13 +83,14 @@ function encode(str) {
         break;
     }
   }
-  return ( trn.join(''));
+  return (trn.join(''));
 }
 
 function decode(str) {
   let trn = str.split('');
   for (let pos = 0; pos < trn.length; pos += 1) {
-    switch (trn[pos]) {
+    let op = trn[pos];
+    switch (op) {
       case '1' :
         trn[pos] = 'a';
         break;
@@ -106,7 +108,7 @@ function decode(str) {
         break;
     }
   }
-  return ( trn.join(''));
+  return (trn.join(''));
 }
 
 // Desafio 10
