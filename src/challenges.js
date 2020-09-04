@@ -148,22 +148,6 @@ function encode(word) {
   return finalString
 }
 
-// Apoio desafio decode
-function decodeCounter(vogais, item) {
-  let counterItem = 0
-  let newString = ''
-
-  for (let key in vogais) {
-    let currentVogal = key
-    if (item === currentVogal) {
-      newString = vogais[key]
-      counterItem += 1
-    }
-  }
-  let message = [counterItem, newString]
-  return message
-}
-
 function decode(word) {
   let finalString = ''
   let vogais = {
@@ -175,7 +159,7 @@ function decode(word) {
   }
   for (let counter = 0; counter <= word.length - 1; counter += 1) {
     let currentItem = word[counter]
-    let counterItem = decodeCounter(vogais, currentItem)
+    let counterItem = encodeCounter(vogais, currentItem)
     if (counterItem[0] > 0) {
       finalString += counterItem[1]
     } else {
