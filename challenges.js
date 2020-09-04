@@ -1,31 +1,28 @@
 // Desafio 4
-function catAndMouse(mouse, cat1, cat2) {
-    let positions = [];
-    positions[0] = mouse;
-    positions[1] = cat1;
-    positions[2] = cat2;
-    let result;
-    let distanceAbs1;
-    let distanceAbs2;
-    distanceAbs1 = Math.abs(positions[0] - positions[1]);
-    distanceAbs2 = Math.abs(positions[0] - positions[2]);
-      if (distanceAbs2 == distanceAbs1) {
-        return result = "os gatos trombam e o rato foge";
-      }
-      if (distanceAbs1 < distanceAbs2){
-        result = "cat1";
-        return result;
-      }
-      if (distanceAbs2 < distanceAbs1){
-        result = 'cat2';
-        return result;
-      }
-
-    }
+function fizzBuzz(vetor) {
+  let numeros = vetor
+  let result;
+  for (let i in numeros) {
+  if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0){
+    result = 'fizzBuzz';
+} else if(numeros[i] % 15 === 0){
+    result = 'fizzBuzz';
+} else if(numeros[i] % 5 === 0){
+    result = 'buzz';
+} else if(numeros[i] % 3 === 0){
+    result = 'fizz';
+} else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0){
+    result = 'bug!';
+} else {
+  result = 'bug!';
+}
+console.log(result);
+}
+} 
 
     
 
 
-console.log(catAndMouse(1, 0, 2));
+fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 30, 45, 90, 100, 105, 110, 115, 120]);
 
   

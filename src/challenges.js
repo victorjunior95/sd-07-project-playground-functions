@@ -97,9 +97,26 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(vetor) {
+  let numeros = vetor
+  let result;
+  for (let i in numeros) {
+  if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0){
+    result = 'fizzBuzz';
+} else if(numeros[i] % 15 === 0){
+    result = 'fizzBuzz';
+} else if(numeros[i] % 5 === 0){
+    result = 'buzz';
+} else if(numeros[i] % 3 === 0){
+    result = 'fizz';
+} else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0){
+    result = 'bug!';
+} else {
+  result = 'bug!';
 }
+console.log(result);
+}
+} 
 
 // Desafio 9
 function encode() {
