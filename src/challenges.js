@@ -16,7 +16,7 @@ function splitSentence(palavra) {
 
 // Desafio 4
 function concatName(palavras) {
-  return palavras[palavras.length - 1] + palavras[0]
+  return `${palavras[palavras.length - 1]}, ${palavras[0]}`
 }
 
 // Desafio 5
@@ -67,6 +67,7 @@ function subistitui(palavra, isso, por) {
 }
 // Desafio 9
 function encode(word) {
+  word = word.toLowerCase()
   let isso = ['a', 'e', 'i', 'o', 'u'];
   let por = ['1', '2', '3', '4', '5']
   return subistitui(word, isso, por)
@@ -82,9 +83,9 @@ function decode(word) {
 // Desafio 10
 function techList(tech, name) {
   let lista = [];
+  if (tech === 0) return 'Vazio!';
   if (tech.length === 0) return 'Vazio!';
   for (let i = 0; i < tech.length; i += 1) {
-  
     lista[i] = { tech: `${tech[i]}`, name };
   }
   return lista;
