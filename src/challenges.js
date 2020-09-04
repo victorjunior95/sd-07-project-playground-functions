@@ -161,6 +161,7 @@ function techList(arrayOfTechs, name) {
   let student = '';
   student = name;
   techs = arrayOfTechs;
+  techs.sort();
   if (techs.length === 0) {
     return 'Vazio!';
   }
@@ -172,7 +173,6 @@ function techList(arrayOfTechs, name) {
   }
   return result;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
