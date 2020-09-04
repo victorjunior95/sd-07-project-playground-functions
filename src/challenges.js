@@ -176,7 +176,6 @@ function techList(techNames, name) {
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
-  // return phone number formated
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   // verifica se existe mais ou menos de 11 número e retorna erro
@@ -194,14 +193,14 @@ function generatePhoneNumber(phoneNumber) {
   }
 
   for (let pos in phoneNumber) {
-    if (pos >= 0 && pos <= 1) {
-      updatePhone(pos)
-      if (pos === 1) phoneFormated += ') ';
-    } else if (pos >= 2 && pos <= 6) {
-      updatePhone(pos)
-      if (pos === 6) phoneFormated += '-';
-    } else if (pos >= 7 && pos <= 10) {
-      updatePhone(pos)
+    if (Number(pos) >= 0 && Number(pos) <= 1) {
+      updatePhone(Number(pos))
+      if (Number(pos) === 1) phoneFormated += ') ';
+    } else if (Number(pos) >= 2 && Number(pos) <= 6) {
+      updatePhone(Number(pos))
+      if (Number(pos) === 6) phoneFormated += '-';
+    } else if (Number(pos) >= 7 && Number(pos) <= 10) {
+      updatePhone(Number(pos))
     }
   }
 
@@ -215,9 +214,9 @@ function generatePhoneNumber(phoneNumber) {
     countRepeatValue = 0;
   }
 
-
   return phoneFormated;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
