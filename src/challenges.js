@@ -172,8 +172,8 @@ function decode(string) {
 // Desafio 10
 // Desafio 10
 let tech = ['JavaScript','NodeJs', 'Python','Docker','AWS', 'React', 'ReactNative', 'Electron']
-function techList(tech, name) {
-    if(array == ''){
+function techList(array, name) {
+    if(array == []){
       return 'Vazio!'
     }else{
       let result = [];
