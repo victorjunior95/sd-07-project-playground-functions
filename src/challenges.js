@@ -64,10 +64,14 @@ function highestCount(numeros) {
   for (let indice in numeros) {
     if (numeros[indiceMaior] <= numeros[indice]) {// compara do primeiro ao ultimo
      indiceMaior = indice; // quando encontra armazena o indice
-     quantVezes= quantVezes+1;
      maiorNumero = numeros[indiceMaior];     
-    }
+    }   
     
+  }
+  for(let indice2 in numeros){
+    if (maiorNumero <= numeros[indice2]) {// compara do primeiro ao ultimo            
+        quantVezes= quantVezes+1;// conta quantas vezes aparece o maior numero            
+       }
   }
   //console.log("O Maior numero é: "+maiorNumero);
   //console.log("Tem: "+quantVezes);
