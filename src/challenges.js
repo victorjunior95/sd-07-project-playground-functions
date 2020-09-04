@@ -184,8 +184,11 @@ function hydrate(listaDeBebidas) {
   for (let i in numeros) {
     soma = soma + numeros[i];
   }
-  //console.log(soma + " copos de água");
-  return soma + " copos de água";
+    if (soma == 1) {
+      return "1 copo de água";
+    } else {
+    return soma + " copos de água";
+  }
 }
 
 
