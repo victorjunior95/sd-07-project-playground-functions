@@ -37,15 +37,16 @@ function highestCount(array) {
   let numeroRepeat = 0;
   for (let i in array) {
     if (array.lenght !== 0) {
-    maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
+      maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
   }
   }
   for (let i in array) {
-    numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat;
-  }return numeroRepeat;
+    if (maiorNumero === true) {
+      numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat;
   }
-
-
+  }
+  return numeroRepeat;
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -106,13 +107,13 @@ function techList(array, name) {
   }
   sArray = array.sort();
   for (let i in sArray) {
-    if (sArray.length !== 0){
-    nItem = {
-      tech: sArray[i],
-      name: `${name}`,
+    if (sArray.length !== 0) {
+      nItem = {
+        tech: sArray[i],
+        name: `${name}`,
     }
-    nArray.push(nItem);
-  }
+      nArray.push(nItem);
+    }
   }
 
   return (nArray)
