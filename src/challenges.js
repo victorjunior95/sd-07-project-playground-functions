@@ -116,6 +116,7 @@ function encode(string) {
         break;
       case 'u':
         codedWord += '5';
+        break;
       default:
         codedWord += word[letter];
     }
@@ -143,6 +144,7 @@ function decode(string) {
         break;
       case '5':
         decodedWord += 'u';
+        break;
       default:
         decodedWord += word[letter];
     }
