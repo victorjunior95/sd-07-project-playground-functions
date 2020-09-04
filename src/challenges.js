@@ -176,6 +176,18 @@ function techList(array, name) {
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Fernando'));
 
 // Desafio 11
+
+function montando (numeros){
+  numeros.unshift('(');
+  numeros.splice(3, 0, ')', ' ');
+  numeros.splice(10, 0, '-');
+
+  let saida = numeros[0];
+  for (let i = 1; i < numeros.length; i += 1) {
+    saida += numeros[i];
+  }
+  return (saida);
+}
 function generatePhoneNumber(entrada) {
   let numeros = entrada;
   // testando se números são válidos
@@ -194,19 +206,11 @@ function generatePhoneNumber(entrada) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  // números aprovados. Hora de montar o número de telefone
-  numeros.unshift('(');
-  numeros.splice(3, 0, ')', ' ');
-  numeros.splice(10, 0, '-');
-
-  let saida = numeros[0];
-  for (let i = 1; i < numeros.length; i += 1) {
-    saida += numeros[i];
-  }
-  return saida;
+  // números aprovados. Hora de montar o número de telefone  
+  return (montando (numeros));
 }
 
-// console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let A = Math.abs(lineA);
