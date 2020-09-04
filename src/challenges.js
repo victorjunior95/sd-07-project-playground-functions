@@ -26,7 +26,7 @@ function splitSentence(word) {
   for (let i = 0; i < array.length - 1; i += 1) {
     array[i] +='';
   }
-  console.log(array);
+  return array;
 }
 
 //Desafio 4
@@ -217,4 +217,4 @@ fizzBuzz([2, 15, 7, 9, 45]);
 
 generatePhoneNumber([2, 11, 3, 4, 5, 6, 7, 8, 9, 1, 2, 9]);
 
-splitSentence('vamo que vamo');
+splitSentence('foguete');
