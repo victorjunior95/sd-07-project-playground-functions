@@ -181,7 +181,7 @@ function hydrate(water) {
   if ( waterCount > 1){
   return `${waterCount} copos de água`;
   } else {
-    return `${waterCount} copos de água`;
+    return `${waterCount} copo de água`;
   }
 }
 
