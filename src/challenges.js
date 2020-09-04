@@ -91,59 +91,52 @@ function fizzBuzz(array) {
 }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
+function convert (array,a,e,iii,o,u,aa,ee,ii,oo,uu){
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === a) {
+      array[i] = aa;
+    } else if (array[i] === e) {
+      array[i] = ee;
+    } else if (array[i] === iii) {
+      array[i] = ii;
+    } else if (array[i] === o) {
+      array[i] = oo;
+    } else if (array[i] === u) {
+      array[i] = uu;
+    }
+  }
+  return (array)
+}
+
 // Desafio 9
 function encode(entrada) {
   let array = [];
   for (let i = 0; i < entrada.length; i += 1) {
     array.push(entrada[i]);
   }
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === 'a') {
-      array[i] = '1';
-    } else if (array[i] === 'e') {
-      array[i] = '2';
-    } else if (array[i] === 'i') {
-      array[i] = '3';
-    } else if (array[i] === 'o') {
-      array[i] = '4';
-    } else if (array[i] === 'u') {
-      array[i] = '5';
-    }
-  }
+  convert (array,'a','e','i','o','u','1','2','3','4','5');
   let frase = array[0];
   for (let i = 1; i < array.length; i += 1) {
     frase += array[i];
   }
   return frase;
 }
-// console.log(encode("Hi There"));
+ console.log(encode("Hi There"));
 
 function decode(entrada) {
   let array = [];
   for (let i = 0; i < entrada.length; i += 1) {
     array.push(entrada[i]);
   }
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === '1') {
-      array[i] = 'a';
-    } else if (array[i] === '2') {
-      array[i] = 'e';
-    } else if (array[i] === '3') {
-      array[i] = 'i';
-    } else if (array[i] === '4') {
-      array[i] = 'o';
-    } else if (array[i] === '5') {
-      array[i] = 'u';
-    }
-  }
+  convert (array,'1','2','3','4','5','a','e','i','o','u')
   let frase = array[0];
   for (let i = 1; i < array.length; i += 1) {
     frase += array[i];
   }
   return frase;
 }
-// console.log("encode funcionando?" + encode('Hi there a e i o u'))
-// console.log("decode funcionando?" + decode('H3 Th2r2 11 22 33 44 55'))
+ console.log("encode funcionando?" + encode('Hi there a e i o u'))
+ console.log("decode funcionando?" + decode('H3 Th2r2 11 22 33 44 55'))
 
 // Desafio 10
 function techList(array, name) {
