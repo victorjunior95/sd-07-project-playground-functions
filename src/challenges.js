@@ -45,9 +45,14 @@ return str;
 //console.log("Resultado desafio 4: "+result);
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = (wins*3)+(ties*1);
+  return points;
 }
+
+//let result = footballPoints(2,1);
+//console.log("Resultado desafio 5: "+result);
 
 // Desafio 6
 function highestCount() {
