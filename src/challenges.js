@@ -128,12 +128,16 @@ function decode(s) {
 // Desafio 10
 function techList() {
   let result = [] , alfabetizada = a.sort() ;
-  for ( let i in a )
+  if(a.length == 0)
   {
-      result[i] = {
-          tech : alfabetizada[i] ,
-          "name" : name 
-      } ;
+    return result = 'Vazio!' ;
+  };
+  for ( let i in alfabetizada )
+  {
+    result[i] = {
+      tech : alfabetizada[i] ,
+      "name" : name 
+    } ;
   }
   return result ;
 }
