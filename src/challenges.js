@@ -42,7 +42,7 @@ function highestCount(numbers) {
   // fitra o array apenas com o maior valor
   const greaterValueCounts = nums.filter(a => a === greaterValue);
 
-  //retorna quantos valores eeiste dentro do array que contém apenas o maior valor
+  // retorna quantos valores eeiste dentro do array que contém apenas o maior valor
   return greaterValueCounts.length;
 }
 
@@ -52,13 +52,17 @@ function catAndMouse(mouse, cat1, cat2) {
   const distanceMouseCat1 = Math.abs(cat1 - mouse);
   const distanceMouseCat2 = Math.abs(cat2 - mouse);
 
+  let sms = ';'
+
   if (distanceMouseCat1 === distanceMouseCat2) {
-    return "os gatos trombam e o rato foge";
+    sms = "os gatos trombam e o rato foge";
   } else if (distanceMouseCat1 > distanceMouseCat2) {
-    return "cat2";
+    sms = "cat2";
   } else if (distanceMouseCat1 < distanceMouseCat2) {
-    return "cat1";
+    sms = "cat1";
   }
+
+  return sms;
 }
 
 // Desafio 8
