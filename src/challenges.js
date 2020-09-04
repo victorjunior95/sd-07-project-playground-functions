@@ -211,7 +211,7 @@ function generatePhoneNumber( a ) {
 
 // Desafio 12
 function triangleCheck(a , b , c) {
-  return Math.abs(b - c) < a < (b + c) ? true : false ;
+  return (b + c) > a && a > Math.abs(b - c) ? true : false ;
 }
 
 // Desafio 13
