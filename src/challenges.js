@@ -226,13 +226,12 @@ function triangleCheck(lineA, lineB, lineC) {
   if (!(lineA <= lineB + lineC && lineA > Math.abs(lineB - lineC))) isTriangle = false;
   if (!(lineB <= lineA + lineC && lineB > Math.abs(lineA - lineC))) isTriangle = false;
   if (!(lineC <= lineA + lineB && lineC > Math.abs(lineA - lineB))) isTriangle = false;
-  
+
   return isTriangle;
 }
 
 // Desafio 13
 function hydrate(textString) {
-
   let glassWater = 0;
 
   for (let num in textString) {
