@@ -76,7 +76,7 @@ function catAndMouse(mouseAndCats) {
      return 'cat2'
    }else if( mouse == 10 ){
     return 'cat1'
-   }else if (mouse == 1 ){
+   }else {
     return 'os gatos trombam e o rato foge'
    }
 }
