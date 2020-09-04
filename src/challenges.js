@@ -169,8 +169,8 @@ function suport11(phone2) {
   return completePhone;
 }
 
-// 2ª Função suporte para o Desafio 11 
-function thisRepeat(what) {
+// 2ª Função suporte para o Desafio 11
+function suport11too(what) {
   let repetition = 0;
   for (let k = 0; k < what.length; k += 1) {
     for (let l = k + 1; l < what.length; l += 1) {
@@ -186,7 +186,7 @@ function thisRepeat(what) {
 function generatePhoneNumber(phone) {
   let answer = '';
   let lastReturn;
-  let repeat = thisRepeat(phone) - 1;
+  let repeat = suport11too(phone) - 1;
   for (let j = 0; j < phone.length; j += 1) {
     if (phone[j] < 0 || phone[j] > 9) {
       answer = 'não é possível gerar um número de telefone com esses valores';
@@ -227,7 +227,7 @@ function hydrate(drinks) {
   let justNumber = 0;
   let sum = 0;
   for (let i = 0; i < takeNumbers.length; i += 1) {
-    justNumber = parseInt(takeNumbers[i]); // para transformar de string para número
+    justNumber = Number(takeNumbers[i]); // para transformar de string para número
     sum += justNumber; // para somar os números
   }
   let result;
