@@ -42,7 +42,7 @@ function highestCount(numbers) {
     if (inAscendingOrder[i] == inAscendingOrder[i +1]){
       CounterRepetitions += 1
     }else if(inAscendingOrder[i +1] === undefined ){
-      if( inAscendingOrder[i] == inAscendingOrder[i -1]){
+      if( inAscendingOrder[i] >= inAscendingOrder[i -1]){
        CounterRepetitions += 1 
       }
       return CounterRepetitions
@@ -51,7 +51,6 @@ function highestCount(numbers) {
      } 
   }
 }
-
 
 // Desafio 7
 function catAndMouse() {
