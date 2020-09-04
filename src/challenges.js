@@ -170,8 +170,15 @@ function triangleCheck( lineA, lineB, lineC ) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(water) {
+  let waterRegExp = /[0-9]/g;
+  let waterWithoutSpaces = water.replace(/ /g, '');
+  let waterNum = waterWithoutSpaces.match(waterRegExp);
+  let waterCount = 0;
+  for ( i in waterNum ){
+    waterCount = parseInt(waterNum[i]) + waterCount;
+  }
+  return `${waterCount} copos de água`;
 }
 
 
