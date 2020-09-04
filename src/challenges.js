@@ -106,10 +106,24 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
+function encode(vogais) {
+  let vogaisa = vogais.replace(/a/g, "1");
+  let vogaise = vogaisa.replace(/e/g, "2");
+  let vogaisi = vogaise.replace(/i/g, "3");
+  let vogaiso = vogaisi.replace(/o/g, "4");
+  let vogaisu = vogaiso.replace(/u/g, "5");
+
+  return vogaisu;
   // seu código aqui
 }
-function decode() {
+function decode(numeros) {
+  let numeros1 = numeros.replace("1", "a");
+  let numeros2 = numeros1.replace("2", "e");
+  let numeros3 = numeros2.replace("3", "i");
+  let numeros4 = numeros3.replace("4", "o");
+  let numeros5 = numeros4.replace("5", "u");
+
+  return numeros5;
   // seu código aqui
 }
 
