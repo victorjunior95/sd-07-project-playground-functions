@@ -55,11 +55,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let sms = ';'
 
   if (distanceMouseCat1 === distanceMouseCat2) {
-    sms = "os gatos trombam e o rato foge";
+    sms = 'os gatos trombam e o rato foge';
   } else if (distanceMouseCat1 > distanceMouseCat2) {
-    sms = "cat2";
+    sms = 'cat2';
   } else if (distanceMouseCat1 < distanceMouseCat2) {
-    sms = "cat1";
+    sms = 'cat1';
   }
 
   return sms;
@@ -75,13 +75,13 @@ function fizzBuzz(numbers) {
     let isDiv5 = num % 5 === 0;
 
     if (isDiv3 && !isDiv5) {
-      fizzBussReturned.push("fizz");
+      fizzBussReturned.push('fizz');
     } else if (!isDiv3 && isDiv5) {
-      fizzBussReturned.push("buzz");
+      fizzBussReturned.push('buzz');
     } else if (isDiv3 && isDiv5) {
-      fizzBussReturned.push("fizzBuzz");
+      fizzBussReturned.push('fizzBuzz');
     } else {
-      fizzBussReturned.push("bug!");
+      fizzBussReturned.push('bug!');
     }
   }
 
@@ -90,7 +90,6 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(textEncode) {
-
   // a -> 1
   // e -> 2
   // i -> 3
@@ -98,7 +97,7 @@ function encode(textEncode) {
   // u -> 5
 
   let encoding = '';
-  for (let i in textEncode) {
+  for (let i = 0; i <  textEncode.length; i += 1) {
     switch (textEncode[i]) {
       case 'a':
         encoding += 1;
@@ -120,11 +119,11 @@ function encode(textEncode) {
         break;
     }
   }
+
   return encoding;
-
 }
-function decode(textDecode) {
 
+function decode(textDecode) {
   // 1 -> a
   // 2 -> e
   // 3 -> i
@@ -132,7 +131,7 @@ function decode(textDecode) {
   // 5 -> u
 
   let decoding = '';
-  for (let i in textDecode) {
+  for (let i = 0; i < textDecode.length; i += 1) {
     switch (textDecode[i]) {
       case '1':
         decoding += 'a';
@@ -162,7 +161,7 @@ function decode(textDecode) {
 function techList(techNames, name) {
 
   const lists = techNames.sort();
-  
+
   const listReturned = [];
 
   if (lists.length === 0) return "Vazio!";
@@ -194,7 +193,7 @@ function generatePhoneNumber(phoneNumber) {
   function updatePhone(pos) {
     phoneFormated += phoneNumber[pos];
   }
-  
+
   for (let pos in phoneNumber) {
     if (pos >= 0 && pos <= 1) {
       updatePhone(pos)
@@ -233,7 +232,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(textString) {
-  
+
   let glassWater = 0;
 
   for (let num in textString) {
