@@ -41,7 +41,7 @@ function footballPoints(wins, ties) {
       totalPoints += pointsForWin;
     }
   }
-  totalPoints += ties
+  totalPoints += ties;
   return totalPoints;
 }
 
@@ -49,17 +49,14 @@ function footballPoints(wins, ties) {
 function highestCount(arrayCount) {
   // seu código aqui
   let countTotal = 0;
-  let highNumber = 0
-  let highNumber2 = 0
+  let highNumber = 0;
   for (let key in arrayCount) {
-    if (highNumber < arrayCount[key]){
-      highNumber2 = arrayCount[key]
-    } else {
-      highNumber = arrayCount[key]
+    if (arrayCount[key] > highNumber) {
+      highNumber = arrayCount[key];
     }
   }
   for (let compare in arrayCount) {
-    if (highNumber2 === arrayCount[compare]) {
+    if (highNumber === arrayCount[compare]) {
       countTotal += 1;
     }
   }
