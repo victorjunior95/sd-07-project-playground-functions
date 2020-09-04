@@ -57,7 +57,6 @@ function highestCount(numeros) {
   }
   return repeticao;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -219,9 +218,28 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(frase) {
+  let newFrase = frase.split("");
+  let quantidades = 0;
+  let mensagem = "";
+  for (let i in newFrase) {
+    let inteiro = parseInt(newFrase[i]);
+    if (!isNaN(inteiro)) {
+      quantidades += inteiro;
+    }
+  }
+  switch (quantidades) {
+    case 0:
+      mensagem = "Você não bebeu nada ainda";
+      break;
+    case 1:
+      mensagem = "1 copo de água";
+      break;
+    default:
+      mensagem = `${quantidades} copos de água`
+  }
+  return mensagem;
+} console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   calcArea,
