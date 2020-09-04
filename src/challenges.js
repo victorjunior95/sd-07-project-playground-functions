@@ -21,7 +21,7 @@ function splitSentence(frase) {
   for (let i = 0; i < copia.length; i += 1) {
     if (i === 0) {
       partida[indice] = copia[i];
-    } else if (copia[i] !== " ") {
+    } else if (copia[i] !== ' ') {
       partida[indice] += copia[i];
     } else {
       indice += 1;
@@ -35,7 +35,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   let saida;
-  saida = array[array.length - 1] + ", " + array[0];
+  saida = array[array.length - 1] + ', ' + array[0];
   return saida;
 }
 // Desafio 5
@@ -63,11 +63,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
   if (dist1 < dist2) {
-    return "cat1";
+    return 'cat1';
   } else if (dist2 < dist1) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
   // seu código aqui
 }
@@ -78,13 +78,13 @@ function fizzBuzz(array) {
   let resposta = [];
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      resposta.push("fizzBuzz");
+      resposta.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
-      resposta.push("fizz");
+      resposta.push('fizz');
     } else if (array[i] % 5 === 0) {
-      resposta.push("buzz");
+      resposta.push('buzz');
     } else {
-      resposta.push("bug!");
+      resposta.push('bug!');
     }
   }
   return resposta;
@@ -94,16 +94,16 @@ function fizzBuzz(array) {
 function convert1(array, X) {
   //convert X=1 encode, X=0 decode;
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === "a") {
-      array[i] = "1";
-    } else if (array[i] === "e") {
-      array[i] = "2";
-    } else if (array[i] === "i") {
-      array[i] = "3";
-    } else if (array[i] === "o") {
-      array[i] = "4";
-    } else if (array[i] === "u") {
-      array[i] = "5";
+    if (array[i] === 'a') {
+      array[i] = '1';
+    } else if (array[i] === 'e') {
+      array[i] = '2';
+    } else if (array[i] === 'i') {
+      array[i] = '3';
+    } else if (array[i] === 'o') {
+      array[i] = '4';
+    } else if (array[i] === 'u') {
+      array[i] = '5';
     }
   }
   return array;
@@ -111,16 +111,16 @@ function convert1(array, X) {
 
 function convert0(array, X) {
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === "1") {
-      array[i] = "a";
-    } else if (array[i] === "2") {
-      array[i] = "e";
-    } else if (array[i] === "3") {
-      array[i] = "i";
-    } else if (array[i] === "4") {
-      array[i] = "o";
-    } else if (array[i] === "5") {
-      array[i] = "u";
+    if (array[i] === '1') {
+      array[i] = 'a';
+    } else if (array[i] === '2') {
+      array[i] = 'e';
+    } else if (array[i] === '3') {
+      array[i] = 'i';
+    } else if (array[i] === '4') {
+      array[i] = 'o';
+    } else if (array[i] === '5') {
+      array[i] = 'u';
     }
   }
   return array;
@@ -139,7 +139,7 @@ function encode(entrada) {
   }
   return frase;
 }
-// console.log(encode("Hi There"));
+// console.log(encode('Hi There'));
 
 function decode(entrada) {
   let array = [];
@@ -153,13 +153,13 @@ function decode(entrada) {
   }
   return frase;
 }
-//  console.log("encode funcionando?" + encode('Hi there a e i o u'))
-//  console.log("decode funcionando?" + decode('H3 Th2r2 11 22 33 44 55'))
+//  console.log('encode funcionando?' + encode('Hi there a e i o u'))
+//  console.log('decode funcionando?' + decode('H3 Th2r2 11 22 33 44 55'))
 
 // Desafio 10
 function techList(array, name) {
   if (array.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   let saida = {};
   let emOrdem = array.sort(); // ordena o array da entrada
@@ -173,31 +173,31 @@ function techList(array, name) {
 
   return lista;
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fernando"));
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Fernando'));
 
 // Desafio 11
 function generatePhoneNumber(entrada) {
   let numeros = entrada;
   // testando se números são válidos
   if (numeros.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   let frequencia = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   for (let i in numeros) {
     if (numeros[i] < 0 || numeros[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     frequencia[numeros[i]] += 1;
   }
   for (let i in frequencia) {
     if (frequencia[i] >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // números aprovados. Hora de montar o número de telefone
-  numeros.unshift("(");
-  numeros.splice(3, 0, ")", " ");
-  numeros.splice(10, 0, "-");
+  numeros.unshift('(');
+  numeros.splice(3, 0, ')', ' ');
+  numeros.splice(10, 0, '-');
 
   let saida = numeros[0];
   for (let i = 1; i < numeros.length; i += 1) {
@@ -230,13 +230,13 @@ function hydrate(bebidas) {
     total += parseInt(matches[i], 10); // O '10' é para indicar a base decimal.
   }
   if (total === 1) {
-    return total + " copo de água";
+    return total + ' copo de água';
   } else {
-    return total + " copos de água";
+    return total + ' copos de água';
   }
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 module.exports = {
   calcArea,
   catAndMouse,
