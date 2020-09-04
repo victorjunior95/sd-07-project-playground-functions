@@ -141,14 +141,6 @@ function encode(stringEncode) {
 
 /* console.log(encode('Oi, tudo bem?')); */
 
-/* 
-a -> 1
-e -> 2
-i -> 3
-o -> 4
-u -> 5 
-*/
-
 /* ________________________________________________________________________________ */
 
 function decode(stringDecode) {
@@ -189,9 +181,14 @@ function techList(arrayTech, name) {
     return 'Vazio!';
   } else {
       for (let i = 0; i < arrayOrdenado.length; i += 1) {
-        aux.tech = arrayOrdenado[i]; 
-        aux.name = name;
-        objects[i] = Object.assign({},aux);
+        /* aux.tech = arrayOrdenado[i]; 
+        aux.name = name; */
+        aux = {
+          tech:arrayOrdenado[i], 
+          name:name
+        }
+        objects[i] = aux; 
+        /* Object.assign({},aux); esse método copia um objeto*/
       }
       return objects;
   } 
@@ -202,47 +199,31 @@ function techList(arrayTech, name) {
 /* ________________________________________________________________________________ */
 
 // Desafio 11
-function generatePhoneNumber(arrayTelefone) {
+/* function generatePhoneNumber(arrayTelefone) {
+  let aux = {};
   let contador = 0;
-  let numerosArray = [];
   let numeroTelefone = "";
   if (arrayTelefone.length != 11) {
     return 'Array com tamanho incorreto';
-  } else {
-    for (let i = 0; i < arrayTelefone.length; i += 1) {
-      if (arrayTelefone[i] < 0 || arrayTelefone[i] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      } else if (arrayTelefone[i] == 1) {
-        contador = contador + 1;
-          if (contador >= 3) {
-            return 'não é possível gerar um número de telefone com esses valores';
-        } else {
-          numerosArray.push(i);
-          numeroTelefone = numerosArray.join();  
-        }
-      }
-    }
   }
+  for (let i = 0; i < arrayTelefone.length; i += 1) {
+    if (aux[arrayTelefone[i]] = aux[arrayTelefone[i]]) {
+      contador = aux[arrayTelefone[i]] + 1;
+      if (contador === 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      } else if (aux[arrayTelefone[i]] != aux[arrayTelefone[i]]) {
+        numeroTelefone = arrayTelefone.push(i);
+        
+      }
+    } else {
+      contador = 1;
+    }
+    
+  }
+  return numeroTelefone;
 }
-/* se array [0] = 0 conta 1 é 1
-se array [1] = 1 conta 1 é 2
-se array [2] = 2 conta 1 é 3
-
-for (let i = 0; i < arrayNumeros.length; i += 1) {
-  if (maiorNumero < arrayNumeros[i]) {
-    maiorNumero = arrayNumeros[i];
-  } 
-}
-for (let j = 0; j < arrayNumeros.length; j += 1) {
-  if (maiorNumero === arrayNumeros[j]) {
-    contNumero = contNumero + 1;              
-  } 
-}
-return contNumero;
-} */
-
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+      
+console.log(generatePhoneNumber([-1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
 
 /* ________________________________________________________________________________ */
 
@@ -261,20 +242,37 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-console.log(triangleCheck(10, 14, 8));
-
-
+/* console.log(triangleCheck(10, 14, 8)); */
 
 /* ________________________________________________________________________________ */
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(barDaTrybe) {
+  let numeros = barDaTrybe.replace(/[^\d]+/g,',');
+  let array = numeros.split(',');
+  array.pop();
+  let novoArray = [];
+  let soma = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    novoArray.push(parseInt(array[i]));
+  }
+  for (let j = 0; j < novoArray.length; j += 1) {
+    soma += novoArray[j];
+  }
+  if (soma === 0) {
+    return 'Nenhum copo de água';
+  } else if (soma === 1) {
+    return '1 copo de água';
+  } else {
+    return soma + ' copos de água';
+  }
 }
+
+console.log(hydrate('2 cachaça, 5 cervejas e 1 copo de vinho'));
 
 /* ________________________________________________________________________________ */
 
-module.exports = {
+/* module.exports = {
   calcArea,
   catAndMouse,
   compareTrue,
@@ -289,4 +287,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+} */
