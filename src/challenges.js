@@ -159,7 +159,7 @@ function generatePhoneNumber(phoneNum) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck( lineA, lineB, lineC ) {
   if (((Math.abs(lineB - lineC)) > lineA > (lineB + lineC)) && ((Math.abs(lineA - lineC )) > lineB > (lineA + lineC)) && ((Math.abs(lineA - lineB)) >lineC > (lineA + lineB))){
     return false;
   } else {
