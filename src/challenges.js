@@ -166,9 +166,43 @@ function techList(nameTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(telefone) {
   // seu código aqui
-}
+  let contador = 0;
+  let contadorArmazenador = 0;
+  // Verificando tamanho:
+  if(telefone.length != 11){
+    return "Array com tamanho incorreto."
+  }
+  // Verificando se existem números repetidos salvando repetições no contador:
+  for(let index in telefone){    
+    for(let j in telefone){
+      if(telefone[index] == telefone[j]){
+        contador++;
+      }
+     }
+    if(contador >= 3){
+      contadorArmazenador = contador;
+    }
+    contador = 0;
+  }
+  // Verificando o contador:
+  if(contadorArmazenador >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  // Verificando se os valores estão entre 0 e 9:
+  for(let verif = 0; verif < 11; verif += 1 ){
+    if(telefone[verif] < 0 && telefone[verif] > 9){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  } 
+  // Hora da formatação:
+  return "(" + telefone[0] + telefone[1] + ")" + " " + telefone[2] + telefone[3] + telefone[4] + telefone[5] + telefone[6] + "-" +
+  telefone[7] + telefone[8] + telefone[9] + telefone[10];
+  }
+
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 
 // Desafio 12
 function triangleCheck() {
