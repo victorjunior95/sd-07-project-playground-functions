@@ -51,7 +51,7 @@ function highestCount(numbers) {
      } 
   }
 }
-highestCount([0,0,0])
+
 
 // Desafio 7
 function catAndMouse() {
