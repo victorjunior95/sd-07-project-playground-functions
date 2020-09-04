@@ -22,11 +22,11 @@ function splitSentence(recebeString) {
   let arrayParaImprimir = [];
 
   for (let i = 0; i < recebeString.length; i += 1) {
-    if (recebeString[0]===" "){
-      i += 1; 
-  } else if (recebeString[recebeString.length-1]===" "){
-      recebeString = recebeString.slice(0,recebeString.length-1);
-  } 
+    if (recebeString[0] === " ") {
+      i += 1;
+    } else if (recebeString[recebeString.length - 1] === " ") {
+      recebeString = recebeString.slice(0, recebeString.length - 1);
+    }
     if (recebeString[i] === " ") {
       palavraCortada = recebeString.slice(posicaoDoEspaco, i);
       arrayParaImprimir.push(palavraCortada);
@@ -153,8 +153,26 @@ function decode(stringEncodifique) {
 }
 
 // Desafio 10
-function techList() {
+function techList(nomesDeTecnologia, name) {
   // seu código aqui
+  nomesDeTecnologia = nomesDeTecnologia.sort();
+  let verificaVazio = "";
+
+
+    if (nomesDeTecnologia.length === 0) {
+      console.log("Vazio!");
+    } else {
+
+    listaDeNomes = {
+    tech: [],
+    name: "",
+  };
+
+  listaDeNomes["tech"] = nomesDeTecnologia;
+  listaDeNomes["name"] = name;
+
+  console.log(listaDeNomes);
+}
 }
 
 // Desafio 11
