@@ -57,6 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let jerry = 1;
   let tom = 1;
   let garfield = 1;
+  let result = '';
   jerry = mouse;
   tom = cat1;
   garfield = cat2;
@@ -70,12 +71,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (distanceGarfield === distanceTom) {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   } else if (distanceGarfield < distanceTom) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'cat1';
+    result = 'cat1';
   }
+  return result;
 }
 
 // Desafio 8
@@ -153,8 +155,22 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayOfTechs, name) {
+  let result = [];
+  let techs = [];
+  let nameOfStudent = '';
+  nameOfStudent = name;
+  techs = arrayOfTechs;
+  if (techs.length === 0) {
+    return 'Vazio';
+  }
+  for (let tech in techs) {
+    result.push({
+      tech: techs[tech],
+      name: nameOfStudent,
+    })
+  }
+  return result;
 }
 
 // Desafio 11
