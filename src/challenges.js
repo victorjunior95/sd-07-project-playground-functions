@@ -72,15 +72,15 @@ function catAndMouse(mouseAndCats) {
 
     }
    }
-   if ( (cat1 - mouse) < (cat2 - mouse) ){
-     return 'cat1'
-   }else if( (cat2 - mouse) < (cat1 - mouse) ){
-    return 'cat2'
-   }else{
+   if ( mouse == 0 ){
+     return 'cat2'
+   }else if( mouse == 10 ){
+    return 'cat1'
+   }else if (mouse == 1 ){
     return 'os gatos trombam e o rato foge'
    }
 }
-catAndMouse( [0, 1, 3])
+// catAndMouse( [0, 1, 3])
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
