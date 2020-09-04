@@ -78,6 +78,8 @@ function catAndMouse(mouseAndCats) {
    }
 }
 
+catAndMouse([5,9,9])
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
