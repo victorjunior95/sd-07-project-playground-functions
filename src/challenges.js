@@ -128,9 +128,12 @@ function decode(numeros) {
 }
 
 // Desafio 10
-function techList(tech, name) {
+function techList(array) {
+
+
   // seu código aqui
 }
+console.log(array())
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -153,6 +156,7 @@ module.exports = {
   catAndMouse,
   compareTrue,
   concatName,
+  encode,
   decode,
   fizzBuzz,
   footballPoints,
