@@ -125,7 +125,7 @@ function encode(string) {
 
   return join;
 }
-console.log(encode("hi there!"));
+// console.log(encode("hi there!"));
 
 function decode(string2) {
   let arrayString2 = string2.split("");
@@ -151,12 +151,23 @@ function decode(string2) {
   let join2 = arrayString2.join("");
   return join2;
 }
-console.log(decode("h3 th2r2!"));
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayNames,name) {
+  let arrayNames2 = arrayNames.sort();
+  let result = [];
+
+  for(let i = 0; i < arrayNames2.length; i += 1) {
+    result[i] = {tech:arrayNames2[i], name:name};
+  }
+  if(arrayNames.length == 0) {
+    return "Vazio!";
+  } else {
+    return result;
+  }
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
