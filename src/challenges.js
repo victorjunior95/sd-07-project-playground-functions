@@ -65,12 +65,12 @@ function fizzBuzz(array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       string.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
-     string.push('fizz');
-   } else if (array[i] % 5 === 0) {
-      string.push('buzz');
-    } else {
-      string.push('bug!');
-    }
+      string.push('fizz');
+    } else if (array[i] % 5 === 0) {
+     string.push('buzz');
+   } else {
+     string.push('bug!');
+   }
   }
   return string;
 }
