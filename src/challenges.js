@@ -34,14 +34,7 @@ return vencidos + empatados;
 // Desafio 6
 // Referência Freecode Camp material sobre Math.max.apply() 
 function highestCount() {
-  let greaterNumber = Math.max.apply(null, numbers);
-  let counter = 0;
-  for (let i = 0; i < numbers.length; i += 1) {
-      if (numbers[i] === greaterNumber) {
-          counter += 1;
-}
-}
-return counter
+  
 }
 
 // Desafio 7
