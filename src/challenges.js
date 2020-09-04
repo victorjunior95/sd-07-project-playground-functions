@@ -162,7 +162,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let valor3 = 2;
   for (i = 0; i < 3; i += 1) {
     if (
-      linhas[valor1] < linhas[valor2] + linhas[valor3] &&
+      linhas[valor1] < (linhas[valor2] + linhas[valor3]) &&
       Math.abs(linhas[valor2] - linhas[valor3])
     ) {
       condicao += 1;
