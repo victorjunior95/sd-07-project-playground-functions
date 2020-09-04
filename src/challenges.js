@@ -108,8 +108,6 @@ function techList(array,nome) {
   }
   return newArray
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
-
 
 // Desafio 11
 function generatePhoneNumber(a) {
@@ -147,11 +145,29 @@ function triangleCheck(lineA,lineB,lineC) {
   }
   return true
 }
-console.log(triangleCheck(10, 14, 8))
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+
+function hydrate(bebidas) {
+  let quantBebida = []
+  for (let i in bebidas) {
+    if (bebidas[i] == "1" ||
+    bebidas[i] == "2" ||
+    bebidas[i] == "3" ||
+    bebidas[i] == "4" ||
+    bebidas[i] == "5" ||
+    bebidas[i] == "6" ||
+    bebidas[i] == "7" ||
+    bebidas[i] == "8" ||
+    bebidas[i] == "9")
+    {quantBebida.push(bebidas[i])}
+    }
+  
+  let total = 0
+  for (let i in quantBebida){
+    quantBebida[i] = Number(quantBebida[i])
+    total += quantBebida[i]
+  }
+  return `${total} copos de água`
+  }
 
 
 module.exports = {
