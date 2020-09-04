@@ -233,15 +233,13 @@ generatePhoneNumber(numbersForPhones)
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  lineA = Math.abs(lineA)
-  lineB = Math.abs(lineB)
-  lineC = Math.abs(lineC)
+  absValue = Math.abs(lineA, lineB, lineC)
 
-  if (lineA < lineB + lineC) {
+  if (lineA < lineB + lineC && lineA > absValue) {
     return true
-  } else if (lineA < lineC + lineB) {
+  } else if (lineA < lineC + lineB && lineB > absValue) {
     return true
-  } else if (lineB < lineC + lineA) {
+  } else if (lineB < lineC + lineA && lineC > absValue) {
     return true
   }
   return false
