@@ -107,10 +107,10 @@ function encode(number) {
   let naturalNumber = '';
 
   for (let indice in number) {
-    if (number[indice] == 'a' || number[indice] == 'e' || number[indice] == 'i' || number[indice] == 'o' || number[indice] == 'u') {
-    naturalNumber += romeNumber[number[indice]];
+    if (number[indice] === 'a' || number[indice] === 'e' || number[indice] === 'i' || number[indice] === 'o' || number[indice] === 'u') {
+      naturalNumber += romeNumber[number[indice]];
     } else {
-    naturalNumber += number[indice];
+      naturalNumber += number[indice];
     }
   }
   return naturalNumber;
