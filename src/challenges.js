@@ -240,7 +240,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 
 }
-console.log(triangleCheck(10, 14, 8))
+
 // Desafioo 13
 function hydrate(bebida) {
   let copo = "copos"
