@@ -159,8 +159,7 @@ function suport(phone2) {
   for (let i = 7; i < phone2.length; i += 1) {
     completePhone += `${phone2[i]}`;
   }
-  answer = completePhone;
-  return answer;
+  return completePhone;
 }
 
 // Desafio 11
@@ -186,7 +185,7 @@ function generatePhoneNumber(phone) {
   } else if (repeat >= 3) {
     answer = 'não é possível gerar um número de telefone com esses valores';
   } else if (answer !== 'Array com tamanho incorreto.' && answer !== 'não é possível gerar um número de telefone com esses valores') {
-    suport(phone);
+    answer = suport(phone);
   }
   lastReturn = answer;
   return lastReturn;
