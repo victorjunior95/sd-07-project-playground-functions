@@ -16,9 +16,64 @@ function calcArea(base, height) {
   return area;
 }
 
-// Desafio 3
-function splitSentence(frase) {
+function splitSentence(fraseDesafio3) {
+
+  //essa funcao busca o indice do inicio e fim de cada palavra dentro do array, e nos retorna um novo array com esses "pares".
+  function inicioFimPalavra(fraseInteira) {
+      let indiceEspacos = [0];
+      for (let i = 0; i <= fraseInteira.length; i += 1) {
+          if (fraseInteira[i] === " ") {
+              indiceEspacos.push(i - 1);
+              indiceEspacos.push(i + 1);
+          }
+      }
+      indiceEspacos.push(fraseInteira.length - 1);
+      return indiceEspacos;
+  }
+
+  //vamos criar duas função que dado um array ela cria outro array com indices 0, 2, 4, .... e outro com 1, 3, 5... (indices do array dado).
+  function arrayIndiceI(arrayInicioFimPalavra) {
+      let arrayIndiceI = [];
+      for (let i = 0; i < arrayInicioFimPalavra.length; i += 2) {
+          arrayIndiceI.push(arrayInicioFimPalavra[i]);
+      }
+      return arrayIndiceI;
+  }
+
+  function arrayIndiceF(arrayInicioFimPalavra) {
+      let arrayIndiceF = [];
+      for (let i = 1; i < arrayInicioFimPalavra.length; i += 2) {
+          arrayIndiceF.push(arrayInicioFimPalavra[i]);
+      }
+      return arrayIndiceF;
+  }
+
+  //escreve uma palavra dado uma sting de uma frase e dois números como parametros que são os indices Inicio e Fim.
+  function escrevePlavra(stringDados, indiceI, indiceF) {
+      let palavraSendoFormada = "";
+      for (k = indiceI; k <= indiceF; k += 1) {
+          palavraSendoFormada += stringDados[k];
+      }
+      let palavraFormada = palavraSendoFormada;
+      return palavraFormada;
+  }
+
+  let arrayIF = inicioFimPalavra(fraseDesafio3);
+  let arrayComIndicesI = arrayIndiceI(arrayIF);
+  let arrayComIndicesF = arrayIndiceF(arrayIF);
+  let valorIndiceI = 0;
+  let valorIndiceF = 0;
+  let palavraEscrita = "";
+  let arrayFinal = [];
+  for (let a = 0; a < arrayComIndicesI.length; a += 1) {
+      valorIndiceI = arrayComIndicesI[a];
+      valorIndiceF = arrayComIndicesF[a];
+      palavraEscrita = escrevePlavra(fraseDesafio3, valorIndiceI, valorIndiceF);
+      arrayFinal.push(palavraEscrita);
+  }
+  return arrayFinal;
 }
+console.log(splitSentence("vinicius muniz marin"))
 
 // Desafio 4
 function concatName(arrayDeStrings) {
@@ -169,8 +224,6 @@ function techList(nomesTec, name) {
     return arrayDeAulas;
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"
-));
 
 // Desafio 11
 function generatePhoneNumber() {
