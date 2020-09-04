@@ -78,25 +78,43 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   // seu código aqui
-  let arrayStrings = [];
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
-      arrayStrings.push('fizz');
-    } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
-      arrayStrings.push('buzz');
-    } else if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-      arrayStrings.push('fizzBuzz');
+  let arrayString = fizzOrBuzz(numbers);
+  let strings = {
+    3: 'fizz',
+    5: 'buzz',
+    '35': 'fizzBuzz',
+    2: 'bug!'
+  }
+  let sentence = [];
+  for (let indice in arrayString) {
+    if (arrayString[indice] === 5 || arrayString[indice] === 3 || arrayString[indice] === '35' || arrayString[indice] === 2) {
+      sentence.push(strings[arrayString[indice]]);
     } else {
-      arrayStrings.push('bug!');
+      sentence.push(arrayString[indice]);
     }
   }
-  return arrayStrings;
+  return sentence;
+}
+function fizzOrBuzz(numbers){
+     
+  for (let i = 0; i < numbers.length; i += 1) {    
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
+      numbers.splice(i, 1, 3);
+    } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
+      numbers.splice(i, 1, 5);
+    } else if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+      numbers.splice(i, 1, '35');
+    } else{
+      numbers.splice(i, 1, 2);
+    }
+  }
+  return numbers;
 }
 
 // Desafio 9
 function encode(number) {
   // seu código aqui
-  let romeNumber = {
+  let letter = {
     a: 1,
     e: 2,
     i: 3,
@@ -104,16 +122,16 @@ function encode(number) {
     u: 5,
   };
   // let naturalNumbers = [];
-  let naturalNumber = '';
+  let stringWithNumbers = '';
 
   for (let indice in number) {
     if (number[indice] === 'a' || number[indice] === 'e' || number[indice] === 'i' || number[indice] === 'o' || number[indice] === 'u') {
-      naturalNumber += romeNumber[number[indice]];
+      stringWithNumbers += letter[number[indice]];
     } else {
-      naturalNumber += number[indice];
+      stringWithNumbers += number[indice];
     }
   }
-  return naturalNumber;
+  return stringWithNumbers;
 }
 
 function decode(letter) {
