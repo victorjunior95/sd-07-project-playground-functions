@@ -24,13 +24,16 @@ function calcArea(base, height) {
 function splitSentence(word) {
   let array = word.split(' ');
   for (let i = 0; i < array.length - 1; i += 1) {
-    array[i] +='';
+    array[i] += '';
   }
   return array;
 }
 
 //Desafio 4
 function concatName(array) {
+  let myArray = array[array.length - 1] + ', ' + array[0];
+
+  return myArray;
 }
 
 // Desafio 5
@@ -41,7 +44,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  // let arrayNumbers = numbers.split();
+  let arrayNumbers = numbers.split();
   let maxNum = numbers[0];
   let count = 0;
 
@@ -147,31 +150,31 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber() {
-//   let newFormat = array;
-//   let double = 0;
-//
-//   if (newFormat.length !== 11) {
-//     console.log("Array com tamanho incorreto.");
-//   } else {
-//     for (let i = 0; i < newFormat.length; i += 1) {
-//       let increase = 1;
-//       for (let j = i + 1; j < newFormat.length; j += 1) {
-//         if (newFormat[i] === newFormat[j]) {
-//           increase += 1;
-//         }
-//         if (increase > double) {
-//           double = increase;
-//         }
-//       }
-//       if (increase > 3) {
-//         console.log("não é possível gerar um número de telefone com esses valores");
-//       } else {
-//         newFormat = array.join('');
-//         newFormat = newFormat.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
-//       }
-//     }
-//     console.log(newFormat);
-//   }
+  let newFormat = array;
+  let double = 0;
+
+  if (newFormat.length !== 11) {
+    console.log("Array com tamanho incorreto.");
+  } else {
+    for (let i = 0; i < newFormat.length; i += 1) {
+      let increase = 1;
+      for (let j = i + 1; j < newFormat.length; j += 1) {
+        if (newFormat[i] === newFormat[j]) {
+          increase += 1;
+        }
+        if (increase > double) {
+          double = increase;
+        }
+      }
+      if (increase > 3) {
+        console.log("não é possível gerar um número de telefone com esses valores");
+      } else {
+        newFormat = array.join('');
+        newFormat = newFormat.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+      }
+    }
+    console.log(newFormat);
+  }
 }
 
 // Desafio 12
@@ -180,8 +183,8 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+
 }
 
 module.exports = {
@@ -218,3 +221,5 @@ fizzBuzz([2, 15, 7, 9, 45]);
 generatePhoneNumber([2, 11, 3, 4, 5, 6, 7, 8, 9, 1, 2, 9]);
 
 splitSentence('foguete');
+hydrate("9 copos de cerveja, 10 copos de vodka");
+concatName(["marcos", "eduardo", "murilo", "Silva"]);
