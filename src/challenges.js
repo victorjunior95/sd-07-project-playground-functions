@@ -195,16 +195,20 @@ function generatePhoneNumber(phone) {
 function triangleCheck(lineA, lineB, lineC) {
   let lineA2 = lineB + lineC;
   let lineB2 = lineA + lineC;
-  let lineC2 = lineA - lineB;
+  let lineC2 = lineA + lineB;
+  let different = Math.abs(lineA - lineB - lineC);
   let result;
 
   if (lineA < lineA2 && lineB < lineB2 && lineC < lineC2) {
+    result = true;
+  } else if (lineA > different && lineB > different && lineC > different){
     result = true;
   } else {
     result = false;
   }
   return result;
 }
+console.log(triangleCheck(16, 20, 30));
 
 // Desafio 13
 function hydrate() {
