@@ -162,7 +162,7 @@ function techList(arrayOfTechs, name) {
   nameOfStudent = name;
   techs = arrayOfTechs;
   if (techs.length === 0) {
-    return 'Vazio';
+    return 'Vazio!';
   }
   for (let tech in techs) {
     result.push({
