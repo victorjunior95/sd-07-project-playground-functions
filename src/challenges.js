@@ -158,11 +158,11 @@ function hydrate(string) {
     integer = parseInt(numbers[index]);
     totalNumbers += integer;
     console.log(integer);
+    if (totalNumbers === 1) {
+      return `${totalNumbers} copo de água`;
+    }
+    return `${totalNumbers} copos de água`;
   }
-  if (totalNumbers === 1) {
-    return `${totalNumbers} copo de água`;
-  }
-  return `${totalNumbers} copos de água`;
 }
 
 hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
