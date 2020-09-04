@@ -184,6 +184,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
+//
 
 // Desafio 13
 function hydrate() {
