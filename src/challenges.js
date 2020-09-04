@@ -195,9 +195,7 @@ function hydrate(array) {
     quantidade += inteiro
   }
       return `${quantidade} copos de água`
-    }
-
-console.log(hydrate())
+}
 module.exports = {
   calcArea,
   catAndMouse,
