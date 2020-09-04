@@ -187,15 +187,17 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(array) {
   let quantidade = 0;
-  let string = array.split(" ")
-  for(i = 0; i < string.length; i += 1){
-    if(array[i] <= 9 && array[i] >= 1){
-        quantidade += array[i]
-    }
-  }
-  return `${quantidade} copos de água`
-}
+  let numerais = /\d+/g;
+  let numero = array.match(numerais);
 
+  for(i = 0; i < numero.length; i += 1){
+    let inteiro = parseInt(numero[i])
+    quantidade += inteiro
+  }
+      return `${quantidade} copos de água`
+    }
+
+console.log(hydrate())
 module.exports = {
   calcArea,
   catAndMouse,
