@@ -166,7 +166,8 @@ function hydrate(bebidas) {
     quantBebida[i] = Number(quantBebida[i])
     total += quantBebida[i]
   }
-  return `${total} copos de água`
+  if (total == 1) return "1 copo de água"
+  else return `${total} copos de água`
   }
 
 
