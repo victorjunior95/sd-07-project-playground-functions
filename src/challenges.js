@@ -69,22 +69,21 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let fizzBussReturned = [];
 
-  function insert(value){
-    fizzBussReturned.push(value);
-  }
-
   for (let num = 0; num < numbers.length; num += 1) {
     let isDiv3 = numbers[num] % 3 === 0;
     let isDiv5 = numbers[num] % 5 === 0;
 
     if (isDiv3 && !isDiv5) {
-      insert('fizz');
-    } else if (!isDiv3 && isDiv5) {
-      insert('buzz');
-    } else if (isDiv3 && isDiv5) {
-      insert('fizzBuzz');
-    } else {
-      insert('bug!');
+      fizzBussReturned.push('fizz');
+    }
+    if (!isDiv3 && isDiv5) {
+      fizzBussReturned.push('buzz');
+    }
+    if (isDiv3 && isDiv5) {
+      fizzBussReturned.push('fizzBuzz');
+    } 
+    if (!isDiv3 && !isDiv5) {
+      fizzBussReturned.push('bug!');
     }
   }
 
