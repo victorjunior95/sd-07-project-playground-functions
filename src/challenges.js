@@ -194,7 +194,13 @@ function hydrate(array) {
     let inteiro = parseInt(numero[i])
     quantidade += inteiro
   }
-      return `${quantidade} copos de água`
+  if(quantidade == 1){
+    return `${quantidade} copo de água`
+  }
+  else{
+    return `${quantidade} copos de água`
+  }
+
 }
 module.exports = {
   calcArea,
