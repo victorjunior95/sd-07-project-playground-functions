@@ -136,10 +136,18 @@ function generatePhoneNumber(a) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  let lines = [lineA,lineB,lineC]
+  for (let i in lines) {
+    for (let j in lines) {
+      for (let k in lines) {
+        if (lines[i]>lines[j]+lines[k]) {return false}
+      }
+    }
+  }
+  return true
 }
-
+console.log(triangleCheck(10, 14, 8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
