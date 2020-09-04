@@ -89,7 +89,7 @@ function highestCount(numbers) {
     return "Favor verifique os dados inseridos"
   }
 }
-console.log(highestCount(numbers));
+//console.log(highestCount(numbers));
 
 // Desafio 7
 let cat1 = 9;
@@ -236,9 +236,29 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+let lineA = 4;
+let lineB = 7;
+let lineC = 8;
+
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  var res = Boolean;
+  var abs = function (num1, num2) {
+    return Math.abs(num1 - num2)
+  }
+
+  if (lineA > 0 && lineB > 0 && lineC > 0) {
+    if ((lineA < lineB + lineC) && (lineA > abs(lineB, lineC)) && (lineB < lineA + lineC) && (lineB > abs(lineA, lineC)) && (lineC < lineA + lineB) && (lineC > abs(lineA, lineB))) {
+      res = true;
+    } else {
+      res = false;
+    }
+  } else {
+    res = false;
+  }
+  return res;
 }
+console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
 function hydrate() {
