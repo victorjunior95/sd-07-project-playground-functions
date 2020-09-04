@@ -110,7 +110,7 @@ function techList(array, name) {
   }
   array.sort()
   for (let i of array) {
-    obj.push({ tech: i, name})
+    obj.push({ tech: i, name })
   }
   return obj
 }
@@ -118,10 +118,10 @@ function techList(array, name) {
 function generatePhoneNumber(arrayN) {
   let res = ''
   for (let num in arrayN) {
-    let dup = 0
     if (arrayN.length !== 11) {
       res = 'Array com tamanho incorreto.'
     }
+    let dup = 0
     for (let numD in arrayN) {
       if (arrayN[num] === arrayN[numD]) {
         dup += 1;
@@ -136,7 +136,7 @@ function generatePhoneNumber(arrayN) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return a + b > c && a + c > b && b + c > a
+  return lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA
 }
 
 // Desafio 13
