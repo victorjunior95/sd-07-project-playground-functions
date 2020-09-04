@@ -1,9 +1,11 @@
 // Desafio 1
 function compareTrue(boolA, boolB) {
-  if (boolA && boolB === true) return true;
-  else return false;
+  let result = false;
+  if (boolA && boolB === true) {
+    result = true;
+  }
+  return result;
 }
-
 // Desafio 2
 function calcArea(height, base) {
   let area = (base * height) / 2;
@@ -70,9 +72,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanceGarfield === distanceTom) {
     return 'os gatos trombam e o rato foge';
   } else if (distanceGarfield < distanceTom) {
-    return `cat2`;
+    return 'cat2';
   } else {
-    return `cat1`;
+    return 'cat1';
   }
 }
 
@@ -97,7 +99,7 @@ function fizzBuzz(arrayNumbers) {
 function encode(string) {
   let word = '';
   word = string;
-  codedWord = '';
+  let codedWord = '';
   for (let letter in word) {
     switch (word[letter]) {
       case 'a':
@@ -124,7 +126,7 @@ function encode(string) {
 function decode(string) {
   let word = '';
   word = string;
-  decodedWord = '';
+  let decodedWord = '';
   for (let letter in word) {
     switch (word[letter]) {
       case '1':
