@@ -159,8 +159,65 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  if(numeros.length == 11){
+    let listSaida = []
+    let NumeroRepetido = numeros.slice()
+    for(let conf in NumeroRepetido.sort()){
+        let count = 0
+        for(let i in numeros){
+            if(NumeroRepetido[conf] == numeros[i]){
+                count += 1
+                if(count == 3){
+                    return "não é possível gerar um número de telefone com esses valores"
+                }
+            }
+            if(numeros[i] < 0 || numeros[i] > 9){
+                    return "não é possível gerar um número de telefone com esses valores"
+                }                
+        }
+    }
+    for(let i in numeros){
+        if(i == 0 ){
+            listSaida.push(`(${numeros[i]}`)
+        }
+        if(i == 1 ){
+            listSaida.push(`${numeros[i]})`)
+        }
+        if(i == 2 ){
+            listSaida.push(` ${numeros[i]}`)
+        }
+        if(i == 3 ){
+            listSaida.push(`${numeros[i]}`)
+        }
+        if(i == 4 ){
+            listSaida.push(`${numeros[i]}`)
+        }
+        if(i == 5 ){
+            listSaida.push(`${numeros[i]}`)
+        }
+        if(i == 6 ){
+            listSaida.push(`${numeros[i]}`)
+        }
+        if(i == 7 ){
+            listSaida.push(`-${numeros[i]}`)
+        }
+        if(i == 8 ){
+            listSaida.push(`${numeros[i]}`)
+        }
+        if(i == 9 ){
+            listSaida.push(`${numeros[i]}`)
+        }
+        if(i == 10 ){
+            listSaida.push(`${numeros[i]}`)
+        }
+    }
+  ret = listSaida.join("")    
+  }else{
+    return "não é possível gerar um número de telefone com esses valores"
+  }
+return ret        
 }
+
 
 // Desafio 12
 function triangleCheck() {
