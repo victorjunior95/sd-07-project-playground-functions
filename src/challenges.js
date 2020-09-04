@@ -211,8 +211,7 @@ function verifyErros(phoneNumber) {
 }
 
 function generatePhoneNumber(phoneNumber) {
-  
-  if(verifyErros(phoneNumber) !== null) return smsError;
+  if (verifyErros(phoneNumber) !== null) return verifyErros(phoneNumber);
 
   let phoneFormated = '(';
 
