@@ -69,10 +69,10 @@ function fizzBuzz(array) {
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       string.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
-    string.push('fizz');
-  } else if (array[i] % 5 === 0) {
-  string.push('buzz');
-}
+      string.push('fizz');
+    } else if (array[i] % 5 === 0) {
+    string.push('buzz');
+  }
   }
   return (string);
 }
@@ -109,7 +109,7 @@ function techList(array, name) {
   for (let i in sArray) {
     nItem = {
       tech: sArray[i],
-      name: name
+      name: 'name'
     }
     nArray.push(nItem);
   }
