@@ -127,7 +127,7 @@ function techList(techName, name) {
   if (techName.length == 0 ){
     return "Vazio!";
   } else {
-    for (let i in techName) { /* objeto[propriedade] = "valor da propriedade" */
+    for (let i in techName) {
       techNameList[i] = { 
       tech: `${techName[i]}`,
       name: `${name}`
@@ -138,8 +138,24 @@ function techList(techName, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNum) {
+  let repeat3 = 0;
+  if (phoneNum.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (let i in phoneNum) {
+    repeat3 = 0;
+    if (phoneNum[i] < 0 || phoneNum[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }for ( let j in phoneNum) {
+      repeat3 = ( phoneNum[i] == phoneNum[j]) ? repeat3 + 1 : repeat3;
+    }
+    if (repeat3 >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  let phoneFormat = (`(${phoneNum[0]}`+`${phoneNum[1]})`+`${phoneNum.slice(2,6).join("")}`+`-${phoneNum.slice(7,12).join("")}`)
+    return phoneFormat;
 }
 
 // Desafio 12
