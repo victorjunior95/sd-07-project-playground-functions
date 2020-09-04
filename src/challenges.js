@@ -153,7 +153,7 @@ function triangleCheck() {
 function hydrate(string) {
   let numbers = string.match(/\d+/g);
   let totalNumbers = 0;
-  let integer;
+  let integer = 0;
   for (let index in numbers) {
     integer = parseInt(numbers[index]);
     totalNumbers += integer;
