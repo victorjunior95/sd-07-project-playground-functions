@@ -273,6 +273,9 @@ let lineB = 2;
 let lineC = 1000;
 
 function triangleCheck(lineA, lineB, lineC) {
+
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
   } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
@@ -285,10 +288,31 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+
+let request = "1 cerveja";
+
+function hydrate(request) {
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  let pieceRequest = request.split(' ');
+  let cont = 0;
+  let pieceRequestArr = [];
+  let pieceRequestStr = '';
+  let result = '';
+
+  for (i in pieceRequest) {
+    // https://stackoverflow.com/questions/10003683/extract-get-a-number-from-a-string (asgoth)
+    if (pieceRequest[i].match(/\d/g) != null) {
+      pieceRequestArr = pieceRequest[i].match(/\d/g);
+      pieceRequestStr = pieceRequestArr.join("");
+  
+      cont += parseInt(pieceRequestStr);
+    }
+  }
+  cont > 1 ? result = `${cont} copos de água` : result = `${cont} copo de água`;
+  return result;
 }
 
+console.log(hydrate(request));
 
 module.exports = {
   calcArea,
