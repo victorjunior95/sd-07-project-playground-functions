@@ -158,17 +158,17 @@ function decode(textDecode) {
 }
 
 // Desafio 10
-function techList(techNames,name) {
+function techList(techNames, name) {
   const lists = techNames.sort();
 
   const listReturned = [];
 
   if (lists.length === 0) return 'Vazio!';
 
-  for (let list of lists) {
+  for (let tech of lists) {
     listReturned.push({
-      tech: list,
-      name: name
+      tech,
+      name,
     });
   }
   return listReturned;
@@ -179,10 +179,10 @@ function generatePhoneNumber(phoneNumber) {
   // return phone number formated
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  //verifica se existe mais ou menos de 11 número e retorna erro
+  // verifica se existe mais ou menos de 11 número e retorna erro
   if (phoneNumber.length !== 11) return 'Array com tamanho incorreto.';
 
-  //verifica se números são diferentes do numbers
+  // verifica se números são diferentes do numbers
   for (let i of phoneNumber) {
     if (!(i in numbers)) return 'não é possível gerar um número de telefone com esses valores';
   }
@@ -196,10 +196,10 @@ function generatePhoneNumber(phoneNumber) {
   for (let pos in phoneNumber) {
     if (pos >= 0 && pos <= 1) {
       updatePhone(pos)
-      if (pos == 1) phoneFormated += ') ';
+      if (pos === 1) phoneFormated += ') ';
     } else if (pos >= 2 && pos <= 6) {
       updatePhone(pos)
-      if (pos == 6) phoneFormated += '-';
+      if (pos === 6) phoneFormated += '-';
     } else if (pos >= 7 && pos <= 10) {
       updatePhone(pos)
     }
@@ -210,7 +210,7 @@ function generatePhoneNumber(phoneNumber) {
   for (let i of phoneNumber) {
     for (let j of phoneNumber) {
       if (i === j) countRepeatValue += 1;
-      if (countRepeatValue >= 3) return "não é possível gerar um número de telefone com esses valores";
+      if (countRepeatValue >= 3) return 'não é possível gerar um número de telefone com esses valores';
     }
     countRepeatValue = 0;
   }
@@ -221,11 +221,12 @@ function generatePhoneNumber(phoneNumber) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // checa se é um trinagulo
   let isTriangle = true;
+
   if (!(lineA <= lineB + lineC && lineA > Math.abs(lineB - lineC))) isTriangle = false;
   if (!(lineB <= lineA + lineC && lineB > Math.abs(lineA - lineC))) isTriangle = false;
   if (!(lineC <= lineA + lineB && lineC > Math.abs(lineA - lineB))) isTriangle = false;
+  
   return isTriangle;
 }
 
