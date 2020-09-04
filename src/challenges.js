@@ -175,7 +175,7 @@ function isPossible(phoneNumber) {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   for (let i of phoneNumber) {
-    if (!(i in numbers)) false;
+    if (!(i in numbers)) return false;
   }
 
   return true;
