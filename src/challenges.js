@@ -17,13 +17,18 @@ function calcArea(base,height) {
   let area = (base*height)/2;
   return area;
 }
-let result = calcArea(10,20);
-console.log("Resultado desafio 2: "+result);
+//let result = calcArea(10,20);
+//console.log("Resultado desafio 2: "+result);
 
 // Desafio 3
-function splitSentence() {
+let frase ='go Trybe'
+function splitSentence(frase) {
   // seu código aqui
+  let array = frase.split(" ");
+  return array;
 }
+//let result = splitSentence(frase);
+//console.log("Resultado desafio 3: "+result);
 
 // Desafio 4
 function concatName() {
