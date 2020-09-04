@@ -48,40 +48,53 @@ function highestCount(listN) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse)
   let dist2 = Math.abs(cat2 - mouse)
+  let res = ''
   if (dist1 === dist2) {
-    return 'os gatos trombam e o rato foge';
+    res = 'os gatos trombam e o rato foge';
   }
   if (dist1 < dist2) {
-    return 'cat1';
-  } 
-  if (dist2 < dist1) {
-    return 'cat2';
+    res = 'cat1';
   }
+  if (dist2 < dist1) {
+    res = 'cat2';
+  }
+  return res
 }
 
 // Desafio 8
 function fizzBuzz(arrayNum) {
-  for (let i in arrayNum) {
+  let res = []
+  for (let i = 0; i < arrayNum.length; i += 1) {
     if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
-      return 'FizzBuzz'
-    } 
-    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
-      return 'Fizz'
-    }
-    if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
-      return 'Buzz'
-    } else {
-      return 'bug!'
-    }
+      res.push('fizzBuzz')
+    } else if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
+      res.push('fizz')
+    } else if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
+      res.push('buzz')
+    } else res.push('bug!')
   }
+  return res
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let res = string
+  let code = {a: 1, e: 2, i: 3, o: 4, u: 5}
+  for (letra = 0; letra < string.length ; letra++) {
+    for (i in code) {
+      res = res.replace(i, code[i]);
+    }
+  }
+  return res
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let res = string
+  res = res.replace(/1/g , 'a');
+  res = res.replace(/2/g , 'e');
+  res = res.replace(/3/g , 'i');
+  res = res.replace(/4/g , 'o');
+  res = res.replace(/5/g , 'u');
+  return res;
 }
 
 // Desafio 10
