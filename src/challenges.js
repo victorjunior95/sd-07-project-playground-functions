@@ -155,9 +155,10 @@ function hydrate(string) {
   let totalNumbers = 0;
   let integer = 0;
   for (let index in numbers) {
-    integer = parseInt(numbers[index]);
-    totalNumbers += integer;
-    console.log(integer);
+    if (numbers.hasOwnProperty(index)) {
+      integer = parseInt(numbers[index], 10);
+      totalNumbers += integer;
+    }
   }
   if (totalNumbers === 1) {
     return `${totalNumbers} copo de água`;
