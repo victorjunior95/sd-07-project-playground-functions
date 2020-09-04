@@ -170,9 +170,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+// Desafio 10
+
+function techList(array, name) {
+    let result = [];
+    let user = name;
+    let techOrd = array.sort();
+    for (let i = 0; i < techOrd.length; i+=1) {
+       var obj = {"tech":techOrd[i],"name":user};  
+       result.push(obj);  
+    }
+    
+    return result;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
