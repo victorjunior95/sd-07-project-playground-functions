@@ -45,14 +45,21 @@ function footballPoints(wins, ties) {
   return sum;
 }
 
-// Desafio 6
-function highestCount(arrayNumbers) {
-  let high = arrayNumbers[0];
-  for (let i = 0; i <= arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] > high) {
-      high = arrayNumbers[i];
+// Função suporte para Desafio 6
+function suport6(theHigh) {
+  let isHigh = theHigh[0];
+  for (let i = 0; i <= theHigh.length; i += 1) {
+    if (theHigh[i] > isHigh) {
+      isHigh = theHigh[i];
     }
   }
+  return isHigh;
+}
+
+
+// Desafio 6
+function highestCount(arrayNumbers) {
+  let high = suport6(arrayNumbers);
   let repeat = 0;
   for (let index = 0; index <= arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] === high) {
@@ -149,7 +156,7 @@ function techList(tech, firstName) {
 }
 
 // Função suporte para Desafio 11
-function suport(phone2) {
+function suport11(phone2) {
   let firstPart = `(${phone2[0]}${phone2[1]}) `;
   for (let i = 2; i <= 6; i += 1) {
     firstPart += `${phone2[i]}`;
@@ -162,19 +169,24 @@ function suport(phone2) {
   return completePhone;
 }
 
+// 2ª Função suporte para o Desafio 11 
+function thisRepeat(what) {
+  let repetition = 0;
+  for (let k = 0; k < what.length; k += 1) {
+    for (let l = k + 1; l < what.length; l += 1) {
+      if (what[k] === what[l]) {
+        repetition += 1;
+      }
+    }
+  }
+  return repetition;
+}
+
 // Desafio 11
 function generatePhoneNumber(phone) {
   let answer = '';
   let lastReturn;
-  let repeat = 0;
-  for (let k = 0; k < phone.length; k += 1) {
-    for (let l = k + 1; l < phone.length; l += 1) {
-      if (phone[k] === phone[l]) {
-        repeat += 1;
-      }
-    }
-  }
-  repeat -= 1;
+  let repeat = thisRepeat(phone) - 1;
   for (let j = 0; j < phone.length; j += 1) {
     if (phone[j] < 0 || phone[j] > 9) {
       answer = 'não é possível gerar um número de telefone com esses valores';
@@ -185,7 +197,7 @@ function generatePhoneNumber(phone) {
   } else if (repeat >= 3) {
     answer = 'não é possível gerar um número de telefone com esses valores';
   } else if (answer !== 'Array com tamanho incorreto.' && answer !== 'não é possível gerar um número de telefone com esses valores') {
-    answer = suport(phone);
+    answer = suport11(phone);
   }
   lastReturn = answer;
   return lastReturn;
