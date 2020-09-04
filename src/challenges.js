@@ -200,10 +200,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+    let cupWater = 0;
+   let newString = string.replace(/\D/g, '');
+   
+   for (let i = 0; i < newString.length; i += 1) {
+    cupWater += parseInt(newString[i]);
+    }
 
+    if (cupWater < 2){
+      return `${cupWater} copo de água`;
+    } else {
+      return `${cupWater} copos de água`
+    }
+}
 
 module.exports = {
   calcArea,
