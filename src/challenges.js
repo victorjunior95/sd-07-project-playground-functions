@@ -166,7 +166,7 @@ function encode(myStr) {
   let vo = vow.replace(/u/gi, "5");
   return  vo
 }
-console.log(encode(myStr));
+//console.log(encode(myStr));
 let myOtherStr = "h3 th2r2!";
 
 function decode(myOtherStr) {
@@ -178,12 +178,55 @@ function decode(myOtherStr) {
   let myNum = myNumb.replace(/5/g, "u");
   return myNum
 }
-console.log(decode(myOtherStr));
+//console.log(decode(myOtherStr));
 
 // Desafio 10
-function techList() {
+
+let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Lucas";
+
+function techList(tech, name) {
   // seu código aqui
+  let techNameObject = {
+    tech: "React",
+    name: "Lucas"
+  }
+  let techName = {
+    tech: "Jest",
+    name: "Lucas"
+  }
+  let techNam = {
+    tech: "HTML",
+    name: "Lucas"
+  }
+  let techNa = {
+    tech:"CSS",
+    name: "Lucas"
+  }
+  let techN = {
+    tech:"JavaScript",
+    name: "Lucas"
+  }
+  let techNameArray = [];
+  techNameArray.push(techNameObject);
+  techNameArray.push(techName);
+  techNameArray.push(techNam);
+  techNameArray.push(techNa);
+  techNameArray.push(techN);
+
+  function techOrder (x, y) {
+    return x.tech < y.tech ? -1 : x.tech > y.tech ? 1 : 0;
+  }
+  techNameArray.sort(techOrder);
+  if (techNameArray.length > 0) {
+    return techNameArray;
+  } else if (techNameArray.length === 0) {
+    return "Vazio!"
+  } else {
+    return "Tem alguma coisa muito errada aí"
+  }
 }
+console.log(techList(tech, name));
 
 // Desafio 11
 function generatePhoneNumber() {
