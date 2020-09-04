@@ -154,7 +154,7 @@ function generatePhoneNumber(arrayNumber) {
     }
   }
 
-  arrayNumber = arrayNumber.join("");
+  arrayNumber = arrayNumber.join('');
 
   let phoneNumber = `(${arrayNumber.slice(0, 2)}) ${arrayNumber.slice(2, 7)}-${arrayNumber.slice(7, 11)}`;
 
