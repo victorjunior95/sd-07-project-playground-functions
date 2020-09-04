@@ -29,12 +29,17 @@ function splitSentence(param) {
   return retorno; 
 }
 
-// Desafio 4'
+// Desafio 4
+let nomes = ["lucas","Silvia","Vitor"];
 function concatName(param) {
-  let arrayDesafio4 = param;
-  console.log("'"+arrayDesafio4[arrayDesafio4.length-1] + "," +" "+ arrayDesafio4[0]+"'");
+  let arrayDesafio4 = param[0];
+  let ultimoNome = arrayDesafio4.toString();
+  let array_inverted = param[param.length -1];
+  let primeiroNome = array_inverted.toString();
+  console.log("'"+ultimoNome+","+" "+primeiroNome+"'");
   return arrayDesafio4;
 }
+concatName(nomes);
 
 // Desafio 5
 function footballPoints(wins,ties) {
