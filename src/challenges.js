@@ -210,12 +210,13 @@ function generatePhoneNumber( a ) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(a , b , c) {
   return Math.abs(b - c) < a < (b + c) ? true : false ;
 }
 
 // Desafio 13
 function hydrate(s) {
+
   let result = s.length + "copos de água";
   return result ;
 }
