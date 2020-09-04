@@ -158,12 +158,12 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numeros) {
   if(numeros.length == 11){
-    let listSaida = []
-    let NumeroRepetido = numeros.slice()
+    let listSaida = [];
+    let NumeroRepetido = numeros.slice();
     for(let conf in NumeroRepetido.sort()){
-        let count = 0
+        let count = 0;
         for(let i in numeros){
             if(NumeroRepetido[conf] == numeros[i]){
                 count += 1
@@ -173,7 +173,7 @@ function generatePhoneNumber() {
             }
             if(numeros[i] < 0 || numeros[i] > 9){
                     return "não é possível gerar um número de telefone com esses valores"
-                }                
+            }                
         }
     }
     for(let i in numeros){
