@@ -49,8 +49,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  rtn = [];
+  for (let pos of arr) {
+    if ((pos % 3 === 0) && (pos % 5 === 0)) {
+      rtn.push('fizzBuzz')
+    } else if ((pos % 3 === 0) && (pos % 5 !== 0)) {
+      rtn.push('fizz')
+    } else if ((pos % 3 === 1) && (pos % 5 === 0)) {
+      rtn.push('buzz')
+    } else {
+      rtn.push('bug!')
+   }
+  }
+  return rtn;
 }
 
 // Desafio 9
@@ -59,6 +71,13 @@ function encode() {
 }
 function decode() {
   // seu código aqui
+
+  /*
+  1. O que está sendo desafiador?
+2. O que está sendo legal?
+3. O que você descobriu sobre você?
+4. O que cada um pode fazer pelo grupo?
+   */
 }
 
 // Desafio 10
