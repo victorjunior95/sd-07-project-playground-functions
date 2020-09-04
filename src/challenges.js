@@ -67,26 +67,31 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  // seu código aqui
   let fizzBussReturned = [];
+
+  function insert(value){
+    fizzBussReturned.push(value);
+  }
 
   for (let num = 0; num < numbers.length; num += 1) {
     let isDiv3 = numbers[num] % 3 === 0;
     let isDiv5 = numbers[num] % 5 === 0;
 
     if (isDiv3 && !isDiv5) {
-      fizzBussReturned.push('fizz');
+      insert('fizz');
     } else if (!isDiv3 && isDiv5) {
-      fizzBussReturned.push('buzz');
+      insert('buzz');
     } else if (isDiv3 && isDiv5) {
-      fizzBussReturned.push('fizzBuzz');
+      insert('fizzBuzz');
     } else {
-      fizzBussReturned.push('bug!');
+      insert('bug!');
     }
   }
 
   return fizzBussReturned;
 }
+
+console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 10, 15]))
 
 // Desafio 9
 function encode(textEncode) {
