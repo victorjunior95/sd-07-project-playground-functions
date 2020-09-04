@@ -99,24 +99,24 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(vetor) {
   let numeros = vetor
-  let result;
+  let result = [];
   for (let i in numeros) {
   if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0){
-    result = 'fizzBuzz';
+    result.push('fizzBuzz');
 } else if(numeros[i] % 15 === 0){
-    result = 'fizzBuzz';
+    result.push('fizzBuzz');
 } else if(numeros[i] % 5 === 0){
-    result = 'buzz';
+    result.push('buzz');
 } else if(numeros[i] % 3 === 0){
-    result = 'fizz';
+    result.push('fizz');
 } else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0){
-    result = 'bug!';
+    result.push('bug!');
 } else {
-  result = 'bug!';
+  result.push('bug!');
+}
 }
 console.log(result);
 }
-} 
 
 // Desafio 9
 function encode() {
