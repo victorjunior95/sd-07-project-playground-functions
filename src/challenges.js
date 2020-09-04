@@ -207,13 +207,13 @@ function generatePhoneNumber(numeros) {
     }
   }
   for (let k = 0; k < numeros.length; k += 1) {
-    if( k !==1 && k !== 6){
-telefone+=numeros[k]
+    if (k !== 1 && k !== 6) {
+      telefone += numeros[k]
     }
-   else if (k === 1) {
-telefone+=numeros[k]+")"+" "
+    else if (k === 1) {
+      telefone += numeros[k] + ")" + " "
     } else {
-      telefone+=numeros[k] +"-"
+      telefone += numeros[k] + "-"
     }
   }
   return telefone
@@ -221,19 +221,26 @@ telefone+=numeros[k]+")"+" "
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > lineA - (lineB + lineC)) {
-    return true
+  let total = 0
+
+  if (lineA < lineB + lineC && lineA > lineB - lineC) {
+    total += 1;
   }
-  else if (lineB < lineA + lineC && lineB > lineB - (lineA + lineC)) {
-    return true
+
+  if (lineB < lineA + lineC && lineB > lineA - lineC) {
+    total += 1
   }
-  else if (lineC < lineB + lineA && lineC > lineC - (lineB + lineA)) {
+  if (lineC < lineB + lineA && lineC > lineB - lineA) {
+    total += 1
+  }
+  if (total === 3) {
     return true
   } else {
     return false
   }
-}
 
+}
+console.log(triangleCheck(10, 14, 8))
 // Desafioo 13
 function hydrate(bebida) {
   let copo = "copos"
