@@ -137,7 +137,9 @@ function decode(texto) {
 
 // Desafio 10
 function techList(tecnologias, name) {
-  if(tecnologias.length != 0 ){
+  if(tecnologias.length != 0 )
+  {
+    tecnologias.sort()
     let capsula = [];
     for(i in tecnologias)
     {
@@ -149,7 +151,8 @@ function techList(tecnologias, name) {
     }
   return capsula
   }
-  else{
+  else
+  {
     return "Vazio!"
   }
 }
