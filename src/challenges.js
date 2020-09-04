@@ -181,12 +181,28 @@ function isPossible(phoneNumber) {
   return true;
 }
 
+function isRepeatNumbersMoreThree(phoneNumber) {
+  let countRepeatValue = 0;
+
+  for (let i of phoneNumber) {
+    for (let j of phoneNumber) {
+      if (i === j) countRepeatValue += 1;
+      if (countRepeatValue >= 3) return true;
+    }
+    countRepeatValue = 0;
+  }
+
+  return false;
+}
+
 function generatePhoneNumber(phoneNumber) {
   // verifica se existe mais ou menos de 11 número e retorna erro
   if (phoneNumber.length !== 11) return 'Array com tamanho incorreto.';
 
   // verifica se números são diferentes do numbers
   if (!isPossible(phoneNumber)) return 'não é possível gerar um número de telefone com esses valores';
+
+  if (isRepeatNumbersMoreThree(phoneNumber)) return 'não é possível gerar um número de telefone com esses valores';
 
   let phoneFormated = '(';
 
@@ -206,19 +222,10 @@ function generatePhoneNumber(phoneNumber) {
     }
   }
 
-  let countRepeatValue = 0;
-
-  for (let i of phoneNumber) {
-    for (let j of phoneNumber) {
-      if (i === j) countRepeatValue += 1;
-      if (countRepeatValue >= 3) return 'não é possível gerar um número de telefone com esses valores';
-    }
-    countRepeatValue = 0;
-  }
 
   return phoneFormated;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 2, 2, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
