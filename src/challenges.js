@@ -88,28 +88,31 @@ function encode(str) {
 
 function decode(str) {
   let trn = str.split('');
-  for (let pos = 0; pos < trn.length; pos += 1) {
-    let op = trn[pos];
-    switch (op) {
+  let i = 0;
+
+  do {
+    switch (trn[i]) {
       case '1' :
-        trn[pos] = 'a';
+        trn[i] = 'a';
         break;
       case '2' :
-        trn[pos] = 'e';
+        trn[i] = 'e';
         break;
       case '3' :
-        trn[pos] = 'i';
+        trn[i] = 'i';
         break;
       case '4' :
-        trn[pos] = 'o';
+        trn[i] = 'o';
         break;
       case '5' :
-        trn[pos] = 'u';
+        trn[i] = 'u';
         break;
     }
-  }
+    i += 1;
+  } while (i < trn.length);
   return (trn.join(''));
 }
+
 
 // Desafio 10
 function techList() {
