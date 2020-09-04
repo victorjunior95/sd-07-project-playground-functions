@@ -199,7 +199,7 @@ function techList(arrayTech, name) {
 /* ________________________________________________________________________________ */
 
 // Desafio 11
-/* function generatePhoneNumber(arrayTelefone) {
+function generatePhoneNumber(arrayTelefone) {
   let aux = {};
   let contador = 0;
   let numeroTelefone = "";
@@ -223,7 +223,7 @@ function techList(arrayTech, name) {
   return numeroTelefone;
 }
       
-console.log(generatePhoneNumber([-1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
+console.log(generatePhoneNumber([-1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 /* ________________________________________________________________________________ */
 
@@ -246,6 +246,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 /* ________________________________________________________________________________ */
 
+/* http://wbruno.com.br/expressao-regular/remover-tudo-oque-nao-digitonumeros-de-string-javascript/ */
 // Desafio 13
 function hydrate(barDaTrybe) {
   let numeros = barDaTrybe.replace(/[^\d]+/g,',');
@@ -272,7 +273,7 @@ console.log(hydrate('2 cachaça, 5 cervejas e 1 copo de vinho'));
 
 /* ________________________________________________________________________________ */
 
-/* module.exports = {
+ module.exports = {
   calcArea,
   catAndMouse,
   compareTrue,
@@ -287,4 +288,4 @@ console.log(hydrate('2 cachaça, 5 cervejas e 1 copo de vinho'));
   hydrate,
   splitSentence,
   triangleCheck,
-} */
+} 
