@@ -133,7 +133,6 @@ function techList(array) {
 
   // seu código aqui
 }
-console.log(array())
 
 // Desafio 11
 function generatePhoneNumber() {
