@@ -129,10 +129,41 @@ function generatePhoneNumber() {
   // seu código aqui
 }
 
+// Função auxiliar para o Desafio 11
+function validaNumero(arrayDeNumeros) {
+  // Valida tamanho do array
+  if (arrayDeNumeros.length != 11) {
+    //console.log("Array com tamanho incorreto.");
+    return "Array com tamanho incorreto.";
+  }
+  // Valida se os números são de 0 a 9
+  for (let i in arrayDeNumeros) {
+    if (arrayDeNumeros[i] < 0 || arrayDeNumeros[i] > 9) {
+      //console.log("Não é possivel gerar um número de telefone com esses valores");
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  // Valida se os números não se repetem mais de 3 vezes
+  for (let i in arrayDeNumeros) {
+    let repeticoes = 0;
+    for (let j in arrayDeNumeros) {
+      if (arrayDeNumeros[i] == arrayDeNumeros[j]) {
+        repeticoes += 1;
+      }
+    }
+    if (repeticoes >= 3) {
+      //console.log("Número repetido 3 ou mais vezes");
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+//console.log("Número válido");
+return "Número válido"
+}
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lados = [lineA, lineB, lineC];
-  lados.sort((a, b) => b - a); // encontrei esta forma no StackOverflow: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+  lados.sort((a, b) => b - a); // encontrei esta forma de sort no StackOverflow: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
   if (lados[0] <= (lados[1] + lados[2])) {
     return true;
   } else {
@@ -141,7 +172,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(listaDeBebidas) {
   // seu código aqui
 }
 
