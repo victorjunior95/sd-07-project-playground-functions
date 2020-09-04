@@ -145,7 +145,6 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!'
   }
-
   let technologies = {
   };
   let increasingArray = array.sort();
@@ -153,7 +152,7 @@ function techList(array, name) {
   for (let techName of increasingArray) {
     let obj = {
       tech: techName,
-      name:
+      name: ,
     }
     newArray.push(obj)
   }
@@ -172,7 +171,6 @@ function generatePhoneNumber(array) {
     if(array[number] < 0 || array[number] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-
     if(number == 1) {
       phoneNumber += array[number];
       phoneNumber += ")";
