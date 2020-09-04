@@ -80,6 +80,7 @@ function decode(word) {
 
 // Desafio 10
 function techList(tech, name) {
+  tech = tech.sort();
   let lista = [];
   if (tech === 0) return 'Vazio!';
   if (tech.length === 0) return 'Vazio!';
@@ -88,6 +89,8 @@ function techList(tech, name) {
   }
   return lista;
 }
+let tech=["1",'4','3'], nome="asda"
+console.log(techList(tech, nome));
 
 // Desafio 11
 function generatePhoneNumber() {
