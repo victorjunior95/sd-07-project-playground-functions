@@ -129,7 +129,8 @@ if(typeof string == "string" ){ //Verifica se o parametro é string
       }
     }
  }
-  return str.join('').toUpperCase() + w.slice(1)
+  str[0] = str[0].toUpperCase();
+  return str.join('')
 }else {
  return('Não é um texto')
 }
@@ -165,7 +166,8 @@ if(typeof string == "string" ){ //Verifica se o parametro é string
        }
      }
   }
-   return str.join('').toUpperCase() + w.slice(1)
+  str[0] = str[0].toUpperCase();
+   return str.join('')
  }else {
   return('Não é um texto')
  }
