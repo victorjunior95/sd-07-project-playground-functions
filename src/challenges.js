@@ -51,12 +51,11 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let rtn = [];
-  let b;
-  let f;
-  for (let i of arr) {
-    f = i % 3 === 0;
-    b = i % 5 === 0;
-    f ? b ? rtn.push('fizzBuzz') : rtn.push('fizz') : b ? rtn.push('buzz') : rtn.push('bug!');
+  for (let pos of arr){
+    if (pos % 15 === 0) rtn.push('fizzBuzz');
+    else if (pos % 3 === 0) rtn.push('fizz');
+    else if (pos % 5 === 0) rtn.push('buzz');
+    else rtn.push('bug!');
   }
   return rtn;
 }
