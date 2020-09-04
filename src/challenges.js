@@ -97,7 +97,7 @@ function encode(textEncode) {
   // u -> 5
 
   let encoding = '';
-  for (let i = 0; i <  textEncode.length; i += 1) {
+  for (let i = 0; i < textEncode.length; i += 1) {
     switch (textEncode[i]) {
       case 'a':
         encoding += 1;
@@ -158,13 +158,12 @@ function decode(textDecode) {
 }
 
 // Desafio 10
-function techList(techNames, name) {
-
+function techList(techNames,name) {
   const lists = techNames.sort();
 
   const listReturned = [];
 
-  if (lists.length === 0) return "Vazio!";
+  if (lists.length === 0) return 'Vazio!';
 
   for (let list of lists) {
     listReturned.push({
@@ -181,11 +180,11 @@ function generatePhoneNumber(phoneNumber) {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   //verifica se existe mais ou menos de 11 número e retorna erro
-  if (phoneNumber.length !== 11) return "Array com tamanho incorreto.";
+  if (phoneNumber.length !== 11) return 'Array com tamanho incorreto.';
 
   //verifica se números são diferentes do numbers
   for (let i of phoneNumber) {
-    if (!(i in numbers)) return "não é possível gerar um número de telefone com esses valores";
+    if (!(i in numbers)) return 'não é possível gerar um número de telefone com esses valores';
   }
 
   let phoneFormated = '(';
