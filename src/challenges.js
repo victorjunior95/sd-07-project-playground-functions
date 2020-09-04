@@ -72,7 +72,7 @@ function fizzBuzz(numbers) {
   for (let num = 0; num < numbers.length; num += 1) {
     let isDiv3 = numbers[num] % 3 === 0;
     let isDiv5 = numbers[num] % 5 === 0;
-    
+
     if (isDiv3 && !isDiv5) fizzBussReturned[num] = 'fizz';
     else if (!isDiv3 && isDiv5) fizzBussReturned[num] = 'buzz';
     else if (isDiv3 && isDiv5) fizzBussReturned[num] = 'fizzBuzz';
@@ -171,6 +171,14 @@ function techList(techNames, name) {
 }
 
 // Desafio 11
+function isPossible(phoneNumber) {
+  for (let i of phoneNumber) {
+    if (!(i in numbers)) false;
+  }
+  
+  return true;
+}
+
 function generatePhoneNumber(phoneNumber) {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -178,9 +186,7 @@ function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) return 'Array com tamanho incorreto.';
 
   // verifica se números são diferentes do numbers
-  for (let i of phoneNumber) {
-    if (!(i in numbers)) return 'não é possível gerar um número de telefone com esses valores';
-  }
+  if (!isPossible(phoneNumber)) return 'não é possível gerar um número de telefone com esses valores';
 
   let phoneFormated = '(';
 
