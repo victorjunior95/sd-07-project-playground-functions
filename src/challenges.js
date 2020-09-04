@@ -54,6 +54,9 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouseAndCats) {
+  // let { mouse, cat1, cat2 } = mouseAndCats
+ 
+ 
   let numbersOfMouseAndCats = mouseAndCats
   let mouse = 0;
   let cat1 = 0;
@@ -108,6 +111,9 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+}
+
+
 module.exports = {
   calcArea,
   catAndMouse,
