@@ -100,11 +100,75 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+if(typeof string == "string" ){ //Verifica se o parametro é string
+ let str = string.toLowerCase().split(""); // Passa todos os carateres para minusculo e transforma em array
+ for(let i in str){ // Looping para percorrer todo array
+    if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o'|| str[i] == 'u'){
+      switch (str[i]){
+          case 'a':
+          str[i] = '1'
+          break;
+
+          case 'e':
+          str[i] = '2'
+          break;
+
+          case 'i':
+          str[i] = '3'
+          break;
+
+          case 'o':
+          str[i] = '4'
+          break;
+
+          case 'u':
+          str[i] = '5'
+          break;
+      }
+    }
+ }
+  return str.join('')
+}else {
+ return('Não é um texto')
 }
-function decode() {
-  // seu código aqui
+}
+
+function decode(string) {
+    // seu código aqui
+if(typeof string == "string" ){ //Verifica se o parametro é string
+  let str = string.toLowerCase().split(""); // Passa todos os carateres para minusculo e transforma em array
+  for(let i in str){ // Looping para percorrer todo array
+     if(str[i] == '1' || str[i] == '2' || str[i] == '3' || str[i] == '4'|| str[i] == '5'){
+       switch (str[i]){
+           case '1':
+           str[i] = 'a'
+           break;
+
+           case '2':
+           str[i] = 'e'
+           break;
+
+           case '3':
+           str[i] = 'i'
+           break;
+
+           case '4':
+           str[i] = 'o'
+           break;
+
+           case '5':
+           str[i] = 'u'
+           break;
+
+       }
+     }
+  }
+   return str.join('')
+ }else {
+  return('Não é um texto')
+ }
 }
 
 // Desafio 10
