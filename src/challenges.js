@@ -67,14 +67,12 @@ function subistitui(palavra, isso, por) {
 }
 // Desafio 9
 function encode(word) {
-  word = word.toLowerCase()
   let isso = ['a', 'e', 'i', 'o', 'u'];
   let por = ['1', '2', '3', '4', '5']
   return subistitui(word, isso, por)
 }
 
 function decode(word) {
-  word = word.toLowerCase()
   let isso = ['1', '2', '3', '4', '5'];
   let por = ['a', 'e', 'i', 'o', 'u'];
   return subistitui(word, isso, por)
@@ -86,10 +84,11 @@ function techList(tech, name) {
   if (tech === 0) return 'Vazio!';
   if (tech.length === 0) return 'Vazio!';
   for (let i = 0; i < tech.length; i += 1) {
-    lista[i] = { tech: `${tech[i]}`, name };
+    lista[i] = { tech: `"${tech[i]}"`, name:`"${name}"` };
   }
   return lista;
 }
+console
 
 // Desafio 11
 function generatePhoneNumber() {
