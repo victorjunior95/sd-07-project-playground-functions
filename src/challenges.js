@@ -135,14 +135,14 @@ function decode(paramString2) {
 }
 
 // Desafio 10
-function techList(tech, name) {
+function techList(tech, firstName) {
   let endList = [];
   tech.sort();
   if (tech.length <= 0) {
     endList = 'Vazio!';
   } else {
     for (let i = 0; i < tech.length; i += 1) {
-      endList.push({ tech: tech[i], name: name });
+      endList.push({ tech: tech[i], name: firstName });
     }
   }
   return endList;
@@ -201,20 +201,32 @@ function triangleCheck(lineA, lineB, lineC) {
 
   if (lineA < lineA2 && lineB < lineB2 && lineC < lineC2) {
     result = true;
-  } else if (lineA > different && lineB > different && lineC > different){
+  } else if (lineA > different && lineB > different && lineC > different) {
     result = true;
   } else {
     result = false;
   }
   return result;
 }
-console.log(triangleCheck(16, 20, 30));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let takeNumbers = drinks.match(/\d+/g); //encontra só os números da frase e os coloca em um array, mas eles ainda são como strings
+  let justNumber = 0;
+  let sum = 0;
+  for (let i = 0; i < takeNumbers.length; i += 1) {
+    justNumber = parseInt(takeNumbers[i]); //para transformar de string para número
+    sum += justNumber; //para somar os números
+  }
+  let result;
+  if (sum == 1) {
+    result = `1 copo de água`;
+  } else {
+    result = `${sum} copos de água`;
+  }
+  return result;
 }
-
+console.log(hydrate("1 cerveja, 2"));
 
 module.exports = {
   calcArea,
