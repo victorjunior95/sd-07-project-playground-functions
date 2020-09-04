@@ -129,8 +129,13 @@ if(typeof string == "string" ){ //Verifica se o parametro é string
       }
     }
  }
-  str[0] = str[0].toUpperCase();
-  return str.join('')
+ str.join('')
+ if(str == string){
+   return str;
+ }else{
+   str[0] = str[0].toUpperCase();
+   return str
+ }
 }else {
  return('Não é um texto')
 }
@@ -166,9 +171,18 @@ if(typeof string == "string" ){ //Verifica se o parametro é string
        }
      }
   }
-  str[0] = str[0].toUpperCase();
-   return str.join('')
+  
+  
+  str.join('')
+  if(str == string){
+    return str;
+  }else{
+    str[0] = str[0].toUpperCase();
+    return str
+  }
+    
  }else {
+
   return('Não é um texto')
  }
 }
