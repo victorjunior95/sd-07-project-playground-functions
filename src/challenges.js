@@ -96,12 +96,24 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(number) {
   // seu código aqui
-  number = number.replace(/a/gi, '1');
-  number = number.replace(/e/gi, '2');
-  number = number.replace(/i/gi, '3');
-  number = number.replace(/o/gi, '4');
-  number = number.replace(/u/gi, '5');
-  return number;
+  let romeNumber = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  // let naturalNumbers = [];
+  let naturalNumber = '';
+
+  for (let indice in number) {
+    if (number[indice] == 'a' || number[indice] == 'e' || number[indice] == 'i' || number[indice] == 'o' || number[indice] == 'u') {
+    naturalNumber += romeNumber[number[indice]];
+    } else {
+    naturalNumber += number[indice];
+    }
+  }
+  return naturalNumber;
 }
 
 function decode(letter) {
@@ -111,7 +123,7 @@ function decode(letter) {
   letter = letter.replace(/3/gi, 'i');
   letter = letter.replace(/4/gi, 'o');
   letter = letter.replace(/5/gi, 'u');
-  return letter; 
+  return letter;
 }
 
 // Desafio 10
