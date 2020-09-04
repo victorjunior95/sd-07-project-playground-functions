@@ -37,8 +37,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  let higher = 0;
+  let higherCount = 0;
+  for (let i = 0; i < numbers.length; i += 1){
+    if (numbers[i] > higher) {
+      higher = numbers[i];
+    }
+  }
+  for (let i = 0; i < numbers.length; i += 1){
+    if (numbers[i] === higher) {
+      higherCount += 1;
+    }
+  }
+  return higherCount;
 }
 
 // Desafio 7
@@ -48,55 +61,41 @@ function catAndMouse(mouse, cat1, cat2) {
   if(mouse > cat1 && mouse > cat2) {
     if (mouse - cat1 < mouse - cat2) {
       result = "cat1";
-    }
-    else if (mouse - cat1 > mouse - cat2) {
+    } else if (mouse - cat1 > mouse - cat2) {
       result = "cat2";
-    }
-    else {
+    } else {
       result = "os gatos trombam e o rato foge"
     }
-  } 
-  else if (mouse < cat1 && mouse < cat2) {
+  } else if (mouse < cat1 && mouse < cat2) {
     if (mouse - cat1 < mouse - cat2) {
       result = "cat2";
-    }
-    else if (mouse - cat1 > mouse - cat2) {
+    } else if (mouse - cat1 > mouse - cat2) {
       result = "cat1";
-    }
-    else {
+    } else {
       result = "os gatos trombam e o rato foge"
     }
-  }
-  else if (mouse < cat1 && mouse > cat2) {
+  } else if (mouse < cat1 && mouse > cat2) {
     if (cat1 - mouse < mouse - cat2) {
       result = "cat1"
-    } 
-    else if (cat1 - mouse > mouse - cat2) {
+    } else if (cat1 - mouse > mouse - cat2) {
       result = "cat2"
-    }
-    else {
+    } else {
       result = "os gatos trombam e o rato foge"
     }
-  } 
-  else if (mouse > cat1 && mouse < cat2) {
+  } else if (mouse > cat1 && mouse < cat2) {
     if (mouse - cat1 < cat2 - mouse) {
       result = "cat1"
-    }
-    else if (mouse - cat1 > cat2 - mouse) {
+    } else if (mouse - cat1 > cat2 - mouse) {
       result = "cat2"
-    }
-    else {
+    } else {
       result = "os gatos trombam e o rato foge"
     }
-  } 
-  else {
+  } else {
     if (mouse == cat1 && mouse !== cat2) {
       result = "cat1"
-    }
-    else if ((mouse !== cat1 && mouse == cat2)) {
+    } else if ((mouse !== cat1 && mouse == cat2)) {
       result = "cat2"
-    }
-    else {
+    } else {
       result = "os gatos trombam e o rato foge"
     }
   }
@@ -130,25 +129,18 @@ function encode(stringToEncode) {
   let arrayToEncode = stringToEncode.split('')
   let encoded = '';
   for(let i = 0; i < arrayToEncode.length; i += 1) {
-    switch (arrayToEncode[i]){
-      case 'a':
-        encoded += '1';  
-      break;
-      case 'e':
-        encoded += '2';
-      break;
-      case 'i': 
+    if (arrayToEncode[i] = 'a') {
+      encoded += '1';
+    } else if (arrayToEncode[i] = 'e') {
+      encoded += '2';
+    } else if (arrayToEncode[i] = 'i') {
       encoded += '3';
-      break;
-      case 'o':
-        encoded += '4';
-      break;
-      case 'u': 
+    } else if (arrayToEncode[i] = 'o') {
+      encoded += '4';
+    } else if (arrayToEncode[i] = 'u') {
       encoded += '5';
-      break;
-      default:
+    } else {
       encoded += arrayToEncode[i];
-      break;
     }
   }
   return encoded
@@ -157,26 +149,19 @@ function decode(stringToDecode) {
   // seu código aqui
   let arrayToDecode = stringToDecode.split('')
   let decoded = '';
-  for(let i = 0; i < arrayToDecode.length; i += 1) {
-    switch (arrayToDecode[i]){
-      case '1':
-        decoded += 'a';  
-      break;
-      case '2':
-        decoded += 'e';
-      break;
-      case '3': 
-        decoded += 'i';
-      break;
-      case '4':
-        decoded += 'o';
-      break;
-      case '5': 
-        decoded += 'u';
-      break;
-      default:
-        decoded += arrayToDecode[i];
-      break;
+  for (let i = 0; i < arrayToDecode.length; i += 1) {
+    if (arrayToDecode[i] = '1') {
+      decoded += 'a';
+    } else if (arrayToDecode[i] = '2') {
+      decoded += 'e'
+    } else if (arrayToDecode[i] = '3') {
+      decoded += 'i'
+    } else if (arrayToDecode[i] = '4') {
+      decoded += 'o'
+    } else if (arrayToDecode[i] = '5') {
+      decoded += 'u'
+    } else {
+      decoded = arrayToDecode[i];
     }
   }
   return decoded
