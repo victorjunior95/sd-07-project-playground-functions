@@ -41,7 +41,7 @@ function highestCount(array) {
     }
   }
   for (let i in array) {
-    if (maiorNumero === true) {
+    if (array.lenght !== 0) {
       numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat;
     }
   }
