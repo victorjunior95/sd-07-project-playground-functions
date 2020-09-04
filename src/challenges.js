@@ -33,21 +33,25 @@ return vencidos + empatados;
 
 // Desafio 6
 // Referência Freecode Camp material sobre Math.max.apply() 
-function highestCount() {
-  
+function highestCount(numbers) {
+  let greaterNumber = Math.max.apply(null, numbers);
+  let counter = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+      if (numbers[i] === greaterNumber) {
+          counter += 1;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let catUmResultado = Math.abs(mouse - cat1)
-  let catDoisReultado = 
-  if (cat1 - cat2) {
-    return console.log("cat1")
-    } else if (cat2 > cat1) {
-    return console.log("cat2")
-    } else {
-return console.log("os gatos trombam e o rato foge")
-}
+function catAndMouse() {
+//   let catUmResultado = Math.abs(mouse - cat1)
+//   let catDoisReultado = 
+//   if (cat1 - cat2) {
+//     return console.log("cat1")
+//     } else if (cat2 > cat1) {
+//     return console.log("cat2")
+//     } else {
+// return console.log("os gatos trombam e o rato foge")
+// }
 }
 
 // Desafio 8
