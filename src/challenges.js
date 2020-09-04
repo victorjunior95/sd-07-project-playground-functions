@@ -35,11 +35,13 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maiorNumero = array[0];
   let numeroRepeat = 0;
+  if(array.lenght !== 0){
   for (let i in array) {
     maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
   }
   for (let i in array) {
     numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat;
+  }
   }
   return numeroRepeat;
 }
