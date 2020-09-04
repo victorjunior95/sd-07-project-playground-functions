@@ -88,10 +88,10 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(textEncode) {
 
-  // a -> 1 
-  // e -> 2 
-  // i -> 3 
-  // o -> 4 
+  // a -> 1
+  // e -> 2
+  // i -> 3
+  // o -> 4
   // u -> 5
 
   let encoding = '';
@@ -123,9 +123,9 @@ function encode(textEncode) {
 function decode(textDecode) {
 
   // 1 -> a
-  // 2 -> e 
-  // 3 -> i 
-  // 4 -> o 
+  // 2 -> e
+  // 3 -> i
+  // 4 -> o
   // 5 -> u
 
   let decoding = '';
@@ -232,7 +232,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(textString) {
   
   let glassWater = 0;
-  
+
   for (let num in textString) {
     if (Number(textString[num]) === Number(textString[num])) glassWater += Number(textString[num])
   }
