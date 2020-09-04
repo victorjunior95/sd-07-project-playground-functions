@@ -67,7 +67,8 @@ function fizzBuzz(arrayNum) {
   for (let i = 0; i < arrayNum.length; i += 1) {
     if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
       res.push('fizzBuzz')
-    } else if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
+    }
+    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
       res.push('fizz')
     } else if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
       res.push('buzz')
@@ -79,9 +80,9 @@ function fizzBuzz(arrayNum) {
 // Desafio 9
 function encode(string) {
   let res = string
-  let code = {a: 1, e: 2, i: 3, o: 4, u: 5}
-  for (letra = 0; letra < string.length ; letra++) {
-    for (i in code) {
+  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 }
+  for (let letra = 0; letra < string.length; letra += 1) {
+    for (let i in code) {
       res = res.replace(i, code[i]);
     }
   }
@@ -89,17 +90,26 @@ function encode(string) {
 }
 function decode(string) {
   let res = string
-  res = res.replace(/1/g , 'a');
-  res = res.replace(/2/g , 'e');
-  res = res.replace(/3/g , 'i');
-  res = res.replace(/4/g , 'o');
-  res = res.replace(/5/g , 'u');
+  res = res.replace(/1/g, 'a');
+  res = res.replace(/2/g, 'e');
+  res = res.replace(/3/g, 'i');
+  res = res.replace(/4/g, 'o');
+  res = res.replace(/5/g, 'u');
   return res;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let obj = []
+  if (array.length === 0) {
+    return "Vazio!"
+  } else {
+    array.sort()
+    for (let i of array) {
+      obj.push({ tech: i, name: name })
+    }
+  }
+  return obj
 }
 
 // Desafio 11
