@@ -97,17 +97,19 @@ function decode(msg) {
 
 // Desafio 10
 function techList(array,nome) {
-  if (array.length == 0) { return "Vazio!"
- } else 
- newArray = []
- for (let i in array){
-   obj = {}
-   obj.tech = array[i]
-   obj.name = nome
-   newArray.push(obj) 
+  if (array.length == 0) { return "Vazio!"}
+  arraySorted = array.sort()
+  newArray = []
+  for (let i in arraySorted){
+    obj = {}
+    obj.tech = arraySorted[i]
+    obj.name = nome
+    newArray.push(obj) 
+  }
   return newArray
- }
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
+
 
 // Desafio 11
 function generatePhoneNumber(a) {
@@ -132,8 +134,6 @@ function generatePhoneNumber(a) {
 
   return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}` 
 }
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
