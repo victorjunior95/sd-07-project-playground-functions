@@ -125,16 +125,66 @@ function techList(arrayTech, name) {
   return resp.length==0?'Vazio!':resp;
 }
 
+function rep(tester){
+  const repetition = [0,0,0,0,0,0,0,0,0,0];
+  for (let aux = 0; aux < tester.length; aux++) {
+    switch (tester[aux]) {
+      case '1':
+        repetition[0] +=1;
+        break;
+      case '2':
+        repetition[1] +=1;
+        break;
+      case '3':
+        repetition[2] +=1;
+        break;
+      case '4':
+        repetition[3] +=1;
+        break;
+      case '5':
+        repetition[4] +=1;
+        break; 
+      case '6':
+        repetition[5] +=1;
+        break;
+      case '7':
+        repetition[6] +=1;
+        break;
+      case '8':
+        repetition[7] +=1;
+        break;
+      case '9':
+        repetition[8] +=1;
+        break;   
+      case '0':
+        repetition[9] +=1;
+        break; 
+      default:
+        break;
+    }
+  }
+  for (const key in repetition) {
+    if(repetition[key] >= 3){
+      return false;
+    }
+  }
+  return true;
+}
+
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   if(arrayNumber.length!=11){
     return "Array com tamanho incorreto.";
   }
   for (const key in arrayNumber) {
-    if(arrayNumber[key] < 0){
+    if(arrayNumber[key] < 0 || arrayNumber[key] > 9){
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
+  if(rep(arrayNumber) === false){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+
   let formatedNumber = [];
   formatedNumber.push('(');
   formatedNumber.push(arrayNumber[0]);
