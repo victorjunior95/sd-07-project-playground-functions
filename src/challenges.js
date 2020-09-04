@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let res = ''
+  let res
   if (a && b === true) {
-    res.push(true)
+    res = true
   } else {
-    res.push(false)
+    res = false
   }
   return res
 }
@@ -70,9 +70,9 @@ function fizzBuzz(arrayNum) {
   for (let i = 0; i < arrayNum.length; i += 1) {
     if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
       res.push('fizzBuzz')
-    } if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) { //atencao aki
+    } else if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
       res.push('fizz')
-    } if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
+    } else if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
       res.push('buzz')
     } else res.push('bug!')
   }
@@ -84,7 +84,7 @@ function encode(string) {
   let res = string
   let code = { a: 1, e: 2, i: 3, o: 4, u: 5 }
   for (let letra of string) {
-    for (let i in code) { 
+    for (let i in code) {
       if (letra === i) {
         res = res.replace(i, code[i])
       }
@@ -112,18 +112,17 @@ function techList(array, name) {
   for (let i of array) {
     obj.push({
       tech: i,
-      name: name 
-    })
+      name: name })
   }
   return obj
 }
 // Desafio 11
 function generatePhoneNumber(arrayN) {
   let res = ''
-  for (num in arrayN) {
+  for (let num in arrayN) {
     let dup = 0
-    for (numD in arrayN) {
-      if (arrayN[num]==arrayN[numD]) {
+    for (let numD in arrayN) {
+      if (arrayN[num] === arrayN[numD]) {
         dup += 1;
       }
     } if (arrayN.length !== 11) {
