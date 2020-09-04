@@ -44,7 +44,9 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+// Math.abs()
+function catAndMouse(mouse, cat1, cat2) {
+// seu código aqui
 
 }
 
@@ -53,7 +55,7 @@ function fizzBuzz(arr) {
   let numbersArr = [];
 for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
-     numbersArr[i] = "fizzbuzz"
+     numbersArr[i] = "fizzBuzz"
 } else if (arr[i] % 3 == 0) {
   numbersArr[i] = "fizz" 
 } else if(arr[i] % 5 == 0) {
