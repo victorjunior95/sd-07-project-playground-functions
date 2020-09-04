@@ -179,7 +179,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(listaDeBebidas) {
-  // seu código aqui
+  let numeros = listaDeBebidas.match(/\d+/g).map(Number); //Fontes: https://stackoverflow.com/questions/34609571/extract-numbers-from-string-and-store-them-in-array-javascript e https://stackoverflow.com/questions/35766769/convert-string-array-to-integer-array
+  let soma = 0;
+  for (let i in numeros) {
+    soma = soma + numeros[i];
+  }
+  //console.log(soma + " copos de água");
+  return soma + " copos de água";
 }
 
 
