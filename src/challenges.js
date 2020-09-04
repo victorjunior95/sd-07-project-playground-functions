@@ -160,7 +160,11 @@ function generatePhoneNumber(phoneNum) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  if (((Math.abs(lineB - lineC)) > lineA > (lineB + lineC)) && ((Math.abs(lineA - lineC )) > lineB > (lineA + lineC)) && ((Math.abs(lineA - lineB)) >lineC > (lineA + lineB))){
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 13
