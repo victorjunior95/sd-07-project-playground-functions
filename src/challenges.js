@@ -186,6 +186,10 @@ let ArrayTechsList = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 let nameOut = 'Josiel'
 function techList(array, name) {
   // seu código aqui
+  if (array.length === 0) {
+    return 'Vazio!'
+  }
+  
   const arraySorted = array.sort()
   let objectTechs = []
   for (let key in arraySorted) {
@@ -199,7 +203,7 @@ function techList(array, name) {
   }
   return objectTechs
 }
-console.log(techList(ArrayTechsList, nameOut))
+techList(ArrayTechsList, nameOut)
 
 // Desafio 11
 function generatePhoneNumber() {
