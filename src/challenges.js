@@ -62,9 +62,9 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let string = [];
   for (let i in array) {
-   if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      string.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+     string.push('fizzBuzz');
+   } else if (array[i] % 3 === 0) {
       string.push('fizz');
     } else if (array[i] % 5 === 0) {
       string.push('buzz');
