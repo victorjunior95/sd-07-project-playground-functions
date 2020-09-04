@@ -209,23 +209,23 @@ function triangleCheck(lineA, lineB, lineC) {
   let verificadorLado = 0;
   let arrayTriang = [lineA, lineB, lineC];
   // Verificando se lado > que a diferença absoluta:
-  for(let i in arrayTriang){
-    if(arrayTriang[i] > Math.abs(lineA - lineB - lineC)){
-      verificador ++;
-    }
-  }
+  
+  if(Math.abs(lineB - lineC) < lineA < (lineB + lineC)){
+   verificador ++;
+   }
+  
   // Verificando se lado x é maior que a soma dos demais lados:
-  if(lineA < lineB + lineC){
+  if(lineA < (lineB + lineC)){
     verificadorLado++;
   }
-  else if(lineB < lineC + lineA){
+  if(lineB < (lineC + lineA)){
     verificadorLado++;
   }
-  else if(lineC < lineA + lineB){
+  if(lineC < (lineA + lineB)){
     verificadorLado++;
   }
   // Verificando os dois verificadores:
-  if(verificadorLado > 0 && verificador > 0){
+  if(verificadorLado == 3 && verificador == 1){
     triangulo = true;
   }
   else{
@@ -233,11 +233,12 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return triangulo;
 }
-console.log(triangleCheck(10, 14, 8));
+
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
+
 }
 
 
