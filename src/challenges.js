@@ -161,7 +161,7 @@ function decode(stringToDecode) {
     } else if (arrayToDecode[i] === '5') {
       decoded += 'u'
     } else {
-      decoded = arrayToDecode[i];
+      decoded += arrayToDecode[i];
     }
   }
   return decoded
