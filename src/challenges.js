@@ -187,15 +187,26 @@ function generatePhoneNumber(phone) {
   } else if (answer !== 'Array com tamanho incorreto.' && answer !== 'não é possível gerar um número de telefone com esses valores') {
     suport(phone);
   }
-
   lastReturn = answer;
   return lastReturn;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let lineA2 = lineB + lineC;
+  let lineB2 = lineA + lineC;
+  let lineC2 = lineA - lineB;
+  let result;
+
+  if (lineA < lineA2 || lineB < lineB2 || lineC < lineC2) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
+
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
