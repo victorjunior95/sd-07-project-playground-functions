@@ -189,6 +189,7 @@ let name = "Lucas";
 
 function techList(tech, name) {
   // seu código aqui
+  //if ()
   let techNameObject = {
     tech: "React",
     name: "Lucas"
@@ -261,7 +262,7 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
-let drink = "1 cachaça, 5 cervejas e 1 copo de vinho";
+let drink = "1 cachaça";
 
 function hydrate(drink) {
   // seu código aqui
@@ -269,11 +270,17 @@ function hydrate(drink) {
 
   if (drink.length > 0) {
     var water = drink.match(/\d+/g).map(Number); //water é array
-    total = water.reduce((total, currentElement) => total + currentElement)
+    for (let w = 0; w < water.length; w += 1) {
+      if (water.length === 1 && water[w] === 1) {
+        total = water + " copo de água"
+      } else {
+        total = water.reduce((total, currentElement) => total + currentElement) + " copos de água"
+      }
+    }
   } else {
-    total = 0;
+    total = 0 + " copos de água";
   }
-  return total + " copos de água"
+  return total 
 }
 console.log (hydrate(drink));
 
