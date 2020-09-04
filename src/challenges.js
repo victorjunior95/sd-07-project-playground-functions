@@ -110,17 +110,18 @@ function fizzBuzz(numbers) {
 }
 
 // Apoio Desafio 9
-function encodeCounter(vogais, letter) {
-  let counterVogais = 0
-  let newString = ''
-  for (let i in vogais) {
+function encodeCounter(vowels, letter) {
+  let counterVowels = 0
+  let newText = ''
+
+  for (let i in vowels) {
     let currentVowel = i
     if (letter === currentVowel) {
-      newString = vogais[i]
-      counterVogais += 1
+      newText = vowels[i]
+      counterVowels += 1
     }
   }
-  let message = [counterVogais, newString]
+  let message = [counterVowels, newText]
   return message
 }
 
@@ -219,7 +220,6 @@ function generatePhoneNumber(numbers) {
   for (let number in numbers) {
     if (numbers[number] > 9 || numbers[number] < 0) {
       return 'não é possível gerar um número de telefone com esses valores'
-      break
     }
   }
   /* Checking if any number repeats greater or equal 3*/
@@ -233,7 +233,6 @@ function generatePhoneNumber(numbers) {
     }
     if (numberOfTimesRepeat >= 3) {
       return 'não é possível gerar um número de telefone com esses valores'
-      break
     }
   }
   /* Generating phone-number in the right format*/
