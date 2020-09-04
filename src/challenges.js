@@ -39,7 +39,7 @@ function highestCount(array) {
     maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
   }
   for (let i in array) {
-    numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat += 0;
+    numeroRepeat = (maiorNumero === array[i]) ? numeroRepeat += 1 : numeroRepeat;
   }
   return numeroRepeat;
 }
