@@ -10,48 +10,38 @@ function compareTrue(a, b) {
     return false;
   }
 }
-console.log(compareTrue(false, false));
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
   let formula = (base * heigth) / 2;
-
   return formula;
 }
 
 // Desafio 3
 function splitSentence(str) {
-  // seu código aqui
-  str = "go Trybe";
-  let res = str.split(" ");
-
-  
-  return res ;
+  return str.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-  let lastItem = [];
-  let firstItem = [];
-  let array = ["Lucas", "Cassiano", "Ferraz", "Paolillo"];
-
+function concatName(array) {
+  let lastItem ;
+  let firstItem;
+  
   firstItem = array[0];
   lastItem = array[array.length - 1];
 
   // for (const key in array) {lastItem = array[key];}
   array = [firstItem];
-  
-
-   adicionar = array.push(lastItem);
+  array.push(lastItem);
 
   return array;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-  
+function footballPoints(wins, ties) {
+  let wins = 3;
+  let ties = 1;
+  let vitorias = wins + ties;
+  return vitorias;
 }
 
 // Desafio 6
