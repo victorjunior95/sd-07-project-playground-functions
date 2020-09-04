@@ -55,9 +55,27 @@ function footballPoints(wins, ties) {
 //console.log("Resultado desafio 5: "+result);
 
 // Desafio 6
-function highestCount() {
+let numeros = [9, 1, 2, 3, 9, 5, 7];
+function highestCount(numeros) {
   // seu código aqui
+  let indiceMaior = 0;
+  let quantVezes = 0;
+  let maiorNumero;
+  for (let indice in numeros) {
+    if (numeros[indiceMaior] <= numeros[indice]) {// compara do primeiro ao ultimo
+     indiceMaior = indice; // quando encontra armazena o indice
+     quantVezes= quantVezes+1;
+     maiorNumero = numeros[indiceMaior];     
+    }
+    
+  }
+  //console.log("O Maior numero é: "+maiorNumero);
+  //console.log("Tem: "+quantVezes);
+  return quantVezes;
+ 
 }
+//let result = highestCount(numeros);
+//console.log(result);
 
 // Desafio 7
 function catAndMouse() {
