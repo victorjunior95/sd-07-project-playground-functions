@@ -172,16 +172,16 @@ function techList(techNames, name) {
 
 // Desafio 11
 function isPossible(phoneNumber) {
+  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
   for (let i of phoneNumber) {
     if (!(i in numbers)) false;
   }
-  
+
   return true;
 }
 
 function generatePhoneNumber(phoneNumber) {
-  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
   // verifica se existe mais ou menos de 11 número e retorna erro
   if (phoneNumber.length !== 11) return 'Array com tamanho incorreto.';
 
