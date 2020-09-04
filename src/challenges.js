@@ -217,8 +217,20 @@ function triangleCheck(a , b , c) {
 // Desafio 13
 function hydrate(s) {
 
-  let result = s.length + "copos de água";
-  return result ;
+  let result = 0 , array = splitSentence(s) ;
+
+  for( let i in array )
+  {
+
+      if (!(isNaN(array[i])))
+      {
+          let n = +array[i];
+          result += n ;
+      };
+
+  } ;
+
+  return result + " copos de água";
 }
 
 
