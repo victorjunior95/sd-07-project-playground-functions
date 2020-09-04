@@ -70,9 +70,9 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let fizzBussReturned = [];
 
-  for (let num of numbers) {
-    let isDiv3 = num % 3 === 0;
-    let isDiv5 = num % 5 === 0;
+  for (let num = 0; num < numbers.length; num += 1) {
+    let isDiv3 = numbers[num] % 3 === 0;
+    let isDiv5 = numbers[num] % 5 === 0;
 
     if (isDiv3 && !isDiv5) {
       fizzBussReturned.push('fizz');
