@@ -61,18 +61,52 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let trn = str.split('');
+  for (let pos = 0; pos < trn.length; pos += 1) {
+    switch (trn[pos]) {
+      case 'a' :
+        trn[pos] = '1';
+        break;
+      case 'e' :
+        trn[pos] = '2';
+        break;
+      case 'i' :
+        trn[pos] = '3';
+        break;
+      case 'o' :
+        trn[pos] = '4';
+        break;
+      case 'u' :
+        trn[pos] = '5';
+        break;
+    }
+  }
+  return ( trn.join(''));
 }
-function decode() {
-  // seu código aqui
 
-  /*
-  1. O que está sendo desafiador?
-2. O que está sendo legal?
-3. O que você descobriu sobre você?
-4. O que cada um pode fazer pelo grupo?
-   */
+function decode(str) {
+  let trn = str.split('');
+  for (let pos = 0; pos < trn.length; pos += 1) {
+    switch (trn[pos]) {
+      case '1' :
+        trn[pos] = 'a';
+        break;
+      case '2' :
+        trn[pos] = 'e';
+        break;
+      case '3' :
+        trn[pos] = 'i';
+        break;
+      case '4' :
+        trn[pos] = 'o';
+        break;
+      case '5' :
+        trn[pos] = 'u';
+        break;
+    }
+  }
+  return ( trn.join(''));
 }
 
 // Desafio 10
