@@ -94,46 +94,24 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode(number) {
   // seu código aqui
-  let number = '';
-  for (let i = 0; i < string.length; i += 1) {
-    if (string[i] === 'a') {
-      number += 1;
-    } else if (string[i] === 'e') {
-      number += 2;
-    } else if (string[i] === 'i') {
-      number += 3;
-    } else if (string[i] === 'o') {
-      number += 4;
-    } else if (string[i] === 'u') {
-      number += 5;
-    } else {
-      number += string[i];
-    }
-  }
+  number = number.replace(/a/gi, '1');
+  number = number.replace(/e/gi, '2');
+  number = number.replace(/i/gi, '3');
+  number = number.replace(/o/gi, '4');
+  number = number.replace(/u/gi, '5');
   return number;
 }
 
-function decode(number) {
+function decode(letter) {
   // seu código aqui
-  let letter = '';
-  for (let i = 0; i < number.length; i += 1) {
-    if (number[i] === '1') {
-      letter += 'a';
-    } else if (number[i] === '2') {
-      letter += 'e';
-    } else if (number[i] === '3') {
-      letter += 'i';
-    } else if (number[i] === '4') {
-      letter += 'o';
-    } else if (number[i] === '5') {
-      letter += 'u';
-    } else {
-      letter += number[i];
-    }
-  }
-  return letter;
+  letter = letter.replace(/1/gi, 'a');
+  letter = letter.replace(/2/gi, 'e');
+  letter = letter.replace(/3/gi, 'i');
+  letter = letter.replace(/4/gi, 'o');
+  letter = letter.replace(/5/gi, 'u');
+  return letter; 
 }
 
 // Desafio 10
