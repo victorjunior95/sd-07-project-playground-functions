@@ -153,28 +153,26 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   //lineA < lineB + lineC && > Math.abs(lineB - lineC)
-  //lineB < lineC + lineB && > Math.abs(lineC - lineB)
+  //lineB < lineC + lineA && > Math.abs(lineA - lineB)
   //line C < lineA + lineB && > Math.abs(lineA - lineB)
   let condicao = 0;
   let linhas = [lineA, lineB, lineC];
   let valor1 = 0;
   let valor2 = 1;
   let valor3 = 2;
+  let absolute = Math.abs(linhas[valor2] - linhas[valor3])
   for (i = 0; i < 3; i += 1) {
     if (
-      linhas[valor1] < (linhas[valor2] + linhas[valor3]) &&
-      Math.abs(linhas[valor2] - linhas[valor3])
+      linhas[valor1] < (linhas[valor2] + linhas[valor3]) && absolute
     ) {
       condicao += 1;
-      if (valor2 == 2) {
-        valor1 += 1;
-        valor2 -= 1;
-        valor3 -= 1;
+      if (valor2 == 0) {
+        valor1 += 1 //C
+        valor3 -= 1 //B
       } 
       else {
-        valor1 += 1;
-        valor2 += 1;
-        valor3 -= 1;
+        valor1 += 1; // B
+        valor2 -= 1; // A
       }
     }
   }
