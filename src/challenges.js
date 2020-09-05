@@ -1,4 +1,4 @@
-// Desafio 1 qq
+// Desafio 1 
 function compareTrue(valor1,valor2) {
     // seu código aqui
     if(valor1 && valor2) {
