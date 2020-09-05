@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(a, b) {
+function compareTrue ( a , b ) {
     if ( a === true && b === true ) {
       return true;
     } else {
@@ -8,26 +8,26 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(base, height) {
+function calcArea (base, height) {
   let areaTriangle = (base * height) / 2 ;
   return areaTriangle;
 }
 
 // Desafio 3
-function splitSentence(separator) {
+function splitSentence (separator) {
   let split = separator.split(' ');
   return split;
 }
 
 // Desafio 4
-function concatName(arrayStrings) {
+function concatName (arrayStrings) {
   let last = arrayStrings[arrayStrings.length - 1];
   let first = arrayStrings[0] ;
   return `${last}, ${first}`;
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints (wins, ties) {
   wins = wins * 3 ;
   ties = ties * 1 ;
   let points = wins + ties ;
@@ -35,22 +35,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNum) {
-  let highest = 0;
+function highestCount ( arrayNum ) {
+  let highest = Math.max.apply(null, arrayNum);
   let highestArrayNum = 0;
 
   for ( let i in arrayNum ) {
-    if ( arrayNum[i] >= highest ){
-      highest = arrayNum[i];
-    }
-  }
-  for ( let i in arrayNum) {
-    if (highest === arrayNum[i]) {
+    if ( highest == arrayNum[i] ) {
     highestArrayNum += 1;
     } 
-  }
+  };
   return highestArrayNum;
-}
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -159,18 +154,22 @@ function generatePhoneNumber(phoneNum) {
 }
 
 // Desafio 12
-function triangleCheck( lineA, lineB, lineC ) {
-  if ( (Math.abs(lineB - lineC) > lineA) || (lineA > (lineB + lineC)) 
-  || (Math.abs(lineA - lineC ) > lineB) || (lineB > (lineA + lineC)) 
-  || (Math.abs(lineA - lineB) > lineC) || (lineC > (lineA + lineB)) ) {
+function triangleCheck ( lineA, lineB, lineC ) {
+  let lineACondition = ( Math.abs(lineB - lineC) > lineA) || (lineA > (lineB + lineC));
+
+  let lineBCondition = (Math.abs(lineA - lineC ) > lineB) || (lineB > (lineA + lineC));
+
+  let lineCCondition = (Math.abs(lineA - lineB) > lineC) || (lineC > (lineA + lineB));
+
+  if ( lineACondition || lineBCondition || lineCCondition ) {
     return false;
   } else {
     return true;
   }
-}
+}console.log(triangleCheck(1, 14, 8))
 
 // Desafio 13
-function hydrate(water) {
+function hydrate (water) {
   let waterRegExp = /[0-9]/g;
   let waterWithoutSpaces = water.replace(/ /g, '');
   let waterNum = waterWithoutSpaces.match(waterRegExp);
@@ -189,7 +188,7 @@ function hydrate(water) {
 module.exports = {
   calcArea,
   catAndMouse,
-  compareTrue,
+  compareTrue ,
   concatName,
   decode,
   encode,
@@ -198,7 +197,7 @@ module.exports = {
   generatePhoneNumber,
   techList,
   highestCount,
-  hydrate,
+  hydr ate,
   splitSentence,
   triangleCheck,
 }
