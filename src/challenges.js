@@ -42,7 +42,8 @@ function concatName(names) {
     return finalInitialName;
 }
 
-// Desafio 5
+console.log
+    // Desafio 5
 function footballPoints(wins, ties) {
 
     let points = (wins * 3) + ties;
@@ -109,16 +110,71 @@ function fizzBuzz(numbers2) {
 
     return arrayFizz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-    // seu código aqui
+function encode(text) {
+
+    let copy = [];
+
+    for (let i = 0; i < text.length; i += 1) {
+        switch (text[i]) {
+
+            case "a":
+                copy.push("1");
+                break;
+            case "e":
+                copy.push("2");
+                break;
+            case "i":
+                copy.push("3");
+                break;
+            case "o":
+                copy.push("4");
+                break;
+            case "u":
+                copy.push("5");
+                break;
+            default:
+                copy.push(text[i]);
+        }
+
+    }
+
+    return copy.join("");
 }
 
-function decode() {
-    // seu código aqui
+console.log(encode("hi there!"));
+
+function decode(text) {
+    let copy = [];
+
+    for (let i = 0; i < text.length; i += 1) {
+        switch (text[i]) {
+
+            case "1":
+                copy.push("a");
+                break;
+            case "2":
+                copy.push("e");
+                break;
+            case "3":
+                copy.push("i");
+                break;
+            case "4":
+                copy.push("o");
+                break;
+            case "5":
+                copy.push("u");
+                break;
+            default:
+                copy.push(text[i]);
+        }
+
+    }
+
+    return copy.join("");
 }
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
