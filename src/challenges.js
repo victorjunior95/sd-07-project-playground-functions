@@ -48,7 +48,10 @@ function highestNumber(arrayNumbers) {
   let higherNumber = 0;
   for (let index in arrayNumbers) {
     for (let i = 0; i < arrayNumbers.length; i += 1) {
-      if (arrayNumbers[index] > arrayNumbers[i] && arrayNumbers[index] > higherNumber) {
+      if (
+        arrayNumbers[index] > arrayNumbers[i] &&
+        arrayNumbers[index] > higherNumber
+      ) {
         higherNumber = arrayNumbers[index];
       }
     }
@@ -120,7 +123,7 @@ function encodeOrDecodeSentence(sentence) {
       case '1':
         codedOrDecodedSentence += 'a';
         break;
-       case 'e':
+      case 'e':
         codedOrDecodedSentence += '2';
         break;
       case '2':
@@ -166,13 +169,44 @@ function techList(arrayOfTechs, name) {
     result.push({
       tech: techs[tech],
       name: student,
-    })
+    });
   }
   return result;
 }
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(n) {
+  let r = '';
+  let condition = validaNumbers(n);
+  if (condition === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  for (let i in n) {
+    r += n[i];
+  }
+  return `(${r[0]}${r[1]}) ${r[2]}${r[3]}${r[4]}${r[5]}${r[6]}-${r[7]}${r[8]}${r[9]}${r[10]}`;
+}
+function validaNumbers(arrayNumbers) {
+  let condition = true;
+  if (arrayNumbers.length != 11) {
+    condition = false;
+  }
+  for (let number in arrayNumbers) {
+    let countRepeat = 0;
+    for (let i = 0; i < arrayNumbers.length; i += 1) {
+      if (arrayNumbers[i] === arrayNumbers[number]) {
+        countRepeat += 1;
+      }
+    }
+    if (countRepeat >= 3) {
+      condition = false;
+    } else {
+      countRepeat = 0;
+    }
+    if (arrayNumbers[number] < 0 || arrayNumbers[number] > 9) {
+      condition = false;
+    }
+  }
+  return condition;
 }
 
 // Desafio 12
