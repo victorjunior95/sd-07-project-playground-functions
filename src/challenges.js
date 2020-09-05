@@ -108,7 +108,7 @@ function encode(array) {
   return result5
 }
 
-function decode() {
+function decode(array) {
   // seu código aqui
   let result = array.replace(/1/gi, 'a',)
   let result2 = result.replace(/2/gi, 'e',)
