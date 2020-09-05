@@ -31,12 +31,9 @@ function splitSentence(param) {
 
 // Desafio 4
 function concatName(param) {
-  let arrayDesafio4 = param[0];
-  let ultimoNome = arrayDesafio4.toString();
-  let array_inverted = param[param.length -1];
-  let primeiroNome = array_inverted.toString();
-  console.log("'"+ultimoNome+","+" "+primeiroNome+"'");
-  return arrayDesafio4;
+  let primeiro = param[0].toString();
+  let ultimo = param[param.length -1].toString();
+  console.log("'"+ultimo+","+" "+primeiro+"'");
 }
 
 // Desafio 5
