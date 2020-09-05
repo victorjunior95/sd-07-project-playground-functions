@@ -40,10 +40,10 @@ function highestCount(array) {
     if (array[i] > maiorNumero) {
       maiorNumero = array[i];
     }
-    for (let j in array) {
-      if (array[j] === maiorNumero) {
-        numeroRepeat += 1;
-      }
+  }
+  for (let j in array) {
+    if (array[j] === maiorNumero) {
+      numeroRepeat += 1;
     }
   }
     return numeroRepeat;
