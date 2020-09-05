@@ -181,22 +181,19 @@ function checkLimits(nList) {
   return true;
 }
 
-function getRepCount(n, nList){
+function getRepCount(n, nList) {
   let repetitions = 0;
   for (let i = 0; i < nList.length; i += 1) {
     if (n === nList[i]) {
-      repetitions += 1;
-      if (repetitions >= 3) {
-        return false;
-      }
+      repetitions += 1;    
     }
   }
-  return true;
+  return repetitions;
 }
 
 function checkRepetitions(nList) {
   for (let i = 0; i < nList.length; i += 1) {
-    if (getRepCount(nList[i], nList) === false) {
+    if (getRepCount(nList[i], nList) >= 3) {
       return false;
     }
   }
