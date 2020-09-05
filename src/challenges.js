@@ -147,7 +147,7 @@ function techList(array, name) {
   if (array.length !== 0) {
     let createObject = [];
     array.sort();
-    for (let item in array) {
+    for (let item = 0; item < array.length; item += 1) {
       createObject.push({
         tech: array[item],
         name: `${name}`,
