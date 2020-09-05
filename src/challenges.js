@@ -152,34 +152,38 @@ function generatePhoneNumber(arrayNumbers) {
   let errorMessage_1 = 'não é possível gerar um número de telefone com esses valores';
   let errorMessage_2 = 'Array com tamanho incorreto.';
 
-  /* tamanho do array */
+  // tamanho do array
   if (arrayNumbers.length > 11) {
     return errorMessage_2;
+  }
+
+  // repetição
+  arrayNumbers.sort();
+  let numberToCompare = arrayNumbers[0];
+  let countNumber = 0;
+
+  for (let num in arrayNumbers) {
+    if (arrayNumbers[num] === numberToCompare) {
+      countNumber += 1;
+
+      if (countNumber >= 3) {
+        return errorMessage_1;
+      }
+    } else {
+      numberToCompare = arrayNumbers[num];
+      countNumber = 0;
+    }
   }
 
   let formattedNumber = [];
 
   for (let index in arrayNumbers) {
-    /* menor que 0 ou maior que 9 */
+    // menor que 0 ou maior que 9
     if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
       return errorMessage_1;
     }
-    /* repetição */
-    // let repeatCheck = arrayNumbers[index];
-    // console.log('repeatCheck' + repeatCheck)
-    // let repeatedNumberCount = 0;
-    // console.log('repeatedNumberCount' + repeatedNumberCount)
 
-    // if (arrayNumbers[index] === repeatCheck) {
-    //   repeatedNumberCount += 1;
-    // }
-
-    // if (repeatedNumberCount >= 3) {
-    //   return errorMessage_1;
-    // }
-
-    /* formatação dos números */
-    // (12) 34567-8901    
+    // formatação dos números
     if (index === '0') {
       formattedNumber.push('(');
     } else if (index === '2') {
@@ -193,9 +197,6 @@ function generatePhoneNumber(arrayNumbers) {
   return formattedNumber.join('');
 }
 
-// teste desafio 11
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 5, 9, 0, 1]));
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
@@ -205,7 +206,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
