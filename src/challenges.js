@@ -46,26 +46,37 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayCount) {
+function highestCount(cont) {
   // seu código aqui
-  let countTotal = 0;
+  let contTotal = 0;
   let highNumber = 0;
-  for (let key in arrayCount) {
-    if (arrayCount[key] > highNumber) {
-      highNumber = arrayCount[key];
+  for (let key in cont) {
+    if (cont[key] > highNumber) {
+      highNumber = cont[key];
     }
   }
-  for (let compare in arrayCount) {
-    if (highNumber === arrayCount[compare]) {
-      countTotal += 1;
+  for (let compare in cont) {
+    if (highNumber === cont[compare]) {
+      contTotal += 1;
     }
   }
-  return countTotal;
+  return contTotal;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let result;
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+  if (distCat1 > distCat2) {
+    result = 'cat1'
+  } else if (distCat2 > distCat1) {
+    result = 'cat2'
+  } else {
+    result = 'os gatos trombam e o rato foge'
+  }
+  return result;
 }
 
 // Desafio 8
