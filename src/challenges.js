@@ -82,27 +82,40 @@ console.log(catAndMouse(10, 13, 8))
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
   // seu código aqui
-  let fizzBuzz = []
-  for (i = 0; i < arrayFizzBuzz.length; i += 1) {
-    if (arrayFizzBuzz[i] % 3 == 0 && arrayFizzBuzz[i] % 5 == 0) {
-      fizzBuzz.push('fizzBuzz');
-    } else if (arrayFizzBuzz[i] % 3 == 0) {
-      fizzBuzz.push('fizz')
-    } else if (arrayFizzBuzz[i] % 5 == 0) {
-      fizzBuzz.push('buzz')
+  let fizz = []
+  for (let i = 0; i < arrayFizzBuzz.length; i += 1) {
+    if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0) {
+      fizz.push('fizzBuzz');
+    } else if (arrayFizzBuzz[i] % 3 === 0) {
+      fizz.push('fizz')
+    } else if (arrayFizzBuzz[i] % 5 === 0) {
+      fizz.push('buzz')
     } else {
-      fizzBuzz.push('bug!')
+      fizz.push('bug!')
     }
   }
-  return fizzBuzz;
+  return fizz;
 }
 
 // Desafio 9
-function encode() {
+function encode(array) {
   // seu código aqui
+  let result = array.replace(/a/gi, '1',)
+  let result2 = result.replace(/e/gi, '2',)
+  let result3 = result2.replace(/i/gi, '3',)
+  let result4 = result3.replace(/o/gi, '4',)
+  let result5 = result4.replace(/u/gi, '5',)
+  return result5
 }
+
 function decode() {
   // seu código aqui
+  let result = array.replace(/1/gi, 'a',)
+  let result2 = result.replace(/2/gi, 'e',)
+  let result3 = result2.replace(/3/gi, 'i',)
+  let result4 = result3.replace(/4/gi, 'o',)
+  let result5 = result4.replace(/5/gi, 'u',)
+  return result5
 }
 
 // Desafio 10
