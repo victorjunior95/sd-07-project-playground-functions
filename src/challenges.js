@@ -78,12 +78,12 @@ function catAndMouse(mouse, cat1, cat2) {
     }
   }
   if (distancia1 > distancia2) {
-      result = 'cat2';
+    result = 'cat2';
   } else if (distancia1 < distancia2) {
-      result = 'cat1';
+    result = 'cat1';
   } else if (distancia1 === distancia2) {
-      result = 'os gatos trombam e o rato foge';
-    }
+    result = 'os gatos trombam e o rato foge';
+  }
   return result;
 }
 
@@ -246,10 +246,10 @@ function hydrate(bebidas) {
   if (count === 0) {
     result = 'Não bebeu nada!';
   } else if (count > 1) {
-      result = `${count} copos de água`;
-    } else {
-      result = `${count} copo de água`;
-    }
+    result = `${count} copos de água`;
+  } else {
+    result = `${count} copo de água`;
+  }
   return result;
 }
 
