@@ -29,8 +29,8 @@ function splitSentence(string) {
         addString(initialPosition, finalPosition);
         newWord = false;
       } else if (index === string.length - 1){
-          finalPosition = index;
-          addString(initialPosition, finalPosition);
+        finalPosition = index;
+        addString(initialPosition, finalPosition);
       } else {
         finalPosition = index;
       }
@@ -39,7 +39,6 @@ function splitSentence(string) {
         newWord = true;
       }
     }
-  }
 
   return array;
 }
