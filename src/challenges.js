@@ -87,17 +87,14 @@ function fizzBuzz(num) {
   for (let i of numbers) {
     if (i % 3 === 0 && i % 5 !== 0) {
       palavra = 'fizz';
-      result.push(palavra);
     } else if (i % 5 === 0 && i % 3 !== 0) {
       palavra = 'buzz';
-      result.push(palavra);
     } else if (i % 3 === 0 && i % 5 === 0) {
       palavra = 'fizzBuzz';
-      result.push(palavra);
     } else {
       palavra = 'bug!';
-      result.push(palavra);
     }
+    result.push(palavra);
   }
   return result;
 }
