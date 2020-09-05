@@ -92,14 +92,13 @@ function techList(tech, name) {
 
 function contador(numero){
   let contagem = [0,0,0,0,0,0,0,0,0,0,0];
-  if (numero.length === 11) {
+  if (numero.length !== 11) return false;
     for(let i = 0; i < numero.length; i += 1) {
       contagem[numero[i]] += 1;
       if (contagem[numero[i]] > 3) return false;     
     }
     return true
-  }
-  return false;
+  
 }
 
 let  numero = [-5,3,4,5,6,7,8,9,1,2,33]
