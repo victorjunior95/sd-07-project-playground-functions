@@ -68,9 +68,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanciacat1 === distanciacat2)
     return("os gatos trombam e o rato foge")
     else if (distanciacat1 > distanciacat2)
-      return(cat2)
+      return("cat2")
       else 
-        return(cat1)       
+        return("cat1")       
 }
 
 // Desafio 8
