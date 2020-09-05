@@ -105,14 +105,6 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(string) {
-  let codedSentence = encodeOrDecodeSentence(string);
-  return codedSentence;
-}
-function decode(string) {
-  let decodedSentence = encodeOrDecodeSentence(string);
-  return decodedSentence;
-}
 function encodeOrDecodeSentence(sentence) {
   let codedOrDecodedSentence = '';
   for (let letter in sentence) {
@@ -153,6 +145,14 @@ function encodeOrDecodeSentence(sentence) {
   }
   return codedOrDecodedSentence;
 }
+function encode(string) {
+  let codedSentence = encodeOrDecodeSentence(string);
+  return codedSentence;
+}
+function decode(string) {
+  let decodedSentence = encodeOrDecodeSentence(string);
+  return decodedSentence;
+}
 
 // Desafio 10
 function techList(arrayOfTechs, name) {
@@ -162,39 +162,33 @@ function techList(arrayOfTechs, name) {
   student = name;
   techs = arrayOfTechs;
   techs.sort();
-  if (techs.length === 0) {
-    return 'Vazio!';
-  }
   for (let tech in techs) {
-    result.push({
-      tech: techs[tech],
-      name: student,
-    });
+    if (techs.length !== 0) {
+      result.push({
+        tech: techs[tech],
+        name: student,
+      });
+    } else {
+      return 'Vazio!';
+    }
   }
   return result;
 }
 // Desafio 11
-function generatePhoneNumber(n) {
-  let r = '';
-  let condition = validaNumbers(n);
-  if (condition === false) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  for (let i in n) {
-    r += n[i];
-  }
-  return `(${r[0]}${r[1]}) ${r[2]}${r[3]}${r[4]}${r[5]}${r[6]}-${r[7]}${r[8]}${r[9]}${r[10]}`;
-}
 function validaNumbers(arrayNumbers) {
   let condition = true;
-  if (arrayNumbers.length != 11) {
+  if (arrayNumbers.length !== 11) {
     condition = false;
   }
   for (let number in arrayNumbers) {
     let countRepeat = 0;
-    for (let i = 0; i < arrayNumbers.length; i += 1) {
-      if (arrayNumbers[i] === arrayNumbers[number]) {
-        countRepeat += 1;
+    if (arrayNumbers[number] < 0 || arrayNumbers[number] > 9) {
+      condition = false;
+    } else {
+      for (let i = 0; i < arrayNumbers.length; i += 1) {
+        if (arrayNumbers[i] === arrayNumbers[number]) {
+          countRepeat += 1;
+        }
       }
     }
     if (countRepeat >= 3) {
@@ -202,11 +196,24 @@ function validaNumbers(arrayNumbers) {
     } else {
       countRepeat = 0;
     }
-    if (arrayNumbers[number] < 0 || arrayNumbers[number] > 9) {
-      condition = false;
-    }
   }
   return condition;
+}
+function generatePhoneNumber(n) {
+  let r = '';
+  let condition = validaNumbers(n);
+  if (n.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
+  if (condition === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  for (let i in n) {
+    if (n[i] >= 0 && n[i] < 10) {
+      r += n[i];
+    }
+  }
+  return `(${r[0]}${r[1]}) ${r[2]}${r[3]}${r[4]}${r[5]}${r[6]}-${r[7]}${r[8]}${r[9]}${r[10]}`;
 }
 
 // Desafio 12
