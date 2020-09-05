@@ -135,8 +135,6 @@ function generatePhoneNumber(arrayN) {
   }
   return res
 }
-  return res
-}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
