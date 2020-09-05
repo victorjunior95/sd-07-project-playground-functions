@@ -3,7 +3,7 @@
 compareTrue(true, false);
 
 function compareTrue(firstValue, secondValue) {
-  console.log("");
+  console.log("Desafio 1:");
   if (firstValue === true && secondValue === true) {
     console.log("As duas variáveis são verdadeiras!!!");
     return true;
@@ -20,6 +20,8 @@ function compareTrue(firstValue, secondValue) {
 calcArea(2, 3);
 
 function calcArea(base, height) {
+  console.log("");
+  console.log("Desafio 2:");
   let calc = base * height / 2;
   console.log("A área do triângulo é " + calc);
   return calc;
@@ -29,6 +31,8 @@ function calcArea(base, height) {
 splitSentence("Go Trybe")
 
 function splitSentence(inputString) {
+  console.log("");
+  console.log("Desafio 3:");
   let arrayOfStrings = inputString.split([' ']);
 
   console.log("A string original é: " + inputString);
@@ -40,6 +44,8 @@ function splitSentence(inputString) {
 concatName(['Lucas','Cassiano','Ferraz','Paolillo']);
 
 function concatName(names) {
+  console.log("");
+  console.log("Desafio 4:");
 
   let firstName = names[0];
   let lastName = names[names.length -1];
@@ -52,6 +58,8 @@ function concatName(names) {
 footballPoints(10, 1);
 
 function footballPoints(wins, ties) {
+  console.log("");
+  console.log("Desafio 5:");
 
   let points = 0;
   for ( i = 0; i < wins; i += 1 ) {
@@ -61,13 +69,48 @@ function footballPoints(wins, ties) {
     points += 1;
   }
 
-  console.log(points);
+  console.log("O time possui " + points + " pontos");
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+highestCount([9, 1, 2, 3, 9, 5, 7]);
+
+function highestCount(arrayOfNumbers) {
+  console.log("");
+  console.log("Desafio 6:");
+
+  let highestNumber = 0;
+  //-------Definindo o maior número-------//
+  for ( i = 0; i < arrayOfNumbers.length - 1; i += 1 ) {
+    firstNum = arrayOfNumbers[i];
+
+    for ( j = 1; j < arrayOfNumbers.length; j += 1 ) {
+      secondNum = arrayOfNumbers[j];
+  
+      if (highestNumber < firstNum && highestNumber < secondNum ) {
+        if ( firstNum > secondNum ) {
+          //---Se o primeiro número for maior---//
+          highestNumber = firstNum;
+        } else {
+          //---Se o segundo número for maior---//
+          highestNumber = secondNum;
+        }
+      }
+    }
+  }
+
+  //-------Encontrando o maior número-------//
+  let count = 0;
+
+  for ( countIndex = 0; countIndex < arrayOfNumbers.length; countIndex += 1 ) {
+    if ( arrayOfNumbers[countIndex] === highestNumber ) {
+      count += 1;
+    }
+  }
+
+  console.log("O maior número, " + highestNumber + ", se repetiu " + count + " vezes");
+  return count;
 }
 
 // Desafio 7
