@@ -263,10 +263,9 @@ function hydrate(a) {
   if (numOfReturn > 1) {
     strReturn = numOfReturn + ' copos de água'
     return strReturn
-  } else {
-    strReturn = numOfReturn + ' copo de água'
-    return strReturn
   }
+  strReturn = numOfReturn + ' copo de água'
+  return strReturn
 }
 hydrate(strEntry)
 
