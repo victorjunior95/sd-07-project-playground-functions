@@ -46,23 +46,17 @@ console.log(footballPoints(2, 1)); // 7
 
 // Desafio 6
 function highestCount(numbers) {
-  // check number
-  let i = 0;
   let highestNumber = 0;
-  for (let j in numbers) {
-    if (numbers[i] < numbers[j]) {
-      i = j;
-    }
-    highestNumber = numbers[i];
-  // check count
-    let countNumber = 0;
-    for (let k = 0; k < numbers.length; k += 1) {
-      if (numbers[k] === highestNumber) {
+  let countNumber = 0;
+  for (let i in numbers) {
+    if (highestNumber < numbers[i]) {
+        highestNumber = numbers[i];
+        countNumber = 1;
+    } else if (highestNumber === numbers[i]) {
         countNumber += 1;
-      }
     }
-    return countNumber;
   }
+  return countNumber;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) // 2
 
