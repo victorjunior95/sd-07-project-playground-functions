@@ -89,7 +89,7 @@ function highestCount(a) {
   }
   return highCountNumber;
 }
-console.log(highestCount(highNumberList))
+highestCount(highNumberList)
 
 // Desafio 7
 let mouseOut = 3;
@@ -120,6 +120,8 @@ catAndMouse(mouseOut, cat1Out, cat2Out)
 let dataFizzBuzz = [2, 15, 7, 9, 45]
 function fizzBuzz(a) {
   // seu código aqui
+  /*
+  **** REFATORADO ****
   let message = [];
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] % 3 === 0 && a[i] % 5 === 0) {
@@ -132,9 +134,24 @@ function fizzBuzz(a) {
       message.push('bug!');
     }
   }
+  */
+  let message = [];
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
+      message.push('fizzBuzz')
+    } else {
+        if (a[i] % 5 === 0) {
+          message.push('buzz');
+        }else if (a[i] % 3 === 0) {
+          message.push('fizz');
+        } else {
+          message.push('bug!');
+        }
+      }
+  }
   return message;
 }
-fizzBuzz(dataFizzBuzz)
+console.log(fizzBuzz(dataFizzBuzz))
 
 // Desafio 9
 let paramString = 'Go Tribe'
