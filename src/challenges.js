@@ -261,15 +261,14 @@ function hydrate(a) {
     }
   }
   if (numOfReturn > 1) {
-    let y = numOfReturn + ' copos de água'
-    return y
+    strReturn = numOfReturn + ' copos de água'
+    return strReturn
   } else {
-    let x = numOfReturn + ' copo de água'
-    return x
+    strReturn = numOfReturn + ' copo de água'
+    return strReturn
   }
-  
 }
-console.log(hydrate(strEntry))
+hydrate(strEntry)
 
 
 module.exports = {
