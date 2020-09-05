@@ -176,8 +176,10 @@ function techList(tech,name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(param) {
+  let numeros = param;
+  let retornarphone;
+  let cont = 0;
 }
 
 // Desafio 12
