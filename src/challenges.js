@@ -29,10 +29,10 @@ return(arraydestring)
 function concatName(arraydeentrada) {
   // seu código aqui
   let stringsaida = ""
-  for (let i=0; i < arraydeentrada.length; i+=1){
-  stringsaida = stringsaida + arraydeentrada[i]
-  }
-  return(stringsaida)
+  stringsaida = stringsaida + arraydeentrada[arraydeentrada.length - 1]
+  stringsaida = stringsaida + " "
+  stringsaida = stringsaida + arraydeentrada[0]
+    return(stringsaida)
 }
 
 // Desafio 5
