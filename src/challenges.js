@@ -219,36 +219,42 @@ function generatePhoneNumber(array) {
   }
 
   for (let index = 0; index < 2; index++) {
-    stringPhone = `${stringPhone}${array[index]}`;    
+    stringPhone = `${stringPhone}${array[index]}`;
   }
 
   stringPhone = `${stringPhone}) `;
 
   for (let index = 2; index < 7; index++) {
-    stringPhone = `${stringPhone}${array[index]}`;    
+    stringPhone = `${stringPhone}${array[index]}`;
   }
 
   stringPhone = `${stringPhone}-`;
-  
+
   for (let index = 7; index < 11; index++) {
-    stringPhone = `${stringPhone}${array[index]}`;    
+    stringPhone = `${stringPhone}${array[index]}`;
   }
 
   return stringPhone;
 }
 
-
 // Desafio 12
-function triangleCheck( lineA,  lineB,  lineC ) {
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB ) {
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
     return true;
   } else {
     return false;
   }
 }
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  // https://stackoverflow.com/questions/42532450/extract-number-from-string-javascript
+  let coposBebida = string.match(/[0-9]+/g);
+  let coposAgua = 0;
+  for (let index = 0; index < coposBebida.length; index++) {
+    coposAgua += parseInt(coposBebida[index]);
+  }
+  return `${coposAgua} copos de água`;
 }
 
 module.exports = {
