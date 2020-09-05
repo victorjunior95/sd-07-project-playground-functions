@@ -2,8 +2,6 @@
 
 function compareTrue(approval, conclusion) {
 
-
-
     if (approval == true && conclusion == true) {
 
         let happiness = true;
@@ -43,6 +41,7 @@ function concatName(names) {
 
     return finalInitialName;
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
 
@@ -55,12 +54,11 @@ function highestCount(numbers) {
 
     let highest = 0;
     let repetition = 0;
-    let numbers2 = numbers;
 
     for (let i = 0; i < numbers.length; i += 1) {
 
         if (numbers[i] > highest) {
-            repetition = 1
+            repetition = 1;
             highest = numbers[i];
         } else if (highest === numbers[i]) {
             repetition += 1;
@@ -70,8 +68,6 @@ function highestCount(numbers) {
 
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
@@ -79,11 +75,14 @@ function catAndMouse(mouse, cat1, cat2) {
     let distanceCat2 = Math.abs(cat2 - mouse)
 
     if (distanceCat1 === distanceCat2) {
-        console.log("os gatos trombam e o rato foge");
-    } else if (distanceCat1 > distanceCat2) {
-        return distanceCat1;
-    } else {
-        return distanceCat2;
+
+        return "os gatos trombam e o rato foge"
+    } else if (distanceCat1 < distanceCat2) {
+
+        return "cat1";
+    } else if (distanceCat2 < distanceCat1) {
+
+        return "cat2";
     }
 }
 
