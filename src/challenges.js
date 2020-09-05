@@ -72,6 +72,15 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzOrBuzz(element) {
+  if (element % 3 === 0) {
+  return 'fizz';
+} else if (element % 5 === 0) {
+  return 'buzz';
+}
+  return 'bug!';
+}
+
 function fizzBuzz(numbers) {
   let result = [];
 
@@ -84,17 +93,6 @@ function fizzBuzz(numbers) {
   }
   return result;
 }
-
-function fizzOrBuzz (element) {
-    if (element % 3 === 0) {
-    return 'fizz';
-  } else if (element % 5 === 0) {
-    return 'buzz';
-  } else {
-    return 'bug!';
-  }
-}
-console.log(fizzBuzz([3,15,7,5]))
 
 // Desafio 9
 function encode(string) {
@@ -174,39 +172,50 @@ function techList(techs, name) {
 }
 
 // Desafio 11
+function checkNumbers(nList) {
+  for (let i in nList) {
+    if (nList[i] < 0 || nList[i] > 9) {
+      return false;
+    }
+    let repetitions = 0;
+    for (let j in nList) {
+      if (nList[i] === nList[j]) {
+        repetitions += 1;
+
+        if (repetitions >= 3) {
+          return false;
+        }
+      }
+    }
+  }
+  return true;
+}
+
+function writeNumbers (nList){
+  result = '(';
+  for (let i = 0; i < nList.length; i += 1) {
+    if (i === 2) {
+      result = `${result}) ${nList[i]}`;
+    } else if (i === 7) {
+      result = `${result}-${nList[i]}`;
+    } else {
+      result += nList[i];
+    }
+  }
+  return result;
+}
+
 function generatePhoneNumber(numbers) {
   let result;
   if (numbers.length !== 11) {
     result = 'Array com tamanho incorreto.';
     return result;
   }
-  for (let i in numbers) {
-    if (numbers[i] < 0 || numbers[i] > 9) {
-      result = 'não é possível gerar um número de telefone com esses valores';
-      return result;
-    }
-    let repetitions = 0;
-    for (let j in numbers) {
-      if (numbers[i] === numbers[j]) {
-        repetitions += 1;
-
-        if (repetitions >= 3) {
-          result = 'não é possível gerar um número de telefone com esses valores';
-          return result;
-        }
-      }
-    }
+  if (checkNumbers(numbers) === true) {
+    result = writeNumbers(numbers);
+    return result;
   }
-  result = '(';
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (i === 2) {
-      result = `${result}) ${numbers[i]}`;
-    } else if (i === 7) {
-      result = `${result}-${numbers[i]}`;
-    } else {
-      result += numbers[i];
-    }
-  }
+  result = 'não é possível gerar um número de telefone com esses valores';
   return result;
 }
 
