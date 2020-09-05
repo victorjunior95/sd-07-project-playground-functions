@@ -120,34 +120,17 @@ catAndMouse(mouseOut, cat1Out, cat2Out)
 let dataFizzBuzz = [2, 15, 7, 9, 45]
 function fizzBuzz(a) {
   // seu código aqui
-  /*
-  **** REFATORADO ****
   let message = [];
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] % 3 === 0 && a[i] % 5 === 0) {
       message.push('fizzBuzz');
-    } else if (a[i] % 3 === 0) {
-      message.push('fizz');
     } else if (a[i] % 5 === 0) {
       message.push('buzz');
+    } else if (a[i] % 3 === 0) {
+      message.push('fizz');
     } else {
       message.push('bug!');
     }
-  }
-  */
-  let message = [];
-  for (let i = 0; i < a.length; i += 1) {
-    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
-      message.push('fizzBuzz')
-    } else {
-        if (a[i] % 5 === 0) {
-          message.push('buzz');
-        }else if (a[i] % 3 === 0) {
-          message.push('fizz');
-        } else {
-          message.push('bug!');
-        }
-      }
   }
   return message;
 }
