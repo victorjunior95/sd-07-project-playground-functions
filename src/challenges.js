@@ -21,16 +21,15 @@ function splitSentence(string) {
       newString = `${newString}${string[initialPos + index]}`;
     }
     array.push(newString);
-  }
+    newWord = false;
+}
 
   for (let index = 0; index < string.length; index += 1) {
     if (newWord) {
       if (string[index] === ' ') {
         addString(initialPosition, finalPosition);
-        newWord = false;
       } else if (index === string.length - 1){
-        finalPosition = index;
-        addString(initialPosition, finalPosition);
+        addString(initialPosition, index);
       } else {
         finalPosition = index;
       }
