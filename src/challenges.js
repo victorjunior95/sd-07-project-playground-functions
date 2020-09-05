@@ -157,6 +157,7 @@ function techList(tech,name) {
   let tecnologia = tech; 
   let nome = name;
   let tec_retorno = [];
+  let x;
   if (tecnologia.length == 0){
     tec_retorno = "Vazio!";
   }else{
@@ -166,7 +167,11 @@ function techList(tech,name) {
   }
   for (let i = 0; i < tec_retorno.length -1; i++){
     for (let j = i + 1; j < tec_retorno.length; j++){
-      
+      if (tec_retorno[i].tech > tec_retorno[j].tech){
+        x = tec_retorno[i];
+        tec_retorno[i] = tec_retorno[j];
+        tec_retorno[j] = x;
+      }
     }
   }
   return tec_retorno;
