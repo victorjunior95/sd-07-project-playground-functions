@@ -40,8 +40,8 @@ function highestCount(array) {
       maiorNumero = array[i];
     }
   }
-  for (let i in array) {
-    if (array[i] === maiorNumero) {
+  for (let j in array) {
+    if (array[j] === maiorNumero) {
       numeroRepeat += 1;
     }
   }
