@@ -85,7 +85,7 @@ function highestCount(a) {
       highCountNumber = 1
     } else if (highNumber === a[i]) {
       highCountNumber += 1;
-   }
+    }
   }
   return highCountNumber;
 }
