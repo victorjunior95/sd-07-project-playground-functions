@@ -94,7 +94,7 @@ function fizzBuzz(num) {
     } else if (i % 3 === 0 && i % 5 === 0) {
       palavra = 'fizzBuzz';
       result.push(palavra);
-    } else if (i % 3 !== 0 && i % 5 !== 0) {
+    } else {
       palavra = 'bug!';
       result.push(palavra);
     }
