@@ -51,7 +51,7 @@ function highestCount(arraydeentrada) {
     if (arraydeentrada[i] > maior)
       maior = arraydeentrada[i]
   }
-  for(let i=0;i<arraydeentrada.length();i+=1){
+  for(let i=0;i<arraydeentrada.length;i+=1){
     if (arraydeentrada[i] === maior)
     repeticoes = repeticoes + 1
   }
