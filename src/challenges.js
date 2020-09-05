@@ -66,7 +66,6 @@ function highestCount(a) {
       highNumbers.push(a[i])
     }
   }
-
   let highNumbersFinal = 0;
   for (let j = 0; j < a.length; j += 1) {
     if (highNumbers[0] === a[j]) {
@@ -256,7 +255,7 @@ function hydrate(a) {
   let strReturn = ''
   for (let i = 0; i < strSeparated.length; i += 1) {
     let strForNumber = parseInt(strSeparated[i], 10)
-    if (Number.isInteger(strForNumber)){
+    if (Number.isInteger(strForNumber)) {
       numOfReturn += strForNumber
     }
   }
