@@ -137,7 +137,7 @@ function techList(tech, name) {
   techArray = [];
   techObj = {};
   if (tech.length < 1) {
-    return `Vazio!`;
+    return 'Vazio!';
   }
   tech.sort();
   for (let i = 0; i < tech.length; i += 1) {
