@@ -15,16 +15,24 @@ function splitSentence(string) {
   let initialPosition = 0;
   let finalPosition = 0;
 
-  for (let index = 0; index < string.length; index++) {
-    if (string[index] != " " && !newWord) {
+  function addString(initialPos, finalPos) {
+    let newString = '';
+    for (let index = 0; index <= finalPos- initialPos; index += 1) {
+      newString = `${newString}${string[initialPos+ index]}`;
+    }
+    array.push(newString);
+  }
+
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] !== ' ' && !newWord) {
       initialPosition = index;
       newWord = true;
-    } else if (string[index] != " " && index == string.length - 1) {
+    } else if (string[index] !== ' ' && index === string.length - 1) {
       finalPosition = index;
       addString(initialPosition, finalPosition);
-    } else if (string[index] != " ") {
+    } else if (string[index] !== ' ') {
       finalPosition = index;
-    } else if (string[index] == " " && newWord) {
+    } else if (string[index] === ' ' && newWord) {
       addString(initialPosition, finalPosition);
       newWord = false;
     }
@@ -32,13 +40,6 @@ function splitSentence(string) {
 
   return array;
 
-  function addString(initialPosition, finalPosition) {
-    let newString = "";
-    for (let index = 0; index <= finalPosition - initialPosition; index++) {
-      newString = `${newString}${string[initialPosition + index]}`;
-    }
-    array.push(newString);
-  }
 }
 
 // Desafio 4
@@ -62,7 +63,7 @@ function highestCount(array) {
   }
 
   for (let index in array) {
-    if (maior == array[index]) {
+    if (maior === array[index]) {
       counter += 1;
     }
   }
@@ -75,11 +76,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance_cat2 = Math.abs(cat2 - mouse);
 
   if (distance_cat1 < distance_cat2) {
-    return "cat1";
-  } else if (distance_cat1 == distance_cat2) {
-    return "os gatos trombam e o rato foge";
+    return 'cat1';
+  } else if (distance_cat1 === distance_cat2) {
+    return 'os gatos trombam e o rato foge';
   } else {
-    return "cat2";
+    return 'cat2';
   }
 }
 
@@ -87,14 +88,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let stringArray = [];
   for (let index in array) {
-    if (array[index] % 3 == 0 && array[index] % 5 == 0) {
-      stringArray.push("fizzBuzz");
-    } else if (array[index] % 3 == 0) {
-      stringArray.push("fizz");
-    } else if (array[index] % 5 == 0) {
-      stringArray.push("buzz");
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      stringArray.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      stringArray.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      stringArray.push('buzz');
     } else {
-      stringArray.push("bug!");
+      stringArray.push('bug!');
     }
   }
   return stringArray;
@@ -103,23 +104,23 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let array = [];
-  let newString = "";
-  for (let index = 0; index < string.length; index++) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
-      case "a":
-        array.push("1");
+      case 'a':
+        array.push('1');
         break;
-      case "e":
-        array.push("2");
+      case 'e':
+        array.push('2');
         break;
-      case "i":
-        array.push("3");
+      case 'i':
+        array.push('3');
         break;
-      case "o":
-        array.push("4");
+      case 'o':
+        array.push('4');
         break;
-      case "u":
-        array.push("5");
+      case 'u':
+        array.push('5');
         break;
 
       default:
@@ -127,30 +128,30 @@ function encode(string) {
         break;
     }
   }
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     newString = `${newString}${array[index]}`;
   }
   return newString;
 }
 function decode(string) {
   let array = [];
-  let newString = "";
-  for (let index = 0; index < string.length; index++) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
-      case "1":
-        array.push("a");
+      case '1':
+        array.push('a');
         break;
-      case "2":
-        array.push("e");
+      case '2':
+        array.push('e');
         break;
-      case "3":
-        array.push("i");
+      case '3':
+        array.push('i');
         break;
-      case "4":
-        array.push("o");
+      case '4':
+        array.push('o');
         break;
-      case "5":
-        array.push("u");
+      case '5':
+        array.push('u');
         break;
 
       default:
@@ -158,7 +159,7 @@ function decode(string) {
         break;
     }
   }
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     newString = `${newString}${array[index]}`;
   }
   return newString;
@@ -166,14 +167,14 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array.length == 0) {
-    return "Vazio!";
+  if (array.length === 0) {
+    return 'Vazio!';
   }
   let returnArray = [];
   let newArray = array;
 
-  for (let i = 1; i < array.length; i++) {
-    for (let j = 0; j < i; j++) {
+  for (let i = 1; i < array.length; i += 1) {
+    for (let j = 0; j < i; j += 1) {
       if (newArray[i] < newArray[j]) {
         let position = newArray[i];
         newArray[i] = newArray[j];
@@ -182,7 +183,7 @@ function techList(array, name) {
     }
   }
 
-  for (let index = 0; index < newArray.length; index++) {
+  for (let index = 0; index < newArray.length; index += 1) {
     let object = {};
     object.tech = newArray[index];
     object.name = name;
@@ -193,14 +194,14 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let counter = {};
-  let stringPhone = "(";
+  let stringPhone = '(';
 
-  if (array.length != 11) {
-    return "Array com tamanho incorreto.";
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
@@ -214,23 +215,23 @@ function generatePhoneNumber(array) {
 
   for (const key in counter) {
     if (counter[key] >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
-  for (let index = 0; index < 2; index++) {
+  for (let index = 0; index < 2; index += 1) {
     stringPhone = `${stringPhone}${array[index]}`;
   }
 
   stringPhone = `${stringPhone}) `;
 
-  for (let index = 2; index < 7; index++) {
+  for (let index = 2; index < 7; index += 1) {
     stringPhone = `${stringPhone}${array[index]}`;
   }
 
   stringPhone = `${stringPhone}-`;
 
-  for (let index = 7; index < 11; index++) {
+  for (let index = 7; index < 11; index += 1) {
     stringPhone = `${stringPhone}${array[index]}`;
   }
 
@@ -251,10 +252,14 @@ function hydrate(string) {
   // https://stackoverflow.com/questions/42532450/extract-number-from-string-javascript
   let coposBebida = string.match(/[0-9]+/g);
   let coposAgua = 0;
-  for (let index = 0; index < coposBebida.length; index++) {
+  for (let index = 0; index < coposBebida.length; index += 1) {
     coposAgua += parseInt(coposBebida[index]);
   }
-  return `${coposAgua} copos de água`;
+  if (coposAgua !== 1) {
+    return `${coposAgua} copos de água`;
+  } else {
+    return `${coposAgua} copo de água`;
+  }
 }
 
 module.exports = {
