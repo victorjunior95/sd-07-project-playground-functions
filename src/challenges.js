@@ -3,8 +3,7 @@ function compareTrue(condition1, condition2) {
   // seu código aqui
   if (condition1 && condition2) {
     return true
-  }
-  else {
+  } else {
     return false
   }
 }
@@ -12,7 +11,7 @@ function compareTrue(condition1, condition2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let area = (base * height ) / 2;
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -41,12 +40,12 @@ function highestCount(numbers) {
   // seu código aqui
   let higher = 0;
   let higherCount = 0;
-  for (let i = 0; i < numbers.length; i += 1){
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > higher) {
       higher = numbers[i];
     }
   }
-  for (let i = 0; i < numbers.length; i += 1){
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] === higher) {
       higherCount += 1;
     }
@@ -58,46 +57,16 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let result;
-  if(mouse > cat1 && mouse > cat2) {
-    if (mouse - cat1 < mouse - cat2) {
-      result = 'cat1';
-    } else if (mouse - cat1 > mouse - cat2) {
-      result = 'cat2';
-    } else {
-      result = 'os gatos trombam e o rato foge'
-    }
-  } else if (mouse < cat1 && mouse < cat2) {
-    if (mouse - cat1 < mouse - cat2) {
-      result = 'cat2';
-    } else if (mouse - cat1 > mouse - cat2) {
-      result = 'cat1';
-    } else {
-      result = 'os gatos trombam e o rato foge'
-    }
-  } else if (mouse < cat1 && mouse > cat2) {
-    if (cat1 - mouse < mouse - cat2) {
-      result = 'cat1'
-    } else if (cat1 - mouse > mouse - cat2) {
-      result = 'cat2'
-    } else {
-      result = 'os gatos trombam e o rato foge'
-    }
-  } else if (mouse > cat1 && mouse < cat2) {
-    if (mouse - cat1 < cat2 - mouse) {
-      result = 'cat1'
-    } else if (mouse - cat1 > cat2 - mouse) {
-      result = 'cat2'
-    } else {
-      result = 'os gatos trombam e o rato foge'
-    }
+  if (mouse > cat1 && cat1 > cat2 || mouse < cat1 && cat1 < cat2 || mouse > cat1 && mouse < cat2 && mouse - cat1 < cat2 - mouse || 
+    mouse > cat2 && mouse < cat1 && mouse - cat2 > cat1 - mouse) {
+    
+    result = 'cat1';
+  } else if (mouse > cat2 && cat2 > cat1 || mouse < cat2 && cat2 < cat1 || mouse > cat1 && mouse < cat2 && mouse - cat1 > cat2 - mouse || 
+    mouse > cat2 && mouse < cat1 && mouse - cat2 < cat1 - mouse) {
+    
+    result = 'cat2';
   } else {
-    if (mouse == cat1 && mouse !== cat2) {
-      result = 'cat1'
-    } else if ((mouse !== cat1 && mouse == cat2)) {
-      result = 'cat2'
-    } else {
-      result = 'os gatos trombam e o rato foge'
-    }
+    result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
@@ -106,18 +75,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let newArray = [];
-  for(let i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
       newArray.push('fizz');
-    }
-    else if (array[i] % 3 !== 0 && array[i] % 5 === 0) {
+    } else if (array[i] % 3 !== 0 && array[i] % 5 === 0) {
       newArray.push('buzz');
-    }
-    else if (array[i] % 3 === 0 && array[i] % 5 === 0){
+    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       newArray.push('fizzBuzz');
-    } 
-    else {
-      newArray.push("bug!");
+    } else {
+      newArray.push('bug!');
     }
   }
   return newArray;
@@ -128,7 +94,7 @@ function encode(stringToEncode) {
   // seu código aqui
   let arrayToEncode = stringToEncode.split('')
   let encoded = '';
-  for(let i = 0; i < arrayToEncode.length; i += 1) {
+  for (let i = 0; i < arrayToEncode.length; i += 1) {
     if (arrayToEncode[i] === 'a') {
       encoded += '1';
     } else if (arrayToEncode[i] === 'e') {
