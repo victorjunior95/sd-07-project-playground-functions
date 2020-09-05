@@ -246,12 +246,24 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false
 }
-console.log(triangleCheck(10, 14, 8))
+triangleCheck(10, 14, 8)
 
 // Desafio 13
-function hydrate() {
+let strEntry = '1 cachaça, 5 cervejas e 1 copo de vinho'
+function hydrate(a) {
   // seu código aqui
+  let charSep = ' '
+  let strSeparated = a.split(charSep)
+  let numOfReturn = 0
+  for (let i = 0; i < strSeparated.length; i += 1) {
+    let strForNumber = parseInt(strSeparated[i], 10)
+    if (Number.isInteger(strForNumber)){
+      numOfReturn += strForNumber
+    }
+  }
+  return numOfReturn + ' copos de água'
 }
+console.log(hydrate(strEntry))
 
 
 module.exports = {
