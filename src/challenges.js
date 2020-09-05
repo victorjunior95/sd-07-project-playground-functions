@@ -220,7 +220,7 @@ function hydrate(phrase) {
     number = parseInt(number);
     cont += number;
   }
-  return `${cont} copos de água}`;
+  return `${cont} copos de água`;
 }
 
 module.exports = {
