@@ -26,10 +26,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arrayDeStrings) {
-  let concat = arrayDeStrings[arrayDeStrings.length - 1 + ", " + arrayDeStrings[0]];
+function concatName(arrayDeStrings){
+  let concat = arrayDeStrings[arrayDeStrings.length - 1] + ", " + arrayDeStrings[0];
 
-  return concat;
+  return concat
 }
 
 // Desafio 5
@@ -61,9 +61,9 @@ function highestCount(param) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let resultado;  
-  if((cat1 - mouse) < (cat2 - mouse)){
+  if(Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
         resultado = "cat1"
-    } else if((cat2 - mouse) < (cat1 - mouse)){
+    } else if(Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)){
         resultado = "cat2"
     }else {
       resultado = "os gatos trombam e o rato foge"
@@ -73,8 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(param) {
-  let resultados = []
-  let resultadoFinal;
+  let resultados = [];
   for(let i = 0; i < param.length; i += 1){
       if(i > 0){
           resultados += ", "
@@ -143,8 +142,20 @@ function decode(param) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+
+function techList(tech, name) {
+  let lista = [];
+  for(let i = 0; i < tech.length; i += 1){
+      let objeto = {}
+      objeto = {
+          tech: tech[i],
+          name: name
+      }
+      lista += objeto;
+  }
+  let listaFinal = lista.sort();
+  return listaFinal
+
 }
 
 // Desafio 11
