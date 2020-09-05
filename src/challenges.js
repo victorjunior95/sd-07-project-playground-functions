@@ -33,7 +33,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 
-
 function highestCount(array) {
   function highestNumber(array) {
     let maiorNumero = array[0];
