@@ -39,7 +39,7 @@ function concatName(a) {
       newString += a[i]
     }
   }
-  //let stringReturn = newString + ', ' + a[0];
+  // let stringReturn = newString + ', ' + a[0];
   // Troca por template literal
   let stringReturn = `${newString}, ${a[0]}`
   return stringReturn
@@ -226,7 +226,7 @@ function generatePhoneNumber(a) {
     }
     countRepeated = 0
   }
-  //Declaração em template literal
+  // Declaração em template literal
   let phoneComplete = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
   return phoneComplete
 }
