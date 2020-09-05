@@ -16,7 +16,7 @@ function splitSentence(string) {
   let finalPosition = 0;
 
   function addString(initialPos, finalPos) {
-    let newString = '';
+    let newString = "";
     for (let index = 0; index <= finalPos - initialPos; index += 1) {
       newString = `${newString}${string[initialPos + index]}`;
     }
@@ -24,17 +24,22 @@ function splitSentence(string) {
   }
 
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] !== ' ' && !newWord) {
-      initialPosition = index;
-      newWord = true;
-    } else if (string[index] !== ' ' && index === string.length - 1) {
-      finalPosition = index;
-      addString(initialPosition, finalPosition);
-    } else if (string[index] !== ' ') {
-      finalPosition = index;
-    } else if (string[index] === ' ' && newWord) {
-      addString(initialPosition, finalPosition);
-      newWord = false;
+    if (newWord) {
+      if (string[index] === ' ') {
+        addString(initialPosition, finalPosition);
+        newWord = false;
+      } else if(index === string.length - 1){
+          finalPosition = index;
+          addString(initialPosition, finalPosition);
+      } else {
+        finalPosition = index;
+      }
+    } else {
+      if (string[index] !== ' ') {
+        initialPosition = index;
+        newWord = true;
+      } else {
+      }
     }
   }
 
@@ -75,11 +80,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(cat2 - mouse);
 
   if (distanceCat1 < distanceCat2) {
-    return 'cat1';
+    return "cat1";
   } else if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombam e o rato foge';
+    return "os gatos trombam e o rato foge";
   } else {
-    return 'cat2';
+    return "cat2";
   }
 }
 
@@ -88,13 +93,13 @@ function fizzBuzz(array) {
   let stringArray = [];
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      stringArray.push('fizzBuzz');
+      stringArray.push("fizzBuzz");
     } else if (array[index] % 3 === 0) {
-      stringArray.push('fizz');
+      stringArray.push("fizz");
     } else if (array[index] % 5 === 0) {
-      stringArray.push('buzz');
+      stringArray.push("buzz");
     } else {
-      stringArray.push('bug!');
+      stringArray.push("bug!");
     }
   }
   return stringArray;
@@ -103,23 +108,23 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let array = [];
-  let newString = '';
+  let newString = "";
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
-      case 'a':
-        array.push('1');
+      case "a":
+        array.push("1");
         break;
-      case 'e':
-        array.push('2');
+      case "e":
+        array.push("2");
         break;
-      case 'i':
-        array.push('3');
+      case "i":
+        array.push("3");
         break;
-      case 'o':
-        array.push('4');
+      case "o":
+        array.push("4");
         break;
-      case 'u':
-        array.push('5');
+      case "u":
+        array.push("5");
         break;
 
       default:
@@ -134,23 +139,23 @@ function encode(string) {
 }
 function decode(string) {
   let array = [];
-  let newString = '';
+  let newString = "";
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
-      case '1':
-        array.push('a');
+      case "1":
+        array.push("a");
         break;
-      case '2':
-        array.push('e');
+      case "2":
+        array.push("e");
         break;
-      case '3':
-        array.push('i');
+      case "3":
+        array.push("i");
         break;
-      case '4':
-        array.push('o');
+      case "4":
+        array.push("o");
         break;
-      case '5':
-        array.push('u');
+      case "5":
+        array.push("u");
         break;
 
       default:
@@ -167,7 +172,7 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   if (array.length === 0) {
-    return 'Vazio!';
+    return "Vazio!";
   }
   let returnArray = [];
   let newArray = array;
@@ -193,14 +198,14 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let counter = {};
-  let stringPhone = '(';
+  let stringPhone = "(";
 
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return "Array com tamanho incorreto.";
   }
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
 
@@ -214,7 +219,7 @@ function generatePhoneNumber(array) {
 
   for (const key in counter) {
     if (counter[key] >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
 
@@ -252,7 +257,7 @@ function hydrate(string) {
   let coposBebida = string.match(/[0-9]+/g);
   let coposAgua = 0;
   for (let index = 0; index < coposBebida.length; index += 1) {
-    coposAgua += parseInt(coposBebida[index],10);
+    coposAgua += parseInt(coposBebida[index], 10);
   }
   if (coposAgua !== 1) {
     return `${coposAgua} copos de água`;
