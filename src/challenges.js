@@ -91,23 +91,21 @@ function techList(tech, name) {
 }
 
 function contador(numero){
-  let contagem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let contagem = [0,0,0,0,0,0,0,0,0,0,0];
   let sum = 0;
-    
-  for(let i = 0; i < numero.length; i += 1) {
-    if ((numero[i] > 9) || (numero[i] < 0)) return false;
-    contagem[numero[i]] += 1;
-    sum += 1;
-    console.log(contagem);
+  if ((numero[11] == undefined) && (numero[10] != undefined)) {
+    for(let i = 0; i < numero.length; i += 1) {
+      if ((numero[i] > 9) || (numero[i] < 0)) return false;
+      contagem[numero[i]] += 1;
+      if (contagem[numero[i]] > 3) return false;  
+      console.log(contagem); 
+      return true;    
+    }
   }
-  if (sum !== 11) return false;
-  for (let i = 0; i < 11; i += 1) {
-    if (contagem[i] > 3) return false;
-  }
-  return true;
+  return false;
 }
 
-let  numero = [0,3,1,-15,1,1,2,2,3,3,2]
+let  numero = [0,3,4,5,6,7,8,9,1,2,3]
 console.log(contador(numero));
 // Desafio 11
 function generatePhoneNumber(numero) {
