@@ -151,8 +151,6 @@ function decode(nome) {
   return new_palavra;
 }
 // Desafio 10
-let tecnologias = ["js", "html", "css", "frameworks", "soft skils"]; 
-let nome = "Vitor";
 function techList(tech,name) { 
   let tecnologia = tech; 
   let nome = name;
@@ -176,7 +174,7 @@ function techList(tech,name) {
   }
   return tec_retorno;
 }
-console.log(techList(tecnologias,nome));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
