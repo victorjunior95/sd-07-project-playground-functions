@@ -90,9 +90,61 @@ function techList(tech, name) {
   return lista;
 }
 
+function contador(numero){
+  let contagem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let sum = 0;
+    
+  for(let i = 0; i < numero.length; i += 1) {
+    switch (numero[i]) {
+      case 0:
+        contagem[0] += 1
+        break;
+      case 1:
+        contagem[1] += 1
+        break;
+      case 2:
+        contagem[2] += 1
+        break;
+      case 3:
+        contagem[3] += 1
+        break;
+      case 4:
+        contagem[4] += 1
+        break;
+      case 5:
+        contagem[5] += 1
+        break;
+      case 6:
+        contagem[6] += 1
+        break;
+      case 7:
+        contagem[7] += 1
+        break;
+      case 8:
+        contagem[8] += 1
+        break;
+      case 9:
+        contagem[9] += 1
+        break;
+    
+      default:
+        return false;
+    } 
+    sum += 1;
+  }
+  if (sum !== 11) return false;
+  for (let i = 0; i < 11; i += 1) {
+    if (contagem[i] > 3) return false;
+  }
+  return true;
+}
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numero) {
+  if ((numero < 0) && (numero > 10)){
+  for(let i = 0; i < numero.length; i += 1){
+   
+  }
+}
 }
 
 // Desafio 12
