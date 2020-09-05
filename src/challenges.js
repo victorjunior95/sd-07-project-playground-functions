@@ -33,8 +33,10 @@ function splitSentence(param) {
 function concatName(param) {
   let primeiro = (param[0].toString());
   let ultimo = (param[param.length -1].toString());
-  console.log("'"+ultimo+","+" "+primeiro+"'");
-  return primeiro,ultimo;
+  let concatName = new Array;
+  concatName.push(ultimo,primeiro);
+  console.log(`${concatName[0]}, ${concatName[1]}`)
+  return concatName;
 }
 
 // Desafio 5
@@ -106,11 +108,47 @@ function fizzBuzz(param) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(nome) {
+  new_palavra = [];
+  for (let i = 0; i < nome.length; i++){
+    new_palavra.push(nome[i]);
+  }
+  for (let i = 0; i < new_palavra.length; i++){
+    if (new_palavra[i] === "a"){
+        new_palavra[i] = "1";
+    }else if (new_palavra[i] === "e"){
+        new_palavra[i] = "2";
+    }else if (new_palavra[i] === "i"){
+        new_palavra[i] = "3";
+    }else if (new_palavra[i] === "o"){
+        new_palavra[i] = "4";
+    }else if (new_palavra[i] === "u"){
+        new_palavra[i] = "5";
+    }
+  }
+  new_palavra = new_palavra.join('').toString();
+  return new_palavra;
 }
-function decode() {
-  // seu código aqui
+function decode(nome) {
+  new_palavra = [];
+  for (let i = 0; i < nome.length; i++){
+    new_palavra.push(nome[i]);
+  }
+  for (let i = 0; i < new_palavra.length; i++){
+    if (new_palavra[i] === "1"){
+        new_palavra[i] = "a";
+    }else if (new_palavra[i] === "2"){
+        new_palavra[i] = "e";
+    }else if (new_palavra[i] === "3"){
+        new_palavra[i] = "i";
+    }else if (new_palavra[i] === "4"){
+        new_palavra[i] = "o";
+    }else if (new_palavra[i] === "5"){
+        new_palavra[i] = "u";
+    }
+  }
+  new_palavra = new_palavra.join('').toString();
+  return new_palavra;
 }
 
 // Desafio 10
