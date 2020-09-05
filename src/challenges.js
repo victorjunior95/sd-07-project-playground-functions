@@ -58,9 +58,11 @@ function footballPoints(wins, ties) {
 footballPoints(victory, draw)
 
 // Desafio 6
-let highNumberList = [9, 1, 2, 3, 9, 5, 7]
+let highNumberList = [9, 1, 2, 3, 9, 5, 7, 9]
 function highestCount(a) {
   // seu código aqui
+  /*
+  ***** Refactoring *****
   let highNumbers = [0];
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] > highNumbers[0]) {
@@ -74,9 +76,20 @@ function highestCount(a) {
       highNumbersFinal += 1;
     }
   }
-  return highNumbersFinal;
+  */
+  let highNumber = 0;
+  let highCountNumber = 0;
+  for (let i = 0; i < a.length; i += 1) {
+    if (highNumber < a[i]) {
+      highNumber = a[i]
+      highCountNumber = 1
+    } else if (highNumber === a[i]) {
+      highCountNumber += 1;
+   }
+  }
+  return highCountNumber;
 }
-highestCount(highNumberList)
+console.log(highestCount(highNumberList))
 
 // Desafio 7
 let mouseOut = 3;
@@ -269,7 +282,7 @@ function hydrate(a) {
   strReturn = `${numOfReturn} copo de água`
   return strReturn
 }
-console.log(hydrate(strEntry))
+hydrate(strEntry)
 
 
 module.exports = {
