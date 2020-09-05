@@ -76,14 +76,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let retorno = [];
   for (let i in numeros) {
-    if (numeros[i] % 3 == 0 && numeros[i] % 5 == 0) {
-      retorno.push(`fizzBuzz`);
-    } else if (numeros[i] % 5 == 0) {
-      retorno.push(`buzz`);
-    } else if (numeros[i] % 3 == 0) {
-      retorno.push(`fizz`);
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      retorno.push('fizzBuzz');
+    } else if (numeros[i] % 5 === 0) {
+      retorno.push('buzz');
+    } else if (numeros[i] % 3 === 0) {
+      retorno.push('fizz');
     } else {
-      retorno.push(`bug!`);
+      retorno.push('bug!');
     }
   }
   return retorno;
@@ -92,20 +92,20 @@ function fizzBuzz(numeros) {
 function encode(frase) {
   let resultado = frase;
   for (let i = 0; i < frase.length; i += 1) {
-    if (frase.charAt(i) == "a") {
-      resultado = resultado.replace(/a/, "1");
+    if (frase.charAt(i) === 'a') {
+      resultado = resultado.replace(/a/, '1');
     }
-    if (frase.charAt(i) == "e") {
-      resultado = resultado.replace(/e/, "2");
+    if (frase.charAt(i) === 'e') {
+      resultado = resultado.replace(/e/, '2');
     }
-    if (frase.charAt(i) == "i") {
-      resultado = resultado.replace(/i/, "3");
+    if (frase.charAt(i) === 'i') {
+      resultado = resultado.replace(/i/, '3');
     }
-    if (frase.charAt(i) == "o") {
-      resultado = resultado.replace(/o/, "4");
+    if (frase.charAt(i) === 'o') {
+      resultado = resultado.replace(/o/, '4');
     }
-    if (frase.charAt(i) == "u") {
-      resultado = resultado.replace(/u/, "5");
+    if (frase.charAt(i) === 'u') {
+      resultado = resultado.replace(/u/, '5');
     }
   }
   return resultado;
@@ -114,28 +114,28 @@ function encode(frase) {
 function decode(frase) {
   let resultado = frase;
   for (let i = 0; i < frase.length; i += 1) {
-    if (frase.charAt(i) == "1") {
-      resultado = resultado.replace(/1/, "a");
+    if (frase.charAt(i) === '1') {
+      resultado = resultado.replace(/1/, 'a');
     }
-    if (frase.charAt(i) == "2") {
-      resultado = resultado.replace(/2/, "e");
+    if (frase.charAt(i) === '2') {
+      resultado = resultado.replace(/2/, 'e');
     }
-    if (frase.charAt(i) == "3") {
-      resultado = resultado.replace(/3/, "i");
+    if (frase.charAt(i) === '3') {
+      resultado = resultado.replace(/3/, 'i');
     }
-    if (frase.charAt(i) == "4") {
-      resultado = resultado.replace(/4/, "o");
+    if (frase.charAt(i) === '4') {
+      resultado = resultado.replace(/4/, 'o');
     }
-    if (frase.charAt(i) == "5") {
-      resultado = resultado.replace(/5/, "u");
+    if (frase.charAt(i) === '5') {
+      resultado = resultado.replace(/5/, 'u');
     }
   }
   return resultado;
 }
 
 function techList(tech, name) {
-  techArray = [];
-  techObj = {};
+  let techArray = [];
+  let techObj = {};
   if (tech.length < 1) {
     return 'Vazio!';
   }
@@ -149,69 +149,35 @@ function techList(tech, name) {
 }
 
 function generatePhoneNumber(n) {
-  //Valida se tem 11 numeros
-  if (n.length != 11) {
-    return `Array com tamanho incorreto.`;
+  // Valida se tem 11 numeros
+  if (n.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  //Valida se é maior que -1 e menor que 10
+  // Valida se é maior que -1 e menor que 10
   for (let i = 0; i < n.length; i += 1) {
     if (n[i] < 0 || n[i] > 9) {
       return `não é possível gerar um número de telefone com esses valores`;
     }
   }
-  //Valida numeros repetidos
-  //fonte: https://medium.com/@amirdanish126/how-to-count-duplicate-value-in-an-array-in-javascript-e942b59af8f2
+  // Valida numeros repetidos
+  // fonte: https://medium.com/@amirdanish126/how-to-count-duplicate-value-in-an-array-in-javascript-e942b59af8f2
   let resultado = {};
   n.forEach(function (x) {
     resultado[x] = (resultado[x] || 0) + 1;
   });
-  //Retorna mensagem caso 3 ou mais numeros repetidos
+  // Retorna mensagem caso 3 ou mais numeros repetidos
   for (let i in resultado) {
     if (resultado[i] > 2) {
       return `não é possível gerar um número de telefone com esses valores`;
     }
   }
-  //Retorna numero caso passe na validação
+  // Retorna numero caso passe na validação
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let a = Math.abs(lineB) % Math.abs(lineC);
-  let b = Math.abs(lineA) % Math.abs(lineC);
-  let c = Math.abs(lineA) % Math.abs(lineB);
-  let sA = lineB + lineC;
-  let sB = lineC + lineA;
-  let sC = lineA + lineB;
-  let lado = false;
-  let somaAbsoluto = false;
-  let resultado = false;
-  console.log(sA);
-  if (
-    lineA < sC ||
-    lineA < sB ||
-    lineB < sA ||
-    lineB < sC ||
-    lineC < sA ||
-    lineC < sB
-  ) {
-    lado = true;
-  }
-  if (
-    lineA > b ||
-    lineA > c ||
-    lineB > a ||
-    lineB > c ||
-    lineC > a ||
-    lineC > b
-  ) {
-    somaAbsoluto = true;
-  }
-  if (lado == true && somaAbsoluto == true) {
-    return (resultado = true);
-  } else {
-    return (resultado = false);
-  }
+
 }
 
 // Desafio 13
