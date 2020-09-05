@@ -20,7 +20,7 @@ function splitSentence(palavra) {
 function concatName(nomes) {
   let nomeArray = nomes;
   let result = [];
-  for (let i in nomes) {
+  for (let i = 0; i < nomeArray.length; i += 1) {
     nomeArray.splice(i + 1, nomes.length - 2);
   }
   for (let j = nomeArray.length - 1; j >= 0; j -= 1) {
@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
   let vitoria = wins;
   let empate = ties;
   if (vitoria > 0) {
-    vitoria = vitoria * 3;
+    vitoria *= 3;
   }
   let result = vitoria + empate;
   return result;
@@ -48,7 +48,7 @@ function highestCount(repeat) {
   for (let i of array) {
     if (i > maior) {
       maior = i;
-    }   
+    }
   }
   for (let j of array) {
     if (maior === j) {
@@ -65,45 +65,45 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato2 = cat2;
   let distancia1 = 0;
   let distancia2 = 0;
-  let result = ""; 
+  let result = '';
   if ((rato > gato1 && rato > gato2) || (rato > gato1 && rato < gato2) ||
-  (rato < gato1 && rato > gato2) || (rato < gato1 && rato < gato2) || 
-  (rato === gato1 && rato === gato2)) { 
-    distancia1 = rato - gato1; 
+  (rato < gato1 && rato > gato2) || (rato < gato1 && rato < gato2) ||
+  (rato === gato1 && rato === gato2)) {
+    distancia1 = rato - gato1;
     distancia2 = rato - gato2;
     if (distancia1 < 0) {
       distancia1 *= (-1);
-    }else if (distancia2 < 0) {
+    } else if (distancia2 < 0) {
       distancia2 *= (-1);
     }
   }
   if (distancia1 > distancia2) {
-    result = "cat2";
-    }else if (distancia1 < distancia2) {
-    result = "cat1";
-    }else if (distancia1 === distancia2) {
-    result = "os gatos trombam e o rato foge";
-  }
+      result = 'cat2';
+  } else if (distancia1 < distancia2) {
+      result = 'cat1';
+  } else if (distancia1 === distancia2) {
+      result = 'os gatos trombam e o rato foge';
+    }
   return result;
 }
 
 // Desafio 8
 function fizzBuzz(num) {
   let numbers = num;
-  let palavra = "";
+  let palavra = '';
   let result = [];
-  for(let i of numbers) {
+  for (let i of numbers) {
     if (i % 3 === 0 && i % 5 !== 0) {
-      palavra = "fizz";
+      palavra = 'fizz';
       result.push(palavra);
-    }else if (i % 5 === 0 && i % 3 !== 0) {
-      palavra = "buzz";
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+      palavra = 'buzz';
       result.push(palavra);
-    }else if (i % 3 === 0 && i % 5 === 0) {
-      palavra = "fizzBuzz";
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      palavra = 'fizzBuzz';
       result.push(palavra);
-    }else if (i % 3 !== 0 && i % 5 !== 0) {
-      palavra = "bug!";
+    } else if (i % 3 !== 0 && i % 5 !== 0) {
+      palavra = 'bug!';
       result.push(palavra);
     }
   }
@@ -113,19 +113,19 @@ function fizzBuzz(num) {
 // Desafio 9
 function encode(palavras) {
   let vogais = {
-    a : 1,
-    e : 2,
-    i : 3,
-    o : 4,
-    u : 5
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
   }
   let frase = palavras;
   let igual = [];
   for (let j = 0; j < frase.length; j += 1) {
     igual.push(frase[j]);
   }
-  for (let key in vogais) {
-    for (let j = 0; j < igual.length; j += 1) {
+  for (let j = 0; j < igual.length; j += 1) {
+    for (let key in vogais) {
       if (key === igual[j]) {
         igual[j] = vogais[key];
       }
@@ -135,19 +135,19 @@ function encode(palavras) {
 }
 function decode(palavras) {
   let vogais = {
-    1 : 'a',
-    2 : 'e',
-    3 : 'i',
-    4 : 'o',
-    5 : 'u'
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   }
   let frase = palavras;
   let igual = [];
   for (let j = 0; j < frase.length; j += 1) {
     igual.push(frase[j]);
   }
-  for (let key in vogais) {
-    for (let j = 0; j < igual.length; j += 1) {
+  for (let j = 0; j < igual.length; j += 1) {
+    for (let key in vogais) {
       if (key === igual[j]) {
         igual[j] = vogais[key];
       }
@@ -161,19 +161,18 @@ function techList(tech, name) {
   let stack = tech;
   let nome = name;
   let result = [];
-  let vazio = "";
+  let vazio = '';
   if (stack.length === 0) {
-    vazio = "Vazio!";
+    vazio = 'Vazio!';
     return vazio;
-  }else {
-    stack.sort();
-    for (let valor of stack) {
-      let objeto = {
-        tech: valor,
-        name: nome
-      }
-      result.push(objeto);
-    }  
+  }
+  stack.sort();
+  for (let valor of stack) {
+    let objeto = {
+      tech: valor,
+      name: nome,
+    }
+    result.push(objeto);
   }
   return result;
 }
@@ -181,32 +180,31 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(phone) {
   let tel = phone;
-  let mensagem = "";
+  let mensagem = '';
   let count = 0;
   let telefone = [];
   if (tel.length !== 11) {
-    mensagem = "Array com tamanho incorreto.";
+    mensagem = 'Array com tamanho incorreto.';
     return mensagem;
-  }else {
-    for (let i = 0; i < tel.length; i += 1) {
-      if (tel[i] < 0 || tel[i] > 9) {
-        mensagem = "não é possível gerar um número de telefone com esses valores";
+  }
+  for (let i = 0; i < tel.length; i += 1) {
+    if (tel[i] < 0 || tel[i] > 9) {
+      mensagem = 'não é possível gerar um número de telefone com esses valores';
+      return mensagem;
+    }
+    for (let j = 1; j < i; j += 1) {
+      if (tel[i] === tel[j]) {
+        count += 1;
+      }
+      if (count > 2) {
+        mensagem = 'não é possível gerar um número de telefone com esses valores';
         return mensagem;
       }
-      for (let j = 1; j < i; j += 1) {
-        if (tel[i] === tel[j]) {
-          count += 1;
-        }
-        if (count > 2) {
-          mensagem = "não é possível gerar um número de telefone com esses valores";
-          return mensagem;        
-        }        
-      }
     }
-    for (let k of tel) {
-      let format = k;
-      telefone.push(format.toString());
-    }
+  }
+  for (let k of tel) {
+    let format = k;
+    telefone.push(format.toString());
   }
   let parte1 = telefone.slice(0, 2);
   let parte2 = telefone.slice(2, 7);
@@ -224,7 +222,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if ((ladoUm < ladoDois + ladoTres) && (ladoDois < ladoUm + ladoTres) &&
   (ladoTres < ladoDois + ladoUm)) {
     result = true;
-  }else {
+  } else {
     result = false;
   }
   return result;
@@ -234,29 +232,26 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(bebidas) {
   let drink = bebidas
   let count = 0;
-  let result = "";
+  let result = '';
   let reg = /\d+/g;
   let num = drink.match(reg);
-  if (num === null){
+  if (num === null) {
     num = [0];
   }
-  for (let i of num){
-    if (parseInt(i) > 0 && parseInt(i) < 9) {
-      count += parseInt(i);    
+  for (let i of num) {
+    if (parseInt(i, 10) > 0 && parseInt(i, 10) < 9) {
+      count += parseInt(i, 10);
     }
   }
   if (count === 0) {
-    result = "Não bebeu nada!";
-  }else {
-    if (count > 1) {
+    result = 'Não bebeu nada!';
+  } else if (count > 1) {
       result = `${count} copos de água`;
-    }else {
-      result = `${count} copo de água`;      
-    }    
-  }  
+    } else {
+      result = `${count} copo de água`;
+    }
   return result;
 }
-
 
 module.exports = {
   calcArea,
