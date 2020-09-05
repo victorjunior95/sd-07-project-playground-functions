@@ -102,7 +102,9 @@ function avaliadorDeContagem(listaDeNumeros) {
 }
 
 function numerosValidos(listaDeNumeros) {
-  for(let i = 0; i < listaDeNumeros; i += 1) if ((listaDeNumeros[i] > 9) || (listaDeNumeros[i] < 0)) return false
+  for (let i = 0; i < listaDeNumeros; i += 1) if ((listaDeNumeros[i] > 9) || 
+    (listaDeNumeros[i] < 0)) return false
+  return true
 }
 
 // Desafio 11
