@@ -72,7 +72,7 @@ let numbers = [9, 1, 2, 3, 9, 5, 7];
 
 function highestCount(numbers) {
   // seu código aqui
-  numbers.sort((a,b)=>b-a);
+  numbers.sort((a,b)=>a-b);
 
   if (numbers.length > 0) {
     let biggest = 0;
@@ -189,47 +189,22 @@ let name = "Lucas";
 
 function techList(tech, name) {
   // seu código aqui
-  //if ()
-  let techNameObject = {
-    tech: "React",
-    name: "Lucas"
-  }
-  let techName = {
-    tech: "Jest",
-    name: "Lucas"
-  }
-  let techNam = {
-    tech: "HTML",
-    name: "Lucas"
-  }
-  let techNa = {
-    tech:"CSS",
-    name: "Lucas"
-  }
-  let techN = {
-    tech:"JavaScript",
-    name: "Lucas"
-  }
   let techNameArray = [];
-  techNameArray.push(techNameObject);
-  techNameArray.push(techName);
-  techNameArray.push(techNam);
-  techNameArray.push(techNa);
-  techNameArray.push(techN);
+  tech.sort();
 
-  function techOrder (x, y) {
-    return x.tech < y.tech ? -1 : x.tech > y.tech ? 1 : 0;
-  }
-  techNameArray.sort(techOrder);
-  if (techNameArray.length > 0) {
-    return techNameArray;
-  } else if (techNameArray.length === 0) {
+  if (tech.length === 0) {
     return "Vazio!"
   } else {
-    return "Tem alguma coisa muito errada aí"
+    for (let t in tech) {
+      techNameArray.push ({
+        tech: tech[t],
+        name: name,
+      })
+    }
   }
+  return techNameArray
 }
-//console.log(techList(tech, name));
+console.log(techList(tech, name));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -282,7 +257,7 @@ function hydrate(drink) {
   }
   return total 
 }
-console.log (hydrate(drink));
+//console.log (hydrate(drink));
 
 module.exports = {
   calcArea,
