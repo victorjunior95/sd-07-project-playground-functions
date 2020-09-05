@@ -181,16 +181,23 @@ function checkLimits(nList) {
   return true;
 }
 
-function checkRepetitions(nList) {
-  for (let i in nList) {
-    let repetitions = 0;
-    for (let j in nList) {
-      if (nList[i] === nList[j]) {
-        repetitions += 1;
-        if (repetitions >= 3) {
-          return false;
-        }
+function getRepCount(n, nList){
+  let repetitions = 0;
+  for (let i = 0; i < nList.length; i += 1) {
+    if (n === nList[i]) {
+      repetitions += 1;
+      if (repetitions >= 3) {
+        return false;
       }
+    }
+  }
+  return true;
+}
+
+function checkRepetitions(nList) {
+  for (let i = 0; i < nList.length; i += 1) {
+    if (getRepCount(nList[i], nList) === false) {
+      return false;
     }
   }
   return true;
