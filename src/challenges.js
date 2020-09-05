@@ -249,10 +249,27 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(texto) {
+  let numBebidas = texto.match(/\d/g);
+    let coposAgua = 0;
+    let num = [];
 
+    for (let i = 0; i < numBebidas.length; i++) {
+            num[i] = parseInt(numBebidas[i]);
+    }
+
+    for (let j = 0; j < numBebidas.length; j++){
+
+        coposAgua = coposAgua + num[j];
+    }
+
+    if(coposAgua > 1) {
+        return coposAgua + " copos de água";
+    }
+    else {
+        return coposAgua + " copo de água";
+    }
+}
 
 module.exports = {
   calcArea,
