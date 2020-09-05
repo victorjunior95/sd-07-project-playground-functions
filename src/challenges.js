@@ -90,14 +90,19 @@ function techList(tech, name) {
   return lista;
 }
 
-function contador(listaDeNumeros){
+function avaliadorDeContagem(listaDeNumeros) {
   let contagem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   if (listaDeNumeros.length !== 11) return false;
   for (let i = 0; i < listaDeNumeros.length; i += 1) {
     contagem[listaDeNumeros[i]] += 1;
     if (contagem[listaDeNumeros[i]] > 3) return false;
   }
+  for(let i = 0; i < listaDeNumeros; i += 1) if ((listaDeNumeros[i] > 9) || (listaDeNumeros[i] < 0)) return false
   return true
+}
+
+function numerosValidos(listaDeNumeros) {
+  
 }
 
 // Desafio 11
