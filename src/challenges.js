@@ -28,8 +28,9 @@ return(arraydestring)
 // Desafio 4
 function concatName(arraydeentrada) {
   // seu código aqui
+  let stringsaida = ""
   for (let i=0; i < arraydeentrada.length; i+=1){
-  let stringsaida = stringsaida + arraydeentrada[i]
+  stringsaida = stringsaida + arraydeentrada[i]
   }
   return(stringsaida)
 }
