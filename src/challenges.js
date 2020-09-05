@@ -50,10 +50,10 @@ function highestCount(numbers) {
   let countNumber = 0;
   for (let i in numbers) {
     if (highestNumber < numbers[i]) {
-        highestNumber = numbers[i];
-        countNumber = 1;
+      highestNumber = numbers[i];
+      countNumber = 1;
     } else if (highestNumber === numbers[i]) {
-        countNumber += 1;
+      countNumber += 1;
     }
   }
   return countNumber;
@@ -69,9 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombam e o rato foge';
-  }
+  } return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(0, 1, 2)) // cat1
 console.log(catAndMouse(0, 2, 1)) // cat2
@@ -84,8 +82,8 @@ function fizzBuzz(array) {
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) newArray.push('fizzBuzz');
     else if (array[i] % 3 !== 0 && array[i] % 5 !== 0) newArray.push('bug!');
-    else if (array[i] % 3 === 0) newArray.push('fizz'); 
-    else newArray.push('buzz'); 
+    else if (array[i] % 3 === 0) newArray.push('fizz');
+    else newArray.push('buzz');
   }
   return newArray;
 }
@@ -143,14 +141,12 @@ function techList(array, name) {
     for (let item in array) {
       createObject.push({
         tech: array[item],
-        name: name,
+        nome: name,
       });
     } return createObject;
-  } else {
-    return 'Vazio!';
-  }
+  } return 'Vazio!';
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Ana'))
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Ana'))
 /* Saída:
 
 [
@@ -186,7 +182,7 @@ function generatePhoneNumber(phone) {
     return 'Array com tamanho incorreto.';
   }
 // Verifica se algum dos números do array é menor que 0 ou maior que 9:
-  for (let i = 0; i < phone.length; i +=1) {
+  for (let i = 0; i < phone.length; i += 1) {
     if (phone[i] < 0 || phone[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
@@ -202,28 +198,26 @@ function generatePhoneNumber(phone) {
     }
     if (countRepeat >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    }  
+    }
   }
   // Retorna número de telefone, respeitando parênteses, traços e espaços:
-      phone.splice(0, 0, '(');
-      phone.splice(3, 0, ')');
-      phone.splice(4, 0, ' ');
-      phone.splice(10, 0, '-');
-      return phone.join('');
+  phone.splice(0, 0, '(');
+  phone.splice(3, 0, ')');
+  phone.splice(4, 0, ' ');
+  phone.splice(10, 0, '-');
+  return phone.join('');
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
-    if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) {
-      if ((lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineC))) {
-        return true;
-      }
-    }
-  }
-  return false;
+  let condA = (lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC));
+  let condB = (lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC));
+  let condC = (lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineC));
+  if (condA && condB && condC) {
+    return true;
+  } return false;
 }
 console.log(triangleCheck(10, 14, 8))
 
@@ -236,8 +230,8 @@ function hydrate(string) {
     sum += numbers[i];
   }
   if (sum === 1) {
-    return (sum + ' copo de água');
-  } return (sum + ' copos de água');
+    return `${sum} copo de água`;
+  } return `${sum} copos de água`;
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
