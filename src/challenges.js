@@ -93,13 +93,13 @@ function fizzBuzz(num) {
 
 // Desafio 9
 function encode(word) {
-  let armazena = [];
+  let armazena = []; // cria um array para receber as letras da palavra
   let wordEncode = '';
   for (let i = 0; i < word.length; i += 1) {
-    armazena.push(word[i]);
+    armazena.push(word[i]); // adiciona uma letra em cada posição do array
   }
 
-  for (let i = 0; i < armazena.length; i += 1) {
+  for (let i = 0; i < armazena.length; i += 1) { // testa qual é cada letra e insere numa variável como palavra.
     if (armazena[i] === 'a'){
       wordEncode = `${wordEncode}1`;
     } else if (armazena[i] === 'e') {
@@ -111,32 +111,32 @@ function encode(word) {
   } else if (armazena[i] === 'u') {
     wordEncode = `${wordEncode}5`;
   } else {
-    wordEncode = `${wordEncode}${armazena[i]}`;
+    wordEncode = `${wordEncode}${armazena[i]}`; // se não for vogal ele insere a própria letra
   }
   }
   return wordEncode;
 }
 
 function decode(word) {
-  let armazena = [];
+  let armazenaLetras = [];
   let wordDecode = '';
   for (let i = 0; i < word.length; i += 1) {
-    armazena.push(word[i]);
+    armazenaLetras.push(word[i]);
   }
 
-  for (let i = 0; i < armazena.length; i += 1) {
-    if (armazena[i] === '1'){
+  for (let i = 0; i < armazenaLetras.length; i += 1) {
+    if (armazenaLetras[i] === '1'){
       wordDecode = `${wordDecode}a`;
-    } else if (armazena[i] === '2') {
+    } else if (armazenaLetras[i] === '2') {
       wordDecode = `${wordDecode}e`;
-  } else if (armazena[i] === '3') {
+  } else if (armazenaLetras[i] === '3') {
     wordDecode = `${wordDecode}i`;
-  } else if (armazena[i] === '4') {
+  } else if (armazenaLetras[i] === '4') {
     wordDecode = `${wordDecode}o`;
-  } else if (armazena[i] === '5') {
+  } else if (armazenaLetras[i] === '5') {
     wordDecode = `${wordDecode}u`;
   } else {
-    wordDecode = `${wordDecode}${armazena[i]}`;
+    wordDecode = `${wordDecode}${armazenaLetras[i]}`;
   }
   }
   return wordDecode;
@@ -151,7 +151,7 @@ function techList(nomeTech, name) {
   if (nomeTech.length === 0) { // Verificando se o array está vazio
     return 'Vazio!';
   } else {
-    for (let i in nomeTech) {
+    for (let i in nomeTech) { // A cada iteração adiciona o objeto na lista
     novaLista.push(techNome = {
       tech: nomeTech[i],
       name: name,
@@ -227,7 +227,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate(comanda) {
-  let numBebidas = comanda.match(/\d/g);
+  let numBebidas = comanda.match(/\d/g); // pega os números em uma string
   let somaComanda = 0;
   for (let i in numBebidas) {
     somaComanda += parseInt(numBebidas[i]);
