@@ -90,22 +90,24 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
+let numeros = [9,25];
 function fizzBuzz(param) {
   let retorno = new Array;
   let matriz = param;
-  for (let i = 0; i < matriz.length; i++){
+  for (let i = 0; i < matriz.length; i += 1){
     if (matriz[i] % 3 == 0 && matriz[i] % 5 == 0){
-      retorno.push("FizzBuzz");
+      retorno.push("fizzBuzz");
     }else if (matriz[i] % 3 == 0){
-        retorno.push("Fizz");
+        retorno.push("fizz");
     }else if (matriz[i] % 5 == 0){
-        retorno.push("Buzz")
+        retorno.push("buzz")
     }else{
-      retorno.push("Bug!")
+      retorno.push("bug!")
     }
   }
   return retorno;
 }
+console.log(fizzBuzz(numeros));
 
 // Desafio 9
 function encode(nome) {
@@ -174,7 +176,7 @@ function techList(tech,name) {
   }
   return tec_retorno;
 }
-let phone = [1,2,3,4,5,6,7,-10,9,0,2];
+let phone = [2,2,2,4,5,6,7,1,9,0,8];
 // Desafio 11
 function generatePhoneNumber(param) {
   let numeros = param;
@@ -186,13 +188,23 @@ function generatePhoneNumber(param) {
     for (let i = 0; i < numeros.length; i++){
       if (numeros[i] < 0 || numeros[i] > 9){
         retornarphone = "não é possível gerar um número de telefone com esses valores";
+      }else{
+        for (let j = i + 1; j < numeros.length; j++){
+          if (numeros[i] == numeros[j]){
+            cont++;
+          }
+        }
+        if (cont >= 3){
+          retornarphone = "não é possível gerar um número de telefone com esses valores";
+        }
       }
     }
+    retornarphone = numeros.join('').toString()
+    console.log(`(${retornarphone[0]}${retornarphone[1]}) ${retornarphone[2]}${retornarphone[3]}${retornarphone[4]}${retornarphone[5]}${retornarphone[6]}-${retornarphone[7]}${retornarphone[8]}${retornarphone[9]}${retornarphone[10]}`);
   }
-
   return retornarphone;
 }
-console.log(generatePhoneNumber(phone));
+generatePhoneNumber(phone);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
