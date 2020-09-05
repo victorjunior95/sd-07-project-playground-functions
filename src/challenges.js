@@ -78,16 +78,23 @@ function fizzBuzz(numbers) {
   for (let i in numbers) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
       result.push('fizzBuzz');
-    } else if (numbers[i] % 3 === 0) {
-      result.push('fizz');
-    } else if (numbers[i] % 5 === 0) {
-      result.push('buzz');
     } else {
-      result.push('bug!');
+      result.push(fizzOrBuzz(numbers[i]));
     }
   }
   return result;
 }
+
+function fizzOrBuzz (element) {
+    if (element % 3 === 0) {
+    return 'fizz';
+  } else if (element % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug!';
+  }
+}
+console.log(fizzBuzz([3,15,7,5]))
 
 // Desafio 9
 function encode(string) {
