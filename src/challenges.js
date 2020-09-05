@@ -76,6 +76,16 @@ console.log(catAndMouse(0, 2, 1)) // cat2
 console.log(catAndMouse(0, 3, 3)) // os gatos trombam e o rato foge
 
 
+// Função para auxiliar no refatoramento do desafio 8
+function fizzBuzzAux(array) {
+  if (array % 3 === 0) {
+    return 'fizz';
+  } else if (array % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug!';
+  }
+}
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
@@ -88,57 +98,58 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-// Função para auxiliar no refatoramento do desafio 8
-function fizzBuzzAux(array) {
-  if (array % 3 === 0) {
-    return 'fizz';
-  } else if (array % 5 === 0) {
-    return 'buzz';
-  } else {
-    return 'bug!';
-  }
-}
 console.log(fizzBuzz([2, 15, 7, 9, 45]))  // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
 
 
+// Funções para auxiliar no refatoramento do desafio 9
+function encodeAux(cod) {
+  if (cod === 'e') {
+    return '2';
+  } else if (cod === 'i') {
+    return '3';
+  } else if (cod === 'o') {
+    return '4';
+  } else if (cod === 'u') {
+    return '5';
+  } else {
+    return cod;
+  }
+}
+function decodeAux(dec) {
+  if (dec === '2') {
+    return 'e';
+  } else if (dec === '3') {
+    return 'i';
+  } else if (dec === '4') {
+    return 'o';
+  } else if (dec === '5') {
+    return 'u';
+  } else {
+    return dec;
+  }
+}
 // Desafio 9
 function encode(cod) {
   let newCod = '';
   for (let i = 0; i < cod.length; i += 1) {
     if (cod[i] === 'a') {
       newCod += '1';
-    } else if (cod[i] === 'e') {
-      newCod += '2';
-    } else if (cod[i] === 'i') {
-      newCod += '3';
-    } else if (cod[i] === 'o') {
-      newCod += '4';
-    } else if (cod[i] === 'u') {
-      newCod += '5';
     } else {
-      newCod += cod[i];
+      newCod += encodeAux(cod);
     }
-  }
   return newCod;
+  }
 }
 function decode(dec) {
   let newDec = '';
   for (let i = 0; i < dec.length; i += 1) {
     if (dec[i] === '1') {
       newDec += 'a';
-    } else if (dec[i] === '2') {
-      newDec += 'e';
-    } else if (dec[i] === '3') {
-      newDec += 'i';
-    } else if (dec[i] === '4') {
-      newDec += 'o';
-    } else if (dec[i] === '5') {
-      newDec += 'u';
     } else {
-      newDec += dec[i];
+      newDec += decodeAux(dec);
     }
-  }
   return newDec;
+  }
 }
 console.log(encode('hi there!'))  // h3 th2r2!
 console.log(decode('h3 th2r2!'))  // hi there!
