@@ -65,12 +65,12 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanciacat1 = mouse - cat1
   let distanciacat2 = mouse - cat2
-  if (distanciacat1 === distanciacat2)
-    return("os gatos trombam e o rato foge")
+    if (distanciacat1 === distanciacat2)
+      return("os gatos trombam e o rato foge")
     else if (distanciacat1 > distanciacat2)
-      return("cat2")
-      else 
-        return("cat1")       
+          return("cat1")
+        else
+          return("cat2")       
 }
 
 // Desafio 8
