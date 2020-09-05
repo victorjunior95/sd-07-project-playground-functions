@@ -16,7 +16,7 @@ function calcArea(base, height) {
 }
 
 function splitSentence(palavra) {
-  let dividindoPalavras = palavra.split(" ");
+  let dividindoPalavras = palavra.split(' ');
   return dividindoPalavras;
 }
 
@@ -52,7 +52,7 @@ function highestCount(lista) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Pos = cat1 - mouse;
   let cat2Pos = cat2 - mouse;
-  let resultado = "";
+  let resultado = '';
   if (cat1Pos < 1) {
     cat1Pos = 1;
   }
@@ -60,11 +60,11 @@ function catAndMouse(mouse, cat1, cat2) {
     cat2Pos = 1;
   }
   if (cat1Pos === cat2Pos) {
-    resultado = "os gatos trombam e o rato foge";
+    resultado = 'os gatos trombam e o rato foge';
   } else if (cat1Pos > cat2Pos) {
-    resultado = "cat2";
+    resultado = 'cat2';
   } else if (cat1Pos < cat2Pos) {
-    resultado = "cat1";
+    resultado = 'cat1';
   }
   return resultado;
 }
@@ -75,13 +75,13 @@ function fizzBuzz(numeros) {
     comparativo(numeros[i]);
     function comparativo(numeros) {
       if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-        retorno.push("fizzBuzz");
+        retorno.push('fizzBuzz');
       } else if (numeros[i] % 5 === 0) {
-        retorno.push("buzz");
+        retorno.push('buzz');
       } else if (numeros[i] % 3 === 0) {
-        retorno.push("fizz");
+        retorno.push('fizz');
       } else {
-        retorno.push("bug!");
+        retorno.push('bug!');
       }
     }
   }
@@ -91,20 +91,20 @@ function fizzBuzz(numeros) {
 function encode(frase) {
   let resultado = frase;
   for (let i = 0; i < frase.length; i += 1) {
-    if (frase.charAt(i) === "a") {
-      resultado = resultado.replace(/a/, "1");
+    if (frase.charAt(i) === 'a') {
+      resultado = resultado.replace(/a/, '1');
     }
-    if (frase.charAt(i) === "e") {
-      resultado = resultado.replace(/e/, "2");
+    if (frase.charAt(i) === 'e') {
+      resultado = resultado.replace(/e/, '2');
     }
-    if (frase.charAt(i) === "i") {
-      resultado = resultado.replace(/i/, "3");
+    if (frase.charAt(i) === 'i') {
+      resultado = resultado.replace(/i/, '3');
     }
-    if (frase.charAt(i) === "o") {
-      resultado = resultado.replace(/o/, "4");
+    if (frase.charAt(i) === 'o') {
+      resultado = resultado.replace(/o/, '4');
     }
-    if (frase.charAt(i) === "u") {
-      resultado = resultado.replace(/u/, "5");
+    if (frase.charAt(i) === 'u') {
+      resultado = resultado.replace(/u/, '5');
     }
   }
   return resultado;
@@ -113,20 +113,20 @@ function encode(frase) {
 function decode(frase) {
   let resultado = frase;
   for (let i = 0; i < frase.length; i += 1) {
-    if (frase.charAt(i) === "1") {
-      resultado = resultado.replace(/1/, "a");
+    if (frase.charAt(i) === '1') {
+      resultado = resultado.replace(/1/, 'a');
     }
-    if (frase.charAt(i) === "2") {
-      resultado = resultado.replace(/2/, "e");
+    if (frase.charAt(i) === '2') {
+      resultado = resultado.replace(/2/, 'e');
     }
-    if (frase.charAt(i) === "3") {
-      resultado = resultado.replace(/3/, "i");
+    if (frase.charAt(i) === '3') {
+      resultado = resultado.replace(/3/, 'i');
     }
-    if (frase.charAt(i) === "4") {
-      resultado = resultado.replace(/4/, "o");
+    if (frase.charAt(i) === '4') {
+      resultado = resultado.replace(/4/, 'o');
     }
-    if (frase.charAt(i) === "5") {
-      resultado = resultado.replace(/5/, "u");
+    if (frase.charAt(i) === '5') {
+      resultado = resultado.replace(/5/, 'u');
     }
   }
   return resultado;
@@ -136,7 +136,7 @@ function techList(tech, name) {
   let techArray = [];
   let techObj = {};
   if (tech.length < 1) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   tech.sort();
   for (let i = 0; i < tech.length; i += 1) {
@@ -150,12 +150,12 @@ function techList(tech, name) {
 function generatePhoneNumber(n) {
   // Valida se tem 11 numeros
   if (n.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   // Valida se é maior que -1 e menor que 10
   for (let i = 0; i < n.length; i += 1) {
     if (n[i] < 0 || n[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // Valida numeros repetidos
@@ -167,7 +167,7 @@ function generatePhoneNumber(n) {
   // Retorna mensagem caso 3 ou mais numeros repetidos
   for (let i in resultado) {
     if (resultado[i] > 2) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // Retorna numero caso passe na validação
