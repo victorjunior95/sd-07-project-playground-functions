@@ -2,10 +2,6 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  }
-
-  if (a === false && b === true) {
-    return false;
   } else {
     return false;
   }
@@ -23,13 +19,11 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  let lastItem ;
+  let lastItem;
   let firstItem;
-  
+
   firstItem = array[0];
   lastItem = array[array.length - 1];
-
-  // for (const key in array) {lastItem = array[key];}
   array = [firstItem];
   array.push(lastItem);
 
@@ -38,8 +32,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let wins = 3;
-  let ties = 1;
+  wins = 3;
+  ties = 1;
   let vitorias = wins + ties;
   return vitorias;
 }
