@@ -155,8 +155,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let characteres = string.match(/\d/g);
+  let cups = 0;
+  for(let num of characteres){
+    cups += parseInt(num);
+  }
+  return cups;
 }
 
 
