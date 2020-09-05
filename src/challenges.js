@@ -96,11 +96,50 @@ function fizzBuzz(param) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param) {
+  let retorno = []
+  for(let i = 0; i < param.length; i += 1){
+      if(param[i] === "a" || param[i] === "e" || param[i] === "i" || param[i] === "o" || param[i] === "u"){
+          if(param[i] === "a"){
+              retorno += "1";
+          } else if(param[i] === "e"){
+              retorno += "2";
+          } else if(param[i] === "i"){
+              retorno += "3";
+          } else if(param[i] === "o"){
+              retorno += "4";
+          } else{
+              retorno += "5";
+          }
+      } else{
+          retorno += param[i]
+      }
+
+  }
+  return retorno
 }
-function decode() {
-  // seu código aqui
+
+function decode(param) {
+  let retorno = []
+  for(let i = 0; i < param.length; i += 1){
+      if(param[i] === "1" || param[i] === "2" || param[i] === "3" || param[i] === "4" || param[i] === "5"){
+          if(param[i] === "1"){
+              retorno += "a";
+          } else if(param[i] === "2"){
+              retorno += "e";
+          } else if(param[i] === "3"){
+              retorno += "i";
+          } else if(param[i] === "4"){
+              retorno += "o";
+          } else{
+              retorno += "u";
+          }
+      } else{
+          retorno += param[i]
+      }
+
+  }
+  return retorno
 }
 
 // Desafio 10
