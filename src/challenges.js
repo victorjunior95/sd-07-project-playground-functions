@@ -161,9 +161,12 @@ function hydrate(string) {
   for(let num of characteres){
     cups += parseInt(num);
   }
+  if(cups === 1){
+    return `${cups} copo de água`;
+  }else{
   return `${cups} copos de água`;
+  }
 }
-
 
 module.exports = {
   calcArea,
