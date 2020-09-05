@@ -45,9 +45,6 @@ function highestCount(array) {
     return maiorNumero;
   }
   let numeroRepeat = 0;
-
-  function highestNumber(array);
-
   for (let j in array) {
     if (array[j] === maiorNumero) {
       numeroRepeat += 1;
