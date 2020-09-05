@@ -4,16 +4,14 @@ function compareTrue(boleano1, boleano2) {
     (boleano1 === true && boleano2 === true)
   ) {
     boleano = true;
-    return boleano;
   } else if (
     (boleano1 !== boleano2)
   ) {
     boleano = false;
-    return boleano;
   } else if (boleano1 === false && boleano2 === false) {
     boleano = false;
-    return boleano;
   }
+  return boleano;
 }
 
 function calcArea(base, height) {
@@ -58,6 +56,7 @@ function highestCount(lista) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Pos = cat1 - mouse;
   let cat2Pos = cat2 - mouse;
+  let resultado = '';
   if (cat1Pos < 1) {
     cat1Pos = 1;
   }
@@ -65,12 +64,13 @@ function catAndMouse(mouse, cat1, cat2) {
     cat2Pos = 1;
   }
   if (cat1Pos === cat2Pos) {
-    return 'os gatos trombam e o rato foge';
+    resultado = 'os gatos trombam e o rato foge';
   } else if (cat1Pos > cat2Pos) {
-    return 'cat2';
+    resultado = 'cat2';
   } else if (cat1Pos < cat2Pos) {
-    return 'cat1';
+    resultado = 'cat1';
   }
+  return resultado;
 }
 
 function fizzBuzz(numeros) {
@@ -156,7 +156,7 @@ function generatePhoneNumber(n) {
   // Valida se é maior que -1 e menor que 10
   for (let i = 0; i < n.length; i += 1) {
     if (n[i] < 0 || n[i] > 9) {
-      return `não é possível gerar um número de telefone com esses valores`;
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // Valida numeros repetidos
@@ -168,7 +168,7 @@ function generatePhoneNumber(n) {
   // Retorna mensagem caso 3 ou mais numeros repetidos
   for (let i in resultado) {
     if (resultado[i] > 2) {
-      return `não é possível gerar um número de telefone com esses valores`;
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // Retorna numero caso passe na validação
@@ -176,12 +176,12 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck() {
 
 }
 
 // Desafio 13
-function hydrate(bebidas) {}
+function hydrate() {}
 
 module.exports = {
   calcArea,
