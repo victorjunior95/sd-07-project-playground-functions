@@ -45,17 +45,14 @@ function highestCount(repeat) {
   let array = repeat;
   let maior = 0;
   let count = 0;
+  maior = Math.max(...array);
   for (let i of array) {
-    if (i > maior) {
-      maior = i;
-    }
     if (maior === i) {
       count += 1;
     }
   }
   return count;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
