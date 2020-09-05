@@ -5,29 +5,29 @@ function compareTrue ( a , b ) {
     } else {
       return false ;
     };
-}
+};
 
 // Desafio 2
-function calcArea (base, height) {
-  let areaTriangle = (base * height) / 2 ;
+function calcArea ( base , height ) {
+  let areaTriangle = ( base * height ) / 2 ;
   return areaTriangle;
-}
+};
 
 // Desafio 3
-function splitSentence (separator) {
+function splitSentence ( separator ) {
   let split = separator.split(' ');
   return split;
-}
+};
 
 // Desafio 4
-function concatName (arrayStrings) {
+function concatName ( arrayStrings ) {
   let last = arrayStrings[arrayStrings.length - 1];
   let first = arrayStrings[0] ;
   return `${last}, ${first}`;
-}
+};
 
 // Desafio 5
-function footballPoints (wins, ties) {
+function footballPoints ( wins , ties ) {
   wins = wins * 3 ;
   ties = ties * 1 ;
   let points = wins + ties ;
@@ -38,18 +38,16 @@ function footballPoints (wins, ties) {
 function highestCount ( arrayNum ) {
   let highest = Math.max.apply(null, arrayNum);
   let highestArrayNum = 0;
-
   for ( let i in arrayNum ) {
     if ( highest == arrayNum[i] ) {
     highestArrayNum += 1;
-    } 
+    }
   };
   return highestArrayNum;
 };
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  
+function catAndMouse( mouse, cat1, cat2 ) {
   if ( ((cat1 - mouse) < 0 ? (( cat1 - mouse ) * - 1) : (cat1 -mouse )) === ((cat2 - mouse) < 0 ? (( cat2 - mouse ) * - 1) : (cat2 -mouse ))) {
     return "os gatos trombam e o rato foge";
   } else {
@@ -62,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayFizzBuzz) {
+function fizzBuzz( arrayFizzBuzz ) {
   let arrayReturn = [];
   for ( let i in arrayFizzBuzz ) {
     if( arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0 ) {
@@ -79,9 +77,8 @@ function fizzBuzz(arrayFizzBuzz) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode( string ) {
   let stringReturn = "";
-
   for ( i in string ) {
     let aFind = string.replace(/a/g, "1" );
     stringReturn = aFind;
@@ -95,10 +92,10 @@ function encode(string) {
     stringReturn = uFind ;
   }
   return stringReturn ;
-}
-function decode(string) {
-  let stringReturn = "";
+};
 
+function decode( string ) {
+  let stringReturn = "";
   for ( i in string ) {
     let aFind = string.replace(/1/g, "a" );
     stringReturn = aFind;
@@ -113,27 +110,27 @@ function decode(string) {
   }
 
   return stringReturn ;
-}
+};
 
 // Desafio 10
-function techList(techName, name) {
+function techList( techName , name ) {
   techName.sort();
   let techNameList = [];
   if (techName.length == 0 ){
     return "Vazio!";
   } else {
     for (let i in techName) {
-      techNameList[i] = { 
+      techNameList[i] = {
       tech: `${techName[i]}`,
       name: `${name}`
       }
     }
     return techNameList;
   }
-}
+};
 
 // Desafio 11
-function generatePhoneNumber(phoneNum) {
+function generatePhoneNumber( phoneNum ) {
   let repeat3 = 0;
   if (phoneNum.length != 11) {
     return "Array com tamanho incorreto.";
@@ -151,22 +148,22 @@ function generatePhoneNumber(phoneNum) {
   }
   let phoneFormat = (`(${phoneNum[0]}`+`${phoneNum[1]}) `+`${phoneNum.slice(2,7).join("")}`+`-${phoneNum.slice(7,12).join("")}`)
     return phoneFormat;
-}
+};
 
 // Desafio 12
 function triangleCheck ( lineA, lineB, lineC ) {
-  let lineACondition = ( Math.abs(lineB - lineC) > lineA) || (lineA > (lineB + lineC));
+  let lineACondition = ( Math.abs( lineB - lineC ) > lineA ) || ( lineA > (lineB + lineC ));
 
-  let lineBCondition = (Math.abs(lineA - lineC ) > lineB) || (lineB > (lineA + lineC));
+  let lineBCondition = ( Math.abs( lineA - lineC ) > lineB ) || ( lineB > (lineA + lineC ));
 
-  let lineCCondition = (Math.abs(lineA - lineB) > lineC) || (lineC > (lineA + lineB));
+  let lineCCondition = ( Math.abs( lineA - lineB ) > lineC ) || ( lineC > (lineA + lineB ));
 
   if ( lineACondition || lineBCondition || lineCCondition ) {
     return false;
   } else {
     return true;
   }
-}console.log(triangleCheck(1, 14, 8))
+};
 
 // Desafio 13
 function hydrate (water) {
@@ -182,7 +179,7 @@ function hydrate (water) {
   } else {
     return `${waterCount} copo de água`;
   }
-}
+};
 
 
 module.exports = {
@@ -197,7 +194,7 @@ module.exports = {
   generatePhoneNumber,
   techList,
   highestCount,
-  hydr ate,
+  hydrate,
   splitSentence,
   triangleCheck,
 }
