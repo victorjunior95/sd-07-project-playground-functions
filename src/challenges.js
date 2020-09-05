@@ -212,10 +212,16 @@ function triangleCheck(sideOne, sideTwo, sideThree) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let cont = 0;
+  let expression = /\d+/g;
+  let word = phrase.match(expression);
+  for (let number of word) {
+    number = parseInt(number);
+    cont += number;
+  }
+  return `${cont} copos de água}`;
 }
-
 
 module.exports = {
   calcArea,
