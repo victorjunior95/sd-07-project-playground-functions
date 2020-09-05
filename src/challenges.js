@@ -51,8 +51,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  distanceCat1 = Math.abs(mouse - cat1);
+  distanceCat2 = Math.abs(mouse - cat2);
+
+  if (distanceCat1 < distanceCat2) {
+    return "cat1";
+  } else if (distanceCat2 < distanceCat1) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
@@ -61,7 +70,7 @@ function fizzBuzz(array) {
 
   for (let i = 0; i < array.length; i += 1)
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      newArray.push("fizzbuzz");
+      newArray.push("fizzBuzz");
     } else if (array[i] % 3 === 0) {
       newArray.push("fizz");
     } else if (array[i] % 5 === 0) {
@@ -71,15 +80,24 @@ function fizzBuzz(array) {
     }
   return newArray;
 }
-console.log(fizzBuzz([27, 2, 15, 7, 9, 45]))                                                                  
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  str = str.replace(/a/gi, "1")
+  str = str.replace(/e/gi, "2")
+  str = str.replace(/i/gi, "3")
+  str = str.replace(/o/gi, "4")
+  str = str.replace(/u/gi, "5")
+  return str;
 }
+console.log(encode("there"))
 function decode() {
-  // seu código aqui
+  str = str.replace(/1/gi, "a")
+  str = str.replace(/2/gi, "e")
+  str = str.replace(/3/gi, "i")
+  str = str.replace(/4/gi, "o")
+  str = str.replace(/5/gi, "u")
+  return str;
 }
 
 // Desafio 10
