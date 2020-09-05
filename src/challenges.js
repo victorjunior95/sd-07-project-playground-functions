@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
     distancia1 *= (-1);
   } else if (distancia2 < 0) {
     distancia2 *= (-1);
-  }  
+  }
   if (distancia1 > distancia2) {
     result = 'cat2';
   } else if (distancia1 < distancia2) {
