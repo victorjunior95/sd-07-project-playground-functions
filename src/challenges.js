@@ -117,10 +117,10 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(arrayN) {
   let res
+  if (arrayN.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
   for (let num in arrayN) {
-    if (arrayN.length !== 11) {
-      return 'Array com tamanho incorreto.'
-    }
     let dup = 0
     for (let numD in arrayN) {
       if (arrayN[num] === arrayN[numD]) {
@@ -144,20 +144,20 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(pingas) {
   let pingasStr = /\d+/g
-	let pingasNum = pingas.match(pingasStr)
-	let res = 0
-	let text = ' copos de água'
+  let pingasNum = pingas.match(pingasStr)
+  let res = 0
+  let text = ' copos de água'
   for (let i = 0; i < pingasNum.length; i += 1) {
     let c = pingasNum[i]
     if (c >= '0' && c <= '9') {
-      pingasNum[i] = Number.parseInt(pingasNum[i])
+      pingasNum[i] = Number.parseFloat(pingasNum[i])
     }
-	} for (let num = 0; num < pingasNum.length; num += 1) {
-		res = res + pingasNum[num]
-	} if (res === 1) {
-		text = ' copo de água'
-	}
-	return res + text 
+  } for (let num = 0; num < pingasNum.length; num += 1) {
+    res += pingasNum[num]
+  } if (res === 1) {
+    text = ' copo de água'
+  }
+  return res + text
 }
 
 
