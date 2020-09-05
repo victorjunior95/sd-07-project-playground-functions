@@ -95,7 +95,7 @@ function avaliadorDeContagem(listaDeNumeros) {
   if (listaDeNumeros.length !== 11) return false;
   for (let i = 0; i < listaDeNumeros.length; i += 1) {
     contagem[listaDeNumeros[i]] += 1;
-    if (contagem[listaDeNumeros[i]] > 3) return false;
+    if (contagem[listaDeNumeros[i]] >= 3) return false;
   }
 
   return true
@@ -111,8 +111,8 @@ function numerosValidos(listaDeNumeros) {
 // Desafio 11
 function generatePhoneNumber(numero) {
   let numeroDeTelefone = `(${numero[0]}${numero[1]}) `;
-  if (numerosValidos(numero) === false) return 'não é possível gerar um número de telefone com esses valores';
-  else if (avaliadorDeContagem(numero) === false) return 'Array com tamanho incorreto';
+  if (numerosValidos(numero) === false) return 'não é possível gerar um número de telefone com esses valores.';
+  else if (avaliadorDeContagem(numero) === false) return 'Array com tamanho incorreto.';
   for (let i = 2; i < numero.length; i += 1) {
     numeroDeTelefone = `${numeroDeTelefone}${numero[i]}`;
     if (i === 6) numeroDeTelefone = `${numeroDeTelefone}-`
