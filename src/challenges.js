@@ -27,7 +27,7 @@ function concatName(array) {
   let last = array[array.length - 1];
   let resposta = [ ];
 
-  resposta = "`" + last + "," + " "+ first + "`";
+  resposta =(`"` + last + "," + " " + first + `"`);
   return resposta;
 }
 
