@@ -158,8 +158,32 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+  // Criando o objeto
+  let techObj = {
+    tech: "NomeTech",
+    name: name
+  }
+  //Criando uma variável do tipo do objeto
+  let newArray = [];
+
+  // Ordenando o array recebido ou retornando o valor vazio
+  if (array){
+    array = array.sort();
+  }
+  else {
+    return 'Vazio!';
+  }     
+  // Carregando o array com os parametros recebidos
+  
+    for(let i = 0; i < array.length; i += 1){
+     //newArray.push({techObj.tech = array[i], techObj.name = name});
+     newArray.push({tech: array[i], name: name});
+    }
+  
+  //Retornando o array de
+  return newArray;
 }
 
 // Desafio 11
