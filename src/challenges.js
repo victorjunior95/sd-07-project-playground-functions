@@ -118,6 +118,14 @@ catAndMouse(mouseOut, cat1Out, cat2Out)
 
 // Desafio 8
 let dataFizzBuzz = [2, 15, 7, 9, 45]
+function fizzBuzzOuthers(item) {
+  if (item % 5 === 0) {
+    return 'buzz'
+  } else if (item % 3 === 0) {
+    return 'fizz'
+  }
+  return 'bug!'
+}
 function fizzBuzz(a) {
   // seu código aqui
   let message = [];
@@ -129,14 +137,6 @@ function fizzBuzz(a) {
     }
   }
   return message;
-}
-function fizzBuzzOuthers(a) {
-  if (a % 5 === 0) {
-    return 'buzz'
-  } else if (a % 3 === 0) {
-    return 'fizz'
-  }
-  return 'bug!'
 }
 console.log(fizzBuzz(dataFizzBuzz))
 
