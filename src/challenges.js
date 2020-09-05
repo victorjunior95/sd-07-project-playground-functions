@@ -46,13 +46,16 @@ function highestCount(arrayNumbers) {
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (highestNumber < arrayNumbers[i]) {
       highestNumber = arrayNumbers[i];
-    } else if (highestNumber == arrayNumbers[i]) {
+    } 
+  }
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (highestNumber == arrayNumbers[i]) {
       countRepetitions += 1;
     }
   }
   return countRepetitions;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 10, 7]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
