@@ -14,7 +14,7 @@ function calcArea(base, height) {
   // seu código aqui
   let btriangulo = base
   let atriangulo = height
-  let areadotriangulo = parseFloat((btriangulo + atriangulo) / 2)
+  let areadotriangulo = parseFloat((btriangulo * atriangulo) / 2)
   return (areadotriangulo)
 }
 
