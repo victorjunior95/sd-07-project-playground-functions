@@ -1,35 +1,38 @@
 
-function techList(vetor, name) {
-let result;
-let colecao = [];
-  if(vetor.length < 1 || vetor == null || vetor == undefined) {
-    result = 'Vazio!';
-    return result;
-  } else if(vetor !== null || vetor !== undefined){
-    for(let i in vetor){
-    let lista = {
-      tech:vetor[i],
-      name:name
+function generatePhoneNumber(vetor) {
+
+  let countRepeat = vetor.filter((e, i, a) => a.indexOf(e) !== i);
+
+let confere = 0;
+for (let i in vetor) {
+    if (vetor[i] >  9 || vetor[i] < 0){
+        confere++;
     }
-    colecao.push(lista);
-  }
 }
-return colecao.sort(function(a,b){
-  if(a.tech < b.tech) return -1;
-  if(a.tech > b.tech) return 1;
-  return 0;
-})
+      if (vetor.length !== 11) {
+      let result = "Array com tamanho incorreto.";
+      return result;
+    }
+    if(countRepeat.length > 2 || confere != 0) {
+      let result1 = "não é possível gerar um número de telefone com esses valores";
+      return result1;
+} 
+      vetor.splice(0, 0, '(');
+      vetor.splice(3, 0, ')');
+      vetor.splice(4, 0, ' ');
+      vetor.splice(10, 0, '-');
+      return vetor.join('');
+
 }
 
 
 
 
-  console.log(techList(["React", "Jest", "HTML", "CSS", "Rust", "JavaScript"],
-  "Lucas"));
+  console.log(generatePhoneNumber([1, 2, 3, 4, -5, 6, 7, 8, 9, 0, 1]));
 
 
 
-
+ 
 
   
   
