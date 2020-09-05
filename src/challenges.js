@@ -125,7 +125,8 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatNumber(array) {
-  let array1 = array.sort();
+  let array1 = array.slice();
+  let arrayS = array1.sort();
   let strike = 1;
   for(let i = 0; i < array1.length; i += 1) {
       let number = array1[i];
@@ -139,7 +140,7 @@ function repeatNumber(array) {
   }
   function negativeNumber(array) {
       let check = 0;
-      for (let  i in array) {
+      for (let i in array) {
           if(array[i] < 0)
           check += 1;
       }
@@ -147,24 +148,25 @@ function repeatNumber(array) {
   }
   function generatePhoneNumber(array) {
 
-
-      let string = '';
-
             for (let i in array) {
               if (array.length !== 11) {
                   return "Array com tamanho incorreto.";
                  }
               if (array[i] > 9) {
               return "não é possível gerar um número de telefone com esses valores";
-              } else if (negativeNumber(array) > 0) {
+              }
+              if (negativeNumber(array) > 0) {
                return "não é possível gerar um número de telefone com esses valores";
-           } else if (repeatNumber(array) >= 3) {
+           }
+
+           if (repeatNumber(array) >= 3) {
               return "não é possível gerar um número de telefone com esses valores";
            }
            }
-           string = array.join('');
-           string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-           return string;
+
+         string = array.join('');
+         string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+         return string;
 
        }
 
