@@ -18,8 +18,8 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   let word = "";
   let array = [];
-  for (i in sentence) {
-    if (sentence[i] === " ") {
+  for (let i = 0 ; i <= sentence.length; i += 1) {
+    if (sentence[i] === " " || i == sentence.length) {
       array.push(word);
       word = "";
     } else {
@@ -32,7 +32,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arrays) {
-  return [arrays[arrays.length - 1], arrays[0]];
+  return `${arrays[arrays.length - 1]} , ${arrays[0]}`;
   // seu código aqui
 }
 
@@ -60,9 +60,9 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return cat1;
+    return "cat1";
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return cat2;
+    return "cat2";
   } else {
     return "os gatos trombam e o rato foge";
   }
@@ -84,7 +84,7 @@ function fizzBuzz(arraynum) {
     } else if (arraynum[i] % 3 === 0 && arraynum[i] % 5 === 0) {
       fizzBuzzBug.push("fizzBuzz");
     } else {
-      fizzBuzzBug.push("bug");
+      fizzBuzzBug.push("bug!");
     }
   }
   return fizzBuzzBug;
