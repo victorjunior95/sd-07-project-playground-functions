@@ -125,34 +125,40 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatNumber(array) {
-  let strikes = [];
-  for(let i in array) {
-    number = array [i];
-    if(array.indexOf(number) !== i) {
-      strikes.push(number)
-    }
-    return strikes;
+  let array1 = array.sort();
+  let strike = 1;
+  for(let i = 0; i < array1.length; i += 1) {
+      let number = array1[i];
+        if (number === array1[i + 1]) {
+            if (array1[i + 1] === array1[i + 2]) {
+              strike += 2;
+          }
+        }
+      }
+      return strike;
   }
-}
+  function generatePhoneNumber(array) {
 
-function generatePhoneNumber(array) {
+      let string = '';
 
-  let string = '';
-
-        for (let i in array) {
-          if (array.length !== 11) {
-              return "Array com tamanho incorreto.";
-             }
-          else if ((array[i] > 9) || (array[i] < 0)) {
-           return "não é possível gerar um número de telefone com esses valores";
-       } else if (repeatNumber(array).length >= 3) {
-          return "não é possível gerar um número de telefone com esses valores";
+            for (let i in array) {
+              if (array.length !== 11) {
+                  return "Array com tamanho incorreto.";
+                 }
+              else if ((array[i] > 9) || (array[i] < 0)) {
+               return "não é possível gerar um número de telefone com esses valores";
+           } else if (repeatNumber(array) >= 3) {
+              return "não é possível gerar um número de telefone com esses valores";
+           }
+           }
+           string = array.join('');
+           string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+           return string;
        }
-       }
-       string = array.join('');
-       string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-       return string;
-   }
+
+  let resultado = generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]);
+
+  console.log(resultado);
 
 // Desafio 12
 function triangleCheck() {
