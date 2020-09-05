@@ -92,14 +92,13 @@ function techList(tech, name) {
 
 function contador(numero){
   let contagem = [0,0,0,0,0,0,0,0,0,0,0];
-  let sum = 0;
-  if ((numero[11] == undefined) && (numero[10] != undefined)) {
+  if (numero.length === 10) {
     for(let i = 0; i < numero.length; i += 1) {
       if ((numero[i] > 9) || (numero[i] < 0)) return false;
       contagem[numero[i]] += 1;
       if (contagem[numero[i]] > 3) return false;  
       console.log(contagem); 
-      return true;    
+      return true    
     }
   }
   return false;
