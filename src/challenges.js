@@ -116,21 +116,25 @@ function techList(array, name) {
 }
 // Desafio 11
 function generatePhoneNumber(arrayN) {
-  let res = ''
+  let res
   for (let num in arrayN) {
     if (arrayN.length !== 11) {
       res = 'Array com tamanho incorreto.'
+      break
     }
     let dup = 0
     for (let numD in arrayN) {
       if (arrayN[num] === arrayN[numD]) {
         dup += 1;
       }
-    } if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
+    }
+    if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
       res = 'não é possível gerar um número de telefone com esses valores'
+      break
+    } else {
+      res = `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
     }
   }
-  res = `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
   return res
 }
 
@@ -140,8 +144,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(pingas) {
+  let pingasStr = /\d+/g
+	let pingasNum = pingas.match(pingasStr)
+	let res = 0
+	let text = ''
+  for (let i = 0; i < pingasNum.length; i += 1) {
+    let c = pingasNum[i]
+    if (c >= '0' && c <= '9') {
+      pingasNum[i] = Number.parseInt(pingasNum[i])
+    }
+	} for (let num = 0; num < pingasNum.length; num += 1) {
+		res = res + pingasNum[num]
+	} if (res === 1) {
+		text = ' copo de água'
+	} else{
+		text = ' copos de água'
+	}
+	return res + text 
 }
 
 
