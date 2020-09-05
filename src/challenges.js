@@ -33,8 +33,7 @@ function splitSentence(param) {
 function concatName(param) {
   let primeiro = param[0].toString();
   let ultimo = param[param.length -1].toString();
-  console.log("'"+ultimo+","+" "+primeiro+"'");
-  return ultimo,primeiro;
+  return console.log("'"+ultimo+","+" "+primeiro+"'");
 }
 
 // Desafio 5
