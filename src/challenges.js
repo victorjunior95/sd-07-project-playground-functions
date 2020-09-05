@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(condicao1, condicao2) {
   // seu código aqui.
-  if ((condicao1 == true)&&(condicao2 == true))
+  if ((condicao1 == true)&&(condicao2 == true)){
     return(true)
-  else
-    return(false)
+  }
+  else{
+      return(false)
+  }
 }
 
 // Desafio 2
@@ -18,7 +20,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringentrada) {
-  // seu código aqui
+// seu código aqui
 let arraydestring = stringentrada.split(" ")
 return(arraydestring)
 }
@@ -109,22 +111,4 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
   // seu código aqui
-}
-
-
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
 }
