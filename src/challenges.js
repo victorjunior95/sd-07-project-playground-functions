@@ -36,13 +36,13 @@ function highestCount(array) {
   let maiorNumero = array[0];
   let numeroRepeat = 0;
   for (let i in array) {
-    if (array.lenght !== 0) {
-      maiorNumero = (maiorNumero < array[i]) ? maiorNumero = array[i] : maiorNumero;
+    if (array[i] > maiorNumero) {
+      maiorNumero = array[i];
     }
   }
   for (let i in array) {
-    if (array[i] === maiorNumero  ) {
-      numeroRepeat += 1 ;
+    if (array[i] === maiorNumero) {
+      numeroRepeat += 1;
     }
   }
   return numeroRepeat;
