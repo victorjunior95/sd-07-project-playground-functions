@@ -137,7 +137,16 @@ function repeatNumber(array) {
       }
       return strike;
   }
+  function negativeNumber(array) {
+      let check = 0;
+      for (let  i in array) {
+          if(array[i] < 0)
+          check += 1;
+      }
+      return check;
+  }
   function generatePhoneNumber(array) {
+
 
       let string = '';
 
@@ -145,7 +154,9 @@ function repeatNumber(array) {
               if (array.length !== 11) {
                   return "Array com tamanho incorreto.";
                  }
-              else if ((array[i] > 9) || (array[i] < 0)) {
+              if (array[i] > 9) {
+              return "não é possível gerar um número de telefone com esses valores";
+              } else if (negativeNumber(array) > 0) {
                return "não é possível gerar um número de telefone com esses valores";
            } else if (repeatNumber(array) >= 3) {
               return "não é possível gerar um número de telefone com esses valores";
@@ -154,9 +165,9 @@ function repeatNumber(array) {
            string = array.join('');
            string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
            return string;
+
        }
 
-  
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
