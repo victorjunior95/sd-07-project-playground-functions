@@ -170,10 +170,12 @@ function techList(arrayNames, name) {
 
 // Desafio 11
 function generatePhoneNumber(array11) {
+  // VARIÁVEIS ARMAZENANDO PARTES DO MEU ARRAY
   let phoneNumber1 = `(${array11[0]}${array11[1]})`;
   let phoneNumber2 = [];
   let phoneNumber3 = [];
 
+  // OBJECT CRIADO PARA ARMAZENAR REPETIÇÕES DO MEU ARRAY
   let object = {};
 
   for (let i = 0; i < array11.length; i += 1) {
@@ -183,17 +185,19 @@ function generatePhoneNumber(array11) {
       object[array11[i]] += 1;
     }
   }
-
+// CONDIÇÃO CRIADA PARA RETORNAR MENSAGEM CASO UM NÚMERO SE REPITA MAIS DO QUE 3 VZS
   for (let key in object) {
     if (object[key] >= 3) {
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
-
+// CONDIÇÃO CRIADA CASO MEU ARRAY TENHA TAMANHO DIFERENTE DE 11
+  if (array11.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
+// CONDIÇÃO CRIADA PARA GERAR MENSAGEM SE MEU ARRAY TIVER NÚMEROS MAIOR DO QUE 9 E MENOR DO QUE 0
   for (let i = 0; i < array11.length; i += 1) {
-    if (array11.length != 11) {
-      return "Array com tamanho incorreto.";
-    } else if (array11[i] < 0 || array11[i] > 9) {
+    if (array11[i] < 0 || array11[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     } else if (i >= 2 && i < 7) {
       phoneNumber2.push(array11[i]);
@@ -201,7 +205,7 @@ function generatePhoneNumber(array11) {
       phoneNumber3.push(array11[i]);
     }
   }
-
+// CONCATENAÇÃO DA MINHA MENSAGEM
   let phoneNumber2Join = phoneNumber2.join("");
   let phoneNumber3Join = phoneNumber3.join("");
 
