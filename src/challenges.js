@@ -192,46 +192,36 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Ana'))
 
 // Desafio 11
 function generatePhoneNumber(phone) {
-  if ((checkSize(phone) === true) && (checkInterval(phone) === true) && (checkRepeat(phone) === true)) {
-    phone.splice(0, 0, '(');
-    phone.splice(3, 0, ')');
-    phone.splice(9, 0, '-');
-    return phone.join('');
-  } let stringPhone = false;
-  console.log(stringPhone);
-}
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Verifica se o array tem tamanho diferente de 11:
-function checkSize(phone) {
-  if (phone.lenght < 11 || phone.lenght > 11) {
-  return 'Array com tamanho incorreto.';
-  } return true;
-}
-console.log(checkSize([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+  if (phone.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
 // Verifica se algum dos números do array é menor que 0 ou maior que 9:
-function checkInterval(phone) {
-  for (let i in phone) {
+  for (let i = 0; i < phone.length; i +=1) {
     if (phone[i] < 0 || phone[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } return true;
-  }
-}
-console.log(checkInterval([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
-// Verifica se algum dos números do array repete 3 vezes ou mais:
-function checkRepeat(phone) {
-  let countRepeat = 0;  
-  for (i in phone) {
-    for (j in phone) {
-      if (phone[i] === phone[j]) {
-        countRepeat += 1; 
-          if (countRepeat >= 3) {
-            return 'não é possível gerar um número de telefone com esses valores';
-          } return true;
-      } 
     }
   }
+// Verifica se algum dos números do array repete 3 vezes ou mais:
+  let countRepeat = 0;
+  for (let j = 0; j < phone.length; j += 1) {
+    for (let k = 0; k < phone.length; k += 1) {
+      if (phone[j] === phone[k]) {
+        countRepeat += 1;
+      }
+    }
+    if (countRepeat >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  // Retorna número de telefone, respeitando parênteses, traços e espaços:  
+      phone.splice(0, 0, '(');
+      phone.splice(3, 0, ')');
+      phone.splice(4, 0, ' ');
+      phone.splice(10, 0, '-');
+      return phone.join('');
+  }
 }
-console.log(checkRepeat([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 
 // Desafio 12
