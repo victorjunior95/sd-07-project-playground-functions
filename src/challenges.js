@@ -82,9 +82,7 @@ function fizzBuzzAux(array) {
     return 'fizz';
   } else if (array % 5 === 0) {
     return 'buzz';
-  } else {
-    return 'bug!';
-  }
+  } return 'bug!';
 }
 // Desafio 8
 function fizzBuzz(array) {
@@ -98,7 +96,7 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))  // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
+console.log(fizzBuzz([2, 15, 7, 9, 45])) // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
 
 
 // Desafio 9
@@ -140,8 +138,8 @@ function decode(dec) {
   }
   return newDec;
 }
-console.log(encode('hi there!'))  // h3 th2r2!
-console.log(decode('h3 th2r2!'))  // hi there!
+console.log(encode('hi there!')) // h3 th2r2!
+console.log(decode('h3 th2r2!')) // hi there!
 
 
 // Desafio 10
@@ -152,37 +150,20 @@ function techList(array, name) {
     for (let item in array) {
       createObject.push({
         tech: array[item],
-        name: name,
+        name: `${name}`,
       });
     } return createObject;
   } return 'Vazio!';
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Ana'))
 /* Saída:
-
 [
-  {
-    tech: "CSS",
-    name: "Ana"
-  },
-  {
-    tech: "HTML",
-    name: "Ana"
-  },
-  {
-    tech: "JavaScript",
-    name: "Ana"
-  },
-  {
-    tech: "Jest",
-    name: "Ana"
-  },
-  {
-    tech: "React",
-    name: "Ana"
-  }
+  { tech: 'CSS', name: 'Ana' },
+  { tech: 'HTML', name: 'Ana' },
+  { tech: 'JavaScript', name: 'Ana' },
+  { tech: 'Jest', name: 'Ana' },
+  { tech: 'React', name: 'Ana' }
 ]
-
 */
 
 
@@ -218,7 +199,7 @@ function generatePhoneNumber(phone) {
   phone.splice(10, 0, '-');
   return phone.join('');
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])) // (12) 34567-8901
 
 
 // Desafio 12
@@ -230,7 +211,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   } return false;
 }
-console.log(triangleCheck(10, 14, 8))
+console.log(triangleCheck(10, 14, 8)) // true
 
 
 // Desafio 13
@@ -244,7 +225,7 @@ function hydrate(string) {
     return `${sum} copo de água`;
   } return `${sum} copos de água`;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')) // 7 copos de água
 
 
 module.exports = {
