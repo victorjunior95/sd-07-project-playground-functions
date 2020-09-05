@@ -201,29 +201,37 @@ function techList(arrayTech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
   let aux = {};
-  let contador = 0;
-  let numeroTelefone = "";
+  numeroTelefone = [];
+  contador = [];
   if (arrayTelefone.length != 11) {
     return 'Array com tamanho incorreto';
   }
   for (let i = 0; i < arrayTelefone.length; i += 1) {
-    if (aux[arrayTelefone[i]] = aux[arrayTelefone[i]]) {
-      contador = aux[arrayTelefone[i]] + 1;
-      if (contador === 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      } else if (aux[arrayTelefone[i]] != aux[arrayTelefone[i]]) {
-        numeroTelefone = arrayTelefone.push(i);
-        
-      }
+    aux[arrayTelefone[i]] = aux[arrayTelefone[i]] ? aux[arrayTelefone[i]] + 1 : 1;
+    contador.push(Object.values([aux[arrayTelefone[i]]]));
+  }
+  for (let j = 0; j < contador.length; j += 1) {
+    if (contador[j] >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     } else {
-      contador = 1;
+      numeroTelefone = '(' + arrayTelefone[0] + arrayTelefone[1] + ') ' + arrayTelefone[2] + arrayTelefone[3] + arrayTelefone[4]+ arrayTelefone[5] + arrayTelefone[6] + '-' + arrayTelefone[7] + arrayTelefone[8]+ arrayTelefone[9] + arrayTelefone[10];
     }
-    
   }
   return numeroTelefone;
 }
       
-console.log(generatePhoneNumber([-1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 2, 7, 7, 0, 0, 1])); */
+
+/* Exemplo Isaac; 
+const repeated = {};
+const numbers = [9, 3, 3, 8];
+
+for (let i in numbers) {
+  repeated[numbers[i]] = repeated[numbers[i]] ? repeated[numbers[i]] + 1 : 1;
+  objeto[posição_numbers[0=9]] = objeto[posição_numbers[0=9]]? Se true objeto[posição_numbers[0=9]] + 1, se false, 1. 
+}
+
+console.log(repeated); */
 
 /* ________________________________________________________________________________ */
 
@@ -269,7 +277,7 @@ function hydrate(barDaTrybe) {
   }
 }
 
-console.log(hydrate('2 cachaça, 5 cervejas e 1 copo de vinho'));
+/* console.log(hydrate('2 cachaça, 5 cervejas e 1 copo de vinho')); */
 
 /* ________________________________________________________________________________ */
 
