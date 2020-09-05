@@ -164,9 +164,9 @@ function techList(arrayOfTechs, name) {
   techs = arrayOfTechs;
   techs.sort();
   if (techs.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   } else {
-  for (let tech in techs) {
+    for (let tech in techs) {
       result.push({
         tech: techs[tech],
         name: student,
@@ -205,7 +205,7 @@ function generatePhoneNumber(n) {
   let r = '';
   let condition = validaNumbers(n);
   if (n.length !== 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
   if (condition === false) {
     return 'não é possível gerar um número de telefone com esses valores';
