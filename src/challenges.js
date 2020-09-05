@@ -114,7 +114,7 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-catAndMouse([4, 2, 3])
+catAndMouse([4, 2, 2])
 
 function catAndMouse(animalsPosition) {
   console.log("");
@@ -137,8 +137,34 @@ function catAndMouse(animalsPosition) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+fizzBuzz([2, 15, 7, 9, 45]);
+
+function fizzBuzz(arrayOfNumbers) {
+  console.log("");
+  console.log("Desafio 8:");
+
+  resultArray = [];
+
+  for ( i = 0; i < arrayOfNumbers.length; i += 1 ){
+    
+    if (( arrayOfNumbers[i] % 5 ) === 0 && ( arrayOfNumbers[i] % 3 ) === 0 ) {
+      resultArray.push("fizzbuzz");
+    
+    } else {
+      if (( arrayOfNumbers[i] % 3 ) === 0 ) {
+        resultArray.push("fizz");
+  
+      } else if (( arrayOfNumbers[i] % 5 ) === 0 ) {
+        resultArray.push("buzz");
+      
+      } else if (( arrayOfNumbers[i] % 5 || arrayOfNumbers[i] % 3 ) != 0 ) {
+        resultArray.push("bug!");
+      }
+    } 
+  }
+
+  console.log(resultArray);
+  return resultArray;
 }
 
 // Desafio 9
