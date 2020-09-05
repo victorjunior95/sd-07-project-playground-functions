@@ -35,14 +35,14 @@ function highestCount(numbers) {
   let maior = -Infinity;
   let countRepeated = 0;
 
-  for(let i = 0; i < numbers.length; i += 1){
-    if(numbers[i] > maior){
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > maior){
       maior = numbers[i];
     }
   }
 
-  for(let num of numbers){
-    if(num === maior){
+  for (let num of numbers){
+    if (num === maior) {
       countRepeated += 1;
     }
   }
@@ -51,32 +51,34 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
-    return 'cat1';
-  }else 
-    if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
-      return 'cat2';
-    }else{
-      return "os gatos trombam e o rato foge";
-  }
+  let whoIsCloser;
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    whoIsCloser = 'cat1';
+  } else
+    if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+      whoIsCloser = 'cat2';
+    } else {
+      whoIsCloser = 'os gatos trombam e o rato foge';
+    }
+  return whoIsCloser;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let resultArr = []
-  
-  for(let num of numbers){
-    if(num % 3 === 0 && num % 5 === 0){
-      resultArr.push("fizzBuzz");
-    }else 
-      if(num % 3 === 0){
-        resultArr.push("fizz");
-      }else 
-        if(num % 5 === 0){
-          resultArr.push("buzz");
-      }else{
-        resultArr.push('bug!');
-    }
+  let resultArr = [];
+
+  for (let num of numbers) {
+    if (num % 3 === 0 && num % 5 === 0) {
+      resultArr.push('fizzBuzz');
+    } else
+      if (num % 3 === 0) {
+        resultArr.push('fizz');
+      } else
+        if (num % 5 === 0) {
+          resultArr.push('buzz');
+        } else {
+          resultArr.push('bug!');
+        }
   }
   return resultArr;
 }
@@ -105,67 +107,67 @@ function techList(arrTech, name) {
   let tectsSorted = arrTech.sort();
   let techs = [];
 
-  for(let item of tectsSorted){
+  for (let item of tectsSorted) {
     techs.push({
-      ["tech"] : item,
-      ["name"] : name 
+      ['tech']: item,
+      ['name']: name,
     });
   }
 
-  if(techs.length === 0){
+  if (techs.length === 0) {
     return 'Vazio!';
-  }else{
-    return techs;
   }
+    return techs;
 }
+
 
 // Desafio 11
 function generatePhoneNumber(telephone) {
-  if(telephone.length !== 11){
-    return "Array com tamanho incorreto.";
+  if (telephone.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  
+
   let countRepeated = {};
-  for(let i = 0; i < telephone.length; i += 1){
-    if(telephone[i] < 0 || telephone[i] > 9){
-      return "não é possível gerar um número de telefone com esses valores";
+  for (let i = 0; i < telephone.length; i += 1) {
+    if (telephone[i] < 0 || telephone[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-    countRepeated[telephone[i]] = 
+    countRepeated[telephone[i]] =
     (countRepeated[telephone[i]] || 0) + 1;
   }
-  for(let key in countRepeated){
-    if(countRepeated[key] >= 3){
-      return "não é possível gerar um número de telefone com esses valores";
+  for (let key in countRepeated) {
+    if (countRepeated[key] >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return telephone
   .join('')
   .replace(/(\d{2})(\d{5})(\d{4})/,
-   "($1) $2-$3");
+    '($1) $2-$3');
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triangleOrNot =
-  (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) && 
-  (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) && 
+  (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) &&
+  (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) &&
   (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB));
-  
-  return triangleOrNot;  
+
+  return triangleOrNot;
 }
 
 // Desafio 13
-function hydrate(string) {
+function hydrate(string, cups = 0) {
   let characteres = string.match(/\d/g);
-  let cups = 0;
-  for(let num of characteres){
+  
+  for (let num of characteres) {
     cups += parseInt(num);
   }
-  if(cups === 1){
+  if (cups === 1) {
     return `${cups} copo de água`;
-  }else{
-  return `${cups} copos de água`;
   }
+    return `${cups} copos de água`;
+    
 }
 
 module.exports = {
