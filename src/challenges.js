@@ -150,12 +150,28 @@ function decode(nome) {
   new_palavra = new_palavra.join('').toString();
   return new_palavra;
 }
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+let tecnologias = ["js", "html", "css", "frameworks", "soft skils"]; 
+let nome = "Vitor";
+function techList(tech,name) { 
+  let tecnologia = tech; 
+  let nome = name;
+  let tec_retorno = [];
+  if (tecnologia.length == 0){
+    tec_retorno = "Vazio!";
+  }else{
+    for (let i = 0; i < tecnologia.length; i++){
+      tec_retorno[i] = {tech: tecnologia[i], name: nome}
+    }
+  }
+  for (let i = 0; i < tec_retorno.length -1; i++){
+    for (let j = i + 1; j < tec_retorno.length; j++){
+      
+    }
+  }
+  return tec_retorno;
 }
-
+console.log(techList(tecnologias,nome));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
