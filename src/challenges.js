@@ -120,11 +120,40 @@ return result;
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let codigo = phrase.split('');
+  for(let i in codigo){
+    if (codigo[i] === 'a') {
+      codigo.splice(i, 1, '1');
+    } else if (codigo[i] === 'e') {
+      codigo.splice(i, 1, '2');
+    } else if (codigo[i] === 'i') {
+      codigo.splice(i, 1, '3');
+    } else if (codigo[i] === 'o') {
+      codigo.splice(i, 1, '4');
+    } else if (codigo[i] === 'u'){
+      codigo.splice(i, 1, '5');
+    }
+  }
+return codigo.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let decodigo = phrase.split('');
+  for(let i in decodigo){
+    if (decodigo[i] === '1') {
+      decodigo.splice(i, 1, 'a');
+    } else if (decodigo[i] === '2') {
+      decodigo.splice(i, 1, 'e');
+    } else if (decodigo[i] === '3') {
+      decodigo.splice(i, 1, 'i');
+    } else if (decodigo[i] === '4') {
+      decodigo.splice(i, 1, 'o');
+    } else if (decodigo[i] === '5'){
+      decodigo.splice(i, 1, 'u');
+    }
+  }
+return decodigo.join('');
 }
 
 // Desafio 10
