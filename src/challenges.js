@@ -204,11 +204,15 @@ function generatePhoneNumber(arrayTelefone) {
   numeroTelefone = [];
   contador = [];
   if (arrayTelefone.length != 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < arrayTelefone.length; i += 1) {
-    aux[arrayTelefone[i]] = aux[arrayTelefone[i]] ? aux[arrayTelefone[i]] + 1 : 1;
-    contador.push(Object.values([aux[arrayTelefone[i]]]));
+    if (arrayTelefone[i] < 0 || arrayTelefone[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      aux[arrayTelefone[i]] = aux[arrayTelefone[i]] ? aux[arrayTelefone[i]] + 1 : 1;
+      contador.push(Object.values([aux[arrayTelefone[i]]]));
+    } 
   }
   for (let j = 0; j < contador.length; j += 1) {
     if (contador[j] >= 3) {
