@@ -34,16 +34,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumbers) {
-  let countNumber = 0;
-  let higherNumber = highestNumber(arrayNumbers);
-  for (let index in arrayNumbers) {
-    if (arrayNumbers[index] === higherNumber) {
-      countNumber += 1;
-    }
-  }
-  return countNumber;
-}
 function highestNumber(arrayNumbers) {
   let higherNumber = 0;
   for (let index in arrayNumbers) {
@@ -57,6 +47,17 @@ function highestNumber(arrayNumbers) {
     }
   }
   return higherNumber;
+}
+
+function highestCount(arrayNumbers) {
+  let countNumber = 0;
+  let higherNumber = highestNumber(arrayNumbers);
+  for (let index in arrayNumbers) {
+    if (arrayNumbers[index] === higherNumber) {
+      countNumber += 1;
+    }
+  }
+  return countNumber;
 }
 
 // Desafio 7
@@ -162,18 +163,19 @@ function techList(arrayOfTechs, name) {
   student = name;
   techs = arrayOfTechs;
   techs.sort();
+  if (techs.length === 0) {
+    return 'Vazio!'
+  } else {
   for (let tech in techs) {
-    if (techs.length !== 0) {
       result.push({
         tech: techs[tech],
         name: student,
       });
-    } else {
-      return 'Vazio!';
     }
   }
   return result;
 }
+
 // Desafio 11
 function validaNumbers(arrayNumbers) {
   let condition = true;
