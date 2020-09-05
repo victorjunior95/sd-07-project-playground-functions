@@ -136,13 +136,17 @@ function repeatNumber(array) {
 }
 
 function generatePhoneNumber(array) {
+
   let string = '';
-  for (let i in array) {
+
+        for (let i in array) {
           if (array.length !== 11) {
               return "Array com tamanho incorreto.";
              }
-          else if ((9 < array[i]) || (array[i] < 0)  && repeatNumber(array).length >= 3) {
+          else if ((array[i] > 9) || (array[i] < 0)) {
            return "não é possível gerar um número de telefone com esses valores";
+       } else if (repeatNumber(array).length >= 3) {
+          return "não é possível gerar um número de telefone com esses valores";
        }
        }
        string = array.join('');
