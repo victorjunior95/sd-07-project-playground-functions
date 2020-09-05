@@ -252,7 +252,7 @@ function hydrate(string) {
   let coposBebida = string.match(/[0-9]+/g);
   let coposAgua = 0;
   for (let index = 0; index < coposBebida.length; index += 1) {
-    coposAgua += parseInt(coposBebida[index]);
+    coposAgua += parseInt(coposBebida[index],10);
   }
   if (coposAgua !== 1) {
     return `${coposAgua} copos de água`;
