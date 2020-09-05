@@ -75,23 +75,22 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(param) {
   let resultados = [];
   for(let i = 0; i < param.length; i += 1){
-      if(i > 0){
-          resultados += ", "
-      }
       if(param[i] % 3 === 0 && param[i] % 5 !== 0){
-          resultados += "fizz";
+          resultados.push("fizz");
       }
       else if(param[i] % 5 === 0 && param[i] % 3 !== 0){
-          resultados += "buzz";
+          resultados.push("buzz");
       }
       else if(param[i] % 3 === 0 && param[i] % 5 === 0){
-          resultados += "fizzBuzz";
+          resultados.push("fizzBuzz");
       }
       else {
-          resultados += "bug!"
+          resultados.push("bug!")
       }
   }
+  
   return resultados
+
 }
 
 // Desafio 9
@@ -145,16 +144,16 @@ function decode(param) {
 
 function techList(tech, name) {
   let lista = [];
+  tech.sort();
   for(let i = 0; i < tech.length; i += 1){
       let objeto = {}
       objeto = {
           tech: tech[i],
           name: name
       }
-      lista += objeto;
+      lista.push(objeto);
   }
-  let listaFinal = lista.sort();
-  return listaFinal
+  return lista
 
 }
 
