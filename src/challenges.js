@@ -211,7 +211,6 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
       return true;
   }
@@ -230,19 +229,23 @@ function hydrate(str) {
   str = str.split(" ");
   // Retirar os numeros da string
   for (let i = 0; i < str.length ; i+=1){
-      if(isNaN(str[i])==false) {
+      if(isNaN(str[i])==false){
       int+=str[i];    
-    }
+      }
   }
   num = parseInt(int);
   num = num.toString();
   // Somar os números
   for (let i = 0; i < num.length; i += 1){
-      sum = sum + parseInt(num[i]);
+        sum = sum + parseInt(num[i]);
   }
- // Formatar resposta
- resposta = sum + " " + "copos de água";
- return resposta;
+  // Formatar resposta
+  if (sum == 1) {
+    resposta = sum + " " + "copo de água";  
+  } else {
+     resposta = sum + " " + "copos de água";
+  }
+  return resposta;
 }
 
 
