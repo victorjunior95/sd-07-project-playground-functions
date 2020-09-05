@@ -31,12 +31,8 @@ function splitSentence(param) {
 
 // Desafio 4
 function concatName(param) {
-  let primeiro = (param[0].toString());
-  let ultimo = (param[param.length -1].toString());
-  let concatName = new Array;
-  concatName.push(ultimo,primeiro);
-  console.log(`${concatName[0]}, ${concatName[1]}`)
-  return concatName;
+  let ultMaisprimeiro = param[param.length -1]+', '+param[0];
+  return ultMaisprimeiro;
 }
 
 // Desafio 5
