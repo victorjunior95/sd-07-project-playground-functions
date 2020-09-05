@@ -36,12 +36,12 @@ function highestCount(numbers) {
   let countRepeated = 0;
 
   for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] > maior){
+    if (numbers[i] > maior) {
       maior = numbers[i];
     }
   }
 
-  for (let num of numbers){
+  for (let num of numbers) {
     if (num === maior) {
       countRepeated += 1;
     }
@@ -117,7 +117,7 @@ function techList(arrTech, name) {
   if (techs.length === 0) {
     return 'Vazio!';
   }
-    return techs;
+  return techs;
 }
 
 
@@ -159,15 +159,14 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string, cups = 0) {
   let characteres = string.match(/\d/g);
-  
+
   for (let num of characteres) {
     cups += parseInt(num);
   }
   if (cups === 1) {
     return `${cups} copo de água`;
   }
-    return `${cups} copos de água`;
-    
+  return `${cups} copos de água`;
 }
 
 module.exports = {
