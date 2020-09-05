@@ -178,18 +178,18 @@ function generatePhoneNumber(array) {
     }
   }
 
-  let phoneNumber = "(";
+  let phoneNumber = '(';
   for (let number in array) {
     if(array[number] < 0 || array[number] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
-    if(number == 1) {
+    if (number == 1) {
       phoneNumber += array[number];
-      phoneNumber += ") ";
-    } else if(number == 6) {
+      phoneNumber += ') ';
+    } else if (number == 6) {
       phoneNumber += array[number];
-      phoneNumber += "-";
+      phoneNumber += '-';
     } else phoneNumber += array[number];
   }
   return phoneNumber;
@@ -199,8 +199,16 @@ let arrayNumber = [1, 2, 3, 4, 5, 6, 1, 8, 9, 0, 1];
 console.log(generatePhoneNumber(arrayNumber));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(sideOne, sideTwo, sideThree) {
+  if (sideOne < (sideTwo + sideThree) && sideOne > Math.abs(sideTwo - sideThree)) {
+    return true;
+  }
+  else if (sideTwo < (sideOne + sideThree) && sideTwo > Math.abs(sideOne - sideThree)) {
+    return true;
+  }
+  else if (sideThree < (sideOne + sideTwo) && sideThree > Math.abs(sideOne - sideTwo)) {
+    return true;
+  } else return false;
 }
 
 // Desafio 13
