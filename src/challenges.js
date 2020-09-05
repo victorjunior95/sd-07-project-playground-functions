@@ -249,19 +249,25 @@ function triangleCheck(lineA, lineB, lineC) {
 triangleCheck(10, 14, 8)
 
 // Desafio 13
-let strEntry = '1 cachaça, 5 cervejas e 1 copo de vinho'
+let strEntry = '1 cachaça'
 function hydrate(a) {
-  // seu código aqui
-  let charSep = ' '
-  let strSeparated = a.split(charSep)
+  let strSeparated = a.match(/\d/g)
   let numOfReturn = 0
+  let strReturn = ''
   for (let i = 0; i < strSeparated.length; i += 1) {
     let strForNumber = parseInt(strSeparated[i], 10)
     if (Number.isInteger(strForNumber)){
       numOfReturn += strForNumber
     }
   }
-  return numOfReturn + ' copos de água'
+  if (numOfReturn > 1) {
+    let y = numOfReturn + ' copos de água'
+    return y
+  } else {
+    let x = numOfReturn + ' copo de água'
+    return x
+  }
+  
 }
 console.log(hydrate(strEntry))
 
