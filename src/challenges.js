@@ -102,16 +102,23 @@ function avaliadorDeContagem(listaDeNumeros) {
 }
 
 function numerosValidos(listaDeNumeros) {
-  for (let i = 0; i < listaDeNumeros; i += 1){
+  for (let i = 0; i < listaDeNumeros.length; i += 1) {
     if ((listaDeNumeros[i] > 9) || (listaDeNumeros[i] < 0)) return false
   }
-    return true
+  return true
 }
 
 // Desafio 11
 function generatePhoneNumber(numero) {
+  numeroDeTelefone = `(${numero[0]}${numero[1]}) `;
+  if (numerosValidos(numero) === false) return 'não é possível gerar um número de telefone com esses valores';
+  else if (avaliadorDeContagem(numero) === false) return 'Array com tamanho incorreto';
+  for(let i = 2; i < numero.length; i += 1){
+    numeroDeTelefone = `${numeroDeTelefone}${numero[i]}`;
+    if (i === 6) numeroDeTelefone = `${numeroDeTelefone}-`
+  }
+  return numeroDeTelefone;
 }
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
