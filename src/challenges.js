@@ -112,8 +112,6 @@ function encode(palavras) {
   let igual = [];
   for (let j = 0; j < frase.length; j += 1) {
     igual.push(frase[j]);
-  }
-  for (let j = 0; j < igual.length; j += 1) {
     for (let key in vogais) {
       if (key === igual[j]) {
         igual[j] = vogais[key];
@@ -134,8 +132,6 @@ function decode(palavras) {
   let igual = [];
   for (let j = 0; j < frase.length; j += 1) {
     igual.push(frase[j]);
-  }
-  for (let j = 0; j < igual.length; j += 1) {
     for (let key in vogais) {
       if (key === igual[j]) {
         igual[j] = vogais[key];
