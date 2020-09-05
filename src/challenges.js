@@ -172,7 +172,6 @@ function techList(tech,name) {
   }
   return tec_retorno;
 }
-let phone = [2,2,2,4,5,6,7,1,9,0,8];
 // Desafio 11
 function generatePhoneNumber(param) {
   let numeros = param;
@@ -190,17 +189,18 @@ function generatePhoneNumber(param) {
             cont++;
           }
         }
-        if (cont >= 3){
-          retornarphone = "não é possível gerar um número de telefone com esses valores";
-        }
       }
     }
-    retornarphone = numeros.join('').toString()
-    console.log(`(${retornarphone[0]}${retornarphone[1]}) ${retornarphone[2]}${retornarphone[3]}${retornarphone[4]}${retornarphone[5]}${retornarphone[6]}-${retornarphone[7]}${retornarphone[8]}${retornarphone[9]}${retornarphone[10]}`);
+    if (cont >= 3){
+      retornarphone = "não é possível gerar um número de telefone com esses valores";
+    }else{
+      retornarphone = numeros.join('').toString();
+      console.log('('+retornarphone[0]+retornarphone[1]+')'+' '+retornarphone[2]+retornarphone[3]+retornarphone[4]+retornarphone[5]+retornarphone[6]+'-'+retornarphone[7]+retornarphone[8]+retornarphone[9]+retornarphone[10]);
+    }
   }
   return retornarphone;
 }
-generatePhoneNumber(phone);
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
