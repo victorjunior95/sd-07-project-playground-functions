@@ -95,42 +95,10 @@ function contador(numero){
   let sum = 0;
     
   for(let i = 0; i < numero.length; i += 1) {
-    switch (numero[i]) {
-      case 0:
-        contagem[0] += 1
-        break;
-      case 1:
-        contagem[1] += 1
-        break;
-      case 2:
-        contagem[2] += 1
-        break;
-      case 3:
-        contagem[3] += 1
-        break;
-      case 4:
-        contagem[4] += 1
-        break;
-      case 5:
-        contagem[5] += 1
-        break;
-      case 6:
-        contagem[6] += 1
-        break;
-      case 7:
-        contagem[7] += 1
-        break;
-      case 8:
-        contagem[8] += 1
-        break;
-      case 9:
-        contagem[9] += 1
-        break;
-    
-      default:
-        return false;
-    } 
+    if ((numero[i] > 9) || (numero[i] < 0)) return false;
+    contagem[numero[i]] += 1;
     sum += 1;
+    console.log(contagem);
   }
   if (sum !== 11) return false;
   for (let i = 0; i < 11; i += 1) {
@@ -138,6 +106,9 @@ function contador(numero){
   }
   return true;
 }
+
+let  numero = [0,3,1,-15,1,1,2,2,3,3,2]
+console.log(contador(numero));
 // Desafio 11
 function generatePhoneNumber(numero) {
   if ((numero < 0) && (numero > 10)){
