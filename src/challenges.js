@@ -85,15 +85,17 @@ function fizzBuzz(num) {
   let palavra = '';
   let result = [];
   for (let i of numbers) {
-    (i % 3 === 0 && i % 5 !== 0) ?
-    palavra = 'fizz'
-      : (i % 5 === 0 && i % 3 !== 0) ?
-    palavra = 'buzz'
-      : (i % 3 === 0 && i % 5 === 0) ?
-    palavra = 'fizzBuzz' :
+    if (i % 3 === 0 && i % 5 !== 0) {
+      palavra = 'fizz';
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+      palavra = 'buzz';
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      palavra = 'fizzBuzz';
+    } else {
       palavra = 'bug!';
-      result.push(palavra);
     }
+    result.push(palavra);
+  }
   return result;
 }
 
