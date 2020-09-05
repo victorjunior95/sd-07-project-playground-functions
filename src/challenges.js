@@ -118,18 +118,23 @@ catAndMouse(mouseOut, cat1Out, cat2Out)
 
 // Desafio 8
 let dataFizzBuzz = [2, 15, 7, 9, 45]
+function fizzBuzzOuthers(a) {
+  if (a % 5 === 0) {
+    return 'buzz'
+  } else if (a % 3 === 0) {
+    return 'fizz'
+  } else {
+    return 'bug!'
+  }
+}
 function fizzBuzz(a) {
   // seu código aqui
   let message = [];
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] % 3 === 0 && a[i] % 5 === 0) {
-      message.push('fizzBuzz');
-    } else if (a[i] % 5 === 0) {
-      message.push('buzz');
-    } else if (a[i] % 3 === 0) {
-      message.push('fizz');
+      message.push('fizzBuzz')
     } else {
-      message.push('bug!');
+      message.push(fizzBuzzOuthers(a[i]))
     }
   }
   return message;
