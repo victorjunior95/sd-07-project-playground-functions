@@ -193,7 +193,7 @@ function generatePhoneNumber(array11) {
   for (let i = 0; i < array11.length; i += 1) {
     if (array11.length !== 11) {
       return "Array com tamanho incorreto.";
-    } else if (array11[i] < 0 && array11[i] > 9) {
+    } else if (array11[i] < 0 || array11[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     } else if (i >= 2 && i < 7) {
       phoneNumber2.push(array11[i]);
