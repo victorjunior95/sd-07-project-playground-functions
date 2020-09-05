@@ -49,14 +49,13 @@ function highestCount(repeat) {
     if (i > maior) {
       maior = i;
     }
-  }
-  for (let j of array) {
-    if (maior === j) {
+    if (maior === i) {
       count += 1;
     }
   }
   return count;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
