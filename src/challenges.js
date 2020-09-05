@@ -101,45 +101,31 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))  // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
 
 
-// Função para auxiliar no refatoramento do desafio 9
-function encDec(phrase) {
-  let newPhrase = '';
-  for (let i in phrase) {
-    if (phrase[i] === 'a') {
-      newPhrase += '1';
-    } else if (phrase[i] === 'e') {
-      newPhrase += '2';
-    } else if (phrase[i] === 'i') {
-      newPhrase += '3';
-    } else if (phrase[i] === 'o') {
-      newPhrase += '4';
-    } else if (phrase[i] === 'u') {
-      newPhrase += '5';
-    } else if (phrase[i] === '1') {
-      newPhrase += 'a';
-    } else if (phrase[i] === '2') {
-      newPhrase += 'e';
-    } else if (phrase[i] === '3') {
-      newPhrase += 'i';
-    } else if (phrase[i] === '4') {
-      newPhrase += 'o';
-    } else if (phrase[i] === '5') {
-      newPhrase += 'u';
-    } else {
-      newPhrase += phrase[i];
-    }
-  }
-  return newPhrase; 
-}
 // Desafio 9
 function encode(phrase) {
   let newCod = '';
-  newCod += encDec(phrase);
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  let number = [1, 2, 3, 4, 5];
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase[i] === vowel[i]) {
+      newCod += number[i];
+    } else {
+      newCod += phrase[i];
+    }
+  }
   return newCod;
 }
 function decode(phrase) {
   let newDec = '';
-  newDec += encDec(phrase);
+  let number = [1, 2, 3, 4, 5];
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  for (let j in phrase) {
+    if (phrase[j] !== number[j]) {
+      newDec += phrase[j];
+    } else {
+      newDec += vowel[j];
+    }  
+  }
   return newDec;
 }
 console.log(encode('hi there!'))  // h3 th2r2!
