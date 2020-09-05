@@ -1,7 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  let result = value1 && value2;
-  return result;
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -9,14 +12,23 @@ function calcArea(base, height) {
   return result;
 }
 
-// Desafio 3 << Falta fazer.
+// Desafio 3 
 function splitSentence(value) {
-  
+  let retorn = value.split(` `);
+  return retorn;
 }
 
 // Desafio 4
 function concatName(array) {
- 
+ let conjuntoArray = ``;
+ for (let i = array.length -1; i >= 0; i -= 1) {
+   if ( i === array.length - 1) {
+     conjuntoArray += array[i] + `, `;
+   } else if (i === 0) {
+    conjuntoArray += array[i];
+   }
+ }
+ return conjuntoArray;
 }
 
 
