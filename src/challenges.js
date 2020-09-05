@@ -46,14 +46,11 @@ function highestCount(arrayNumbers) {
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (highestNumber <= arrayNumbers[i]) {
       highestNumber = arrayNumbers[i];
-    }
-  }
-
-  for (let j = 0; j < arrayNumbers.length; j += 1) {
-    if (highestNumber == arrayNumbers[j]) {
+    } else if (highestNumber == arrayNumbers[j]) {
       countRepetitions += 1;
     }
   }
+
   return countRepetitions;
 }
 //console.log(highestCount([9, 1, 2, 3, 9, 5, 10, 7]));
@@ -176,11 +173,22 @@ function generatePhoneNumber(array11) {
   let phoneNumber3 = [];
 
   let object = {};
-  let count = 0;
 
   for (let i = 0; i < array11.length; i += 1) {
-    object[array11[i]] = object[array11[i]] ? object[array11[i]] + 1 : 0;
+    if(object[array11[i]] == undefined) {
+      object[array11[i]] = 1;
+    } else {
+      object[array11[i]] += 1;
+    }
+  }
 
+  for (let key in object) {
+    if (object[key] >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  for (let i = 0; i < array11.length; i += 1) {
     if (array11.length !== 11) {
       return "Array com tamanho incorreto";
     } else if (array11[i] < 0 && array11[i] > 9 && count >= 3) {
@@ -195,7 +203,9 @@ return "não é possível gerar um número de telefone com esses valores";
   let phoneNumber2Join = phoneNumber2.join("");
   let phoneNumber3Join = phoneNumber3.join("");
 
-  return count;
+  let mensagem = `${phoneNumber1} ${phoneNumber2Join}-${phoneNumber3Join}`;
+
+  return mensagem;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
