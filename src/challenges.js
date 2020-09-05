@@ -166,8 +166,7 @@ function techList(array, name) {
     name: name
   }
   //Criando uma variável do tipo do objeto
-  let newArray = [];
-
+  let newArray;
   // Ordenando o array recebido ou retornando o valor vazio
   if (array){
     array = array.sort();
@@ -176,12 +175,10 @@ function techList(array, name) {
     return 'Vazio!';
   }     
   // Carregando o array com os parametros recebidos
-  
     for(let i = 0; i < array.length; i += 1){
      //newArray.push({techObj.tech = array[i], techObj.name = name});
      newArray.push({tech: array[i], name: name});
     }
-  
   //Retornando o array de
   return newArray;
 }
