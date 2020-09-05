@@ -174,14 +174,16 @@ function techList(tech,name) {
   }
   return tec_retorno;
 }
-let phone = [1,2,3,4,5,6,7,8,9,0,2,4]
+let phone = [1,2,3,4,5,6,7,8,9,0,2,3,5];
 // Desafio 11
 function generatePhoneNumber(param) {
   let numeros = param;
   let retornarphone;
   let cont = 0;
-  if (numeros != 11){
-    retornarphone = "Array com tamanho incorreto"
+  if (numeros.length != 11){
+    retornarphone = "Array com tamanho incorreto";
+  }else{
+    retornarphone = "ok vamos lá";
   }
 
   return retornarphone;
