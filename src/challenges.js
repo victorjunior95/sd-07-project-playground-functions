@@ -191,7 +191,7 @@ function generatePhoneNumber(array11) {
   }
 
   for (let i = 0; i < array11.length; i += 1) {
-    if (array11.length > 11 || array11.length < 11) {
+    if (array11.length != 11) {
       return "Array com tamanho incorreto.";
     } else if (array11[i] < 0 || array11[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
@@ -206,7 +206,6 @@ function generatePhoneNumber(array11) {
   let phoneNumber3Join = phoneNumber3.join("");
 
   let mensagem = `${phoneNumber1} ${phoneNumber2Join}-${phoneNumber3Join}`;
-
   return mensagem;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
