@@ -30,7 +30,7 @@ function concatName(arraydeentrada) {
   // seu código aqui
   let stringsaida = ""
   stringsaida = stringsaida + arraydeentrada[arraydeentrada.length - 1]
-  stringsaida = stringsaida + " "
+  stringsaida = stringsaida + ", "
   stringsaida = stringsaida + arraydeentrada[0]
     return(stringsaida)
 }
