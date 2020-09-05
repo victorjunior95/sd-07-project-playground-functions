@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(a, b) {
+  let comparacao;
   if(a === true && b === true){
-    console.log(true)
+    comparacao = true;
   }else {
-    console.log(false)
+    comparacao = false
   }
+  return comparacao
 }
 
 // Desafio 2
@@ -25,7 +27,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  let concat = arrayDeStrings[arrayDeStrings.lenght - 1 + ", " + arrayDeStrings[0]];
+  let concat = arrayDeStrings[arrayDeStrings.length - 1 + ", " + arrayDeStrings[0]];
 
   return concat;
 }
