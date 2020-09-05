@@ -90,8 +90,8 @@ function encode(str) {
   str = str.replace(/u/gi, "5")
   return str;
 }
-console.log(encode("there"))
-function decode() {
+
+function decode(str) {
   str = str.replace(/1/gi, "a")
   str = str.replace(/2/gi, "e")
   str = str.replace(/3/gi, "i")
