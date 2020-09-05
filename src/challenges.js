@@ -46,7 +46,7 @@ function highestCount(arrayNumbers) {
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (highestNumber < arrayNumbers[i]) {
       highestNumber = arrayNumbers[i];
-    } 
+    }
   }
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (highestNumber == arrayNumbers[i]) {
@@ -177,7 +177,7 @@ function generatePhoneNumber(array11) {
   let object = {};
 
   for (let i = 0; i < array11.length; i += 1) {
-    if(object[array11[i]] == undefined) {
+    if (object[array11[i]] == undefined) {
       object[array11[i]] = 1;
     } else {
       object[array11[i]] += 1;
@@ -193,8 +193,8 @@ function generatePhoneNumber(array11) {
   for (let i = 0; i < array11.length; i += 1) {
     if (array11.length !== 11) {
       return "Array com tamanho incorreto.";
-    } else if (array11[i] < 0 && array11[i] > 9 && count >= 3) {
-return "não é possível gerar um número de telefone com esses valores";
+    } else if (array11[i] < 0 && array11[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
     } else if (i >= 2 && i < 7) {
       phoneNumber2.push(array11[i]);
     } else if (i >= 7) {
