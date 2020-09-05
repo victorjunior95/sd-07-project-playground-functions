@@ -70,15 +70,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
   if (distCat1 > distCat2) {
-    result = 'cat1'
-  } else if (distCat2 > distCat1) {
     result = 'cat2'
+  } else if (distCat2 > distCat1) {
+    result = 'cat1'
   } else {
     result = 'os gatos trombam e o rato foge'
   }
   return result;
 }
-
+console.log(catAndMouse(10, 13, 8))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
