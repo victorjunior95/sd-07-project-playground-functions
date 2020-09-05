@@ -163,7 +163,8 @@ function techList(techs, name) {
   techsArray.sort(); // techs em ordem alfabética
 
   for (let i = 0; i < techsArray.length; i += 1) {
-    result[i] = { techsArray[i], name };
+    let tech = techsArray[i];
+    result[i] = { tech, name };
   }
   return result;
 }
