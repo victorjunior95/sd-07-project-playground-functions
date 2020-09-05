@@ -145,16 +145,19 @@ function decode(param) {
 function techList(tech, name) {
   let lista = [];
   tech.sort();
+  if(tech.length === 0 || tech === 0){
+      return "Vazio!";    
+  }
   for(let i = 0; i < tech.length; i += 1){
-      let objeto = {}
-      objeto = {
-          tech: tech[i],
-          name: name
-      }
-      lista.push(objeto);
+    let objeto = {}
+    objeto = {
+        tech: tech[i],
+        name: name
+    }
+    lista.push(objeto);
+      
   }
   return lista
-
 }
 
 // Desafio 11
