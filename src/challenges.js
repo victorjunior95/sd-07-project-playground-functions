@@ -37,8 +37,8 @@ let highestNumber = function (array) {
   let maiorNumero = array[0];
   for (let i in array) {
     if (array[i] > maiorNumero) {
-        maiorNumero = array[i];
-      }
+      maiorNumero = array[i];
+    }
   }
   return maiorNumero;
 }
@@ -46,8 +46,8 @@ function highestCount(array) {
   let numeroRepeat = 0;
   for (let j in array) {
     if (array[j] === highestNumber(array)) {
-        numeroRepeat += 1;
-      }
+      numeroRepeat += 1;
+    }
   }
   return numeroRepeat;
 }
