@@ -161,7 +161,7 @@ function hydrate(string) {
   for(let num of characteres){
     cups += parseInt(num);
   }
-  return cups;
+  return `${cups} copos de água`;
 }
 
 
