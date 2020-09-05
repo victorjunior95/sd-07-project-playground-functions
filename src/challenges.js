@@ -34,22 +34,26 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(posicoes) {
-  let higherNumber = 0;
+function highestCount(arrayNumbers) {
   let countNumber = 0;
-  for (let index in posicoes) {
-    for (let i = 0; i < posicoes.length; i += 1) {
-      if (posicoes[index] > posicoes[i] && posicoes[index] > higherNumber) {
-        higherNumber = posicoes[index];
-      }
-    }
-  }
-  for (let index in posicoes) {
-    if (posicoes[index] === higherNumber) {
+  let higherNumber = highestNumber(arrayNumbers);
+  for (let index in arrayNumbers) {
+    if (arrayNumbers[index] === higherNumber) {
       countNumber += 1;
     }
   }
   return countNumber;
+}
+function highestNumber(arrayNumbers) {
+  let higherNumber = 0;
+  for (let index in arrayNumbers) {
+    for (let i = 0; i < arrayNumbers.length; i += 1) {
+      if (arrayNumbers[index] > arrayNumbers[i] && arrayNumbers[index] > higherNumber) {
+        higherNumber = arrayNumbers[index];
+      }
+    }
+  }
+  return higherNumber;
 }
 
 // Desafio 7
@@ -82,76 +86,69 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let fizzBuzz = [];
+  let result = [];
   for (let number in arrayNumbers) {
     if (arrayNumbers[number] % 3 === 0 && arrayNumbers[number] % 5 === 0) {
-      fizzBuzz.push('fizzBuzz');
+      result.push('fizzBuzz');
     } else if (arrayNumbers[number] % 3 === 0) {
-      fizzBuzz.push('fizz');
+      result.push('fizz');
     } else if (arrayNumbers[number] % 5 === 0) {
-      fizzBuzz.push('buzz');
+      result.push('buzz');
     } else {
-      fizzBuzz.push('bug!');
+      result.push('bug!');
     }
   }
-  return fizzBuzz;
+  return result;
 }
 
 // Desafio 9
 function encode(string) {
-  let word = '';
-  word = string;
-  let codedWord = '';
-  for (let letter in word) {
-    switch (word[letter]) {
-      case 'a':
-        codedWord += '1';
-        break;
-      case 'e':
-        codedWord += '2';
-        break;
-      case 'i':
-        codedWord += '3';
-        break;
-      case 'o':
-        codedWord += '4';
-        break;
-      case 'u':
-        codedWord += '5';
-        break;
-      default:
-        codedWord += word[letter];
-    }
-  }
-  return codedWord;
+  let codedSentence = encodeOrDecodeSentence(string);
+  return codedSentence;
 }
-
 function decode(string) {
-  let word = '';
-  word = string;
-  let decodedWord = '';
-  for (let letter in word) {
-    switch (word[letter]) {
+  let decodedSentence = encodeOrDecodeSentence(string);
+  return decodedSentence;
+}
+function encodeOrDecodeSentence(sentence) {
+  let codedOrDecodedSentence = '';
+  for (let letter in sentence) {
+    switch (sentence[letter]) {
+      case 'a':
+        codedOrDecodedSentence += '1';
+        break;
       case '1':
-        decodedWord += 'a';
+        codedOrDecodedSentence += 'a';
+        break;
+       case 'e':
+        codedOrDecodedSentence += '2';
         break;
       case '2':
-        decodedWord += 'e';
+        codedOrDecodedSentence += 'e';
+        break;
+      case 'i':
+        codedOrDecodedSentence += '3';
         break;
       case '3':
-        decodedWord += 'i';
+        codedOrDecodedSentence += 'i';
+        break;
+      case 'o':
+        codedOrDecodedSentence += '4';
         break;
       case '4':
-        decodedWord += 'o';
+        codedOrDecodedSentence += 'o';
+        break;
+      case 'u':
+        codedOrDecodedSentence += '5';
         break;
       case '5':
-        decodedWord += 'u';
+        codedOrDecodedSentence += 'u';
         break;
       default:
-        decodedWord += word[letter];
+        codedOrDecodedSentence += sentence[letter];
     }
   }
-  return decodedWord;
+  return codedOrDecodedSentence;
 }
 
 // Desafio 10
