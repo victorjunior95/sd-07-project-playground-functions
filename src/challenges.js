@@ -124,30 +124,30 @@ function encode(string) {
 }
 
 function decode(string) {
-  let result = '';
+  let decodification = '';
   for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
       case '1':
-        result += 'a';
+        decodification += 'a';
         break;
       case '2':
-        result += 'e';
+        decodification += 'e';
         break;
       case '3':
-        result += 'i';
+        decodification += 'i';
         break;
       case '4':
-        result += 'o';
+        decodification += 'o';
         break;
       case '5':
-        result += 'u';
+        decodification += 'u';
         break;
       default:
-        result += string[i]
+        decodification += string[i]
         break;
     }
   }
-  return result;
+  return decodification;
 }
 
 // Desafio 10
@@ -185,7 +185,7 @@ function getRepCount(n, nList) {
   let repetitions = 0;
   for (let i = 0; i < nList.length; i += 1) {
     if (n === nList[i]) {
-      repetitions += 1;    
+      repetitions += 1;
     }
   }
   return repetitions;
