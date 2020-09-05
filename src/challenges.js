@@ -80,7 +80,7 @@ function catAndMouse(mouse,cat1,cat2) {
   dist_cat2 = (Math.abs(gato2 - rato));
 
   if (dist_cat1 === dist_cat2) {
-    retorno = "Os gatos trombam e o rato foge.";
+    retorno = "os gatos trombam e o rato foge";
   }else if(dist_cat1 < dist_cat2){
       retorno = "cat1";
   }else{
@@ -90,9 +90,24 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+const numeros = [2, 15, 7, 9, 45];
+function fizzBuzz(param) {
+  let retorno = new Array;
+  let matriz = param;
+  for (let i = 0; i < matriz.length; i++){
+      if (matriz[i] % 3 == 0 && !matriz[i] % 5 == 0){
+          retorno.push("Fizz");
+      }else if (matriz[i] % 5 == 0 && !matriz[i] % 3 == 0){
+          retorno.push("Buzz");
+      }else if(matriz[i] % 3 == 0 && matriz[i] % 5 == 0){
+          retorno.push("FizzBuzz");
+      }else if (!matriz[i] % 3 == 0 || !matriz[i] % 5 == 0){
+          retorno.push("Bug");
+      }
+  }
+  return retorno;
 }
+console.log(fizzBuzz(numeros));
 
 // Desafio 9
 function encode() {
