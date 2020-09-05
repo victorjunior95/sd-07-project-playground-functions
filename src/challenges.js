@@ -119,8 +119,7 @@ function generatePhoneNumber(arrayN) {
   let res
   for (let num in arrayN) {
     if (arrayN.length !== 11) {
-      res = 'Array com tamanho incorreto.'
-      break
+      return 'Array com tamanho incorreto.'
     }
     let dup = 0
     for (let numD in arrayN) {
@@ -131,10 +130,11 @@ function generatePhoneNumber(arrayN) {
     if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
       res = 'não é possível gerar um número de telefone com esses valores'
       break
-    } else {
-      res = `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
     }
+    res = `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
   }
+  return res
+}
   return res
 }
 
@@ -148,7 +148,7 @@ function hydrate(pingas) {
   let pingasStr = /\d+/g
 	let pingasNum = pingas.match(pingasStr)
 	let res = 0
-	let text = ''
+	let text = ' copos de água'
   for (let i = 0; i < pingasNum.length; i += 1) {
     let c = pingasNum[i]
     if (c >= '0' && c <= '9') {
@@ -158,8 +158,6 @@ function hydrate(pingas) {
 		res = res + pingasNum[num]
 	} if (res === 1) {
 		text = ' copo de água'
-	} else{
-		text = ' copos de água'
 	}
 	return res + text 
 }
