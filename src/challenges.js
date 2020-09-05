@@ -141,7 +141,7 @@ function techList(array, name) {
     for (let item in array) {
       createObject.push({
         tech: array[item],
-        nome: name,
+        name: name,
       });
     } return createObject;
   } return 'Vazio!';
