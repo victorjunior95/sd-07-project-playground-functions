@@ -80,12 +80,23 @@ console.log(catAndMouse(0, 3, 3)) // os gatos trombam e o rato foge
 function fizzBuzz(array) {
   let newArray = [];
   for (let i in array) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) newArray.push('fizzBuzz');
-    else if (array[i] % 3 !== 0 && array[i] % 5 !== 0) newArray.push('bug!');
-    else if (array[i] % 3 === 0) newArray.push('fizz');
-    else newArray.push('buzz');
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else {
+      newArray.push(fizzBuzzAux(array[i]))
+    }
   }
   return newArray;
+}
+// Função para auxiliar no refatoramento do desafio 8
+function fizzBuzzAux(array) {
+  if (array % 3 === 0) {
+    return 'fizz';
+  } else if (array % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug!';
+  }
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]))  // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
 
