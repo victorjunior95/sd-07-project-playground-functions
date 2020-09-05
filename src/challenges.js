@@ -47,7 +47,7 @@ function highestCount(arraydeentrada) {
   // seu código aqui
   let maior = 0
   let repeticoes = 0
-  for(let i=0;i < arraydeentrada.length(); i+=1){
+  for(let i=0;i < arraydeentrada.length; i+=1){
     if (arraydeentrada[i] > maior)
       maior = arraydeentrada[i]
   }
