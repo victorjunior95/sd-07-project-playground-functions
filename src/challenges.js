@@ -156,10 +156,7 @@ function repeatNumber(array) {
            return string;
        }
 
-  let resultado = generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]);
-
-  console.log(resultado);
-
+  
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
