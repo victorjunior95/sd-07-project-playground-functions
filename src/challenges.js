@@ -170,7 +170,7 @@ function techList(arrayNames, name) {
 
 // Desafio 11
 function generatePhoneNumber(array11) {
-  let phoneNumber1 = `(${array11[0]}${array11[1]}) `;
+  let phoneNumber1 = `(${array11[0]}${array11[1]})`;
   let phoneNumber2 = [];
   let phoneNumber3 = [];
 
