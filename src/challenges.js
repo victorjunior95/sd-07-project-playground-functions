@@ -24,8 +24,8 @@ function concatName(array) {
 
   firstItem = array[0];
   lastItem = array[array.length - 1];
-  array = [firstItem];
-  array.push(lastItem);
+  array = lastItem + " " + firstItem;
+  // array.push(lastItem);
 
   return array;
 }
