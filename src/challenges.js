@@ -16,7 +16,7 @@ function splitSentence(string) {
   let finalPosition = 0;
 
   function addString(initialPos, finalPos) {
-    let newString = "";
+    let newString = '';
     for (let index = 0; index <= finalPos - initialPos; index += 1) {
       newString = `${newString}${string[initialPos + index]}`;
     }
@@ -28,17 +28,15 @@ function splitSentence(string) {
       if (string[index] === ' ') {
         addString(initialPosition, finalPosition);
         newWord = false;
-      } else if(index === string.length - 1){
+      } else if (index === string.length - 1){
           finalPosition = index;
           addString(initialPosition, finalPosition);
       } else {
         finalPosition = index;
       }
-    } else {
-      if (string[index] !== ' ') {
+    } else if (string[index] !== ' ') {
         initialPosition = index;
         newWord = true;
-      } else {
       }
     }
   }
