@@ -68,15 +68,15 @@ function catAndMouse(mouse, cat1, cat2) {
     if (distanciacat1 === distanciacat2)
       return("os gatos trombam e o rato foge")
     else if (distanciacat1 > distanciacat2)
-          return("cat1")
+          return("cat2")
         else
-          return("cat2")       
+          return("cat1")       
 }
 
 // Desafio 8
 function fizzBuzz(arraydeentrada) {
   // seu código aqui
-  for(let i = 0; i < arraydeentrada.length(); i+=1){
+  for(let i = 0; i < arraydeentrada.length; i+=1){
     if ((arraydeentrada[i]%3 === 0 ) && !(arraydeentrada[i] % 5 === 0))
       return("fizz")
     else if (!(arraydeentrada[i]%3 === 0 ) && (arraydeentrada[i] % 5 === 0))
