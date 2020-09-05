@@ -101,55 +101,46 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))  // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
 
 
-// Funções para auxiliar no refatoramento do desafio 9
-function encodeAux(cod) {
-  if (cod === 'e') {
-    return '2';
-  } else if (cod === 'i') {
-    return '3';
-  } else if (cod === 'o') {
-    return '4';
-  } else if (cod === 'u') {
-    return '5';
-  } else {
-    return cod;
+// Função para auxiliar no refatoramento do desafio 9
+function encDec(phrase) {
+  let newPhrase = '';
+  for (let i in phrase) {
+    if (phrase[i] === 'a') {
+      newPhrase += '1';
+    } else if (phrase[i] === 'e') {
+      newPhrase += '2';
+    } else if (phrase[i] === 'i') {
+      newPhrase += '3';
+    } else if (phrase[i] === 'o') {
+      newPhrase += '4';
+    } else if (phrase[i] === 'u') {
+      newPhrase += '5';
+    } else if (phrase[i] === '1') {
+      newPhrase += 'a';
+    } else if (phrase[i] === '2') {
+      newPhrase += 'e';
+    } else if (phrase[i] === '3') {
+      newPhrase += 'i';
+    } else if (phrase[i] === '4') {
+      newPhrase += 'o';
+    } else if (phrase[i] === '5') {
+      newPhrase += 'u';
+    } else {
+      newPhrase += phrase[i];
+    }
   }
-}
-function decodeAux(dec) {
-  if (dec === '2') {
-    return 'e';
-  } else if (dec === '3') {
-    return 'i';
-  } else if (dec === '4') {
-    return 'o';
-  } else if (dec === '5') {
-    return 'u';
-  } else {
-    return dec;
-  }
+  return newPhrase; 
 }
 // Desafio 9
-function encode(cod) {
+function encode(phrase) {
   let newCod = '';
-  for (let i = 0; i < cod.length; i += 1) {
-    if (cod[i] === 'a') {
-      newCod += '1';
-    } else {
-      newCod += encodeAux(cod);
-    }
+  newCod += encDec(phrase);
   return newCod;
-  }
 }
-function decode(dec) {
+function decode(phrase) {
   let newDec = '';
-  for (let i = 0; i < dec.length; i += 1) {
-    if (dec[i] === '1') {
-      newDec += 'a';
-    } else {
-      newDec += decodeAux(dec);
-    }
+  newDec += encDec(phrase);
   return newDec;
-  }
 }
 console.log(encode('hi there!'))  // h3 th2r2!
 console.log(decode('h3 th2r2!'))  // hi there!
