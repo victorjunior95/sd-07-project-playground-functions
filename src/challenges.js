@@ -74,10 +74,10 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzOrBuzz(element) {
   if (element % 3 === 0) {
-  return 'fizz';
-} else if (element % 5 === 0) {
-  return 'buzz';
-}
+    return 'fizz';
+  } else if (element % 5 === 0) {
+    return 'buzz';
+  }
   return 'bug!';
 }
 
@@ -172,16 +172,21 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function checkNumbers(nList) {
+function checkLimits(nList) {
   for (let i in nList) {
     if (nList[i] < 0 || nList[i] > 9) {
       return false;
     }
+  }
+  return true;
+}
+
+function checkRepetitions(nList) {
+  for (let i in nList) {
     let repetitions = 0;
     for (let j in nList) {
       if (nList[i] === nList[j]) {
         repetitions += 1;
-
         if (repetitions >= 3) {
           return false;
         }
@@ -191,8 +196,15 @@ function checkNumbers(nList) {
   return true;
 }
 
-function writeNumbers (nList){
-  result = '(';
+function checkNumbers(nList) {
+  if (checkLimits(nList) === true && checkRepetitions(nList) === true) {
+    return true;
+  }
+  return false;
+}
+
+function writeNumbers(nList) {
+  let result = '(';
   for (let i = 0; i < nList.length; i += 1) {
     if (i === 2) {
       result = `${result}) ${nList[i]}`;
@@ -239,7 +251,7 @@ function hydrate(drinks) {
   let NumberOfDrinks = drinks.match(/\d+/g).map(Number);  //  linha de código retirada da internet https://stackoverflow.com/questions/53897373/js-how-to-got-the-sum-of-numbers-from-a-string
   let sum = 0;
 
-  for (let i = 0; i < NumberOfDrinks.length; i +=1) {
+  for (let i = 0; i < NumberOfDrinks.length; i += 1) {
     sum += NumberOfDrinks[i];
   }
 
