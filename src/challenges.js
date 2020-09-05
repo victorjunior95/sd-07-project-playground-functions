@@ -231,9 +231,10 @@ function triangleCheck(lineA, lineB, lineC) {
     if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) {
       if ((lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineC))) {
         return true;
-      } return false;
+      }
     }
   }
+  return false;
 }
 console.log(triangleCheck(10, 14, 8))
 
