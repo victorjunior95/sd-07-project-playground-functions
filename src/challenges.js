@@ -205,6 +205,7 @@ function generatePhoneNumber(phone) {
 // Verifica se algum dos números do array repete 3 vezes ou mais:
   let countRepeat = 0;
   for (let j = 0; j < phone.length; j += 1) {
+    countRepeat = 0;
     for (let k = 0; k < phone.length; k += 1) {
       if (phone[j] === phone[k]) {
         countRepeat += 1;
@@ -212,14 +213,14 @@ function generatePhoneNumber(phone) {
     }
     if (countRepeat >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    }
-  // Retorna número de telefone, respeitando parênteses, traços e espaços:  
+    }  
+  }
+  // Retorna número de telefone, respeitando parênteses, traços e espaços:
       phone.splice(0, 0, '(');
       phone.splice(3, 0, ')');
       phone.splice(4, 0, ' ');
       phone.splice(10, 0, '-');
       return phone.join('');
-  }
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
