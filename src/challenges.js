@@ -37,8 +37,15 @@ function splitSentence(inputString) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+concatName(['Lucas','Cassiano','Ferraz','Paolillo']);
+
+function concatName(names) {
+
+  let firstName = names[0];
+  let lastName = names[names.length -1];
+
+  console.log("ÚLTIMO ITEM: " + lastName + " | PRIMEIRO ITEM: " + firstName);
+  return lastName, firstName;
 }
 
 // Desafio 5
