@@ -207,32 +207,49 @@ function techList(tech, name) {
 //console.log(techList(tech, name));
 
 // Desafio 11
-let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let phoneNumber = [9, 2, 3, 0, 5, 6, 7, 8, 7, 0, 1];
 
 function generatePhoneNumber(phoneNumber) {
   // seu código aqui
-  //Verificar se o tamanho do array é 11:
-  if (phoneNumber.length !== 11) {
-    return "Array com tamanho incorreto"
-  } else {
-    //Estabelecer contagem de números repetidos:
+  //Estabelecer função para contagem de números repetidos:
+  function repeat (phoneNumber) {
     let count = 0;
-    for (let p in phoneNumber) {
-      for (let k in phoneNumber) {
-        if (phoneNumber[p] === phoneNumber[k]) {
-          count += 1;
+    let stop = false;
+    for (let phone of phoneNumber) {
+      for (let otherPhone of phoneNumber) {
+        if (phone === otherPhone) {
+        count += 1;
         }
       }
-      //Verificar se os números vão de 1 a 9 e se os números não se repetem mais de 3 vezes:
-      if (phoneNumber[p] < 0 || phoneNumber[p] > 9 || count >= 3) {
-        return "não é possível gerar um número de telefone com esses valores"
-      }
-      //Retornar o número válido:
-      else {
-        return "(" + phoneNumber[0] + phoneNumber[1] + ") " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]
-      }
-    }  
+      if (count >= 3) {
+        stop = true; 
+      } 
+      count = 0;
+    }
+    return stop
   }
+  //Estabelecer função para testar se os números são positivos e menores que 9:
+  function invalidNumber (phoneNumber) {
+    let invalid = false;
+    for (let value of phoneNumber) {
+      if (value < 0 || value > 9) {
+        invalid = true;
+      }
+    }
+    return invalid
+  }
+  //Verificar se o tamanho do array é 11:
+  if (phoneNumber.length !== 11) {
+    return "Array com tamanho incorreto."
+  }
+  //Verificar se os números são positivos, menores que 9 e repetem até 2 vezes:
+  else if (repeat(phoneNumber) === true || invalidNumber(phoneNumber) === true) {
+    return "não é possível gerar um número de telefone com esses valores"
+  }
+  //Imprimir os números válidos:
+  else {
+    return "(" + phoneNumber[0] + phoneNumber[1] + ") " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]
+  }      
 }
 console.log(generatePhoneNumber(phoneNumber));
 
