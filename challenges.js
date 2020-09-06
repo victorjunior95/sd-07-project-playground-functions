@@ -1,29 +1,17 @@
 
-function triangleCheck(lineA, lineB, lineC) {
- let condition1;
- let condition2;
-  if(lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA){
-    condition1 =  true;
-  } else {
-        condition1 = false;
-  }
-  if(Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineB - lineC) < lineA){
-    condition2 = true;
-  } else {
-    condition2 = false
-  }
-  if(condition1 && condition2) {
-    return true;
-  } else {
-    return false;
-  }
-
+function hydrate(corda) {
+  let cordaDividida = corda.match(/\d/g);
+  let somaAgua = 0;  
+  for(let i = 0; i < cordaDividida.length; i = i+1){
+     somaAgua += cordaDividida[i] * 1;
+    }
+  return somaAgua + " copos de água";  
 }
 
 
 
 
-  console.log(triangleCheck(10, 18, 28));
+  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 
