@@ -95,7 +95,6 @@ function fizzBuzz(numbers) {
  return numbers
 
 }
-
 // Desafio 9
 function encode(phrase) {
   let encryptedLetters = {
@@ -172,14 +171,52 @@ if (listArray.length === 0){
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+
+  let OrinalOrder = numbers
+  let fakeNumber = '(12) 34567-8901'
+  let isRepeated = 0;
+  let inAscendingOrder = numbers.sort()
+
+  for (i = 0; i< inAscendingOrder.length; i+=1){
+
+    if (inAscendingOrder[i] == inAscendingOrder[i +1] || inAscendingOrder[i] == inAscendingOrder[i -1]){
+      isRepeated += 1
+    }else if(inAscendingOrder[i +1] === undefined ){
+         // else if( inAscendingOrder[i] == inAscendingOrder[i -1]){
+      //  isRepeated += 1 
+      // }
+      return isRepeated
+    }else{
+        isRepeated = 0
+     } 
+
+  
+  if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9){
+    return "impossible"
+
+  }
+  
 }
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
 }
+// generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
+
+
+// Desafio 12
+function triangleCheck(lineA,lineB,lineC) {
+
+  if(lineA + lineB < lineC || lineA + lineC < lineB ||lineC + lineB < lineA ){
+return false
+  }else if( lineA < lineB - lineC || lineA < lineC - lineB || lineB < lineA - lineC || lineB < lineC - lineA || lineC < lineA - lineB || lineC < lineB - lineA){
+    return false
+
+  }else{
+    return true
+  }
+
+}
+
 
 // Desafio 13
 function hydrate() {
