@@ -86,19 +86,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let numeros = [9,25];
 function fizzBuzz(param) {
-  let retorno = new Array;
+  let retorno = [];
   let matriz = param;
-  for (let i = 0; i < matriz.length; i += 1){
-    if (matriz[i] % 3 == 0 && matriz[i] % 5 == 0){
-      retorno.push("fizzBuzz");
-    }else if (matriz[i] % 3 == 0){
-        retorno.push("fizz");
-    }else if (matriz[i] % 5 == 0){
-        retorno.push("buzz")
-    }else{
-      retorno.push("bug!")
+  for (let i = 0; i < matriz.length; i += 1) {
+    if (matriz[i] % 3 === 0 && matriz[i] % 5 === 0) {
+      retorno.push('fizzBuzz');
+    } else if (matriz[i] % 3 === 0){
+        retorno.push('fizz');
+    } else if (matriz[i] % 5 === 0){
+        retorno.push('buzz')
+    } else {
+    retorno.push('bug!')
     }
   }
   return retorno;
