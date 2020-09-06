@@ -74,7 +74,8 @@ function concatName(namesArray) {
 //function footballPoints() {
   // seu código aqui
 //}
-
+//tenho que comentar os paarafos arriba, desde onde inicia Desafio 5. Porque da conflito no EVALUATOR JOB, quando aparecem 2 Desafios 5 escritos. A verdade 
+//acho que o problema foi porque tinha um Desafio 5 vazio e outro cheio. Da bug.
 
 // Desafio 5
 function footballPoints(wins,ties) {
