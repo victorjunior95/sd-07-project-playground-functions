@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(firstBoolean, secondBoolean) {
-  return (firstBoolean && secondBoolean) ? true : false;
+  return firstBoolean && secondBoolean;
 }
 
 // Desafio 2
@@ -75,22 +75,22 @@ function fizzBuzz(arrayNumbers) {
 function encode(stringToEncode) {
   let codedString = stringToEncode.split('');
 
-  for (let character of codedString) {
-    switch (character) {
+  for (let char = 0; char < codedString.length; char += 1) {
+    switch (codedString[char]) {
       case 'a':
-        character = '1';
+        codedString[char] = '1';
         break;
       case 'e':
-        character = '2';
+        codedString[char] = '2';
         break;
       case 'i':
-        character = '3';
+        codedString[char] = '3';
         break;
       case 'o':
-        character = '4';
+        codedString[char] = '4';
         break;
       case 'u':
-        character = '5';
+        codedString[char] = '5';
         break;
     }
   }
@@ -100,22 +100,22 @@ function encode(stringToEncode) {
 function decode(stringToDecode) {
   let codedString = stringToDecode.split('');
 
-  for (let character of codedString) {
-    switch (character) {
+  for (let char = 0; char < codedString.length; char += 1) {
+    switch (codedString[char]) {
       case '1':
-        character = 'a';
+        codedString[char] = 'a';
         break;
       case '2':
-        character = 'e';
+        codedString[char] = 'e';
         break;
       case '3':
-        character = 'i';
+        codedString[char] = 'i';
         break;
       case '4':
-        character = 'o';
+        codedString[char] = 'o';
         break;
       case '5':
-        character = 'u';
+        codedString[char] = 'u';
         break;
     }
   }
@@ -136,7 +136,7 @@ function techList(arrayList, name) {
       {
         tech: arrayList[tech],
         name,
-      }
+      },
     );
   }
   return arrayTech;
@@ -188,12 +188,12 @@ function generatePhoneNumber(arrayNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) ? true : false;
+  return lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC);
 }
 
 // Desafio 13
 function hydrate(string) {
-  let numbers = {
+  const numbers = {
     0: '0',
     1: '1',
     2: '2',
