@@ -223,7 +223,16 @@ function techList(array, name) {
 techList(ArrayTechsList, nameOut)
 
 // Desafio 11
-let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
+function numbersRepeated(a, b){
+  let ref = b
+  let count = 0
+  for (let j = 0; j < a.length; j += 1) {
+    if (a[j] === ref) count += 1
+    if (count >= 3) return 'não é possível gerar um número de telefone com esses valores'
+  }
+  return count
+}
+let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8]
 function generatePhoneNumber(a) {
   // seu código aqui
   if (a.length !== 11) return 'Array com tamanho incorreto.'
@@ -232,14 +241,11 @@ function generatePhoneNumber(a) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  let countRepeated = 0;
+  //let countRepeated = external
   for (let i = 0; i < a.length; i += 1) {
     let searching = a[i]
-    for (let j = 0; j < a.length; j += 1) {
-      if (a[j] === searching) countRepeated += 1
-      if (countRepeated >= 3) return 'não é possível gerar um número de telefone com esses valores'
-    }
-    countRepeated = 0
+    let external = numbersRepeated(a, searching)
+    if (external.length >= 3) return external
   }
   // Declaração em template literal
   let phoneComplete = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
