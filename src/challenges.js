@@ -52,10 +52,27 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(12, 14, 20));
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let fizz = "fizz";
+  let buzz = "buzz";
+  let fizzBuzz = "fizzBuzz";
+  let bug = "bug!";
+  let resultArray = [];
+  
+  for (let i in array) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      resultArray.push(fizzBuzz);
+    } else if (array[i] % 3 == 0) {
+      resultArray.push(fizz);
+    } else if (array[i] % 5 == 0) {
+      resultArray.push(buzz);
+    } else {
+      resultArray.push(bug);
+    }
+  }
+
+  return resultArray;
 }
 
 // Desafio 9
