@@ -48,22 +48,12 @@ console.log(splitSentence("ola trybe"))
 
 
 // Desafio 4
-namesArray = ['jesus', 'lucio', 'palli', 'ururi', 'elias', 'hermenegildo']
+//namesArray = ['jesus', 'lucio', 'palli', 'ururi', 'elias', 'hermenegildo']
 function concatName(namesArray) {
   // seu código aqui  
   return [namesArray[namesArray.length-1], namesArray[0]];
 }
-console.log(concatName(namesArray))
-
-
-array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-function concatName(array) {
-  // seu código aqui  
-  return [array[array.length-1], array[0]];
-}
-
-console.log(concatName(array))
-
+//console.log(concatName(namesArray))
 
 
 
