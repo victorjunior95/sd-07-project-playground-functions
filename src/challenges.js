@@ -23,7 +23,6 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-let teste = "go Trybe";
 function splitSentence(param) {
   let string = param;
   let matrizString = [];
@@ -31,7 +30,7 @@ function splitSentence(param) {
   matrizString.push(newString);
   return matrizString;
 }
-console.log(splitSentence(teste));
+
 // Desafio 4
 function concatName(param) {
   let ultMaisprimeiro = param[param.length -1] + ', ' + param[0];
@@ -58,7 +57,9 @@ function highestCount(param) {
     if (numeros[i] > maior) {
       maior = numeros[i];
     }
-    if (numeros[i] === maior) {
+  }
+  for (let j = numeros.length; j > 0; j -= 1) {
+    if (numeros[j] === maior) {
       cont += 1;
     }
   }
