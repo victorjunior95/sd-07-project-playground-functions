@@ -181,14 +181,16 @@ function hydrate(string) {
 
   for (let i = 0; i < arrayStrings.length; i += 1) {
     if (!(isNaN(arrayStrings[i]))) {
-      sumNumbers += parseInt(arrayStrings[i]);
+      sumNumbers += parseInt(arrayStrings[i], 10);
     }
   }
-  if (sumNumbers[0] === 1) {
+  if (sumNumbers === 1) {
     return '1 copo de água';
   }
   return `${sumNumbers} copos de água`;
 }
+let bebidas = "1 cachaça";
+console.log(hydrate(bebidas));
 
 module.exports = {
   calcArea,
