@@ -138,30 +138,26 @@ function repeatNumber(array) {
   }
   return strike;
 }
-function negativeNumber(array) {
-  let result = 0;
-  for (let i in array) {
+function negativeAndBiggerThanNineNumber(array) {
+  let negative = 0;
+  let biggerThan = 0;
+    for (let i in array) {
     if (array[i] < 0) {
-      result += 1;
+      negative += 1;
     }
+    if (array[i] > 9) {
+      biggerThan += 1;
+    }
+    let result = (negative >=1 || biggerThan >=1) ? true : false;
   }
   return result;
-}
-function biggerThanNine(array) {
-  let check = 0;
-  for (let i in array) {
-    if (array[i] > 9) {
-      check += 1;
-    }
-  }
-  return check;
 }
 function generatePhoneNumber(array) {
   let string = '';
   if (array.length !== 11 || array.length === 0) {
     return 'Array com tamanho incorreto.';
   }
-  if (negativeNumber(array) > 0 || repeatNumber(array) >= 3 || biggerThanNine(array) > 0) {
+  if (repeatNumber(array) >= 3 || negativeAndBiggerThanNineNumber(array) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   string = array.join('');
