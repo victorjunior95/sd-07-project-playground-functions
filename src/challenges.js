@@ -137,7 +137,7 @@ function menorabs(lineA, lineB, lineC){
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((menor(lineA, lineB, lineC)) || (menorabs(lineA, lineB, lineC))) {
+  if ((menor(lineA, lineB, lineC)) || (menorabs(lineA, lineB, lineC)) === false )  {
     return false;
   }
   return true;
