@@ -123,24 +123,23 @@ function generatePhoneNumber(numero) {
   }
   return numeroDeTelefone;
 }
-// if (aMenosb > lineC) return false;
-// if (bMenosc > lineA) return false;
-// if (aMenosc > lineB) return false;
-
+function menor(lineA, lineB, lineC){
+  if (lineA + lineB > lineC) return false;
+  if (lineB + lineC > lineA) return false;
+  if (lineA + lineC > lineB) return false;
+  return true;
+}
+function menorabs(lineA, lineB, lineC){
+  if (Math.abs(lineA + lineB) > lineC) return false;
+  if (Math.abs(lineB + lineC) > lineA) return false;
+  if (Math.abs(lineA + lineC) > lineB) return false;
+  return true;
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let ab = lineA + lineB;
-  let ac = lineA + lineC;
-  let bc = lineB + lineC;
-  let aMenosb = Math.abs(lineA - lineB);
-  let aMenosc = Math.abs(lineA - lineC);
-  let bMenosc = Math.abs(lineB - lineC);
-  if (ab < lineC) return false;
-
-  if (bc < lineA) return false;
-
-  if (ac < lineB) return false;
- 
+  if ((menor(lineA, lineB, lineC)) || (menorabs(lineA, lineB, lineC))) {
+    return false;
+  }
   return true;
 }
 
