@@ -1,34 +1,24 @@
 // Desafio 1
-let first = false;
-let second = false;
 function compareTrue(a, b) {
   // seu código aqui
   let compare = a && b
   return compare
 }
-compareTrue(first, second)
 
 // Desafio 2
-let baseOut = 10;
-let heightOut = 5
 function calcArea(base, height) {
   // seu código aqui
   let area = (base * height) / 2;
   return area;
 }
-calcArea(baseOut, heightOut)
-
 
 // Desafio 3
-let sentence = 'Go Trybe';
 function splitSentence(a) {
   // seu código aqui
   return a.split(' ');
 }
-splitSentence(sentence)
 
 // Desafio 4
-let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(a) {
   // seu código aqui
   let newString = '';
@@ -42,39 +32,16 @@ function concatName(a) {
   let stringReturn = `${newString}, ${a[0]}`
   return stringReturn
 }
-concatName(names)
-
 
 // Desafio 5
-let victory = 5;
-let draw = 3;
 function footballPoints(wins, ties) {
   // seu código aqui
   wins *= 3;
   return wins + ties;
 }
-footballPoints(victory, draw)
 
 // Desafio 6
-let highNumberList = [9, 1, 2, 3, 9, 5, 7, 9]
 function highestCount(a) {
-  // seu código aqui
-  /*
-  ***** Refactoring *****
-  let highNumbers = [0];
-  for (let i = 0; i < a.length; i += 1) {
-    if (a[i] > highNumbers[0]) {
-      highNumbers.shift()
-      highNumbers.push(a[i])
-    }
-  }
-  let highNumbersFinal = 0;
-  for (let j = 0; j < a.length; j += 1) {
-    if (highNumbers[0] === a[j]) {
-      highNumbersFinal += 1;
-    }
-  }
-  */
   let highNumber = 0;
   let highCountNumber = 0;
   for (let i = 0; i < a.length; i += 1) {
@@ -87,12 +54,8 @@ function highestCount(a) {
   }
   return highCountNumber;
 }
-highestCount(highNumberList)
 
 // Desafio 7
-let mouseOut = 3;
-let cat1Out = 30;
-let cat2Out = 30;
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = mouse - cat1;
@@ -112,10 +75,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-catAndMouse(mouseOut, cat1Out, cat2Out)
 
 // Desafio 8
-let dataFizzBuzz = [2, 15, 7, 9, 45]
 function fizzBuzzOuthers(item) {
   if (item % 5 === 0) {
     return 'buzz'
@@ -136,10 +97,8 @@ function fizzBuzz(a) {
   }
   return message;
 }
-fizzBuzz(dataFizzBuzz)
 
 // Desafio 9
-let paramString = 'Go Tribe'
 function encode(a) {
   // seu código aqui
   let encodeString = '';
@@ -166,9 +125,6 @@ function encode(a) {
   }
   return encodeString;
 }
-encode(paramString)
-
-let decryp = 'G4 Tr3b2'
 function decode(b) {
   // seu código aqui
   let decodeString = '';
@@ -195,11 +151,8 @@ function decode(b) {
   }
   return decodeString;
 }
-decode(decryp)
 
 // Desafio 10
-let ArrayTechsList = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let nameOut = 'Josiel'
 function techList(array, name) {
   // seu código aqui
   if (array.length === 0) {
@@ -218,7 +171,6 @@ function techList(array, name) {
   }
   return objectTechs
 }
-techList(ArrayTechsList, nameOut)
 
 // Desafio 11
 let numbersForPhones = [1, 1, 9, 8, 7, 3, 8, 9, 0, 0, 5]
@@ -274,10 +226,8 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false
 }
-triangleCheck(10, 14, 8)
 
 // Desafio 13
-let strEntry = '1 cachaça'
 function hydrate(a) {
   let strSeparated = a.match(/\d/g)
   let numOfReturn = 0
@@ -295,8 +245,6 @@ function hydrate(a) {
   strReturn = `${numOfReturn} copo de água`
   return strReturn
 }
-hydrate(strEntry)
-
 
 module.exports = {
   calcArea,
