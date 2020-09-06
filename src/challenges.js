@@ -91,22 +91,23 @@ function fizzBuzz(arraydeentrada) {
 }
 
 // Desafio 9
+stringdeentrada = "quero"
 function encode(stringdeentrada) {
   // seu código aqui
-  stringdeentrada.replace(/a/g,"1")
-  stringdeentrada.replace(/e/g,"2")
-  stringdeentrada.replace(/i/g,"3")
-  stringdeentrada.replace(/o/g,"4")
-  stringdeentrada.replace(/u/g,"5")
+  stringdeentrada = stringdeentrada.replace(/a/g,"1")
+  stringdeentrada = stringdeentrada.replace(/e/g,"2")
+  stringdeentrada = stringdeentrada.replace(/i/g,"3")
+  stringdeentrada = stringdeentrada.replace(/o/g,"4")
+  stringdeentrada = stringdeentrada.replace(/u/g,"5")
   return(stringdeentrada)
 }
 function decode(stringdeentrada) {
   // seu código aqui
-  stringdeentrada.replace(/1/g,"a")
-  stringdeentrada.replace(/2/g,"b")
-  stringdeentrada.replace(/3/g,"c")
-  stringdeentrada.replace(/4/g,"d")
-  stringdeentrada.replace(/5/g,"e")
+  stringdeentrada = stringdeentrada.replace(/1/g,"a")
+  stringdeentrada = stringdeentrada.replace(/2/g,"b")
+  stringdeentrada = stringdeentrada.replace(/3/g,"c")
+  stringdeentrada = stringdeentrada.replace(/4/g,"d")
+  stringdeentrada = stringdeentrada.replace(/5/g,"e")
   return(stringdeentrada)
 }
 
