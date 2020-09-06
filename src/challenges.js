@@ -69,20 +69,20 @@ function catAndMouse(mouse, cat1, cat2) {
   let rato = mouse;
   let gato1 = cat1;
   let gato2 = cat2;
-  let dist_cat1;
-  let dist_cat2;
+  let distCat1;
+  let distCat2;
   let retorno;
-  dist_cat1 = (Math.abs(gato1 - rato));
-  dist_cat2 = (Math.abs(gato2 - rato));
+  distCat1 = (Math.abs(gato1 - rato));
+  distCat2 = (Math.abs(gato2 - rato));
 
-  if (dist_cat1 === dist_cat2) {
-    retorno = "os gatos trombam e o rato foge";
-  }else if(dist_cat1 < dist_cat2){
-      retorno = "cat1";
-  }else{
-      retorno = "cat2";
+  if (distCat1 === distCat2) {
+    retorno = 'os gatos trombam e o rato foge';
+  } else if (distCat1 < distCat2) {
+    retorno = 'cat1';
+  } else {
+    retorno = 'cat2';
   }
-    return retorno;
+  return retorno;
 }
 
 // Desafio 8
