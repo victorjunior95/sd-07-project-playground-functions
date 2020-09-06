@@ -172,35 +172,43 @@ if (listArray.length === 0){
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-
-  let OrinalOrder = numbers
-  let fakeNumber = '(12) 34567-8901'
+  let result = '';
+  let orinalOrder ='';
   let isRepeated = 0;
-  let inAscendingOrder = numbers.sort()
+  
+  if (numbers.length !== 11){
+  return 'Array com tamanho incorreto'
+  }
 
+  for(j in numbers ){
+  orinalOrder += numbers[j]
+  }
+let inAscendingOrder = numbers.sort()
   for (i = 0; i< inAscendingOrder.length; i+=1){
-
     if (inAscendingOrder[i] == inAscendingOrder[i +1] || inAscendingOrder[i] == inAscendingOrder[i -1]){
       isRepeated += 1
     }else if(inAscendingOrder[i +1] === undefined ){
-         // else if( inAscendingOrder[i] == inAscendingOrder[i -1]){
-      //  isRepeated += 1 
-      // }
-      return isRepeated
+      break
     }else{
         isRepeated = 0
      } 
-
-  
-  if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9){
-    return "impossible"
-
-  }
-  
+     if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9){
+      return "não é possível gerar um número de telefone com esses valores"
+    }else{
+      result = orinalOrder.split('')
+    }
 }
 
+let result1 = result.splice(0,0, '(')
+let result2 = result.splice(3,0, ')') 
+let result3 = result.splice(4,0, ' ') 
+let result4 = result.splice(10,0, '-') 
+let final = '';
+for (k in result){
+  final += result[k] 
 }
-// generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
+return final
+}
 
 
 // Desafio 12
