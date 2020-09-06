@@ -131,10 +131,10 @@ function techList(arrayList, name) {
   let arrayTech = [];
   arrayList.sort();
 
-  for (let tech in arrayList) {
+  for (let tech of arrayList) {
     arrayTech.push(
       {
-        tech: arrayList[tech],
+        tech,
         name,
       },
     );
