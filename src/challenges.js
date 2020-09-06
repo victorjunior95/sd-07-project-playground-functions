@@ -19,9 +19,10 @@ function splitSentence(string) {
   return phrase;
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 4 - Concatenação de strings.
+function concatName(arr) {
+  let arrString = arr.join().split(', ');
+  return arrString[arrString.length - 1] + ', ' + arrString[0];
 }
 
 // Desafio 5
