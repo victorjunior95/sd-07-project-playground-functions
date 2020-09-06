@@ -37,19 +37,19 @@ console.log(splitSentence("ola trybe"))
 
 
 
-function splitSent() {
-  var str = "go trybe";
-  var res = str.split(" ");
-  return res;
-}
+//function splitSent() {
+  //var str = "go trybe";
+  //var res = str.split(" ");
+  //return res;
+//}
 
-  console.log(splitSent())
+  //console.log(splitSent())
 
 
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  // seu código aqui  
 }
 
 // Desafio 5
