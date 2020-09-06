@@ -228,10 +228,10 @@ function phoneNumberIteration(a) {
   let coutNumbers = a.reduce(function (allItensArray, itemArray) {
     if (itemArray in allItensArray) {
       allItensArray[itemArray] += 1
-      } else {
+    } else {
       allItensArray[itemArray] = 1
-      }
-      return allItensArray
+    }
+    return allItensArray
   }, {})
   return coutNumbers
 }
@@ -240,7 +240,7 @@ function generatePhoneNumber(a) {
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-    return phoneNumberIteration(a)
+  return phoneNumberIteration(a)
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
