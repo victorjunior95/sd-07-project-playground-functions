@@ -2,7 +2,7 @@
 
 function compareTrue(approval, conclusion) {
 
-    if (approval == true && conclusion == true) {
+    if (approval === true && conclusion === true) {
 
         let happiness = true;
         return happiness;
@@ -28,7 +28,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(setenca) {
 
-    wordsArray = setenca.split(" ");
+    let wordsArray = setenca.split(" ");
     return wordsArray;
 
 }
@@ -93,13 +93,13 @@ function fizzBuzz(numbers2) {
     let arrayFizz = [];
     for (let i = 0; i < numbers2.length; i += 1) {
 
-        if (numbers2[i] % 15 == 0) {
+        if (numbers2[i] % 15 === 0) {
 
             arrayFizz.push("fizzBuzz");
-        } else if (numbers2[i] % 3 == 0) {
+        } else if (numbers2[i] % 3 === 0) {
 
             arrayFizz.push("fizz")
-        } else if (numbers2[i] % 5 == 0) {
+        } else if (numbers2[i] % 5 === 0) {
 
             arrayFizz.push("buzz");
         } else {
@@ -143,8 +143,6 @@ function encode(text) {
     return copy.join("");
 }
 
-console.log(encode("hi there!"));
-
 function decode(text) {
     let copy = [];
 
@@ -174,11 +172,27 @@ function decode(text) {
 
     return copy.join("");
 }
-console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-    // seu código aqui
+function techList(techs, name) {
+
+    let listTechs = [];
+    techs.sort();
+    if (techs.length < 1) {
+
+        return 'Vazio!';
+    }
+    for (let i = 0; i < techs.length; i += 1) {
+
+        let techToLearn = {
+            tech: techs[i],
+            name: `${name}`,
+        }
+
+        listTechs.push(techToLearn);
+    }
+
+    return listTechs;
 }
 
 // Desafio 11
