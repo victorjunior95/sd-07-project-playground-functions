@@ -55,13 +55,13 @@ console.log(splitSentence("ola trybe"))
 //}
 //console.log(concatName(namesArray))
 // A resposta de saida é correta mas, a salida não é string.
-
+// e tambem esta faltando, quando respota já vira um string, um espaço logo da coma. Isso é um requisito do EVALUATOR JOB da trybe. 
 
 // Desafio 4
 //namesArray = ['jesus', 'lucio', 'palli', 'ururi', 'elias', 'hermenegildo']
 function concatName(namesArray) {
   // seu código aqui  
-  let rptaEndFirst = [namesArray[namesArray.length-1], namesArray[0]];
+  let rptaEndFirst = [namesArray[namesArray.length-1]," " + namesArray[0]];
   let rptaString = rptaEndFirst.toString();
   return rptaString;  
 }
