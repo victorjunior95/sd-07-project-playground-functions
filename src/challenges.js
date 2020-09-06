@@ -215,11 +215,7 @@ function hydrate(string) {
       }
     }
   }
-  if (count === 1) {
-    return '1 copo de água';
-  } else {
-    return `${count} copos de água`;
-  }
+  return (count === 1) ? '1 copo de água' : `${count} copos de água`;
 }
 
 module.exports = {
