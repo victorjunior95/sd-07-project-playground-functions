@@ -114,7 +114,7 @@ function catAndMouse(mouse,cat1,cat2) {
 //console.log(result);
 
 // Desafio 8
-let numeros = [2,15,7,9,45]
+let numeros = [2,15,7,9,45];
 let resultado =[];
 function fizzBuzz(n) {
   // seu código aqui
@@ -138,9 +138,9 @@ return resultado;
 //console.log(result);
 
 // Desafio 9
-let texto = "hi there"
-let codificado ="";
-let crypto="";
+//let texto = "hi there"
+//let codificado ="";
+//let crypto="";
 function encode(txt) {
   // seu código aqui
    for (let i in texto){
