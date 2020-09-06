@@ -208,8 +208,30 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = {
+    0: '0',
+    1: '1',
+    2: '2',
+    3: '3',
+    4: '4',
+    5: '5',
+    6: '6',
+    7: '7',
+    8: '8',
+    9: '9'
+  };
+
+  let count = 0;
+
+  for (let char of string) {
+    for (let num in numbers) {
+      if (char === numbers[num]) {
+        count += Number(char);
+      }
+    }
+  }
+  return `${count} copos de água`
 }
 
 module.exports = {
