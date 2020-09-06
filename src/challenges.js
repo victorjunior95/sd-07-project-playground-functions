@@ -119,7 +119,7 @@ function encodeDecode(palavras, vogais) {
   }
   return igual.join('');
 }
-//console.log(encode("hi there!"));
+
 function encode(palavras) {
   let vogais = {
     a: 1,
@@ -163,15 +163,14 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phone) {
-  let tel = phone;
+function testeNumberVazio(tel) {
   let mensagem = '';
-  let count = 0;
-  let telefone = [];
   if (tel.length !== 11) {
     mensagem = 'Array com tamanho incorreto.';
     return mensagem;
   }
+}
+function testeNumber(tel, mensagem, count) {
   for (let i = 0; i < tel.length; i += 1) {
     if (tel[i] < 0 || tel[i] > 9) {
       mensagem = 'não é possível gerar um número de telefone com esses valores';
@@ -187,6 +186,14 @@ function generatePhoneNumber(phone) {
       }
     }
   }
+}
+function generatePhoneNumber(phone) {
+  let tel = phone;
+  let mensagem = '';
+  let count = 0;
+  let telefone = [];
+  testeNumberVazio(tel);
+  testeNumber(tel, mensagem, count);
   for (let k of tel) {
     let format = k;
     telefone.push(format.toString());
