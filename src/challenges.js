@@ -6,7 +6,7 @@ function compareTrue(a, b) {
   let compare = a && b
   return compare
 }
-console.log(compareTrue(first, second))
+compareTrue(first, second)
 
 // Desafio 2
 let baseOut = 10;
@@ -221,7 +221,7 @@ function techList(array, name) {
 techList(ArrayTechsList, nameOut)
 
 // Desafio 11
-let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 10]
+let numbersForPhones = [1, 1, 9, 8, 7, 3, 8, 9, 0, 0, 5]
 function phoneNumberIteration(a) {
   let coutNumbers = a.reduce(function (allItensArray, itemArray) {
     if (itemArray in allItensArray) {
@@ -250,8 +250,12 @@ function generatePhoneNumber(a) {
   let checkReport = phoneNumberIteration(a)
   if (!checkReport) {
     return 'não é possível gerar um número de telefone com esses valores'
+  } else {
+    let phoneAreacode = a.splice(0, 2).join('')
+    let phonePrefix = a.splice(0, 5).join('')
+    let phoneEndNumbers = a.splice(0, 4).join('')
+    return `(${phoneAreacode}) ${phonePrefix}-${phoneEndNumbers}`
   }
-  return 'Telefone'
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
