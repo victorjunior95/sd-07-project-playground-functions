@@ -132,7 +132,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let bc = lineB + lineC;
   let aMenosb = Math.abs(lineA - lineB);
   let aMenosc = Math.abs(lineA - lineC);
-  let bMenosc = Math(lineB - lineC);
+  let bMenosc = Math.abs(lineB - lineC);
   if ( ab < lineC) return false;
     else if (aMenosb > lineC) return false;
   if (bc < lineA) return false;
