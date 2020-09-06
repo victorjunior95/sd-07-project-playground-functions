@@ -136,9 +136,9 @@ function decode(phrase) {
 let decoded = [];
 let result = '';
 
-for ( i = 0; i < phrase.length; i++){
+for ( i = 0; i < phrase.length; i+=1){
   decoded[i] = phrase[i];
-for (let index = 0; index< decoded.length; index++){
+for (let index = 0; index< decoded.length; index+=1){
     if (encryptedLetters[decoded[i]] == undefined){
       result += decoded[i]
       break
@@ -152,8 +152,23 @@ for (let index = 0; index< decoded.length; index++){
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(listArray, name) {
+  
+  let resultOfArray = []
+  listArray.sort()
+
+  for (i in listArray){
+    resultOfArray.push(
+      {
+        tech: listArray[i],
+        name: name
+      })
+  } 
+if (listArray.length === 0){
+  return 'Vazio!'
+}else{
+  return resultOfArray
+}
 }
 
 // Desafio 11
