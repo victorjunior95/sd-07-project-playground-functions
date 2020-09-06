@@ -171,7 +171,7 @@ function generatePhoneNumber(arrayNumbers) {
       }
     } else {
       numberToCompare = arrayNumbers[num];
-      countNumber = 0;
+      countNumber = 1;
     }
   }
 
@@ -197,7 +197,7 @@ function generatePhoneNumber(arrayNumbers) {
   return formattedNumber.join('');
 }
 
-console.log(generatePhoneNumber([0, 1, 6]))
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 2, 7, 3, 9, 3, 4]))
 
 // Desafio 12
 function triangleCheck() {
