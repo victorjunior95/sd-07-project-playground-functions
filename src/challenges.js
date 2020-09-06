@@ -63,11 +63,22 @@ function footballPoints(wins, ties) {
 }
 
 // // Desafio 6
-/* Escreva uma função chamada highestCountque, ao receber uma matriz de números, retorne a quantidade de vezes que o maior deles se repete.
+/* Escreva uma função chamada highestCount que, ao receber uma matriz de números, retorne a quantidade de vezes que o maior deles se repete.
 
-Exemplo: caso o parâmetro de highestCountseja uma matriz com valores [9, 1, 2, 3, 9, 5, 7], uma função deve retornar 2, que é a quantidade de vezes que o número 9(maior número da matriz) se repete. */
-function highestCount() {
-  // seu código aqui
+Exemplo: caso o parâmetro de highestCount seja uma matriz com valores [9, 1, 2, 3, 9, 5, 7], uma função deve retornar 2, que é a quantidade de vezes que o número 9(maior número da matriz) se repete. */
+function highestCount(array) {
+  // organizar em ordem
+  let order = array.sort();
+  // descobrir o maior
+  let highNumber = order[order.length - 1];
+  // quantas vezes se repete
+  let counter = 0;
+  for (i = 0; i < order.length; i +=1) {
+    if (order[i] == highNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
