@@ -104,10 +104,10 @@ function encode(stringdeentrada) {
 function decode(stringdeentrada) {
   // seu código aqui
   stringdeentrada = stringdeentrada.replace(/1/g,"a")
-  stringdeentrada = stringdeentrada.replace(/2/g,"b")
-  stringdeentrada = stringdeentrada.replace(/3/g,"c")
-  stringdeentrada = stringdeentrada.replace(/4/g,"d")
-  stringdeentrada = stringdeentrada.replace(/5/g,"e")
+  stringdeentrada = stringdeentrada.replace(/2/g,"e")
+  stringdeentrada = stringdeentrada.replace(/3/g,"i")
+  stringdeentrada = stringdeentrada.replace(/4/g,"o")
+  stringdeentrada = stringdeentrada.replace(/5/g,"u")
   return(stringdeentrada)
 }
 
