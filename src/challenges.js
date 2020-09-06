@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(valor1,valor2) {
+function compareTrue(valor1, valor2) {
   let a = valor1;
   let b = valor2;
   let resposta = false;
@@ -11,14 +11,14 @@ function compareTrue(valor1,valor2) {
   }
   return resposta;
 }
-compareTrue(false,true);
+compareTrue(false, true);
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let a = base;
   let b = height;
   let area = 0;
-    area = ((a * b) / 2);
+  area = ((a * b) / 2);
   return area;
 }
 
