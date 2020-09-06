@@ -45,7 +45,7 @@ function footballPoints(wins, ties) {
   total = (vitorias * pontosVtoria) + (empates * pontoEmpate);
   return total;
 }
-
+/*
 // Desafio 6
 function highestCount(param) {
   let numeros = param;
@@ -171,6 +171,7 @@ function techList(tech, name) {
   }
   return tec_retorno;
 }
+
 // Desafio 11
 function generatePhoneNumber(param) {
   let phone = param;
@@ -199,7 +200,7 @@ function generatePhoneNumber(param) {
   }
   return retornarphone;
 }
-
+*/
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
