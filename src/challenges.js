@@ -194,7 +194,7 @@ for (let i in vetor) {
       let result = "Array com tamanho incorreto.";
       return result;
     }
-    if(countRepeat.length > 2 || confere != 0) {
+    if(countRepeat.length > 3 || confere != 0) {
       let result1 = "não é possível gerar um número de telefone com esses valores";
       return result1;
 } 
@@ -202,7 +202,7 @@ for (let i in vetor) {
       vetor.splice(3, 0, ')');
       vetor.splice(4, 0, ' ');
       vetor.splice(10, 0, '-');
-      return vetor.join('');
+      return vetor.join("");
 
 }
 

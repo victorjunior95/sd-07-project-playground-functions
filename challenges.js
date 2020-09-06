@@ -2,6 +2,7 @@
 function generatePhoneNumber(vetor) {
 
   let countRepeat = vetor.filter((e, i, a) => a.indexOf(e) !== i);
+  
 
 let confere = 0;
 for (let i in vetor) {
@@ -13,11 +14,10 @@ for (let i in vetor) {
       let result = "Array com tamanho incorreto.";
       return result;
     }
-    if(countRepeat.length > 2 || confere != 0) {
+    if(countRepeat.length > 3 || confere != 0) {
       let result1 = "não é possível gerar um número de telefone com esses valores";
       return result1;
-} 
-      vetor.splice(0, 0, '(');
+}     vetor.splice(0, 0, '(');
       vetor.splice(3, 0, ')');
       vetor.splice(4, 0, ' ');
       vetor.splice(10, 0, '-');
@@ -28,7 +28,7 @@ for (let i in vetor) {
 
 
 
-  console.log(generatePhoneNumber([1, 2, 3, 4, -5, 6, 7, 8, 9, 0, 1]));
+  console.log(generatePhoneNumber([0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5]));
 
 
 
