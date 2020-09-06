@@ -38,7 +38,6 @@ function footballPoints(wins, ties) {
 function highestCount(numbersArray) {
   let counter = 0;
   let highNumber = numbersArray[0];
- 
   for (let i in numbersArray) {
     for (let j in numbersArray) {
       if (numbersArray[j] > highNumber) {
@@ -77,7 +76,7 @@ function fizzBuzz(evenOddArray) {
     if (evenOddArray[i] % 3 === 0 && evenOddArray[i] % 5 === 0) {
       evenOddArray[i] = 'fizzBuzz';
     } else if (evenOddArray[i] % 3 === 0) {
-      evenOddArray[i]= 'fizz';
+      evenOddArray[i] = 'fizz';
     } else if (evenOddArray[i] % 5 === 0) {
       evenOddArray[i] = 'buzz';
     } else {
@@ -121,16 +120,16 @@ function techList(techArray, name) {
 
   if (newTechArray.length === 0) {
     techObject = 'Vazio!';
-  } 
+  }
   for (let i in newTechArray) {
     techObject = {
       tech: newTechArray[i],
-      name: name,
+      name: `${name}`,
     };
     array.push(techObject);
     // array.push(Object.assign({}, techObject));
+    techObject = array;
   }
-  techObject = array;
   return techObject;
 }
 
