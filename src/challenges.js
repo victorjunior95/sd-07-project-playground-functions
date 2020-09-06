@@ -144,15 +144,10 @@ function techList(arrayList, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
-  let errorMessage_1 = 'não é possível gerar um número de telefone com esses valores';
-  let errorMessage_2 = 'Array com tamanho incorreto.';
-
-  // tamanho do array
   if (arrayNumbers.length !== 11) {
-    return errorMessage_2;
+    return 'Array com tamanho incorreto.';
   }
 
-  // repetição
   let comparisonArray = arrayNumbers.slice();
   comparisonArray.sort();
   let numberToCompare = comparisonArray[0];
@@ -163,7 +158,7 @@ function generatePhoneNumber(arrayNumbers) {
       countNumber += 1;
 
       if (countNumber >= 3) {
-        return errorMessage_1;
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     } else {
       numberToCompare = comparisonArray[num];
@@ -174,12 +169,10 @@ function generatePhoneNumber(arrayNumbers) {
   let formattedNumber = [];
 
   for (let index in arrayNumbers) {
-    // menor que 0 ou maior que 9
     if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
-      return errorMessage_1;
+      return 'não é possível gerar um número de telefone com esses valores';
     }
 
-    // formatação dos números
     if (index === '0') {
       formattedNumber.push('(');
     } else if (index === '2') {
