@@ -94,34 +94,32 @@ function avaliadorDeContagem(listaDeNumeros) {
   if (listaDeNumeros.length !== 11) return false;
   return true
 }
-// let numero=[0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]
-// console.log(avaliadorDeContagem(numero));
 
 function numerosValidos(listaDeNumeros) {
-  let contagem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   for (let i = 0; i < listaDeNumeros.length; i += 1) {
     if ((listaDeNumeros[i] > 9) || (listaDeNumeros[i] < 0)) return false
-    contagem[listaDeNumeros[i]] += 1;
-    if (contagem[listaDeNumeros[i]] >= 3) return false;
-    
   }
   return true
 }
-// let numero=[0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]
-// console.log(avaliadorDeContagem(numero));
-// Desafio 11
+function numeroRepetido(listaDeNumeros) {
+  let contagem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  for (let i = 0; i < listaDeNumeros.length; i += 1) {
+    contagem[listaDeNumeros[i]] += 1;
+    if (contagem[listaDeNumeros[i]] > 2) return false;
+  }
+}
+
 function generatePhoneNumber(numero) {
   let numeroDeTelefone = `(${numero[0]}${numero[1]}) `;
   if (avaliadorDeContagem(numero) === false) return 'Array com tamanho incorreto.';
   else if (numerosValidos(numero) === false) return 'não é possível gerar um número de telefone com esses valores';
+  else if (numeroRepetido(numero) === false) return 'não é possível gerar um número de telefone com esses valores';
   for (let i = 2; i < numero.length; i += 1) {
     numeroDeTelefone = `${numeroDeTelefone}${numero[i]}`;
     if (i === 6) numeroDeTelefone = `${numeroDeTelefone}-`
   }
   return numeroDeTelefone;
 }
-let numero=[0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]
-console.log(generatePhoneNumber(numero));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
