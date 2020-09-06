@@ -26,12 +26,12 @@ function calcArea(base, height) {
 function splitSentence(param) {
   let string = param;
   let retorno = string.split('');
-  return retorno; 
+  return retorno;
 }
 
 // Desafio 4
 function concatName(param) {
-  let ultMaisprimeiro = param[param.length -1] +', '+ param[0];
+  let ultMaisprimeiro = param[param.length -1] + ', ' + param[0];
   return ultMaisprimeiro;
 }
 
@@ -42,7 +42,7 @@ function footballPoints(wins, ties) {
   let pontosVitoria = 3;
   let pontoEmpate = 1;
   let total = 0;
-  total = ((vitorias * pontosVtoria) + (empates * pontoEmpate));
+  total = ((vitorias * pontosVitoria) + (empates * pontoEmpate));
   return total;
 }
 /*
