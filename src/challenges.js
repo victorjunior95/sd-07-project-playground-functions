@@ -53,11 +53,9 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let firstCat = mouse - cat1;
-  let secondCat =  mouse - cat2;
-  if (firstCat < secondCat) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } else if(firstCat > secondCat){
+  } else if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
     return 'cat2'
   } else {
     return "Os gatos trombam e o rato foge";
@@ -67,19 +65,20 @@ console.log(catAndMouse(12,4,0));
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
-  let tamanhoArray = arrayDeNumeros.length
-  for (i = 0; i < tamanhoArray; i += 1){
+  let mensagemFinal = []
+  for (i = 0; i < arrayDeNumeros.length; i += 1){
     if (arrayDeNumeros[i] % 3 === 0 && arrayDeNumeros[i] % 5 == 0){
-      console.log('fizzbug');
+      mensagem = 'fizzbug';
     } else if (arrayDeNumeros[i] % 5 == 0){
-      console.log('buzz');
+      mensagem = 'buzz';
     } else if (arrayDeNumeros[i] % 3 == 0){
-      console.log('fizz');
+      mensagem = 'fizz';
     } else {
-      console.log('bug!')
-    }
-  }  
+      mensagem = 'bug!'
+    } mensagemFinal.push(mensagem)
+  } return mensagemFinal
 }
+
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
