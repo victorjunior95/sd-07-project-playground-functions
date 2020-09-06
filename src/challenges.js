@@ -156,8 +156,38 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function sum(a, b) {
+  return a + b;
+}
+function absolut(a, b) {
+  return Math.abs(a - b);
+}
+
+function checkSumTriangule(lineA, lineB, lineC) {
+  if (sum(lineA, lineB) > lineC) {
+      if (sum(lineA, lineC) > lineB) {
+          if (sum(lineB, lineC) > lineA) {
+              return true;
+          }
+      }
+  } else {
+      return false;
+  }
+}
+function checkAbsolutTriangule(lineA, lineB, lineC) {
+  if (absolut(lineA, lineB) < lineC) {
+      if (absolut(lineA, lineC) < lineB) {
+          if (absolut(lineB, lineC) < lineA){
+              return true;
+          }
+      }
+  } else {
+      return false;
+  }
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let result = (checkSumTriangule(lineA, lineB, lineC) === true && checkAbsolutTriangule(lineA, lineB, lineC));
+  return result;
 }
 
 // Desafio 13
