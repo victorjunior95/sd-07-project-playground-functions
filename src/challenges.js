@@ -235,14 +235,17 @@ function numbersRepeated(a, b) {
 let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
 function generatePhoneNumber(a) {
   // seu código aqui
-  if (a.length !== 11) return 'Array com tamanho incorreto.'
-  for (let i = 0; i < a.length; i += 1) {
-    if (a[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    } else {
-      let searching = a[i]
-      let external = numbersRepeated(a, searching)
-      if (external.length >= 3) return external
+  if (a.length !== 11){
+    return 'Array com tamanho incorreto.'
+  } else {
+    for (let i = 0; i < a.length; i += 1) {
+      if (a[i] < 1 || a[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores'
+      } else {
+        let searching = a[i]
+        let external = numbersRepeated(a, searching)
+        if (external.length >= 3) return external
+      }
     }
   }
   // Declaração em template literal
