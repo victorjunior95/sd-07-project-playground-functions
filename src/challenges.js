@@ -37,20 +37,37 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbersArray) {
-  let counter = 0;
-  let highNumber = numbersArray[0];
-  for (let i in numbersArray) {
-    if (numbersArray[i] > highNumber) {
-      highNumber = numbersArray[i];
+  // let counter = 0;
+  // let highNumber = numbersArray[0];
+  // for (let i in numbersArray) {
+  //   if (numbersArray[i] > highNumber) {
+  //     highNumber = numbersArray[i];
+  //   }
+  // }
+
+  // for (let j in numbersArray) {
+  //   if (numbersArray[j] === highNumber) {
+  //     counter += 1;
+  //   }
+  // }
+  // return counter;
+  function highNumber() {
+    let highNumber = numbersArray[0];
+    for (let i in numbersArray) {
+      if (numbersArray[i] > highNumber) {
+        highNumber = numbersArray[i];
+      }
     }
+    return highNumber;  
   }
 
+  let counter = 0;
   for (let j in numbersArray) {
-    if (numbersArray[j] === highNumber) {
+    if (numbersArray[j] === highNumber()) {
       counter += 1;
     }
   }
-  return counter;
+  return counter;   
 }
 
 // Desafio 7
@@ -78,17 +95,14 @@ function fizzBuzz(evenOddArray) {
   for (let i in evenOddArray) {
     if (evenOddArray[i] % 3 === 0 && evenOddArray[i] % 5 === 0) {
       divisible = 'fizzBuzz';
-      array.push(divisible);
     } else if (evenOddArray[i] % 3 === 0) {
-      divisible = 'fizz';
-      array.push(divisible);
+      divisible = 'fizz'; 
     } else if (evenOddArray[i] % 5 === 0) {
       divisible = 'buzz';
-      array.push(divisible);
     } else {
       divisible = 'bug!';
-      array.push(divisible);
     }
+    array.push(divisible);
   }
 
   return array;
@@ -96,66 +110,55 @@ function fizzBuzz(evenOddArray) {
 
 // Desafio 9
 function encode(string1) {
-  let encodeString = '';
-  let letter;
-  for (let i in string1) {
-    if (string1[i] === 'a') {
-      letter = '1';
-      encodeString += letter;
-    } else if (string1[i] === 'e') {
-      letter = '2';
-      encodeString += letter;
-    } else if (string1[i] === 'i') {
-      letter = '3';
-      encodeString += letter;
-    } else if (string1[i] === 'o') {
-      letter = '4';
-      encodeString += letter;
-    } else if (string1[i] === 'u') {
-      letter = '5';
-      encodeString += letter;
-    } else {
-      letter = string1[i];
-      encodeString += letter;
-    }
-  }
+  //Objetc destructing: inicializando um objeto
+  let letters = {'a':'1', 'e':'2', 'i':'3', 'o':'4', 'u':'5'}; 
+  //Método .replace() com uma 'regular expression', permitindo encontrar qlqr uma das alternativas(|), de maneira global(g), que será substrituído por meio de uma arrow function que chama o objeto criado acima
+  let encodeString = string1.replace(/a|e|i|o|u/g, match => letters[match]);
   return encodeString;
 }
 
 function decode(string2) {
-  let decodeString = '';
-  let letter;
-  for (let i in string2) {
-    if (string2[i] === '1') {
-      letter = 'a';
-      decodeString += letter;
-    } else if (string2[i] === '2') {
-      letter = 'e';
-      decodeString += letter;
-    } else if (string2[i] === '3') {
-      letter = 'i';
-      decodeString += letter;
-    } else if (string2[i] === '4') {
-      letter = 'o';
-      decodeString += letter;
-    } else if (string2[i] === '5') {
-      letter = 'u';
-      decodeString += letter;
-    } else {
-      letter = string2[i];
-      decodeString += letter;
-    }
-  }
+  let numbers = {
+    '1':'a', 
+    '2':'e', 
+    '3':'i', 
+    '4':'o', 
+    '5':'u'
+  };
+  let decodeString = string2.replace(/1|2|3|4|5/g, function(matched){
+    return numbers[matched];
+  });
   return decodeString;
+  // for (let i in string2) {
+  //   if (string2[i] === '1') {
+  //     letter = 'a';
+  //     decodeString += letter;
+  //   } else if (string2[i] === '2') {
+  //     letter = 'e';
+  //     decodeString += letter;
+  //   } else if (string2[i] === '3') {
+  //     letter = 'i';
+  //     decodeString += letter;
+  //   } else if (string2[i] === '4') {
+  //     letter = 'o';
+  //     decodeString += letter;
+  //   } else if (string2[i] === '5') {
+  //     letter = 'u';
+  //     decodeString += letter;
+  //   } else {
+  //     letter = string2[i];
+  //     decodeString += letter;
+  //   }
+  // }
 }
 
 // Desafio 10
 function techList(techArray, name) {
-  let newTechArray = techArray.sort();
-  let techObject = {};
-  for (let i in techArray){
+  // let newTechArray = techArray.sort();
+  // let techObject = {};
+  // for (let i in techArray){
     
-  }
+  // }
 }
 
 // Desafio 11
