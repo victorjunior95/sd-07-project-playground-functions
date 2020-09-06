@@ -157,30 +157,27 @@ function decode(str) {
   return newStr.join("");
 }
 
-// Desafio 10
-function techList(array, name) {
+ // Desafio 10
+ function techList(array, name) {
   // seu código aqui
   // Criando o objeto
   let techObj = {
-    tech: "NomeTech",
+    tech: [],
     name: name
   }
   //Criando uma variável do tipo do objeto
-  let newArray;
+  let newArray = [];
   // Ordenando o array recebido ou retornando o valor vazio
-  if (array){
+  if (array.length != 0) {
     array = array.sort();
-  }
-  else {
-    return 'Vazio!';
-  }     
-  // Carregando o array com os parametros recebidos
+    // Carregando o array com os parametros recebidos
     for(let i = 0; i < array.length; i += 1){
-     //newArray.push({techObj.tech = array[i], techObj.name = name});
      newArray.push({tech: array[i], name: name});
     }
-  //Retornando o array de
-  return newArray;
+    //Retornando o array de
+    return newArray;
+  }
+  return "Vazio!";
 }
 
 // Desafio 11
