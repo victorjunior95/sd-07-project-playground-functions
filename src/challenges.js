@@ -9,7 +9,7 @@ function compareTrue(valueA, valueB) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2 
+  return (base * height)/2
 }
 
 // // Desafio 3
@@ -48,7 +48,7 @@ function highestCount(numbers) {
       return CounterRepetitions
     }else{
         CounterRepetitions = 0
-      } 
+      }
   }
 }
 // Desafio 7
@@ -107,9 +107,9 @@ function encode(phrase) {
 let encoded = [];
 let result = '';
 
-for ( i = 0; i < phrase.length; i++){
+for ( i = 0; i < phrase.length; i+=1){
   encoded[i] = phrase[i];
-for (let index = 0; index< encoded.length; index++){
+for (let index = 0; index< encoded.length; index+=1){
     if (encryptedLetters[encoded[i]] == undefined){
       result += encoded[i]
       break
@@ -117,7 +117,7 @@ for (let index = 0; index< encoded.length; index++){
       result += encryptedLetters[encoded[i]]
       break
     }
-  } 
+  }
 }
   return result
 }
@@ -191,7 +191,7 @@ let inAscendingOrder = numbers.sort()
       break
     }else{
         isRepeated = 0
-      } 
+      }
       if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9){
       return "não é possível gerar um número de telefone com esses valores"
     }else{
