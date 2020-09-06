@@ -132,32 +132,31 @@ function repeatNumber(array) {
     let number = array1[i];
     if (number === array1[i + 1]) {
       if (array1[i + 1] === array1[i + 2]) {
-            strike += 2;
-          }
+        strike += 2;
+      }
     }
   }
   return strike;
 }
 function negativeNumber(array) {
   let result = 0;
-    for (let i in array) {
-    if (array[i] < 0) {
-          result += 1;
-        }
-      }
-    return result;
+  for (let i in array) {
+      if (array[i] < 0) {
+      result += 1;
+    }
+    }
+  return result;
 }
 function biggerThanNine(array) {
-    let check = 0;
-    for (let i in array) {
-        if (array[i] > 9) {
+  let check = 0;
+  for (let i in array) {
+      if (array[i] > 9) {
           check += 1;
         }
-      }
-      return check;
-  }
-  function generatePhoneNumber(array) {
-
+    }
+  return check;
+}
+function generatePhoneNumber(array) {
   if (array.length !== 11 || array.length === 0) {
           return "Array com tamanho incorreto.";
   }
