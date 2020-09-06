@@ -232,16 +232,15 @@ function phoneNumberIteration(a) {
       allItensArray[itemArray] = 1
       }
       return allItensArray
-}, {})
-return coutNumbers
+  }, {})
+  return coutNumbers
 }
 function generatePhoneNumber(a) {
   // seu código aqui
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
-  } else {
-    return phoneNumberIteration(a)
   }
+    return phoneNumberIteration(a)
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
