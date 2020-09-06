@@ -198,7 +198,6 @@ let inAscendingOrder = numbers.sort()
       result = orinalOrder.split('')
     }
 }
-
 let result1 = result.splice(0,0, '(')
 let result2 = result.splice(3,0, ')') 
 let result3 = result.splice(4,0, ' ') 
