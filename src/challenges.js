@@ -113,10 +113,9 @@ function generatePhoneNumber(numero) {
   let numeroDeTelefone = `(${numero[0]}${numero[1]}) `;
   if (avaliadorDeContagem(numero) === false) return 'Array com tamanho incorreto.';
   else if ((numerosValidos(numero) === false) ||
-    ((numeroRepetido(numero) === false))) { 
-      return 'não é possível gerar um número de telefone com esses valores'; 
+    ((numeroRepetido(numero) === false))) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
- 
   for (let i = 2; i < numero.length; i += 1) {
     numeroDeTelefone = `${numeroDeTelefone}${numero[i]}`;
     if (i === 6) numeroDeTelefone = `${numeroDeTelefone}-`
