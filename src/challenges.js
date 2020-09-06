@@ -153,7 +153,7 @@ function generatePhoneNumber(arrayNumbers) {
   let errorMessage_2 = 'Array com tamanho incorreto.';
 
   // tamanho do array
-  if (arrayNumbers.length > 11) {
+  if (arrayNumbers.length !== 11) {
     return errorMessage_2;
   }
 
@@ -196,6 +196,8 @@ function generatePhoneNumber(arrayNumbers) {
   }
   return formattedNumber.join('');
 }
+
+console.log(generatePhoneNumber([0, 1, 6]))
 
 // Desafio 12
 function triangleCheck() {
