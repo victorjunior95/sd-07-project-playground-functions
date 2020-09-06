@@ -223,7 +223,7 @@ function techList(array, name) {
 techList(ArrayTechsList, nameOut)
 
 // Desafio 11
-let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
+let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 10]
 function phoneNumberIteration(a) {
   let coutNumbers = a.reduce(function (allItensArray, itemArray) {
     if (itemArray in allItensArray) {
@@ -241,7 +241,7 @@ function phoneNumberIteration(a) {
   }
   let filterNumbersInKeys = Object.keys(coutNumbers).filter(checkKeys).length
   let filterNumbersInValues = Object.values(coutNumbers).filter(checkValues).length
-  let allCheck = !filterNumbersInKeys && !filterNumbersInValues ? true : false
+  let allCheck = !filterNumbersInKeys && !filterNumbersInValues
   return allCheck
 }
 function generatePhoneNumber(a) {
@@ -249,7 +249,11 @@ function generatePhoneNumber(a) {
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  return phoneNumberIteration(a)
+  let checkReport = phoneNumberIteration(a)
+  if (!checkReport) {
+    return 'não é possível gerar um número de telefone com esses valores'
+  }
+  return 'Telefone'
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
