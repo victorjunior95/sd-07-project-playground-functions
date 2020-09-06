@@ -170,7 +170,9 @@ function testeNumberVazio(tel) {
   }
   return mensagem;
 }
-function testeNumber(tel, mensagem, count) {
+function testeNumber(tel) {
+  let mensagem = '';
+  let count = 0;
   for (let i = 0; i < tel.length; i += 1) {
     if (tel[i] < 0 || tel[i] > 9) {
       mensagem = 'não é possível gerar um número de telefone com esses valores';
@@ -188,11 +190,9 @@ function testeNumber(tel, mensagem, count) {
 }
 function generatePhoneNumber(phone) {
   let tel = phone;
-  let mensagem = '';
-  let count = 0;
   let telefone = [];
   testeNumberVazio(tel);
-  testeNumber(tel, mensagem, count);
+  testeNumber(tel);
   for (let k of tel) {
     let format = k;
     telefone.push(format.toString());
