@@ -135,10 +135,12 @@ function menorabs(lineA, lineB, lineC) {
   if (Math.abs(lineA - lineC) > lineB) return false;
   return true;
 }
+let a = 10, b=14, c =8;
+console.log(triangleCheck(a,b,c));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (menor(lineA, lineB, lineC)) return false;
-  if (menorabs(lineA, lineB, lineC)) return false;
+  if (menor(lineA, lineB, lineC) === false) return false;
+  if (menorabs(lineA, lineB, lineC) === false) return false;
   return true;
 }
 
