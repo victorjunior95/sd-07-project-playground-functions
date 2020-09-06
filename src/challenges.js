@@ -223,7 +223,7 @@ function techList(array, name) {
 techList(ArrayTechsList, nameOut)
 
 // Desafio 11
-let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 1]
+let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
 function phoneNumberIteration(a) {
   let coutNumbers = a.reduce(function (allItensArray, itemArray) {
     if (itemArray in allItensArray) {
@@ -233,7 +233,16 @@ function phoneNumberIteration(a) {
     }
     return allItensArray
   }, {})
-  return coutNumbers
+  function checkKeys(value) {
+    return value > 9
+  }
+  function checkValues(value) {
+    return value > 2;
+  }
+  let filterNumbersInKeys = Object.keys(coutNumbers).filter(checkKeys).length
+  let filterNumbersInValues = Object.values(coutNumbers).filter(checkValues).length
+  let allCheck = !filterNumbersInKeys && !filterNumbersInValues ? true : false
+  return allCheck
 }
 function generatePhoneNumber(a) {
   // seu código aqui
