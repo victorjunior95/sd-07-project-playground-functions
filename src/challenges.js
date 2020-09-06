@@ -183,6 +183,9 @@ function techList(vetor, name) {
 function generatePhoneNumber(vetor) {
   let countRepeat = vetor.filter((e, i, a) => a.indexOf(e) !== i);
   let contagemReal = 0
+  countRepeat.sort(function(a, b) {
+    return a - b;
+  });
   for(let i = 0; i < countRepeat.length; i += 1){
     if(countRepeat[i] === countRepeat[i+1] || countRepeat[i] === countRepeat[i+2]){
       contagemReal = 3;    
@@ -206,6 +209,7 @@ function generatePhoneNumber(vetor) {
         vetor.splice(4, 0, ' ');
         vetor.splice(10, 0, '-');
         return vetor.join('');
+  
 }  
   
 // Desafio 12

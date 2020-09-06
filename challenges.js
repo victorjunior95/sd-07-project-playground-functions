@@ -2,12 +2,14 @@
 function generatePhoneNumber(vetor) {
 let countRepeat = vetor.filter((e, i, a) => a.indexOf(e) !== i);
 let contagemReal = 0
+countRepeat.sort(function(a, b) {
+  return a - b;
+});
 for(let i = 0; i < countRepeat.length; i += 1){
   if(countRepeat[i] === countRepeat[i+1] || countRepeat[i] === countRepeat[i+2]){
     contagemReal = 3;    
   }
 }
-// return countRepeat;
 let confere = 0;
 for (let i in vetor) {
     if (vetor[i] >  9 || vetor[i] < 0){
@@ -32,7 +34,7 @@ for (let i in vetor) {
 
 
 
-  console.log(generatePhoneNumber([0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5]));
+  console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
 
 
 
