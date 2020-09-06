@@ -224,32 +224,36 @@ techList(ArrayTechsList, nameOut)
 
 // Desafio 11
 let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
-function checkNumbers(a) {
-  let countRepeated = 0;
-  for (let i = 0; i < a.length; i += 1) {
-    let searching = a[i]
-    for (let j = 0; j < a.length; j += 1) {
-      if (a[j] === searching) countRepeated += 1
-      if (countRepeated >= 3) return 'não é possível gerar um número de telefone com esses valores'
-    }
-  countRepeated = 0
-  }
-  return countRepeated
-}
+//let numbersForPhones = [1, 9, 5, 5, 6, 6, 7, 7, 8, 8, 9]
 function generatePhoneNumber(a) {
   // seu código aqui
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
+  } else {
+    for (let i = 0; i < a.length; i += 1) {
+      if (a[i] < 0 || a[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores'
+      }
+    }
   }
-  for (let i = 0; i < a.length; i += 1) {
-    if (a[i] < 0 || a[i] > 9) {
+  let sortNumbers = a.sort()
+  let equalNumber = 0;
+  let checkRepeatCount = 0;
+  for (let i = 0; i < sortNumbers.length; i += 1) {
+    if (checkRepeatCount < 3){
+      if (equalNumber !== sortNumbers[i]) {
+        equalNumber = sortNumbers[i]
+        checkRepeatCount = 1
+      } else if (equalNumber === sortNumbers[i]) {
+        checkRepeatCount += 1;
+      }
+    }else {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  let checkRepeat = checkNumbers(a)
   // Declaração em template literal
   let phoneComplete = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
-  return checkRepeat < 2 ? phoneComplete : checkRepeat
+  return phoneComplete
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
