@@ -82,7 +82,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzzBasic(num) {
   let palavra = '';
-  console.log(num);
   if (num % 3 === 0) {
     palavra = 'fizz';
   } else if (num % 5 === 0) {
