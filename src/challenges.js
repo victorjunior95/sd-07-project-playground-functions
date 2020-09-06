@@ -140,8 +140,8 @@ function repeatNumber(array) {
 }
 function negativeAndBiggerThanNineNumber(array) {
   let result = 0;
-    for (let i in array) {
-    if (array[i] < 0 || array[i] > 9 ) {
+  for (let i in array) {
+      if (array[i] < 0 || array[i] > 9) {
       result += 1
     }
     }
@@ -152,7 +152,7 @@ function generatePhoneNumber(array) {
   if (array.length !== 11 || array.length === 0) {
     return 'Array com tamanho incorreto.';
   }
-  if (repeatNumber(array) >= 3 || negativeAndBiggerThanNineNumber(array) >=1) {
+  if (repeatNumber(array) >= 3 || negativeAndBiggerThanNineNumber(array) >= 1) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   string = array.join('');
