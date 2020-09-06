@@ -225,14 +225,13 @@ techList(ArrayTechsList, nameOut)
 // Desafio 11
 let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 1]
 function phoneNumberIteration(a) {
-  let coutNumbers = a.reduce(function (allItensArray, itemArray) { 
+  let coutNumbers = a.reduce(function (allItensArray, itemArray) {
     if (itemArray in allItensArray) {
-    allItensArray[itemArray] += 1
-    }
-    else {
-    allItensArray[itemArray] = 1
-    }
-    return allItensArray
+      allItensArray[itemArray] += 1
+      } else {
+      allItensArray[itemArray] = 1
+      }
+      return allItensArray
 }, {})
 return coutNumbers
 }
@@ -243,38 +242,6 @@ function generatePhoneNumber(a) {
   } else {
     return phoneNumberIteration(a)
   }
-
-/*
-  for (let i = 0; i < aSorted.length; i += 1) {
-    if (refer.length === 0) {
-      refer.push(aSorted[i])
-      reapetCount = 1
-    } else if (refer[0] !== aSorted[i]) {
-      refer.shift()
-      refer.push(aSorted[i])
-      reapetCount = 1
-    } else {
-      reapetCount += 1
-    }
-    if (reapetCount === 3) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-  }
-  return refer
-  
-  if (a.length !== 11) return 'Array com tamanho incorreto.'
-  for (let i = 0; i < a.length; i += 1) {
-    if (a[i] < 0 || a[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-  }
-  //let countRepeated = external
-  for (let i = 0; i < a.length; i += 1) {
-    let searching = a[i]
-    let external = numbersRepeated(a, searching)
-    if (external.length >= 3) return external
-  }
-  */
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
