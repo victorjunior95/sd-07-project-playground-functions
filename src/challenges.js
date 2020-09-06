@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4 - Concatenação de strings.
 function concatName(arr) {
-  let arrString = arr.split(', ');
+  let arrString = arr.join(', ').split(', ');
   return arrString[arrString.length - 1] + ', ' + arrString[0];
 }
 
@@ -76,9 +76,32 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = string.split('');
+  for (let i in newString) {
+    
+    switch(newString[i]) {
+      case 'a':
+        newString[i] = '1';
+        break;
+      case 'e':
+        newString[i] = '2';
+        break;
+      case 'i':
+        newString[i] = '3';
+        break;
+      case 'o':
+        newString[i] = '4';
+        break;
+      case 'u':
+        newString[i] = '5';
+        break;
+    }
+  }
+
+  return newString.join('');
 }
+
 function decode() {
   // seu código aqui
 }
