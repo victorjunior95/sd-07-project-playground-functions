@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
     resCat1 = cat1 - mouse;
     resCat2 = cat2 - mouse;
   }
-  if(mouse > cat1 && mouse < cat2) {
+  if (mouse > cat1 && mouse < cat2) {
     resCat1 = mouse - cat1;
     resCat2 = cat2 - mouse;
   }
@@ -78,8 +78,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(param) {
+  let saida = [];
+  function testaRetorno(numero) {
+    let retorno;
+    if (numero % 3 === 0 && numero % 5 === 0) {
+      retorno = 'fizzBuzz';
+    } else if (numero % 5 === 0) {
+      retorno = 'buzz';
+    } else if (numero % 3 === 0) {
+      retorno = 'fizz';
+    } else {
+      retorno = 'bug!';
+    }
+    return retorno;
+  }
+  for (let index = 0; index < param.length; index += 1) {
+    saida[index] = testaRetorno(param[index]);
+  }
+  return saida;
 }
 
 // Desafio 9
