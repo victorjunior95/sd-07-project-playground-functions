@@ -203,10 +203,14 @@ function generatePhoneNumber(a) {
   if (!checkReport) {
     return 'não é possível gerar um número de telefone com esses valores'
   }
+  /*
   let phoneAreacode = a.splice(0, 2).join('')
   let phonePrefix = a.splice(0, 5).join('')
   let phoneEndNumbers = a.splice(0, 4).join('')
   return `(${phoneAreacode}) ${phonePrefix}-${phoneEndNumbers}`
+  */
+  let phoneComplete = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
+  return phoneComplete
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
