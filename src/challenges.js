@@ -36,7 +36,7 @@ function highestCount(param) {
   let maior = null;
   let contador = 0;
   for (let index = 0; index < param.length; index += 1) {
-    if (maior < param[index]) {
+    if (maior <= param[index]) {
       maior = param[index];
     }
   }
