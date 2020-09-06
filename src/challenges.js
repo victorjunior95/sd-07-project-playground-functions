@@ -223,21 +223,34 @@ function techList(array, name) {
 techList(ArrayTechsList, nameOut)
 
 // Desafio 11
-let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 10]
+let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 1]
 function generatePhoneNumber(a) {
   // seu código aqui
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
   let aSorted = a.sort()
-  let refer = 0
+  let refer = []
   let reapetCount = 0
   for (let i = 0; i < aSorted.length; i += 1) {
     if (aSorted[i] < 0 || aSorted[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
+    if (refer.length === 0) {
+      refer.push(aSorted[i])
+      reapetCount = 1
+    } else if (refer[0] !== aSorted[i]){
+      refer.shift()
+      refer.push(aSorted[i])
+      reapetCount = 1
+    } else {
+      reapetCount += 1
+    }
+    if (reapetCount === 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
   }
-  return 'teste'
+  return refer
   /*
   if (a.length !== 11) return 'Array com tamanho incorreto.'
   for (let i = 0; i < a.length; i += 1) {
