@@ -174,6 +174,16 @@ function techList(array, name) {
 
 // Desafio 11
 let numbersForPhones = [1, 1, 9, 8, 7, 3, 8, 9, 0, 0, 5]
+
+function checkKeys(value) {
+  if (value < 0 || value > 9) {
+    return true
+  }
+  return false
+}
+function checkValues(value) {
+  return value > 2;
+}
 function phoneNumberIteration(a) {
   let coutNumbers = a.reduce(function (allItensArray, itemArray) {
     if (itemArray in allItensArray) {
@@ -183,15 +193,6 @@ function phoneNumberIteration(a) {
     }
     return allItensArray
   }, {})
-  function checkKeys(value) {
-    if (value < 0 || value > 9) {
-      return true
-    }
-    return false
-  }
-  function checkValues(value) {
-    return value > 2;
-  }
   let filterNumbersInKeys = Object.keys(coutNumbers).filter(checkKeys).length
   let filterNumbersInValues = Object.values(coutNumbers).filter(checkValues).length
   let allCheck = !filterNumbersInKeys && !filterNumbersInValues
