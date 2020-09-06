@@ -136,7 +136,7 @@ function techList(array, name) {
 function repeatNumber(array) {
   let arrayCopy = array.slice();
   let repeats = 1;
-  let arrayCopy = arrayCopy.sort();
+  arrayCopy = arrayCopy.sort();
   for (let i = 0; i < arrayCopy.length; i += 1) {
     if (arrayCopy[i] === arrayCopy[i + 1] && arrayCopy[i] === arrayCopy[i + 2]) {
       repeats += 2;
