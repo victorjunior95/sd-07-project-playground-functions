@@ -215,23 +215,22 @@ function hydrate(bebidas) {
   let num = drink.match(reg);
   if (num === null) {
     num = [0];
-  } else {
-    for (let i of num) {
-      if (parseInt(i, 10) > 0 && parseInt(i, 10) < 9) {
-        count += parseInt(i, 10);
-      }
-    }
-    if (count === 0) {
-      result = 'Não bebeu nada!';
-    } else if (count > 1) {
-      result = `${count} copos de água`;
-    } else {
-      result = `${count} copo de água`;
-    }
-    return result;
   }
+  for (let i of num) {
+    if (parseInt(i, 10) > 0 && parseInt(i, 10) < 9) {
+      count += parseInt(i, 10);
+    }
+  }
+  if (count === 0) {
+    result = 'Não bebeu nada!';
+  } else if (count > 1) {
+    result = `${count} copos de água`;
+  } else {
+    result = `${count} copo de água`;
+  }
+  return result;
 }
-console.log(hydrate("cachaça, cervejas e copo de vinho"))
+
 module.exports = {
   calcArea,
   catAndMouse,
