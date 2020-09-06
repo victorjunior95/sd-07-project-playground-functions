@@ -107,7 +107,7 @@ function encodeDecode(palavras, vogais) {
     for (let key in vogais) {
       if (key === igual[i]) {
         igual[i] = vogais[key];
-       }
+      }
     }
   }
   return igual.join('');
