@@ -67,14 +67,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-f// Desafio 8
-function doubleCheck (array) {
+function doubleCheck (array){
   let match = 0;
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       match += 1;
     }
-    }
+  }
   return match;
 }
 function fizzBuzz(array) {
@@ -138,10 +137,10 @@ function repeatNumber(array) {
   let arrayCopy = array.slice();
   let repeats = 1;
   let arrayCopy = arrayCopy.sort();
-  for (let i = 0; i < arrayCopy.length; i +=1) {
-    if (arrayCopy[i] === arrayCopy[i + 1] && arrayCopy[i] === arrayCopy[i + 2] ) {
+  for (let i = 0; i < arrayCopy.length; i += 1) {
+    if (arrayCopy[i] === arrayCopy[i + 1] && arrayCopy[i] === arrayCopy[i + 2]) {
       repeats += 2;
-      }
+    }
   }
   return repeats;
 }
@@ -149,8 +148,8 @@ function negativeAndBiggerThanNineNumber(array) {
   let result = 0;
   for (let i in array) {
     if (array[i] < 0 || array[i] > 9) {
-        result += 1
-      }
+      result += 1
+    }
   }
   return result;
 }
