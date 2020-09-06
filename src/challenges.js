@@ -93,10 +93,14 @@ function catAndMouse(mouse,cat1,cat2) {
   }else if(cat1>mouse && mouse>cat2){ // rato esta no meio. Entre gato 1 e o gato 2.
     if((cat1-mouse)>(mouse-cat2)){ // se a distancia entre o gato 1 e o rato for maior que a distancia entre o rato e gato2
         return "cat2"; // retorna gato 2
-    }      
+    } else{
+      return "os gatos trombam e o rato foge"; 
+    }     
   }else if(cat2>mouse && mouse>cat1){ // rato esta no meio. Entre gato 2 e o gato 1.
       if((cat2-mouse)>(mouse-cat1)){ // se a distancia entre o gato 2 e o rato for maior que a distancia entre o rato e gato1
           return "cat1"; // retorna gato 1
+      }else{
+          return"os gatos trombam e o rato foge";
       }       
   
   }else if(cat1>cat2 && cat2>mouse){ // gato 1 está acima do gato 2. Gato 2 acima do rato
@@ -110,7 +114,7 @@ function catAndMouse(mouse,cat1,cat2) {
     }
 
 }
-//let result = catAndMouse(6,9,9);
+//let result = catAndMouse(1,0,2);
 //console.log(result);
 
 // Desafio 8
