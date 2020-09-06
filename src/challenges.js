@@ -178,7 +178,7 @@ function generatePhoneNumber(numbers) {
   let isRepeated = 0;
   
   if (numbers.length !== 11){
-  return "Array com tamanho incorreto"
+  return "Array com tamanho incorreto."
   }
 
   for(j in numbers ){
