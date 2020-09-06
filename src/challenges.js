@@ -77,9 +77,9 @@ function footballPoints() {
 
 
 // Desafio 5
-function footballPoints(win,ties) {
+function footballPoints(wins,ties) {
   // seu código aqui
-  let points = win*3 + ties;
+  let points = wins*3 + ties;
   return points; 
 }
 //console.log(footballPoints(5,1))
