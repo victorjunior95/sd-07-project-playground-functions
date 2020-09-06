@@ -3,12 +3,10 @@ let first = false;
 let second = false;
 function compareTrue(a, b) {
   // seu código aqui
-  if (a === true && b === true) {
-    return true;
-  }
-  return false;
+  let compare = a && b
+  return compare
 }
-compareTrue(first, second)
+console.log(compareTrue(first, second))
 
 // Desafio 2
 let baseOut = 10;
