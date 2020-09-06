@@ -96,31 +96,26 @@ function decode(string) {
   for(let i = 0; i < string.length; i += 1){
     switch(string[i]){
       case '1':
-        newString += "a";
+        newString += 'a';
         break;
       case '2':
-        newString += "e";
+        newString += 'e';
         break;
       case '3':
-        newString += "i";
+        newString += 'i';
         break;
       case '4':
-        newString += "o";
+        newString += 'o';
         break;
       case '5':
-        newString += "u";
+        newString += 'u';
         break;
       default:
-        newString += string[i];                
+        newString += string[i];
     }
   }
   return newString;
 }
-
-let string1 = "hi there!";
-console.log(encode(string1));
-console.log(decode(encode(string1)));
-
 
 // Desafio 10
 function techList(techs, name) {
