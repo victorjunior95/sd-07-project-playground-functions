@@ -22,7 +22,7 @@ function concatName(frase) {
   let res = [];
   res.push(frase[frase.length - 1]);
   res.push(frase[0]);
-  return res;
+  return `${res}`;
 }
 
 // Desafio 5
