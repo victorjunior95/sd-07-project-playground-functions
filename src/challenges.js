@@ -188,11 +188,7 @@ function generatePhoneNumber(arrayNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    return true
-  } else {
-    return false
-  }
+  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) ? true : false;
 }
 
 // Desafio 13
