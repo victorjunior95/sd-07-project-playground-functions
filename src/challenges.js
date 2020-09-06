@@ -151,7 +151,7 @@ function generatePhoneNumber(array) {
     let newFormat = array;
 
     if (newFormat.length !== 11) {
-        console.log("Array com tamanho incorreto.");
+        return "Array com tamanho incorreto.";
     } else {
 
         let increase = repeatAgain(newFormat);
@@ -161,9 +161,9 @@ function generatePhoneNumber(array) {
         if (negative < 0) {
             console.log("não é possível gerar um número de telefone com esses valores")
         } else if (graterThan_9 > 9) {
-            console.log("não é possível gerar um número de telefone com esses valores");
+            return "não é possível gerar um número de telefone com esses valores";
         } else if (increase >= 3) {
-            console.log("não é possível gerar um número de telefone com esses valores");
+            return "não é possível gerar um número de telefone com esses valores";
         } else {
             newFormat = array.join('');
             newFormat = newFormat.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3"); // regular expression
