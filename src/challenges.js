@@ -89,7 +89,7 @@ function highestCount(numbers) {
     return "Favor verifique os dados inseridos"
   }
 }
-console.log(highestCount(numbers));
+//console.log(highestCount(numbers));
 
 // Desafio 7
 let cat1 = 9;
@@ -189,27 +189,52 @@ let name = "Lucas";
 
 function techList(tech, name) {
   // seu código aqui
-  let techNameArray = [];
+  let techArray = [];
   tech.sort();
 
   if (tech.length === 0) {
     return "Vazio!"
   } else {
     for (let t in tech) {
-      techNameArray.push ({
+      techArray.push ({
         tech: tech[t],
         name: name,
       })
     }
   }
-  return techNameArray
+  return techArray
 }
-console.log(techList(tech, name));
+//console.log(techList(tech, name));
 
 // Desafio 11
-function generatePhoneNumber() {
+let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
+function generatePhoneNumber(phoneNumber) {
   // seu código aqui
+  //Verificar se o tamanho do array é 11:
+  if (phoneNumber.length !== 11) {
+    return "Array com tamanho incorreto"
+  } else {
+    //Estabelecer contagem de números repetidos:
+    let count = 0;
+    for (let p in phoneNumber) {
+      for (let k in phoneNumber) {
+        if (phoneNumber[p] === phoneNumber[k]) {
+          count += 1;
+        }
+      }
+      //Verificar se os números vão de 1 a 9 e se os números não se repetem mais de 3 vezes:
+      if (phoneNumber[p] < 0 || phoneNumber[p] > 9 || count >= 3) {
+        return "não é possível gerar um número de telefone com esses valores"
+      }
+      //Retornar o número válido:
+      else {
+        return "(" + phoneNumber[0] + phoneNumber[1] + ") " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]
+      }
+    }  
+  }
 }
+console.log(generatePhoneNumber(phoneNumber));
 
 // Desafio 12
 let lineA = 4;
