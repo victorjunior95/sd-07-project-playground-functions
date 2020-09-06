@@ -1,15 +1,15 @@
 // Desafio 1
-function compareTrue(valueA , valueB) {
-if( valueA && valueB ) {
+function compareTrue(valueA, valueB) {
+  if (valueA && valueB) {
   return true;
-}else {
+} else {
   return false;
 }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height) /2 
+  return (base * height)/2 
 }
 
 // // Desafio 3
@@ -43,12 +43,12 @@ function highestCount(numbers) {
       CounterRepetitions += 1
     }else if(inAscendingOrder[i +1] === undefined ){
       if( inAscendingOrder[i] >= inAscendingOrder[i -1]){
-       CounterRepetitions += 1 
+        CounterRepetitions += 1
       }
       return CounterRepetitions
     }else{
         CounterRepetitions = 0
-     } 
+      } 
   }
 }
 // Desafio 7
@@ -58,18 +58,17 @@ let cat1Number = 0;
 let cat2Number = 0;
 
   if (  cat1 - mouse < 0) {
-    cat1Number = (cat1 - mouse) * (-1) 
+    cat1Number = (cat1 - mouse) * (-1)
   }else{
     cat1Number = cat1 - mouse
   }
   if (  cat2 - mouse < 0) {
-    cat2Number = (cat2 - mouse) * (-1) 
+    cat2Number = (cat2 - mouse) * (-1)
   }else{
   }cat2Number = cat2 - mouse
 
- 
   if ( cat1Number  < cat2Number ){
-     return 'cat1'
+      return 'cat1'
 
     }else if( cat2Number < cat1Number ){
     return 'cat2'
@@ -77,22 +76,22 @@ let cat2Number = 0;
   }else if (cat1Number  == cat2Number) {
     return 'os gatos trombam e o rato foge'
 
-   }
+    }
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-   for (item in numbers)
+    for (item in numbers)
     if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
-       numbers[item] = 'fizzBuzz' 
+        numbers[item] = 'fizzBuzz'
       }else if (numbers[item] % 5 === 0) {
-          numbers[item] = 'buzz'      
+          numbers[item] = 'buzz'
       }else if (numbers[item] % 3 === 0){
-        numbers[item] = 'fizz'      
+        numbers[item] = 'fizz'
     }else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
-      numbers[item] = 'bug!'      
+      numbers[item] = 'bug!'
   }
- return numbers
+  return numbers
 
 }
 // Desafio 9
@@ -118,13 +117,13 @@ for (let index = 0; index< encoded.length; index++){
       result += encryptedLetters[encoded[i]]
       break
     }
- } 
+  } 
 }
- return result
+  return result
 }
 
 function decode(phrase) {
-   let encryptedLetters = {
+    let encryptedLetters = {
     1: 'a',
     2: 'e',
     3: 'i',
@@ -137,7 +136,7 @@ let result = '';
 
 for ( i = 0; i < phrase.length; i+=1){
   decoded[i] = phrase[i];
-for (let index = 0; index< decoded.length; index+=1){
+for (let j = 0; j< decoded.length; j+=1){
     if (encryptedLetters[decoded[i]] == undefined){
       result += decoded[i]
       break
@@ -145,14 +144,14 @@ for (let index = 0; index< decoded.length; index+=1){
       result += encryptedLetters[decoded[i]]
       break
     }
- } 
+  }
 }
- return result
+  return result
 }
 
 // Desafio 10
 function techList(listArray, name) {
-  
+
   let resultOfArray = []
   listArray.sort()
 
@@ -162,7 +161,7 @@ function techList(listArray, name) {
         tech: listArray[i],
         name: name
       })
-  } 
+  }
 if (listArray.length === 0){
   return 'Vazio!'
 }else{
@@ -176,7 +175,7 @@ function generatePhoneNumber(numbers) {
   let orinalOrder ='';
   let fakeNumber = '(12) 34567-8901'
   let isRepeated = 0;
-  
+
   if (numbers.length !== 11){
   return "Array com tamanho incorreto."
   }
@@ -192,8 +191,8 @@ let inAscendingOrder = numbers.sort()
       break
     }else{
         isRepeated = 0
-     } 
-     if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9){
+      } 
+      if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9){
       return "não é possível gerar um número de telefone com esses valores"
     }else{
       result = orinalOrder.split('')
@@ -202,12 +201,12 @@ let inAscendingOrder = numbers.sort()
 
 
 let result1 = result.splice(0,0, '(')
-let result2 = result.splice(3,0, ')') 
-let result3 = result.splice(4,0, ' ') 
-let result4 = result.splice(10,0, '-') 
+let result2 = result.splice(3,0, ')')
+let result3 = result.splice(4,0, ' ')
+let result4 = result.splice(10,0, '-')
 let final = '';
 for (k in result){
-  final += result[k] 
+  final += result[k]
 }
 return final
 }
@@ -230,17 +229,17 @@ return false
 
 // Desafio 13
 function hydrate(drinks) {
- let drinksTodrunk = drinks
- let numbers = drinks.match(/\d+/g).map(Number)
- let sum = 0;
- for ( i in numbers){
-   sum += numbers[i]
- }
- if (sum > 1){
+  let drinksTodrunk = drinks
+  let numbers = drinks.match(/\d+/g).map(Number)
+  let sum = 0;
+  for ( i in numbers){
+    sum += numbers[i]
+  }
+  if (sum > 1){
   return sum + " copos de água"
- }else{
+  }else{
   return sum + " copo de água"
- }
+  }
 }
 
 
