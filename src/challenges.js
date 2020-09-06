@@ -230,8 +230,8 @@ function triangleCheck(lineA, lineB, lineC) {
     }
     console.log(x, y, z);
     x += 1;
-    if (x === 1) (y = 2), (z = 0);
-    if (x === 2) (y = 0), (z = 1);
+    if (x === 1) y = 2; z = 0;
+    if (x === 2) y = 0; z = 1;
   }
   if (caseTest === 3) {
     result = true;
