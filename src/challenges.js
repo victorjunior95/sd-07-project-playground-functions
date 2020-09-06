@@ -176,7 +176,7 @@ function generatePhoneNumber(param) {
   let phone = param;
   let retornarphone;
   let cont = 0;
-  if (phone.length != 11) {
+  if (phone.length !== 11) {
     retornarphone = 'Array com tamanho incorreto';
   } else {
     for (let i = 0; i < phone.length; i += 1) {
@@ -184,7 +184,7 @@ function generatePhoneNumber(param) {
         retornarphone = 'não é possível gerar um número de telefone com esses valores';
       } else {
         for (let j = i + 1; j < phone.length; j += 1) {
-          if (phone[i] == phone[j]) {
+          if (phone[i] === phone[j]) {
             cont += 1;
           }
         }
@@ -194,7 +194,7 @@ function generatePhoneNumber(param) {
       retornarphone = 'não é possível gerar um número de telefone com esses valores';
     } else {
       retornarphone = phone.join('').toString();
-      console.log('('+retornarphone[0]+retornarphone[1]+')'+' '+retornarphone[2]+retornarphone[3]+retornarphone[4]+retornarphone[5]+retornarphone[6]+'-'+retornarphone[7]+retornarphone[8]+retornarphone[9]+retornarphone[10]);
+      console.log('(' + retornarphone[0] + retornarphone[1] + ')' + ' ' + retornarphone[2] + retornarphone[3] + retornarphone[4] + retornarphone[5] + retornarphone[6] + '-' + retornarphone[7] + retornarphone[8] + retornarphone[9] + retornarphone[10]);
     }
   }
   return retornarphone;
