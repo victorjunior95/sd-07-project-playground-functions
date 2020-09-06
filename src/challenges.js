@@ -119,13 +119,13 @@ let resultado =[];
 function fizzBuzz(n) {
   // seu código aqui
   for (let i in numbers){
-    if(numbers[i] % 3 ===0 && numbers[i] % 5 ===0){
+    if(numbers[i] % 3==0 && numbers[i] % 5==0){
       resultado.push("fizzBuzz"); 
     }
-    else if(numbers[i] % 3 ===0){
+    else if(numbers[i] % 3==0){
        resultado.push("fizz");
     }
-    else if(numbers[i] % 5 ===0){
+    else if(numbers[i] % 5==0){
        resultado.push("buzz");
     }   
     else{
