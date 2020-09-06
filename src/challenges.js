@@ -14,15 +14,12 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-  /*function splitSentence(string) {
+  function splitSentence(string) {
   // seu código aqui
 
-  var espaços = ` `
-  var x = string.split(espaços);
+  var espacos = ` `
+  var x = string.split(espacos);
   return x;
-*/
 }
 
 // Desafio 4
