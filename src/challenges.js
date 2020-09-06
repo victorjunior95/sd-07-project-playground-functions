@@ -219,8 +219,18 @@ return false
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+ let drinksTodrunk = drinks
+ let numbers = drinks.match(/\d+/g).map(Number)
+ let sum = 0;
+ for ( i in numbers){
+   sum += numbers[i]
+ }
+ if (sum > 1){
+  return sum + " copos de água"
+ }else{
+  return sum + " copo de água"
+ }
 }
 
 
