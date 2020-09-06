@@ -31,7 +31,7 @@ return retorno;
 
 // Desafio 4
 function concatName(param) {
-  let ultMaisprimeiro = param[param.length -1]+', '+param[0];
+  let ultMaisprimeiro = param[param.length -1] +', '+ param[0];
   return ultMaisprimeiro;
 }
 
