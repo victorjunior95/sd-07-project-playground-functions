@@ -107,6 +107,7 @@ function numeroRepetido(listaDeNumeros) {
     contagem[listaDeNumeros[i]] += 1;
     if (contagem[listaDeNumeros[i]] > 2) return false;
   }
+  return
 }
 
 function generatePhoneNumber(numero) {
