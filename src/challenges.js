@@ -60,18 +60,20 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  var dist1 = cat1 - mouse;
-  var dist2 = cat2 - mouse;
-  if (Math.abs(dist1) > Math.abs(dist2)) {
+  var dist1 = Math.abs(cat1 - mouse);
+  var dist2 = Math.abs(cat2 - mouse);
+  if (dist1 > dist2) {
     return "cat1"
   }
-  if (Math.abs(dist1) < Math.abs(dist2)) {
+  if (dist1 < dist2) {
     return "cat2"
   }
   else {
     return "os gatos trombam e o rato foge"
   }
 }
+
+catAndMouse(2, 4, 2);
 
 
 // Desafio 8
@@ -96,11 +98,61 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  var str = '';
+  for(var i = 0; i < frase.length; i += 1){
+    if(frase[i] == 'a') {
+      str += 1;
+      i = i + 1;
+    }
+    if(frase[i] == 'e') {
+      str += 2;
+      i = i + 1;
+    }
+    if(frase[i] == 'i') {
+      str += 3;
+      i = i + 1;
+    }
+    if(frase[i] == 'o') {
+      str += 4;
+      i = i + 1;
+    }
+    if(frase[i] == 'u') {
+      str += 5;
+      i = i + 1;
+    }
+    str += frase[i];
+    }
+    return str;
 }
-function decode() {
+function decode(str) {
   // seu código aqui
+  var frase = '';
+  for(var i = 0; i < frase.length; i += 1){
+  if(frase[i] == 1) {
+    str += `a`;
+    i = i + 1;
+  }
+  if(frase[i] == 2) {
+    str += `e`;
+    i = i + 1;
+  }
+  if(frase[i] == 3) {
+    str += `i`;
+    i = i + 1;
+  }
+  if(frase[i] == 4) {
+    str += `o`;
+    i = i + 1;
+  }
+  if(frase[i] == 5) {
+    str += `u`;
+    i = i + 1;
+  }
+  str += frase[i];
+  }
+  return frase;
 }
 
 // Desafio 10
