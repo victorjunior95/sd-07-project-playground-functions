@@ -98,6 +98,7 @@ function encode(stringdeentrada) {
   stringentrada.replace(/i/g,"3")
   stringentrada.replace(/o/g,"4")
   stringentrada.replace(/u/g,"5")
+  return(stringdeentrada)
 }
 function decode(stringdeentrada) {
   // seu código aqui
@@ -106,6 +107,7 @@ function decode(stringdeentrada) {
   stringentrada.replace(/3/g,"c")
   stringentrada.replace(/4/g,"d")
   stringentrada.replace(/5/g,"e")
+  return(stringdeentrada)
 }
 
 // Desafio 10
