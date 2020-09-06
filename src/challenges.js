@@ -100,6 +100,18 @@ function fizzBuzz(num) {
 }
 
 // Desafio 9
+function encodeDecode(palavras, vogais) {
+  let igual = [];
+  for (let i = 0; i < palavras.length; i += 1) {
+    igual.push(palavras[i]);
+    for (let key in vogais) {
+      if (key === igual[i]) {
+        igual[i] = vogais[key];
+      }
+    }
+  }
+  return igual.join('');
+}
 function encode(palavras) {
   let vogais = {
     a: 1,
@@ -119,18 +131,6 @@ function decode(frase) {
     5: 'u',
   }
   return encodeDecode(frase, numeros);
-}
-function encodeDecode(palavras, vogais) {
-  let igual = [];
-  for (let i = 0; i < palavras.length; i += 1) {
-    igual.push(palavras[i]);
-    for (let key in vogais) {
-      if (key === igual[i]) {
-        igual[i] = vogais[key];
-      }
-    }
-  }
-  return igual.join('');
 }
 
 // Desafio 10
