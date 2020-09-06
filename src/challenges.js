@@ -123,16 +123,16 @@ function generatePhoneNumber(numero) {
   }
   return numeroDeTelefone;
 }
-function menor(lineA, lineB, lineC){
-  if (lineA + lineB > lineC) return false;
-  if (lineB + lineC > lineA) return false;
-  if (lineA + lineC > lineB) return false;
+function menor(lineA, lineB, lineC) {
+  if (lineA + lineB < lineC) return false;
+  if (lineB + lineC < lineA) return false;
+  if (lineA + lineC < lineB) return false;
   return true;
 }
-function menorabs(lineA, lineB, lineC){
-  if (Math.abs(lineA + lineB) > lineC) return false;
-  if (Math.abs(lineB + lineC) > lineA) return false;
-  if (Math.abs(lineA + lineC) > lineB) return false;
+function menorabs(lineA, lineB, lineC) {
+  if (Math.abs(lineA - lineB) > lineC) return false;
+  if (Math.abs(lineB - lineC) > lineA) return false;
+  if (Math.abs(lineA - lineC) > lineB) return false;
   return true;
 }
 // Desafio 12
