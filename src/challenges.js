@@ -108,10 +108,9 @@ function encode(palavras) {
     o: 4,
     u: 5,
   }
-  let frase = palavras;
   let igual = [];
-  for (let j = 0; j < frase.length; j += 1) {
-    igual.push(frase[j]);
+  for (let j = 0; j < palavras.length; j += 1) {
+    igual.push(palavras[j]);
     for (let key in vogais) {
       if (key === igual[j]) {
         igual[j] = vogais[key];
@@ -128,10 +127,9 @@ function decode(palavras) {
     4: 'o',
     5: 'u',
   }
-  let frase = palavras;
   let igual = [];
-  for (let j = 0; j < frase.length; j += 1) {
-    igual.push(frase[j]);
+  for (let j = 0; j < palavras.length; j += 1) {
+    igual.push(palavras[j]);
     for (let key in vogais) {
       if (key === igual[j]) {
         igual[j] = vogais[key];
