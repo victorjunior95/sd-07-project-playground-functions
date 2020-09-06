@@ -1,4 +1,4 @@
-// Desafio 1 - Initial commmit
+// Desafio 1 - Usando o operador && (and).
 function compareTrue(a, b) {
   if (a && b) {
     return true;
@@ -7,9 +7,10 @@ function compareTrue(a, b) {
   }
 }
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+// Desafio 2 - Área do triângulo.
+function calcArea(base, height) {
+  let result = (base * height) / 2;
+  return result;
 }
 
 // Desafio 3
