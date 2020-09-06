@@ -118,21 +118,30 @@ function catAndMouse(mouse,cat1,cat2) {
 //console.log(result);
 
 // Desafio 8
-let numbers = [2,15,7,9,45]
+let numbers = [2,15,7,9,25]
 let resultado =[];
 function fizzBuzz(n) {
   // seu código aqui
   for (let i in numbers){
-    if(numbers[i] % 3==0 && numbers[i] % 5==0){
+    if(numbers[i] % 3 ===0 && numbers[i] % 5 ===0){
+      console.log(numbers[i]);
+      console.log("fizzBuzz");
       resultado.push("fizzBuzz"); 
     }
-    else if(numbers[i] % 3==0){
+    else if(numbers[i] % 3 ===0){
+      console.log(numbers[i]);
+      console.log("fizz");
        resultado.push("fizz");
     }
-    else if(numbers[i] % 5==0){
+    else if(numbers[i] % 5 ===0){
+      console.log(numbers[i]);
+      console.log("buzz");
        resultado.push("buzz");
-    }   
+    }
+          
     else{
+      console.log(numbers[i]);
+      console.log("bug!");
       resultado.push("bug!");
     }    
 }
