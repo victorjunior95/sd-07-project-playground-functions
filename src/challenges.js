@@ -67,10 +67,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
+f// Desafio 8
+function doubleCheck (array) {
+  let match = 0;
+  for (let i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      match += 1;
+    }
+    }
+  return match;
+}
 function fizzBuzz(array) {
   let string = [];
   for (let i in array) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+    if (doubleCheck(array) >= 1) {
       string.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
       string.push('fizz');
@@ -125,26 +135,23 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatNumber(array) {
-  let array1 = array.slice();
+  let arrayCopy = array.slice();
   let repeats = 1;
-  array1 = array1.sort();
-  for (let i in array1) {
-    let number = array1[i];
-    if (number === array1[i + 1]) {
-      if (array1[i + 1] === array1[i + 2]) {
-        repeats += 2;
+  let arrayCopy = arrayCopy.sort();
+  for (let i = 0; i < arrayCopy.length; i +=1) {
+    if (arrayCopy[i] === arrayCopy[i + 1] && arrayCopy[i] === arrayCopy[i + 2] ) {
+      repeats += 2;
       }
-    }
   }
   return repeats;
 }
 function negativeAndBiggerThanNineNumber(array) {
   let result = 0;
   for (let i in array) {
-      if (array[i] < 0 || array[i] > 9) {
-      result += 1
-    }
-    }
+    if (array[i] < 0 || array[i] > 9) {
+        result += 1
+      }
+  }
   return result;
 }
 function generatePhoneNumber(array) {
