@@ -61,73 +61,49 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
+//função auxiliar para desafio 8
+function divisorCheck(number) {
+  let result = '';
+  if (number % 3 === 0 && number % 5 === 0) {
+      result = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+      result = 'fizz';
+  } else if (number % 5 === 0) {
+      result = 'buzz';
+  } else result = 'bug!';
+  return result;
+}
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let arrayResult = [];
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
-      arrayResult.push('fizzBuzz');
-    } else if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 !== 0) {
-      arrayResult.push('fizz');
-    } else if (arrayNumbers[i] % 3 !== 0 && arrayNumbers[i] % 5 === 0) {
-      arrayResult.push('buzz');
-    } else {
-      arrayResult.push('bug!');
-    }
+      arrayResult.push(divisorCheck(arrayNumbers[i]));
   }
   return arrayResult;
 }
-
 // Desafio 9
 function encode(string) {
-  let newString = '';
-  for (let i = 0; i < string.length; i += 1) {
-    switch (string[i]) {
-      case 'a':
-        newString += '1';
-        break;
-      case 'e':
-        newString += '2';
-        break;
-      case 'i':
-        newString += '3';
-        break;
-      case 'o':
-        newString += '4';
-        break;
-      case 'u':
-        newString += '5';
-        break;
-      default:
-        newString += string[i];                   
-    }
-  }
-  return newString;
+  let encString = '';
+  
+  encString = string.replace(/a/g, '1');
+  encString = encString.replace(/e/g, '2');
+  encString = encString.replace(/i/g, '3');
+  encString = encString.replace(/o/g, '4');
+  encString = encString.replace(/u/g, '5');
+  
+  return encString;
 }
+
 function decode(string) {
-  let newString = "";
-  for (let i = 0; i < string.length; i += 1) {
-    switch (string[i]) {
-      case '1':
-        newString += 'a';
-        break;
-      case '2':
-        newString += 'e';
-        break;
-      case '3':
-        newString += 'i';
-        break;
-      case '4':
-        newString += 'o';
-        break;
-      case '5':
-        newString += 'u';
-        break;
-    default:
-    newString += string[i];                   
-    }
-  }
-  return newString;
+  let decString = "";
+
+  decString = string.replace(/1/g, 'a');
+  decString = decString.replace(/2/g, 'e');
+  decString = decString.replace(/3/g, 'i');
+  decString= decString.replace(/4/g, 'o');
+  decString = decString.replace(/5/g, 'u');
+
+  return decString;
 }
 
 // Desafio 10
@@ -148,23 +124,46 @@ function techList(techs, name) {
   }    
 }
 
+//função auxiliar Desafio 11: verifica quantidade de números repetidos
+function repeatNum(num, arrayNumbers) {
+  let numRep = 0;
+  for (let i = 0; i < arrayNumbers.length; i+= 1) {
+    if (num === arrayNumbers[i]) {
+      numRep += 1;
+    }
+  }
+  if (numRep >= 3) {
+    return false; //'não é possível gerar um número de telefone com esses valores';
+  }
+  return true;
+}
+//função aux. Desafio 11: Verifica se tem números negativos ou acima de 9
+function validNum(arrayNumbers) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
+      return false; //'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return true;
+}
+//função auxiliar Desafio 11: Verifica tamanho do array de números
+function lengthNumber(arrayNumbers) {
+  if (arrayNumbers.length > 11 || arrayNumbers.length < 11) {
+    return false; //'Array com tamanho incorreto.';
+  }
+  return true;
+}
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   let phoneNumber = '';
-  if (arrayNumbers.length > 11 || arrayNumbers.length < 11) {
+  if (!lengthNumber(arrayNumbers)) {
     return 'Array com tamanho incorreto.';
-  } 
+  }
+  if (!validNum(arrayNumbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    let numRep = 0;
-    for (let j = 0; j < arrayNumbers.length; j+= 1) {
-      if (arrayNumbers[i] === arrayNumbers[j]) {
-        numRep += 1;
-      }
-    }
-    if (numRep >= 3) {
+    if (!repeatNum(arrayNumbers[i], arrayNumbers)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     phoneNumber += arrayNumbers[i];
