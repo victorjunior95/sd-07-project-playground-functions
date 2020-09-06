@@ -184,7 +184,10 @@ function phoneNumberIteration(a) {
     return allItensArray
   }, {})
   function checkKeys(value) {
-    return value > 9
+    if (value < 0 || value > 9) {
+      return true
+    }
+    return false
   }
   function checkValues(value) {
     return value > 2;
@@ -206,7 +209,7 @@ function generatePhoneNumber(a) {
   let phoneAreacode = a.splice(0, 2).join('')
   let phonePrefix = a.splice(0, 5).join('')
   let phoneEndNumbers = a.splice(0, 4).join('')
-  let phoneComplete = `(${phoneAreacode}) ${phonePrefix}-${phoneEndNumbers}`.toString()
+  let phoneComplete = `(${phoneAreacode}) ${phonePrefix}-${phoneEndNumbers}`
   return phoneComplete
 }
 console.log(generatePhoneNumber(numbersForPhones))
