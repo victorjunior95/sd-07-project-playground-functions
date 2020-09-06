@@ -135,7 +135,7 @@ function techList(arrayList, name) {
     arrayTech.push(
       {
         tech: arrayList[tech],
-        name: name
+        name,
       }
     );
   }
