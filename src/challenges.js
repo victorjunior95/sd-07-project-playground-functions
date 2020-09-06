@@ -70,9 +70,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-catAndMouse(2, 4, 2);
-
-
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
