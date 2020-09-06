@@ -227,10 +227,9 @@ let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
 function numbersRepeated(a, b) {
   let ref = b
   let count = 0
-  if (a.length !== 11) return 'Array com tamanho incorreto.'
   for (let j = 0; j < a.length; j += 1) {
     if (a[j] === ref) count += 1
-    if (count >= 3 || a[j] < 0 || a[j] > 9) return 'não é possível gerar um número de telefone com esses valores'
+    if (a.length !== 11 || count >= 3 || a[j] < 0 || a[j] > 9) return 'não é possível gerar um número de telefone com esses valores'
   }
   return count
 }
