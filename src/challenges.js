@@ -159,7 +159,7 @@ function generatePhoneNumber(array) {
         let negative = findNegative(newFormat);
 
         if (negative < 0) {
-            console.log("não é possível gerar um número de telefone com esses valores")
+            return "não é possível gerar um número de telefone com esses valores";
         } else if (graterThan_9 > 9) {
             return "não é possível gerar um número de telefone com esses valores";
         } else if (increase >= 3) {
