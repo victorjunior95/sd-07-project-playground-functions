@@ -41,18 +41,18 @@ Exemplo: se uma função receber uma string "go Trybe", o retorno deve ser ['go'
 
 function splitSentence(string) {
   let stringSplit = string.split(" ");
-
-  return stringSplit
+  return stringSplit;
 }
 
-// function splitSentence(string) {
-//   let strings = []; 
-// }
+// Desafio 4
+/* Escreva uma função com o nome concatNameque, ao receber uma matriz de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da matriz.
 
-// // Desafio 4
-// function concatName() {
-//   // seu código aqui
-// }
+Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deve retornar Paolillo, Lucas. */
+function concatName(array) {
+  let firstName = array[0];
+  let lastName = array[array.length - 1];
+  return `${lastName}, ${firstName}`;
+}
 
 // // Desafio 5
 // function footballPoints() {
