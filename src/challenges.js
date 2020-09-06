@@ -79,7 +79,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(param) {
-  let saida = [];
   function testaRetorno(numero) {
     let retorno;
     if (numero % 3 === 0 && numero % 5 === 0) {
@@ -94,9 +93,9 @@ function fizzBuzz(param) {
     return retorno;
   }
   for (let index = 0; index < param.length; index += 1) {
-    saida[index] = testaRetorno(param[index]);
+    param[index] = testaRetorno(param[index]);
   }
-  return saida;
+  return param;
 }
 
 // Desafio 9
