@@ -114,22 +114,22 @@ function catAndMouse(mouse,cat1,cat2) {
 //console.log(result);
 
 // Desafio 8
-let numbers = [2,15,7,9,45];
+let numbers = [2,15,7,9,45]
 let resultado =[];
 function fizzBuzz(n) {
   // seu código aqui
-  for (let i in n){
-    if(n[i] % 3 ===0 && n[i] % 5 ===0){
-      resultado.push("FizzBuzz"); 
+  for (let i in numbers){
+    if(numbers[i] % 3 ===0 && numbers[i] % 5 ===0){
+      resultado.push("fizzBuzz"); 
     }
-    else if(n[i] % 3 ===0){
-       resultado.push("FizzBuzz");
+    else if(numbers[i] % 3 ===0){
+       resultado.push("fizz");
     }
-    else if(n[i] % 5 ===0){
-       resultado.push("FizzBuzz");
+    else if(numbers[i] % 5 ===0){
+       resultado.push("buzz");
     }   
     else{
-      resultado.push("FizzBuzz");
+      resultado.push("bug");
     }    
 }
 return resultado;
@@ -138,9 +138,9 @@ return resultado;
 //console.log(result);
 
 // Desafio 9
-//let texto = "hi there"
-//let codificado ="";
-//let crypto="";
+let texto = "hi there"
+let codificado ="";
+let crypto="";
 function encode(txt) {
   // seu código aqui
    for (let i in texto){
