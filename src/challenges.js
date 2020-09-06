@@ -119,7 +119,7 @@ function encode(palavras) {
   }
   return igual.join('');
 }
-function decode(palavras) {
+function decode(frase) {
   let vogais = {
     1: 'a',
     2: 'e',
@@ -128,11 +128,11 @@ function decode(palavras) {
     5: 'u',
   }
   let igual = [];
-  for (let j = 0; j < palavras.length; j += 1) {
-    igual.push(palavras[j]);
+  for (let i = 0; i < frase.length; i += 1) {
+    igual.push(frase[i]);
     for (let key in vogais) {
-      if (key === igual[j]) {
-        igual[j] = vogais[key];
+      if (key === igual[i]) {
+        igual[i] = vogais[key];
       }
     }
   }
