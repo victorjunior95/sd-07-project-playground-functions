@@ -100,59 +100,64 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(frase) {
   // seu código aqui
-  var str = '';
-  for(var i = 0; i < frase.length; i += 1){
-    if(frase[i] == 'a') {
+  var str = ``;
+  for (var i = 0; i < frase.length; i += 1) {
+    if (frase[i] == 'a') {
       str += 1;
       i = i + 1;
     }
-    if(frase[i] == 'e') {
+    if (frase[i] == 'e') {
       str += 2;
       i = i + 1;
     }
-    if(frase[i] == 'i') {
+    if (frase[i] == 'i') {
       str += 3;
       i = i + 1;
     }
-    if(frase[i] == 'o') {
+    if (frase[i] == 'o') {
       str += 4;
       i = i + 1;
     }
-    if(frase[i] == 'u') {
+    if (frase[i] == 'u') {
       str += 5;
       i = i + 1;
     }
     str += frase[i];
-    }
-    return str;
+  }
+  if (i >= frase.length) { break }
+  str += frase[i];
 }
+return str;
+}
+
 function decode(str) {
   // seu código aqui
   var frase = '';
-  for(var i = 0; i < frase.length; i += 1){
-  if(frase[i] == 1) {
-    str += `a`;
-    i = i + 1;
+  for (var i = 0; i < frase.length; i += 1) {
+    if (frase[i] == 1) {
+      str += `a`;
+      i = i + 1;
+    }
+    if (frase[i] == 2) {
+      str += `e`;
+      i = i + 1;
+    }
+    if (frase[i] == 3) {
+      str += `i`;
+      i = i + 1;
+    }
+    if (frase[i] == 4) {
+      str += `o`;
+      i = i + 1;
+    }
+    if (frase[i] == 5) {
+      str += `u`;
+      i = i + 1;
+    }
+    str += frase[i];
   }
-  if(frase[i] == 2) {
-    str += `e`;
-    i = i + 1;
-  }
-  if(frase[i] == 3) {
-    str += `i`;
-    i = i + 1;
-  }
-  if(frase[i] == 4) {
-    str += `o`;
-    i = i + 1;
-  }
-  if(frase[i] == 5) {
-    str += `u`;
-    i = i + 1;
-  }
+  if (i >= str.length) { break }
   str += frase[i];
-  }
-  return frase;
 }
 
 // Desafio 10
