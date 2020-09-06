@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function doubleCheck (array){
+function doubleCheck(array) {
   let match = 0;
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
