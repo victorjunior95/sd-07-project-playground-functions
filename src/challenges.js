@@ -248,9 +248,9 @@ function hydrate(sentence) {
     let n = Number(numbers[number]);
     soma += n;
   }
-  if (soma === 1){
-  result = `${soma} copo de água`;
-  }else{
+  if (soma === 1) {
+    result = `${soma} copo de água`;
+  } else {
     result = `${soma} copos de água`;
   }
   return result;
