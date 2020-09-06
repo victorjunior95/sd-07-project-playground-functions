@@ -75,22 +75,22 @@ function fizzBuzz(arrayNumbers) {
 function encode(stringToEncode) {
   let codedString = stringToEncode.split('');
 
-  for (let character in codedString) {
-    switch (codedString[character]) {
+  for (let character of codedString) {
+    switch (character) {
       case 'a':
-        codedString[character] = '1';
+        character = '1';
         break;
       case 'e':
-        codedString[character] = '2';
+        character = '2';
         break;
       case 'i':
-        codedString[character] = '3';
+        character = '3';
         break;
       case 'o':
-        codedString[character] = '4';
+        character = '4';
         break;
       case 'u':
-        codedString[character] = '5';
+        character = '5';
         break;
     }
   }
