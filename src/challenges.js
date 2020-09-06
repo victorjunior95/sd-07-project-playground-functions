@@ -147,7 +147,7 @@ function decode(str) {
       i = i + 1;
     }
     if (i >= str.length) { break }
-    str += frase[i];
+    frase += str[i];
   }
   return frase;
 }
