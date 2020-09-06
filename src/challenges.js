@@ -102,7 +102,7 @@ function fizzBuzz(num) {
 // Desafio 9
 function encodeDecode(palavras, vogais) {
   let igual = [];
-  for (let i in palavras) {
+  for (let i = 0; i < palavras.length; i += 1) {
     igual.push(palavras[i]);
     for (let key in vogais) {
       if (key === igual[i]) {
@@ -112,6 +112,7 @@ function encodeDecode(palavras, vogais) {
   }
   return igual.join('');
 }
+
 function encode(palavras) {
   let vogais = {
     a: 1,
