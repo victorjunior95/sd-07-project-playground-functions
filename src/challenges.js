@@ -123,9 +123,31 @@ function generatePhoneNumber(numero) {
   }
   return numeroDeTelefone;
 }
+function testeSoma(lineA, lineB, lineC){
+  let listaNumero = [lineA, lineB, lineC];
+  let somatorio = 0
+  let index = 0;
+  for (let i = 0; i < 3; i += 1) {
+    for (let j = 0; j < 3;  j += 1){                          // coloca todas as somas possiveis em um array
+      if (i === j) break;
+      somatorio[index] = listaNumero[i] + listaNumero [j];
+      index += 1;
+    }
+  }
+  return somatorio, listaNumero;
+} 
+function maiorOuMenor(somatorio, listaDeNumeros, sinal) {
+  if (sinal === true){
+    for (let j = 0; j < 3; j += 1) {
+      for (let i = 0; i < 6; i += 1){
+        if (listaDeNumeros[j] < somatorio[i] ) return true;
+      }
+    }
+  }
+}
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
 }
 
 // Desafio 13
