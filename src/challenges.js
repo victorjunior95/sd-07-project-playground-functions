@@ -167,14 +167,13 @@ function testeNumberVazio(tel) {
   let mensagem = '';
   if (tel.length !== 11) {
     mensagem = 'Array com tamanho incorreto.';
-    return mensagem;
   }
+  return mensagem;
 }
 function testeNumber(tel, mensagem, count) {
   for (let i = 0; i < tel.length; i += 1) {
     if (tel[i] < 0 || tel[i] > 9) {
       mensagem = 'não é possível gerar um número de telefone com esses valores';
-      return mensagem;
     }
     for (let j = 1; j < i; j += 1) {
       if (tel[i] === tel[j]) {
@@ -182,10 +181,10 @@ function testeNumber(tel, mensagem, count) {
       }
       if (count > 2) {
         mensagem = 'não é possível gerar um número de telefone com esses valores';
-        return mensagem;
       }
     }
   }
+  return mensagem;
 }
 function generatePhoneNumber(phone) {
   let tel = phone;
