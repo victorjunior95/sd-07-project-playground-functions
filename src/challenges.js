@@ -108,7 +108,7 @@ function techList(techs, name) {
   techs.sort();
   if (techs.length < 1) {
     return 'Vazio!';
-  } 
+  }
   for (let i = 0; i < techs.length; i += 1) {
     let techToLearn = {
       tech: techs[i],
@@ -168,54 +168,24 @@ function generatePhoneNumber(arrayNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let cond1 = (lineA < lineB + lineC) && (lineB < lineC + lineA) && (lineC < lineB + lineA);
-  let cond2 = (lineB > Math.abs(lineC - lineA)) && (lineC > Math.abs(lineB - lineA)) && (lineA > Math.abs(lineB - lineC));
-
-  return cond1 && cond2;
+  let cond1 = (lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC));
+  let cond2 = (lineB < lineC + lineA) && (lineB > Math.abs(lineC - lineA));
+  let cond3 = (lineC < lineB + lineA) && (lineC > Math.abs(lineB - lineA));
+  return cond1 && cond2 && cond3;
 }
 
-// Desafio 13
+// Desafio 13: utilizando funções split e parseInt
 function hydrate(string) {
-  let arrayNumbers = [];
-
-  for (let i = 0; i < string.length; i += 1) {
-  switch (string[i]) {
-    case '1':
-      arrayNumbers.push(1);
-      break;
-    case '2':
-      arrayNumbers.push(2);
-      break;
-    case '3':
-      arrayNumbers.push(3);
-      break;
-    case '4':
-      arrayNumbers.push(4);
-      break;
-    case '5':
-      arrayNumbers.push(5);
-      break;
-    case '6':
-      arrayNumbers.push(6);
-      break;
-    case '7':
-      arrayNumbers.push(7);
-      break;
-    case '8':
-      arrayNumbers.push(8);
-      break;
-    case '9':
-      arrayNumbers.push(9);
-      break;           
-  }
-  }
+  let arrayStrings = string.split(' ');
   let sumNumbers = 0;
 
-  if (arrayNumbers.length == 1 && arrayNumbers[0] == 1) {
-    return '1 copo de água';
+  for (let i = 0; i < arrayStrings.length; i += 1) {
+    if (!(isNaN(arrayStrings[i]))) {
+      sumNumbers += parseInt(arrayStrings[i]);
+    }
   }
-  for (let i = 0; i < arrayNumbers.length; i += 1) {
-    sumNumbers += arrayNumbers[i];
+  if (sumNumbers[0] === 1) {
+    return '1 copo de água';
   }
   return `${sumNumbers} copos de água`;
 }
