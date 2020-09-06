@@ -5,13 +5,17 @@ function hydrate(corda) {
   for(let i = 0; i < cordaDividida.length; i = i+1){
      somaAgua += cordaDividida[i] * 1;
     }
-  return somaAgua + " copos de água";  
+  if (somaAgua == 1){
+  return somaAgua + " copo de água";
+} else {
+  return somaAgua + " copos de água";
+}
 }
 
 
 
 
-  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+  console.log(hydrate("1 cachaça, 5 cervejas"));
 
 
 
