@@ -123,7 +123,9 @@ function generatePhoneNumber(numero) {
   }
   return numeroDeTelefone;
 }
-
+// if (aMenosb > lineC) return false;
+// if (bMenosc > lineA) return false;
+// if (aMenosc > lineB) return false;
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -134,11 +136,11 @@ function triangleCheck(lineA, lineB, lineC) {
   let aMenosc = Math.abs(lineA - lineC);
   let bMenosc = Math.abs(lineB - lineC);
   if (ab < lineC) return false;
-  if (aMenosb > lineC) return false;
+
   if (bc < lineA) return false;
-  if (bMenosc > lineA) return false;
+
   if (ac < lineB) return false;
-  if (aMenosc > lineB) return false;
+ 
   return true;
 }
 
