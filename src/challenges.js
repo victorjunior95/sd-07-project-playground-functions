@@ -142,8 +142,24 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-    // seu código aqui
+function techList(techList, name) {
+    let array = techList;
+    let interests = [];
+    if (array.length !== 0) {
+        const newArray = array.sort()
+        for (let index = 0; index < newArray.length; index += 1) {
+            if (index !== 0) {
+                let object = {
+                    tech: newArray[index],
+                    name,
+                }
+                interests.push(object)
+            }
+        }
+    } else {
+        return 'empty!';
+    }
+    return interests;
 }
 
 // Desafio 11
@@ -268,3 +284,4 @@ module.exports = {
 // splitSentence('foguete');
 // hydrate("9 copos de cerveja, 10 copos de vodka");
 //concatName(["marcos", "eduardo", "murilo", "Silva"]);
+//techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas');
