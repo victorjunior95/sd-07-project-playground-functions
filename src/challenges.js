@@ -122,12 +122,10 @@ function encode(frase) {
       str += 5;
       i = i + 1;
     }
+    if (i >= frase.length) { break }
     str += frase[i];
   }
-  if (i >= frase.length) { break }
-  str += frase[i];
-}
-return str;
+  return str;
 }
 
 function decode(str) {
@@ -154,10 +152,10 @@ function decode(str) {
       str += `u`;
       i = i + 1;
     }
+    if (i >= str.length) { break }
     str += frase[i];
   }
-  if (i >= str.length) { break }
-  str += frase[i];
+  return frase;
 }
 
 // Desafio 10
