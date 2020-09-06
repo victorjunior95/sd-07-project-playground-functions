@@ -133,12 +133,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let aMenosb = Math.abs(lineA - lineB);
   let aMenosc = Math.abs(lineA - lineC);
   let bMenosc = Math.abs(lineB - lineC);
-  if ( ab < lineC) return false;
-    else if (aMenosb > lineC) return false;
+  if (ab < lineC) return false;
+  if (aMenosb > lineC) return false;
   if (bc < lineA) return false;
-    else if (bMenosc > lineA) return false;
+  if (bMenosc > lineA) return false;
   if (ac < lineB) return false;
-    else if (aMenosc > lineB) return false;
+  if (aMenosc > lineB) return false;
   return true;
 }
 
