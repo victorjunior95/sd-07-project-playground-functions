@@ -130,7 +130,7 @@ function techList(techArray, name) {
     for (let i in newTechArray){
       let techObject = {
         tech: newTechArray[i],
-        name: name;
+        name: name
       };
       
       array.push(techObject);
@@ -142,8 +142,6 @@ function techList(techArray, name) {
   
   return techObject;
 }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Hugo"));
 
 // Desafio 11
 function generatePhoneNumber() {
