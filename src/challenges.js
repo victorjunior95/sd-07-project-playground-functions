@@ -148,24 +148,24 @@ function decode(nome) {
   return newPalavra;
 }
 // Desafio 10
-function techList(tech,name) { 
+function techList(tech, name) { 
   let tecnologia = tech; 
   let nome = name;
-  let tec_retorno = [];
+  let tecRetorno = [];
   let x;
-  if (tecnologia.length == 0){
-    tec_retorno = "Vazio!";
-  }else{
-    for (let i = 0; i < tecnologia.length; i++){
-      tec_retorno[i] = {tech: tecnologia[i], name: nome}
+  if (tecnologia.length == 0) {
+    tecRetorno = 'Vazio!';
+  } else {
+    for (let i = 0; i < tecnologia.length; i += 1) {
+      tecRetorno[i] = { tech: tecnologia[i], name: nome }
     }
   }
-  for (let i = 0; i < tec_retorno.length -1; i++){
-    for (let j = i + 1; j < tec_retorno.length; j++){
-      if (tec_retorno[i].tech > tec_retorno[j].tech){
-        x = tec_retorno[i];
-        tec_retorno[i] = tec_retorno[j];
-        tec_retorno[j] = x;
+  for (let i = 0; i < tecRetorno.length -1; i += 1) {
+    for (let j = i + 1; j < tecRetorno.length; j += 1) {
+      if (tecRetorno[i].tech > tecRetorno[j].tech) {
+        x = tecRetorno[i];
+        tecRetorno[i] = tecRetorno[j];
+        tecRetorno[j] = x;
       }
     }
   }
