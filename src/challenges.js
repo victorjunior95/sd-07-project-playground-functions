@@ -106,46 +106,46 @@ console.log(fizzBuzz(numeros));
 
 // Desafio 9
 function encode(nome) {
-  new_palavra = [];
-  for (let i = 0; i < nome.length; i++){
-    new_palavra.push(nome[i]);
+  newPalavra = [];
+  for (let i = 0; i < nome.length; i += 1){
+    newPalavra.push(nome[i]);
   }
-  for (let i = 0; i < new_palavra.length; i++){
-    if (new_palavra[i] === "a"){
-        new_palavra[i] = "1";
-    }else if (new_palavra[i] === "e"){
-        new_palavra[i] = "2";
-    }else if (new_palavra[i] === "i"){
-        new_palavra[i] = "3";
-    }else if (new_palavra[i] === "o"){
-        new_palavra[i] = "4";
-    }else if (new_palavra[i] === "u"){
-        new_palavra[i] = "5";
+  for (let i = 0; i < newPalavra.length; i += 1) {
+    if (newPalavra[i] === 'a'){
+        newPalavra[i] = '1';
+    } else if (newPalavra[i] === 'e'){
+        new_palavra[i] = '2';
+    } else if (newPalavra[i] === 'i'){
+        newPalavra[i] = '3';
+    } else if (newPalavra[i] === 'o'){
+        newPalavra[i] = '4';
+    } else if (newPalavra[i] === 'u'){
+        newPalavra[i] = '5';
     }
   }
-  new_palavra = new_palavra.join('').toString();
-  return new_palavra;
+  newPalavra = newPalavra.join('').toString();
+  return newPalavra;
 }
 function decode(nome) {
-  new_palavra = [];
-  for (let i = 0; i < nome.length; i++){
-    new_palavra.push(nome[i]);
+  newPalavra = [];
+  for (let i = 0; i < nome.length; i += 1){
+    newPalavra.push(nome[i]);
   }
-  for (let i = 0; i < new_palavra.length; i++){
-    if (new_palavra[i] === "1"){
-        new_palavra[i] = "a";
-    }else if (new_palavra[i] === "2"){
-        new_palavra[i] = "e";
-    }else if (new_palavra[i] === "3"){
-        new_palavra[i] = "i";
-    }else if (new_palavra[i] === "4"){
-        new_palavra[i] = "o";
-    }else if (new_palavra[i] === "5"){
-        new_palavra[i] = "u";
+  for (let i = 0; i < newPalavra.length; i += 1){
+    if (newPalavra[i] === '1') {
+        newPalavra[i] = 'a';
+    } else if (newPalavra[i] === '2') {
+        newPalavra[i] = 'e';
+    } else if (newPalavra[i] === '3') {
+        newPalavra[i] = 'i';
+    } else if (newPalavra[i] === '4') {
+        newPalavra[i] = 'o';
+    } else if (newPalavra[i] === '5') {
+        newPalavra[i] = 'u';
     }
   }
-  new_palavra = new_palavra.join('').toString();
-  return new_palavra;
+  newPalavra = newPalavra.join('').toString();
+  return newPalavra;
 }
 // Desafio 10
 function techList(tech,name) { 
