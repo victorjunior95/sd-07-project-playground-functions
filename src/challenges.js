@@ -71,9 +71,9 @@ function concatName(namesArray) {
 
 
 // Desafio 5
-function footballPoints() {
+//function footballPoints() {
   // seu código aqui
-}
+//}
 
 
 // Desafio 5
