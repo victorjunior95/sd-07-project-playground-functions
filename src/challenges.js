@@ -6,7 +6,6 @@ function compareTrue(boolean1, boolean2) {
   } else {
     equalBollean = false;
   }
-
   return equalBollean;
 }
 
@@ -39,7 +38,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbersArray) {
   let counter = 0;
   let highNumber = numbersArray[0];
-  
+ 
   for (let i in numbersArray) {
     for (let j in numbersArray) {
       if (numbersArray[j] > highNumber) {
@@ -51,7 +50,6 @@ function highestCount(numbersArray) {
       counter += 1;
     }
   }
-  
   return counter;
 }
 
@@ -68,7 +66,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (positionCat1 === positionCat2) {
     successfulCatch = 'os gatos trombam e o rato foge';
   }
-
   return successfulCatch;
 }
 
@@ -98,7 +95,6 @@ function encode(string1) {
   let letters = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   // Método .replace() com 'regular expression', pra encontrar qlqr das alternativas(|), de maneira global(g), que será substituído por meio de uma arrow function chamando o objeto
   let encodeString = string1.replace(/a|e|i|o|u/g, match => letters[match]);
-  
   return encodeString;
 }
 
@@ -108,7 +104,7 @@ function decode(string2) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
+    5: 'u',
   };
   let decodeString = string2.replace(/1|2|3|4|5/g, function subs(matched) {
     return numbers[matched];
@@ -124,22 +120,17 @@ function techList(techArray, name) {
   let array = [];
 
   if (newTechArray.length === 0) {
-    techObject = 'Vazio';
-  } else {
-
-    for (let i in newTechArray){
-      let techObject = {
-        tech: newTechArray[i],
-        name: name
-      };
-      
-      array.push(techObject);
-      // array.push(Object.assign({}, techObject));
-    }
-    
-    techObject = array;
+    techObject = 'Vazio!';
+  } 
+  for (let i in newTechArray) {
+    techObject = {
+      tech: newTechArray[i],
+      name: name,
+    };
+    array.push(techObject);
+    // array.push(Object.assign({}, techObject));
   }
-  
+  techObject = array;
   return techObject;
 }
 
