@@ -251,7 +251,12 @@ function hydrate(string) {
     listint.push(Number(saida[i]))
   }
 let soma = listint.reduce((prevnumber, refer) => { return prevnumber + refer},0)
+if( soma > 1){
 return `${soma} copos de água`
+  }
+  else{
+      return `${soma} copo de água`
+  }
 }
 
 
