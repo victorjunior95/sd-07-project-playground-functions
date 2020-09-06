@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4 - Concatenação de strings.
 function concatName(arr) {
-  let arrString = arr.split(', ');
+  let arrString = arr.join(', ');
   return arrString[arrString.length - 1] + ', ' + arrString[0];
 }
 
@@ -32,14 +32,24 @@ function footballPoints(wins, ties) {
   return winPoints + tiePoints;
 }
 
+
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = cat1 - mouse;
+  let distCat2 = cat2 - mouse;
+
+  if (distCat1 > distCat2) {
+    return cat2;
+  } else if (distCat1 < distCat2) {
+    return cat1;
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
