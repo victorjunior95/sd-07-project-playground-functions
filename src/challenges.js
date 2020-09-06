@@ -23,12 +23,15 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+let teste = "go Trybe";
 function splitSentence(param) {
   let string = param;
-  let retorno = string.split('');
-  return retorno;
+  let matrizString = [];
+  let newString = string.split('').join('').toString();
+  matrizString.push(newString);
+  return matrizString;
 }
-
+console.log(splitSentence(teste));
 // Desafio 4
 function concatName(param) {
   let ultMaisprimeiro = param[param.length -1] + ', ' + param[0];
