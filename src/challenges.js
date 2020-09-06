@@ -1,5 +1,3 @@
-//Desafio Raphael Caputo
-
 // Desafio 1
 function compareTrue(comparar1, comparar2) {
   // seu código aqui
