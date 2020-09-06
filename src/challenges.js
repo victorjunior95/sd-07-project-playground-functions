@@ -3,10 +3,10 @@ function compareTrue(valor1, valor2) {
   let a = valor1;
   let b = valor2;
   let resposta = false;
-  if (a == true && b == true){
+  if (a === true && b === true) {
     resposta = true;
     console.log(resposta);
-  }else{
+  } else {
     console.log(resposta);
   }
   return resposta;
@@ -19,14 +19,14 @@ function calcArea(base, height) {
   let b = height;
   let area = 0;
   area = ((a * b) / 2);
- return area;
+  return area;
 }
 
 // Desafio 3
 function splitSentence(param) {
   let string = param;
   let retorno = string.split('');
-return retorno; 
+  return retorno; 
 }
 
 // Desafio 4
@@ -42,7 +42,7 @@ function footballPoints(wins, ties) {
   let pontosVitoria = 3;
   let pontoEmpate = 1;
   let total = 0;
-  total = (vitorias * pontosVtoria) + (empates * pontoEmpate);
+  total = ((vitorias * pontosVtoria) + (empates * pontoEmpate));
   return total;
 }
 /*
@@ -148,8 +148,8 @@ function decode(nome) {
   return newPalavra;
 }
 // Desafio 10
-function techList(tech, name) { 
-  let tecnologia = tech; 
+function techList(tech, name) {
+  let tecnologia = tech;
   let nome = name;
   let tecRetorno = [];
   let x;
