@@ -11,13 +11,11 @@ function calcArea(height, base) {
   let area = (base * height) / 2;
   return area;
 }
-
 // Desafio 3
 function splitSentence(string) {
   let splittedSentence = string.split(' ');
   return splittedSentence;
 }
-
 // Desafio 4
 function concatName(posicoesStrings) {
   let lastName = posicoesStrings[posicoesStrings.length - 1];
@@ -25,14 +23,12 @@ function concatName(posicoesStrings) {
   resultadoString = `${lastName}, ${posicoesStrings[0]}`;
   return resultadoString;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let winPoints = wins * 3;
   let championshipPoints = winPoints + ties;
   return championshipPoints;
 }
-
 // Desafio 6
 function highestNumber(arrayNumbers) {
   let higherNumber = 0;
@@ -48,7 +44,6 @@ function highestNumber(arrayNumbers) {
   }
   return higherNumber;
 }
-
 function highestCount(arrayNumbers) {
   let countNumber = 0;
   let higherNumber = highestNumber(arrayNumbers);
@@ -59,40 +54,31 @@ function highestCount(arrayNumbers) {
   }
   return countNumber;
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let jerry = 1;
-  let tom = 1;
-  let garfield = 1;
   let result = '';
-  jerry = mouse;
-  tom = cat1;
-  garfield = cat2;
-  let distanceTom = jerry - tom;
-  let distanceGarfield = jerry - garfield;
-  if (distanceTom < 0) {
-    distanceTom *= -1;
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  if (distanceCat1 < 0) {
+    distanceCat1 = Math.abs(distanceCat1);
   }
-  if (distanceGarfield < 0) {
-    distanceGarfield *= -1;
+  if (distanceCat2 < 0) {
+    distanceCat2 = Math.abs(distanceCat2);
   }
-
-  if (distanceGarfield === distanceTom) {
+  if (distanceCat2 === distanceCat1) {
     result = 'os gatos trombam e o rato foge';
-  } else if (distanceGarfield < distanceTom) {
+  } else if (distanceCat2 < distanceCat1) {
     result = 'cat2';
   } else {
     result = 'cat1';
   }
   return result;
 }
-
 // Desafio 8
 function changeNumbersForWords(number) {
-  fizzB = number % 3 === 0 && number % 5 === 0;
-  buzz = number % 5 === 0;
-  fizz = number % 3 === 0;
+  let fizzB = number % 3 === 0 && number % 5 === 0;
+  let buzz = number % 5 === 0;
+  let fizz = number % 3 === 0;
   switch (true) {
     case fizzB:
       return 'fizzBuzz';
@@ -114,7 +100,6 @@ function fizzBuzz(arrayNumbers) {
   }
   return result;
 }
-
 // Desafio 9
 function encodeOrDecodeSentence(sentence) {
   let codedOrDecodedSentence = '';
@@ -164,7 +149,6 @@ function decode(string) {
   let decodedSentence = encodeOrDecodeSentence(string);
   return decodedSentence;
 }
-
 // Desafio 10
 function techList(arrayOfTechs, name) {
   let result = [];
@@ -185,7 +169,6 @@ function techList(arrayOfTechs, name) {
   }
   return result;
 }
-
 // Desafio 11
 function validaNumbers(arrayNumbers) {
   let condition = true;
@@ -205,9 +188,8 @@ function validaNumbers(arrayNumbers) {
     }
     if (countRepeat >= 3) {
       condition = false;
-    } else {
-      countRepeat = 0;
     }
+    countRepeat = 0;
   }
   return condition;
 }
@@ -227,7 +209,6 @@ function generatePhoneNumber(n) {
   }
   return `(${r[0]}${r[1]}) ${r[2]}${r[3]}${r[4]}${r[5]}${r[6]}-${r[7]}${r[8]}${r[9]}${r[10]}`;
 }
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result = false;
@@ -247,9 +228,10 @@ function triangleCheck(lineA, lineB, lineC) {
     if (lineX < lineY + lineZ && lineX > Math.abs(lineY - lineZ)) {
       caseTest += 1;
     }
+    console.log(x, y, z);
     x += 1;
-    y -= 1 + i * -1;
-    z -= 1 + i * -1;
+    if (x === 1) (y = 2), (z = 0);
+    if (x === 2) (y = 0), (z = 1);
   }
   if (caseTest === 3) {
     result = true;
