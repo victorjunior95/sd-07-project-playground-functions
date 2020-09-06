@@ -75,6 +75,16 @@ function footballPoints() {
   // seu código aqui
 }
 
+
+// Desafio 5
+function footballPoints(win,ties) {
+  // seu código aqui
+  let points = win*3 + ties;
+  return points; 
+}
+//console.log(footballPoints(5,1))
+
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
