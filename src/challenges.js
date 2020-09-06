@@ -158,19 +158,20 @@ function generatePhoneNumber(arrayNumbers) {
   }
 
   // repetição
-  arrayNumbers.sort();
-  let numberToCompare = arrayNumbers[0];
+  let comparisonArray = arrayNumbers.slice();
+  comparisonArray.sort();
+  let numberToCompare = comparisonArray[0];
   let countNumber = 0;
 
-  for (let num in arrayNumbers) {
-    if (arrayNumbers[num] === numberToCompare) {
+  for (let num in comparisonArray) {
+    if (comparisonArray[num] === numberToCompare) {
       countNumber += 1;
 
       if (countNumber >= 3) {
         return errorMessage_1;
       }
     } else {
-      numberToCompare = arrayNumbers[num];
+      numberToCompare = comparisonArray[num];
       countNumber = 1;
     }
   }
@@ -196,8 +197,6 @@ function generatePhoneNumber(arrayNumbers) {
   }
   return formattedNumber.join('');
 }
-
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 2, 7, 3, 9, 3, 4]))
 
 // Desafio 12
 function triangleCheck() {
