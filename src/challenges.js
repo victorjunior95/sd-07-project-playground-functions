@@ -55,9 +55,7 @@ function highestCount(param) {
     if (numeros[i] > maior) {
       maior = numeros[i];
     }
-  }
-  for (let j = 0; j < numeros.length; j += 1) {
-    if (numeros[j] === maior) {
+    if (numeros[i] === maior) {
       cont += 1;
     }
   }
@@ -92,60 +90,59 @@ function fizzBuzz(param) {
   for (let i = 0; i < matriz.length; i += 1) {
     if (matriz[i] % 3 === 0 && matriz[i] % 5 === 0) {
       retorno.push('fizzBuzz');
-    } else if (matriz[i] % 3 === 0){
+    } else if (matriz[i] % 3 === 0) {
         retorno.push('fizz');
-    } else if (matriz[i] % 5 === 0){
-        retorno.push('buzz')
+    } else if (matriz[i] % 5 === 0) {
+      retorno.push('buzz')
     } else {
-    retorno.push('bug!')
+      retorno.push('bug!')
     }
   }
-  return retorno;
+    return retorno;
 }
-console.log(fizzBuzz(numeros));
 
 // Desafio 9
 function encode(nome) {
-  newPalavra = [];
+  let newPalavra = [];
   for (let i = 0; i < nome.length; i += 1){
     newPalavra.push(nome[i]);
   }
   for (let i = 0; i < newPalavra.length; i += 1) {
-    if (newPalavra[i] === 'a'){
-        newPalavra[i] = '1';
-    } else if (newPalavra[i] === 'e'){
-        new_palavra[i] = '2';
-    } else if (newPalavra[i] === 'i'){
-        newPalavra[i] = '3';
-    } else if (newPalavra[i] === 'o'){
-        newPalavra[i] = '4';
-    } else if (newPalavra[i] === 'u'){
-        newPalavra[i] = '5';
+    if (newPalavra[i] === 'a') {
+      newPalavra[i] = '1';
+    } else if (newPalavra[i] === 'e') {
+      new_palavra[i] = '2';
+    } else if (newPalavra[i] === 'i') {
+      newPalavra[i] = '3';
+    } else if (newPalavra[i] === 'o') {
+      newPalavra[i] = '4';
+    } else if (newPalavra[i] === 'u') {
+      newPalavra[i] = '5';
     }
   }
   newPalavra = newPalavra.join('').toString();
   return newPalavra;
 }
 function decode(nome) {
-  newPalavra = [];
-  for (let i = 0; i < nome.length; i += 1){
-    newPalavra.push(nome[i]);
+  let newPalavra1 = [];
+  for (let i = 0; i < nome.length; i += 1) {
+    newPalavra1.push(nome[i]);
   }
-  for (let i = 0; i < newPalavra.length; i += 1){
-    if (newPalavra[i] === '1') {
-        newPalavra[i] = 'a';
-    } else if (newPalavra[i] === '2') {
-        newPalavra[i] = 'e';
-    } else if (newPalavra[i] === '3') {
-        newPalavra[i] = 'i';
-    } else if (newPalavra[i] === '4') {
-        newPalavra[i] = 'o';
-    } else if (newPalavra[i] === '5') {
-        newPalavra[i] = 'u';
+  for (let i = 0; i < newPalavra1.length; i += 1) {
+    if (newPalavra1[i] === '1') {
+      newPalavra1[i] = 'a';
+    } else if (newPalavra1[i] === '2') {
+      newPalavra1[i] = 'e';
+    } else if (newPalavra1[i] === '3') {
+      newPalavra1[i] = 'i';
+    } else if (newPalavra1[i] === '4') {
+      newPalavra1[i] = 'o';
+    } else if (newPalavra1[i] === '5') {
+      newPalavra1[i] = 'u';
     }
   }
-  newPalavra = newPalavra.join('').toString();
-  return newPalavra;
+  newPalavra1 = newPalavra1.join('').toString();
+  return newPalavra1;
 }
 
 // Desafio 10
