@@ -126,17 +126,17 @@ function techList(array, name) {
 // Desafio 11
 function repeatNumber(array) {
   let array1 = array.slice();
+  let repeats = 1;
   array1 = array1.sort();
-  let strike = 1;
-  for (let i = 0; i < array1.length; i += 1) {
+  for (let i in array1) {
     let number = array1[i];
     if (number === array1[i + 1]) {
       if (array1[i + 1] === array1[i + 2]) {
-        strike += 2;
+        repeats += 2;
       }
     }
   }
-  return strike;
+  return repeats;
 }
 function negativeAndBiggerThanNineNumber(array) {
   let result = 0;
