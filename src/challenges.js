@@ -224,22 +224,32 @@ techList(ArrayTechsList, nameOut)
 
 // Desafio 11
 let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 1]
+function phoneNumberIteration(a) {
+  let coutNumbers = a.reduce(function (allItensArray, itemArray) { 
+    if (itemArray in allItensArray) {
+    allItensArray[itemArray] += 1
+    }
+    else {
+    allItensArray[itemArray] = 1
+    }
+    return allItensArray
+}, {})
+return coutNumbers
+}
 function generatePhoneNumber(a) {
   // seu código aqui
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
+  } else {
+    return phoneNumberIteration(a)
   }
-  let aSorted = a.sort()
-  let refer = []
-  let reapetCount = 0
+
+/*
   for (let i = 0; i < aSorted.length; i += 1) {
-    if (aSorted[i] < 0 || aSorted[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
     if (refer.length === 0) {
       refer.push(aSorted[i])
       reapetCount = 1
-    } else if (refer[0] !== aSorted[i]){
+    } else if (refer[0] !== aSorted[i]) {
       refer.shift()
       refer.push(aSorted[i])
       reapetCount = 1
@@ -251,7 +261,7 @@ function generatePhoneNumber(a) {
     }
   }
   return refer
-  /*
+  
   if (a.length !== 11) return 'Array com tamanho incorreto.'
   for (let i = 0; i < a.length; i += 1) {
     if (a[i] < 0 || a[i] > 9) {
