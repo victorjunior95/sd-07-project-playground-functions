@@ -102,8 +102,31 @@ function encode(string) {
   return newString.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let newString = string.split('');
+  
+  for (let i in newString) {
+
+    switch(newString[i]) {
+      case '1':
+        newString[i] = 'a';
+        break;
+      case '2':
+        newString[i] = 'b';
+        break;
+      case '3':
+        newString[i] = 'c';
+        break;
+      case '4':
+        newString[i] = 'd';
+        break;
+      case '5':
+        newString[i] = 'e';
+        break;
+    }
+  }
+
+  return newString.join('');
 }
 
 // Desafio 10
