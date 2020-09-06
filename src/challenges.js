@@ -80,21 +80,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(num) {
-  let numbers = num;
+function fizzBuzzBasic(num) {
+  let palavra = '';
+  console.log(num);
+  if (num % 3 === 0) {
+    palavra = 'fizz';
+  } else if (num % 5 === 0) {
+    palavra = 'buzz';
+  } else {
+    palavra = 'bug!';
+  }
+  return palavra;
+}
+function fizzBuzz(number) {
+  let numbers = number;
   let palavra = '';
   let result = [];
   for (let i of numbers) {
-    if (i % 3 === 0 && i % 5 !== 0) {
-      palavra = 'fizz';
-    } else if (i % 5 === 0 && i % 3 !== 0) {
-      palavra = 'buzz';
-    } else if (i % 3 === 0 && i % 5 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
       palavra = 'fizzBuzz';
+      result.push(palavra);
     } else {
-      palavra = 'bug!';
+      result.push(fizzBuzzBasic(i));
     }
-    result.push(palavra);
   }
   return result;
 }
