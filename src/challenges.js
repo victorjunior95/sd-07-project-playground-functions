@@ -103,7 +103,16 @@ function decode() {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  let lista = [];
+  let obj = [];
+  lista = array.sort()
+    for(let i= 0; i < lista.length; i+= 1){
+        obj [i] ={
+            tech: lista[i],
+            name: name
+        }
+    }
+    return(obj);
 }
 
 // Desafio 11
