@@ -250,12 +250,11 @@ function generatePhoneNumber(a) {
   let checkReport = phoneNumberIteration(a)
   if (!checkReport) {
     return 'não é possível gerar um número de telefone com esses valores'
-  } else {
-    let phoneAreacode = a.splice(0, 2).join('')
-    let phonePrefix = a.splice(0, 5).join('')
-    let phoneEndNumbers = a.splice(0, 4).join('')
-    return `(${phoneAreacode}) ${phonePrefix}-${phoneEndNumbers}`
   }
+  let phoneAreacode = a.splice(0, 2).join('')
+  let phonePrefix = a.splice(0, 5).join('')
+  let phoneEndNumbers = a.splice(0, 4).join('')
+  return `(${phoneAreacode}) ${phonePrefix}-${phoneEndNumbers}`
 }
 console.log(generatePhoneNumber(numbersForPhones))
 
