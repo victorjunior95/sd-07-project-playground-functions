@@ -130,7 +130,7 @@ function decode(str) {
       frase += `a`;
       i = i + 1;
     }
-    if (stsr[i] == 2) {
+    if (str[i] == 2) {
       frase += `e`;
       i = i + 1;
     }
