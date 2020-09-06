@@ -93,8 +93,8 @@ function encode(string) {
 
 function decode(string) {
   let newString = '';
-  for(let i = 0; i < string.length; i += 1){
-    switch(string[i]){
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
       case '1':
         newString += 'a';
         break;
