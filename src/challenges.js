@@ -32,13 +32,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestNumber(arrayNumbers) {
   let higherNumber = 0;
-  for (let index in arrayNumbers) {
-    for (let i = 0; i < arrayNumbers.length; i += 1) {
-      if (
-        arrayNumbers[index] > arrayNumbers[i] &&
-        arrayNumbers[index] > higherNumber
-      ) {
-        higherNumber = arrayNumbers[index];
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    for (let j = 0; j < arrayNumbers.length; j += 1) {
+      if (arrayNumbers[i] > arrayNumbers[j] && arrayNumbers[i] > higherNumber) {
+        higherNumber = arrayNumbers[i];
       }
     }
   }
@@ -47,8 +44,8 @@ function highestNumber(arrayNumbers) {
 function highestCount(arrayNumbers) {
   let countNumber = 0;
   let higherNumber = highestNumber(arrayNumbers);
-  for (let index in arrayNumbers) {
-    if (arrayNumbers[index] === higherNumber) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] === higherNumber) {
       countNumber += 1;
     }
   }
@@ -102,41 +99,34 @@ function fizzBuzz(arrayNumbers) {
 }
 // Desafio 9
 function encodeOrDecodeSentence(sentence) {
+  let dictionaryEncode = ['1', '2', '3', '4', '5'];
+  let dictionaryDecode = ['a', 'e', 'i', 'o', 'u'];
   let codedOrDecodedSentence = '';
-  for (let letter in sentence) {
-    switch (sentence[letter]) {
-      case 'a':
-        codedOrDecodedSentence += '1';
-        break;
-      case '1':
-        codedOrDecodedSentence += 'a';
-        break;
-      case 'e':
-        codedOrDecodedSentence += '2';
-        break;
-      case '2':
-        codedOrDecodedSentence += 'e';
-        break;
-      case 'i':
-        codedOrDecodedSentence += '3';
-        break;
-      case '3':
-        codedOrDecodedSentence += 'i';
-        break;
-      case 'o':
-        codedOrDecodedSentence += '4';
-        break;
-      case '4':
-        codedOrDecodedSentence += 'o';
-        break;
-      case 'u':
-        codedOrDecodedSentence += '5';
-        break;
-      case '5':
-        codedOrDecodedSentence += 'u';
-        break;
-      default:
-        codedOrDecodedSentence += sentence[letter];
+  if (sentence.match(/\d+/g) === null) {
+    for (let i = 0; i < sentence.length; i += 1) {
+      codedOrDecodedSentence += sentence[i];
+      for (let j = 0; j < dictionaryEncode.length; j += 1) {
+        if (dictionaryDecode[j] === sentence[i]) {
+          codedOrDecodedSentence = codedOrDecodedSentence.substring(
+            0,
+            codedOrDecodedSentence.length - 1
+          );
+          codedOrDecodedSentence += dictionaryEncode[j];
+        }
+      }
+    }
+  } else {
+    for (let i = 0; i < sentence.length; i += 1) {
+      codedOrDecodedSentence += sentence[i];
+      for (let j = 0; j < dictionaryDecode.length; j += 1) {
+        if (dictionaryEncode[j] === sentence[i]) {
+          codedOrDecodedSentence = codedOrDecodedSentence.substring(
+            0,
+            codedOrDecodedSentence.length - 1
+          );
+          codedOrDecodedSentence += dictionaryDecode[j];
+        }
+      }
     }
   }
   return codedOrDecodedSentence;
@@ -214,17 +204,14 @@ function triangleCheck(lineA, lineB, lineC) {
   let caseTest = 0;
   let lines = [];
   lines.push(lineA, lineB, lineC);
-  let lineX = 0;
-  let lineY = 0;
-  let lineZ = 0;
   let x = 0;
   let y = 1;
   let z = 2;
   for (let i = 0; i < 3; i += 1) {
-    lineX = lines[x];
-    lineY = lines[y];
-    lineZ = lines[z];
-    if (lineX < lineY + lineZ && lineX > Math.abs(lineY - lineZ)) {
+    if (
+      lines[x] < lines[y] + lines[z] &&
+      lines[x] > Math.abs(lines[y] - lines[z])
+    ) {
       caseTest += 1;
     }
     x += 1;
