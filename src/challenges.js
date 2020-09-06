@@ -126,23 +126,24 @@ function techList(array, name) {
 // Desafio 11
 function repeatNumber(array) {
   let array1 = array.slice();
-  let arrayS = array1.sort();
+  array1 = array1.sort();
   let strike = 1;
-  for(let i = 0; i < array1.length; i += 1) {
-      let number = array1[i];
-        if (number === array1[i + 1]) {
-            if (array1[i + 1] === array1[i + 2]) {
+  for (let i = 0; i < array1.length; i += 1) {
+    let number = array1[i];
+    if (number === array1[i + 1]) {
+          if (array1[i + 1] === array1[i + 2]) {
               strike += 2;
-          }
+            }
         }
-      }
-      return strike;
   }
-  function negativeNumber(array) {
-      let check = 0;
+  return strike;
+}
+function negativeNumber(array) {
+    let result = 0;
       for (let i in array) {
-          if(array[i] < 0)
-          check += 1;
+        if (array[i] < 0){
+          result += 1;
+        }
       }
       return check;
   }
@@ -163,10 +164,10 @@ function repeatNumber(array) {
       return "não é possível gerar um número de telefone com esses valores";
   }
   string = array.join('');
-         string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-         return string;
+          string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+          return string;
   }
-  
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
