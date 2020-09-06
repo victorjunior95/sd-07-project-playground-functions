@@ -229,7 +229,7 @@ function generatePhoneNumber(a) {
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  for (i in a) {
+  for (let i in a) {
     console.log(a[i])
   }
 
@@ -246,9 +246,6 @@ function generatePhoneNumber(a) {
     let external = numbersRepeated(a, searching)
     if (external.length >= 3) return external
   }
-  // Declaração em template literal
-  let phoneComplete = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
-  return phoneComplete
   */
 }
 generatePhoneNumber(numbersForPhones)
