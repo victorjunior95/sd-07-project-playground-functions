@@ -230,9 +230,11 @@ function generatePhoneNumber(a) {
     return 'Array com tamanho incorreto.'
   }
   for (let i in a) {
-    console.log(a[i])
+    if (a[i] < 0 || a[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
   }
-
+  return 'teste'
   /*
   if (a.length !== 11) return 'Array com tamanho incorreto.'
   for (let i = 0; i < a.length; i += 1) {
