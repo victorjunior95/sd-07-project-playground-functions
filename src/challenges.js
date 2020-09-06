@@ -174,10 +174,11 @@ if (listArray.length === 0){
 function generatePhoneNumber(numbers) {
   let result = '';
   let orinalOrder ='';
+  let fakeNumber = '(12) 34567-8901'
   let isRepeated = 0;
   
   if (numbers.length !== 11){
-  return 'Array com tamanho incorreto'
+  return "Array com tamanho incorreto"
   }
 
   for(j in numbers ){
@@ -198,6 +199,8 @@ let inAscendingOrder = numbers.sort()
       result = orinalOrder.split('')
     }
 }
+
+
 let result1 = result.splice(0,0, '(')
 let result2 = result.splice(3,0, ')') 
 let result3 = result.splice(4,0, ' ') 
