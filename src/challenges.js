@@ -53,7 +53,7 @@ function concatName(namesArray) {
   // seu código aqui  
   return [namesArray[namesArray.length-1], namesArray[0]];
 }
-//console.log(concatName(namesArray))
+console.log(concatName(namesArray))
 
 
 
