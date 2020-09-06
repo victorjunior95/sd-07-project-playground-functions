@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4 - Concatenação de strings.
 function concatName(arr) {
-  let arrString = arr.join(', ');
+  let arrString = arr.split(', ');
   return arrString[arrString.length - 1] + ', ' + arrString[0];
 }
 
@@ -44,14 +44,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = cat2 - mouse;
 
   if (distCat1 > distCat2) {
-    return cat2;
+    return 'cat2';
   } else if (distCat1 < distCat2) {
-    return cat1;
+    return 'cat1';
   } else {
     return 'os gatos trombam e o rato foge'
   }
 }
 
+console.log(catAndMouse(12, 14, 20));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
