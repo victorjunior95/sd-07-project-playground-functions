@@ -159,13 +159,12 @@ function techList(arrayOfTechs, name) {
   techs.sort();
   if (techs.length === 0) {
     return 'Vazio!';
-  } else {
+  } 
     for (let tech in techs) {
       result.push({
         tech: techs[tech],
         name: student,
-      });
-    }
+    });
   }
   return result;
 }
@@ -239,8 +238,17 @@ function triangleCheck(lineA, lineB, lineC) {
   return result;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(sentence) {
+  let result = '';
+  let numbers = [];
+  let soma = 0;
+  numbers = sentence.match(/\d+/g);
+  for (number in numbers) {
+    let n = Number(numbers[number]);
+    soma += n;
+  }
+  result = `${soma} copos de água`;
+  return result
 }
 
 module.exports = {
