@@ -63,10 +63,10 @@ function catAndMouse(mouse, cat1, cat2) {
   var dist1 = cat1 - mouse;
   var dist2 = cat2 - mouse;
   if (dist1 < dist2) {
-    return cat1
+    return "cat1"
   }
   if (dist1 > dist2) {
-    return cat2
+    return "cat2"
   }
   else {
     return "os gatos trombam e o rato foge"
