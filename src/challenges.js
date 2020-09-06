@@ -159,11 +159,11 @@ function techList(arrayOfTechs, name) {
   techs.sort();
   if (techs.length === 0) {
     return 'Vazio!';
-  } 
-    for (let tech in techs) {
-      result.push({
-        tech: techs[tech],
-        name: student,
+  }
+  for (let tech in techs) {
+    result.push({
+      tech: techs[tech],
+      name: student,
     });
   }
   return result;
@@ -227,10 +227,11 @@ function triangleCheck(lineA, lineB, lineC) {
     if (lineX < lineY + lineZ && lineX > Math.abs(lineY - lineZ)) {
       caseTest += 1;
     }
-    console.log(x, y, z);
     x += 1;
-    if (x === 1) y = 2; z = 0;
-    if (x === 2) y = 0; z = 1;
+    if (x === 1) y = 2;
+    z = 0;
+    if (x === 2) y = 0;
+    z = 1;
   }
   if (caseTest === 3) {
     result = true;
@@ -243,12 +244,16 @@ function hydrate(sentence) {
   let numbers = [];
   let soma = 0;
   numbers = sentence.match(/\d+/g);
-  for (number in numbers) {
+  for (let number in numbers) {
     let n = Number(numbers[number]);
     soma += n;
   }
-  result = `${soma} copos de água`;
-  return result
+  if (soma === 1){
+  result = `${soma} copo de água`;
+  }else{
+    result = `${soma} copos de água`;
+  }
+  return result;
 }
 
 module.exports = {
