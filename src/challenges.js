@@ -82,8 +82,28 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(vetor) {
   // seu código aqui
+  let array = []
+for (const index of vetor) {
+  if(index%3!=0 && index%5!=0){
+    array.push("bug!")
+  }
+
+  if(index%3==0 && index%5==0){
+    array.push("fizzBuzz")
+  }
+
+  if(index%3==0 && index%5!=0){
+    array.push("fizz")
+  }
+  if(index%5==0 && index%3!=0){
+    array.push("buzz")
+  }
+}
+
+return array;
+
 }
 
 // Desafio 9
