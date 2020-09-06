@@ -49,12 +49,25 @@ console.log(splitSentence("ola trybe"))
 
 // Desafio 4
 //namesArray = ['jesus', 'lucio', 'palli', 'ururi', 'elias', 'hermenegildo']
+//function concatName(namesArray) {
+  // seu código aqui  
+//  return [namesArray[namesArray.length-1], namesArray[0]];
+//}
+//console.log(concatName(namesArray))
+// A resposta de saida é correta mas, a salida não é string.
+
+
+// Desafio 4
+//namesArray = ['jesus', 'lucio', 'palli', 'ururi', 'elias', 'hermenegildo']
 function concatName(namesArray) {
   // seu código aqui  
-  return [namesArray[namesArray.length-1], namesArray[0]];
+  let rptaEndFirst = [namesArray[namesArray.length-1], namesArray[0]];
+  let rptaString = rptaEndFirst.toString();
+  return rptaString;  
 }
 //console.log(concatName(namesArray))
-//umm
+
+
 
 
 // Desafio 5
