@@ -21,13 +21,15 @@ function splitSentence(string) {
 
 // Desafio 4 - Concatenação de strings.
 function concatName(arr) {
-  let arrString = arr.join().split(', ');
+  let arrString = arr.split(', ');
   return arrString[arrString.length - 1] + ', ' + arrString[0];
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+// Desafio 5 - Pontos no Futebol
+function footballPoints(wins, ties) {
+  let winPoints = wins * 3;
+  let tiePoints = ties;
+  return winPoints + tiePoints;
 }
 
 // Desafio 6
