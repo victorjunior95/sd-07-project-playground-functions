@@ -82,22 +82,137 @@ function highestCount(numeros) {
 //console.log(result);
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+  if(cat1==cat2){
+      return "os gatos trombam e o rato foge";    
+  }else if(mouse>cat2 && cat2>cat1){// rato esta acima do gato 2 e gato 2 esta acima do gato1
+    return "cat2";
+  }else if(mouse>cat1 && cat1>cat2){ // rato está acima do gato 1 e gato 1 esta acima do gato2
+    return "cat1";    
+  }else if(cat1>mouse && mouse>cat2){ // rato esta no meio. Entre gato 1 e o gato 2.
+    if((cat1-mouse)>(mouse-cat2)){ // se a distancia entre o gato 1 e o rato for maior que a distancia entre o rato e gato2
+        return "cat2"; // retorna gato 2
+    }      
+  }else if(cat2>mouse && mouse>cat1){ // rato esta no meio. Entre gato 2 e o gato 1.
+      if((cat2-mouse)>(mouse-cat1)){ // se a distancia entre o gato 2 e o rato for maior que a distancia entre o rato e gato1
+          return "cat1"; // retorna gato 1
+      }       
+  
+  }else if(cat1>cat2 && cat2>mouse){ // gato 1 está acima do gato 2. Gato 2 acima do rato
+      return "cat2";
+  
+  }else if(cat2>cat1 && cat1>mouse){ // gato 2 está acima do gato 1. Gato 1 acima do rato
+      return "cat1";
+  }
+ else{
+      return "Nada acontece";
+    }
+
 }
+//let result = catAndMouse(6,9,9);
+//console.log(result);
 
 // Desafio 8
-function fizzBuzz() {
+let numeros = [2,15,7,9,45]
+let resultado =[];
+function fizzBuzz(n) {
   // seu código aqui
+  for (let i in numeros){
+    if(numeros[i] % 3 ===0 && numeros[i] % 5 ===0){
+      resultado.push("FizzBuzz"); 
+    }
+    else if(numeros[i] % 3 ===0){
+       resultado.push("FizzBuzz");
+    }
+    else if(numeros[i] % 5 ===0){
+       resultado.push("FizzBuzz");
+    }   
+    else{
+      resultado.push("FizzBuzz");
+    }    
 }
+return resultado;
+}
+//let result = fizzBuzz(numeros);
+//console.log(result);
 
 // Desafio 9
-function encode() {
+let texto = "hi there"
+let codificado ="";
+let crypto="";
+function encode(txt) {
   // seu código aqui
+   for (let i in texto){
+     let letra = texto[i];
+    switch(letra){
+      case "a":
+        crypto = "1";
+        codificado+=crypto;       
+      break;
+      case "e":
+        crypto = "2";
+        codificado+=crypto;        
+      break;
+      case "i":
+        crypto = "3";
+        codificado+=crypto;       
+      break;
+      case "o":
+        crypto = "4";
+        codificado+=crypto;        
+      break;
+      case "u":
+        crypto = "5";
+        codificado+=crypto;       
+        break
+      default:
+        codificado+=texto[i];       
+      }     
+    
+  }   
+  return codificado;
 }
-function decode() {
+//let result = encode(texto);
+//console.log("Mensagem criptografada: "+result);
+
+let txtCodificado = "h3 th2r2";
+let mensagem ="";
+let letraCrypto;
+function decode(txt) {
   // seu código aqui
+   for (let i in txtCodificado){
+    let letraCrypto = txtCodificado[i];
+   switch(letraCrypto){
+     case "1":
+      letraCrypto = "a";
+      mensagem+=letraCrypto;  
+     break;
+     case "2":
+      letraCrypto = "e";
+       mensagem+=letraCrypto;
+     break;
+     case "3":
+      letraCrypto = "i";
+       mensagem+=letraCrypto;     
+     break;
+     case "4":
+      letraCrypto = "o";
+       mensagem+=letraCrypto;  
+     break;
+     case "5":
+      letraCrypto = "u";
+       mensagem+=letraCrypto; 
+       break
+     default:
+      mensagem+=txtCodificado[i];
+     }    
+   
+ }   
+ return mensagem;
 }
+//let result = decode(txtCodificado);
+//console.log("Mensagem decodificada: "+result);
 
 // Desafio 10
 function techList() {
