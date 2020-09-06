@@ -229,8 +229,11 @@ function generatePhoneNumber(a) {
   if (a.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-  for (let i in a) {
-    if (a[i] < 0 || a[i] > 9) {
+  let aSorted = a.sort()
+  let refer = 0
+  let reapetCount = 0
+  for (let i = 0; i < aSorted.length; i += 1) {
+    if (aSorted[i] < 0 || aSorted[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
@@ -250,7 +253,7 @@ function generatePhoneNumber(a) {
   }
   */
 }
-generatePhoneNumber(numbersForPhones)
+console.log(generatePhoneNumber(numbersForPhones))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
