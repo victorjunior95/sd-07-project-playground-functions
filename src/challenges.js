@@ -127,12 +127,18 @@ function generatePhoneNumber(numero) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB < lineC) return false;
-    else if (Math.abs(ineA - lineB) > lineC) return false;
-  if (lineB + lineC < lineA) return false;
-    else if (Math.abs(ineB - lineC) > lineA) return false;
-  if (lineA + lineC < lineB) return false;
-    else if (Math.abs(ineA - lineC) > lineB) return false;
+  let ab = lineA + lineB;
+  let ac = lineA + lineC;
+  let bc = lineB + lineC;
+  let aMenosb = Math.abs(lineA - lineB);
+  let aMenosc = Math.abs(lineA - lineC);
+  let bMenosc = Math(lineB - lineC);
+  if ( ab < lineC) return false;
+    else if (aMenosb > lineC) return false;
+  if (bc < lineA) return false;
+    else if (bMenosc > lineA) return false;
+  if (ac < lineB) return false;
+    else if (aMenosc > lineB) return false;
   return true;
 }
 
