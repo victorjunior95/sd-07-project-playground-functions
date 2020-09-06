@@ -19,14 +19,14 @@ function calcArea(base, height) {
   let b = height;
   let area = 0;
   area = ((a * b) / 2);
-  return area;
+ return area;
 }
 
 // Desafio 3
 function splitSentence(param) {
   let string = param;
-  let retorno = string.split(" ")
-  return retorno; 
+  let retorno = string.split('');
+return retorno; 
 }
 
 // Desafio 4
