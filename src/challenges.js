@@ -226,12 +226,25 @@ function triangleCheck(lineA,lineB,lineC) {
     return false;
   }
 }
-console.log(triangleCheck(10,14,8));
+// console.log(triangleCheck(10,14,8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let expression = /\d+/g;
+  let numberString = string.match(expression);
+  let count = 0;
+
+  for (let i = 0; i < numberString.length; i += 1) {
+    count += parseInt(numberString[i]);
+  }
+
+  if(count < 2) {
+  return `${count} copo de água`;
+  } else if (count > 1){
+    return `${count} copos de água`;
+  }
 }
+console.log(hydrate("2 cerveja e 1 vinho"));
 
 module.exports = {
   calcArea,
