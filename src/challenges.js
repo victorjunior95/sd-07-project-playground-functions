@@ -91,27 +91,27 @@ function fizzBuzz(param) {
     if (matriz[i] % 3 === 0 && matriz[i] % 5 === 0) {
       retorno.push('fizzBuzz');
     } else if (matriz[i] % 3 === 0) {
-        retorno.push('fizz');
+      retorno.push('fizz');
     } else if (matriz[i] % 5 === 0) {
       retorno.push('buzz')
     } else {
       retorno.push('bug!')
     }
   }
-    return retorno;
+  return retorno;
 }
 
 // Desafio 9
 function encode(nome) {
   let newPalavra = [];
-  for (let i = 0; i < nome.length; i += 1){
+  for (let i = 0; i < nome.length; i += 1) {
     newPalavra.push(nome[i]);
   }
   for (let i = 0; i < newPalavra.length; i += 1) {
     if (newPalavra[i] === 'a') {
       newPalavra[i] = '1';
     } else if (newPalavra[i] === 'e') {
-      new_palavra[i] = '2';
+      newPalavra[i] = '2';
     } else if (newPalavra[i] === 'i') {
       newPalavra[i] = '3';
     } else if (newPalavra[i] === 'o') {
@@ -123,10 +123,10 @@ function encode(nome) {
   newPalavra = newPalavra.join('').toString();
   return newPalavra;
 }
-function decode(nome) {
+function decode(nome1) {
   let newPalavra1 = [];
-  for (let i = 0; i < nome.length; i += 1) {
-    newPalavra1.push(nome[i]);
+  for (let i = 0; i < nome1.length; i += 1) {
+    newPalavra1.push(nome1[i]);
   }
   for (let i = 0; i < newPalavra1.length; i += 1) {
     if (newPalavra1[i] === '1') {
@@ -151,7 +151,7 @@ function techList(tech, name) {
   let nome = name;
   let tecRetorno = [];
   let x;
-  if (tecnologia.length == 0) {
+  if (tecnologia.length === 0) {
     tecRetorno = 'Vazio!';
   } else {
     for (let i = 0; i < tecnologia.length; i += 1) {
@@ -167,7 +167,7 @@ function techList(tech, name) {
       }
     }
   }
-  return tec_retorno;
+  return tecRetorno;
 }
 
 // Desafio 11
