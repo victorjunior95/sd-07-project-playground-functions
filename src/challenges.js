@@ -1,11 +1,9 @@
 // Desafio 1
-function compareTrue(boolean_1, boolean_2) {
-  if (boolean_1 && boolean_2) {
-    return true;
-  } else {
-    return false;
-  }
+function compareTrue(firstBoolean, secondBoolean) {
+  return (firstBoolean && secondBoolean) ? true : false;
 }
+
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
