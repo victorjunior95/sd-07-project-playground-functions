@@ -243,8 +243,15 @@ function triangleCheck(number1,number2,number3) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  const busca = /\d+/g;
+  const saida = string.match(busca)
+  let listint = []
+  for(let i in saida){
+    listint.push(Number(saida[i]))
+  }
+let soma = listint.reduce((prevnumber, refer) => { return prevnumber + refer},0)
+return soma
 }
 
 
