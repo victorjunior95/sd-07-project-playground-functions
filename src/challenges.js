@@ -139,11 +139,11 @@ return resultado;
 //console.log(result);
 
 // Desafio 9
-let texto = "hi there"
+let texto = "hi there";
 let codificado ="";
 let crypto="";
-function encode(txt) {
-  // seu código aqui
+function encode(texto) {
+   // seu código aqui
    for (let i in texto){
      let letra = texto[i];
     switch(letra){
@@ -174,16 +174,16 @@ function encode(txt) {
   }   
   return codificado;
 }
-//let result = encode(texto);
-//console.log("Mensagem criptografada: "+result);
+let result1 = encode(texto);
+console.log("Mensagem criptografada: "+result1);
 
 let txtCodificado = "h3 th2r2";
 let mensagem ="";
-let letraCrypto;
-function decode(txt) {
+let letraCrypto="";
+function decode(txtCodificado) {
   // seu código aqui
    for (let i in txtCodificado){
-    let letraCrypto = txtCodificado[i];
+     letraCrypto = txtCodificado[i];
    switch(letraCrypto){
      case "1":
       letraCrypto = "a";
@@ -212,8 +212,8 @@ function decode(txt) {
  }   
  return mensagem;
 }
-//let result = decode(txtCodificado);
-//console.log("Mensagem decodificada: "+result);
+let result2 = decode(txtCodificado);
+console.log("Mensagem decodificada: "+result2);
 
 // Desafio 10
 function techList() {
