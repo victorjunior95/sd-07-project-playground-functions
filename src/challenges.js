@@ -139,7 +139,7 @@ return resultado;
 //console.log(result);
 
 // Desafio 9
-let texto = "hi there";
+//let texto = "hi there";
 let codificado ="";
 let crypto="";
 function encode(texto) {
@@ -174,10 +174,10 @@ function encode(texto) {
   }   
   return codificado;
 }
-let result1 = encode(texto);
-console.log("Mensagem criptografada: "+result1);
+//let result1 = encode(texto);
+//console.log("Mensagem criptografada: "+result1);
 
-let txtCodificado = "h3 th2r2";
+//let txtCodificado = "h3 th2r2";
 let mensagem ="";
 let letraCrypto="";
 function decode(txtCodificado) {
@@ -212,8 +212,8 @@ function decode(txtCodificado) {
  }   
  return mensagem;
 }
-let result2 = decode(txtCodificado);
-console.log("Mensagem decodificada: "+result2);
+//let result2 = decode(txtCodificado);
+//console.log("Mensagem decodificada: "+result2);
 
 // Desafio 10
 function techList() {
