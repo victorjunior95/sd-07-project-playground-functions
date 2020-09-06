@@ -125,25 +125,25 @@ function encode(frase) {
 function decode(str) {
   // seu código aqui
   var frase = '';
-  for (var i = 0; i < frase.length; i += 1) {
-    if (frase[i] == 1) {
-      str += `a`;
+  for (var i = 0; i < str.length; i += 1) {
+    if (str[i] == 1) {
+      frase += `a`;
       i = i + 1;
     }
-    if (frase[i] == 2) {
-      str += `e`;
+    if (stsr[i] == 2) {
+      frase += `e`;
       i = i + 1;
     }
-    if (frase[i] == 3) {
-      str += `i`;
+    if (str[i] == 3) {
+      frase += `i`;
       i = i + 1;
     }
-    if (frase[i] == 4) {
-      str += `o`;
+    if (str[i] == 4) {
+      frase += `o`;
       i = i + 1;
     }
-    if (frase[i] == 5) {
-      str += `u`;
+    if (str[i] == 5) {
+      frase += `u`;
       i = i + 1;
     }
     if (i >= str.length) { break }
