@@ -142,8 +142,8 @@ function negativeNumber(array) {
   let result = 0;
   for (let i in array) {
     if (array[i] < 0) {
-        result += 1;
-      }
+      result += 1;
+    }
   }
   return result;
 }
@@ -151,13 +151,13 @@ function biggerThanNine(array) {
   let check = 0;
   for (let i in array) {
     if (array[i] > 9) {
-        check += 1;
-      }
+      check += 1;
+    }
   }
   return check;
 }
 function generatePhoneNumber(array) {
-  let string ='';
+  let string = '';
   if (array.length !== 11 || array.length === 0) {
     return 'Array com tamanho incorreto.';
   }
@@ -165,9 +165,9 @@ function generatePhoneNumber(array) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   string = array.join('');
-          string = string.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-          return string;
-  }
+  string = string.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  return string;
+}
 
 // Desafio 12
 function triangleCheck() {
