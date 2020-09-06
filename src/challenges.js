@@ -26,7 +26,7 @@ console.log(splitSentence("go trybe"))
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  return stringFinal = arrayDeStrings[arrayDeStrings.length - 1] + ' , ' + arrayDeStrings[0]
+  return stringFinal = arrayDeStrings[arrayDeStrings.length - 1] + ', ' + arrayDeStrings[0]
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
@@ -52,7 +52,7 @@ function highestCount(arrayOfNumbers) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
