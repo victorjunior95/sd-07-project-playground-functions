@@ -89,18 +89,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function changeNumbersForWords(number) {
+  fizzB = number % 3 === 0 && number % 5 === 0;
+  buzz = number % 5 === 0;
+  fizz = number % 3 === 0;
+  switch (true) {
+    case fizzB:
+      return 'fizzBuzz';
+      break;
+    case buzz:
+      return 'buzz';
+      break;
+    case fizz:
+      return 'fizz';
+      break;
+    default:
+      return 'bug!';
+  }
+}
 function fizzBuzz(arrayNumbers) {
   let result = [];
-  for (let number in arrayNumbers) {
-    if (arrayNumbers[number] % 3 === 0 && arrayNumbers[number] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (arrayNumbers[number] % 3 === 0) {
-      result.push('fizz');
-    } else if (arrayNumbers[number] % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    result.push(changeNumbersForWords(arrayNumbers[i]));
   }
   return result;
 }
@@ -219,10 +229,33 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  let caseTest = 0;
+  let lines = [];
+  lines.push(lineA, lineB, lineC);
+  let lineX = 0;
+  let lineY = 0;
+  let lineZ = 0;
+  let x = 0;
+  let y = 1;
+  let z = 2;
+  for (let i = 0; i < 3; i += 1) {
+    lineX = lines[x];
+    lineY = lines[y];
+    lineZ = lines[z];
+    if (lineX < lineY + lineZ && lineX > Math.abs(lineY - lineZ)) {
+      caseTest += 1;
+    }
+    x += 1;
+    y -= 1 + i * -1;
+    z -= 1 + i * -1;
+  }
+  if (caseTest === 3) {
+    result = true;
+  }
+  return result;
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
