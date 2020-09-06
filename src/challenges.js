@@ -100,22 +100,22 @@ function encode(stringToEncode) {
 function decode(stringToDecode) {
   let codedString = stringToDecode.split('');
 
-  for (let character in codedString) {
-    switch (codedString[character]) {
+  for (let character of codedString) {
+    switch (character) {
       case '1':
-        codedString[character] = 'a';
+        character = 'a';
         break;
       case '2':
-        codedString[character] = 'e';
+        character = 'e';
         break;
       case '3':
-        codedString[character] = 'i';
+        character = 'i';
         break;
       case '4':
-        codedString[character] = 'o';
+        character = 'o';
         break;
       case '5':
-        codedString[character] = 'u';
+        character = 'u';
         break;
     }
   }
