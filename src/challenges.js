@@ -131,27 +131,28 @@ function repeatNumber(array) {
   for (let i = 0; i < array1.length; i += 1) {
     let number = array1[i];
     if (number === array1[i + 1]) {
-          if (array1[i + 1] === array1[i + 2]) {
-              strike += 2;
-            }
-        }
+      if (array1[i + 1] === array1[i + 2]) {
+            strike += 2;
+          }
+    }
   }
   return strike;
 }
 function negativeNumber(array) {
-    let result = 0;
-      for (let i in array) {
-        if (array[i] < 0){
+  let result = 0;
+    for (let i in array) {
+    if (array[i] < 0) {
           result += 1;
         }
       }
-      return check;
-  }
-  function biggerThanNine(array) {
-      let check = 0;
-      for (let i in array) {
-          if(array[i] > 9)
+    return result;
+}
+function biggerThanNine(array) {
+    let check = 0;
+    for (let i in array) {
+        if (array[i] > 9) {
           check += 1;
+        }
       }
       return check;
   }
