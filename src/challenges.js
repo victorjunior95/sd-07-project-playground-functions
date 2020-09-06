@@ -48,9 +48,24 @@ console.log(splitSentence("ola trybe"))
 
 
 // Desafio 4
-function concatName() {
+namesArray = ['jesus', 'lucio', 'palli', 'ururi', 'elias', 'hermenegildo']
+function concatName(namesArray) {
   // seu código aqui  
+  return [namesArray[namesArray.length-1], namesArray[0]];
 }
+console.log(concatName(namesArray))
+
+
+array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+function concatName(array) {
+  // seu código aqui  
+  return [array[array.length-1], array[0]];
+}
+
+console.log(concatName(array))
+
+
+
 
 // Desafio 5
 function footballPoints() {
