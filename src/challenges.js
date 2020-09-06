@@ -28,9 +28,7 @@ console.log(splitSentence("go trybe"))
 function concatName(arrayDeStrings) {
   return stringFinal = arrayDeStrings[arrayDeStrings.length - 1] + ' , ' + arrayDeStrings[0]
 }
-
-let arrayDeStrings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-console.log(concatName(arrayDeStrings))
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -46,12 +44,12 @@ function highestCount(arrayOfNumbers) {
   let largestNumber = Math.max.apply(null, arrayOfNumbers);
   let count = 0
   for (j = 0; j < arrayOfNumbers.length; j += 1) {
-      if (arrayOfNumbers[j] == largestNumber) {
-          count++;
-      }
+    if (arrayOfNumbers[j] == largestNumber) {
+      count++;
+    }
   } return count
 }
-  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
