@@ -37,37 +37,22 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbersArray) {
-  // let counter = 0;
-  // let highNumber = numbersArray[0];
-  // for (let i in numbersArray) {
-  //   if (numbersArray[i] > highNumber) {
-  //     highNumber = numbersArray[i];
-  //   }
-  // }
-
-  // for (let j in numbersArray) {
-  //   if (numbersArray[j] === highNumber) {
-  //     counter += 1;
-  //   }
-  // }
-  // return counter;
-  function highNumber() {
-    let highNumber = numbersArray[0];
-    for (let i in numbersArray) {
-      if (numbersArray[i] > highNumber) {
-        highNumber = numbersArray[i];
+  let counter = 0;
+  let highNumber = numbersArray[0];
+  
+  for (let i in numbersArray) {
+    for (let j in numbersArray) {
+      if (numbersArray[j] > highNumber) {
+        highNumber = numbersArray[j];
       }
     }
-    return highNumber;  
-  }
 
-  let counter = 0;
-  for (let j in numbersArray) {
-    if (numbersArray[j] === highNumber()) {
+    if (numbersArray[i] === highNumber) {
       counter += 1;
     }
   }
-  return counter;   
+  
+  return counter;
 }
 
 // Desafio 7
@@ -89,20 +74,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(evenOddArray) {
-  let divisible;
   let array = [];
 
   for (let i in evenOddArray) {
     if (evenOddArray[i] % 3 === 0 && evenOddArray[i] % 5 === 0) {
-      divisible = 'fizzBuzz';
+      evenOddArray[i] = 'fizzBuzz';
     } else if (evenOddArray[i] % 3 === 0) {
-      divisible = 'fizz'; 
+      evenOddArray[i]= 'fizz';
     } else if (evenOddArray[i] % 5 === 0) {
-      divisible = 'buzz';
+      evenOddArray[i] = 'buzz';
     } else {
-      divisible = 'bug!';
+      evenOddArray[i] = 'bug!';
     }
-    array.push(divisible);
+    array.push(evenOddArray[i]);
   }
 
   return array;
@@ -110,55 +94,52 @@ function fizzBuzz(evenOddArray) {
 
 // Desafio 9
 function encode(string1) {
-  //Objetc destructing: inicializando um objeto
-  let letters = {'a':'1', 'e':'2', 'i':'3', 'o':'4', 'u':'5'}; 
-  //Método .replace() com uma 'regular expression', permitindo encontrar qlqr uma das alternativas(|), de maneira global(g), que será substrituído por meio de uma arrow function que chama o objeto criado acima
+  // Objetc destructing: inicializando um objeto
+  let letters = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  // Método .replace() com 'regular expression', pra encontrar qlqr das alternativas(|), de maneira global(g), que será substituído por meio de uma arrow function chamando o objeto
   let encodeString = string1.replace(/a|e|i|o|u/g, match => letters[match]);
+  
   return encodeString;
 }
 
 function decode(string2) {
   let numbers = {
-    '1':'a', 
-    '2':'e', 
-    '3':'i', 
-    '4':'o', 
-    '5':'u'
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
   };
-  let decodeString = string2.replace(/1|2|3|4|5/g, function(matched){
+  let decodeString = string2.replace(/1|2|3|4|5/g, function subs(matched) {
     return numbers[matched];
   });
+
   return decodeString;
-  // for (let i in string2) {
-  //   if (string2[i] === '1') {
-  //     letter = 'a';
-  //     decodeString += letter;
-  //   } else if (string2[i] === '2') {
-  //     letter = 'e';
-  //     decodeString += letter;
-  //   } else if (string2[i] === '3') {
-  //     letter = 'i';
-  //     decodeString += letter;
-  //   } else if (string2[i] === '4') {
-  //     letter = 'o';
-  //     decodeString += letter;
-  //   } else if (string2[i] === '5') {
-  //     letter = 'u';
-  //     decodeString += letter;
-  //   } else {
-  //     letter = string2[i];
-  //     decodeString += letter;
-  //   }
-  // }
 }
 
 // Desafio 10
 function techList(techArray, name) {
-  // let newTechArray = techArray.sort();
-  // let techObject = {};
-  // for (let i in techArray){
+  let newTechArray = techArray.sort();
+  let array = [];
+
+  if (newTechArray.length === 0) {
+    techObject = 'Vazio';
+  } else {
+
+    for (let i in newTechArray){
+      let techObject = {
+        tech: newTechArray[i],
+        name: name
+      };
+      
+      array.push(techObject);
+      // array.push(Object.assign({}, techObject));
+    }
     
-  // }
+    techObject = array;
+  }
+  
+  return techObject;
 }
 
 // Desafio 11
