@@ -138,7 +138,7 @@ function fizzBuzz(a) {
   }
   return message;
 }
-console.log(fizzBuzz(dataFizzBuzz))
+fizzBuzz(dataFizzBuzz)
 
 // Desafio 9
 let paramString = 'Go Tribe'
@@ -224,6 +224,18 @@ techList(ArrayTechsList, nameOut)
 
 // Desafio 11
 let numbersForPhones = [1, 2, 3, 4, 4, 5, 6, 7, 1, 8, 9]
+function checkNumbers(a) {
+  let countRepeated = 0;
+  for (let i = 0; i < a.length; i += 1) {
+    let searching = a[i]
+    for (let j = 0; j < a.length; j += 1) {
+      if (a[j] === searching) countRepeated += 1
+      if (countRepeated >= 3) return 'não é possível gerar um número de telefone com esses valores'
+    }
+  countRepeated = 0
+  }
+  return countRepeated
+}
 function generatePhoneNumber(a) {
   // seu código aqui
   if (a.length !== 11) {
@@ -234,20 +246,12 @@ function generatePhoneNumber(a) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  let countRepeated = 0;
-  for (let i = 0; i < a.length; i += 1) {
-    let searching = a[i]
-    for (let j = 0; j < a.length; j += 1) {
-      if (a[j] === searching) countRepeated += 1
-      if (countRepeated >= 3) return 'não é possível gerar um número de telefone com esses valores'
-    }
-    countRepeated = 0
-  }
+  let checkRepeat = checkNumbers(a)
   // Declaração em template literal
   let phoneComplete = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`
-  return phoneComplete
+  return checkRepeat < 2 ? phoneComplete : checkRepeat
 }
-generatePhoneNumber(numbersForPhones)
+console.log(generatePhoneNumber(numbersForPhones))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
