@@ -63,62 +63,65 @@ function footballPoints(wins, ties) {
 }
 
 // // Desafio 6
-// function highestCount() {
-//   // seu código aqui
-// }
+/* Escreva uma função chamada highestCountque, ao receber uma matriz de números, retorne a quantidade de vezes que o maior deles se repete.
 
-// // Desafio 7
-// function catAndMouse() {
-//   // seu código aqui
-// }
+Exemplo: caso o parâmetro de highestCountseja uma matriz com valores [9, 1, 2, 3, 9, 5, 7], uma função deve retornar 2, que é a quantidade de vezes que o número 9(maior número da matriz) se repete. */
+function highestCount() {
+  // seu código aqui
+}
 
-// // Desafio 8
-// function fizzBuzz() {
-//   // seu código aqui
-// }
+// Desafio 7
+function catAndMouse() {
+  // seu código aqui
+}
 
-// // Desafio 9
-// function encode() {
-//   // seu código aqui
-// }
-// function decode() {
-//   // seu código aqui
-// }
+// Desafio 8
+function fizzBuzz() {
+  // seu código aqui
+}
 
-// // Desafio 10
-// function techList() {
-//   // seu código aqui
-// }
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
 
-// // Desafio 11
-// function generatePhoneNumber() {
-//   // seu código aqui
-// }
+// Desafio 10
+function techList() {
+  // seu código aqui
+}
 
-// // Desafio 12
-// function triangleCheck() {
-//   // seu código aqui
-// }
+// Desafio 11
+function generatePhoneNumber() {
+  // seu código aqui
+}
 
-// // Desafio 13
-// function hydrate() {
-//   // seu código aqui
-// }
+// Desafio 12
+function triangleCheck() {
+  // seu código aqui
+}
+
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
 
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   generatePhoneNumber,
-//   techList,
-//   highestCount,
-//   hydrate,
-//   splitSentence,
-//   triangleCheck,
-// }
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
