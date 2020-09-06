@@ -123,26 +123,14 @@ let resultado =[];
 function fizzBuzz(n) {
   // seu código aqui
   for (let i in numbers){
-    if(numbers[i] % 3 ===0 && numbers[i] % 5 ===0){
-      console.log(numbers[i]);
-      console.log("fizzBuzz");
-      resultado.push("fizzBuzz"); 
-    }
-    else if(numbers[i] % 3 ===0){
-      console.log(numbers[i]);
-      console.log("fizz");
-       resultado.push("fizz");
-    }
-    else if(numbers[i] % 5 ===0){
-      console.log(numbers[i]);
-      console.log("buzz");
-       resultado.push("buzz");
-    }
-          
-    else{
-      console.log(numbers[i]);
-      console.log("bug!");
-      resultado.push("bug!");
+    if(numbers[i] % 3===0 && numbers[i] % 5===0){
+      resultado.push("fizzBuzz");
+    }else if(numbers[i] % 3===0){
+      resultado.push("fizz");
+    }else if(numbers[i] % 5===0){
+      resultado.push("buzz");
+    }else{
+     resultado.push("bug!");
     }    
 }
 return resultado;
