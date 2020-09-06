@@ -139,17 +139,12 @@ function repeatNumber(array) {
   return strike;
 }
 function negativeAndBiggerThanNineNumber(array) {
-  let negative = 0;
-  let biggerThan = 0;
+  let result = 0;
     for (let i in array) {
-    if (array[i] < 0) {
-      negative += 1;
+    if (array[i] < 0 || array[i] > 9 ) {
+      result += 1
     }
-    if (array[i] > 9) {
-      biggerThan += 1;
     }
-    let result = (negative >=1 || biggerThan >=1) ? true : false;
-  }
   return result;
 }
 function generatePhoneNumber(array) {
@@ -157,7 +152,7 @@ function generatePhoneNumber(array) {
   if (array.length !== 11 || array.length === 0) {
     return 'Array com tamanho incorreto.';
   }
-  if (repeatNumber(array) >= 3 || negativeAndBiggerThanNineNumber(array) === true) {
+  if (repeatNumber(array) >= 3 || negativeAndBiggerThanNineNumber(array) >=1) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   string = array.join('');
