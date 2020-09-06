@@ -119,7 +119,7 @@ function encodeDecode(palavras, vogais) {
   }
   return igual.join('');
 }
-
+//console.log(encode("hi there!"));
 function encode(palavras) {
   let vogais = {
     a: 1,
@@ -214,10 +214,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+function contador(count) {
+  let result = '';
+  if (count === 0) {
+    result = 'Não bebeu nada!';
+  } else if (count > 1) {
+    result = `${count} copos de água`;
+  } else {
+    result = `${count} copo de água`;
+  }
+  return result;
+}
 function hydrate(bebidas) {
   let drink = bebidas
   let count = 0;
-  let result = '';
   let reg = /\d+/g;
   let num = drink.match(reg);
   if (num === null) {
@@ -228,14 +238,7 @@ function hydrate(bebidas) {
       count += parseInt(i, 10);
     }
   }
-  if (count === 0) {
-    result = 'Não bebeu nada!';
-  } else if (count > 1) {
-    result = `${count} copos de água`;
-  } else {
-    result = `${count} copo de água`;
-  }
-  return result;
+  return contador(count);
 }
 
 module.exports = {
