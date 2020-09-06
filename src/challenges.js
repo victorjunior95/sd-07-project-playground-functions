@@ -129,7 +129,7 @@ function fizzBuzz(n) {
        resultado.push("buzz");
     }   
     else{
-      resultado.push("bug");
+      resultado.push("bug!");
     }    
 }
 return resultado;
