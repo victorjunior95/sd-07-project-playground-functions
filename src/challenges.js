@@ -70,26 +70,28 @@ function fizzBuzz(array) {
   let string = [];
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-        string.push('fizzBuzz');
-      } else if (array[i] % 3 === 0) {
+      string.push('fizzBuzz');
+    } else if (array[i] % 3 === 0) {
         string.push('fizz');
       } else if (array[i] % 5 === 0) {
         string.push('buzz');
       } else {
         string.push('bug!');
       }
-    }
+  }
   return string;
 }
 
 // Desafio 9
 function encode(string) {
-  let vogais = ['a', 'e' , 'i', 'o', 'u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let indice = 1;
   for (let i in vogais) {
+    if (vogais.length !== 0) {
       let regex = new RegExp(vogais[i], 'g');
       string = string.replace(regex, indice);
       indice += 1;
+    }
   }
   return string;
 }
@@ -97,10 +99,12 @@ function decode(string) {
   let vogais = ['a', 'e' , 'i', 'o', 'u'];
   let indice = 1;
   for (let i in vogais) {
+    if (vogais.length !== 0) {
       let regex = new RegExp(indice, 'g');
       string = string.replace(regex, vogais[i]);
       indice += 1;
   }
+}
   return string;
 }
 
@@ -168,7 +172,7 @@ function absolut(a, b) {
   return Math.abs(a - b);
 }
 
-function checkSumTriangule(lineA, lineB, lineC) {
+function checkSum(lineA, lineB, lineC) {
   if (sum(lineA, lineB) > lineC) {
       if (sum(lineA, lineC) > lineB) {
           if (sum(lineB, lineC) > lineA) {
@@ -179,7 +183,7 @@ function checkSumTriangule(lineA, lineB, lineC) {
       return false;
   }
 }
-function checkAbsolutTriangule(lineA, lineB, lineC) {
+function checkAbs(lineA, lineB, lineC) {
   if (absolut(lineA, lineB) < lineC) {
       if (absolut(lineA, lineC) < lineB) {
           if (absolut(lineB, lineC) < lineA){
@@ -191,7 +195,7 @@ function checkAbsolutTriangule(lineA, lineB, lineC) {
   }
 }
 function triangleCheck(lineA, lineB, lineC) {
-  let result = (checkSumTriangule(lineA, lineB, lineC) === true && checkAbsolutTriangule(lineA, lineB, lineC));
+  let result = (checkSum(lineA, lineB, lineC) === true && checkAbs(lineA, lineB, lineC));
   return result;
 }
 
