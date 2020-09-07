@@ -77,7 +77,7 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(tecs, name) {
   if(tecs.length === 0) {
     return 'Vazio!';
   }
