@@ -54,11 +54,11 @@ function highestCount(numeros) {
     }
   }
   let contRepet = 0;
-    for (let i in numeros) {
-  if (numeros[i] === numeros[idcMaior]) {
-    contRepet += 1;
-  }
-  }
+  for (let i in numeros) {
+      if (numeros[i] === numeros[idcMaior]) {
+        contRepet += 1;
+      }
+    }
   return contRepet;
 }
 // Desafio 7
@@ -73,8 +73,8 @@ function catAndMouse(mouse, cat1, cat2) {
   distanceAbs1 = Math.abs(positions[0] - positions[1]);
   distanceAbs2 = Math.abs(positions[0] - positions[2]);
   if (distanceAbs1 === distanceAbs2) {
-      result = 'os gatos trombam e o rato foge';
-    }
+    result = 'os gatos trombam e o rato foge';
+  }
   if (distanceAbs1 < distanceAbs2) {
     result = 'cat1';
   }
@@ -89,8 +89,8 @@ function fizzBuzz(vetor) {
   let result = [];
   for (let i in numeros) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-    result.push('fizzBuzz');
-  } else if (numeros[i] % 15 === 0) {
+      result.push('fizzBuzz');
+    } else if (numeros[i] % 15 === 0) {
     result.push('fizzBuzz');
   } else if (numeros[i] % 5 === 0) {
     result.push('buzz');
@@ -146,15 +146,15 @@ function techList(vetor, name) {
   if (vetor.length < 1 || vetor === null || vetor === undefined) {
     result = 'Vazio!';
     return result;
-  } 
+  }
   for (let i in vetor) {
     if (vetor !== null || vetor !== undefined) {
       let lista = {
-          tech: vetor[i],
-          name: name,
+        tech: vetor[i],
+        nm: name,
       }
     colecao.push(lista);
-  }
+      }
   }
   return colecao.sort(function (a, b) {
     if (a.tech < b.tech) return -1;
@@ -165,20 +165,22 @@ function techList(vetor, name) {
 // Desafio 11
 function generatePhoneNumber(vetor) {
   let countRepeat = vetor.filter((e, i, a) => a.indexOf(e) !== i);
-  countRepeat.sort(function (a, b) { return a - b }); 
+  countRepeat.sort(function (a, b) { return a - b });
   let contagemReal = 0;
   let confere = 0;
   for (let i = 0; i < countRepeat.length; i += 1) {
     if (countRepeat[i] === countRepeat[i + 1] || countRepeat[i] === countRepeat[i + 2]) {
       contagemReal = 3;
-    } }
+    } 
+  }
   for (let i in vetor) {
-    if (vetor[i] > 9 || vetor[i] < 0) { confere += 1 } };
+    if (vetor[i] > 9 || vetor[i] < 0) { confere += 1 }
+  }
   if (vetor.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (contagemReal >= 3 || confere !== 0) {
-          return 'não é possível gerar um número de telefone com esses valores';
-        } 
+    return 'não é possível gerar um número de telefone com esses valores';
+  } 
   vetor.splice(0, 0, '(');
   vetor.splice(3, 0, ')');
   vetor.splice(4, 0, ' ');
@@ -215,8 +217,8 @@ function hydrate(corda) {
     somaAgua += cordaDividida[i] * 1;
   }
   if (somaAgua === 1) {
-  return `${somaAgua} copo de água`;
-}
+    return `${somaAgua} copo de água`;
+  }
   return `${somaAgua} copos de água`;
 }
 module.exports = {
