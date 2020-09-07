@@ -134,7 +134,6 @@ function encode(paramString) {
   }
   return newString;
 }
-
 function decode(paramString2) { // .replace é uma função para strings
   let newString2 = paramString2; // onde tiver 1, substitua por a
   newString2 = newString2.replace(/1/g, 'a'); // Sem g, ele só substitui só o 1º 1 que encontrar
@@ -144,7 +143,7 @@ function decode(paramString2) { // .replace é uma função para strings
   newString2 = newString2.replace(/5/g, 'u');
   return newString2;
 }
-console.log(encode("hi there"));
+
 // Desafio 10
 function techList(tech, firstName) {
   let endList = [];
@@ -204,7 +203,7 @@ function generatePhoneNumber(phone) {
     answer = suport11(phone);
   }
   lastReturn = answer;
-  return lastReturn;
+  return repeat;
 }
 
 // Desafio 12
