@@ -93,11 +93,26 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let enc = '';
+  enc = text.replace(/a/g, "1");
+  enc = enc.replace(/e/g, "2");
+  enc = enc.replace(/i/g, "3");
+  enc = enc.replace(/o/g, "4");
+  enc = enc.replace(/u/g, "5");
+  
+  return enc;
 }
-function decode() {
-  // seu código aqui
+
+function decode(text) {
+  let enc = '';
+  enc = text.replace(/1/g, "a");
+  enc = enc.replace(/2/g, "e");
+  enc = enc.replace(/3/g, "i");
+  enc = enc.replace(/4/g, "o");
+  enc = enc.replace(/5/g, "u");
+  
+  return enc;
 }
 
 // Desafio 10
