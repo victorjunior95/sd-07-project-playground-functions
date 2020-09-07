@@ -41,16 +41,14 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 > cat2 && cat1 < mouse) {
-    return 'cat1';
-  } else if (cat2 > cat1 && cat2 < mouse) {
-    return 'cat2';
-  } else if (cat1 < cat2 && cat1 > mouse) {
-    return 'cat1';
-  } else if (cat2 < cat1 && cat2 > mouse) {
-    return 'cat2';
-  } else if (cat1 === cat2) {
+  let gato1Dist = Math.abs(cat1 - mouse);
+  let gato2Dist = Math.abs(cat2 - mouse);
+  if (gato1Dist === gato2Dist) {
     return 'os gatos trombam e o rato foge';
+  } else if (gato1Dist > gato2Dist) {
+    return 'cat1';
+  } else if (gato2Dist > gato1Dist) {
+    return 'cat2';
   }
 }
 
