@@ -50,7 +50,7 @@ function concatName(names) {
   let firstName = names[0];
   let lastName = names[names.length -1];
 
-  console.log("ÚLTIMO ITEM: " + lastName + " | PRIMEIRO ITEM: " + firstName);
+  console.log(lastName + ", " + firstName);
   return lastName, firstName;
 }
 
