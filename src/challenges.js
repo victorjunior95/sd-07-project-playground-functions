@@ -40,7 +40,7 @@ function splitSentence(inputString) {
   return arrayOfStrings;
 }
 
-// Desafio 4 --- Não funcionou!!!
+// Desafio 4
 concatName(['Lucas','Cassiano','Ferraz','Paolillo']);
 
 function concatName(names) {
@@ -50,8 +50,9 @@ function concatName(names) {
   let firstName = names[0];
   let lastName = names[names.length -1];
 
-  console.log(lastName + ", " + firstName);
-  return lastName, firstName;
+  let resultName = lastName + ", " + firstName;
+  console.log(resultName);
+  return resultName;
 }
 
 // Desafio 5
