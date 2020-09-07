@@ -4,7 +4,7 @@ function compareTrue(n1, n2) {
   if (n1 && n2) {
     return true;
   }
-  return false
+  return false;
 }
 
 // Desafio 2
@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   // seu código aqui
-  return sentence.split(' ');
+  return sentence.split(" ");
 }
 
 // Desafio 4
@@ -27,7 +27,7 @@ function concatName(array) {
   let firstItem = array[0];
   let lastItem = array[array.length - 1];
 
-  return `${lastItem}, ${firstItem}`
+  return `${lastItem}, ${firstItem}`;
 }
 
 // Desafio 5
@@ -68,11 +68,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let catOne = Math.abs(cat1 - mouse);
   let catTwo = Math.abs(cat2 - mouse);
   if (catOne < catTwo) {
-    return 'cat1';
+    return "cat1";
   } else if (catOne > catTwo) {
-    return 'cat2';
+    return "cat2";
   }
-  return 'os gatos trombam e o rato foge';
+  return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
@@ -81,13 +81,13 @@ function fizzBuzz(numbers) {
   let arrayStrings = [];
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
-      arrayStrings.push('fizz');
+      arrayStrings.push("fizz");
     } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
-      arrayStrings.push('buzz');
+      arrayStrings.push("buzz");
     } else if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-      arrayStrings.push('fizzBuzz');
+      arrayStrings.push("fizzBuzz");
     } else {
-      arrayStrings.push('bug!');
+      arrayStrings.push("bug!");
     }
   }
   return arrayStrings;
@@ -104,10 +104,16 @@ function encode(number) {
     u: 5,
   };
   // let naturalNumbers = [];
-  let stringWithNumbers = '';
+  let stringWithNumbers = "";
 
   for (let indice in number) {
-    if (number[indice] === 'a' || number[indice] === 'e' || number[indice] === 'i' || number[indice] === 'o' || number[indice] === 'u') {
+    if (
+      number[indice] === "a" ||
+      number[indice] === "e" ||
+      number[indice] === "i" ||
+      number[indice] === "o" ||
+      number[indice] === "u"
+    ) {
       stringWithNumbers += letter[number[indice]];
     } else {
       stringWithNumbers += number[indice];
@@ -118,11 +124,11 @@ function encode(number) {
 
 function decode(letter) {
   // seu código aqui
-  letter = letter.replace(/1/gi, 'a');
-  letter = letter.replace(/2/gi, 'e');
-  letter = letter.replace(/3/gi, 'i');
-  letter = letter.replace(/4/gi, 'o');
-  letter = letter.replace(/5/gi, 'u');
+  letter = letter.replace(/1/gi, "a");
+  letter = letter.replace(/2/gi, "e");
+  letter = letter.replace(/3/gi, "i");
+  letter = letter.replace(/4/gi, "o");
+  letter = letter.replace(/5/gi, "u");
   return letter;
 }
 
@@ -136,32 +142,16 @@ function techList(tec, names) {
       tecnologies.push({ tech: tec[i], name: names });
     }
   } else {
-    return 'Vazio!';
+    return "Vazio!";
   }
   return tecnologies;
 }
 
 // Desafio 11
-function generatePhoneNumber(number) {
-  // seu código aqui
-  let phone = checkNumber(number);
-  if (phone === 3) {
-    return "não é possível gerar um número de telefone com esses valores";
-  } else if (phone.length !== 11){
-    return "Array com tamanho incorreto.";
-  }
-  for (let index in phone) {
-    if (phone[index] < 0 || phone[index] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
-    }    
-  }  
-    return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
-}
-
 function checkNumber(number) {
   let nRepeticoes = 0;
   let contador = 0;
-    for (let i = 0; i < number.length; i += 1) {
+  for (let i = 0; i < number.length; i += 1) {
     let nAtual = number[i];
     for (let k = 0; k < number.length; k += 1) {
       if (nAtual === number[k]) {
@@ -175,9 +165,24 @@ function checkNumber(number) {
   }
   if (nRepeticoes >= 3) {
     return 3;
-  } else {
-    return number;
+  } 
+  return number;  
+}
+
+function generatePhoneNumber(number) {
+  // seu código aqui
+  let phone = checkNumber(number);
+  if (phone === 3) {
+    return "não é possível gerar um número de telefone com esses valores";
+  } else if (phone.length !== 11) {
+    return "Array com tamanho incorreto.";
   }
+  for (let index in phone) {
+    if (phone[index] < 0 || phone[index] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
 }
 
 // Desafio 12
@@ -189,7 +194,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
@@ -206,4 +210,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
