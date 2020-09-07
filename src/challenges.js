@@ -34,8 +34,18 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
+  let repNumber = 0;
+  let countRep = 0;
 
+  for (let i = 0;i < numbers.length; i += 1) {
+    if (numbers[i] >= repNumber) {
+      repNumber = numbers[i];
+      countRep += 1;
+    }
+  }
+
+  return countRep;
 }
 
 // Desafio 7
@@ -77,56 +87,56 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let newString = string.split('');
-  for (let i in newString) {
-    
-    switch(newString[i]) {
+  let encodeString = string.split('');
+  
+  for (let i in encondeString) {  
+    switch(encodeString[i]) {
       case 'a':
-        newString[i] = '1';
+        encodeString[i] = '1';
         break;
       case 'e':
-        newString[i] = '2';
+        encodeString[i] = '2';
         break;
       case 'i':
-        newString[i] = '3';
+        encodeString[i] = '3';
         break;
       case 'o':
-        newString[i] = '4';
+        encodeString[i] = '4';
         break;
       case 'u':
-        newString[i] = '5';
+        encodeString[i] = '5';
         break;
     }
   }
 
-  return newString.join('');
+  return encodeString.join('');
 }
 
 function decode(string) {
-  let newString = string.split('');
+  let decodeString = string.split('');
   
-  for (let i in newString) {
+  for (let i in decodeString) {
 
-    switch(newString[i]) {
+    switch(decodeString[i]) {
       case '1':
-        newString[i] = 'a';
+        decodeString[i] = 'a';
         break;
       case '2':
-        newString[i] = 'b';
+        decodeString[i] = 'b';
         break;
       case '3':
-        newString[i] = 'c';
+        decodeString[i] = 'c';
         break;
       case '4':
-        newString[i] = 'd';
+        decodeString[i] = 'd';
         break;
       case '5':
-        newString[i] = 'e';
+        decodeString[i] = 'e';
         break;
     }
   }
 
-  return newString.join('');
+  return decodeString.join('');
 }
 
 // Desafio 10
