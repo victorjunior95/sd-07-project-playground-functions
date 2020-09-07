@@ -90,11 +90,11 @@ function fizzBuzz(vetor) {
     } else if (numeros[i] % 15 === 0) {
       result.push('fizzBuzz');
     } else if (numeros[i] % 5 === 0) {
-    result.push('buzz');
-  } else if (numeros[i] % 3 === 0) {
-    result.push('fizz');
-  } else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0) {
-    result.push('bug!');
+      result.push('buzz');
+    } else if (numeros[i] % 3 === 0) {
+      result.push('fizz');
+    } else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0) {
+      result.push('bug!');
   } else {
     result.push('bug!');
   }
@@ -146,18 +146,18 @@ function techList(vetor, name) {
   }
   for (let i in vetor) {
     if (vetor !== null || vetor !== undefined) {
-        let lista = {
-            tech: vetor[i],
-            name: name,
-          };
-        colecao.push(lista);
-      }
+      let lista = {
+          tech: vetor[i],
+          name: name,
+        };
+      colecao.push(lista);
+    }
   }
   return colecao.sort(function (a, b) {
     if (a.tech < b.tech)
-        return -1;
+      return -1;
     if (a.tech > b.tech)
-        return 1;
+      return 1;
     return 0;
   });
 }
@@ -175,7 +175,7 @@ function generatePhoneNumber(vetor) {
   for (let i in vetor) {
     if (vetor[i] > 9 || vetor[i] < 0) {
       confere += 1;
-    };
+    }
   };
   if (vetor.length !== 11) {
     return 'Array com tamanho incorreto.';
