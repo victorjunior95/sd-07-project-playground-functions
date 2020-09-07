@@ -93,17 +93,38 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
   if (distanceCat1 < distanceCat2) {
-    return "cat1"
+    return "cat1";
   } else if (distanceCat2 < distanceCat1) {
-    return "cat2"
+    return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+/* Crie uma função chamada fizzBuzzque receba uma matriz de números e retorne uma matriz da seguinte forma:
+
+Para cada número da Array que seja divisível apenas por 3, apresente uma string "fizz";
+Para cada número da Array que seja divisível apenas por 5, apresente uma string "buzz";
+Caso o número seja divisível por 3 e 5, retorne uma string "fizzBuzz";
+Caso o número não possa ser dividido por 3 nem por 5, retorne uma string "bug!";
+Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deve retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]. */
+function fizzBuzz(array) {
+  let aux = [];
+
+  for (i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      aux.push("fizzBuzz");
+    } else if (array[i] % 3 == 0) {
+      aux.push("fizz");
+    } else if (array[i] % 5 == 0) {
+      aux.push("buzz");
+    } else {
+      aux.push("bug!");
+    }
+  }
+
+  return aux;
 }
 
 // Desafio 9
