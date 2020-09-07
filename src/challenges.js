@@ -145,11 +145,12 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(bebidaBebidas) {
+  let listaDeBebidas = bebidaBebidas.split(',')
   let totalBebidas = 0;
   let bebidaAtual = 0;
   let frase = ""
-  for (let i  = 0; i < bebidaBebidas.length; i += 1) {
-    bebidaAtual = bebidaBebidas[i].replace('[^//d]]', '')
+  for (let i  = 0; i < listaDeBebidas.length; i += 1) {
+    bebidaAtual = listaDeBebidas[i].replace('[^//d]]', '')
     totalBebidas += parseInt(bebidaAtual, 10);
   }
   if (totalBebidas < 2) frase = '1 copo de água'
