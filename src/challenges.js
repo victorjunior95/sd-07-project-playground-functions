@@ -4,8 +4,8 @@ function compareTrue(arg1, arg2) {
   if (arg1 && arg2) {
     return valor;
   }
-    valor = false;
-    return valor;
+  valor = false;
+  return valor;
 }
 
 
@@ -15,20 +15,21 @@ function calcArea(base, height) {
   let altura = height;
   let ponder = 'Valores indefinidos';
   if (solido === false || altura === false) {
-      return ponder;
-    }
-      return (solido * altura) / 2;
+    return ponder;
+  }
+  return (solido * altura) / 2;
 }
 // Desafio 3
 function splitSentence(frase) {
   let vetor = frase.split(' ');
-  for (let i in vetor){
-    if (vetor != false) {
-      vetor.unshift();
-      return vetor;
+  for (let i in vetor) {
+    if (vetor !== false) {
+      vetor[i].unshift();
     }
   }
+  return vetor
 }
+
 // Desafio 4
 function concatName(vetor) {
   let primeiroItem = vetor.shift();
@@ -53,11 +54,11 @@ function highestCount(numeros) {
     }
   }
   let contRepet = 0;
-  for (let i in numeros) {
+    for (let i in numeros) {
   if (numeros[i] === numeros[idcMaior]) {
-      contRepet += 1;
-    }
-}
+    contRepet += 1;
+  }
+  }
   return contRepet;
 }
 // Desafio 7
@@ -71,42 +72,42 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceAbs2;
   distanceAbs1 = Math.abs(positions[0] - positions[1]);
   distanceAbs2 = Math.abs(positions[0] - positions[2]);
-    if (distanceAbs1 === distanceAbs2) {
-        result = 'os gatos trombam e o rato foge';
-      }
+  if (distanceAbs1 === distanceAbs2) {
+      result = 'os gatos trombam e o rato foge';
+    }
   if (distanceAbs1 < distanceAbs2) {
-      result = 'cat1';
-    }
+    result = 'cat1';
+  }
   if (distanceAbs2 < distanceAbs1) {
-      result = 'cat2';
-    }
-  return result;  
+    result = 'cat2';
+  }
+  return result;
 }
 // Desafio 8
 function fizzBuzz(vetor) {
   let numeros = vetor
   let result = [];
   for (let i in numeros) {
-  if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-  result.push('fizzBuzz');
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+    result.push('fizzBuzz');
   } else if (numeros[i] % 15 === 0) {
-  result.push('fizzBuzz');
+    result.push('fizzBuzz');
   } else if (numeros[i] % 5 === 0) {
-  result.push('buzz');
+    result.push('buzz');
   } else if (numeros[i] % 3 === 0) {
-  result.push('fizz');
+    result.push('fizz');
   } else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0) {
-  result.push('bug!');
+    result.push('bug!');
   } else {
-  result.push('bug!');
+    result.push('bug!');
   }
-}
+  }
   return result;
 }
 // Desafio 9
 function encode(phrase) {
   let codigo = phrase.split('');
-  for(let i in codigo){
+  for (let i in codigo) {
     if (codigo[i] === 'a') {
       codigo.splice(i, 1, '1');
     } else if (codigo[i] === 'e') {
@@ -143,46 +144,45 @@ function techList(vetor, name) {
   let result;
   let colecao = [];
   if (vetor.length < 1 || vetor === null || vetor === undefined) {
-      result = 'Vazio!';
-      return result;
-    } else {
-    for (let i in vetor) {
-      if (vetor !== null || vetor !== undefined) {
-        let lista = {
-        tech : vetor[i],
-        name : name,
-        }
-        colecao.push(lista);
+    result = 'Vazio!';
+    return result;
+  } 
+  for (let i in vetor) {
+    if (vetor !== null || vetor !== undefined) {
+      let lista = {
+          tech: vetor[i],
+          name: name,
       }
-    }
+    colecao.push(lista);
+  }
   }
   return colecao.sort(function (a, b) {
     if (a.tech < b.tech) return -1;
     if (a.tech > b.tech) return 1;
-      return 0;
-})
+    return 0;
+  })
 }
 // Desafio 11
 function generatePhoneNumber(vetor) {
   let countRepeat = vetor.filter((e, i, a) => a.indexOf(e) !== i);
-  countRepeat.sort(function (a, b) {return a - b; });
+  countRepeat.sort(function (a, b) { return a - b }); 
   let contagemReal = 0;
   let confere = 0;
   for (let i = 0; i < countRepeat.length; i += 1) {
     if (countRepeat[i] === countRepeat[i + 1] || countRepeat[i] === countRepeat[i + 2]) {
-      contagemReal = 3;} }
+      contagemReal = 3;
+    } }
   for (let i in vetor) {
-    if (vetor[i] > 9 || vetor[i] < 0) {
-        confere += 1;
-      } }
+    if (vetor[i] > 9 || vetor[i] < 0) { confere += 1 } };
   if (vetor.length !== 11) {
-          return  'Array com tamanho incorreto.';
-        } else if (contagemReal >= 3 || confere !== 0) {
+    return 'Array com tamanho incorreto.';
+  } else if (contagemReal >= 3 || confere !== 0) {
           return 'não é possível gerar um número de telefone com esses valores';
-  } vetor.splice(0, 0, '(');
-    vetor.splice(3, 0, ')');
-    vetor.splice(4, 0, ' ');
-    vetor.splice(10, 0, '-');
+        } 
+  vetor.splice(0, 0, '(');
+  vetor.splice(3, 0, ')');
+  vetor.splice(4, 0, ' ');
+  vetor.splice(10, 0, '-');
   return vetor.join('');
 }
 // Desafio 12
@@ -190,35 +190,35 @@ function triangleCheck(lineA, lineB, lineC) {
   let condition1;
   let condition2;
   if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
-      condition1 = true;
-    } else {
-     condition1 = false;
-   }
-  if (Math.abs(lineA - lineB) < lineC && Math.abs(lineA - lineC) < lineB && Math.abs(lineB - lineC) < lineA) {
-      condition2 = true;
-    } else {
-     condition2 = false;
-    }
+    condition1 = true;
+  } else {
+    condition1 = false;
+  }
+  let absValue1 = Math.abs(lineA - lineB) < lineC;
+  let absValue2 = Math.abs(lineA - lineC) < lineB;
+  let absValue3 = Math.abs(lineB - lineC) < lineA;
+  if (absValue1 && absValue2 && absValue3) {
+    condition2 = true;
+  } else {
+    condition2 = false;
+  }
   if (condition1 && condition2) {
-      return true;
-    }
-      return false;
+    return true;
+  }
+  return false;
 }
 // Desafio 13
 function hydrate(corda) {
   let cordaDividida = corda.match(/\d/g);
   let somaAgua = 0;
-  for (let i = 0; i < cordaDividida.length; i = i + 1) {
+  for (let i = 0; i < cordaDividida.length; i + 1) {
     somaAgua += cordaDividida[i] * 1;
   }
   if (somaAgua === 1) {
-    return `${somaAgua} copo de água`;
-  } 
-    return `${somaAgua} copos de água`;
-  
-  }
-
-
+  return `${somaAgua} copo de água`;
+}
+  return `${somaAgua} copos de água`;
+}
 module.exports = {
   calcArea,
   catAndMouse,
