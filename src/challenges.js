@@ -201,12 +201,14 @@ function hydrate(string) {
   let drinks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let nDrinks = 0;
   for (let i in string) {
-    for (let j in drinks) {
-     if (string[i] == drinks[j]) {
-      nDrinks += drinks[j];
+    if (string.length !== 0) {
+      for (let j in drinks) {
+        if (string[i] == drinks[j]) {
+         nDrinks += drinks[j];
+       }
+      }
+     }
     }
-   }
-  }
   if (nDrinks === 1) {
     return '1 copo de água';
   }
