@@ -30,9 +30,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let result = [];
-  result[0] = array[array.length - 1];
-  result[1] = array[0];
+  let result = '';
+  result += `${array[array.length - 1]}`;
+  result += `, `;
+  result += `${array[0]}`;
   return result;
 }
 
@@ -97,7 +98,7 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function  codeWriting(letter) {
+function codeWriting(letter) {
   let encoded = '';
   let values = {
     a: '1',
