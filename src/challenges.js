@@ -122,13 +122,13 @@ function techList(tech, name) {
 
 function validaTamanho(tamanho) {
   if (tamanho.length !== 11) {
-    let teste1 = true;
+    return true;
   }
 }
 function validaNumeros(valNum) {
   for (let i = 0; i < valNum.length; i += 1) {
     if (valNum[i] < 0 || valNum[i] > 9) {
-      let teste2 = true;
+      teste2 = true;
     }
   }
 }
@@ -141,14 +141,16 @@ function validarepetidos(valRep) {
   });
   for (let i in resultado) {
     if (resultado[i] > 2) {
-      let teste3 = true;
+      teste3 = true;
     }
   }
 }
 function generatePhoneNumber(n) {
-  validaTamanho(n);
   validaNumeros(n);
   validarepetidos(n);
+  let teste1 = validaNumeros(n);
+  let teste2;
+  let teste3;
   if (teste1 === true) {
     return 'Array com tamanho incorreto.';
   } else if (teste2 === true) {
@@ -158,7 +160,7 @@ function generatePhoneNumber(n) {
   }
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
-
+console.log(generatePhoneNumber([1, 4, 4, 1, 1, 5, 6, 0]));
 // Desafio 12
 function triangleCheck() {}
 
