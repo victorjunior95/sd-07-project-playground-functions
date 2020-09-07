@@ -2,14 +2,17 @@
 function compareTrue(bol1, bol2) {
   return bol1 && bol2;
 }
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
+
 // Desafio 3
 function splitSentence(palavra) {
   return palavra.split(' ');
 }
+
 // Desafio 4
 function concatName(nomes) {
   let nomeArray = nomes;
@@ -22,6 +25,7 @@ function concatName(nomes) {
   }
   return result.join(', ');
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let vitoria = wins;
@@ -32,6 +36,7 @@ function footballPoints(wins, ties) {
   let result = vitoria + empate;
   return result;
 }
+
 // Desafio 6
 function highestCount(repeat) {
   let array = repeat;
@@ -45,6 +50,7 @@ function highestCount(repeat) {
   }
   return count;
 }
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let rato = mouse;
@@ -69,6 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
+
 // Desafio 8
 function fizzBuzzBasic(num) {
   let palavra = '';
@@ -95,6 +102,7 @@ function fizzBuzz(number) {
   }
   return result;
 }
+
 // Desafio 9
 function encodeDecode(palavras, vogais) {
   let igual = [];
@@ -128,6 +136,7 @@ function decode(frase) {
   }
   return encodeDecode(frase, numeros);
 }
+
 // Desafio 10
 function techList(tech, name) {
   let stack = tech;
@@ -148,6 +157,7 @@ function techList(tech, name) {
   }
   return result;
 }
+
 // Desafio 11
 function geraNumber(tel) {
   let telefone = [];
@@ -207,6 +217,7 @@ function generatePhoneNumber(phone) {
   }
   return repeatNumber(tel);
 }
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let ladoUm = lineA;
@@ -221,6 +232,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return result;
 }
+
 // Desafio 13
 function contador(count) {
   let result = '';
@@ -248,6 +260,8 @@ function hydrate(bebidas) {
   }
   return contador(count);
 }
+
+
 module.exports = {
   calcArea,
   catAndMouse,
