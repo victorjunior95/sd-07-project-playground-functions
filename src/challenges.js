@@ -87,24 +87,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(frase) {
-  for (let i of frase) {
-    let novaFrase = frase.replace(/a/g, "1");
-    novaFrase = novaFrase.replace(/e/g, "2");
-    novaFrase = novaFrase.replace(/i/g, "3");
-    novaFrase = novaFrase.replace(/o/g, "4");
-    novaFrase = novaFrase.replace(/u/g, "5");
-    return novaFrase;
-  }
+  let novaFrase = frase.replace(/a/g, "1");
+  novaFrase = novaFrase.replace(/e/g, "2");
+  novaFrase = novaFrase.replace(/i/g, "3");
+  novaFrase = novaFrase.replace(/o/g, "4");
+  novaFrase = novaFrase.replace(/u/g, "5");
+  return novaFrase;
 }
 function decode(frase) {
-  for (let i of frase) {
-    let novaFrase = frase.replace(/1/g, "a");
-    novaFrase = novaFrase.replace(/2/g, "b");
-    novaFrase = novaFrase.replace(/3/g, "c");
-    novaFrase = novaFrase.replace(/4/g, "d");
-    novaFrase = novaFrase.replace(/5/g, "c");
-    return novaFrase;
-  }
+  let novaFrase = frase.replace(/1/g, "a");
+  novaFrase = novaFrase.replace(/2/g, "b");
+  novaFrase = novaFrase.replace(/3/g, "c");
+  novaFrase = novaFrase.replace(/4/g, "d");
+  novaFrase = novaFrase.replace(/5/g, "c");
+  return novaFrase;
 }
 
 // Desafio 10
