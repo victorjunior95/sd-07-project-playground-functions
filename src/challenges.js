@@ -86,10 +86,42 @@ function footballPoints(wins,ties) {
 //console.log(footballPoints(5,1))
 
 
+
+
 // Desafio 6
-function highestCount() {
+//function highestCount() {
   // seu código aqui
+//}
+//como neste array nao importa o ordem, poderia usar FOR IN
+
+
+// Desafio 6
+//arrayNum = [10, 1, 2, 9, 9, 5, 7]
+function highestCount(arrayNum) {
+  // seu código aqui
+  let largeNum = 0;      //novo contagem mantendo o valor de LARGENUM e o valor de QUANTIREPETNUM
+  let quantiRepetNum = 0;
+  
+  for(let i = 0; i < arrayNum.length; i += 1){ //esta linha inicia e finaliza o conteo de cada elemento do array 
+
+    if (arrayNum[i] > largeNum){  //PRIMEIRA CONDICAO o numero dentro do array que ocupa a posicao i, é MAIOR que o numero LARGENUM? 
+      quantiRepetNum = 1;                //esta linha asegura que se existe um outro numero maior que o considerado LARGENUM entao ja repetition inicia a contar desde 1
+      largeNum = arrayNum[i];
+    }
+    else                    // se usava so else , então TODO valor, para LARGENUM, que nao cumpla o IF teria ejecutar este ELSE e o LARGENUM nao poderia voltar a reiniciar novamente a busqueda 
+        if (arrayNum[i] == largeNum){ //SEGUNDA CONDICAO o numero dentro do array que ocupa a posicao i, é igual a o numero que é considerado LARGENUM?
+      quantiRepetNum += 1;
+    }
+  }
+  return quantiRepetNum // FINALMENTE se nao cumplio as 2 condicoes arriba o valor do HIGHEST permanece inalterado. E repetition continua sendo 0. Reinicia um novo
+                    //novo contagem mantendo o valor de LARGENUM e o valor de QUANTIREPETNUM
 }
+//console.log(highestCount(arrayNum));
+
+
+
+
+
 
 // Desafio 7
 function catAndMouse() {
