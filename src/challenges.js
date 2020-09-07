@@ -177,41 +177,7 @@ function generatePhoneNumber(n) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let a = Math.abs(lineB) % Math.abs(lineC);
-  let b = Math.abs(lineA) % Math.abs(lineC);
-  let c = Math.abs(lineA) % Math.abs(lineB);
-  let sA = lineB + lineC;
-  let sB = lineC + lineA;
-  let sC = lineA + lineB;
-  let lado = false;
-  let somaAbsoluto = false;
-  let resultado = false;
-  console.log(sA);
-  if (
-    lineA < sC ||
-    lineA < sB ||
-    lineB < sA ||
-    lineB < sC ||
-    lineC < sA ||
-    lineC < sB
-  ) {
-    lado = true;
-  }
-  if (
-    lineA > b ||
-    lineA > c ||
-    lineB > a ||
-    lineB > c ||
-    lineC > a ||
-    lineC > b
-  ) {
-    somaAbsoluto = true;
-  }
-  if (lado == true && somaAbsoluto == true) {
-    return (resultado = true);
-  } else {
-    return (resultado = false);
-  }
+
 }
 
 // Desafio 13
