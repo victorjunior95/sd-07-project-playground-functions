@@ -88,7 +88,7 @@ function decode(encodedString) {
   let toDecodeArray = encodedString.split('');
   let numbers = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let finalString = '';
-  if (toEncodeArray.length === 0) return 'por favor, insira uma string nao vazia!'
+  if (toDecodeArray.length === 0) return 'por favor, insira uma string nao vazia!'
   for (let i = 0; i < toDecodeArray.length; i += 1) {
     for (let j = 0; j < numbers.length; j += 1) {
       if (toDecodeArray[i] === numbers[j]) {
@@ -125,10 +125,10 @@ function generatePhoneNumber(array) {
     for (let j = 0; j < array2.length; j += 1) {
       for (let i = 0; i < array2.length; i += 1) {
         if (array2[j] === array2[i]) {
-        counterRepetition += 1;
-        if (counterRepetition >= 3) return true;
+          counterRepetition += 1;
+          if (counterRepetition >= 3) return true;
         }
-    }
+      }
       counterRepetition = 0;
     }
     return false;
