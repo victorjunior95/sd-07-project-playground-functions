@@ -85,7 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Função suporte para Desafio 8
-function suport8 (value) {
+function suport8(value) {
   let suport = '';
   if (value % 3 === 0 && value % 5 === 0) {
     suport = 'fizzBuzz';
@@ -112,34 +112,39 @@ function fizzBuzz(arrayNum) {
 function encode(paramString) {
   let newString = '';
   for (let i = 0; i <= paramString.length - 1; i += 1) {
-    if (paramString[i] === 'a') {
-      newString += '1';
-    } else if (paramString[i] === 'e') {
-      newString += '2';
-    } else if (paramString[i] === 'i') {
-      newString += '3';
-    } else if (paramString[i] === 'o') {
-      newString += '4';
-    } else if (paramString[i] === 'u') {
-      newString += '5';
-    } else {
-      newString += paramString[i];
+    switch (paramString[i]) {
+      case 'a':
+        newString += '1';
+        break;
+      case 'e':
+        newString += '2';
+        break;
+      case 'i':
+        newString += '3';
+        break;
+      case 'o':
+        newString += '4';
+        break;
+      case 'u':
+        newString += '5';
+        break;
+      default:
+        newString += paramString[i];
     }
   }
   return newString;
 }
-function decode(paramString2) {
-  let newString2 = paramString2;
-  newString2 = newString2.replace(/1/g, 'a');
-  newString2 = newString2.replace(/2/g, 'e');
+
+function decode(paramString2) { // .replace é uma função para strings
+  let newString2 = paramString2; // onde tiver 1, substitua por a
+  newString2 = newString2.replace(/1/g, 'a'); // Sem g, ele só substitui só o 1º 1 que encontrar
+  newString2 = newString2.replace(/2/g, 'e'); // Com g, ele substitui todos os que encontrar
   newString2 = newString2.replace(/3/g, 'i');
   newString2 = newString2.replace(/4/g, 'o');
   newString2 = newString2.replace(/5/g, 'u');
   return newString2;
 }
-
-// .replace é uma função para strings que diz onde tiver 1, na busca pela frase em geral (g), o substitua por a. Com o g, toda vez que ele encontrar 1 ele vai substituir por a. Sem o g, ele só substitui o 1º 1 que encontrar e ignora se tiver outros
-
+console.log(encode("hi there"));
 // Desafio 10
 function techList(tech, firstName) {
   let endList = [];
