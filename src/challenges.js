@@ -67,35 +67,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let toEncodeArray = string.split('');
-  let vowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-  let finalString = '';
-  if (toEncodeArray.length === 0) return 'por favor, insira uma string nao vazia!'
-  for (let i = 0; i < toEncodeArray.length; i += 1) {
-    for (let j = 0; j < vowels.length; i += 1) {
-      if (string[i].toLowerCase() === j) {
-        toEncodeArray[i] = vowels[j];
-      }
-    }
-    finalString += toEncodeArray[i];
-  }
-  return finalString;
-}
-function decode(encodedString) {
-  let toDecodeArray = encodedString.split('');
   let numbers = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-  let finalString = '';
-  if (toDecodeArray.length === 0) return 'por favor, insira uma string nao vazia!'
-  for (let i = 0; i < toDecodeArray.length; i += 1) {
-    for (let j = 0; j < numbers.length; j += 1) {
-      if (toDecodeArray[i] === numbers[j]) {
-        toDecodeArray[i] = j;
-      }
-    }
-    finalString += toDecodeArray[i];
+  function replaceChar(char) {
+    return numbers[char];
   }
-  return finalString;
+  return string.replace(/([aeiou])/gi, replaceChar);
 }
+function decode(string) {
+  let numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  function replaceChar(char) {
+    return numbers[char];
+  }
+  return string.replace(/([12345])/g, replaceChar);
+}
+
 
 // Desafio 10
 function techList(technologies, name) {
@@ -189,3 +174,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+console.log(decode("h2ll4 w4rld! n3c2 t4 s22 y45"));
