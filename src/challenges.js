@@ -87,33 +87,21 @@ function fizzBuzz(numeros) {
 
 function encode(frase) {
   let resultado = frase;
-  for (let i = 0; i < frase.length; i += 1) {
-    if (frase.charAt(i) === 'a') {
-      resultado = resultado.replace(/a/, '1');
-    }
-    if (frase.charAt(i) === 'e') {
-      resultado = resultado.replace(/e/, '2');
-    }
-    if (frase.charAt(i) === 'i') {
-      resultado = resultado.replace(/i/, '3');
-    }
-    if (frase.charAt(i) === 'o') {
-      resultado = resultado.replace(/o/, '4');
-    }
-    if (frase.charAt(i) === 'u') {
-      resultado = resultado.replace(/u/, '5');
-    }
-  }
+  resultado = resultado.replace(/a/, '1');
+  resultado = resultado.replace(/e/, '2');
+  resultado = resultado.replace(/i/, '3');
+  resultado = resultado.replace(/o/, '4');
+  resultado = resultado.replace(/u/, '5');
   return resultado;
 }
-console.log(decode("12345"));
+
 function decode(frase) {
   let resultado = frase;
-      resultado = resultado.replace(/1/gi, 'a');
-      resultado = resultado.replace(/2/gi, 'e');
-      resultado = resultado.replace(/3/gi, 'i');
-      resultado = resultado.replace(/4/gi, 'o');
-      resultado = resultado.replace(/5/gi, 'u');
+  resultado = resultado.replace(/1/gi, 'a');
+  resultado = resultado.replace(/2/gi, 'e');
+  resultado = resultado.replace(/3/gi, 'i');
+  resultado = resultado.replace(/4/gi, 'o');
+  resultado = resultado.replace(/5/gi, 'u');
   return resultado;
 }
 
@@ -160,9 +148,7 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-function triangleCheck() {
-
-}
+function triangleCheck() {}
 
 // Desafio 13
 function hydrate() {}
