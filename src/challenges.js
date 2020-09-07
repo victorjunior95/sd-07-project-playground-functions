@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(comparar1, comparar2) {
+  // seu código aqui
   if (comparar1 && comparar2) {
     return true;
   } else {
     return false;
   }
+}
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
