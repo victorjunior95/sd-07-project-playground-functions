@@ -120,31 +120,47 @@ function techList(tech, name) {
   return techArray;
 }
 
-function generatePhoneNumber(n) {
-  // Valida se tem 11 numeros
-  if (n.length !== 11) {
-    return 'Array com tamanho incorreto.';
+function validaTamanho(tamanho) {
+  if (tamanho.length !== 11) {
+    teste1 = true;
   }
-  // Valida se é maior que -1 e menor que 10
-  for (let i = 0; i < n.length; i += 1) {
-    if (n[i] < 0 || n[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+}
+function validaNumeros(valNum) {
+  for (let i = 0; i < valNum.length; i += 1) {
+    if (valNum[i] < 0 || valNum[i] > 9) {
+      teste2 = true;
     }
   }
+}
+function validarepetidos(valRep) {
   // Valida numeros repetidos
   // fonte: https://medium.com/@amirdanish126/how-to-count-duplicate-value-in-an-array-in-javascript-e942b59af8f2
   let resultado = {};
-  n.forEach(function (x) {
+  valRep.forEach(function (x) {
     resultado[x] = (resultado[x] || 0) + 1;
   });
-  // Retorna mensagem caso 3 ou mais numeros repetidos
   for (let i in resultado) {
     if (resultado[i] > 2) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      teste3 = true;
     }
   }
-  // Retorna numero caso passe na validação
-  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+}
+function generatePhoneNumber(n) {
+  let teste1 = false;
+  let teste2 = false;
+  let teste3 = false;
+  validaTamanho(n);
+  validaNumeros(n);
+  validarepetidos(n);
+  if (teste1 === true) {
+    return 'Array com tamanho incorreto.';
+  } else if (teste2 === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else if (teste3 === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+  }
 }
 
 // Desafio 12
