@@ -180,7 +180,6 @@ function countNumber(tel) {
       }
     }
   }
-  
   return count;
 }
 function repeatNumber(tel) {
