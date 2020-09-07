@@ -1,4 +1,5 @@
-// Desafio 1
+/*eslint spaced-comment: ["error", "never"]*/
+//Desafio 1
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
     return true;
@@ -7,18 +8,18 @@ function compareTrue(valueA, valueB) {
   }
 }
 compareTrue(1)
-// Desafio 2
+//Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2
 }
 
-// // Desafio 3
+// //Desafio 3
 function splitSentence(stringSentence) {
   let resultado = stringSentence.split(' ');
   return resultado;
 }
 
-// Desafio 4
+//Desafio 4
 function concatName(names) {
   let amount = names
   let last = amount[amount.length - 1]
@@ -26,12 +27,12 @@ function concatName(names) {
   return `${last}, ${first}`;
 }
 
-// Desafio 5
+//Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties
 }
 
-// Desafio 6
+//Desafio 6
 
 function highestCount(numbers) {
   let inAscendingOrder = numbers.sort()
@@ -53,7 +54,7 @@ function highestCount(numbers) {
   }
   return CounterRepetitions
 }
-// Desafio 7
+//Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Number = 0;
@@ -78,7 +79,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result
 }
-// Desafio 8
+//Desafio 8
 function fizzBuzz(numbers) {
 /*global item*/
 /*eslint no-undef: ["error", { "typeof": true }] */
@@ -98,7 +99,7 @@ function fizzBuzz(numbers) {
   return numbers
 }
 
-// Desafio 9
+//Desafio 9
 function encode(phrase) {
   let encryptedLetters = {
     a: 1,
@@ -153,7 +154,7 @@ function decode(phrase) {
   return result
 }
 
-// Desafio 10
+//Desafio 10
 function techList(listArray, name) {
   let resultOfArray = []
   listArray.sort()
@@ -174,7 +175,7 @@ function techList(listArray, name) {
   }
 }
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
-// Desafio 11
+//Desafio 11
 function generatePhoneNumber(numbers) {
   let result = '';
   let orinalOrder = '';
@@ -215,7 +216,7 @@ function generatePhoneNumber(numbers) {
   let is3Ignored = result.splice(4, 0, ' ')
   let is4Ignored = result.splice(10, 0, '-')
   let final = '';
-/*global k*/  
+/*global k*/
 /*eslint no-undef: ["error", { "typeof": true }] */
 /*eslint no-global-assign: "error"*/
 /*globals k:true*/
@@ -224,7 +225,7 @@ function generatePhoneNumber(numbers) {
   }
   return final
 }
-// Desafio 12
+//Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA + lineB < lineC || lineA + lineC < lineB || lineC + lineB < lineA) {
     return false
@@ -236,7 +237,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 
-// Desafio 13
+//Desafio 13
 function hydrate(drinks) {
   let numbers = drinks.match(/\d+/g).map(Number)
   let sum = 0;
