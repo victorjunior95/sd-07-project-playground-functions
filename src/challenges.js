@@ -40,7 +40,7 @@ function splitSentence(inputString) {
   return arrayOfStrings;
 }
 
-// Desafio 4
+// Desafio 4 --- Não funcionou!!!
 concatName(['Lucas','Cassiano','Ferraz','Paolillo']);
 
 function concatName(names) {
@@ -113,7 +113,7 @@ function highestCount(arrayOfNumbers) {
   return count;
 }
 
-// Desafio 7
+// Desafio 7 --- Não funcionou!!!
 catAndMouse([4, 2, 2])
 
 function catAndMouse(animalsPosition) {
@@ -126,6 +126,7 @@ function catAndMouse(animalsPosition) {
 
   if ( cat1 === cat2 ) {
     console.log("Os gatos se trombam e o rato foge");
+    return ("Os gatos se trombam e o rato foge");
   } else if ( cat1 > cat2 ) {
     console.log("O gato 1 alcança o rato primeiro");
     return cat1;
@@ -139,25 +140,25 @@ function catAndMouse(animalsPosition) {
 // Desafio 8
 fizzBuzz([2, 15, 7, 9, 45]);
 
-function fizzBuzz(arrayOfNumbers) {
+function fizzBuzz(arrayOfNumbers2) {
   console.log("");
   console.log("Desafio 8:");
 
   resultArray = [];
 
-  for ( i = 0; i < arrayOfNumbers.length; i += 1 ){
+  for ( i = 0; i < arrayOfNumbers2.length; i += 1 ){
     
-    if (( arrayOfNumbers[i] % 5 ) === 0 && ( arrayOfNumbers[i] % 3 ) === 0 ) {
+    if (( arrayOfNumbers2[i] % 5 ) === 0 && ( arrayOfNumbers2[i] % 3 ) === 0 ) {
       resultArray.push("fizzbuzz");
     
     } else {
-      if (( arrayOfNumbers[i] % 3 ) === 0 ) {
+      if (( arrayOfNumbers2[i] % 3 ) === 0 ) {
         resultArray.push("fizz");
   
-      } else if (( arrayOfNumbers[i] % 5 ) === 0 ) {
+      } else if (( arrayOfNumbers2[i] % 5 ) === 0 ) {
         resultArray.push("buzz");
       
-      } else if (( arrayOfNumbers[i] % 5 || arrayOfNumbers[i] % 3 ) != 0 ) {
+      } else if (( arrayOfNumbers2[i] % 5 || arrayOfNumbers2[i] % 3 ) != 0 ) {
         resultArray.push("bug!");
       }
     } 
@@ -168,8 +169,10 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+encode("hi there!");
+
+function encode(inputString) {
+
 }
 function decode() {
   // seu código aqui
