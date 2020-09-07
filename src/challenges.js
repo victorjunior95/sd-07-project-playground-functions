@@ -173,9 +173,9 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  // seu código aqui  
+  // seu código aqui
   let newArray = [];
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < array.length; i += 1) {
@@ -185,7 +185,7 @@ function generatePhoneNumber(array) {
     let count = 0;
     for (let j = 0; j < array.length; j += 1) {
       if (array[i] === array[j]) {
-        count +=1;
+        count += 1;
       }
     }
     if (count > 2) {
@@ -208,8 +208,12 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
