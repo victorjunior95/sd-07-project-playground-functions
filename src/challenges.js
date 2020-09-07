@@ -129,12 +129,12 @@ function decode(numeros) {
 
 // Desafio 10
 function techList(array, name) {
-  array.sort();
+  array.sort()
   let resultado;
   let nomeDasTech = [];
   let objeto = {};
   if( array.length < 1) {
-    resultado = "Vazio!";
+    resultado = "'Vazio'!";
   }
   else { for(i=0; i<array.length; i+=1) {
     objeto = {
@@ -148,13 +148,14 @@ function techList(array, name) {
   }
 return resultado;
 }
-console.log(techList( "lucas"));
-
+console.log(techList([], "Lucas"));
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
 }
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1,]));
+
 
 // Desafio 12
 function triangleCheck() {
