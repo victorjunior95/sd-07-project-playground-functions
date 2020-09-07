@@ -82,18 +82,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(vetor) {
-  let numeros = vetor
+  let numeros = vetor;
   let result = [];
   for (let i in numeros) {
     if (numeros[i] % 15 === 0) {
       result.push('fizzBuzz');
-    } else if (numeros[i] % 5 === 0) {
+    }
+    else if (numeros[i] % 5 === 0) {
       result.push('buzz');
-    } else if (numeros[i] % 3 === 0) {
-    result.push('fizz');
-  } else {
-    result.push('bug!');
-  }
+    }
+    else if (numeros[i] % 3 === 0) {
+      result.push('fizz');
+    }
+    else {
+      result.push('bug!');
+    }
   }
   return result;
 }
@@ -214,6 +217,13 @@ function hydrate(corda) {
   }
   return `${somaAgua} copos de água`;
 }
+
+
+
+
+
+
+
 
 module.exports = {
   calcArea,
