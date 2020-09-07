@@ -122,13 +122,13 @@ function techList(tech, name) {
 
 function validaTamanho(tamanho) {
   if (tamanho.length !== 11) {
-    teste1 = true;
+    let teste1 = true;
   }
 }
 function validaNumeros(valNum) {
   for (let i = 0; i < valNum.length; i += 1) {
     if (valNum[i] < 0 || valNum[i] > 9) {
-      teste2 = true;
+      let teste2 = true;
     }
   }
 }
@@ -141,14 +141,11 @@ function validarepetidos(valRep) {
   });
   for (let i in resultado) {
     if (resultado[i] > 2) {
-      teste3 = true;
+      let teste3 = true;
     }
   }
 }
 function generatePhoneNumber(n) {
-  let teste1 = false;
-  let teste2 = false;
-  let teste3 = false;
   validaTamanho(n);
   validaNumeros(n);
   validarepetidos(n);
@@ -158,9 +155,8 @@ function generatePhoneNumber(n) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else if (teste3 === true) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
   }
+  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 
 // Desafio 12
