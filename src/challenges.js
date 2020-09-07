@@ -85,10 +85,10 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  let encodeString = string.split('');
+function encode(encString) {
+  let encodeString = encString.split('');
   
-  for (let i in encondeString) {  
+  for (let i = 0;i < encodeString.length; i += 1) {  
     switch(encodeString[i]) {
       case 'a':
         encodeString[i] = '1';
@@ -111,26 +111,26 @@ function encode(string) {
   return encodeString.join('');
 }
 
-function decode(string) {
-  let decodeString = string.split('');
+function decode(decString) {
+  let decodeString = decString.split('');
   
-  for (let i in decodeString) {
+  for (let i = 0; i < decodeString.length; i += 1) {
 
     switch(decodeString[i]) {
       case '1':
         decodeString[i] = 'a';
         break;
       case '2':
-        decodeString[i] = 'b';
+        decodeString[i] = 'e';
         break;
       case '3':
-        decodeString[i] = 'c';
+        decodeString[i] = 'i';
         break;
       case '4':
-        decodeString[i] = 'd';
+        decodeString[i] = 'o';
         break;
       case '5':
-        decodeString[i] = 'e';
+        decodeString[i] = 'u';
         break;
     }
   }
