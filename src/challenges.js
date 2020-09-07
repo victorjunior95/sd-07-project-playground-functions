@@ -43,7 +43,7 @@ function highestCount(vetor) {
       posMaior = key;
     }
   }
-  posMaior = parseInt(posMaior) + 1;
+  posMaior = parseInt(posMaior, 10) + 1;
 
   return posMaior;
 }
@@ -66,17 +66,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let arrayRetorno = [];
-  for (const key in array) {
-    if (Object.prototype.hasOwnProperty.call(array, key)) {
-      if (array[key] % 5 === 0 && array[key] % 3 === 0) {
-        arrayRetorno.push('fizzBuzz');
-      } else if (array[key] % 3 === 0) {
-        arrayRetorno.push('fizz');
-      } else if (array[key] % 5 === 0) {
-        arrayRetorno.push('buzz');
-      } else if (!(array[key] % 5 === 0 && array[key] % 3 === 0)) {
-        arrayRetorno.push('bug!');
-      }
+
+  for (let key = 0; key < array.length; key += 1) {
+    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
+      arrayRetorno.push('fizzBuzz');
+    } else if (array[key] % 3 === 0) {
+      arrayRetorno.push('fizz');
+    } else if (array[key] % 5 === 0) {
+      arrayRetorno.push('buzz');
+    } else if (array[key] % 5 && array[key] % 3) {
+      arrayRetorno.push('bug!');
     }
   }
   return arrayRetorno;
