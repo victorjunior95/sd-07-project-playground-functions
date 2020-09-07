@@ -59,13 +59,13 @@ function fizzBuzz(array) {
   let resposta = [];
   for (const i of array) {
     if (i % 3 === 0 && i % 5 !== 0) {
-      resposta.push('fizz');
+      resposta.push('"fizz"');
     } else if (i % 5 === 0 && i % 3 !== 0) {
-      resposta.push('buzz');
+      resposta.push('"buzz"');
     } else if (i % 5 === 0 && i % 3 === 0) {
-      resposta.push('fizzbuzz');
+      resposta.push('"fizzbuzz"');
     } else {
-      resposta.push('bug!');
+      resposta.push('"bug!"');
     }
   }
   return resposta;
@@ -124,7 +124,6 @@ function hydrate() {
 
 }
 
-console.log(decode('KMKDD v1545dd'));
 module.exports = {
   calcArea,
   catAndMouse,
