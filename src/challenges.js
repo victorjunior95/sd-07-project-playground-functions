@@ -147,25 +147,37 @@ function generatePhoneNumber(number) {
   if (number.length !== 11){
     return "Array com tamanho incorreto."
   }
-  let repeat = 0;
+  
   // Verifica se algum número se repete 3 ou mais vezes
   for (let cont in number){
-    repeat = 0;
+    let repeat = 0;
     for (let compare in number){
       if (number[cont] === number[compare]){
         repeat += 1;
+        if (repeat === 3){
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
       }
-    }
-    if (repeat > 2){
-      break;
     }
   }
   // Verifica se há algum número menor que 0, ou maior que 9, ou se repete 3x 
-  let phone = `(${number[0]}${number[1]}) ${number[2]}${number[3]}${number[4]}${number[5]}${number[6]} - ${number[7]}${number[8]}${number[9]}${number[10]}`;
+  let phone = '(';
+  for (let i in number) {
+    if(number[i] < 0 || number[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    if (i == 1) {
+      phone += number[i];
+      phone += ') ';
+    } else if (i == 6) {
+      phone += number[i];
+      phone += '-';
+    } else phone += number[i];
+  }
   
   return phone;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 1, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
