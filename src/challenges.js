@@ -145,7 +145,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(bebidaBebidas) {
-  let listaDeBebidas = bebidaBebidas.split(',')
+  let listaDeBebidas = bebidaBebidas.split(',', 'e')
   let totalBebidas = 0;
   let bebidaAtual = 0;
   let frase = ""
