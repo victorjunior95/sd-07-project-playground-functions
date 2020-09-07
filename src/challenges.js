@@ -126,8 +126,22 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let numeroAbsolutoA = Math.abs(lineA - lineB);
+  let numeroAbsolutoB = Math.abs(lineA - lineC);
+  let numeroAbsolutoC = Math.abs(lineB - lineC);
+  if (
+    lineA < lineB + lineC &&
+    numeroAbsolutoC < lineA &&
+    lineB < lineA + lineC &&
+    numeroAbsolutoB < lineB &&
+    lineC < lineA + lineB &&
+    numeroAbsolutoA < lineC
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
