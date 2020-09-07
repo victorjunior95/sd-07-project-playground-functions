@@ -237,8 +237,8 @@ let tecnologiasAZ = t.sort();// organiza em ordem alfabética as tecnologias
   }
   return aprendizado;
 }
-let result = techList(t,nome);
-console.log(result);
+//let result = techList(t,nome);
+//console.log(result);
 
 // Desafio 11
 function generatePhoneNumber() {
