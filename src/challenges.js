@@ -69,14 +69,16 @@ function catAndMouse(mouse, cat1, cat2) {
 function checkNumber(array) {
   let check = [];
   for (let i in array) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      check = 'fizzBuzz';
-    } else if (array[i] % 3 === 0) {
-      check = 'fizz';
-    } else if (array[i] % 5 === 0) {
-      check = 'buzz';
-    } else {
-      check = 'bug!';
+    if (array.length !== 0) {
+      if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+        check = 'fizzBuzz';
+      } else if (array[i] % 3 === 0) {
+        check = 'fizz';
+      } else if (array[i] % 5 === 0) {
+        check = 'buzz';
+      } else {
+        check = 'bug!';
+      }
     }
   }
   return check;
@@ -85,7 +87,7 @@ function fizzBuzz(array) {
   let string = [];
   for (let i in array) {
     string.push(checkNumber(array[i]));
-    }
+  }
   return string;
 }
 
