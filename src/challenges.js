@@ -222,7 +222,7 @@ let name ='Lucas';
 function techList(t,name) {
   // seu código aqui
   if(t.length === 0){
-    return 'Vazio';
+    return 'Vazio!';
   }
 let aprendizado = [] // cria o array para armazenar os objetos
 let tecnologiasAZ = t.sort();// organiza em ordem alfabética as tecnologias
