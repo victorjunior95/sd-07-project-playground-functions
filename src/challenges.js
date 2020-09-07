@@ -72,7 +72,7 @@ function fizzBuzz(array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       string.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
-        string.push('fizz');
+      string.push('fizz');
     } else if (array[i] % 5 === 0) {
       string.push('buzz');
     } else {
@@ -176,8 +176,8 @@ function checkSum(lineA, lineB, lineC) {
   if (sum(lineA, lineB) > lineC) {
     if (sum(lineA, lineC) > lineB) {
       if (sum(lineB, lineC) > lineA) {
-          return true;
-        }
+        return true;
+      }
     }
   } else {
     return false;
@@ -186,10 +186,10 @@ function checkSum(lineA, lineB, lineC) {
 function checkAbs(lineA, lineB, lineC) {
   if (absolut(lineA, lineB) < lineC) {
     if (absolut(lineA, lineC) < lineB) {
-        if (absolut(lineB, lineC) < lineA) {
-            return true;
-          }
+      if (absolut(lineB, lineC) < lineA) {
+        return true;
       }
+    }
   } else {
     return false;
   }
