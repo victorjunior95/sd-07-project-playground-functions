@@ -177,11 +177,15 @@ function generatePhoneNumber(number) {
   
   return phone;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(A, B, C) {
   // seu código aqui
+  if (Math.abs(A) < Math.abs(B) + Math.abs(C) && Math.abs(B) < Math.abs(A) + Math.abs(C) && Math.abs(C) < Math.abs(A) + Math.abs(B)){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
