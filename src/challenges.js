@@ -7,8 +7,6 @@ function compareTrue(arg1, arg2) {
   valor = false;
   return valor;
 }
-
-
 // Desafio 2
 function calcArea(base, height) {
   let solido = base;
@@ -29,7 +27,6 @@ function splitSentence(frase) {
   }
   return vetor
 }
-
 // Desafio 4
 function concatName(vetor) {
   let primeiroItem = vetor.shift();
@@ -56,8 +53,8 @@ function highestCount(numeros) {
   let contRepet = 0;
   for (let i in numeros) {
     if (numeros[i] === numeros[idcMaior]) {
-        contRepet += 1;
-      }
+      contRepet += 1;
+    }
   }
   return contRepet;
 }
@@ -88,16 +85,12 @@ function fizzBuzz(vetor) {
   let numeros = vetor
   let result = [];
   for (let i in numeros) {
-    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (numeros[i] % 15 === 0) {
+    if (numeros[i] % 15 === 0) {
       result.push('fizzBuzz');
     } else if (numeros[i] % 5 === 0) {
-    result.push('buzz');
-  } else if (numeros[i] % 3 === 0) {
+      result.push('buzz');
+    } else if (numeros[i] % 3 === 0) {
     result.push('fizz');
-  } else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0) {
-    result.push('bug!');
   } else {
     result.push('bug!');
   }
@@ -151,7 +144,7 @@ function techList(vetor, name) {
     if (vetor !== null || vetor !== undefined) {
       let lista = {
         tech: vetor[i],
-        nm: name,
+        name: name,
       }
       colecao.push(lista);
     }
@@ -221,6 +214,7 @@ function hydrate(corda) {
   }
   return `${somaAgua} copos de água`;
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
