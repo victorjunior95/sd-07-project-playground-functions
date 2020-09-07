@@ -144,7 +144,7 @@ function decode(string) {
 // Desafio 10
 function techList(techList, name) {
     let interests = [];
-    if (techList.length === 0 || typeof techList === "number" || techList[0] === "") {
+    if (techList.length === 0) {
         return 'Vazio!';
     } else {
         const newArray = techList.sort()
@@ -157,7 +157,7 @@ function techList(techList, name) {
             }
             interests.push(object)
         }
-       return interests;
+        return interests;
     }
 }
 
@@ -244,7 +244,19 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate(str) {
-
+    let myArray = str;
+    let calc = 0;
+    let number1;
+    myArray = myArray.match(/[\d]+/g);
+    for (let index = 0; index < myArray.length; index += 1) {
+        number1 = parseInt(myArray[index], 10);
+        calc += number1;
+    }
+    if (calc === 1){
+        return `${calc} copo de água`;
+    } else {
+        return `${calc} copos de água`;
+    }
 }
 
 module.exports = {
@@ -283,5 +295,6 @@ module.exports = {
 // splitSentence('foguete');
 // hydrate("9 copos de cerveja, 10 copos de vodka");
 //concatName(["marcos", "eduardo", "murilo", "Silva"]);
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas");
+// techList([""],
+// "Lucas");
+//hydrate("1 cachaça e 9 cervejas");
