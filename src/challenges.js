@@ -6,7 +6,6 @@ function compareTrue(comparar1, comparar2) {
   } else {
     return false;
   }
-
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -18,14 +17,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(separando) {
   // seu código aqui
-  return separando.split(' ');
+  return separando.split(" ");
 }
-
 
 // Desafio 4
 function concatName(arrayNome) {
   // seu código aqui
-  return (arrayNome[arrayNome.length - 1] + ', ' + arrayNome[0])
+  return arrayNome[arrayNome.length - 1] + ", " + arrayNome[0];
 }
 
 // Desafio 5
@@ -61,11 +59,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 < distanciaCat2) {
-    return 'cat1';
+    return "cat1";
   } else if (distanciaCat1 > distanciaCat2) {
-    return 'cat2';
+    return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
@@ -74,7 +72,7 @@ function fizzBuzz(array) {
   // seu código aqui
   let novoArray = [];
   for (const numeros of array) {
-    if ((numeros % 5 === 0) && numeros % 3 === 0) {
+    if (numeros % 5 === 0 && numeros % 3 === 0) {
       novoArray.push("fizzBuzz");
     } else if (numeros % 5 === 0) {
       novoArray.push("buzz");
@@ -115,7 +113,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -131,4 +128,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
