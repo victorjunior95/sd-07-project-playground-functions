@@ -219,7 +219,7 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return "Array com tamanho incorreto.";
   }
-  else if (naoEstaEntre0E9 != 0 && repetition > 2){
+  else if (naoEstaEntre0E9 != 0 || repetition > 2){
       return "não é possível gerar um número de telefone com esses valores";
   }
   else {
@@ -227,7 +227,7 @@ function generatePhoneNumber(numbers) {
   }   
 }
 
-generatePhoneNumber([1, -6, 3, 9, 5, 6, 21, 8, -35, 0, 9]);
+generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]);
 
 // Desafio 12
 function triangleCheck() {
