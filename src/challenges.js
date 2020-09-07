@@ -188,10 +188,8 @@ function techList(tech, name) {
   return message
 }
 
-// Desafio 11
-function generatePhoneNumber(numbers) {
-  let currentNumber = 0
-
+// Suporte Desafio 11
+function checkConstraints(numbers) {
   /* Checking if the arrays.lenght is greater than 11 */
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
@@ -202,6 +200,17 @@ function generatePhoneNumber(numbers) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
+}
+
+// Desafio 11
+function generatePhoneNumber(numbers) {
+  let currentNumber = 0
+  let constraints = checkConstraints(numbers)
+  
+  if (constraints) {
+    return constraints
+  }
+
   /* Checking if any number repeats greater or equal 3*/
   for (let i = 0; i <= numbers.length; i += 1) {
     currentNumber = numbers[i]
