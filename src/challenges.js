@@ -31,15 +31,9 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestNumber(arrayNumbers) {
-  let higherNumber = 0;
-  for (let i = 0; i < arrayNumbers.length; i += 1) {
-    for (let j = 0; j < arrayNumbers.length; j += 1) {
-      if (arrayNumbers[i] > arrayNumbers[j] && arrayNumbers[i] > higherNumber) {
-        higherNumber = arrayNumbers[i];
-      }
-    }
-  }
-  return higherNumber;
+  let highestNumberValue = 0;
+  highestNumberValue = arrayNumbers.reduce((a, b) => Math.max(a, b));
+  return highestNumberValue;
 }
 function highestCount(arrayNumbers) {
   let countNumber = 0;
@@ -98,45 +92,44 @@ function fizzBuzz(arrayNumbers) {
   return result;
 }
 // Desafio 9
-function encodeOrDecodeSentence(sentence) {
+function encode(sentence) {
   let dictionaryEncode = ['1', '2', '3', '4', '5'];
   let dictionaryDecode = ['a', 'e', 'i', 'o', 'u'];
-  let codedOrDecodedSentence = '';
-  if (sentence.match(/\d+/g) === null) {
-    for (let i = 0; i < sentence.length; i += 1) {
-      codedOrDecodedSentence += sentence[i];
-      for (let j = 0; j < dictionaryEncode.length; j += 1) {
-        if (dictionaryDecode[j] === sentence[i]) {
-          codedOrDecodedSentence = codedOrDecodedSentence.substring(
-            0,
-            codedOrDecodedSentence.length - 1
-          );
-          codedOrDecodedSentence += dictionaryEncode[j];
-        }
-      }
-    }
-  } else {
-    for (let i = 0; i < sentence.length; i += 1) {
-      codedOrDecodedSentence += sentence[i];
-      for (let j = 0; j < dictionaryDecode.length; j += 1) {
-        if (dictionaryEncode[j] === sentence[i]) {
-          codedOrDecodedSentence = codedOrDecodedSentence.substring(
-            0,
-            codedOrDecodedSentence.length - 1
-          );
-          codedOrDecodedSentence += dictionaryDecode[j];
-        }
+  let codedSentence = '';
+  for (let i = 0; i < sentence.length; i += 1) {
+    codedSentence += sentence[i];
+    for (let j = 0; j < dictionaryEncode.length; j += 1) {
+      if (dictionaryDecode[j] === sentence[i]) {
+        codedSentence = codedSentence.substring(0, codedSentence.length - 1);
+        codedSentence += dictionaryEncode[j];
       }
     }
   }
-  return codedOrDecodedSentence;
-}
-function encode(string) {
-  let codedSentence = encodeOrDecodeSentence(string);
   return codedSentence;
 }
-function decode(string) {
-  let decodedSentence = encodeOrDecodeSentence(string);
+function decode(sentence) {
+  let decodedSentence = '';
+  for (let letter in sentence) {
+    switch (sentence[letter]) {
+      case '1':
+        decodedSentence += 'a';
+        break;
+      case '2':
+        decodedSentence += 'e';
+        break;
+      case '3':
+        decodedSentence += 'i';
+        break;
+      case '4':
+        decodedSentence += 'o';
+        break;
+      case '5':
+        decodedSentence += 'u';
+        break;
+      default:
+        decodedSentence += sentence[letter];
+    }
+  }
   return decodedSentence;
 }
 // Desafio 10
@@ -160,70 +153,48 @@ function techList(arrayOfTechs, name) {
 }
 // Desafio 11
 function validaNumbers(arrayNumbers) {
-  let condition = true;
-  if (arrayNumbers.length !== 11) {
-    condition = false;
-  }
   for (let number in arrayNumbers) {
     let countRepeat = 0;
     if (arrayNumbers[number] < 0 || arrayNumbers[number] > 9) {
-      condition = false;
-    } else {
-      for (let i = 0; i < arrayNumbers.length; i += 1) {
-        if (arrayNumbers[i] === arrayNumbers[number]) {
-          countRepeat += 1;
-        }
+      return false;
+    }
+    for (let i = 0; i < arrayNumbers.length; i += 1) {
+      if (arrayNumbers[i] === arrayNumbers[number]) {
+        countRepeat += 1;
       }
     }
     if (countRepeat >= 3) {
-      condition = false;
+      return false;
     }
     countRepeat = 0;
   }
-  return condition;
+  return true;
 }
-function generatePhoneNumber(n) {
-  let r = '';
-  let condition = validaNumbers(n);
-  if (n.length !== 11) {
+function generatePhoneNumber(number) {
+  let stringNumber = '';
+  let condition = validaNumbers(number);
+  if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   if (condition === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let i in n) {
-    if (n[i] >= 0 && n[i] < 10) {
-      r += n[i];
+  for (let i in number) {
+    if (number[i] >= 0 && number[i] < 10) {
+      stringNumber += number[i];
     }
   }
-  return `(${r[0]}${r[1]}) ${r[2]}${r[3]}${r[4]}${r[5]}${r[6]}-${r[7]}${r[8]}${r[9]}${r[10]}`;
+  return `(${stringNumber.substring(0, 2)}) ${stringNumber.substring(
+    2,
+    7
+  )}-${stringNumber.substring(7, 11)}`;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let result = false;
-  let caseTest = 0;
-  let lines = [];
-  lines.push(lineA, lineB, lineC);
-  let x = 0;
-  let y = 1;
-  let z = 2;
-  for (let i = 0; i < 3; i += 1) {
-    if (
-      lines[x] < lines[y] + lines[z] &&
-      lines[x] > Math.abs(lines[y] - lines[z])
-    ) {
-      caseTest += 1;
-    }
-    x += 1;
-    if (x === 1) y = 2;
-    z = 0;
-    if (x === 2) y = 0;
-    z = 1;
-  }
-  if (caseTest === 3) {
-    result = true;
-  }
-  return result;
+  const testCase1 = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
+  const testCase2 = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
+  const testCase3 = lineC < lineA + lineB && lineC > Math.abs(lineA - lineB);
+  return testCase1 && testCase2 && testCase3;
 }
 // Desafio 13
 function hydrate(sentence) {
