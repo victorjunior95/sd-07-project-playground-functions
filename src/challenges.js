@@ -100,7 +100,7 @@ function fizzBuzz(param) {
 
 // Desafio 9
 function encode(string) {
-  let arrayString = string.split("");
+  let arrayString = string.split('');
   function buscaVogal(letra) {
     if (letra === 'a') {
       letra = 1;
@@ -108,7 +108,7 @@ function encode(string) {
     if (letra === 'e') {
       letra = 2;
     }
-    if (letra == 'i') {
+    if (letra === 'i') {
       letra = 3;
     }
     if (letra === 'o') {
@@ -122,25 +122,25 @@ function encode(string) {
   for (let index = 0; index < arrayString.length; index += 1) {
     arrayString[index] = buscaVogal(arrayString[index]);
   }
-  arrayString = arrayString.join("");
+  arrayString = arrayString.join('');
   return arrayString;
 }
 function decode(string2) {
-  let arrayString2 = string2.split("");
+  let arrayString2 = string2.split('');
   function buscaVogal2(letra2) {
-    if (letra2 == 1) {
+    if (letra2 === '1') {
       letra2 = 'a';
     }
-    if (letra2 == 2) {
+    if (letra2 === '2') {
       letra2 = 'e';
     }
-    if (letra2 == 3) {
+    if (letra2 === '3') {
       letra2 = 'i';
     }
-    if (letra2 == 4) {
+    if (letra2 === '4') {
       letra2 = 'o';
     }
-    if (letra2 == 5) {
+    if (letra2 === '5') {
       letra2 = 'u';
     }
     return letra2;
@@ -148,7 +148,7 @@ function decode(string2) {
   for (let index = 0; index < arrayString2.length; index += 1) {
     arrayString2[index] = buscaVogal2(arrayString2[index]);
   }
-  arrayString2 = arrayString2.join("");
+  arrayString2 = arrayString2.join('');
   return arrayString2;
 }
 
