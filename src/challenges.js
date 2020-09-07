@@ -185,42 +185,88 @@ function techList(array, name) {
 // Desafio 11 
 function generatePhoneNumber(array) {
 
-  if (array.length != 11) {
-      return 'Array com tamanho incorreto.';
+    if (array.length != 11) {
+        return 'Array com tamanho incorreto.';
+  
+    } else {
+        
+        let arrayResult = [];
+  
+        for (let i = 0; i < array.length; i += 1) {
 
-  } else {
-      
-      let arrayResult = [];
+            let value = array[i]
+            let cont0 = 0;
+            let cont1 = 0;
+            let cont2 = 0;
+            let cont3 = 0;
+            let cont4 = 0;
+            let cont5 = 0;
+            let cont6 = 0;
+            let cont7 = 0;
+            let cont8 = 0;
+            let cont9 = 0;
 
-      for (let i = 0; i < array.length; i += 1) {
+            for (let j = 0; j < array.length; j += 1) {
+            
+             if (cont0 >= 3 || cont1 >= 3 || cont2 >= 3 || cont3 >= 3 || cont4 >= 3 || cont5 >= 3 || cont6 >= 3 || cont7 >= 3 || cont8 >= 3 || cont9 >= 3) {
+                    return 'não é possível gerar um número de telefone com esses valores';
 
-          let value = array[i]
+            } else if (array[j] == 0) {
+                cont0 = cont0 + 1;
 
-          if (value < 0 || value > 9) {
-              return 'não é possível gerar um número de telefone com esses valores';
+            } else if (array[j] == 1) {
+                cont1 = cont1 + 1;
 
-          } else if (i == 0) {
-              arrayResult.push('(');
-              arrayResult.push(array[i]);
+            } else if (array[j] == 2) {
+                cont2 = cont2 + 1;
 
-          } else if (i == 1) {
-              arrayResult.push(array[i]);
-              arrayResult.push(')');
-              arrayResult.push(' ');
+            } else if (array[j] == 3) {
+                cont3 = cont3 + 1;
 
-          } else if (i == 6) {
-              arrayResult.push(array[i]);
-              arrayResult.push('-')
+            } else if (array[j] == 4) {
+                cont4 = cont4 + 1;
 
-          } else if (i != 0 && i != 1 && i != 6) {
-              arrayResult.push(array[i]);
+            } else if (array[j] == 5) {
+                cont5 = cont5 + 1;
 
-          }  
+            } else if (array[j] == 6) {
+                cont6 = cont6 + 1;
 
-          
-      }
-  let result = arrayResult.join('');
-  return result;
+            } else if (array[j] == 7) {
+                cont7 = cont7 + 1;
+
+            } else if (array[j] == 8) {
+                cont8 = cont8 + 1;
+
+            } else if (array[j] == 9) {
+                cont9 = cont9 + 1;
+
+            } 
+
+        }    
+  
+            if (value < 0 || value > 9) {
+                return 'não é possível gerar um número de telefone com esses valores';
+  
+            } else if (i == 0) {
+                arrayResult.push('(');
+                arrayResult.push(array[i]);
+  
+            } else if (i == 1) {
+                arrayResult.push(array[i]);
+                arrayResult.push(')');
+                arrayResult.push(' ');
+  
+            } else if (i == 6) {
+                arrayResult.push(array[i]);
+                arrayResult.push('-')
+  
+            } else if (i != 0 && i != 1 && i != 6) {
+                arrayResult.push(array[i]);
+            }
+    }
+    let result = arrayResult.join('');
+    return result;
   }
 }
 
