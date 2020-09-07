@@ -151,10 +151,10 @@ function hydrate(bebidaBebidas) {
     bebidaAtual = bebidaBebidas[i].replace('[^//d]]', '')
     totalBebidas += parseInt(bebidaAtual);
   }
-  if (totalBebidas === 0) return  `${totalBebidas} copo de água`
+  if (totalBebidas === 1) return  `${totalBebidas} copo de água`
   return `${totalBebidas} copos de água`
 }
-let a= ["3 dpaokdsopa","2 dfasfda"]
+let a= ["1 cerveja"]
 console.log(hydrate(a));
 
 module.exports = {
