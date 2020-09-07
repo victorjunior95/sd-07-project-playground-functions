@@ -163,24 +163,33 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function testeNumberTwo (tel) {
+function repeatNumber(tel) {
+  let mensagem = '';
   let count = 0;
   for (let i = 0; i < tel.length; i += 1) {
-    if (tel[i] < 0 || tel[i] > 9) {
-      mensagem = 'não é possível gerar um número de telefone com esses valores';
-    }
     for (let j = 1; j < i; j += 1) {
       if (tel[i] === tel[j]) {
         count += 1;
       }
-      if (count > 2) {
-        mensagem = 'não é possível gerar um número de telefone com esses valores';
-      }
+    }
+  }
+    if (count > 2) {
+      mensagem = 'não é possível gerar um número de telefone com esses valores';
+      return mensagem;
+    } else {
+      return geraNumber(tel);
+    }
+}
+function testeNumberTwo(tel) {
+  let mensagem = '';
+  for (let i = 0; i < tel.length; i += 1) {
+    if (tel[i] < 0 || tel[i] > 9) {
+      mensagem = 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return mensagem;
 }
-function testeNumber (tel) {
+function testeNumber(tel) {
   let mensagem = '';
   if (tel.length !== 11) {
     mensagem = 'Array com tamanho incorreto.';
@@ -189,7 +198,7 @@ function testeNumber (tel) {
   }
   return mensagem;
 }
-function geraNumber (tel) {
+function geraNumber(tel) {
   let telefone = [];
   for (let k of tel) {
     let format = k;
@@ -211,7 +220,7 @@ function generatePhoneNumber(phone) {
   if (tel.length !== 11) {
     return testeNumber(tel);
   } else {
-    return geraNumber (tel);
+    return repeatNumber(tel);
   }
 }
 
