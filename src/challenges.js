@@ -226,6 +226,9 @@ function hydrate(string) {
   for (let i = 0; i < number.length; i += 1) {
     sum += parseInt(number[i]);
   }
+  if (sum === 1) {
+    return sum + ' copo de água';
+  }
   return sum + ' copos de água';
 }
 
