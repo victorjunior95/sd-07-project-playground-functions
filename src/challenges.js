@@ -130,9 +130,9 @@ function catAndMouse() {
 
 
 // Desafio 8
-function fizzBuzz() {
+//function fizzBuzz() {
   // seu código aqui
-}
+//}
 
 
 
