@@ -105,8 +105,8 @@ function techList(array, name) {
     if(array.length < 0){
       listadeTec = "Vazio!"
     }
-    else if {
-    let objeto = {};
+    else {
+    let  objeto = {};
     objeto = {
       tech: ordem[i],
       name: name
