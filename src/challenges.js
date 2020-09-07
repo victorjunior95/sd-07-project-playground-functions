@@ -95,7 +95,7 @@ function encode(stringCode) {
   } return stringCode;
 }
 function decode(stringDecode) {
-  for (let i = 0; i < stringCode.length; i += 1) {
+  for (let i = 0; i < stringDecode.length; i += 1) {
     if (stringDecode[i] == 1) {
       stringDecode = stringDecode.replace(1, "a")
     } else if (stringDecode[i] == 2) {
