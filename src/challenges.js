@@ -68,14 +68,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function checkNumber(array) {
   let check = [];
-  if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-    check = 'fizzBuzz';
-  } else if (array[i] % 3 === 0) {
-    check = 'fizz';
-  } else if (array[i] % 5 === 0) {
-    check = 'buzz';
-  } else {
-    check = 'bug!';
+  for (let i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      check = 'fizzBuzz';
+    } else if (array[i] % 3 === 0) {
+      check = 'fizz';
+    } else if (array[i] % 5 === 0) {
+      check = 'buzz';
+    } else {
+      check = 'bug!';
+    }
   }
   return check;
 }
