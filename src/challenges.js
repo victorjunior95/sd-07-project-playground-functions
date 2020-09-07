@@ -165,10 +165,10 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate(string) {
-  let numbers = string.match(/\d+/g).split();
+  let numbers = string.match(/\d+/g);
   let totalNumbers = 0;
   let integer = 0;
-  for (let index = 0; index < numbers; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     integer = parseInt(numbers[index], 10);
     totalNumbers += integer;
   }
@@ -179,7 +179,6 @@ function hydrate(string) {
 }
 
 hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
-
 
 module.exports = {
   calcArea,
