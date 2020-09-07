@@ -82,13 +82,13 @@ function fizzBuzz(array) {
 function encode(stringCode) {
   for (let i = 0; i < stringCode.length; i += 1) {
     if (stringCode[i] === "a") {
-      stringCode[i].psuh(1)
+      stringCode[i].push(1)
     } else if (stringCode[i] === "e") {
-      stringCode[i].psuh(2)
+      stringCode[i].push(2)
     } else if (stringCode[i] === "i") {
       stringCode[i] = 3;
     } else if (stringCode[i] === "o") {
-      stringCode[i].psuh(4)
+      stringCode[i].push(4)
     } else if (stringCode[i] === "u") {
       stringCode[i] = 5;
     }
