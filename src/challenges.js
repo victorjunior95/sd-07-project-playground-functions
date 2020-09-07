@@ -31,9 +31,9 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  wins = 3;
-  ties = 1;
-  let vitorias = wins + ties;
+  let pontV = wins * 3;
+  let pontE = ties;
+  let vitorias = pontV + pontE;
   return vitorias;
 }
 
@@ -49,39 +49,41 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-  arryDeString = [];
-  // percorrer arry{/*  */
+  let arryDeString = [];
 
   for (let index = 0; index < arry.length; index++) {
-    let element = arry[index];
+    let element;
+    console.log(arry);
 
-    if (element % 5 == 0 && element % 3 == 0) {
-      arryDeString.push("fizzBuzz");
+    if (arry[index] % 5 == 0 && arry[index] % 3 == 0) {
+      element = "fizzBuzz";
     } else {
-      if (element % 3 == 0) {
-        arryDeString.push("fizz");
+      if (arry[index] % 3 == 0) {
+        element = "fizz";
       }
 
-      if (element % 5 == 0) {
-        arryDeString.push("buzz");
+      if (arry[index] % 5 == 0) {
+        element = "buzz";
       } else {
-        arryDeString.push("bug!");
+        element = "bug!";
       }
     }
+    arryDeString.push(element);
+    element = "";
   }
 
   return arryDeString;
 }
 
 // Desafio 9
-function encode() {
+function encode(params) {
   // seu código aqui
   let A = "1";
   let E = "2";
   let I = "3";
   let O = "4";
   let U = "5";
-  let element = [];
+  let element = "";
   for (let key in params) {
     // verificar e alterar
     switch (params[key]) {
@@ -109,40 +111,40 @@ function encode() {
   return element;
 }
 
-function decode(params) {
+function decode(element) {
   let A = "a"; //1
   let E = "e"; // 2
   let I = "i"; // 3
   let O = "o"; // 4
   let U = "u"; // 5
-  let element = [];
+  let params = "";
 
   // console.log(params);
   // percorer arry
-  for (let key in params) {
+  for (let key in element) {
     // verificar e alterar
-    switch (params[key]) {
+    switch (element[key]) {
       case "1":
-        element = element + A;
+        params = params + A;
         break;
       case "2":
-        element = element + E;
+        params = params + E;
         break;
       case "3":
-        element = element + I;
+        params = params + I;
         break;
       case "4":
-        element = element + O;
+        params = params + O;
         break;
       case "5":
-        element = element + U;
+        params = params + U;
         break;
       default:
-        element = element + params[key];
+        params = params + element[key];
         break;
     }
   }
-  return element;
+  return params;
 }
 
 // Desafio 10
@@ -164,9 +166,15 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(ladoA, ladoB, ladoC) {
   // seu código aqui
+  if (ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoB + ladoC > ladoA) {
+    return true;
+  }
+
+  return false;
 }
+
 
 // Desafio 13
 function hydrate() {
