@@ -196,10 +196,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function checkDrinks(string){
+function checkDrinks(string) {
   let drink = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let nDrinks = 0;
-  let number =0;
+  let number = 0;
   string = string.split('');
   for (let i in string) {
     if (string.length !== 0) {
