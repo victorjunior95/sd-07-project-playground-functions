@@ -209,13 +209,17 @@ function generatePhoneNumber(numbers) {
     }
   }
 
-/*eslint no-unused-vars: "error"*/
+/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
+/*global result1 */
   let result1 = result.splice(0, 0, '(')
-/*eslint no-unused-vars: "error"*/
+/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
+/*global result2 */
   let result2 = result.splice(3, 0, ')')
-/*eslint no-unused-vars: "error"*/
+/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
+/*global result3 */
   let result3 = result.splice(4, 0, ' ')
-/*eslint no-unused-vars: "error"*/
+/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
+/*global result4 */
   let result4 = result.splice(10, 0, '-')
   let final = '';
 /*global k*/  
