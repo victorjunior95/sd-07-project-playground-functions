@@ -1,11 +1,8 @@
 // Desafio 1
 function compareTrue(comparar1, comparar2) {
   // seu código aqui
-  if (comparar1 && comparar2) {
-    return true;
-  } else {
-    return false;
-  }
+  let comparacao = (comparar1 && comparar2) ? true : false;
+
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -104,22 +101,21 @@ function decode(frase) {
 }
 
 // Desafio 10
-  function techList(learn, name) {
-    if(learn == 0){
-      return 'Vazio!'
-    }
-    let learnTechnology = [];
-    for (let i in learn) {
-      let organization = learn.sort();
-      let includeTechList = {
-        tech: learn[i],
-        name: name,
-      };
-      learnTechnology.push(includeTechList);
-    }
-    return learnTechnology;
+function techList(learn, name) {
+  if (learn == 0) {
+    return "Vazio!";
   }
-
+  let learnTechnology = [];
+  for (let i in learn) {
+    let organization = learn.sort();
+    let includeTechList = {
+      tech: learn[i],
+      name: name,
+    };
+    learnTechnology.push(includeTechList);
+  }
+  return learnTechnology;
+}
 
 // Desafio 11
 function generatePhoneNumber() {
