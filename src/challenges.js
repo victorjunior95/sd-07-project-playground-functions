@@ -159,9 +159,9 @@ function decode(phrase) {
 function techList(listArray, name) {
   let resultOfArray = []
   listArray.sort()
-  for (i in listArray) {
-/*eslint object-shorthand: ["error", "never"]*/
+/*eslint object-shorthand: ["error", "always", { "ignoreConstructors": true }]*/
 /*eslint-env es6*/
+  for (i in listArray) {
     if (listArray.length !== 0) {
       resultOfArray.push(
         {
