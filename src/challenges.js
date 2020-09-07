@@ -84,11 +84,11 @@ function encode(stringCode) {
     if (stringCode[i] === "a") {
       stringCode[i].psuh(1)
     } else if (stringCode[i] === "e") {
-      stringCode[i] = 2
+      stringCode[i].psuh(2)
     } else if (stringCode[i] === "i") {
       stringCode[i] = 3;
     } else if (stringCode[i] === "o") {
-      stringCode[i] = 4;
+      stringCode[i].psuh(4)
     } else if (stringCode[i] === "u") {
       stringCode[i] = 5;
     }
@@ -99,11 +99,11 @@ function decode(stringDecode) {
     if (stringDecode[i] === 1) {
       stringDecode[i].push("a")
     } else if (stringDecode[i] === 2) {
-      stringDecode[i] = "e"
+      stringDecode[i].push("e")
     } else if (stringDecode[i] === 3) {
       stringDecode[i] = "i"
     } else if (stringDecode[i] === 4) {
-      stringDecode[i] = "o"
+      stringDecode[i].push("o")
     } else if (stringDecode[i] === 5) {
       stringDecode[i] = "u"
     }
