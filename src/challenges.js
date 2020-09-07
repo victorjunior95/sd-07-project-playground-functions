@@ -129,19 +129,27 @@ function decode(numeros) {
 
 // Desafio 10
 function techList(array, name) {
+  array.sort();
+  let resultado;
   let nomeDasTech = [];
-  nomeDasTech.sort();
   let objeto = {};
-  for(i=0; i<array.length; i+=1) {
+  if( array.length < 1) {
+    resultado = "Vazio!";
+  }
+  else { for(i=0; i<array.length; i+=1) {
     objeto = {
       tech : array[i],
       nome : name,
     };
     nomeDasTech.push(objeto);
+    resultado = nomeDasTech;
   // seu código aqui
 }
-return nomeDasTech;
+  }
+return resultado;
 }
+console.log(techList( "lucas"));
+
 
 // Desafio 11
 function generatePhoneNumber() {
