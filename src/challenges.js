@@ -46,9 +46,20 @@ function highestCount(numbers) {
 // Desafio 7
 // Math.abs()
 function catAndMouse(mouse, cat1, cat2) {
-// seu código aqui
+  let catUmPega = Math.abs(cat1 - mouse);
+  let catDoisPega = Math.abs(cat2 - mouse)
+  let response = ""; 
 
+  if (catUmPega < catDoisPega) {
+    response = "cat1"
+  } else if (catDoisPega < catUmPega) {
+    response = "cat2"
+  } else if (catUmPega === catDoisPega) {
+    response = "os gatos trombam e o rato foge"
+  }
+  return response
 }
+console.log(catAndMouse(8,3,4))
 
 // Desafio 8
 function fizzBuzz(arr) {
@@ -90,9 +101,25 @@ return str
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+// metodos sort() e .push() para ordenar e adicionar um novo elemento no array (aqui nos ajudaria a criar o objeto das techs)
+function techList(techs, name) {
+  let response = [];
+  let techsOrdened = techs.sort();
+  
+  if (techs.length <= 0) {
+    response = "Vazio!"
+  } else {
+    for (let i in techs) {
+        response.push({
+          tech: techs[i],
+          name: name,
+        })
+
+  }
 }
+  return response
+}
+// console.log(techList(["SQL", "HTML"], "Bruna"))
 
 // Desafio 11
 function generatePhoneNumber() {
