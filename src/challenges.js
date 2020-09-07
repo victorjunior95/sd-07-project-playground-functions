@@ -160,13 +160,11 @@ function techList(listArray, name) {
   let resultOfArray = []
   listArray.sort()
   for (i in listArray) {
-    /*eslint object-shorthand: ["error", "always", { "ignoreConstructors": true }]*/
-/*eslint-env es6*/
     if (listArray.length !== 0) {
       resultOfArray.push(
         {
           tech: listArray[i],
-          name: name,
+          name: `${name}`,
         })
     }
   }
