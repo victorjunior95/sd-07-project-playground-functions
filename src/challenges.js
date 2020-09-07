@@ -86,7 +86,9 @@ function checkNumber(array) {
 function fizzBuzz(array) {
   let string = [];
   for (let i in array) {
+    if (checkNumber == true) {
     string.push(checkNumber(array[i]));
+    }
   }
   return string;
 }
