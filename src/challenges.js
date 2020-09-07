@@ -122,16 +122,60 @@ function highestCount(arrayNum) {
 
 
 
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
 
+
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
 }
+
+
+
+// Desafio 8
+//arrayNumQuince = [2, 15, 7, 9, 45]
+function fizzBuzz(arrayNumQuince) {
+  // seu código aqui
+  
+  let arrayNumQuinceTranslate = []; //esta linha vai ir alamacenando num array os numero traduzidos a fizz, buzz, fizzbuzz
+  
+  for(i = 0; i < arrayNumQuince.length; i += 1){
+      
+     if(arrayNumQuince[i]%15 == 0){
+      arrayNumQuinceTranslate.push("fizzBuzz")     
+     }
+
+     else 
+          if(arrayNumQuince[i]%3 == 0){
+      arrayNumQuinceTranslate.push("fizz")
+     }
+
+     else 
+         if(arrayNumQuince[i]%5 == 0){
+      arrayNumQuinceTranslate.push("buzz")     
+     }
+
+     //else                                       // como o JS lee de arriba para abaixo, se a divisibilidade pelo 15 vai neste lugar, então por exemplo o numero 15, seguindo o ordem primeiro vai ser dividido pelo numero 3 e vai ser divisivel. LOgo o resultado sera fizz. Mas o resultado esperado é fizzBuzz   
+     //    if(arrayNumQuince[i]%15 == 0){         //por isso decidi escrever a divisibilidade pelo 15 no inicio e nao ao final do codigo.     
+     // arrayNumQuinceTranslate.push("fizzBuzz")     
+     //} 
+
+     else {
+       arrayNumQuinceTranslate.push("bug!");
+     }
+         
+  } 
+  return arrayNumQuinceTranslate;
+}
+//console.log(fizzBuzz(arrayNumQuince));
+
+
+
+
 
 // Desafio 9
 function encode() {
