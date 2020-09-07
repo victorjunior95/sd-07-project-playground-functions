@@ -70,22 +70,22 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat2Number < cat1Number) {
     return 'cat2'
   } else if (cat1Number  == cat2Number) {
-      return 'os gatos trombam e o rato foge'
-    }
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-    for (item in numbers) {
+  for (item in numbers) {
       if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
         numbers[item] = 'fizzBuzz'
       } else if (numbers[item] % 5 === 0) {
-      numbers[item] = 'buzz'
-    } else if (numbers[item] % 3 === 0) {
-        numbers[item] = 'fizz'
-      } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
+        numbers[item] = 'buzz'
+      } else if (numbers[item] % 3 === 0) {
+      numbers[item] = 'fizz'
+    } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
         numbers[item] = 'bug!'
-    }
+      }
     }
   return numbers
 }
@@ -104,17 +104,17 @@ function encode(phrase) {
   let result = '';
 
   for (i = 0; i < phrase.length; i += 1) {
-  encoded[i] = phrase[i];
-  for (let index = 0; index < encoded.length; index += 1) {
+    encoded[i] = phrase[i];
+    for (let index = 0; index < encoded.length; index += 1) {
     if (encryptedLetters[encoded[i]] == undefined) {
-    result += encoded[i]
-    break
-  } else {
-    result += encryptedLetters[encoded[i]]
+      result += encoded[i]
+      break
+    } else {
+      result += encryptedLetters[encoded[i]]
       break
     }
   }
-}
+  }
   return result
 }
 
@@ -133,14 +133,14 @@ function decode(phrase) {
   for (i = 0; i < phrase.length; i += 1) {
     decoded[i] = phrase[i];
     for (let j = 0; j < decoded.length; j += 1) {
-    if (encryptedLetters[decoded[i]] == undefined) {
-    result += decoded[i]
-    break
-  } else {
-    result += encryptedLetters[decoded[i]]
-    break
-  }
-  }
+      if (encryptedLetters[decoded[i]] == undefined) {
+      result += decoded[i]
+      break
+    } else {
+      result += encryptedLetters[decoded[i]]
+      break
+    }
+    }
   }
   return result
 }
@@ -158,10 +158,10 @@ function techList(listArray, name) {
       })
   }
   if (listArray.length === 0) {
-  return 'Vazio!'
-} else {
-  return resultOfArray
-}
+    return 'Vazio!'
+  } else {
+    return resultOfArray
+  }
 }
 
 // Desafio 11
@@ -180,18 +180,18 @@ function generatePhoneNumber(numbers) {
   }
   let inAscendingOrder = numbers.sort()
   for (i = 0; i < inAscendingOrder.length; i += 1) {
-    if (inAscendingOrder[i] == inAscendingOrder[i + 1] || inAscendingOrder[i] == inAscendingOrder[i -1 ]) {
+    if (inAscendingOrder[i] == inAscendingOrder[i + 1] || inAscendingOrder[i] == inAscendingOrder[i - 1]) {
       isRepeated += 1
-    } else if (inAscendingOrder[i +1 ] === undefined) {
+    } else if (inAscendingOrder[i + 1] === undefined) {
       break
     } else {
       isRepeated = 0
     }
     if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores'
-      } else {
-        result = orinalOrder.split('')
-      }
+      return 'não é possível gerar um número de telefone com esses valores'
+    } else {
+      result = orinalOrder.split('')
+    }
   }
 
 
@@ -201,8 +201,8 @@ function generatePhoneNumber(numbers) {
   let result4 = result.splice(10, 0, '-')
   let final = '';
   for (k in result) {
-  final += result[k]
-}
+    final += result[k]
+  }
   return final
 }
 
@@ -211,7 +211,7 @@ function generatePhoneNumber(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA + lineB < lineC || lineA + lineC < lineB || lineC + lineB < lineA) {
     return false
-  } else if ( lineA < lineB - lineC || lineA < lineC - lineB || lineB < lineA - lineC || lineB < lineC - lineA || lineC < lineA - lineB || lineC < lineB - lineA) {
+  } else if (lineA < lineB - lineC || lineA < lineC - lineB || lineB < lineA - lineC || lineB < lineC - lineA || lineC < lineA - lineB || lineC < lineB - lineA) {
     return false
   } else {
     return true
