@@ -215,7 +215,7 @@ let result = checkDrinks(string);
   if (result === 1) {
     return `${result} copo de água`;
   } else if (result > 1) {
-    gitreturn `${result} copos de água`;
+    return `${result} copos de água`;
   }
 }
 
