@@ -67,19 +67,21 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat2 - mouse < 0) {
     cat2Number = (cat2 - mouse) * (-1)
   } else {
-  }cat2Number = cat2 - mouse
-
-  if (cat1Number  < cat2Number) {
+    cat2Number = cat2 - mouse
+  }
+  if (cat1Number < cat2Number) {
     result = 'cat1'
   } else if (cat2Number < cat1Number) {
     result = 'cat2'
-  } else if (cat1Number  == cat2Number) {
+  } else if (cat1Number === cat2Number) {
     result = 'os gatos trombam e o rato foge'
   }
   return result
 }
 // Desafio 8
 function fizzBuzz(numbers) {
+  /*global item*/
+/*eslint no-undef: ["error", { "typeof": true }] */
   for (item in numbers) {
       if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
         numbers[item] = 'fizzBuzz'
@@ -110,7 +112,7 @@ function encode(phrase) {
   for (i = 0; i < phrase.length; i += 1) {
     encoded[i] = phrase[i];
     for (let index = 0; index < encoded.length; index += 1) {
-    if (encryptedLetters[encoded[i]] == undefined) {
+    if (encryptedLetters[encoded[i]] === undefined) {
       result += encoded[i]
       break
     } else {
@@ -137,7 +139,7 @@ function decode(phrase) {
   for (i = 0; i < phrase.length; i += 1) {
     decoded[i] = phrase[i];
     for (let j = 0; j < decoded.length; j += 1) {
-      if (encryptedLetters[decoded[i]] == undefined) {
+      if (encryptedLetters[decoded[i]] === undefined) {
       result += decoded[i]
       break
     } else {
@@ -172,7 +174,7 @@ function techList(listArray, name) {
 function generatePhoneNumber(numbers) {
   let result = '';
   let orinalOrder = '';
-  let fakeNumber = '(12) 34567-8901'
+  // let fakeNumber = '(12) 34567-8901'
   let isRepeated = 0;
 
   if (numbers.length !== 11) {
@@ -184,7 +186,7 @@ function generatePhoneNumber(numbers) {
   }
   let inAscendingOrder = numbers.sort()
   for (i = 0; i < inAscendingOrder.length; i += 1) {
-    if (inAscendingOrder[i] == inAscendingOrder[i + 1] || inAscendingOrder[i] == inAscendingOrder[i - 1]) {
+    if (inAscendingOrder[i] === inAscendingOrder[i + 1] || inAscendingOrder[i] === inAscendingOrder[i - 1]) {
       isRepeated += 1
     } else if (inAscendingOrder[i + 1] === undefined) {
       break
