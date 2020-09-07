@@ -200,8 +200,8 @@ function checkDrinks(string) {
   let drinks = /\d+/g;
   let numberOfDrinks = '';
   let sumDrinks = 0;
-  while ((numberOfDrinks = drinks.exec(string)) != null) {
-    //converte string em número
+  while ((numberOfDrinks = drinks.exec(string)) !== null) {
+//converte string em número
       numberOfDrinks = +numberOfDrinks[0];;
       sumDrinks += numberOfDrinks;
   }
