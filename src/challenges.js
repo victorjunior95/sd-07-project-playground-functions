@@ -62,8 +62,21 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
+function catAndMouse(mouse, cat1, cat2,) {
+
+
+    let calc_1 = mouse - cat1;
+    let calc_2 = mouse - cat2;
+
+    if (calc_1 < 0) calc_1 *= -1;
+
+    if (calc_2 < 0) calc_2 *= -1;
+
+    if (calc_1 < calc_2)         return "cat1";
+    else if (calc_2 < calc_1)    return "cat2";
+
+    else if (calc_1 === calc_2)  return "os gatos trombam e o rato foge";
+
 }
 
 // Desafio 8
@@ -298,4 +311,5 @@ module.exports = {
 // techList([""],
 // "Lucas");
 //hydrate("1 cachaça e 9 cervejas");
-triangleCheck(16, 20, 30);
+// triangleCheck(16, 20, 30);
+catAndMouse(1, 0, 2);
