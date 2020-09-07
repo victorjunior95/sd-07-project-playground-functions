@@ -196,7 +196,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(string) {
+function checkDrinks (string) {
   let drinks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let nDrinks = 0;
   for (let i in string) {
@@ -208,10 +208,15 @@ function hydrate(string) {
       }
     }
   }
-  if (nDrinks === 1) {
+  return nDrinks
+}
+function hydrate(string) {
+let result = checkDrinks(string);
+  if (result === 1) {
     return '1 copo de água';
-  }
-  return `${nDrinks} copos de água`;
+  } else if (result > 1) {
+  return `${result} copos de água`;
+}
 }
 
 module.exports = {
