@@ -73,13 +73,10 @@ function changeNumbersForWords(number) {
   switch (true) {
     case fizzB:
       return 'fizzBuzz';
-      break;
     case buzz:
       return 'buzz';
-      break;
     case fizz:
       return 'fizz';
-      break;
     default:
       return 'bug!';
   }
@@ -199,8 +196,8 @@ function hydrate(sentence) {
   let numbers = [];
   let soma = 0;
   numbers = sentence.match(/\d+/g);
-  for (let number in numbers) {
-    let n = Number(numbers[number]);
+  for (let i = 0; i < numbers.length; i += 1) {
+    let n = Number(numbers[i]);
     soma += n;
   }
   if (soma === 1) {
