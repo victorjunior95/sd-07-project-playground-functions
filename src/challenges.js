@@ -238,7 +238,11 @@ function hydrate(texto) {
   for (i in str) {
     soma += parseInt(str[i]);
   }
-  return soma;
+  if (soma == 1) {
+    return `${soma} copo de água`
+  } else {
+    return `${soma} copos de água`
+  }
 }
 
 //Resolvido com ajuda do vídeo sobr exprssões regulares em JavaScript no link abaixo
