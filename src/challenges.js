@@ -143,43 +143,29 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  let invalid = false;
-  let ddd = [];
-  let begin = [];
-  let end = [];
-
-  for (let i in number){
-    let cont = 0;
-    for (let j in number){
-      if (number[i] === number[j]) {
-        cont +=1;
-      }
-      if(cont>=3 || number[j] < 0 || number[j] > 9){
-        invalid = true;
-      }
-    }    
+  // Verifica se a quantidade de números do telefone é diferente de 11
+  if (number.length !== 11){
+    return "Array com tamanho incorreto."
   }
-  if(number.length !== 11){
-    return "Array com tamanho incorreto.";
-  } else if (invalid === true){
-    return "não é possível gerar um número de telefone com esses valores";
-  } else {
-      for (let k = 0; k < 2; k += 1){
-        ddd[k] = number[k];
+  let repeat = 0;
+  // Verifica se algum número se repete 3 ou mais vezes
+  for (let cont in number){
+    repeat = 0;
+    for (let compare in number){
+      if (number[cont] === number[compare]){
+        repeat += 1;
       }
-      for (let l = 2; l < 7; l += 1){
-        begin[l] = number[l];
-      }
-      for (let m = 7; m < number.length; m += 1){
-        end[m] = number[m];
-      }
-      ddd = ddd.join('');
-      begin = begin.join('');
-      end = end.join('');
-      let result = `(${ddd}) ${begin}-${end}`;
-      return console.log(result);
+    }
+    if (repeat > 2){
+      break;
+    }
   }
+  // Verifica se há algum número menor que 0, ou maior que 9, ou se repete 3x 
+  let phone = `(${number[0]}${number[1]}) ${number[2]}${number[3]}${number[4]}${number[5]}${number[6]} - ${number[7]}${number[8]}${number[9]}${number[10]}`;
+  
+  return phone;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 1, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
