@@ -219,16 +219,18 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let medidaA = Math.abs(lineA);
-  let medidaB = Math.abs(lineB);
-  let medidaC = Math.abs(lineC);
+  let medidaA = lineA;
+  let medidaB = lineB;
+  let medidaC = lineC;
 
-  if ((medidaA < (medidaB + medidaC) && medidaA > (medidaB - medidaC)) || (medidaB < (medidaA + medidaC) && medidaB > (medidaA - medidaC)) || (medidaC < (medidaB + medidaA) && medidaC > (medidaB - medidaA))) {
+  if ((medidaA < (medidaB + medidaC) && medidaA > Math.abs(medidaB - medidaC)) || (medidaB < (medidaA + medidaC) && medidaB > Math.abs(medidaA - medidaC)) || (medidaC < (medidaB + medidaA) && medidaC > Math.abs(medidaB - medidaA))) {
     return true;
   } else {
     return false;
   }
 }
+
+console.log(triangleCheck(6, 2, 2));
 
 // Desafio 13
 function hydrate() {
