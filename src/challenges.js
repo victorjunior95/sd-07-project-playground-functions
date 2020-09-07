@@ -158,28 +158,27 @@ function validateRange(arrayNumbers) {
   return true;
 }
 function validateRepeatedNumbers(arrayNumbers) {
-  let countRepeat = 0;
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    countRepeat = 0;
-    for (let j = 1; j <= arrayNumbers.length; j += 1) {
+    let countRepeat = 0;
+    for (let j = 0; j < arrayNumbers.length; j += 1) {
       if (arrayNumbers[j] === arrayNumbers[i]) {
         countRepeat += 1;
       }
     }
-  }
-  if (countRepeat >= 3) {
-    return false;
+    if (countRepeat >= 3) {
+      return false;
+    }
   }
   return true;
 }
 function generatePhoneNumber(number) {
   let stringNumber = '';
   let validate = validateRange(number) && validateRepeatedNumbers(number);
-  if (!validate) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
   if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
+  }
+  if (!validate) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let i = 0; i < number.length; i += 1) {
     stringNumber += number[i];
