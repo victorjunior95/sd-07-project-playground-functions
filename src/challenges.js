@@ -213,10 +213,10 @@ function checkDrinks (string) {
 function hydrate(string) {
 let result = checkDrinks(string);
   if (result === 1) {
-    return '1 copo de água';
+    return `${result} copo de água`;
   } else if (result > 1) {
-  return `${result} copos de água`;
-}
+    gitreturn `${result} copos de água`;
+  }
 }
 
 module.exports = {
