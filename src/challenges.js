@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  // seu código aqui  
+  // seu código aqui
   let arrayStrings = [];
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
@@ -142,8 +142,37 @@ function techList(tec, names) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(number) {
   // seu código aqui
+  let phone = checkNumber(number);
+    if (phone === 3) {
+      return "Não é possível gerar um número de telefone com esses valores";
+    } else if (phone.length != 11) {
+      return "Array com tamanho incorreto";
+    }
+    return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+}
+
+function checkNumber(number) {
+  let nRepeticoes = 0;
+  let contador = 0;
+    for (let i = 0; i < number.length; i += 1) {
+    let nAtual = number[i];
+    for (let j = 0; j < number.length; j += 1) {
+      if (nAtual === number[j]) {
+        contador += 1;
+      }
+    }
+    if (contador > nRepeticoes) {
+      nRepeticoes = contador;
+    }
+    contador = 0;
+  }
+  if (nRepeticoes >= 3) {
+    return 3;
+  } else {
+    return number;
+  }
 }
 
 // Desafio 12
