@@ -145,10 +145,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(bebidaBebidas) {
-  let listaDeBebidas = bebidaBebidas.split(',', 'e')
+  let listaDeBebidas = bebidaBebidas.split(',')
   let totalBebidas = 0;
   let bebidaAtual = 0;
   let frase = ""
+  if (bebidaBebidas.indexOf(' e ') !== -1 ) {
+    totalBebidas = parseInt(bebidaBebidas[bebidaBebidas.indexOf(' e ')+3])
+  }
   for (let i  = 0; i < listaDeBebidas.length; i += 1) {
     bebidaAtual = listaDeBebidas[i].replace('[^//d]]', '')
     totalBebidas += parseInt(bebidaAtual, 10);
@@ -158,6 +161,8 @@ function hydrate(bebidaBebidas) {
   
   return frase
 }
+let teste = "1 copo disso, 2 daquilo e 7 desse";
+console.log(hydrate(teste));
 module.exports = {
   calcArea,
   catAndMouse,
