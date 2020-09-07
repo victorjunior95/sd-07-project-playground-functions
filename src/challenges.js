@@ -212,7 +212,7 @@ function hydrate(string) {
   if (result === 1) {
     return `${result} copo de água`;
   }
-    return `${result} copos de água`;
+  return `${result} copos de água`;
 }
 
 module.exports = {
