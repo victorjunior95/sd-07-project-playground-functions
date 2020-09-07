@@ -190,27 +190,24 @@ function techList(tech, name) {
 
 // Suporte Desafio 11
 function checkConstraints(numbers) {
+  let message = "No constraints"
   /* Checking if the arrays.lenght is greater than 11 */
   if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.'
-  }
-  /* Checking if there is any number less than 0 or greater than nine */
-  for (let number in numbers) {
-    if (numbers[number] > 9 || numbers[number] < 0) {
-      return 'não é possível gerar um número de telefone com esses valores'
+    message = 'Array com tamanho incorreto.'
+  } else {
+    /* Checking if there is any number less than 0 or greater than nine */
+    for (let number in numbers) {
+      if (numbers[number] > 9 || numbers[number] < 0) {
+        message = 'não é possível gerar um número de telefone com esses valores'
+      }
     }
   }
+  return message
 }
 
-// Desafio 11
-function generatePhoneNumber(numbers) {
-  let currentNumber = 0
-  let constraints = checkConstraints(numbers)
-  
-  if (constraints) {
-    return constraints
-  }
-
+// Suporte Desafio 11 - count repeated
+function mostRepeatedNumber(numbers) {
+  let mostRepeated = 0
   /* Checking if any number repeats greater or equal 3*/
   for (let i = 0; i <= numbers.length; i += 1) {
     currentNumber = numbers[i]
@@ -220,13 +217,29 @@ function generatePhoneNumber(numbers) {
         numberOfTimesRepeat += 1
       }
     }
-    if (numberOfTimesRepeat >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores'
+    if (numberOfTimesRepeat > mostRepeated) {
+      mostRepeated = numberOfTimesRepeat
     }
   }
-  /* Generating phone-number in the right format*/
-  let phoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
-  return phoneNumber
+  return mostRepeated
+}
+
+console.log(checkConstraints([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+// Desafio 11
+function generatePhoneNumber(numbers) {
+  let constraints = checkConstraints(numbers)
+  let message = ""
+ 
+  if (constraints !== 'No constraints') {
+    message = constraints
+  } else if (mostRepeatedNumber(numbers) >= 3) {
+    message = 'não é possível gerar um número de telefone com esses valores'
+  } else {
+    /* Generating phone-number in the right format*/
+    let phoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
+    message =  phoneNumber
+  }
+  return message
 }
 
 // Desafio 12
