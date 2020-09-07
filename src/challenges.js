@@ -83,7 +83,7 @@ function fizzBuzz(numbers) {
 /*eslint no-undef: ["error", { "typeof": true }] */
 /*eslint no-global-assign: "error"*/
 /*globals item:true*/
-/*eslint indent: ["error", 2]*/
+/*eslint indent: "error"*/
   for (item in numbers) {
     if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
       numbers[item] = 'fizzBuzz'
