@@ -218,12 +218,9 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let ladoUm = lineA;
-  let ladoDois = lineB;
-  let ladoTres = lineC;
   let result = false;
-  if ((ladoUm < ladoDois + ladoTres) && (ladoDois < ladoUm + ladoTres) &&
-  (ladoTres < ladoDois + ladoUm)) {
+  if ((lineA < lineB + lineC) && (lineB < lineA + lineC) &&
+  (lineC < lineB + lineA)) {
     result = true;
   } else {
     result = false;
