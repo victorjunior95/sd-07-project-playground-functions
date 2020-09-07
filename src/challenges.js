@@ -141,7 +141,7 @@ techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  }  else {
+  } else {
     for (let i = 0; i < array.length; i += 1) {
       let count = 0;
       for (let j = 0; j < array.length; j += 1) {
