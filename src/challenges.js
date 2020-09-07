@@ -189,9 +189,45 @@ function techList(tecnologias, name) {
 techList([], "Lucas");
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) { 
+  let naoEstaEntre0E9 = 0;
+
+  for(let index in numbers){
+    index < 0 || index > 9;
+    naoEstaEntre0E9 = 1;
+    break;
+  }
+
+  let repetition = 0;
+
+  for (let index in numbers){
+      let verificaNumero = numbers[index];
+      for (let index2 in numbers){
+          if (verificaNumero === numbers[index2]){
+              repetition += 1;
+          }
+      }
+      if (repetition > 3){
+          break;
+      }
+      repetition = 0;
+  }
+
+  let generate = "("+numbers.slice(0,2).join("")+") "+numbers.slice(2,7).join("")+"-"+numbers.slice(7,11).join("");
+  
+
+  if (numbers.length !== 11) {
+    console.log("Array com tamanho incorreto.");
+  }
+  else if (naoEstaEntre0E9 === 1 && repetition > 3){
+      console.log("não é possível gerar um número de telefone com esses valores");
+  }
+  else {
+      console.log(generate);
+  }   
 }
+
+generatePhoneNumber([1, 9, 3, 9, 5, 6, 7, 8, 9, 0, 9]);
 
 // Desafio 12
 function triangleCheck() {
