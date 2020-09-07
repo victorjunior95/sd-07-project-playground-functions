@@ -185,13 +185,9 @@ function absolut(a, b) {
 
 function checkSum(lineA, lineB, lineC) {
   let check = 0;
-  if (sum(lineA, lineB) > lineC) {
-    if (sum(lineA, lineC) > lineB) {
-      if (sum(lineB, lineC) > lineA) {
-        check += 1;
+  if ((sum(lineA, lineB) > lineC) && (sum(lineA, lineC) > lineB) && (sum(lineB, lineC) > lineA)) {
+      check += 1;
       }
-    }
-  }
   return check;
 }
 function checkAbs(lineA, lineB, lineC) {
