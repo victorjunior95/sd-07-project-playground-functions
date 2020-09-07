@@ -201,6 +201,8 @@ function generatePhoneNumber(array) {
       case 7:
         newArray.push('-');
         break;
+      default:
+        break;
     }
     newArray.push(array[i]);
   }
@@ -217,8 +219,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let number = string.match(/\d+/g);
+  let sum = 0;
+  for (let i = 0; i < number.length; i += 1) {
+    sum += parseInt(number[i]);
+  }
+  return sum + ' copos de água';
 }
 
 
