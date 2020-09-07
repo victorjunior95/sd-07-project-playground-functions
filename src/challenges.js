@@ -97,25 +97,31 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(string) {
-  let result = '';
+function  codeWriting(letter) {
+  let encoded = '';
   let values = {
     a: '1',
     e: '2',
     i: '3',
     o: '4',
-    u: '5'
+    u: '5',
   }
-  for (let i = 0; i < string.length; i += 1) {
-    for (let j in values) {
-      if (string[i] === j) {
-        result += values[j];
-        break;
-      } else if (j === 'u') {
-        result += string[i];
-      }
+  for (let j in values) {
+    if (letter === j) {
+      encoded = values[j];
+      break;
     }
+    if (j === 'u') {
+      encoded = letter;
+    }
+  }
+  return encoded;
+}
 
+function encode(string) {
+  let result = '';
+  for (let i = 0; i < string.length; i += 1) {
+    result += codeWriting(string[i]);
   }
   return result;
 }
