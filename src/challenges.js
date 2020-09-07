@@ -172,7 +172,6 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-let 
 function generatePhoneNumber(param) {
   let phone = param;
   let retornarphone;
