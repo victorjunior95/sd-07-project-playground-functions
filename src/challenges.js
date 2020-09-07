@@ -80,34 +80,46 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(stringCode) {
-  for (let i = 0; i < stringCode.length; i += 1) {
-    if (stringCode[i] === "a") {
-      stringCode[i].push(1)
-    } else if (stringCode[i] === "e") {
-      stringCode[i].push(2)
-    } else if (stringCode[i] === "i") {
-      stringCode[i] = 3;
-    } else if (stringCode[i] === "o") {
-      stringCode[i].push(4)
-    } else if (stringCode[i] === "u") {
-      stringCode[i] = 5;
-    }
-  } return stringCode;
+  stringCode.replace("a", 1)
+  stringCode.replace("e", 2)
+  stringCode.replace("i", 3)
+  stringCode.replace("o", 4)
+  stringCode.replace("u", 5)
+  // for (let i = 0; i < stringCode.length; i += 1) {
+  //   if (stringCode[i] === "a") {
+  //     stringCode[i].push(1)
+  //   } else if (stringCode[i] === "e") {
+  //     stringCode[i].push(2)
+  //   } else if (stringCode[i] === "i") {
+  //     stringCode[i].push(3)
+  //   } else if (stringCode[i] === "o") {
+  //     stringCode[i].push(4)
+  //   } else if (stringCode[i] === "u") {
+  //     stringCode[i].push(5)
+  //   }
+  // } 
+  return stringCode;
 }
 function decode(stringDecode) {
-  for (let i = 0; i < stringDecode.length; i += 1) {
-    if (stringDecode[i] === 1) {
-      stringDecode[i].push("a")
-    } else if (stringDecode[i] === 2) {
-      stringDecode[i].push("e")
-    } else if (stringDecode[i] === 3) {
-      stringDecode[i] = "i"
-    } else if (stringDecode[i] === 4) {
-      stringDecode[i].push("o")
-    } else if (stringDecode[i] === 5) {
-      stringDecode[i] = "u"
-    }
-  } return stringDecode;
+  stringDecode.replace(1, "a")
+  stringDecode.replace(2, "e")
+  stringDecode.replace(3, "i")
+  stringDecode.replace(4, "o")
+  stringDecode.replace(5, "u")
+  // for (let i = 0; i < stringDecode.length; i += 1) {
+  //   if (stringDecode[i] === 1) {
+  //     stringDecode[i].push("a")
+  //   } else if (stringDecode[i] === 2) {
+  //     stringDecode[i].push("e")
+  //   } else if (stringDecode[i] === 3) {
+  //     stringDecode[i].push("i")
+  //   } else if (stringDecode[i] === 4) {
+  //     stringDecode[i].push("o")
+  //   } else if (stringDecode[i] === 5) {
+  //     stringDecode[i].push("u")
+  //   }
+  // } 
+  return stringDecode;
 }
 
 // Desafio 10
