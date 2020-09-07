@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function checkNumber(num) {
   let check = '';
-    if (num % 3 === 0 && num % 5 === 0) {
+  if (num % 3 === 0 && num % 5 === 0) {
       check += 'fizzBuzz';
     } else if (num % 3 === 0) {
       check += 'fizz';
@@ -76,8 +76,8 @@ function checkNumber(num) {
       check += 'buzz';
     } else {
       check += 'bug!';
-    }
-    return check;
+  }
+  return check;
 }
 function fizzBuzz(array) {
   let string = [];
