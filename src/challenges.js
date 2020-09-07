@@ -24,11 +24,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(param) {
-  let string = param;
-  let matrizString = [];
-  let newString = string.split('').join('').toString();
-  matrizString.push(newString);
-  return matrizString;
+  let palavras = param.split(' ');
+  let retorno = [];
+  retorno.push(palavras);
+  return retorno;
 }
 
 // Desafio 4
@@ -127,10 +126,10 @@ function encode(nome) {
   newPalavra = newPalavra.join('').toString();
   return newPalavra;
 }
-function decode(nome1) {
+function decode(paramNome) {
   let newPalavra1 = [];
-  for (let i = 0; i < nome1.length; i += 1) {
-    newPalavra1.push(nome1[i]);
+  for (let i = 0; i < paramNome.length; i += 1) {
+    newPalavra1.push(paramNome[i]);
   }
   for (let i = 0; i < newPalavra1.length; i += 1) {
     if (newPalavra1[i] === '1') {
