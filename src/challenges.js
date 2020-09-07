@@ -244,6 +244,8 @@ function hydrate(drinks) {
   }
   return `${sum} copo de água`
 }
+/*eslint object-shorthand: ["error", "always"]*/
+/*eslint-env es6*/
 module.exports = {
   calcArea,
   catAndMouse,
