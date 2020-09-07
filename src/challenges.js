@@ -102,6 +102,10 @@ function techList(array, name) {
   let ordem = array.sort();
   let listadeTec = []
   for (i = 0; i < ordem.length; i += 1){
+   if(array.length < 0){ 
+     return "Vazio!"
+  }
+  else {
     let objeto = {};
     objeto = {
       tech: ordem[i],
@@ -109,6 +113,7 @@ function techList(array, name) {
     }
     listadeTec.push(objeto)
   }
+}
   return listadeTec
 }
 // Desafio 11
