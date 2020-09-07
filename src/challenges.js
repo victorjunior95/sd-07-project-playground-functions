@@ -136,7 +136,7 @@ let a = string ;
 
 // Desafio 10
 function techList(array, name) {
-  array.sort();
+arr.sort(function(a, b){return a-b});
   let saida = [];
   if (array.length == 0) return "Vazio!";
 
