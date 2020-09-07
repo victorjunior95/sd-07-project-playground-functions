@@ -238,7 +238,20 @@ function decode(inputString) {
 }
 
 // Desafio 10
-function techList() {
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+
+function techList(namesArr, name) {
+  console.log("");
+  console.log("Desafio 10:");
+
+  let list = {};
+
+  for ( let i in namesArr ) {
+    list[i] = { tech: namesArr[i], name: name };
+  }
+
+  console.log(list);
+  return list;
 }
 
 // Desafio 11
