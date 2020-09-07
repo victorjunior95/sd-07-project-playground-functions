@@ -41,7 +41,7 @@ function highestCount(numbers) {
 /*eslint no-global-assign: "error"*/
 /*globals i:true*/
   for (i = 0; i < inAscendingOrder.length; i += 1) {
-    if (inAscendingOrder[i] == inAscendingOrder[i + 1]) {
+    if (inAscendingOrder[i] === inAscendingOrder[i + 1]) {
       CounterRepetitions += 1
     } else if (inAscendingOrder[i + 1] === undefined) {
       if (inAscendingOrder[i] >= inAscendingOrder[i - 1]) {
@@ -54,6 +54,7 @@ function highestCount(numbers) {
   return CounterRepetitions
 }
 // Desafio 7
+/*eslint consistent-return: "error"*/
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Number = 0;
   let cat2Number = 0;
