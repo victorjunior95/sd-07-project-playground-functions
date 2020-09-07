@@ -83,18 +83,13 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let saida = String(string).split('');
-  const codigo = ['a', 'e', 'i', 'o', 'u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
 
-  for (let key = 0; key < codigo.length; key += 1) {
-    for (let i = 0; i < string.length; i += 1) {
-      if (saida[i] === codigo[key]) {
-        saida[i] = key + 1;
-      }
-    }
+  for (let i = 0; i < 5; i += 1) {
+    var regExp = new RegExp(vogais[i], 'g');
+    string = string.replace(regExp, `${i + 1}`);
   }
-
-  return saida.join('');
+  return string;
 }
 
 function decode(string) {
@@ -206,6 +201,7 @@ function triangleCheck(lineA, lineB, lineC) {
 /**
  * Fonte de pesquisa: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
  * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+ * https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
  */
 
 function hydrate(phrase) {
