@@ -163,19 +163,11 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phone) {
-  let tel = phone;
-  let mensagem = '';
+function testeNumberTwo (tel) {
   let count = 0;
-  let telefone = [];
-  if (tel.length !== 11) {
-    mensagem = 'Array com tamanho incorreto.';
-    return mensagem;
-  }
   for (let i = 0; i < tel.length; i += 1) {
     if (tel[i] < 0 || tel[i] > 9) {
       mensagem = 'não é possível gerar um número de telefone com esses valores';
-      return mensagem;
     }
     for (let j = 1; j < i; j += 1) {
       if (tel[i] === tel[j]) {
@@ -183,10 +175,22 @@ function generatePhoneNumber(phone) {
       }
       if (count > 2) {
         mensagem = 'não é possível gerar um número de telefone com esses valores';
-        return mensagem;
       }
     }
   }
+  return mensagem;
+}
+function testeNumber (tel) {
+  let mensagem = '';
+  if (tel.length !== 11) {
+    mensagem = 'Array com tamanho incorreto.';
+  } else {
+    return testeNumberTwo(tel);
+  }
+  return mensagem;
+}
+function geraNumber (tel) {
+  let telefone = [];
   for (let k of tel) {
     let format = k;
     telefone.push(format.toString());
@@ -196,6 +200,19 @@ function generatePhoneNumber(phone) {
   let parte3 = telefone.slice(7, 11);
   let numberPhone = `(${parte1.join('')}) ${parte2.join('')}-${parte3.join('')}`;
   return numberPhone;
+}
+function generatePhoneNumber(phone) {
+  let tel = phone;
+  for (let i = 0; i < tel.length; i += 1) {
+    if (tel[i] < 0 || tel[i] > 9) {
+      return testeNumber(tel);
+    }
+  }
+  if (tel.length !== 11) {
+    return testeNumber(tel);
+  } else {
+    return geraNumber (tel);
+  }
 }
 
 // Desafio 12
