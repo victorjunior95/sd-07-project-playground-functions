@@ -175,12 +175,12 @@ function generatePhoneNumber(number) {
       }
       ddd = ddd.join('');
       begin = begin.join('');
-      end = end.join('');return console.log(
+      end = end.join('');
       let result = `(${ddd}) ${begin}-${end}`;
       return console.log(result);
   }
 }
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7 ,8 ,9 ,0 , 1]);
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
