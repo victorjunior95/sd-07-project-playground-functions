@@ -32,7 +32,7 @@ function splitSentence(string) {
 function concatName(array) {
   let result = '';
   result += `${array[array.length - 1]}`;
-  result += `, `;
+  result += ', ';
   result += `${array[0]}`;
   return result;
 }
