@@ -209,18 +209,24 @@ function generatePhoneNumber(numbers) {
     }
   }
 
-
+/*eslint no-unused-vars: "error"*/
   let result1 = result.splice(0, 0, '(')
+/*eslint no-unused-vars: "error"*/
   let result2 = result.splice(3, 0, ')')
+/*eslint no-unused-vars: "error"*/
   let result3 = result.splice(4, 0, ' ')
+/*eslint no-unused-vars: "error"*/
   let result4 = result.splice(10, 0, '-')
   let final = '';
+/*global k*/  
+/*eslint no-undef: ["error", { "typeof": true }] */ 
+/*eslint no-global-assign: "error"*/  
+/*globals k:true*/ 
   for (k in result) {
     final += result[k]
   }
   return final
 }
-
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
