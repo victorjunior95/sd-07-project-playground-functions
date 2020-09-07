@@ -100,7 +100,33 @@ let a = string ;
 
 
 function decode(string) {
-  let saida = string.replace(/1/g, "a");
+let nstr = '';
+let a = string ; 
+  for (let i in a ) {
+    switch (a[i]) {
+      case '1':
+        nstr += 'a';
+        break;
+      case '2':
+        nstr += 'e';
+        break;
+      case '3':
+        nstr += 'i';
+        break;
+      case '4':
+        nstr += 'o';
+        break;
+      case '5':
+        nstr += 'u';
+        break;
+      default:
+        nstr += a[i]
+    }
+  }
+  return nstr ;
+}
+
+ let saida = string.replace(/1/g, "a");
   let said = saida.replace(/2/g, "e");
   let sai = said.replace(/3/g, "i");
   let sa = sai.replace(/4/g, "o");
