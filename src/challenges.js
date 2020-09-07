@@ -152,11 +152,9 @@ function hydrate(bebidaBebidas) {
     totalBebidas += parseInt(bebidaAtual);
   }
   console.log("1 copo de água");
-  if (totalBebidas === 1) return  `${totalBebidas} copo de água`
-  return `${totalBebidas} copos de água`
+  if (totalBebidas === 1) return `${totalBebidas} copo de água`
+  else return `${totalBebidas} copos de água`
 }
-let a= ["1 cerveja"]
-console.log(hydrate(a));
 
 module.exports = {
   calcArea,
