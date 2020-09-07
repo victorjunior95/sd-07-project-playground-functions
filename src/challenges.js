@@ -190,7 +190,7 @@ function techList(tech, name) {
 
 // Suporte Desafio 11
 function checkConstraints(numbers) {
-  let message = "No constraints"
+  let message = 'No constraints'
   /* Checking if the arrays.lenght is greater than 11 */
   if (numbers.length !== 11) {
     message = 'Array com tamanho incorreto.'
@@ -210,7 +210,7 @@ function mostRepeatedNumber(numbers) {
   let mostRepeated = 0
   /* Checking if any number repeats greater or equal 3*/
   for (let i = 0; i <= numbers.length; i += 1) {
-    currentNumber = numbers[i]
+    let currentNumber = numbers[i]
     let numberOfTimesRepeat = 0
     for (let j in numbers) {
       if (currentNumber === numbers[j]) {
@@ -228,8 +228,8 @@ console.log(checkConstraints([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let constraints = checkConstraints(numbers)
-  let message = ""
- 
+  let message = ''
+
   if (constraints !== 'No constraints') {
     message = constraints
   } else if (mostRepeatedNumber(numbers) >= 3) {
@@ -237,7 +237,7 @@ function generatePhoneNumber(numbers) {
   } else {
     /* Generating phone-number in the right format*/
     let phoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
-    message =  phoneNumber
+    message = phoneNumber
   }
   return message
 }
