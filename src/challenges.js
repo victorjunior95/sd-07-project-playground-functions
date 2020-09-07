@@ -90,8 +90,8 @@ Exemplo: caso o gato cat2 está a 2 unidades de distância do rato, e cat1 está
 
 Caso os gatos estejam na mesma distância do rato, a função deve retornar uma string "os gatos trombam e o rato foge". */
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  let distanceCat1 = cat1 - mouse;
+  let distanceCat2 = cat2 - mouse;
   if (distanceCat1 < distanceCat2) {
     return "cat1";
   } else if (distanceCat2 < distanceCat1) {
@@ -128,11 +128,63 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+/* Crie duas funções: a primeira deve se chamar encode e, ao receber uma string como parâmetro, deve trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+
+Ou seja, caso o parâmetro de encodeseja "hi there!", o retorno deve ser "h3 th2r2!".
+
+A segunda função deve se chamar decode e fazer o contrário de encode- ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deve ser "hi there!") . */
+function encode(/*string*/) {
+  // let newString = "";
+  // for (i = 0; i < string.length; i += 1) {
+  //   if (string[i] == "a") {
+  //     newString = string.replace("a", "1");
+  //   } else if (string[i] == "e") {
+  //     newString = string.replace("e", "2");
+  //   } else if (string[i] == "i") {
+  //     newString = string.replace("i", "3");
+  //   } else if (string[i] == "o") {
+  //     newString = string.replace("o", "4");
+  //   } else if (string[i] == "u") {
+  //     newString = string.replace("u", "5");
+  //   } 
+  //   // switch (string[i]) {
+  //   //   case "a":
+  //   //     newString = string.replace("a", "1");
+  //   //   case "e":
+  //   //     newString = string.replace("e", "2");
+  //   //   case "i":
+  //   //     newString = string.replace("i", "3");
+  //   //   case "o":
+  //   //     newString = string.replace("o", "4");
+  //   //   case "u":
+  //   //     newString = string.replace("u", "5");
+  //   // }
+  // }
+  // return newString;
 }
-function decode() {
-  // seu código aqui
+function decode(/*newString*/) {
+  // let originalString = "";
+  // for (i = 0; i < newString.length; i += 1) {
+  //   switch (string[i]) {
+  //     case "1":
+  //       originalString = string.replace("1", "a");
+  //     case "2":
+  //       originalString = string.replace("2", "e");
+  //     case "3":
+  //       originalString = string.replace("3", "i");
+  //     case "4":
+  //       originalString = string.replace("4", "o");
+  //     case "5":
+  //       originalString = string.replace("5", "u");
+  //   }
+  // }
+  // return originalString;
 }
 
 // Desafio 10
