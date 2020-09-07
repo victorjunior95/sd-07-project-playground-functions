@@ -67,28 +67,27 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (cat1Number  < cat2Number) {
     return 'cat1'
-
-  } else if (cat2Number < cat1Number){
-      return 'cat2'
-    } else if (cat1Number  == cat2Number) {
-    return 'os gatos trombam e o rato foge'
-  }
+  } else if (cat2Number < cat1Number) {
+    return 'cat2'
+  } else if (cat1Number  == cat2Number) {
+      return 'os gatos trombam e o rato foge'
+    }
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-    for (item in numbers){
+    for (item in numbers) {
       if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
-      numbers[item] = 'fizzBuzz'
-    } else if (numbers[item] % 5 === 0) {
-        numbers[item] = 'buzz'
-      } else if (numbers[item] % 3 === 0) {
+        numbers[item] = 'fizzBuzz'
+      } else if (numbers[item] % 5 === 0) {
+      numbers[item] = 'buzz'
+    } else if (numbers[item] % 3 === 0) {
         numbers[item] = 'fizz'
       } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
-      numbers[item] = 'bug!'
+        numbers[item] = 'bug!'
     }
-}
-return numbers
+    }
+  return numbers
 }
 
 // Desafio 9
@@ -104,45 +103,45 @@ function encode(phrase) {
   let encoded = [];
   let result = '';
 
-for (i = 0; i < phrase.length; i += 1) {
+  for (i = 0; i < phrase.length; i += 1) {
   encoded[i] = phrase[i];
-  for (let index = 0; index< encoded.length; index += 1) {
-  if (encryptedLetters[encoded[i]] == undefined) {
-      result += encoded[i]
-      break
-    } else {
-      result += encryptedLetters[encoded[i]]
+  for (let index = 0; index < encoded.length; index += 1) {
+    if (encryptedLetters[encoded[i]] == undefined) {
+    result += encoded[i]
+    break
+  } else {
+    result += encryptedLetters[encoded[i]]
       break
     }
-}
+  }
 }
   return result
 }
 
 function decode(phrase) {
   let encryptedLetters = {
-      1: 'a',
-      2: 'e',
-      3: 'i',
-      4: 'o',
-      5: 'u',
-    }
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  }
 
   let decoded = [];
   let result = '';
 
   for (i = 0; i < phrase.length; i += 1) {
-  decoded[i] = phrase[i];
-  for (let j = 0; j < decoded.length; j += 1) {
-  if (encryptedLetters[decoded[i]] == undefined) {
-      result += decoded[i]
-      break
-    } else {
-      result += encryptedLetters[decoded[i]]
-      break
-    }
-}
-}
+    decoded[i] = phrase[i];
+    for (let j = 0; j < decoded.length; j += 1) {
+    if (encryptedLetters[decoded[i]] == undefined) {
+    result += decoded[i]
+    break
+  } else {
+    result += encryptedLetters[decoded[i]]
+    break
+  }
+  }
+  }
   return result
 }
 
@@ -158,9 +157,9 @@ function techList(listArray, name) {
         name: name
       })
   }
-if (listArray.length === 0){
+  if (listArray.length === 0) {
   return 'Vazio!'
-}else{
+} else {
   return resultOfArray
 }
 }
@@ -168,58 +167,55 @@ if (listArray.length === 0){
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let result = '';
-  let orinalOrder ='';
+  let orinalOrder = '';
   let fakeNumber = '(12) 34567-8901'
   let isRepeated = 0;
 
-  if (numbers.length !== 11){
-  return "Array com tamanho incorreto."
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.'
   }
 
-  for(j in numbers ){
-  orinalOrder += numbers[j]
+  for (j in numbers) {
+    orinalOrder += numbers[j]
   }
-let inAscendingOrder = numbers.sort()
-  for (i = 0; i< inAscendingOrder.length; i+=1){
-    if (inAscendingOrder[i] == inAscendingOrder[i +1] || inAscendingOrder[i] == inAscendingOrder[i -1]){
+  let inAscendingOrder = numbers.sort()
+  for (i = 0; i < inAscendingOrder.length; i += 1) {
+    if (inAscendingOrder[i] == inAscendingOrder[i + 1] || inAscendingOrder[i] == inAscendingOrder[i -1 ]) {
       isRepeated += 1
-    }else if(inAscendingOrder[i +1] === undefined ){
+    } else if (inAscendingOrder[i +1 ] === undefined) {
       break
-    }else{
-        isRepeated = 0
-      }
-      if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9){
-      return "não é possível gerar um número de telefone com esses valores"
-    }else{
-      result = orinalOrder.split('')
+    } else {
+      isRepeated = 0
     }
-}
+    if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores'
+      } else {
+        result = orinalOrder.split('')
+      }
+  }
 
 
-let result1 = result.splice(0,0, '(')
-let result2 = result.splice(3,0, ')')
-let result3 = result.splice(4,0, ' ')
-let result4 = result.splice(10,0, '-')
-let final = '';
-for (k in result){
+  let result1 = result.splice(0, 0, '(')
+  let result2 = result.splice(3, 0, ')')
+  let result3 = result.splice(4, 0, ' ')
+  let result4 = result.splice(10, 0, '-')
+  let final = '';
+  for (k in result) {
   final += result[k]
 }
-return final
+  return final
 }
 
 
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
-
-  if(lineA + lineB < lineC || lineA + lineC < lineB ||lineC + lineB < lineA ){
-return false
-  }else if( lineA < lineB - lineC || lineA < lineC - lineB || lineB < lineA - lineC || lineB < lineC - lineA || lineC < lineA - lineB || lineC < lineB - lineA){
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB < lineC || lineA + lineC < lineB || lineC + lineB < lineA) {
     return false
-
-  }else{
+  } else if ( lineA < lineB - lineC || lineA < lineC - lineB || lineB < lineA - lineC || lineB < lineC - lineA || lineC < lineA - lineB || lineC < lineB - lineA) {
+    return false
+  } else {
     return true
   }
-
 }
 
 
@@ -228,13 +224,13 @@ function hydrate(drinks) {
   let drinksTodrunk = drinks
   let numbers = drinks.match(/\d+/g).map(Number)
   let sum = 0;
-  for ( i in numbers){
+  for (i in numbers) {
     sum += numbers[i]
   }
-  if (sum > 1){
-  return sum + " copos de água"
-  }else{
-  return sum + " copo de água"
+  if (sum > 1) {
+    return `${sum} copos de água`
+  } else {
+    return `${sum} copo de água`
   }
 }
 
