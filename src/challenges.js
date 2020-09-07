@@ -77,9 +77,18 @@ function fizzBuzz(array) {
  return resultado
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+let string = "hi there!"
+function encode(string) {
+  let troca1 = string.replace(/a/g, "1");
+  let troca2 = troca1.replace(/e/g, "2");
+  let troca3 = troca2.replace(/i/g, "3");
+  let troca4 = troca3.replace(/o/g, "4");
+  let troca5 = troca4.replace(/u/g, "5");
+
+  let resultado = troca5
+  return resultado
 }
+console.log(encode(string))
 function decode() {
   // seu código aqui
 }
