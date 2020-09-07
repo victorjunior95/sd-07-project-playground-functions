@@ -215,18 +215,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-/**Fonte de pesquisa: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
- * 
+/**
+ * Fonte de pesquisa: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
  * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
-*/
+ */
 
 function hydrate(phrase) {
   let reg = /\d+/g;
-  /**O QUE SIGINIFICAM OS CARACTERES?
+  /**
+   * O QUE SIGINIFICAM OS CARACTERES?
    * d : encontra correspondência com um número de 0 a 9; /\d/
    * + : permite encontrar repetidos;
    * g : significa "global" que pesquisa varias vezes */
-  let numbers = phrase.match(reg);//cria um array com os números encontrados na string phrase.
+  let numbers = phrase.match(reg); // cria um array com os números encontrados na string phrase.
   let sum = 0;
 
   for (const key in numbers) {
