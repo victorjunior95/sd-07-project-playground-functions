@@ -42,7 +42,7 @@ function highestCount(numbers) {
   }
 
   for (let j = 0; j < numbers.length; j += 1) {
-    if (numbers(j) == maiorNumero) {
+    if (numbers[j] == maiorNumero) {
       maiorRepetido += 1;
     }
   } return maiorRepetido;
@@ -52,6 +52,7 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {  
   let mouseCat1 = Math.abs(mouse - cat1);
   let mouseCat2 = Math.abs(mouse - cat2);
+  
   if (mouseCat1 < mouseCat2) {
     return "cat1";
   } else if (mouseCat1 > mouseCat2) {
