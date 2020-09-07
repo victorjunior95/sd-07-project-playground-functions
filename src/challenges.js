@@ -40,8 +40,8 @@ function highestCount(numbers) {
   for (i = 0; i < inAscendingOrder.length; i += 1) {
     if (inAscendingOrder[i] == inAscendingOrder[i + 1]) {
       CounterRepetitions += 1
-    } else if (inAscendingOrder[i + 1] === undefined){
-      if(inAscendingOrder[i] >= inAscendingOrder[i - 1]) {
+    } else if (inAscendingOrder[i + 1] === undefined) {
+      if (inAscendingOrder[i] >= inAscendingOrder[i - 1]) {
         CounterRepetitions += 1
       }
       return CounterRepetitions
@@ -65,32 +65,30 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
   }cat2Number = cat2 - mouse
 
-  if (cat1Number  < cat2Number){
-      return 'cat1'
+  if (cat1Number  < cat2Number) {
+    return 'cat1'
 
-    } else if ( cat2Number < cat1Number ){
-    return 'cat2'
-
-  } else if (cat1Number  == cat2Number) {
+  } else if (cat2Number < cat1Number){
+      return 'cat2'
+    } else if (cat1Number  == cat2Number) {
     return 'os gatos trombam e o rato foge'
-
-    }
+  }
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-    for (item in numbers)
-    if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
-        numbers[item] = 'fizzBuzz'
-      } else if (numbers[item] % 5 === 0) {
-          numbers[item] = 'buzz'
+    for (item in numbers){
+      if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
+      numbers[item] = 'fizzBuzz'
+    } else if (numbers[item] % 5 === 0) {
+        numbers[item] = 'buzz'
       } else if (numbers[item] % 3 === 0) {
         numbers[item] = 'fizz'
-    } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
+      } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
       numbers[item] = 'bug!'
-  }
+    }
   return numbers
-
+}
 }
 // Desafio 9
 function encode(phrase) {
@@ -102,58 +100,57 @@ function encode(phrase) {
     u: 5,
   }
 
-let encoded = [];
-let result = '';
+  let encoded = [];
+  let result = '';
 
-for ( i = 0; i < phrase.length; i +=1 ) {
+for (i = 0; i < phrase.length; i += 1) {
   encoded[i] = phrase[i];
-for (let index = 0; index< encoded.length; index +=1 ) {
-    if (encryptedLetters[encoded[i]] == undefined) {
+  for (let index = 0; index< encoded.length; index += 1) {
+  if (encryptedLetters[encoded[i]] == undefined) {
       result += encoded[i]
       break
-    }else{
+    } else {
       result += encryptedLetters[encoded[i]]
       break
     }
-  }
+}
 }
   return result
 }
 
 function decode(phrase) {
-    let encryptedLetters = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  }
+  let encryptedLetters = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u',
+    }
 
-let decoded = [];
-let result = '';
+  let decoded = [];
+  let result = '';
 
-for ( i = 0; i < phrase.length; i += 1) {
+  for (i = 0; i < phrase.length; i += 1) {
   decoded[i] = phrase[i];
-for (let j = 0; j< decoded.length; j += 1) {
-    if (encryptedLetters[decoded[i]] == undefined) {
+  for (let j = 0; j < decoded.length; j += 1) {
+  if (encryptedLetters[decoded[i]] == undefined) {
       result += decoded[i]
       break
-    }else{
+    } else {
       result += encryptedLetters[decoded[i]]
       break
     }
-  }
+}
 }
   return result
 }
 
 // Desafio 10
 function techList(listArray, name) {
-
   let resultOfArray = []
   listArray.sort()
 
-  for (i in listArray){
+  for (i in listArray) {
     resultOfArray.push(
       {
         tech: listArray[i],
