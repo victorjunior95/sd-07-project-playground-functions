@@ -69,13 +69,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function checkNumber(num) {
   let check = '';
   if (num % 3 === 0 && num % 5 === 0) {
-      check += 'fizzBuzz';
-    } else if (num % 3 === 0) {
-      check += 'fizz';
-    } else if (num % 5 === 0) {
-      check += 'buzz';
-    } else {
-      check += 'bug!';
+    check += 'fizzBuzz';
+  } else if (num % 3 === 0) {
+    check += 'fizz';
+  } else if (num % 5 === 0) {
+    check += 'buzz';
+  } else {
+    check += 'bug!';
   }
   return check;
 }
