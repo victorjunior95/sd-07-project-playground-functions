@@ -78,6 +78,7 @@ function encodeDecode(string, searching, replacing) {
   }
   return string;
 }
+
 // Desafio 9
 function encode(string) {
   let searching = ['a', 'e', 'i', 'o', 'u'];
@@ -92,6 +93,7 @@ function decode(string) {
   return encodeDecode(string, searching, replacing);
 }
 console.log(decode('h3 th2r2!'));
+
 // Desafio 10
 function techList(techName, name) {
   techName.sort();
@@ -107,6 +109,7 @@ function techList(techName, name) {
   }
   return techNameList;
 }
+
 function phoneFormat(phoneNum) {
   let phoneForm =
     `(${phoneNum[0]}` +
@@ -115,6 +118,7 @@ function phoneFormat(phoneNum) {
     `-${phoneNum.slice(7, 12).join('')}`;
   return phoneForm;
 }
+
 // Desafio 11
 function generatePhoneNumber(phoneNum) {
   let repeat3 = 0;
@@ -140,7 +144,6 @@ function generatePhoneNumber(phoneNum) {
   }
   return phoneFormat(phoneNum);
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -158,11 +161,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(water) {
-  let waterRegExp = /[0-9]/g;
-  let waterWithoutSpaces = water.replace(/\s/g, '');
-  let waterNum = waterWithoutSpaces.match(waterRegExp);
+  let waterNum = water.match(/\d/g);
   let waterCount = 0;
-  for (let i = 0; i < waterNum.length; i += 0) {
+  for (let i = 0; i < waterNum.length; i += 1) {
     waterCount += parseInt(waterNum[i], 10);
   }
   if (waterCount > 1) {
@@ -170,6 +171,7 @@ function hydrate(water) {
   }
   return `${waterCount} copo de água`;
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
