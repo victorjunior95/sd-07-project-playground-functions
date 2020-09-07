@@ -201,14 +201,14 @@ function checkDrinks(string) {
   let numberOfDrinks = '';
   let sumDrinks = 0;
   while ((numberOfDrinks = drinks.exec(string)) !== null) {
-//converte string em número
-      numberOfDrinks = +numberOfDrinks[0];;
-      sumDrinks += numberOfDrinks;
+//  converte string em número
+    numberOfDrinks = +numberOfDrinks[0];
+    sumDrinks += numberOfDrinks;
   }
   return sumDrinks;
 }
 function hydrate(string) {
-let result = checkDrinks(string);
+  let result = checkDrinks(string);
   if (result === 1) {
     return `${result} copo de água`;
   } else if (result > 1) {
