@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(bool_1, bool_2) {
-  if (bool_1 === true && bool_2 === true) {
+function compareTrue(bool1, bool2) {
+  if (bool1 === true && bool2 === true) {
     return true;
   } else {
     return false;
@@ -10,7 +10,6 @@ console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = 0
   return area = ((base * height) / 2);
 }
 console.log(calcArea(2, 3));
@@ -34,7 +33,7 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 function footballPoints(wins, ties) {
   vitoria = 3;
   empate = 1;
-  return pontuacao = wins * vitoria + ties * empate;
+  return pontuacao = (wins * vitoria) + (ties * empate);
 }
 
 console.log(footballPoints(3, 1));
