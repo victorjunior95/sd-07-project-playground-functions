@@ -105,6 +105,9 @@ function decode(frase) {
 
 // Desafio 10
   function techList(learn, name) {
+    if(learn == 0){
+      return 'Vazio!'
+    }
     let learnTechnology = [];
     for (let i in learn) {
       let organization = learn.sort();
