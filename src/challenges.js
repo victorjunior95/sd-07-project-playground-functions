@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let key = 0; key < array.length; key += 1) {
-    if (array[key] % 3 === 0 && array[key] % 5 === 0) array[key] = 'fizzBuzz';
+    if (array[key] % 15 === 0) array[key] = 'fizzBuzz';
     else if (array[key] % 3 === 0) array[key] = 'fizz';
     else if (array[key] % 5 === 0) array[key] = 'buzz';
     else array[key] = 'bug!';
@@ -174,4 +174,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-console.log(decode("h2ll4 w4rld! n3c2 t4 s22 y45"));
