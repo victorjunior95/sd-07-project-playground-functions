@@ -193,10 +193,10 @@ function generatePhoneNumber(numbers) {
   let naoEstaEntre0E9 = 0;
 
   for(let index in numbers){
-    index < 0 || index > 9;
-    naoEstaEntre0E9 = 1;
-    break;
+    if(numbers[index] < 0 || numbers[index] > 9){
+    naoEstaEntre0E9 += 1;    
   }
+}
 
   let repetition = 0;
 
@@ -207,7 +207,7 @@ function generatePhoneNumber(numbers) {
               repetition += 1;
           }
       }
-      if (repetition > 3){
+      if (repetition > 2){
           break;
       }
       repetition = 0;
@@ -219,7 +219,7 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return "Array com tamanho incorreto.";
   }
-  else if (naoEstaEntre0E9 === 1 && repetition > 3){
+  else if (naoEstaEntre0E9 != 0 && repetition > 2){
       return "não é possível gerar um número de telefone com esses valores";
   }
   else {
@@ -227,7 +227,7 @@ function generatePhoneNumber(numbers) {
   }   
 }
 
-generatePhoneNumber([1, 9, 3, 9, 5, 6, 7, 8, 9, 0, 9]);
+generatePhoneNumber([1, -6, 3, 9, 5, 6, 21, 8, -35, 0, 9]);
 
 // Desafio 12
 function triangleCheck() {
