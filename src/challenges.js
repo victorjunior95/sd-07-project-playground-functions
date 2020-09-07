@@ -203,7 +203,7 @@ function generatePhoneNumber(phone) {
     answer = suport11(phone);
   }
   lastReturn = answer;
-  return repeat;
+  return lastReturn;
 }
 
 // Desafio 12
