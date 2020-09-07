@@ -87,21 +87,21 @@ function fizzBuzz(numeros) {
 
 function encode(frase) {
   let resultado = frase;
-  resultado = resultado.replace(/a/, '1');
-  resultado = resultado.replace(/e/, '2');
-  resultado = resultado.replace(/i/, '3');
-  resultado = resultado.replace(/o/, '4');
-  resultado = resultado.replace(/u/, '5');
+      resultado = resultado.replace(/a/, '1');
+      resultado = resultado.replace(/e/, '2');
+      resultado = resultado.replace(/i/, '3');
+      resultado = resultado.replace(/o/, '4');
+      resultado = resultado.replace(/u/, '5');
   return resultado;
 }
 
 function decode(frase) {
   let resultado = frase;
-  resultado = resultado.replace(/1/gi, 'a');
-  resultado = resultado.replace(/2/gi, 'e');
-  resultado = resultado.replace(/3/gi, 'i');
-  resultado = resultado.replace(/4/gi, 'o');
-  resultado = resultado.replace(/5/gi, 'u');
+      resultado = resultado.replace(/1/gi, 'a');
+      resultado = resultado.replace(/2/gi, 'e');
+      resultado = resultado.replace(/3/gi, 'i');
+      resultado = resultado.replace(/4/gi, 'o');
+      resultado = resultado.replace(/5/gi, 'u');
   return resultado;
 }
 
@@ -148,7 +148,9 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-function triangleCheck() {}
+function triangleCheck() {
+
+}
 
 // Desafio 13
 function hydrate() {}
