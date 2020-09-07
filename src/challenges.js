@@ -201,10 +201,10 @@ function checkDrinks(string) {
   let nDrinks = 0;
   let number = 0;
   for (let i in string) {
+    if(string.length !== 0) {
     for (let j in drink) {
       number = +string[i];
-      if (number === drink[j]) {
-        nDrinks += drink[j];
+      nDrinks = (number === drink[j]) ? nDrinks += drink[j] : nDrinks += 0;
       }
     }
   }
