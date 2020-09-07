@@ -147,13 +147,13 @@ function generatePhoneNumber(number) {
   let phone = checkNumber(number);
   for (let index in phone) {
     if (phone[index] < 0) {
-      return "Não é possível gerar um número de telefone com esses valores";
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
   if (phone === 3) {
-    return "Não é possível gerar um número de telefone com esses valores";
+    return "não é possível gerar um número de telefone com esses valores";
   } else if (phone.length != 11) {
-    return "Array com tamanho incorreto";
+    return "Array com tamanho incorreto.";
   }
   phone = Math.abs(phone);
     return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
