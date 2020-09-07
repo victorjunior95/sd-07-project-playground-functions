@@ -160,14 +160,9 @@ function techList(tech, name) {
 
 // Desafio 11
 function geraNumber(tel) {
-  let telefone = [];
-  for (let k of tel) {
-    let format = k;
-    telefone.push(format.toString());
-  }
-  let parte1 = telefone.slice(0, 2);
-  let parte2 = telefone.slice(2, 7);
-  let parte3 = telefone.slice(7, 11);
+  let parte1 = tel.slice(0, 2);
+  let parte2 = tel.slice(2, 7);
+  let parte3 = tel.slice(7, 11);
   let numberPhone = `(${parte1.join('')}) ${parte2.join('')}-${parte3.join('')}`;
   return numberPhone;
 }
