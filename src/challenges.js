@@ -184,9 +184,14 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-
+/*global j*/
+/*eslint no-undef: ["error", { "typeof": true }] */
+/*eslint no-global-assign: "error"*/
+/*globals j:true*/
   for (j in numbers) {
-    orinalOrder += numbers[j]
+    if (numbers.length === 11){
+      orinalOrder += numbers[j]
+    }
   }
   let inAscendingOrder = numbers.sort()
   for (i = 0; i < inAscendingOrder.length; i += 1) {
