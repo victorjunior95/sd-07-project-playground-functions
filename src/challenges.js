@@ -44,7 +44,7 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(numeros) {
-  let idcMaior =  Math.max.apply(null, numeros);
+  let idcMaior = Math.max.apply(null, numeros);
   let indice = numeros.indexOf(idcMaior);
   let contRepet = 0
   for (let z in numeros) {
@@ -96,39 +96,12 @@ function fizzBuzz(vetor) {
   return result;
 }
 // Desafio 9
-function encode(phrase) {
-  let codigo = phrase.split('');
-  for (let i = 0; i < codigo.length; i += 1) {
-    if (codigo[i] === 'a') {
-      codigo.splice(i, 1, '1');
-    } else if (codigo[i] === 'e') {
-      codigo.splice(i, 1, '2');
-    } else if (codigo[i] === 'i') {
-      codigo.splice(i, 1, '3');
-    } else if (codigo[i] === 'o') {
-      codigo.splice(i, 1, '4');
-    } else if (codigo[i] === 'u') {
-      codigo.splice(i, 1, '5');
-    }
-  }
-  return codigo.join('');
+function encode(entrada) {
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  return [...entrada].map(elem => vogais.includes(elem) ? vogais.indexOf(elem)+1 : elem).join('');
 }
-function decode(sentence) {
-  let descobrindo = sentence.split('');
-  for (let i in descobrindo) {
-    if (descobrindo[i] === '1') {
-      descobrindo.splice(i, 1, 'a');
-    } else if (descobrindo[i] === '2') {
-      descobrindo.splice(i, 1, 'e');
-    } else if (descobrindo[i] === '3') {
-      descobrindo.splice(i, 1, 'i');
-    } else if (descobrindo[i] === '4') {
-      descobrindo.splice(i, 1, 'o');
-    } else if (descobrindo[i] === '5') {
-      descobrindo.splice(i, 1, 'u');
-    }
-  }
-  return descobrindo.join('');
+function decode(texto) {
+  return [...texto].map(item => Number(item) ? vogais[Number(item)-1] : item).join('');
 }
 // Desafio 10
 function techList(vetor, name) {
