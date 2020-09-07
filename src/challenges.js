@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
     return 'cat2'
   } else {
-    return "Os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge";
   }
 }
 console.log(catAndMouse(12,4,0));
@@ -68,7 +68,7 @@ function fizzBuzz(arrayDeNumeros) {
   let mensagemFinal = []
   for (i = 0; i < arrayDeNumeros.length; i += 1){
     if (arrayDeNumeros[i] % 3 === 0 && arrayDeNumeros[i] % 5 == 0){
-      mensagem = 'fizzbug';
+      mensagem = 'fizzBuzz';
     } else if (arrayDeNumeros[i] % 5 == 0){
       mensagem = 'buzz';
     } else if (arrayDeNumeros[i] % 3 == 0){
@@ -79,7 +79,7 @@ function fizzBuzz(arrayDeNumeros) {
   } return mensagemFinal
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
