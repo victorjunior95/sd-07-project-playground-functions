@@ -172,7 +172,6 @@ function geraNumber(tel) {
   return numberPhone;
 }
 function repeatNumber(tel) {
-  let mensagem = '';
   let count = 0;
   for (let i = 0; i < tel.length; i += 1) {
     for (let j = 1; j < i; j += 1) {
@@ -182,7 +181,7 @@ function repeatNumber(tel) {
     }
   }
   if (count > 2) {
-    mensagem = 'não é possível gerar um número de telefone com esses valores';
+    let mensagem = 'não é possível gerar um número de telefone com esses valores';
     return mensagem;
   }
   return geraNumber(tel);
@@ -217,7 +216,7 @@ function generatePhoneNumber(phone) {
   }
   return repeatNumber(tel);
 }
-
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let ladoUm = lineA;
