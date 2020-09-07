@@ -149,37 +149,40 @@ function techList(arrayOfTechs, name) {
   return result;
 }
 // Desafio 11
-function validaNumbers(arrayNumbers) {
+function validateRange(arrayNumbers) {
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    let countRepeat = 0;
     if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
       return false;
     }
-    for (let j = 0; j < arrayNumbers.length; j += 1) {
+  }
+  return true;
+}
+function validateRepeatedNumbers(arrayNumbers) {
+  let countRepeat = 0;
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    countRepeat = 0;
+    for (let j = 1; j <= arrayNumbers.length; j += 1) {
       if (arrayNumbers[j] === arrayNumbers[i]) {
         countRepeat += 1;
       }
     }
-    if (countRepeat >= 3) {
-      return false;
-    }
-    countRepeat = 0;
+  }
+  if (countRepeat >= 3) {
+    return false;
   }
   return true;
 }
 function generatePhoneNumber(number) {
   let stringNumber = '';
-  let condition = validaNumbers(number);
+  let validate = validateRange(number) && validateRepeatedNumbers(number);
+  if (!validate) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
   if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (condition === false) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
   for (let i = 0; i < number.length; i += 1) {
-    if (number[i] >= 0 && number[i] < 10) {
-      stringNumber += number[i];
-    }
+    stringNumber += number[i];
   }
   return `(${stringNumber.substring(0, 2)}) ${stringNumber.substring(2, 7)}-${stringNumber.substring(7, 11)}`;
 }
