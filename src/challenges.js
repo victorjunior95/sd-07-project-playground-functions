@@ -127,7 +127,7 @@ function techList(techs, name) {
     finalListTechs.push(listTechs);
   }
   if (techs.length < 1) {
-    return "Vazio";
+    return "Vazio!";
   } else {
     return finalListTechs;
   }
