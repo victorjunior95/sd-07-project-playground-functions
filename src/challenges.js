@@ -45,9 +45,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato2Dist = Math.abs(cat2 - mouse);
   if (gato1Dist === gato2Dist) {
     return 'os gatos trombam e o rato foge';
-  } else if (gato1Dist > gato2Dist) {
+  } else if (gato1Dist < gato2Dist) {
     return 'cat1';
-  } else if (gato2Dist > gato1Dist) {
+  } else if (gato2Dist < gato1Dist) {
     return 'cat2';
   }
 }
