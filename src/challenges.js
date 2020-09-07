@@ -144,11 +144,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidaBebidas) {
+  let totalBebidas = 0;
+  let bebidaAtual = 0;
+  for (let i  = 0; i < bebidaBebidas.length; i += 1) {
+    bebidaAtual = bebidaBebidas[i].replace("[^//d]]", "")
+    totalBebidas += parseInt(bebidaAtual);
+  }
+  return `${totalBebidas} copos de água`
 }
-
-
 module.exports = {
   calcArea,
   catAndMouse,
