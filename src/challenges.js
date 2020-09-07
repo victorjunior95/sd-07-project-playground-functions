@@ -139,13 +139,13 @@ techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if(array.length != 11){
+  if (array.length != 11) {
     return 'Array com tamanho incorreto.';
   } else {
-    for (i = 0; i < array.length; i += 1){
+    for (let i = 0; i < array.length; i += 1){
       let count = 0;
-      for (j = 0; j < array.length; j++) {
-        if(array[j] === array[i]) {
+      for (let j = 0; j < array.length; j += 1) {
+        if (array[j] === array[i]) {
           count += 1;
         }
       }
@@ -159,8 +159,7 @@ function generatePhoneNumber(array) {
 
 generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]);
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  
+function triangleCheck() {
   // seu código aqui
 }
 
