@@ -42,15 +42,15 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 > cat2 && cat1 < mouse) {
-    return cat1;
+    return 'cat1';
   } else if (cat2 > cat1 && cat2 < mouse) {
-    return cat2;
+    return 'cat2';
   } else if (cat1 < cat2 && cat1 > mouse) {
-    return cat1;
+    return 'cat1';
   } else if (cat2 < cat1 && cat2 > mouse) {
-    return cat2
+    return 'cat2';
   } else if (cat1 === cat2) {
-    return 'Os gatos trombam e o rato foge.';
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -58,13 +58,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
-      array[i] = "fizz";
+      array[i] = 'fizz';
     } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
-      array[i] = "buzz";
+      array[i] = 'buzz';
     } else if (array[i] % 5 === 0 && array[i] % 3 === 0) {
-      array[i] = "fizzBuzz";
+      array[i] = 'fizzBuzz';
     } else {
-      array[i] = "bug!";
+      array[i] = 'bug!';
     }
   }
   return array;
@@ -122,7 +122,7 @@ function triangleCheck() {
 function hydrate() {
 
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 module.exports = {
   calcArea,
   catAndMouse,
