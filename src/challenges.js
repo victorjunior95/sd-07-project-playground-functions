@@ -15,13 +15,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(' ');
-  return array;  
+  let array = string.split(" ");
+  return array;
 }
 
 // Desafio 4
 function concatName(array) {
-  let name = array[array.length-1] + `, ` + array[0];
+  let name = array[array.length - 1] + `, ` + array[0];
   return name;
 }
 
@@ -42,7 +42,7 @@ function highestCount(array) {
   }
   for (i in array) {
     if (array[i] === maior) {
-      cont +=1;
+      cont += 1;
     }
   }
   return cont;
@@ -60,19 +60,19 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distCat2 < distCat1) {
     return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (let i in array){
-    if (array[i]%3 === 0 && array[i]%5 === 0) {
+  for (let i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       newArray[i] = "fizzBuzz";
-    } else if (array[i]%3 === 0){
+    } else if (array[i] % 3 === 0) {
       newArray[i] = "fizz";
-    } else if (array[i]%5 === 0){
+    } else if (array[i] % 5 === 0) {
       newArray[i] = "buzz";
     } else {
       newArray[i] = "bug!";
@@ -84,16 +84,16 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(text) {
   let modified = [];
-  for (let i in text){
-    if (text[i] === "a"){
+  for (let i in text) {
+    if (text[i] === "a") {
       modified[i] = "1";
-    } else if (text[i] === "e"){
+    } else if (text[i] === "e") {
       modified[i] = "2";
-    } else if (text[i] === "i"){
+    } else if (text[i] === "i") {
       modified[i] = "3";
-    } else if (text[i] === "o"){
+    } else if (text[i] === "o") {
       modified[i] = "4";
-    } else if (text[i] === "u"){
+    } else if (text[i] === "u") {
       modified[i] = "5";
     } else {
       modified[i] = text[i];
@@ -105,16 +105,16 @@ function encode(text) {
 
 function decode(text) {
   let modified = [];
-  for (let i in text){
-    if (text[i] === "1"){
+  for (let i in text) {
+    if (text[i] === "1") {
       modified[i] = "a";
-    } else if (text[i] === "2"){
+    } else if (text[i] === "2") {
       modified[i] = "e";
-    } else if (text[i] === "3"){
+    } else if (text[i] === "3") {
       modified[i] = "i";
-    } else if (text[i] === "4"){
+    } else if (text[i] === "4") {
       modified[i] = "o";
-    } else if (text[i] === "5"){
+    } else if (text[i] === "5") {
       modified[i] = "u";
     } else {
       modified[i] = text[i];
@@ -127,57 +127,60 @@ function decode(text) {
 // Desafio 10
 function techList(array, name) {
   let objeto = [];
-  if (array.length === 0){
-    return "Vazio!"
-  } else{
+  if (array.length === 0) {
+    return "Vazio!";
+  } else {
     array = array.sort();
-    for(let i in array){
+    for (let i in array) {
       objeto[i] = {
         tech: array[i],
-        name: name
-      }
+        name: name,
+      };
     }
     return objeto;
-  }  
+  }
 }
 
 // Desafio 11
-function generatePhoneNumber(phone) {
-//   let repeticoes = 0;  
-//   for (let i in phone) {
-//     repeticoes = 0;
+function generatePhoneNumber(number) {
+  let invalid = false;
+  let ddd = [];
+  let begin = [];
+  let end = [];
 
-//     for (let j in phone) {
-//       if (phone[i] === phone[j]){
-//         repeticoes += 1;
-//       }
-//     }
-//   }
-//   return repeticoes;
-
-//   // --------------------------------------------
-//   if (phone.length!==11){
-//     return `Array com tamanho incorreto`
-//   }
-
-//   // --------------------------------------------
-//   let ddd = "";
-//   let primeiroBloco = "";
-//   let segundoBloco = "";
-
-//   for (let i = 0; i<2; i+=1){
-//     ddd += phone[i];
-//   }
-//   for (i = 2; i<7; i+=1){
-//     primeiroBloco += phone[i];
-//   }
-//   for (i = 7; i<phone.length; i+=1){
-//     segundoBloco += phone[i];
-//   }
-//   return `(${ddd}) ${primeiroBloco}-${segundoBloco}`
+  for (let i in number){
+    let cont = 0;
+    for (let j in number){
+      if (number[i] === number[j]) {
+        cont +=1;
+      }
+      if(cont>=3 || number[j] < 0 || number[j] > 9){
+        invalid = true;
+      }
+    }    
+  }
+  if(number.length !== 11){
+    return "Array com tamanho incorreto.";
+  } else if (invalid === true){
+    return "Array com tamanho incorreto."
+  } else {
+      for (let k = 0; k < 2; k += 1){
+        ddd[k] = number[k];
+      }
+      for (let l = 2; l < 7; l += 1){
+        begin[l] = number[l];
+      }
+      for (let m = 7; m < number.length; m += 1){
+        end[m] = number[m];
+      }
+      ddd = ddd.join('');
+      begin = begin.join('');
+      end = end.join('');
+      let result = `(${ddd}) ${begin}-${end}`;
+      return console.log(result);
+  }
 }
-// console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7 ,8 ,9 ,0 , 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
@@ -187,7 +190,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
@@ -204,4 +206,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
