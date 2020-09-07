@@ -51,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanciaCat1 == distanciaCat2) {
     return "os gatos trombam e o rato foge"
   } 
-  else if (distanciaCat1 > distanciaCat2) {
+  else if (distanciaCat1 < distanciaCat2) {
     return "cat2"
   } else {
     return "cat1" 
@@ -102,10 +102,10 @@ function techList(array, name) {
   let ordem = array.sort();
   let listadeTec = []
   for (i = 0; i < ordem.length; i += 1){
-   if(array.length < 0){ 
-     return "Vazio!"
-  }
-  else {
+    if(array.length < 0){
+      listadeTec = "Vazio!"
+    }
+    else if {
     let objeto = {};
     objeto = {
       tech: ordem[i],
