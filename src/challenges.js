@@ -130,10 +130,10 @@ function catAndMouse(animalsPosition) {
     return "Os gatos se trombam e o rato foge";
   } else if ( cat1 < cat2 ) {
     console.log("O gato 1 alcança o rato primeiro");
-    return "cat1";
+    return cat1;
   } else if ( cat1 > cat2 ) {
     console.log("O gato 2 alcança o rato primeiro");
-    return "cat2";
+    return cat2;
   }
 
 }
@@ -150,7 +150,7 @@ function fizzBuzz(arrayOfNumbers2) {
   for ( i = 0; i < arrayOfNumbers2.length; i += 1 ){
     
     if (( arrayOfNumbers2[i] % 5 ) === 0 && ( arrayOfNumbers2[i] % 3 ) === 0 ) {
-      resultArray.push("fizzbuzz");
+      resultArray.push("fizzBuzz");
     
     } else {
       if (( arrayOfNumbers2[i] % 3 ) === 0 ) {
