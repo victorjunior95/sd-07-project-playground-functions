@@ -139,10 +139,10 @@ techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let i = 0; i < array.length; i += 1){
+  }  else {
+    for (let i = 0; i < array.length; i += 1) {
       let count = 0;
       for (let j = 0; j < array.length; j += 1) {
         if (array[j] === array[i]) {
