@@ -87,9 +87,10 @@ function fizzBuzz(numbers) {
       } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
       numbers[item] = 'bug!'
     }
-  return numbers
 }
+return numbers
 }
+
 // Desafio 9
 function encode(phrase) {
   let encryptedLetters = {
