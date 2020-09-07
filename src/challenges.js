@@ -71,14 +71,33 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  let saida = string.replace(/a/g, "1");
-  let said = saida.replace(/e/g, "2");
-  let sai = said.replace(/i/g, "3");
-  let sa = sai.replace(/o/g, "4");
-  let s = sa.replace(/u/g, "5");
-  return s;
+function encode (string) {
+let nstr = '';
+let a = string ; 
+  for (let i in a ) {
+    switch (a[i]) {
+      case 'a':
+        nstr += 1;
+        break;
+      case 'e':
+        nstr += 2;
+        break;
+      case 'i':
+        nstr += 3;
+        break;
+      case 'o':
+        nstr += 4;
+        break;
+      case 'u':
+        nstr += 5;
+        break;
+      default:
+        nstr += a[i]
+    }
+  }
+  return nstr ;
 }
+
 
 function decode(string) {
   let saida = string.replace(/1/g, "a");
