@@ -34,29 +34,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function maiorValor(valores) {
-  let maior = 0;
-  for (let valor of valores) {
-    if (valor > maior) {
-      maior = valor;
-    }
-  }
-
-  return maior;
-}
-
 function highestCount(vetor) {
-  let maior = maiorValor(vetor);
-  let contaMaior = 0;
+  vetor = vetor.sort().reverse();
+  let posMaior = 0;
 
   for (const key in vetor) {
-    if (Object.prototype.hasOwnProperty.call(vetor, key)) {
-      if (maior === vetor[key]) {
-        contaMaior += 1;
-      }
+    if (vetor[0] === vetor[key]) {
+      posMaior = key;
     }
   }
-  return contaMaior;
+  posMaior = parseInt(posMaior) + 1;
+
+  return posMaior;
 }
 
 // Desafio 7
