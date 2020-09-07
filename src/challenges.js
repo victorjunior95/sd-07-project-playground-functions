@@ -113,8 +113,8 @@ function techList(array, name) {
     }
     listadeTec.push(objeto)
   }
-}
   return listadeTec
+}
 }
 // Desafio 11
 function generatePhoneNumber() {
