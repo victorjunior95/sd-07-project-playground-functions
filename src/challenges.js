@@ -73,11 +73,11 @@ function fizzBuzz(array) {
       string.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
         string.push('fizz');
-      } else if (array[i] % 5 === 0) {
-        string.push('buzz');
-      } else {
-        string.push('bug!');
-      }
+    } else if (array[i] % 5 === 0) {
+      string.push('buzz');
+    } else {
+      string.push('bug!');
+    }
   }
   return string;
 }
@@ -96,15 +96,15 @@ function encode(string) {
   return string;
 }
 function decode(string) {
-  let vogais = ['a', 'e' , 'i', 'o', 'u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let indice = 1;
   for (let i in vogais) {
     if (vogais.length !== 0) {
       let regex = new RegExp(indice, 'g');
       string = string.replace(regex, vogais[i]);
       indice += 1;
+    }
   }
-}
   return string;
 }
 
@@ -174,24 +174,24 @@ function absolut(a, b) {
 
 function checkSum(lineA, lineB, lineC) {
   if (sum(lineA, lineB) > lineC) {
-      if (sum(lineA, lineC) > lineB) {
-          if (sum(lineB, lineC) > lineA) {
-              return true;
-          }
-      }
+    if (sum(lineA, lineC) > lineB) {
+      if (sum(lineB, lineC) > lineA) {
+          return true;
+        }
+    }
   } else {
-      return false;
+    return false;
   }
 }
 function checkAbs(lineA, lineB, lineC) {
   if (absolut(lineA, lineB) < lineC) {
-      if (absolut(lineA, lineC) < lineB) {
-          if (absolut(lineB, lineC) < lineA){
-              return true;
+    if (absolut(lineA, lineC) < lineB) {
+        if (absolut(lineB, lineC) < lineA) {
+            return true;
           }
       }
   } else {
-      return false;
+    return false;
   }
 }
 function triangleCheck(lineA, lineB, lineC) {
