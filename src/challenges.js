@@ -144,7 +144,7 @@ function techList(tec, names) {
 // Desafio 11
 function generatePhoneNumber(number) {
   // seu código aqui
-  let phone = checkNumber(number);
+  let phone = Math.abs(checkNumber(number));
     if (phone === 3) {
       return "Não é possível gerar um número de telefone com esses valores";
     } else if (phone.length != 11) {
