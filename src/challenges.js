@@ -22,7 +22,7 @@ function splitSentence(stringSentence) {
 function concatName(names) {
   let amount = names
   let last = amount[amount.length - 1]
-  let first =  amount[0]
+  let first = amount[0]
   return `${last}, ${first}`;
 }
 
@@ -44,11 +44,11 @@ function highestCount(numbers) {
       if (inAscendingOrder[i] >= inAscendingOrder[i - 1]) {
         CounterRepetitions += 1
       }
-      return CounterRepetitions
     } else {
       CounterRepetitions = 0
     }
   }
+  return CounterRepetitions
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
