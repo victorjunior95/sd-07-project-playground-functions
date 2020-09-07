@@ -197,7 +197,6 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  string = string.split(' ');
   let drinks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let nDrinks = 0;
   for (let i in string) {
@@ -214,6 +213,7 @@ function hydrate(string) {
   }
   return `${nDrinks} copos de água`;
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
