@@ -55,8 +55,8 @@ function highestCount(param) {
       maior = numeros[i];
     }
   }
-  for (let j = numeros.length; j > 0; j -= 1) {
-    if (numeros[j] === maior) {
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (maior === numeros[i]) {
       cont += 1;
     }
   }
