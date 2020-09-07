@@ -178,11 +178,11 @@ function repeatNumber(tel) {
       if (tel[i] === tel[j]) {
         count += 1;
       }
+      if (count > 2) {
+        let mensagem = 'não é possível gerar um número de telefone com esses valores';
+        return mensagem;
+      }
     }
-  }
-  if (count > 2) {
-    let mensagem = 'não é possível gerar um número de telefone com esses valores';
-    return mensagem;
   }
   return geraNumber(tel);
 }
