@@ -122,15 +122,17 @@ function techList(tech, name) {
 
 function validaTamanho(tamanho) {
   if (tamanho.length !== 11) {
+    return true;
   }
-  return true;
+  return false;
 }
 function validaNumeros(valNum) {
   for (let i = 0; i < valNum.length; i += 1) {
     if (valNum[i] < 0 || valNum[i] > 9) {
+      return true;
     }
   }
-  return true;
+  return false;
 }
 function validarepetidos(valRep) {
   // Valida numeros repetidos
@@ -141,9 +143,10 @@ function validarepetidos(valRep) {
   });
   for (let i in resultado) {
     if (resultado[i] > 2) {
+      return true;
     }
   }
-  return true;
+  return false;
 }
 function generatePhoneNumber(n) {
   let teste1 = validaTamanho(n);
