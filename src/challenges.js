@@ -66,19 +66,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkNumber(array) {
+  let check = [];
+  if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+    check = 'fizzBuzz';
+  } else if (array[i] % 3 === 0) {
+    check = 'fizz';
+  } else if (array[i] % 5 === 0) {
+    check = 'buzz';
+  } else {
+    check = 'bug!';
+  }
+  return check;
+}
 function fizzBuzz(array) {
   let string = [];
   for (let i in array) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      string.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
-      string.push('fizz');
-    } else if (array[i] % 5 === 0) {
-      string.push('buzz');
-    } else {
-      string.push('bug!');
+    string.push(checkNumber(array[i]));
     }
-  }
   return string;
 }
 
@@ -177,7 +182,7 @@ function checkSum(lineA, lineB, lineC) {
   if (sum(lineA, lineB) > lineC) {
     if (sum(lineA, lineC) > lineB) {
       if (sum(lineB, lineC) > lineA) {
-        check += 1;;
+        check += 1;
       }
     }
   }
@@ -195,7 +200,7 @@ function checkAbs(lineA, lineB, lineC) {
   return strike;
 }
 function triangleCheck(lineA, lineB, lineC) {
-  let result = (checkSum(lineA, lineB, lineC) >=1  && checkAbs(lineA, lineB, lineC) >= 1);
+  let result = (checkSum(lineA, lineB, lineC) >= 1 && checkAbs(lineA, lineB, lineC) >= 1);
   return result;
 }
 
