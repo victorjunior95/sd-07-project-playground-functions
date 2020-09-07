@@ -218,10 +218,9 @@ function mostRepeatedNumber(numbers) {
   let mostRepeated = 0
   /* Checking if any number repeats greater or equal 3*/
   for (let i = 0; i <= numbers.length; i += 1) {
-    let currentNumber = numbers[i]
     let numberOfTimesRepeat = 0
     for (let j in numbers) {
-      if (currentNumber === numbers[j]) {
+      if (numbers[i] === numbers[j]) {
         numberOfTimesRepeat += 1
       }
     }
