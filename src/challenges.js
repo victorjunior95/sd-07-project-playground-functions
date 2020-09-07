@@ -30,20 +30,21 @@ function footballPoints(wins, ties) {
   return pontos = vitoria + empate
 }
 // Desafio 6
-let array =  [0, 4, 4, 4, 9, 2, 1]
 function highestCount(array) {
   let maiorNumero = 0;
   let contador = 0;
-
   for (let i = 0; i < array.length; i += 1){
     if (array[i] >= maiorNumero) {
       maiorNumero = array[i];
-      contador += 1;
+    }
+  }
+  for (let j = 0; j <array.length; j += 1){
+    if (maiorNumero === array[j]){
+      contador += 1
     }
   }
   return contador;
 }
-console.log(highestCount(array))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
@@ -102,10 +103,6 @@ function techList(array, name) {
   let ordem = array.sort();
   let listadeTec = []
   for (i = 0; i < ordem.length; i += 1){
-    if(array.length == 0){
-      listadeTec = "Vazio!"
-    }
-    else {
     let  objeto = {};
     objeto = {
       tech: ordem[i],
@@ -113,9 +110,13 @@ function techList(array, name) {
     }
     listadeTec.push(objeto)
   }
+  if (listadeTec.length > 0){
   return listadeTec
+  } else {
+    return "Vazio!"
+  }
 }
-}
+console.log(techList(array, name))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
