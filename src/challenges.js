@@ -3,17 +3,15 @@
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
     return true;
-  } else {
+  } 
     return false;
-  }
 }
-compareTrue(1)
 //Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2
 }
 
-// //Desafio 3
+//Desafio 3
 function splitSentence(stringSentence) {
   let resultado = stringSentence.split(' ');
   return resultado;
