@@ -211,9 +211,8 @@ function hydrate(string) {
   let result = checkDrinks(string);
   if (result === 1) {
     return `${result} copo de água`;
-  } else if (result > 1) {
-    return `${result} copos de água`;
   }
+    return `${result} copos de água`;
 }
 
 module.exports = {
