@@ -106,8 +106,11 @@ function techList() {
   let lista = [];
   let obj = [];
   lista = array.sort()
+  if(array.length == 0){
+      return"Vazio!"
+  }
     for(let i= 0; i < lista.length; i+= 1){
-        obj [i] ={
+        obj[i] ={
             tech: lista[i],
             name: name
         }
