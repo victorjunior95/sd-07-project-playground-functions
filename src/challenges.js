@@ -151,7 +151,7 @@ function generatePhoneNumber(number) {
     return "Array com tamanho incorreto.";
   }
   for (let index in phone) {
-    if (phone[index] < 0) {
+    if (phone[index] < 0 || phone[index] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     }    
   }
