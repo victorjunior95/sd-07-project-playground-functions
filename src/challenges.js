@@ -95,16 +95,16 @@ function fizzBuzz(vetor) {
       result.push('fizz');
     } else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0) {
       result.push('bug!');
-  } else {
-    result.push('bug!');
-  }
+    } else {
+      result.push('bug!');
+    }
   }
   return result;
 }
 // Desafio 9
 function encode(phrase) {
   let codigo = phrase.split('');
-  for (let i in codigo) {
+  for (let i = 0; i < codigo.length; i += 1) {
     if (codigo[i] === 'a') {
       codigo.splice(i, 1, '1');
     } else if (codigo[i] === 'e') {
@@ -119,22 +119,22 @@ function encode(phrase) {
   }
   return codigo.join('');
 }
-function decode(phrase) {
-  let decodigo = phrase.split('');
-  for (let i in decodigo) {
-    if (decodigo[i] === '1') {
-      decodigo.splice(i, 1, 'a');
-    } else if (decodigo[i] === '2') {
-      decodigo.splice(i, 1, 'e');
-    } else if (decodigo[i] === '3') {
-      decodigo.splice(i, 1, 'i');
-    } else if (decodigo[i] === '4') {
-      decodigo.splice(i, 1, 'o');
-    } else if (decodigo[i] === '5') {
-      decodigo.splice(i, 1, 'u');
+function decode(sentence) {
+  let descobrindo = sentence.split('');
+  for (let i in descobrindo) {
+    if (descobrindo[i] === '1') {
+      descobrindo.splice(i, 1, 'a');
+    } else if (descobrindo[i] === '2') {
+      descobrindo.splice(i, 1, 'e');
+    } else if (descobrindo[i] === '3') {
+      descobrindo.splice(i, 1, 'i');
+    } else if (descobrindo[i] === '4') {
+      descobrindo.splice(i, 1, 'o');
+    } else if (descobrindo[i] === '5') {
+      descobrindo.splice(i, 1, 'u');
     }
   }
-  return decodigo.join('');
+  return descobrindo.join('');
 }
 // Desafio 10
 function techList(vetor, name) {
@@ -147,17 +147,19 @@ function techList(vetor, name) {
   for (let i in vetor) {
     if (vetor !== null || vetor !== undefined) {
       let lista = {
-          tech: vetor[i],
-          name: name,
-        };
+        tech: vetor[i],
+        name: name,
+      };
       colecao.push(lista);
     }
   }
   return colecao.sort(function (a, b) {
-    if (a.tech < b.tech)
-      return -1;
-    if (a.tech > b.tech)
-      return 1;
+    if (a.tech < b.tech) {
+      return -1; 
+    }
+    if (a.tech > b.tech) {
+      return 1; 
+    }
     return 0;
   });
 }
@@ -176,7 +178,7 @@ function generatePhoneNumber(vetor) {
     if (vetor[i] > 9 || vetor[i] < 0) {
       confere += 1;
     }
-  };
+  }
   if (vetor.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (contagemReal >= 3 || confere !== 0) {
