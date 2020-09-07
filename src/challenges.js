@@ -3,8 +3,8 @@
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
     return true;
-  } 
-    return false;
+} 
+  return false;
 }
 //Desafio 2
 function calcArea(base, height) {
@@ -84,15 +84,15 @@ function fizzBuzz(numbers) {
 /*eslint no-global-assign: "error"*/
 /*globals item:true*/
   for (item in numbers) {
-      if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
+    if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
         numbers[item] = 'fizzBuzz'
       } else if (numbers[item] % 5 === 0) {
         numbers[item] = 'buzz'
       } else if (numbers[item] % 3 === 0) {
-      numbers[item] = 'fizz'
-    } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
-        numbers[item] = 'bug!'
-      }
+        numbers[item] = 'fizz'
+      } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
+      numbers[item] = 'bug!'
+    }
     }
   return numbers
 }
@@ -113,14 +113,14 @@ function encode(phrase) {
   for (i = 0; i < phrase.length; i += 1) {
     encoded[i] = phrase[i];
     for (let index = 0; index < encoded.length; index += 1) {
-    if (encryptedLetters[encoded[i]] === undefined) {
+      if (encryptedLetters[encoded[i]] === undefined) {
       result += encoded[i]
       break
     } else {
       result += encryptedLetters[encoded[i]]
       break
     }
-  }
+    }
   }
   return result
 }
@@ -141,12 +141,12 @@ function decode(phrase) {
     decoded[i] = phrase[i];
     for (let j = 0; j < decoded.length; j += 1) {
       if (encryptedLetters[decoded[i]] === undefined) {
-      result += decoded[i]
+        result += decoded[i]
       break
-    } else {
-      result += encryptedLetters[decoded[i]]
-      break
-    }
+      } else {
+        result += encryptedLetters[decoded[i]]
+        break
+      }
     }
   }
   return result
@@ -158,7 +158,7 @@ function techList(listArray, name) {
   listArray.sort()
 
   for (i in listArray) {
-    if (listArray.length !== 0){
+    if (listArray.length !== 0) {
       resultOfArray.push(
         {
           tech: listArray[i],
@@ -168,16 +168,14 @@ function techList(listArray, name) {
   }
   if (listArray.length === 0) {
     return 'Vazio!'
-  } else {
-    return resultOfArray
   }
+  return resultOfArray
+  
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
 //Desafio 11
 function generatePhoneNumber(numbers) {
   let result = '';
   let orinalOrder = '';
-  // let fakeNumber = '(12) 34567-8901'
   let isRepeated = 0;
 
   if (numbers.length !== 11) {
@@ -188,7 +186,7 @@ function generatePhoneNumber(numbers) {
 /*eslint no-global-assign: "error"*/
 /*globals j:true*/
   for (j in numbers) {
-    if (numbers.length === 11){
+    if (numbers.length === 11) {
       orinalOrder += numbers[j]
     }
   }
@@ -203,9 +201,8 @@ function generatePhoneNumber(numbers) {
     }
     if (isRepeated >= 3 || inAscendingOrder[i] < 0 || inAscendingOrder[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
-    } else {
-      result = orinalOrder.split('')
     }
+    result = orinalOrder.split('')
   }
 
 /*eslint no-unused-vars: ["error", { "varsIgnorePattern": "[iI]gnored" }]*/
@@ -229,9 +226,8 @@ function triangleCheck(lineA, lineB, lineC) {
     return false
   } else if (lineA < lineB - lineC || lineA < lineC - lineB || lineB < lineA - lineC || lineB < lineC - lineA || lineC < lineA - lineB || lineC < lineB - lineA) {
     return false
-  } else {
-    return true
   }
+  return true
 }
 
 
@@ -244,9 +240,8 @@ function hydrate(drinks) {
   }
   if (sum > 1) {
     return `${sum} copos de água`
-  } else {
-    return `${sum} copo de água`
   }
+  return `${sum} copo de água`
 }
 module.exports = {
   calcArea,
