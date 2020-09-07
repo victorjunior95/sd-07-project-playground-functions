@@ -172,13 +172,9 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-<<<<<<< HEAD
 function triangleCheck(lineA, lineB, lineC) {
 
 }
-=======
-function triangleCheck() {}
->>>>>>> d0570eeff523c6e65ba0ede8973cae3db6ba4d17
 
 // Desafio 13
 function hydrate() {}
