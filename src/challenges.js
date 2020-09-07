@@ -171,8 +171,7 @@ function geraNumber(tel) {
   let numberPhone = `(${parte1.join('')}) ${parte2.join('')}-${parte3.join('')}`;
   return numberPhone;
 }
-function repeatNumber(tel) {
-  let mensagem = '';
+function countNumber(tel) {
   let count = 0;
   for (let i = 0; i < tel.length; i += 1) {
     for (let j = i + 1; j < tel.length; j += 1) {
@@ -181,7 +180,12 @@ function repeatNumber(tel) {
       }
     }
   }
-  if (count > 2) {
+  
+  return count;
+}
+function repeatNumber(tel) {
+  let mensagem = '';
+  if (countNumber(tel) > 2) {
     mensagem = 'não é possível gerar um número de telefone com esses valores';
     return mensagem;
   }
