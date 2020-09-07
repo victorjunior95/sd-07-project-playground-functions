@@ -45,12 +45,12 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numeros) {
   let idcMaior = 0;
+  let contRepet = 0;
   for (let indice in numeros) {
     if (numeros[idcMaior] < numeros[indice]) {
       idcMaior = indice;
     }
   }
-  let contRepet = 0;
   for (let i in numeros) {
     if (numeros[i] === numeros[idcMaior]) {
       contRepet += 1;
@@ -88,8 +88,8 @@ function fizzBuzz(vetor) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       result.push('fizzBuzz');
     } else if (numeros[i] % 15 === 0) {
-    result.push('fizzBuzz');
-  } else if (numeros[i] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numeros[i] % 5 === 0) {
     result.push('buzz');
   } else if (numeros[i] % 3 === 0) {
     result.push('fizz');
@@ -141,24 +141,24 @@ function techList(vetor, name) {
   let result;
   let colecao = [];
   if (vetor.length < 1 || vetor === null || vetor === undefined) {
-      result = 'Vazio!';
-      return result;
+    result = 'Vazio!';
+    return result;
   }
   for (let i in vetor) {
-      if (vetor !== null || vetor !== undefined) {
-          let lista = {
-              tech: vetor[i],
-              name: name,
+    if (vetor !== null || vetor !== undefined) {
+        let lista = {
+            tech: vetor[i],
+            name: name,
           };
-          colecao.push(lista);
+        colecao.push(lista);
       }
   }
   return colecao.sort(function (a, b) {
-      if (a.tech < b.tech)
-          return -1;
-      if (a.tech > b.tech)
-          return 1;
-      return 0;
+    if (a.tech < b.tech)
+        return -1;
+    if (a.tech > b.tech)
+        return 1;
+    return 0;
   });
 }
 // Desafio 11
@@ -175,8 +175,8 @@ function generatePhoneNumber(vetor) {
   for (let i in vetor) {
     if (vetor[i] > 9 || vetor[i] < 0) {
       confere += 1;
-    } 
-  }
+    };
+  };
   if (vetor.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (contagemReal >= 3 || confere !== 0) {
