@@ -163,7 +163,7 @@ function techList(listArray, name) {
       resultOfArray.push(
         {
           tech: listArray[i],
-          name: name
+          name: name,
         })
     }
   }
@@ -219,7 +219,7 @@ function generatePhoneNumber(numbers) {
 /*eslint no-undef: ["error", { "typeof": true }] */ 
 /*eslint no-global-assign: "error"*/  
 /*globals k:true*/ 
-  for (k  = 0; k < result.length; k += 1) {
+  for (k = 0; k < result.length; k += 1) {
     final += result[k]
   }
   return final
@@ -240,7 +240,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(drinks) {
   let numbers = drinks.match(/\d+/g).map(Number)
   let sum = 0;
-  for (i in numbers) {
+  for (i = 0; i < numbers.length; i += 1) {
     sum += numbers[i]
   }
   if (sum > 1) {
@@ -249,7 +249,6 @@ function hydrate(drinks) {
     return `${sum} copo de água`
   }
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
