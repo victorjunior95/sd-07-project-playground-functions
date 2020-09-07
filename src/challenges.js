@@ -90,8 +90,8 @@ function fizzBuzz(numbers) {
     } else if (numbers[item] % 5 === 0) {
       numbers[item] = 'buzz'
     } else if (numbers[item] % 3 === 0) {
-        numbers[item] = 'fizz'
-      } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
+      numbers[item] = 'fizz'
+    } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
         numbers[item] = 'bug!'
       }
   }
