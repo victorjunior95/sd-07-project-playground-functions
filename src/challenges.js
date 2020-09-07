@@ -230,12 +230,21 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-console.log(triangleCheck(6, 2, 2));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(texto) {
+  let reg = /\d+/g;
+  let str = texto.match(reg);
+  let soma = 0;
+  for (i in str) {
+    soma += parseInt(str[i]);
+  }
+  return soma;
 }
+
+//Resolvido com ajuda do vídeo sobr exprssões regulares em JavaScript no link abaixo
+//https://www.youtube.com/watch?v=pfkkdzeyx6U
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
