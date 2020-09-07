@@ -238,8 +238,8 @@ function findNegative(numbers) {
 
 
 // Desafio 12
-function triangleCheck() {
-    // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+    return !!(lineB - lineC < lineA && lineB - lineC < lineB + lineC && lineA - lineC < lineB && lineA - lineC < lineA + lineC && lineA - lineB < lineC && lineA + lineB);
 }
 
 // Desafio 13
@@ -252,7 +252,7 @@ function hydrate(str) {
         number1 = parseInt(myArray[index], 10); // convert it to integer decimal
         calc += number1;
     }
-    if (calc === 1){
+    if (calc === 1) {
         return `${calc} copo de água`;
     } else {
         return `${calc} copos de água`;
@@ -298,3 +298,4 @@ module.exports = {
 // techList([""],
 // "Lucas");
 //hydrate("1 cachaça e 9 cervejas");
+triangleCheck(16, 20, 30);
