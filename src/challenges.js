@@ -173,29 +173,29 @@ function absolut(a, b) {
 }
 
 function checkSum(lineA, lineB, lineC) {
+  let check = 0;
   if (sum(lineA, lineB) > lineC) {
     if (sum(lineA, lineC) > lineB) {
       if (sum(lineB, lineC) > lineA) {
-        return true;
+        check += 1;;
       }
     }
-  } else {
-    return false;
   }
+  return check;
 }
 function checkAbs(lineA, lineB, lineC) {
+  let strike = 0;
   if (absolut(lineA, lineB) < lineC) {
     if (absolut(lineA, lineC) < lineB) {
       if (absolut(lineB, lineC) < lineA) {
-        return true;
+        strike += 1;
       }
     }
-  } else {
-    return false;
   }
+  return strike;
 }
 function triangleCheck(lineA, lineB, lineC) {
-  let result = (checkSum(lineA, lineB, lineC) === true && checkAbs(lineA, lineB, lineC));
+  let result = (checkSum(lineA, lineB, lineC) >=1  && checkAbs(lineA, lineB, lineC) >= 1);
   return result;
 }
 
