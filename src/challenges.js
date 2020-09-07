@@ -128,10 +128,10 @@ function catAndMouse(animalsPosition) {
   if ( cat1 === cat2 ) {
     console.log("Os gatos se trombam e o rato foge");
     return "Os gatos se trombam e o rato foge";
-  } else if ( cat1 > cat2 ) {
+  } else if ( cat1 < cat2 ) {
     console.log("O gato 1 alcança o rato primeiro");
     return "cat1";
-  } else if ( cat1 < cat2 ) {
+  } else if ( cat1 > cat2 ) {
     console.log("O gato 2 alcança o rato primeiro");
     return "cat2";
   }
