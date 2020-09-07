@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
+function highestCount(numbers) {                      // ajustar incremento
   numbers.sort();
   let maiorRepetido = 1;
   for (let i = 1; i <= numbers.length; i += 1) {
@@ -43,10 +43,10 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse < cat2 - mouse) {
+function catAndMouse(mouse, cat1, cat2) {             // ajustar condições
+  if (mouse - cat1 < mouse - cat2) {
     return "cat1";
-  } else if (cat1 - mouse == cat2 - mouse) {
+  } else if (mouse - cat1 == mouse - cat2) {
     return "os gatos trombam e o rato foge";
   } else {
     return "cat2";
