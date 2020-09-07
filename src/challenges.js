@@ -148,21 +148,18 @@ function hydrate(bebidaBebidas) {
   let listaDeBebidas = bebidaBebidas.split(',')
   let totalBebidas = 0;
   let bebidaAtual = 0;
-  let frase = ""
-  if (bebidaBebidas.indexOf(' e ') !== -1 ) {
-    totalBebidas = parseInt(bebidaBebidas[bebidaBebidas.indexOf(' e ')+3])
+  let frase = ''
+  if (bebidaBebidas.indexOf(' e ') !== -1) {
+    totalBebidas = parseInt(bebidaBebidas[bebidaBebidas.indexOf(' e ') + 3], 10)
   }
-  for (let i  = 0; i < listaDeBebidas.length; i += 1) {
+  for (let i = 0; i < listaDeBebidas.length; i += 1) {
     bebidaAtual = listaDeBebidas[i].replace('[^//d]]', '')
     totalBebidas += parseInt(bebidaAtual, 10);
   }
   if (totalBebidas < 2) frase = '1 copo de água'
   else frase = `${totalBebidas} copos de água`
-  
   return frase
 }
-let teste = "1 copo disso, 2 daquilo e 7 desse";
-console.log(hydrate(teste));
 module.exports = {
   calcArea,
   catAndMouse,
