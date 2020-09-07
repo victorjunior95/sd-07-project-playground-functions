@@ -54,11 +54,11 @@ function highestCount(numbers) {
   return CounterRepetitions
 }
 // Desafio 7
-/*eslint consistent-return: "error"*/
+
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Number = 0;
   let cat2Number = 0;
-
+  let result = '';
   if (cat1 - mouse < 0) {
     cat1Number = (cat1 - mouse) * (-1)
   } else {
@@ -70,14 +70,14 @@ function catAndMouse(mouse, cat1, cat2) {
   }cat2Number = cat2 - mouse
 
   if (cat1Number  < cat2Number) {
-    return 'cat1'
+    result = 'cat1'
   } else if (cat2Number < cat1Number) {
-    return 'cat2'
+    result = 'cat2'
   } else if (cat1Number  == cat2Number) {
-    return 'os gatos trombam e o rato foge'
+    result = 'os gatos trombam e o rato foge'
   }
+  return result
 }
-
 // Desafio 8
 function fizzBuzz(numbers) {
   for (item in numbers) {
