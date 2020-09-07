@@ -128,10 +128,19 @@ function decode(numeros) {
 }
 
 // Desafio 10
-function techList(array) {
-
-
+function techList(array, name) {
+  let nomeDasTech = [];
+  nomeDasTech.sort();
+  let objeto = {};
+  for(i=0; i<array.length; i+=1) {
+    objeto = {
+      tech : array[i],
+      nome : name,
+    };
+    nomeDasTech.push(objeto);
   // seu código aqui
+}
+return nomeDasTech;
 }
 
 // Desafio 11
