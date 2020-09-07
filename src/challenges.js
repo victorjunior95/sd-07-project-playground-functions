@@ -82,6 +82,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   /*global item*/
 /*eslint no-undef: ["error", { "typeof": true }] */
+/*eslint no-global-assign: "error"*/
+/*globals item:true*/
   for (item in numbers) {
       if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
         numbers[item] = 'fizzBuzz'
@@ -157,11 +159,13 @@ function techList(listArray, name) {
   listArray.sort()
 
   for (i in listArray) {
-    resultOfArray.push(
-      {
-        tech: listArray[i],
-        name: name
-      })
+    if (listArray.length !== 0){
+      resultOfArray.push(
+        {
+          tech: listArray[i],
+          name: name
+        })
+    }
   }
   if (listArray.length === 0) {
     return 'Vazio!'
@@ -169,7 +173,7 @@ function techList(listArray, name) {
     return resultOfArray
   }
 }
-
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let result = '';
