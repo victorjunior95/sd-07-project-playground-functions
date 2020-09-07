@@ -151,6 +151,7 @@ function hydrate(bebidaBebidas) {
     bebidaAtual = bebidaBebidas[i].replace('[^//d]]', '')
     totalBebidas += parseInt(bebidaAtual);
   }
+  console.log("1 copo de água");
   if (totalBebidas === 1) return  `${totalBebidas} copo de água`
   return `${totalBebidas} copos de água`
 }
