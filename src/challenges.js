@@ -1,27 +1,27 @@
 // Desafio 1
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
-  return true;
-} else {
-  return false;
-}
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2
+  return (base * height) / 2
 }
 
 // // Desafio 3
-function splitSentence(stringSentence){
-  let resultado = stringSentence.split(" ");
+function splitSentence(stringSentence) {
+  let resultado = stringSentence.split(' ');
   return resultado;
 }
 
 // Desafio 4
 function concatName(names) {
   let amount = names
-  let last = amount[amount.length-1]
+  let last = amount[amount.length - 1]
   let first =  amount[0]
   return last + ", " +  first;
 }
@@ -34,46 +34,44 @@ function footballPoints(wins, ties) {
 // Desafio 6
 
 function highestCount(numbers) {
-
   let inAscendingOrder = numbers.sort()
   let CounterRepetitions = 0;
 
-  for (i = 0; i< inAscendingOrder.length; i+=1){
-    if (inAscendingOrder[i] == inAscendingOrder[i +1]){
+  for (i = 0; i < inAscendingOrder.length; i += 1) {
+    if (inAscendingOrder[i] == inAscendingOrder[i + 1]) {
       CounterRepetitions += 1
-    }else if(inAscendingOrder[i +1] === undefined ){
-      if( inAscendingOrder[i] >= inAscendingOrder[i -1]){
+    } else if (inAscendingOrder[i + 1] === undefined){
+      if(inAscendingOrder[i] >= inAscendingOrder[i - 1]) {
         CounterRepetitions += 1
       }
       return CounterRepetitions
-    }else{
-        CounterRepetitions = 0
-      }
+    } else {
+      CounterRepetitions = 0
+    }
   }
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let cat1Number = 0;
+  let cat2Number = 0;
 
-let cat1Number = 0;
-let cat2Number = 0;
-
-  if (  cat1 - mouse < 0) {
+  if (cat1 - mouse < 0) {
     cat1Number = (cat1 - mouse) * (-1)
-  }else{
+  } else {
     cat1Number = cat1 - mouse
   }
-  if (  cat2 - mouse < 0) {
+  if (cat2 - mouse < 0) {
     cat2Number = (cat2 - mouse) * (-1)
-  }else{
+  } else {
   }cat2Number = cat2 - mouse
 
-  if ( cat1Number  < cat2Number ){
+  if (cat1Number  < cat2Number){
       return 'cat1'
 
-    }else if( cat2Number < cat1Number ){
+    } else if ( cat2Number < cat1Number ){
     return 'cat2'
 
-  }else if (cat1Number  == cat2Number) {
+  } else if (cat1Number  == cat2Number) {
     return 'os gatos trombam e o rato foge'
 
     }
@@ -84,11 +82,11 @@ function fizzBuzz(numbers) {
     for (item in numbers)
     if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
         numbers[item] = 'fizzBuzz'
-      }else if (numbers[item] % 5 === 0) {
+      } else if (numbers[item] % 5 === 0) {
           numbers[item] = 'buzz'
-      }else if (numbers[item] % 3 === 0){
+      } else if (numbers[item] % 3 === 0) {
         numbers[item] = 'fizz'
-    }else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
+    } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
       numbers[item] = 'bug!'
   }
   return numbers
@@ -107,10 +105,10 @@ function encode(phrase) {
 let encoded = [];
 let result = '';
 
-for ( i = 0; i < phrase.length; i+=1){
+for ( i = 0; i < phrase.length; i +=1 ) {
   encoded[i] = phrase[i];
-for (let index = 0; index< encoded.length; index+=1){
-    if (encryptedLetters[encoded[i]] == undefined){
+for (let index = 0; index< encoded.length; index +=1 ) {
+    if (encryptedLetters[encoded[i]] == undefined) {
       result += encoded[i]
       break
     }else{
@@ -134,10 +132,10 @@ function decode(phrase) {
 let decoded = [];
 let result = '';
 
-for ( i = 0; i < phrase.length; i+=1){
+for ( i = 0; i < phrase.length; i += 1) {
   decoded[i] = phrase[i];
-for (let j = 0; j< decoded.length; j+=1){
-    if (encryptedLetters[decoded[i]] == undefined){
+for (let j = 0; j< decoded.length; j += 1) {
+    if (encryptedLetters[decoded[i]] == undefined) {
       result += decoded[i]
       break
     }else{
