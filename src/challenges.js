@@ -162,7 +162,7 @@ function generatePhoneNumber(number) {
   if(number.length !== 11){
     return "Array com tamanho incorreto.";
   } else if (invalid === true){
-    return "Array com tamanho incorreto."
+    return "não é possível gerar um número de telefone com esses valores";
   } else {
       for (let k = 0; k < 2; k += 1){
         ddd[k] = number[k];
@@ -175,7 +175,7 @@ function generatePhoneNumber(number) {
       }
       ddd = ddd.join('');
       begin = begin.join('');
-      end = end.join('');
+      end = end.join('');return console.log(
       let result = `(${ddd}) ${begin}-${end}`;
       return console.log(result);
   }
