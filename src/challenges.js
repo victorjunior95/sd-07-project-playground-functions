@@ -217,13 +217,13 @@ function generatePhoneNumber(numbers) {
   
 
   if (numbers.length !== 11) {
-    console.log("Array com tamanho incorreto.");
+    return "Array com tamanho incorreto.";
   }
   else if (naoEstaEntre0E9 === 1 && repetition > 3){
-      console.log("não é possível gerar um número de telefone com esses valores");
+      return "não é possível gerar um número de telefone com esses valores";
   }
   else {
-      console.log(generate);
+      return generate;
   }   
 }
 
