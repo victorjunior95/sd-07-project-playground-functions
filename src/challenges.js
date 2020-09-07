@@ -73,7 +73,6 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(frase) {
-  frase = frase.toLowerCase();
   let trocasAto1 = {
     a: '1', e: '2',
     i: '3', o: '4',
