@@ -115,27 +115,30 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-catAndMouse([1, 3, 2])
+catAndMouse(1, 3, 2)
 
-function catAndMouse(animalsPosition) {
+function catAndMouse(mouse, cat1, cat2) {
   console.log("");
   console.log("Desafio 7:");
 
   //-------Distância entre o rato e os gatos-------//
-  let cat1 = animalsPosition[1] - animalsPosition[0];
-  let cat2 = animalsPosition[2] - animalsPosition[0];
+  distanceCat1 = Math.abs(cat1 - mouse);
+  distanceCat2 = Math.abs(cat2 - mouse);
 
-  if ( cat1 === cat2 ) {
-    console.log("Os gatos se trombam e o rato foge");
+  if ( distanceCat1 == distanceCat2 ) {
+    console.log("Os gatos trombam e o rato foge");
     return 'os gatos trombam e o rato foge';
-  } else if ( cat1 < cat2 ) {
-    console.log("O gato 1 alcança o rato primeiro");
-    return 'cat1';
-  } else if ( cat1 > cat2 ) {
-    console.log("O gato 2 alcança o rato primeiro");
-    return 'cat2';
-  }
+  } else {
 
+    if ( distanceCat1 < distanceCat2 ) {
+      console.log("O gato 1 chegou primeiro no rato");
+      return 'cat1';
+
+    } else {
+      console.log("O gato 2 chegou primeiro no rato");
+      return 'cat2';
+    }
+  }
 }
 
 // Desafio 8
@@ -236,7 +239,6 @@ function decode(inputString) {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
 }
 
 // Desafio 11
