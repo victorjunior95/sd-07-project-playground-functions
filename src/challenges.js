@@ -38,6 +38,8 @@ function highestCount(numbers) {
   let CounterRepetitions = 0;
 /*global i*/
 /*eslint no-undef: ["error", { "typeof": true }] */
+/*eslint no-global-assign: "error"*/
+/*globals i:true*/
   for (i = 0; i < inAscendingOrder.length; i += 1) {
     if (inAscendingOrder[i] == inAscendingOrder[i + 1]) {
       CounterRepetitions += 1
