@@ -148,11 +148,15 @@ function hydrate(bebidaBebidas) {
   let totalBebidas = 0;
   let bebidaAtual = 0;
   for (let i  = 0; i < bebidaBebidas.length; i += 1) {
-    bebidaAtual = bebidaBebidas[i].replace("[^//d]]", "")
+    bebidaAtual = bebidaBebidas[i].replace('[^//d]]', '')
     totalBebidas += parseInt(bebidaAtual);
   }
+  if (totalBebidas === 0) return  `${totalBebidas} copo de água`
   return `${totalBebidas} copos de água`
 }
+let a= ["3 dpaokdsopa","2 dfasfda"]
+console.log(hydrate(a));
+
 module.exports = {
   calcArea,
   catAndMouse,
