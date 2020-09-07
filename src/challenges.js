@@ -80,24 +80,34 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(stringCode) {
-  
-  stringCode = stringCode.replace("a", 1)
-  stringCode = stringCode.replace("e", 2)
-  stringCode = stringCode.replace("i", 3)
-  stringCode = stringCode.replace("o", 4)
-  stringCode = stringCode.replace("u", 5)
-  
-  return stringCode;
+  for (let i = 0; i < stringCode.length; i += 1) {
+    if (stringCode[i] === "a") {
+      stringCode = stringCode.replace("a", 1)
+    } else if (stringCode[i] === "e") {
+      stringCode = stringCode.replace("e", 2)
+    } else if (stringCode[i] === "i") {
+      stringCode = stringCode.replace("i", 3)
+    } else if (stringCode[i] === "o") {
+      stringCode = stringCode.replace("o", 4)
+    } else if (stringCode[i] === "u") {
+      stringCode = stringCode.replace("u", 5)
+    }
+  } return stringCode;
 }
 function decode(stringDecode) {
-
-  stringDecode = stringDecode.replace(1, "a")
-  stringDecode = stringDecode.replace(2, "e")
-  stringDecode = stringDecode.replace(3, "i")
-  stringDecode = stringDecode.replace(4, "o")
-  stringDecode = stringDecode.replace(5, "u")
-  
-  return stringDecode;
+  for (let i = 0; i < stringCode.length; i += 1) {
+    if (stringDecode[i] == 1) {
+      stringDecode = stringDecode.replace(1, "a")
+    } else if (stringDecode[i] == 2) {
+      stringDecode = stringDecode.replace(2, "e")
+    } else if (stringDecode[i] == 3) {
+      stringDecode = stringDecode.replace(3, "i")
+    } else if (stringDecode[i] == 4) {
+      stringDecode = stringDecode.replace(4, "o")
+    } else if (stringDecode[i] == 5) {
+      stringDecode = stringDecode.replace(5, "u")
+    }
+  } return stringDecode;
 }
 
 // Desafio 10
