@@ -1,4 +1,3 @@
-/*eslint spaced-comment: ["error", "never"]*/
 //Desafio 1
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
@@ -35,10 +34,6 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let inAscendingOrder = numbers.sort()
   let CounterRepetitions = 0;
-/*global i*/
-/*eslint no-undef: ["error", { "typeof": true }] */
-/*eslint no-global-assign: "error"*/
-/*globals i:true*/
   for (i = 0; i < inAscendingOrder.length; i += 1) {
     if (inAscendingOrder[i] === inAscendingOrder[i + 1]) {
       CounterRepetitions += 1
@@ -79,11 +74,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 //Desafio 8
 function fizzBuzz(numbers) {
-/*global item*/
-/*eslint no-undef: ["error", { "typeof": true }] */
-/*eslint no-global-assign: "error"*/
-/*globals item:true*/
-/*eslint indent: "error"*/
   for (item in numbers) {
     if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
       numbers[item] = 'fizzBuzz'
@@ -107,10 +97,8 @@ function encode(phrase) {
     o: 4,
     u: 5,
   }
-
   let encoded = [];
   let result = '';
-
   for (i = 0; i < phrase.length; i += 1) {
     encoded[i] = phrase[i];
     for (let index = 0; index < encoded.length; index += 1) {
@@ -134,7 +122,6 @@ function decode(phrase) {
     4: 'o',
     5: 'u',
   }
-
   let decoded = [];
   let result = '';
 
@@ -152,10 +139,7 @@ function decode(phrase) {
   }
   return result
 }
-
 //Desafio 10
-/*eslint object-shorthand: ["error", "never"]*/
-/*eslint-env es6*/
 function techList(listArray, name) {
   let resultOfArray = []
   listArray.sort()
@@ -182,10 +166,6 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-/*global j*/
-/*eslint no-undef: ["error", { "typeof": true }] */
-/*eslint no-global-assign: "error"*/
-/*globals j:true*/
   for (j in numbers) {
     if (numbers.length === 11) {
       orinalOrder += numbers[j]
@@ -206,16 +186,11 @@ function generatePhoneNumber(numbers) {
     result = orinalOrder.split('')
   }
 
-/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "[iI]gnored" }]*/
   let is1Ignored = result.splice(0, 0, '(')
   let is2Ignored = result.splice(3, 0, ')')
   let is3Ignored = result.splice(4, 0, ' ')
   let is4Ignored = result.splice(10, 0, '-')
   let final = '';
-/*global k*/
-/*eslint no-undef: ["error", { "typeof": true }] */
-/*eslint no-global-assign: "error"*/
-/*globals k:true*/
   for (k = 0; k < result.length; k += 1) {
     final += result[k]
   }
@@ -231,7 +206,6 @@ function triangleCheck(lineA, lineB, lineC) {
   return true
 }
 
-
 //Desafio 13
 function hydrate(drinks) {
   let numbers = drinks.match(/\d+/g).map(Number)
@@ -244,8 +218,7 @@ function hydrate(drinks) {
   }
   return `${sum} copo de água`
 }
-/*eslint object-shorthand: ["error", "always"]*/
-/*eslint-env es6*/
+
 module.exports = {
   calcArea,
   catAndMouse,
