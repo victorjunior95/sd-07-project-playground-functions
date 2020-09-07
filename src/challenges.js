@@ -137,7 +137,7 @@ function catAndMouse(animalsPosition) {
 
 }
 
-// Desafio 8
+// Desafio 8 --- Não funcionou!!!
 fizzBuzz([2, 15, 7, 9, 45]);
 
 function fizzBuzz(arrayOfNumbers2) {
@@ -172,10 +172,65 @@ function fizzBuzz(arrayOfNumbers2) {
 encode("hi there!");
 
 function encode(inputString) {
+  console.log("");
+  console.log("Desafio 9 (Encode):");
+  let encodedText = "";
 
+  for ( i = 0; i < inputString.length; i += 1 ) {
+    if ( inputString[i] === "a" ) {
+      encodedText += "1";
+
+    } else if (inputString[i] === "e" ) {
+      encodedText += "2";
+
+    } else if ( inputString[i] === "i" ) {
+      encodedText += "3";
+
+    } else if (inputString[i] === "o" ) {
+      encodedText += "4";
+      
+    } else if (inputString[i] === "u" ) {
+      encodedText += "5";
+      
+    } else {
+      encodedText += inputString[i];
+    }
+  }
+
+  console.log(encodedText);
+  return encodedText;
 }
-function decode() {
-  // seu código aqui
+
+decode("h3 th2r2!");
+
+function decode(inputString) {
+  console.log("");
+  console.log("Desafio 9 (Decode):");
+  let decodedText = "";
+
+  for ( i = 0; i < inputString.length; i += 1 ) {
+    if ( inputString[i] === "1" ) {
+      decodedText += "a";
+
+    } else if (inputString[i] === "2" ) {
+      decodedText += "e";
+
+    } else if ( inputString[i] === "3" ) {
+      decodedText += "i";
+
+    } else if (inputString[i] === "4" ) {
+      decodedText += "o";
+      
+    } else if (inputString[i] === "5" ) {
+      decodedText += "u";
+      
+    } else {
+      decodedText += inputString[i];
+    }
+  }
+
+  console.log(decodedText);
+  return decodedText;
 }
 
 // Desafio 10
