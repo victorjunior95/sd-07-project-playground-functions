@@ -3,7 +3,7 @@
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
     return true;
-} 
+  }
   return false;
 }
 //Desafio 2
@@ -85,15 +85,15 @@ function fizzBuzz(numbers) {
 /*globals item:true*/
   for (item in numbers) {
     if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
-        numbers[item] = 'fizzBuzz'
-      } else if (numbers[item] % 5 === 0) {
+      numbers[item] = 'fizzBuzz'
+    } else if (numbers[item] % 5 === 0) {
         numbers[item] = 'buzz'
       } else if (numbers[item] % 3 === 0) {
         numbers[item] = 'fizz'
       } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
-      numbers[item] = 'bug!'
-    }
-    }
+        numbers[item] = 'bug!'
+      }
+  }
   return numbers
 }
 
@@ -114,12 +114,12 @@ function encode(phrase) {
     encoded[i] = phrase[i];
     for (let index = 0; index < encoded.length; index += 1) {
       if (encryptedLetters[encoded[i]] === undefined) {
-      result += encoded[i]
-      break
-    } else {
-      result += encryptedLetters[encoded[i]]
-      break
-    }
+        result += encoded[i]
+        break
+      } else {
+        result += encryptedLetters[encoded[i]]
+        break
+      }
     }
   }
   return result
@@ -142,7 +142,7 @@ function decode(phrase) {
     for (let j = 0; j < decoded.length; j += 1) {
       if (encryptedLetters[decoded[i]] === undefined) {
         result += decoded[i]
-      break
+        break
       } else {
         result += encryptedLetters[decoded[i]]
         break
@@ -153,6 +153,8 @@ function decode(phrase) {
 }
 
 //Desafio 10
+/*eslint object-shorthand: ["error", "never"]*/
+/*eslint-env es6*/
 function techList(listArray, name) {
   let resultOfArray = []
   listArray.sort()
@@ -170,7 +172,6 @@ function techList(listArray, name) {
     return 'Vazio!'
   }
   return resultOfArray
-  
 }
 //Desafio 11
 function generatePhoneNumber(numbers) {
