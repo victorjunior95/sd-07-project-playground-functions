@@ -31,13 +31,13 @@ function highestCount(array) {
   let counter = 0;
   // checando qual o maior valor da funcao
   let maxValue = array[0];
-  for (let i in array) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] > maxValue) {
       maxValue = array[i];
     }
   }
   // contando quantas vezes o maior valor aparece
-  for (let j in array) {
+  for (let j = 0; j < array.length; j += 1) {
     if (array[j] === maxValue) {
       counter += 1;
     }
@@ -59,11 +59,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let value of array) {
-    if (value % 3 === 0 && value % 5 === 0) { value = 'fizzBuzz'; }
-    else if (value % 3 === 0) { value = 'fizz'; }
-    else if (value % 5 === 0) { value = 'buzz';}
-    else { value = 'bug!'; }
+  for (let key = 0; key < array.length; key += 1) {
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) array[key] = 'fizzBuzz';
+    else if (array[key] % 3 === 0) array[key] = 'fizz';
+    else if (array[key] % 5 === 0) array[key] = 'buzz';
+    else array[key] = 'bug!';
   }
   return array;
 }
@@ -73,8 +73,9 @@ function encode(string) {
   let toEncodeArray = string.split('');
   let vowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let finalString = '';
-  for (let i in toEncodeArray) {
-    for (let j in vowels) {
+  if (toEncodeArray.length === 0) return 'por favor, insira uma string nao vazia!'
+  for (let i = 0; i < toEncodeArray.length; i += 1) {
+    for (let j = 0; j < vowels.length; i += 1) {
       if (string[i].toLowerCase() === j) {
         toEncodeArray[i] = vowels[j];
       }
@@ -87,8 +88,9 @@ function decode(encodedString) {
   let toDecodeArray = encodedString.split('');
   let numbers = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let finalString = '';
-  for (let i in toDecodeArray) {
-    for (let j in numbers) {
+  if (toEncodeArray.length === 0) return 'por favor, insira uma string nao vazia!'
+  for (let i = 0; i < toDecodeArray.length; i += 1) {
+    for (let j = 0; j < numbers.length; j += 1) {
       if (toDecodeArray[i] === numbers[j]) {
         toDecodeArray[i] = j;
       }
@@ -104,10 +106,10 @@ function techList(technologies, name) {
     let listOfObjects = []
     technologies.sort();
     // making the objects and pushing to the list
-    for (let key in technologies) {
+    for (let i = 0; i < technologies.length; i += 1) {
       let tempObject = {};
       tempObject.name = name;
-      tempObject.tech = technologies[key];
+      tempObject.tech = technologies[i];
       listOfObjects.push(tempObject);
     }
     return listOfObjects;
@@ -117,22 +119,20 @@ function techList(technologies, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  // função que verifica se os numeros estao entre 0 e 9 e nao se repetem mais que 3 vezes
   function validatingTheNumbers(array2) {
     let counterRepetition = 0;
-    for (let i in array2) { if (array2[i] < 0 || array2[i] > 9) return true; }
-    for (let j in array2) {
-      for (let i in array2) {
-      if (array2[j] === array2[i]) {
+    for (let i = 0; i < array2.length; i += 1) { if (array2[i] < 0 || array2[i] > 9) return true; }
+    for (let j = 0; j < array2.length; j += 1) {
+      for (let i = 0; i < array2.length; i += 1) {
+        if (array2[j] === array2[i]) {
         counterRepetition += 1;
         if (counterRepetition >= 3) return true;
-      }
+        }
     }
       counterRepetition = 0;
     }
     return false;
   }
-  // função que gera uma string a partir de uma lista
   function listForString(list, pos1, pos2) {
     let finalString = '';
     for (let i = pos1; i <= pos2; i += 1) { finalString += list[i]; }
@@ -161,15 +161,15 @@ function hydrate(string) {
   let listOfIntegers = [];
   // verificando se cada caracter da string é um numero
   // e se for dando push na lista de inteiros
-  for (let key in stringList) {
-    if (Number(stringList[key])) {
-      listOfIntegers.push(Number(stringList[key]));
+  for (let i = 0; i < stringList.length; i += 1) {
+    if (Number(stringList[i])) {
+      listOfIntegers.push(Number(stringList[i]));
     }
   }
   // somando todos os inteiros da lista de inteiros
   let sum = 0;
-  for (let key in listOfIntegers) {
-    sum += listOfIntegers[key];
+  for (let i = 0; i < listOfIntegers.length; i += 1) {
+    sum += listOfIntegers[i];
   }
   if (sum === 1) return '1 copo de água';
   return `${sum} copos de água`;
