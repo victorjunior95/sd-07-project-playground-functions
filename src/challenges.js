@@ -98,10 +98,11 @@ function fizzBuzz(vetor) {
 // Desafio 9
 function encode(entrada) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
-  return [...entrada].map(elem => vogais.includes(elem) ? vogais.indexOf(elem)+1 : elem).join('');
+  return [...entrada].map(elem => vogais.includes(elem) ? vogais.indexOf(elem) + 1 : elem).join('');
 }
 function decode(texto) {
-  return [...texto].map(item => Number(item) ? vogais[Number(item)-1] : item).join('');
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  return [...texto].map(item => Number(item) ? vogais[Number(item) - 1] : item).join('');
 }
 // Desafio 10
 function techList(vetor, name) {
