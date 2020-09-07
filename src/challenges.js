@@ -34,11 +34,8 @@ function highestCount(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > maxValue) {
       maxValue = array[i];
-    }
-  }
-  // contando quantas vezes o maior valor aparece
-  for (let j = 0; j < array.length; j += 1) {
-    if (array[j] === maxValue) {
+      counter = 1;
+    } else if (array[i] === maxValue) {
       counter += 1;
     }
   }
