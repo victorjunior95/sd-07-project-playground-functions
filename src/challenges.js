@@ -175,29 +175,23 @@ function generatePhoneNumber(array) {
 function sum(a, b) {
   return a + b;
 }
-function absolut(a, b) {
+function abs(a, b) {
   return Math.abs(a - b);
 }
-
-function checkSum(lineA, lineB, lineC) {
+function checkSumAndAbs(lineA, lineB, lineC) {
   let check = 0;
-  if ((sum(lineA, lineB) > lineC) && (sum(lineA, lineC) > lineB) && (sum(lineB, lineC) > lineA)) {
-    check += 1;
-  }
-  return check;
-}
-function checkAbs(lineA, lineB, lineC) {
-  let strike = 0;
   let a = lineA;
   let b = lineB;
   let c = lineC;
-  if ((absolut(a, b) < c) && (absolut(a, c) < b) && (absolut(b, c) < a)) {
-    strike += 1;
+  if ((sum(a, b) > c) && (sum(a, c) > b) && (sum(b, c) > a)) {
+    if ((abs(a, b) < c) && (abs(a, c) < b) && (abs(b, c) < a)) {
+    check += 1;
+    }
   }
-  return strike;
+  return check;
 }
 function triangleCheck(lineA, lineB, lineC) {
-  let result = (checkSum(lineA, lineB, lineC) >= 1 && checkAbs(lineA, lineB, lineC) >= 1);
+  let result = (checkSumAndAbs(lineA, lineB, lineC) >= 1);
   return result;
 }
 
