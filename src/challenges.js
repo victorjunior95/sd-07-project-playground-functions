@@ -109,8 +109,8 @@ function encode(sentence) {
 }
 function decode(sentence) {
   let decodedSentence = '';
-  for (let letter in sentence) {
-    switch (sentence[letter]) {
+  for (let i = 0; i < sentence.length; i += 1) {
+    switch (sentence[i]) {
       case '1':
         decodedSentence += 'a';
         break;
@@ -127,7 +127,7 @@ function decode(sentence) {
         decodedSentence += 'u';
         break;
       default:
-        decodedSentence += sentence[letter];
+        decodedSentence += sentence[i];
     }
   }
   return decodedSentence;
@@ -143,9 +143,9 @@ function techList(arrayOfTechs, name) {
   if (techs.length === 0) {
     return 'Vazio!';
   }
-  for (let tech in techs) {
+  for (let i = 0; i < techs.length; i += 1) {
     result.push({
-      tech: techs[tech],
+      tech: techs[i],
       name: student,
     });
   }
@@ -153,13 +153,13 @@ function techList(arrayOfTechs, name) {
 }
 // Desafio 11
 function validaNumbers(arrayNumbers) {
-  for (let number in arrayNumbers) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
     let countRepeat = 0;
-    if (arrayNumbers[number] < 0 || arrayNumbers[number] > 9) {
+    if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
       return false;
     }
-    for (let i = 0; i < arrayNumbers.length; i += 1) {
-      if (arrayNumbers[i] === arrayNumbers[number]) {
+    for (let j = 0; j < arrayNumbers.length; j += 1) {
+      if (arrayNumbers[j] === arrayNumbers[i]) {
         countRepeat += 1;
       }
     }
@@ -179,15 +179,12 @@ function generatePhoneNumber(number) {
   if (condition === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let i in number) {
+  for (let i = 0; i < number.length; i += 1) {
     if (number[i] >= 0 && number[i] < 10) {
       stringNumber += number[i];
     }
   }
-  return `(${stringNumber.substring(0, 2)}) ${stringNumber.substring(
-    2,
-    7
-  )}-${stringNumber.substring(7, 11)}`;
+  return `(${stringNumber.substring(0, 2)}) ${stringNumber.substring(2, 7)}-${stringNumber.substring(7, 11)}`;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
