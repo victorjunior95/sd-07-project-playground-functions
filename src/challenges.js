@@ -106,26 +106,14 @@ function encode(frase) {
   }
   return resultado;
 }
-
+console.log(decode("12345"));
 function decode(frase) {
   let resultado = frase;
-  for (let i = 0; i < frase.length; i += 1) {
-    if (frase.charAt(i) === '1') {
-      resultado = resultado.replace(/1/, 'a');
-    }
-    if (frase.charAt(i) === '2') {
-      resultado = resultado.replace(/2/, 'e');
-    }
-    if (frase.charAt(i) === '3') {
-      resultado = resultado.replace(/3/, 'i');
-    }
-    if (frase.charAt(i) === '4') {
-      resultado = resultado.replace(/4/, 'o');
-    }
-    if (frase.charAt(i) === '5') {
-      resultado = resultado.replace(/5/, 'u');
-    }
-  }
+      resultado = resultado.replace(/1/gi, 'a');
+      resultado = resultado.replace(/2/gi, 'e');
+      resultado = resultado.replace(/3/gi, 'i');
+      resultado = resultado.replace(/4/gi, 'o');
+      resultado = resultado.replace(/5/gi, 'u');
   return resultado;
 }
 
@@ -172,7 +160,7 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck() {
 
 }
 
