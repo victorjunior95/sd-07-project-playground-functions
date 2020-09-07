@@ -192,9 +192,12 @@ function checkSum(lineA, lineB, lineC) {
 }
 function checkAbs(lineA, lineB, lineC) {
   let strike = 0;
-  if ((absolut(lineA, lineB) < lineC) && (absolut(lineA, lineC) < lineB) && (absolut(lineB, lineC) < lineA)) {
-        strike += 1;
- }
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+  if ((absolut(a, b) < c) && (absolut(a, c) < b) && (absolut(b, c) < a)) {
+    strike += 1;
+  }
   return strike;
 }
 function triangleCheck(lineA, lineB, lineC) {
