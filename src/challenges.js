@@ -114,16 +114,16 @@ function highestCount(arrayOfNumbers) {
   return count;
 }
 
-// Desafio 7 --- Não funcionou!!!
-catAndMouse([4, 2, 2])
+// Desafio 7
+catAndMouse([1, 3, 2])
 
 function catAndMouse(animalsPosition) {
   console.log("");
   console.log("Desafio 7:");
 
   //-------Distância entre o rato e os gatos-------//
-  let cat1 = animalsPosition[0] - animalsPosition[1];
-  let cat2 = animalsPosition[0] - animalsPosition[2];
+  let cat1 = animalsPosition[1] - animalsPosition[0];
+  let cat2 = animalsPosition[2] - animalsPosition[0];
 
   if ( cat1 === cat2 ) {
     console.log("Os gatos se trombam e o rato foge");
