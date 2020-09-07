@@ -22,7 +22,7 @@ function concatName(arrayStrings) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return `${wins * 3}` + `${ties * 1}`;
+  return `${wins * 3} + ${ties * 1}`;
 }
 
 // Desafio 6
@@ -52,38 +52,46 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
   let arrayReturn = [];
-  for (let i in arrayFizzBuzz) {
+  for (let i = 0; i < arrayFizzBuzz.length; i += 1) {
     let fizz = arrayFizzBuzz[i] % 3 === 0;
     let buzz = arrayFizzBuzz[i] % 5 === 0;
-    if (fizz === 0 && buzz === 0) {
-      arrayReturn.push('fizzBuzz');
-    } else if (fizz === 0) {
-      arrayReturn.push('fizz');
-    } else if (buzz === 0) {
-      arrayReturn.push('buzz');
-    } else if (fizz !== 0 && buzz !== 0) {
-      arrayReturn.push('bug!');
+    let fizbuz = arrayFizzBuzz[i] % 15 === 0;
+    if (fizbuz) {
+      arrayReturn[i] = 'fizzBuzz';
+    } else if (fizz) {
+      arrayReturn[i] = 'fizz';
+    } else if (buzz) {
+      arrayReturn[i] = 'buzz';
+    } else {
+      arrayReturn[i] = 'bug!';
     }
   }
   return arrayReturn;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
+function encodeDecode(string, searching, replacing) {
+  for (let i = 0; i < 5; i += 1) {
+    for (let j = 1; j < string.length; j += 1) {
+      string = string.replace(searching[i], replacing[i]);
+    }
+  }
+  return string;
+}
 // Desafio 9
 function encode(string) {
-  string = string.replace(/a/gi, '3');
-  string = string.replace(/e/gi, '2');
-  string = string.replace(/i/gi, '3');
-  string = string.replace(/o/gi, '4');
-  string = string.replace(/u/gi, '5');
-  return string;
+  let searching = ['a', 'e', 'i', 'o', 'u'];
+  let replacing = ['1', '2', '3', '4', '5'];
+  return encodeDecode(string, searching, replacing);
 }
 console.log(encode('hi there!'));
 
 function decode(string) {
-  string.replace(/[1-5]/gi, 'a');
-  return string;
+  let replacing = ['a', 'e', 'i', 'o', 'u'];
+  let searching = ['1', '2', '3', '4', '5'];
+  return encodeDecode(string, searching, replacing);
 }
-
+console.log(decode('h3 th2r2!'));
 // Desafio 10
 function techList(techName, name) {
   techName.sort();
@@ -99,20 +107,30 @@ function techList(techName, name) {
   }
   return techNameList;
 }
-
+function phoneFormat(phoneNum) {
+  let phoneForm =
+    `(${phoneNum[0]}` +
+    `${phoneNum[1]}) ` +
+    `${phoneNum.slice(2, 7).join('')}` +
+    `-${phoneNum.slice(7, 12).join('')}`;
+  return phoneForm;
+}
 // Desafio 11
 function generatePhoneNumber(phoneNum) {
   let repeat3 = 0;
-  if (phoneNum.length !== 11) {
+  let notArrayLength = phoneNum.length !== 11;
+  if (notArrayLength) {
     return 'Array com tamanho incorreto.';
   }
-  for (let i in phoneNum) {
+  for (let i = 0; i < phoneNum.length; i += 1) {
+    let notPossible = phoneNum[i] < 0 || phoneNum[i] > 9;
     repeat3 = 0;
-    if (phoneNum[i] < 0 || phoneNum[i] > 9) {
+    if (notPossible) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let j in phoneNum) {
-      if (phoneNum[i] === phoneNum[j]) {
+    for (let j = 0; j < phoneNum.length; j += 1) {
+      let repetition = phoneNum[i] === phoneNum[j];
+      if (repetition) {
         repeat3 += 1;
       }
     }
@@ -120,13 +138,9 @@ function generatePhoneNumber(phoneNum) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let phoneFormat =
-    `(${phoneNum[0]}` +
-    `${phoneNum[1]}) ` +
-    `${phoneNum.slice(2, 7).join('')}` +
-    `-${phoneNum.slice(7, 12).join('')}`;
-  return phoneFormat;
+  return phoneFormat(phoneNum);
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -148,7 +162,7 @@ function hydrate(water) {
   let waterWithoutSpaces = water.replace(/\s/g, '');
   let waterNum = waterWithoutSpaces.match(waterRegExp);
   let waterCount = 0;
-  for (let i in waterNum) {
+  for (let i = 0; i < waterNum.length; i += 0) {
     waterCount += parseInt(waterNum[i], 10);
   }
   if (waterCount > 1) {
