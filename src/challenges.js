@@ -30,7 +30,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let result = `${array[array.length -1]}, ${array[0]}`;
+  let result = [];
+  result[0] = array[array.length - 1];
+  result[1] = array[0];
   return result;
 }
 
@@ -97,28 +99,23 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(string) {
   let result = '';
-
+  let values = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  }
   for (let i = 0; i < string.length; i += 1) {
-    switch (string[i]) {
-      case 'a':
-        result += '1';
+    for (let j in values) {
+      if (string[i] === j) {
+        result += values[j];
         break;
-      case 'e':
-        result += '2';
-        break;
-      case 'i':
-        result += '3';
-        break;
-      case 'o':
-        result += '4';
-        break;
-      case 'u':
-        result += '5';
-        break;
-      default:
-        result += string[i]
-        break;
+      } else if (j === 'u') {
+        result += string[i];
+      }
     }
+
   }
   return result;
 }
