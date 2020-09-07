@@ -60,15 +60,10 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let value of array) {
-    if (value % 3 === 0 && value % 5 === 0) {
-      value = 'fizzBuzz';
-    } else if (value % 3 === 0) {
-      value = 'fizz';
-    } else if (value % 5 === 0) {
-      value = 'buzz';
-    } else {
-      value = 'bug!';
-    }
+    if (value % 3 === 0 && value % 5 === 0) { value = 'fizzBuzz'; }
+    else if (value % 3 === 0) { value = 'fizz'; }
+    else if (value % 5 === 0) { value = 'buzz';}
+    else { value = 'bug!'; }
   }
   return array;
 }
@@ -126,7 +121,7 @@ function generatePhoneNumber(array) {
   function validatingTheNumbers(array2) {
     let counterRepetition = 0;
     for (let i in array2) { if (array2[i] < 0 || array2[i] > 9) return true; }
-    for (let j in array2) { 
+    for (let j in array2) {
       for (let i in array2) {
       if (array2[j] === array2[i]) {
         counterRepetition += 1;
@@ -135,20 +130,21 @@ function generatePhoneNumber(array) {
     }
       counterRepetition = 0;
     }
-    return false; 
+    return false;
   }
   // função que gera uma string a partir de uma lista
   function listForString(list, pos1, pos2) {
     let finalString = '';
     for (let i = pos1; i <= pos2; i += 1) { finalString += list[i]; }
-    return finalString; }
+    return finalString;
+  }
   let validation = validatingTheNumbers(array);
   if (array.length !== 11) return 'Array com tamanho incorreto.';
   else if (validation) return 'não é possível gerar um número de telefone com esses valores';
   let firstNumbers = listForString(array, 0, 1);
   let middleNumbers = listForString(array, 2, 6);
   let lastNumbers = listForString(array, 7, 10);
-  return `(${firstNumbers}) ${middleNumbers}-${lastNumbers}`; 
+  return `(${firstNumbers}) ${middleNumbers}-${lastNumbers}`;
 }
 
 // Desafio 12
