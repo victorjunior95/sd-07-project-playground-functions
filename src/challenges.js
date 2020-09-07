@@ -175,7 +175,7 @@ function repeatNumber(tel) {
   let mensagem = '';
   let count = 0;
   for (let i = 0; i < tel.length; i += 1) {
-    for (let j = 1; j < i; j += 1) {
+    for (let j = i + 1; j < tel.length; j += 1) {
       if (tel[i] === tel[j]) {
         count += 1;
       }
