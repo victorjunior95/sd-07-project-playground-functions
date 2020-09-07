@@ -36,7 +36,8 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let inAscendingOrder = numbers.sort()
   let CounterRepetitions = 0;
-
+/*global i*/
+/*eslint no-undef: ["error", { "typeof": true }] */
   for (i = 0; i < inAscendingOrder.length; i += 1) {
     if (inAscendingOrder[i] == inAscendingOrder[i + 1]) {
       CounterRepetitions += 1
