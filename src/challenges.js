@@ -84,19 +84,26 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 
+// Função suporte para Desafio 8
+function suport8 (value) {
+  let suport = '';
+  if (value % 3 === 0 && value % 5 === 0) {
+    suport = 'fizzBuzz';
+  } else if (value % 3 === 0) {
+    suport = 'fizz';
+  } else if (value % 5 === 0) {
+    suport = 'buzz';
+  } else {
+    suport = 'bug!';
+  }
+  return suport;
+}
+
 // Desafio 8
 function fizzBuzz(arrayNum) {
   let arrayFizzBuzz = [];
   for (let i = 0; i < arrayNum.length; i += 1) {
-    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (arrayNum[i] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if (arrayNum[i] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
+    arrayFizzBuzz.push(suport8(arrayNum[i]));
   }
   return arrayFizzBuzz;
 }
@@ -123,14 +130,15 @@ function encode(paramString) {
 }
 function decode(paramString2) {
   let newString2 = paramString2;
-  newString2 = newString2.replace(/1/g, "a");
-  newString2 = newString2.replace(/2/g, "e");
-  newString2 = newString2.replace(/3/g, "i");
-  newString2 = newString2.replace(/4/g, "o");
-  newString2 = newString2.replace(/5/g, "u");
+  newString2 = newString2.replace(/1/g, 'a');
+  newString2 = newString2.replace(/2/g, 'e');
+  newString2 = newString2.replace(/3/g, 'i');
+  newString2 = newString2.replace(/4/g, 'o');
+  newString2 = newString2.replace(/5/g, 'u');
   return newString2;
-  // .replace é uma função para strings que diz onde tiver 1, na busca pela frase em geral (g), o substitua por a. Com o g, toda vez que ele encontrar 1 ele vai substituir por a. Sem o g, ele só substitui o 1º 1 que encontrar e ignora se tiver outros
 }
+
+// .replace é uma função para strings que diz onde tiver 1, na busca pela frase em geral (g), o substitua por a. Com o g, toda vez que ele encontrar 1 ele vai substituir por a. Sem o g, ele só substitui o 1º 1 que encontrar e ignora se tiver outros
 
 // Desafio 10
 function techList(tech, firstName) {
