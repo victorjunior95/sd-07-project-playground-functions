@@ -247,9 +247,9 @@ function hydrate(str) {
     let myArray = str;
     let calc = 0;
     let number1;
-    myArray = myArray.match(/[\d]+/g);
+    myArray = myArray.match(/[\d]+/g); // regex (regular expression- [\d] = find any digits, '+' - one or more, /g - globally - eliminating all characters
     for (let index = 0; index < myArray.length; index += 1) {
-        number1 = parseInt(myArray[index], 10);
+        number1 = parseInt(myArray[index], 10); // convert it to integer decimal
         calc += number1;
     }
     if (calc === 1){
