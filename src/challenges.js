@@ -122,23 +122,14 @@ function encode(paramString) {
   return newString;
 }
 function decode(paramString2) {
-  let newString2 = '';
-  for (let index = 0; index <= paramString2.length - 1; index += 1) {
-    if (paramString2[index] === '1') {
-      newString2 += 'a';
-    } else if (paramString2[index] === '2') {
-      newString2 += 'e';
-    } else if (paramString2[index] === '3') {
-      newString2 += 'i';
-    } else if (paramString2[index] === '4') {
-      newString2 += 'o';
-    } else if (paramString2[index] === '5') {
-      newString2 += 'u';
-    } else {
-      newString2 += paramString2[index];
-    }
-  }
+  let newString2 = paramString2;
+  newString2 = newString2.replace(/1/g, "a");
+  newString2 = newString2.replace(/2/g, "e");
+  newString2 = newString2.replace(/3/g, "i");
+  newString2 = newString2.replace(/4/g, "o");
+  newString2 = newString2.replace(/5/g, "u");
   return newString2;
+  // .replace é uma função para strings que diz onde tiver 1, na busca pela frase em geral (g), o substitua por a. Com o g, toda vez que ele encontrar 1 ele vai substituir por a. Sem o g, ele só substitui o 1º 1 que encontrar e ignora se tiver outros
 }
 
 // Desafio 10
