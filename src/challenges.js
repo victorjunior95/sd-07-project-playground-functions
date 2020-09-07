@@ -46,15 +46,11 @@ function footballPoints(wins, ties) {
 function highestCount(numeros) {
   let idcMaior = 0;
   let contRepet = 0;
-  for (let indice in numeros) {
-    if (numeros[idcMaior] < numeros[indice]) {
-      idcMaior = indice;
-    }
-  }
   for (let i in numeros) {
-    if (numeros[i] === numeros[idcMaior]) {
-      contRepet += 1;
-    }
+      if (numeros[idcMaior] < numeros[i]) { idcMaior = i; }
+  }    
+  for (let z in numeros) {
+      if (numeros[z] === numeros[idcMaior]) { contRepet += 1; }
   }
   return contRepet;
 }
@@ -197,13 +193,11 @@ function triangleCheck(lineA, lineB, lineC) {
   let modulo2 = Math.abs(lineA - lineC) < lineB;
   let modulo3 = Math.abs(lineB - lineC) < lineA;
   if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
-      condition = true;
-  }
-  else if (modulo1 && modulo2 && modulo3) {
-      condition = true;
-  }
-  else {
-      condition = false;
+    condition = true;
+  } else if (modulo1 && modulo2 && modulo3) {
+    condition = true;
+  } else {
+    condition = false;
   }
   return condition;
 }
