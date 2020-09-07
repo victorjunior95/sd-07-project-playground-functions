@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function checkNumber(array) {
-  let check = [];
+  let check = '';
   for (let i in array) {
     if (array.length !== 0) {
       if (array[i] % 3 === 0 && array[i] % 5 === 0) {
