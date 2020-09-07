@@ -36,10 +36,10 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let inAscendingOrder = numbers.sort()
   let CounterRepetitions = 0;
-/*global i*/
-/*eslint no-undef: ["error", { "typeof": true }] */
-/*eslint no-global-assign: "error"*/
-/*globals i:true*/
+/*global i*/  
+/*eslint no-undef: ["error", { "typeof": true }] */ 
+/*eslint no-global-assign: "error"*/  
+/*globals i:true*/  
   for (i = 0; i < inAscendingOrder.length; i += 1) {
     if (inAscendingOrder[i] === inAscendingOrder[i + 1]) {
       CounterRepetitions += 1
@@ -80,10 +80,10 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(numbers) {
-  /*global item*/
-/*eslint no-undef: ["error", { "typeof": true }] */
-/*eslint no-global-assign: "error"*/
-/*globals item:true*/
+  /*global item*/ 
+/*eslint no-undef: ["error", { "typeof": true }] */ 
+/*eslint no-global-assign: "error"*/  
+/*globals item:true*/ 
   for (item in numbers) {
       if (numbers[item] % 5 === 0 && numbers[item] % 3 === 0) {
         numbers[item] = 'fizzBuzz'
@@ -184,10 +184,10 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
-/*global j*/
-/*eslint no-undef: ["error", { "typeof": true }] */
-/*eslint no-global-assign: "error"*/
-/*globals j:true*/
+/*global j*/  
+/*eslint no-undef: ["error", { "typeof": true }] */   
+/*eslint no-global-assign: "error"*/  
+/*globals j:true*/  
   for (j in numbers) {
     if (numbers.length === 11){
       orinalOrder += numbers[j]
