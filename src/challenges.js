@@ -86,25 +86,21 @@ function encode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
 
   for (let i = 0; i < 5; i += 1) {
-    var regExp = new RegExp(vogais[i], 'g');
+    let regExp = new RegExp(vogais[i], 'g');
     string = string.replace(regExp, `${i + 1}`);
   }
   return string;
 }
 
 function decode(string) {
-  let saida = String(string).split('');
-  const codigo = ['a', 'e', 'i', 'o', 'u'];
+  const vogais = ["a", "e", "i", "o", "u"];
 
-  for (let key = 0; key < 5; key += 1) {
-    for (let i = 0; i < string.length; i += 1) {
-      if (parseInt(saida[i], 10) === key + 1) {
-        saida[i] = codigo[key];
-      }
-    }
+  for (let i = 0; i < 5; i += 1) {
+    let regExp = new RegExp(i+1, 'g');
+    string = string.replace(regExp, vogais[i]);
   }
 
-  return saida.join('');
+  return string;
 }
 
 // Desafio 10
