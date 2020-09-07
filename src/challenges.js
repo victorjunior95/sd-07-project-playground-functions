@@ -25,7 +25,7 @@ function concatName(names) {
   let first =  amount[0]
   return `${last}, ${first}`;
 }
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties
