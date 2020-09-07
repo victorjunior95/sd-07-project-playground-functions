@@ -103,13 +103,9 @@ function techList(technologies, name) {
 function generatePhoneNumber(array) {
   if (array.length !== 11) return 'Array com tamanho incorreto.';
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9) {
-    return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-  for (let j = 0; j < array.length; j += 1) {
+    if (array[i] < 0 || array[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
     let counterRepetition = 0;
-    for (let i = 0; i < array.length; i += 1) {
+    for (let j = 0; j < array.length; j += 1) {
       if (array[j] === array[i]) {
         counterRepetition += 1;
       }
@@ -117,7 +113,7 @@ function generatePhoneNumber(array) {
     }
   }
   array = array.join('');
-  return `(${array.slice(0,2)}) ${array.slice(2,7)}-${array.slice(7,11)}`;
+  return `(${array.slice(0, 2)}) ${array.slice(2, 7)}-${array.slice(7, 11)}`;
 }
 
 // Desafio 12
