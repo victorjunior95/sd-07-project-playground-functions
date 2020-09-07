@@ -104,9 +104,19 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+  function techList(learn, name) {
+    let learnTechnology = [];
+    for (let i in learn) {
+      let organization = learn.sort();
+      let includeTechList = {
+        tech: learn[i],
+        name: name,
+      };
+      learnTechnology.push(includeTechList);
+    }
+    return learnTechnology;
+  }
+
 
 // Desafio 11
 function generatePhoneNumber() {
