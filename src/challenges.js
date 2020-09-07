@@ -222,6 +222,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
 function hydrate(phrase) {
   let reg = /\d+/g;
+  /**O QUE SIGINIFICAM OS CARACTERES?
+   * d : encontra correspondência com um número de 0 a 9; /\d/
+   * + : permite encontrar repetidos;
+   * g : significa "global" que pesquisa varias vezes */
   let numbers = phrase.match(reg);//cria um array com os números encontrados na string phrase.
   let sum = 0;
 
