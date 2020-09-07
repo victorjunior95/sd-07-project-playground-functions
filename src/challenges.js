@@ -219,12 +219,11 @@ function generatePhoneNumber(numbers) {
 /*eslint no-undef: ["error", { "typeof": true }] */ 
 /*eslint no-global-assign: "error"*/  
 /*globals k:true*/ 
-  for (k in result) {
+  for (k  = 0; k < result.length; k += 1) {
     final += result[k]
   }
   return final
 }
-generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7])
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA + lineB < lineC || lineA + lineC < lineB || lineC + lineB < lineA) {
@@ -239,7 +238,6 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let drinksTodrunk = drinks
   let numbers = drinks.match(/\d+/g).map(Number)
   let sum = 0;
   for (i in numbers) {
@@ -251,7 +249,6 @@ function hydrate(drinks) {
     return `${sum} copo de água`
   }
 }
-
 
 module.exports = {
   calcArea,
