@@ -190,8 +190,6 @@ function techList(tech, name) {
 
 // Suporte Desafio 11
 function numberGreaterNineLessZero(numbers) {
-  let messageError = 'não é possível gerar um número de telefone com esses valores'
-  let finalMessage = ''
   let message = ''
   /* Checking if there is any number less than 0 or greater than nine */
   for (let number in numbers) {
@@ -199,12 +197,7 @@ function numberGreaterNineLessZero(numbers) {
       message = 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  if (message === messageError) {
-    finalMessage = messageError
-  } else {
-    finalMessage = 'ok'
-  }
-  return finalMessage
+  return message
 }
 
 // Suporte Desafio 11
@@ -255,7 +248,7 @@ function generatePhoneNumber(numbers) {
   }
   return message
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lineACheck = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
