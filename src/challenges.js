@@ -101,32 +101,23 @@ function techList(technologies, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  function validatingTheNumbers(array2) {
-    let counterRepetition = 0;
-    for (let i = 0; i < array2.length; i += 1) { if (array2[i] < 0 || array2[i] > 9) return true; }
-    for (let j = 0; j < array2.length; j += 1) {
-      for (let i = 0; i < array2.length; i += 1) {
-        if (array2[j] === array2[i]) {
-          counterRepetition += 1;
-          if (counterRepetition >= 3) return true;
-        }
-      }
-      counterRepetition = 0;
-    }
-    return false;
-  }
-  function listForString(list, pos1, pos2) {
-    let finalString = '';
-    for (let i = pos1; i <= pos2; i += 1) { finalString += list[i]; }
-    return finalString;
-  }
-  let validation = validatingTheNumbers(array);
   if (array.length !== 11) return 'Array com tamanho incorreto.';
-  else if (validation) return 'não é possível gerar um número de telefone com esses valores';
-  let firstNumbers = listForString(array, 0, 1);
-  let middleNumbers = listForString(array, 2, 6);
-  let lastNumbers = listForString(array, 7, 10);
-  return `(${firstNumbers}) ${middleNumbers}-${lastNumbers}`;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] < 0 || array[i] > 9) {
+    return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  for (let j = 0; j < array.length; j += 1) {
+    let counterRepetition = 0;
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[j] === array[i]) {
+        counterRepetition += 1;
+      }
+      if (counterRepetition > 2) return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  array = array.join('');
+  return `(${array.slice(0,2)}) ${array.slice(2,7)}-${array.slice(7,11)}`;
 }
 
 // Desafio 12
