@@ -82,7 +82,7 @@ function fizzBuzz(array) {
 function encode(stringCode) {
   for (let i = 0; i < stringCode.length; i += 1) {
     if (stringCode[i] === "a") {
-      stringCode[i] = 1
+      stringCode[i].psuh(1)
     } else if (stringCode[i] === "e") {
       stringCode[i] = 2
     } else if (stringCode[i] === "i") {
@@ -97,7 +97,7 @@ function encode(stringCode) {
 function decode(stringDecode) {
   for (let i = 0; i < stringDecode.length; i += 1) {
     if (stringDecode[i] === 1) {
-      stringDecode[i] = "a"
+      stringDecode[i].push("a")
     } else if (stringDecode[i] === 2) {
       stringDecode[i] = "e"
     } else if (stringDecode[i] === 3) {
