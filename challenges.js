@@ -1,21 +1,18 @@
 
-function hydrate(corda) {
-  let cordaDividida = corda.match(/\d/g);
-  let somaAgua = 0;  
-  for(let i = 0; i < cordaDividida.length; i = i+1){
-     somaAgua += cordaDividida[i] * 1;
-    }
-  if (somaAgua == 1){
-  return somaAgua + " copo de água";
-} else {
-  return somaAgua + " copos de água";
-}
+function compareTrue(arg1, arg2) {
+  let valor = true;
+  if (arg1 && arg2) {
+    return valor;
+  } 
+  valor = false;
+  return valor;
 }
 
 
 
 
-  console.log(hydrate("1 cachaça, 5 cervejas"));
+
+  console.log(compareTrue(true, true));
 
 
 
