@@ -84,7 +84,7 @@ function fizzBuzz(numeros) {
   }
   return retorno;
 }
-console.log(encode('How are you today?'));
+
 function encode(frase) {
   let resultado = frase;
   resultado = resultado.replace(/a/gi, '1');
@@ -120,11 +120,15 @@ function techList(tech, name) {
   return techArray;
 }
 
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,2,5]));
 function generatePhoneNumber(n) {
   // Valida se tem 11 numeros
-  if (n.length !== 11) {
-    return 'Array com tamanho incorreto.';
+  function checkLength(nl){
+    if(nl.length !== 11){
+    let teste1 = true;
+    }
   }
+  checkLength(n);
   // Valida se é maior que -1 e menor que 10
   for (let i = 0; i < n.length; i += 1) {
     if (n[i] < 0 || n[i] > 9) {
