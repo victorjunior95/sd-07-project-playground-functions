@@ -201,14 +201,14 @@ function checkDrinks(string) {
   let nDrinks = 0;
   let number = 0;
   for (let i in string) {
-    if(string.length !== 0) {
-    for (let j in drink) {
+    if (string.length !== 0) {
+      for (let j in drink) {
       number = +string[i];
       nDrinks = (number === drink[j]) ? nDrinks += drink[j] : nDrinks += 0;
       }
     }
   }
- return nDrinks;
+  return nDrinks;
 }
 function hydrate(string) {
   let result = checkDrinks(string);
