@@ -102,7 +102,7 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   let lista = [];
   let obj = [];
   lista = array.sort()
