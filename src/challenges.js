@@ -218,8 +218,8 @@ console.log("Mensagem decodificada: "+result2);
 
 // Desafio 10
 let t = ['React', 'Jest', 'HTML','CSS'];
-let nome ='Lauro';
-function techList(t,nome) {
+let name ='Lucas';
+function techList(t,name) {
   // seu código aqui
   if(t.length === 0){
     return 'Vazio';
@@ -230,14 +230,14 @@ let tecnologiasAZ = t.sort();// organiza em ordem alfabética as tecnologias
   for (let x in tecnologiasAZ){
     let vouAprender = { // cria objeto com o que vou aprender
         tech:tecnologiasAZ[x], // adiciona a tecnologia
-        nome,// adiciona o nome do aluno
+        name,// adiciona o nome do aluno
     }
    aprendizado.push(vouAprender); // adiciona no array aprendizado o objeto vouAprender
    
   }
   return aprendizado;
 }
-//let result = techList(t,nome);
+//let result = techList(t,name);
 //console.log(result);
 
 // Desafio 11
