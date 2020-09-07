@@ -96,10 +96,10 @@ function encode(frase) {
 }
 function decode(frase) {
   let novaFrase = frase.replace(/1/g, "a");
-  novaFrase = novaFrase.replace(/2/g, "b");
-  novaFrase = novaFrase.replace(/3/g, "c");
-  novaFrase = novaFrase.replace(/4/g, "d");
-  novaFrase = novaFrase.replace(/5/g, "c");
+  novaFrase = novaFrase.replace(/2/g, "e");
+  novaFrase = novaFrase.replace(/3/g, "i");
+  novaFrase = novaFrase.replace(/4/g, "o");
+  novaFrase = novaFrase.replace(/5/g, "u");
   return novaFrase;
 }
 
