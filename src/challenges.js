@@ -206,7 +206,7 @@ function generatePhoneNumber(array) {
             let cont8 = 0;
             let cont9 = 0;
 
-            for (let j = 0; j < array.length; j += 1) {
+            for (let j = 0; j <= array.length; j += 1) {
             
              if (cont0 >= 3 || cont1 >= 3 || cont2 >= 3 || cont3 >= 3 || cont4 >= 3 || cont5 >= 3 || cont6 >= 3 || cont7 >= 3 || cont8 >= 3 || cont9 >= 3) {
                     return 'não é possível gerar um número de telefone com esses valores';
