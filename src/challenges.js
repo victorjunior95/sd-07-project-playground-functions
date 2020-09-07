@@ -6,7 +6,7 @@ function compareTrue(valueA, valueB) {
     return false;
   }
 }
-
+compareTrue(1)
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2
@@ -23,9 +23,9 @@ function concatName(names) {
   let amount = names
   let last = amount[amount.length - 1]
   let first =  amount[0]
-  return last + ", " +  first;
+  return `${last}, ${first}`;
 }
-
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties
