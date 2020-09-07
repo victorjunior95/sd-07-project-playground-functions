@@ -204,11 +204,11 @@ function hydrate(string) {
     if (string.length !== 0) {
       for (let j in drinks) {
         if (string[i] == drinks[j]) {
-         nDrinks += drinks[j];
-       }
+          nDrinks += drinks[j];
+        }
       }
-     }
     }
+  }
   if (nDrinks === 1) {
     return '1 copo de água';
   }
