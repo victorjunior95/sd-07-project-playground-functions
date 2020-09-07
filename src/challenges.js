@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-  return(true);
-} else {
-  return(false)
+    return (true);
+  } else {
+    return (false)
 }
 }
 // Desafio 2
@@ -26,7 +26,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let vitoria = wins * 3
-  let empate = ties 
+  let empate = ties
   return pontos = vitoria + empate
 }
 // Desafio 6
@@ -51,31 +51,31 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2 = mouse - cat2;
   if (distanciaCat1 == distanciaCat2) {
     return "os gatos trombam e o rato foge"
-  } 
+  }
   else if (distanciaCat1 < distanciaCat2) {
     return "cat2"
   } else if(distanciaCat1 > distanciaCat2){
-    return "cat1" 
+    return "cat1"
   }
 }
 // Desafio 8
 function fizzBuzz(array) {
- let resultado = []
- for (i = 0; i < array.length; i += 1){
-   if (array[i] % 3 === 0 && array[i] % 5 === 0){
+  let resultado = []
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i] % 3 === 0 && array[i] % 5 === 0){
     resultado.push("fizzBuzz")
-   }
-   else if (array[i] % 5 === 0){
-     resultado.push("buzz")
-   }
-   else if  (array[i] % 3 === 0){
+    }
+    else if (array[i] % 5 === 0){
+      resultado.push("buzz")
+    }
+    else if  (array[i] % 3 === 0){
     resultado.push("fizz")
+    }
+    else {
+      resultado.push("bug!")
    }
-   else {
-     resultado.push("bug!")
-   }
- }
- return resultado
+  }
+  return resultado
 }
 // Desafio 9
 function encode(string) {
@@ -116,7 +116,6 @@ function techList(array, name) {
     return "Vazio!"
   }
 }
-console.log(techList(array, name))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
