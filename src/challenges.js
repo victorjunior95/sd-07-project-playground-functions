@@ -56,19 +56,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let resposta = [];
-  for (const i of array) {
-    if (i % 3 === 0 && i % 5 !== 0) {
-      resposta.push('"fizz"');
-    } else if (i % 5 === 0 && i % 3 !== 0) {
-      resposta.push('"buzz"');
-    } else if (i % 5 === 0 && i % 3 === 0) {
-      resposta.push('"fizzbuzz"');
+  for (let i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+      array[i] = "fizz";
+    } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+      array[i] = "buzz";
+    } else if (array[i] % 5 === 0 && array[i] % 3 === 0) {
+      array[i] = "fizzBuzz";
     } else {
-      resposta.push('"bug!"');
+      array[i] = "bug!";
     }
   }
-  return resposta;
+  return array;
 }
 
 // Desafio 9
@@ -123,7 +122,7 @@ function triangleCheck() {
 function hydrate() {
 
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 module.exports = {
   calcArea,
   catAndMouse,
