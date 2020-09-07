@@ -185,7 +185,7 @@ function checkSumAndAbs(lineA, lineB, lineC) {
   let c = lineC;
   if ((sum(a, b) > c) && (sum(a, c) > b) && (sum(b, c) > a)) {
     if ((abs(a, b) < c) && (abs(a, c) < b) && (abs(b, c) < a)) {
-    check += 1;
+      check += 1;
     }
   }
   return check;
