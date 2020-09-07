@@ -209,18 +209,11 @@ function generatePhoneNumber(numbers) {
     }
   }
 
-/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
-/*global result1 */
-  let result1 = result.splice(0, 0, '(')
-/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
-/*global result2 */
-  let result2 = result.splice(3, 0, ')')
-/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
-/*global result3 */
-  let result3 = result.splice(4, 0, ' ')
-/*eslint no-unused-vars: ["error", { "vars": "local" }]*/
-/*global result4 */
-  let result4 = result.splice(10, 0, '-')
+/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "[iI]gnored" }]*/
+  let is1Ignored = result.splice(0, 0, '(')
+  let is2Ignored = result.splice(3, 0, ')')
+  let is3Ignored = result.splice(4, 0, ' ')
+  let is4Ignored = result.splice(10, 0, '-')
   let final = '';
 /*global k*/  
 /*eslint no-undef: ["error", { "typeof": true }] */ 
@@ -231,7 +224,7 @@ function generatePhoneNumber(numbers) {
   }
   return final
 }
-
+generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7])
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA + lineB < lineC || lineA + lineC < lineB || lineC + lineB < lineA) {
