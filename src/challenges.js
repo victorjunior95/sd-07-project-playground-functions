@@ -217,9 +217,28 @@ let result2 = decode(txtCodificado);
 console.log("Mensagem decodificada: "+result2);
 
 // Desafio 10
-function techList() {
+let t = ['React', 'Jest', 'HTML','CSS'];
+let nome ='Lauro';
+function techList(t,nome) {
   // seu código aqui
+  if(t.length === 0){
+    return 'Vazio';
+  }
+let aprendizado = [] // cria o array para armazenar os objetos
+let tecnologiasAZ = t.sort();// organiza em ordem alfabética as tecnologias
+ 
+  for (let x in tecnologiasAZ){
+    let vouAprender = { // cria objeto com o que vou aprender
+        tech:tecnologiasAZ[x], // adiciona a tecnologia
+        nome,// adiciona o nome do aluno
+    }
+   aprendizado.push(vouAprender); // adiciona no array aprendizado o objeto vouAprender
+   
+  }
+  return aprendizado;
 }
+let result = techList(t,nome);
+console.log(result);
 
 // Desafio 11
 function generatePhoneNumber() {
