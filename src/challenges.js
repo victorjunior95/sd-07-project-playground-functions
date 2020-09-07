@@ -92,8 +92,8 @@ function fizzBuzz(numbers) {
     } else if (numbers[item] % 3 === 0) {
       numbers[item] = 'fizz'
     } else if (numbers[item] % 5 !== 0 && numbers[item] % 3 !== 0) {
-        numbers[item] = 'bug!'
-      }
+      numbers[item] = 'bug!'
+    }
   }
   return numbers
 }
@@ -159,9 +159,9 @@ function decode(phrase) {
 function techList(listArray, name) {
   let resultOfArray = []
   listArray.sort()
+  for (i in listArray) {
 /*eslint object-shorthand: ["error", "never"]*/
 /*eslint-env es6*/
-  for (i in listArray) {
     if (listArray.length !== 0) {
       resultOfArray.push(
         {
