@@ -98,10 +98,19 @@ function decode(string) {
   return resultado
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let ordem = array.sort();
+  let listadeTec = []
+  for (i = 0; i < ordem.length; i += 1){
+    let objeto = {};
+    objeto = {
+      tech: ordem[i],
+      name: name
+    }
+    listadeTec.push(objeto)
+  }
+  return listadeTec
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
