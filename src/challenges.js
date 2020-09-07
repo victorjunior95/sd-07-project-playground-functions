@@ -120,15 +120,11 @@ function techList(tech, name) {
   return techArray;
 }
 
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,2,5]));
 function generatePhoneNumber(n) {
   // Valida se tem 11 numeros
-  function checkLength(nl){
-    if(nl.length !== 11){
-    let teste1 = true;
-    }
+  if (n.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  checkLength(n);
   // Valida se é maior que -1 e menor que 10
   for (let i = 0; i < n.length; i += 1) {
     if (n[i] < 0 || n[i] > 9) {
