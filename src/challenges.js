@@ -199,12 +199,13 @@ function triangleCheck(lineA, lineB, lineC) {
 function checkDrinks(string){
   let drink = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let nDrinks = 0;
+  let number =0;
   string = string.split('');
   for (let i in string) {
     if (string.length !== 0) {
       number = +string[i]
       for (let j in drink) {
-        if(number === drink[j]){
+        if (number === drink[j]) {
           nDrinks += drink[j];
         }
       }
