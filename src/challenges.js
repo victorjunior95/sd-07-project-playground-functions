@@ -155,10 +155,10 @@ function techList(vetor, name) {
   }
   return colecao.sort(function (a, b) {
     if (a.tech < b.tech) {
-      return -1; 
+      return -1;
     }
     if (a.tech > b.tech) {
-      return 1; 
+      return 1;
     }
     return 0;
   });
@@ -192,25 +192,20 @@ function generatePhoneNumber(vetor) {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let condition1;
-  let condition2;
-  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
-    condition1 = true;
-  } else {
-    condition1 = false;
-  }
+  let condition;
   let modulo1 = Math.abs(lineA - lineB) < lineC;
   let modulo2 = Math.abs(lineA - lineC) < lineB;
   let modulo3 = Math.abs(lineB - lineC) < lineA;
-  if (modulo1 && modulo2 && modulo3) {
-    condition2 = true;
-  } else {
-    condition2 = false;
+  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
+      condition = true;
   }
-  if (condition1 && condition2) {
-    return true;
+  else if (modulo1 && modulo2 && modulo3) {
+      condition = true;
   }
-  return false;
+  else {
+      condition = false;
+  }
+  return condition;
 }
 // Desafio 13
 function hydrate(corda) {
