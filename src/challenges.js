@@ -118,16 +118,16 @@ function catAndMouse(mouse,cat1,cat2) {
 //console.log(result);
 
 // Desafio 8
-let numbers = [2, 15, 7, 9, 45];
-let resultado =[];
-function fizzBuzz(numbers) {
+let dados = [2, 15, 7, 9, 45];
+function fizzBuzz(d) {
   // seu código aqui
-  for (let i = 0; i <numbers.length; i +=1){
-    if(numbers[i] % 3 === 0 && numbers[i] % 5 === 0){
+  let resultado =[];
+  for (let i = 0; i <d.length; i +=1){
+    if(d[i] % 3 === 0 && d[i] % 5 === 0){
       resultado.push("fizzBuzz");     
-    }else if(numbers[i] % 3 === 0){
+    }else if(d[i] % 3 === 0){
       resultado.push("fizz");     
-    }else if(numbers[i] % 5 === 0){
+    }else if(d[i] % 5 === 0){
       resultado.push("buzz");      
     }else{
      resultado.push("bug!");     
@@ -135,8 +135,8 @@ function fizzBuzz(numbers) {
   }
   return resultado;
 }
-//let result = fizzBuzz(numbers);
-//console.log(result);
+let result = fizzBuzz(dados);
+console.log(result);
 
 // Desafio 9
 //let texto = "hi there";
