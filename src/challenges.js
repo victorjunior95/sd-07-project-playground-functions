@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(exemplo) {
-  return exemplo.split(' '); //take a look inside the apostrophe, there's a space inside
+  return exemplo.split(' '); // take a look inside the apostrophe, there's a space inside
 }
 
 // Desafio 4
@@ -25,7 +25,7 @@ function concatName(nombres) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties * 1;
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
