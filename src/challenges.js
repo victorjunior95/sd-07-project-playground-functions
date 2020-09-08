@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numeros) {
   let result = [];
-  for (i = 0; i < numeros.length; i += 1) {
+  for (let i = 0; i < numeros.length; i += 1) {
     if (numeros[i] % 15 === 0) {
       result.push('fizzBuzz');
     } else if (numeros[i] % 5 === 0) {
