@@ -153,19 +153,18 @@ function checkNumber(number) {
   let contador = 0;
   for (let i = 0; i < number.length; i += 1) {
     let nAtual = number[i];
+    contador = 0;
     for (let k = 0; k < number.length; k += 1) {
       if (nAtual === number[k]) {
         contador += 1;
+      } else  if (nRepeticoes >= 3) {
+        return 3;
       }
     }
     if (contador > nRepeticoes) {
       nRepeticoes = contador;
-    }
-    contador = 0;
-  }
-  if (nRepeticoes >= 3) {
-    return 3;
-  }
+    }    
+  } 
   return number;
 }
 
