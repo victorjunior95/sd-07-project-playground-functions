@@ -99,7 +99,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   let condition1, condition2;
   if(lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA) {
     condition1 = true;
