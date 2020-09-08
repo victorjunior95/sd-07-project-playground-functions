@@ -80,18 +80,20 @@ function fizzBuzz(arry) {
   let arryDeString = [];
   let element = "";
   for (let index = 0; index < arry.length; index++) {
-    if (arry[index] % 5 == 0 && arry[index] % 3 == 0) {
-      element = "fizzBuzz";
-    } else {
+   
       if (arry[index] % 3 == 0) {
         element = "fizz";
       }
       if (arry[index] % 5 == 0) {
         element = "buzz";
-      } else {
-        element = "bug!";
-      }
-    }
+      } 
+      if (arry[index] % 5 == 0 && arry[index] % 3 == 0) {
+        element = "fizzBuzz";
+      } 
+      if (arry[index] % 5 !==0 && arry[index] % 3 !== 0) {
+      element = "bug!";
+      } 
+    
     arryDeString.push(element);
     element = "";
   }
@@ -132,15 +134,15 @@ function encode(params) {
   return element;
 }
 
-function decode(param) {
+function decode(element) {
   let A = "a"; //1
   let E = "e"; // 2
   let I = "i"; // 3
   let O = "o"; // 4
   let U = "u"; // 5
   let elemento = "";
-  for (let key in param) {
-    switch (param[key]) {
+  for (let key in element) {
+    switch (element[key]) {
       case "1":
         elemento = elemento + A;
         break;
@@ -157,7 +159,7 @@ function decode(param) {
         elemento = elemento + U;
         break;
       default:
-        elemento = elemento + param[key];
+        elemento = elemento + element[key];
         break;
     }
   }
