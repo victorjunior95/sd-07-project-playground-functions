@@ -198,11 +198,14 @@ function hydrate(phrase) {
   for (let i in number){
     qntCups[i] = parseInt(number[i], 10);
     cups = cups + qntCups[i];
-    resultado = `${cups} copos de água`
+    if(cups === 1){
+      resultado = `${cups} copo de água`;
+    } else {
+      resultado = `${cups} copos de água`;
+    }
   } 
   return resultado;
 }
-console.log(hydrate("5 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
