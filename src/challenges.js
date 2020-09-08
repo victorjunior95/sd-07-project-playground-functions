@@ -153,13 +153,13 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList(aprender, nome) {
+function techList(tech, name) {
   // seu código aqui
   var array = [];
-  for (let i = 0; i < aprender.length; i += 1) {
+  for (let i = 0; i < tech.length; i += 1) {
     var resposta = {
-      tech: aprender[i],
-      nome: nome,
+      tech: tech[i],
+      name: name,
     };
     array.push(resposta);
   }
