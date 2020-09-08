@@ -32,7 +32,7 @@ function concatName(arrDeString) {
 function footballPoints(wins, ties) {
 let vit = wins * 3;
 let emp = ties * 2;
-let points = vit + emp
+let points = vit + emp;
 return(points)
 }
 
@@ -62,7 +62,6 @@ function catAndMouse(mouse, cat1, cat2) {
       return("os gatos trombam e o rato foge")
   }
 }
-
 
 
 // Desafio 8
