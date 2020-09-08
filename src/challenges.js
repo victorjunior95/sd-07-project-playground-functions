@@ -111,13 +111,11 @@ function techList(tecnologias, nome) {
   if (tecnologias.length === 0) {
     saida = 'Vazio!';
   } else {
-    for (const key in tecnologias) {
-      if (Object.prototype.hasOwnProperty.call(tecnologias, key)) {
-        saida.push({
-          tech: tecnologias[key],
-          name: nome,
-        })
-      }
+    for (let i = 0; i < tecnologias.length; i += 1) {
+      saida.push({
+        tech: tecnologias[i],
+        name: nome,
+      })
     }
   }
   return saida;
@@ -154,20 +152,18 @@ function verificaIntervalo(array, inferior, superior) {
 
 
 function generatePhoneNumber(array) {
-
-  if (array.length != 11) {
-    return "Array com tamanho incorreto.";
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   } else if (!(procuraRepetidos(array) && verificaIntervalo(array, -1, 10))) {
-    return "não é possível gerar um número de telefone com esses valores";
+    return 'não é possível gerar um número de telefone com esses valores';
   } else {
     /**FONTE:  http://wbruno.com.br/expressao-regular/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/*/
 
     array = array.toString();
-    array = array.replace(/\D/g, ""); // Remove tudo o que não é dígito
+    array = array.replace(/\D/g, ''); // Remove tudo o que não é dígito
     console.log(array)
-    array = array.replace(/^(\d{2})(\d)/g, "($1) $2"); // Coloca parênteses em volta dos dois primeiros dígitos
-    array = array.replace(/(\d)(\d{4})$/, "$1-$2"); // Coloca hífen entre o quarto e o quinto dígitos
-
+    array = array.replace(/^(\d{2})(\d)/g, '($1) $2'); // Coloca parênteses em volta dos dois primeiros dígitos
+    array = array.replace(/(\d)(\d{4})$/, '$1-$2'); // Coloca hífen entre o quarto e o quinto dígitos
   }
   return array;
 }
