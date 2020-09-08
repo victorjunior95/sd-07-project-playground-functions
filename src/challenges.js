@@ -75,23 +75,23 @@ function catAndMouse(mouse, cat1, cat2) {
   return 0;
 }
 
+//Função auxiliar Desafio 8
+function checkDiviser(value) {
+  let testeOne = (value % 5 === 0);
+  let testeTwo = (value % 3 === 0);
+  if (testeOne && testeTwo) return 'fizzBuzz';
+  if (testeOne) return 'buzz';
+  if (testeTwo) return 'fizz';
+  return 'bug!';
+}
+
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
+  let resultString;
   for (let number of array) {
-    if ((number % 5 === 0) && number % 3 === 0) {
-      newArray.push('fizzBuzz');
-      continue;
-    }
-    if (number % 5 === 0) {
-      newArray.push('buzz');
-      continue;
-    }
-    if (number % 3 === 0) {
-      newArray.push('fizz');
-      continue;
-    }
-    newArray.push('bug!');
+    resultString = checkDiviser(number);
+    newArray.push(resultString);
   }
   return newArray;
 }
