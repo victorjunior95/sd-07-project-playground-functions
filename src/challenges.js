@@ -216,12 +216,13 @@ function hydrate(phrase) {
   let expression = /\d+/g;
   let word = phrase.match(expression);
   for (let number of word) {
-    number = parseInt(number);
+    number = parseInt(number,10);
     cont += number;
   }
   if (cont === 1) {
     return `${cont} copo de água`;
-  } else return `${cont} copos de água`;
+  }
+  return `${cont} copos de água`;
 }
 
 module.exports = {
