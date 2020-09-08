@@ -160,15 +160,16 @@ function checkNumber(number) {
   let repetidos = [];
 
   number.forEach(function (item) {
-    if(!numeros[item])
-        numeros[item] = 0;
+    if(!numeros[item]) {
+      numeros[item] = 0;
       numeros[item] += 1;
+    }
   })
 
-  for (var prop in numeros) {
-     if(numeros[prop] >= 3) {
-         repetidos.push(prop);
-     }
+  for (let prop in numeros) {
+      if(numeros[prop] >= 3) {
+        repetidos.push(prop);
+      }
   }
   if (repetidos.length > 0) {
     return 3;
