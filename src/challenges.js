@@ -141,37 +141,103 @@ Ou seja, caso o parâmetro de encodeseja "hi there!", o retorno deve ser "h3 th2
 A segunda função deve se chamar decode e fazer o contrário de encode- ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deve ser "hi there!") . */
 function encode(string) {
   let newString = string.replace(/a/gi, 1);
-    newString = string.replace(/e/gi, 2);
-    newString = string.replace(/i/gi, 3);
-    newString = string.replace(/o/gi, 4);
-    newString = string.replace(/u/gi, 5);
+    newString = newString.replace(/e/gi, 2);
+    newString = newString.replace(/i/gi, 3);
+    newString = newString.replace(/o/gi, 4);
+    newString = newString.replace(/u/gi, 5);
   return newString;
 }
-function decode(string) {
-  let originalString = string.replace(/1/g, "a");
-    originalString = string.replace(/2/g, "b");
-    originalString = string.replace(/3/g, "c");
-    originalString = string.replace(/4/g, "d");
-    originalString = string.replace(/5/g, "e");
+function decode(newString) {
+  let originalString = newString.replace(/1/g, "a");
+    originalString = originalString.replace(/2/g, "b");
+    originalString = originalString.replace(/3/g, "c");
+    originalString = originalString.replace(/4/g, "d");
+    originalString = originalString.replace(/5/g, "e");
   return originalString;
 }
 
 // Desafio 10
+/* Crie uma função que recebe uma matriz de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado namecom um nome.
+
+Para cada tecnologia sem array, crie um objeto com a seguinte estrutura:
+
+{
+  tech: "NomeTech",
+  name: name
+}
+Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo techno objeto.
+
+A saída da sua função deve ser uma lista de objetos ordenados pelo campo techdos objetos com o formato acima.
+
+Exemplo:
+
+Entradas da função:
+
+["React", "Jest", "HTML", "CSS", "JavaScript"]
+"Lucas"
+
+// Saída:
+
+[
+  { tech: "CSS", name: "Lucas }, { tech: "HTML", name: "Lucas }, { tech: "JavaScript", name: "Lucas" }, { tech: "Jest", name: "Lucas" }, { tech: "React", name: "Lucas" }
+]
+Caso o array venha a função vazia sua função deve retornar 'Vazio!' */
 function techList() {
   // seu código aqui
 }
 
 // Desafio 11
+/* Crie uma função chamada generatePhoneNumberque receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+
+Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], deve generatePhoneNumberretornar (12) 34567-8901.
+
+Se uma função receber um array com tamanho diferente de 11, uma mesma deve retornar "Array com tamanho incorreto.".
+
+Caso algum dos números da matriz seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, deve generatePhoneNumberretornar uma string "não é possível gerar um número de telefone com esses valores". */
 function generatePhoneNumber() {
   // seu código aqui
 }
 
 // Desafio 12
+/* Um triângulo E Composto de Três Linhas: lineA, lineBe lineC. Crie uma função chamada triangleCheckque deve receber como três linhas como parâmetro e retornar se é possível formar um triângulo com os valores de cada linha
+
+Para tanto, tenha em mente algumas considerações:
+
+Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+
+Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+
+O retorno da sua função deve ser um booleano.
+
+Exemplo: o retorno de deve triangleCheck(10, 14, 8)ser true. */
 function triangleCheck() {
   // seu código aqui
 }
 
 // Desafio 13
+/* Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+
+Crie a função hydrateque recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
+
+String recebida:
+  "1 cerveja"
+String retornada:
+  "1 copo de água"
+String recebida:
+  "1 cachaça, 5 cervejas e 1 copo de vinho"
+String retornada:
+  "7 copos de água"
+String recebida:
+  "1 cachaça, 5 cervejas e 1 copo de vinho"
+String retornada:
+  "7 copos de água"
+Notas
+
+Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a string sua sempre virá com o formato (em número) + tipo da bebida .
+
+O número na frente de cada bebida está no intervalo entre 1 e 9.
+
+Dica: pesquise por algo semelhante a get all integers inside a string js. */
 function hydrate() {
   // seu código aqui
 }
