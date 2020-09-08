@@ -278,7 +278,7 @@ function hydrate(string) {
     somarArray += parseInt(arrayNum[i]);
   }
   if (somarArray === 1){
-    return somarArray + "copo de água";
+    return somarArray + " copo de água";
   }
   else{
   return somarArray + " copos de água";
