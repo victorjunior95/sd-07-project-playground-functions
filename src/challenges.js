@@ -223,10 +223,12 @@ function triangleCheck(linA, linB, linC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+let frase = "1 cachaça, 5 cervejas e 1 copo de vinho"
+function hydrate(param) {
+  let numeroString = parseInt(param.split(/\D+/).join(''), 10);
+  console.log(numeroString);
 }
-
+hydrate(frase);
 
 module.exports = {
   calcArea,
