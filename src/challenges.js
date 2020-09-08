@@ -327,9 +327,35 @@ function generatePhoneNumber(arrayNumbers) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+triangleCheck(14, 8, 10);
+
+function triangleCheck(lineA, lineB, lineC) {
+  console.log("");
+  console.log("Desafio 12:");
+
+  //            Condição: | b - c | < a < b + c   //
+  //                      | a - c | < b < a + c   //
+  //                      | a - b | < c < a + b   //
+
+  if ( (lineB - lineC) < lineA || (lineA - lineC) < lineB || (lineA - lineB) < lineC ) {
+
+    if ( lineA < (lineB + lineC) || lineB < (lineA + lineC) || lineC < (lineA + lineB) ) {
+      console.log("É um triângulo");
+      return true;
+  
+    } else {
+      console.log("Não é um triângulo");
+      return false;
+    }
+
+  } else {
+    console.log("Não é um triângulo");
+    return false;
+  }
 }
+
+
+
 
 // Desafio 13
 function hydrate () {
