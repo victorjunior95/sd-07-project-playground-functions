@@ -223,12 +223,27 @@ function triangleCheck(linA, linB, linC) {
 }
 
 // Desafio 13
-let frase = "1 cachaça, 5 cervejas e 1 copo de vinho"
 function hydrate(param) {
   let numeroString = parseInt(param.split(/\D+/).join(''), 10);
-  console.log(numeroString);
+  let matrizNumeros = [];
+  let soma = 0;
+  let retorno;
+  numeroString = numeroString.toString().split('');
+  for (let i = 0; i < numeroString.length; i++) {
+    matrizNumeros.push(parseInt(numeroString[i]));
+  }
+  for (let j = 0; j < matrizNumeros.length; j++) {
+    soma += matrizNumeros[j]
+  }
+  if (soma === 1) {
+    retorno = `${soma} copo de água`;
+    console.log(retorno);
+  } else {
+    retorno = `${soma} copos de água`;
+    console.log(retorno);
+  }
+  return retorno;
 }
-hydrate(frase);
 
 module.exports = {
   calcArea,
