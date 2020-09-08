@@ -13,14 +13,14 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
 
   return area;
-};
+}
 
 // Desafio 3
 function splitSentence(sentence) {
   // seu código aqui
   return sentence.split(' ');
 }
-;
+
 // Desafio 4
 function concatName(array) {
   // seu código aqui
@@ -38,7 +38,7 @@ function footballPoints(wins, ties) {
   let points = winPoints + tiePoints;
 
   return points;
-};
+}
 
 // Desafio 6
 function highestNumber(numbers) {
@@ -61,7 +61,7 @@ function highestCount(numbers) {
     }
   }
   return counting;
-};
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
