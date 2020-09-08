@@ -121,8 +121,31 @@ function techList(learn, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(telefone) {
+  for (let i in telefone) {
+    if (telefone[i] > 9 || telefone[i] < 0) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  if (telefone.length === 11) {
+    telefone = `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
+  } else if (telefone.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (let i in telefone) {
+    let captarRepeticao = telefone[i];
+    let contador = 0;
+    for (let j in telefone) {
+      if (captarRepeticao === telefone[j]) {
+        contador += 1;
+      }
+    }
+    if (contador >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  return telefone;
 }
 
 // Desafio 12
