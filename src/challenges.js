@@ -1,11 +1,7 @@
 // Desafio 1
 function compareTrue(condition1, condition2) {
   // seu código aqui
-  if (condition1 && condition2) {
-    return true
-  } else {
-    return false
-  }
+  return condition1 && condition2
 }
 
 // Desafio 2
@@ -25,7 +21,8 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  return array[array.length - 1] + ', ' + array[0];
+  let inverted = array[array.length - 1] + ', ' + array[0];
+  return inverted;
 }
 
 // Desafio 5
@@ -39,7 +36,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   // seu código aqui
   let higher = 0;
-  let higherCount = 0;
+  let count = 0;
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > higher) {
       higher = numbers[i];
@@ -47,10 +44,10 @@ function highestCount(numbers) {
   }
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] === higher) {
-      higherCount += 1;
+      count += 1;
     }
   }
-  return higherCount;
+  return count;
 }
 
 // Desafio 7
@@ -59,11 +56,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let result;
   if (mouse > cat1 && cat1 > cat2 || mouse < cat1 && cat1 < cat2 || mouse > cat1 && mouse < cat2 && mouse - cat1 < cat2 - mouse || 
     mouse > cat2 && mouse < cat1 && mouse - cat2 > cat1 - mouse) {
-    
     result = 'cat1';
   } else if (mouse > cat2 && cat2 > cat1 || mouse < cat2 && cat2 < cat1 || mouse > cat1 && mouse < cat2 && mouse - cat1 > cat2 - mouse || 
     mouse > cat2 && mouse < cat1 && mouse - cat2 < cat1 - mouse) {
-    
     result = 'cat2';
   } else {
     result = 'os gatos trombam e o rato foge';
@@ -90,9 +85,9 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(stringToEncode) {
+function encode(stringInput) {
   // seu código aqui
-  let arrayToEncode = stringToEncode.split('')
+  let arrayToEncode = stringInput.split('')
   let encoded = '';
   for (let i = 0; i < arrayToEncode.length; i += 1) {
     if (arrayToEncode[i] === 'a') {
@@ -111,9 +106,9 @@ function encode(stringToEncode) {
   }
   return encoded
 }
-function decode(stringToDecode) {
+function decode(stringInput) {
   // seu código aqui
-  let arrayToDecode = stringToDecode.split('')
+  let arrayToDecode = stringInput.split('')
   let decoded = '';
   for (let i = 0; i < arrayToDecode.length; i += 1) {
     if (arrayToDecode[i] === '1') {
