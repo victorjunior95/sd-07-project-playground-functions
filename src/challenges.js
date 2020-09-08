@@ -3,22 +3,24 @@ function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
   } 
-  { return false; }}
+  { return false;
+  }
+}
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height)/2
-return area
-};
+  let area = (base * height)/2;
+return area;
+}
 
 // Desafio 3
 function splitSentence(string) {
   let arrayString = string.split(' ');
   return arrayString;
-};
+}
 
 // Desafio 4
 function concatName(arrayOfString) {
-  let lastAndFirstName = arrayOfString[arrayOfString.length-1]+", "+arrayOfString[0]
+  let lastAndFirstName = arrayOfString[arrayOfString.length-1]+','+arrayOfString[0]
   // seu código aqui
   return lastAndFirstName
 };
