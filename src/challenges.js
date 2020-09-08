@@ -56,7 +56,7 @@ function highestCount(vetor) {
   } while (swapped);
 
   for (i = 0; i < vetor.length; i++) {
-    if (vetor[vetor.length - 1] == vetor[i]) {
+    if (vetor[vetor.length - 1] === vetor[i]) {
       j++;
     }
   }
@@ -83,11 +83,11 @@ function fizzBuzz(array) {
   const vetorSaida = [];
 
   for (const i in array) {
-    if (array[i] % 5 == 0 && array[i] % 3 == 0) {
+    if (array[i] % 5 === 0 && array[i] % 3 === 0) {
       vetorSaida.push('fizzBuzz');
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       vetorSaida.push('fizz');
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       vetorSaida.push('buzz');
     } else {
       vetorSaida.push('bug!');
@@ -111,7 +111,7 @@ function techList(array, name) {
 
   const nome = name;
 
-  if (array.length == 0) {
+  if (array.length === 0) {
     return 'Vazio!';
   }
   const habilidades = array.sort();
