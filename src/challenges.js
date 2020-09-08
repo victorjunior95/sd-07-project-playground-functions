@@ -1,11 +1,9 @@
 // Desafio 1
-function compareTrue(bool1, bool2) {
-
-  if (bool1 && bool2) {
-    return true;
-  }
-  return false;
+function compareTrue(a, b) {
+  let compare = a && b;
+  return compare;
 }
+
 
 // Desafio 2
 function calcArea(base, height) {
@@ -75,8 +73,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arraySaida = [];
   for (let x in array) {
-    if (array[x] % 3 === 0 && array[x] % 5 === 0) {
-      arraySaida.push('fizzBuzz');
+    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
+      arrayReturn.push('fizzBuzz');
     } else if (array[x] % 3 === 0) {
       arraySaida.push('fizz');
     } else if (array[x] % 5 === 0) {
@@ -149,7 +147,7 @@ function techList(array, name) {
   for (let i = 0; i < arrayEmOrdem.length; i += 1) {
     obj = {
       tech: arrayEmOrdem[i],
-      name: name
+      name: name,
     }
     newArray.push(obj);
   }
