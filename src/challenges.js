@@ -31,7 +31,7 @@ function concatName(arrDeString) {
 // Desafio 5
 function footballPoints(wins, ties) {
 let vit = wins * 3;
-let emp = ties * 2;
+let emp = ties * 1;
 let points = vit + emp;
 return(points)
 }
