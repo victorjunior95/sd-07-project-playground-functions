@@ -5,7 +5,7 @@ function compareTrue(a, b) {
   return a && b;
 }
 
-//console.log(compareTrue(true, false));
+// console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -13,7 +13,7 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-//console.log(calcArea(3, 10));
+// console.log(calcArea(3, 10));
 
 // Desafio 3
 function splitSentence(name) {
@@ -23,7 +23,7 @@ function splitSentence(name) {
 
   return arr;
 
-  //OU PODEMOS USAR O ABAIXO O/ :) srsrsrsr
+  // OU PODEMOS USAR O ABAIXO O/ :) srsrsrsr
   /*  let arrayString = [];
   let palavraSeparada = "";
   for (let i in string) {
@@ -38,7 +38,7 @@ function splitSentence(name) {
   return arrayString; */
 }
 
-//console.log(splitSentence("go Trybe"));
+// console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName(names) {
@@ -54,7 +54,7 @@ function concatName(names) {
    */
 }
 
-//console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
+// console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -62,20 +62,20 @@ function footballPoints(wins, ties) {
   return wins * 3 + ties * 1;
 }
 
-//console.log(footballPoints(1, 2));
+// console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount(arr) {
   // seu código aqui
   let contador = 1;
 
-  //organizando a array e depois invertendo
+  // organizando a array e depois invertendo
 
   console.log(
     arr.sort(function (a, b) {
-      //console.log(`o numero foi a ${a}`);
-      //console.log(`o numero foi b ${b}`);
-      //console.log(`a diferença foi ${b - a}`);
+      // console.log(`o numero foi a ${a}`);
+      // console.log(`o numero foi b ${b}`);
+      // console.log(`a diferença foi ${b - a}`);
       return b - a;
     })
   );
@@ -93,7 +93,7 @@ function highestCount(arr) {
   return contador;
 }
 
-//console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+// console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -109,7 +109,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-//console.log(catAndMouse(5, 3, 10));
+// console.log(catAndMouse(5, 3, 10));
 
 // Desafio 8
 function fizzBuzz(arr) {
@@ -130,7 +130,7 @@ function fizzBuzz(arr) {
   return arrResult;
 }
 
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(arg) {
@@ -141,6 +141,7 @@ function encode(arg) {
   }
   return arg;
 }
+
 function decode(arg) {
   // seu código aqui
   let code = ["a", "e", "i", "o", "u"];
