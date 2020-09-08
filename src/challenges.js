@@ -108,7 +108,9 @@ function triangleCheck(lineA, lineB, lineC) {
     condition2 = true;
   }
   if(condition1 == true && condition2 == true) {
-    return(true);
+    return true;
+  } else {
+    return false;
   }
 }
 
