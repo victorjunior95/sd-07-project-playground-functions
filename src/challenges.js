@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 0;
 }
 
-//Função auxiliar Desafio 8
+// Função auxiliar Desafio 8
 function checkDiviser(value) {
   let testeOne = (value % 5 === 0);
   let testeTwo = (value % 3 === 0);
@@ -165,38 +165,41 @@ function techList(array, name) {
   return technologies;
 }
 
-// Desafio 11
-function generatePhoneNumber(array) {
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
+// Função auxiliar 01 - Desafio 11
+function checkMaxNumber(telefone) {
+  for (let number of telefone){
+    if (number < 0 || number > 9) return true;
   }
+  return false;
+}
 
-  for (let j of array) {
+// Função auxiliar 02 - Desafio 11
+function contRepeatNumberArray(telefone) {
+  for (let j of telefone) {
     let count = 0;
-    for (let i of array) {
+    for (let i of telefone) {
       if (j === i) {
         count += 1;
         if (count === 3) {
-          return 'não é possível gerar um número de telefone com esses valores';
+          return true;
         }
       }
     }
   }
+  return false;
+}
 
-  let phoneNumber = '(';
-  for (let number in array) {
-    if (array[number] < 0 || array[number] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-
-    if (number == 1) {
-      phoneNumber += array[number];
-      phoneNumber += ') ';
-    } else if (number == 6) {
-      phoneNumber += array[number];
-      phoneNumber += '-';
-    } else phoneNumber += array[number];
-  }
+// Desafio 11
+function generatePhoneNumber(telefone) {
+  if (telefone.length !== 11) return 'Array com tamanho incorreto.';
+  if (checkMaxNumber(telefone)) return 'não é possível gerar um número de telefone com esses valores';
+  if (contRepeatNumberArray(telefone)) return 'não é possível gerar um número de telefone com esses valores';
+  let phoneNumber;
+  const DDD = telefone.slice(0, 2);
+  const preFixo = telefone.slice(2, 7);
+  const suFixo = telefone.slice(7, 11);
+  phoneNumber = `(${DDD}) ${preFixo}-${suFixo}`;
+  phoneNumber = phoneNumber.replace(/\,/g, '');
   return phoneNumber;
 }
 
