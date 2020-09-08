@@ -180,7 +180,6 @@ function generatePhoneNumber(number) {
 
 // Desafio 12
 function triangleCheck(A, B, C) {
-  // seu código aqui
   if (Math.abs(A) < Math.abs(B) + Math.abs(C) && Math.abs(B) < Math.abs(A) + Math.abs(C) && Math.abs(C) < Math.abs(A) + Math.abs(B)){
     return true;
   } else {
@@ -189,9 +188,21 @@ function triangleCheck(A, B, C) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(phrase) {
   // seu código aqui
+  let numberPhrase = phrase.replace(/[^0-9]/g, "");
+  let number = numberPhrase.split('');
+  let qntCups = [];
+  let cups = 0;
+  let resultado = "";
+  for (let i in number){
+    qntCups[i] = parseInt(number[i], 10);
+    cups = cups + qntCups[i];
+    resultado = `${cups} copos de água`
+  } 
+  return resultado;
 }
+console.log(hydrate("5 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
