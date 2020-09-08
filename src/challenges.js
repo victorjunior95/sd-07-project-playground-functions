@@ -2,53 +2,52 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;
+  const area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(vetorString) {
-  let str = vetorString;
-  let splitStr = str.split(" ");
+  const str = vetorString;
+  const splitStr = str.split(' ');
   return splitStr;
 }
 
 // Desafio 4
 function concatName(vetorString) {
-  let vetorFuncao = vetorString;
-  let primeiroNome = vetorFuncao[0];
-  let ultimoNome = vetorFuncao[vetorFuncao.length - 1];
-  let concatenado = ultimoNome + ", " + primeiroNome;
+  const vetorFuncao = vetorString;
+  const primeiroNome = vetorFuncao[0];
+  const ultimoNome = vetorFuncao[vetorFuncao.length - 1];
+  const concatenado = `${ultimoNome}, ${primeiroNome}`;
   return concatenado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let quantidadeVitorias = wins;
-  let quantidadeEmpates = ties;
-  let pontosVitoria = quantidadeVitorias * 3;
-  let pontosEmpates = quantidadeEmpates * 1;
-  let resultado = pontosVitoria + pontosEmpates;
+  const quantidadeVitorias = wins;
+  const quantidadeEmpates = ties;
+  const pontosVitoria = quantidadeVitorias * 3;
+  const pontosEmpates = quantidadeEmpates * 1;
+  const resultado = pontosVitoria + pontosEmpates;
   return resultado;
 }
 
 // Desafio 6
 function highestCount(vetor) {
-  let len = vetor.length;
+  const len = vetor.length;
   let swapped;
   let j = 0;
   do {
     swapped = false;
     for (let i = 0; i < len; i++) {
       if (vetor[i] > vetor[i + 1]) {
-        let tmp = vetor[i];
+        const tmp = vetor[i];
         vetor[i] = vetor[i + 1];
         vetor[i + 1] = tmp;
         swapped = true;
@@ -66,32 +65,32 @@ function highestCount(vetor) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let rato = mouse;
-  let gato1 = cat1;
-  let gato2 = cat2;
-  let distanciaGato1 = Math.abs(rato - gato1);
-  let distanciaGato2 = Math.abs(rato - gato2);
+  const rato = mouse;
+  const gato1 = cat1;
+  const gato2 = cat2;
+  const distanciaGato1 = Math.abs(rato - gato1);
+  const distanciaGato2 = Math.abs(rato - gato2);
 
   if (distanciaGato1 < distanciaGato2) {
-    return "cat1";
-  } else if (distanciaGato1 > distanciaGato2) return "cat2";
+    return 'cat1';
+  } if (distanciaGato1 > distanciaGato2) return 'cat2';
 
-  return "os gatos trombam e o rato foge";
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let vetorSaida = [];
+  const vetorSaida = [];
 
-  for (let i in array) {
+  for (const i in array) {
     if (array[i] % 5 == 0 && array[i] % 3 == 0) {
-      vetorSaida.push("fizzBuzz");
+      vetorSaida.push('fizzBuzz');
     } else if (array[i] % 3 == 0) {
-      vetorSaida.push("fizz");
+      vetorSaida.push('fizz');
     } else if (array[i] % 5 == 0) {
-      vetorSaida.push("buzz");
+      vetorSaida.push('buzz');
     } else {
-      vetorSaida.push("bug!");
+      vetorSaida.push('bug!');
     }
   }
 
@@ -108,21 +107,20 @@ function decode() {
 
 // Desafio 10
 function techList(array, name) {
-  let arrayObjetos = [];
+  const arrayObjetos = [];
 
-  let nome = name;
+  const nome = name;
 
   if (array.length == 0) {
-    return "Vazio!";
-  } else {
-    let habilidades = array.sort();
-    for (i in habilidades) {
-      let objeto = {
-        tech: habilidades[i],
-        name: nome,
-      };
-      arrayObjetos.push(objeto);
-    }
+    return 'Vazio!';
+  }
+  const habilidades = array.sort();
+  for (i in habilidades) {
+    const objeto = {
+      tech: habilidades[i],
+      name: nome,
+    };
+    arrayObjetos.push(objeto);
   }
 
   return arrayObjetos;
