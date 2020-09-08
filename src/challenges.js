@@ -116,7 +116,7 @@ function techList(array, name) {
     return 'Vazio!';
   }
   const habilidades = array.sort();
-  for (const i in habilidades) {
+  for (let i = 0; i < habilidades.length; i += 1) {
     const objeto = {
       tech: habilidades[i],
       name: nome,
