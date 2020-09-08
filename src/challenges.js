@@ -168,7 +168,7 @@ function techList(array, name) {
 
 // Função auxiliar 01 - Desafio 11
 function checkMaxNumber(telefone) {
-  for (let number of telefone){
+  for (let number of telefone) {
     if (number < 0 || number > 9) return true;
   }
   return false;
@@ -176,7 +176,7 @@ function checkMaxNumber(telefone) {
 
 // Função auxiliar 02 - Desafio 11
 function contRepeatNumberArray(telefone) {
-  let count = 0;
+  let count;
   for (let number of telefone) {
     count = analyzesRepeatNumber(telefone, number)
     if (count === 3) return true;
@@ -203,7 +203,7 @@ function generatePhoneNumber(telefone) {
   const preFixo = telefone.slice(2, 7);
   const suFixo = telefone.slice(7, 11);
   phoneNumber = `(${DDD}) ${preFixo}-${suFixo}`;
-  phoneNumber = phoneNumber.replace(/\,/g, '');
+  phoneNumber = phoneNumber.replace(/,/g, '');
   return phoneNumber;
 }
 
