@@ -205,7 +205,7 @@ function stringInArray(string) {
   return newArray;
 }
 function sumArray(string) {
-  array = stringInArray(string);
+  let array = stringInArray(string);
   let soma = 0;
   for (let i in array) {
     if (array.length !== 0) {
