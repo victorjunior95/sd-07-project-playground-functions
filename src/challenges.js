@@ -159,8 +159,8 @@ function techList(tech, name) {
   
   var array = [];
   
-  if(tech === []) {
-    return 'Vazio!'
+  if(tech == []) {
+    return "Vazio!"
   }
   
   for (let i = 0; i < tech.length; i += 1) {
