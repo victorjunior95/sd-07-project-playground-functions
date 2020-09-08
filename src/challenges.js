@@ -274,7 +274,7 @@ function compare(a, b) {
 }
 
 // Desafio 11
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+generatePhoneNumber([]);
 
 function generatePhoneNumber(arrayNumbers) {
   console.log("");
@@ -284,6 +284,13 @@ function generatePhoneNumber(arrayNumbers) {
   let thirdFilter = true;
   let count = 0;
 
+  //-------Verificando se tem 11 dígitos--------------------------------//
+  if ( arrayNumbers.length !== 11 ) {
+    secondFilter = false;
+    console.log("Array com tamanho incorreto.");
+    return "Array com tamanho incorreto.";
+  }
+
   //-------Verificando se tem dígitos maiores que 9 ou menores que 0-------//
   for ( i = 0; i < arrayNumbers.length; i += 1 ) {
     if ( arrayNumbers[i] > 9 || arrayNumbers[i] < 0 ) {
@@ -291,27 +298,20 @@ function generatePhoneNumber(arrayNumbers) {
       console.log("Não é possível gerar um número de telefone com esses valores.");
       return "não é possível gerar um número de telefone com esses valores";
     }
-    
-    //-------Verificando se tem 11 dígitos--------------------------------//
-    if ( arrayNumbers.length != 11 ) {
-      secondFilter = false;
-      console.log("Array com tamanho incorreto.");
-      return "Array com tamanho incorreto.";
-    }
   }
 
   //-------Verificando se algum dígito se repete + de 3 vezes---------//
   for ( j = 0; j < arrayNumbers.length; j += 1 ) {
-    for ( k = 1; k <= arrayNumbers.length; k += 1 ) {
-      if ( arrayNumbers[j] === arrayNumbers[k] ) {
-        count += 1;
+    count = 0;
+
+    for ( k = 1; k < arrayNumbers.length; k += 1 ) {
+      count += 1;
     
         if ( count >= 3 ) {
           thirdFilter = false;
           console.log("Não é possível gerar um número de telefone com esses valores.");
           return "não é possível gerar um número de telefone com esses valores";
         }
-      }
   }
 
   //-------Retornando número de telefone--------------//
