@@ -75,20 +75,15 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 // Desafio 8
-function fizzBuzz(vetor) {
-  let numeros = vetor
+function fizzBuzz(numeros) {
   let result = [];
-  for (let i in numeros) {
-    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (numeros[i] % 15 === 0) {
+  for (i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] % 15 === 0) {
       result.push('fizzBuzz');
     } else if (numeros[i] % 5 === 0) {
       result.push('buzz');
     } else if (numeros[i] % 3 === 0) {
       result.push('fizz');
-    } else if (numeros[i] % 3 !== 0 || numeros[i] % 5 !== 0) {
-      result.push('bug!');
     } else {
       result.push('bug!');
     }
