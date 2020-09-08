@@ -94,7 +94,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = math.abs(cat2 - mouse);
   if (distanceCat1 < distanceCat2) {
     return "cat1";
-  } else if (distanceCat2 > distanceCat1) {
+  } else if (distanceCat1 > distanceCat2) {
     return "cat2";
   } else {
     return "os gatos trombam e o rato foge";
@@ -147,23 +147,13 @@ function encode(string) {
     newString = string.replace(/u/gi, "5");
   return newString;
 }
-function decode(/*newString*/) {
-  // let originalString = "";
-  // for (i = 0; i < newString.length; i += 1) {
-  //   switch (string[i]) {
-  //     case "1":
-  //       originalString = string.replace("1", "a");
-  //     case "2":
-  //       originalString = string.replace("2", "e");
-  //     case "3":
-  //       originalString = string.replace("3", "i");
-  //     case "4":
-  //       originalString = string.replace("4", "o");
-  //     case "5":
-  //       originalString = string.replace("5", "u");
-  //   }
-  // }
-  // return originalString;
+function decode(newString) {
+  let originalString = newString.replace(/a/gi, "1");
+    originalString = newString.replace(/e/gi, "2");
+    originalString = newString.replace(/i/gi, "3");
+    originalString = newString.replace(/o/gi, "4");
+    originalString = newString.replace(/u/gi, "5");
+  return originalString;
 }
 
 // Desafio 10
