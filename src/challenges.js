@@ -274,11 +274,11 @@ function compare(a, b) {
 }
 
 // Desafio 11
-console.log("");
-console.log("Desafio 11:");
 generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 function generatePhoneNumber(arrayNumbers) {
+  console.log("");
+  console.log("Desafio 11:");
   let firstFilter = true;
   let secondFilter = true;
   let thirdFilter = true;
