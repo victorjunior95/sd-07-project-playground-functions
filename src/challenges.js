@@ -156,21 +156,22 @@ function techList(tec, names) {
 
 // Desafio 11
 function checkNumber(number) {
-  let nRepeticoes = 0;
-  let contador = 0;
-  for (let i = 0; i < number.length; i += 1) {
-    let nAtual = number[i];
-    contador = 0;
-    for (let k = 0; k < number.length; k += 1) {
-      if (nAtual === number[k]) {
-        contador += 1;
-      } else if (nRepeticoes >= 3) {
-        return 3;
-      }
-    }
-    if (contador > nRepeticoes) {
-      nRepeticoes = contador;
-    }
+  let numeros = {};
+  let repetidos = [];
+
+  number.forEach(function (item) {
+    if(!numeros[item])
+        numeros[item] = 0;
+      numeros[item] += 1;
+  })
+
+  for (var prop in numeros) {
+     if(numeros[prop] >= 3) {
+         repetidos.push(prop);
+     }
+  }
+  if (repetidos.length > 0) {
+    return 3;
   }
   return number;
 }
