@@ -64,16 +64,23 @@ function highestCount(values = []) {
 
 
 }
-console.log(highestCount());
+//console.log(highestCount());
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse = 1, cat1 = 1, cat2 = 2) {
+  if(cat1 === cat2){
+    return "os gatos trombam e o rato foge";
+  }else if(cat1 > mouse && cat1 > cat2){
+    return "cat2";
+  }else{
+    return "cat1"
+  }
 }
+console.log(catAndMouse());
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
