@@ -33,7 +33,7 @@ function highestCount(array) {
   let helper = 0;
   for (const i of array) {
     if (Math.max.apply(null, array) === i) {
-      helper++;
+      helper += 1;
     }
   }
   return helper;
