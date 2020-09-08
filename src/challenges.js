@@ -157,8 +157,8 @@ function generatePhoneNumber(vetor) {
     vetor.splice(10, 0, '-');
     return vetor.join('');
   }
-  a = confere();
-  b = differentSize();
+  a = differentSize();
+  b = confere();
   c = formatacao();
   if (a !== undefined) {
     return a;
