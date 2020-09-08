@@ -206,11 +206,13 @@ function stringInArray(string) {
 }
 function sumArray(string) {
   array = stringInArray(string);
-  let sum = 0;
+  let soma = 0;
   for (let i in array) {
-    sum += array[i];
+    if (array.length !== 0) {
+    soma += array[i];
+    }
   }
-  return sum;
+  return soma;
 }
 function hydrate(string) {
   let result = sumArray(string);
