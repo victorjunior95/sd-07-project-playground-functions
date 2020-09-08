@@ -173,8 +173,17 @@ function triangleCheck(lA, lB, lC) {
 }
 
 // Desafio 13
-function hydrate() {
-
+function hydrate(frase) {
+  let valores = [];
+  var numbers = frase.match(/\d+/g).map(Number);
+  let retorno = '';
+  let resultado = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    resultado += numbers[i];
+  }
+  retorno += resultado;
+  retorno += ' copos de água';
+  return retorno;
 }
 
 module.exports = {
