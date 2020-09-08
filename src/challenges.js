@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
-  if(bol1 === true && bol2 === true){
+  if (bol1 === true && bol2 === true){
     return true;
   } else {
     return false
@@ -23,7 +23,7 @@ console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  let firstWordlastWord = arrayDeStrings[arrayDeStrings.length - 1] + ", " + arrayDeStrings[0]
+  let firstWordlastWord = arrayDeStrings[arrayDeStrings.length - 1] + ', ' + arrayDeStrings[0]
   return firstWordlastWord;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -35,18 +35,18 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(10, 5))
 // Desafio 6
 function highestCount(arrayDeNumeros) {
-  let maiorNumero = 0;
-for (let index in arrayDeNumeros)  {
+  let maiorNumero = [];
+  for (let index in arrayDeNumeros) {
   if (arrayDeNumeros[index] > maiorNumero) {
     maiorNumero = arrayDeNumeros[index]
   }
 }
   let escolhaNumero = 0;
   for (let j in arrayDeNumeros) {
-  if (arrayDeNumeros[j] === maiorNumero) {
+    if (arrayDeNumeros[j] === maiorNumero) {
     escolhaNumero += 1
   }
-}
+  }
   return escolhaNumero;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
@@ -91,8 +91,8 @@ function encode(string1) {
   return mudaVo;
 }
 
-function decode(string1) {
-  let mudaVogais = string1.replace(/1/g, 'a');
+function decode(string2) {
+  let mudaVogais = string2.replace(/1/g, 'a');
   let mudaVogai = mudaVogais.replace(/2/g, 'e');
   let mudaVoga = mudaVogai.replace(/3/g, 'i');
   let mudaVog = mudaVoga.replace(/4/g, 'o');
