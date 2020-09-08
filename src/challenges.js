@@ -6,9 +6,9 @@ function compareTrue(a, b) {
   return false;
 }
 // Desafio 2
-function calcArea (base, height) {
-  let area = (base * height) /2;
-return area;
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 // Desafio 3
 function splitSentence(string) {
@@ -17,12 +17,12 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(arrayOfString) {
-  let lastAndFirstName = arrayOfString[arrayOfString.length-1]+", "+arrayOfString[0]
-  return lastAndFirstName
+  let lastAndFirstName = arrayOfString[arrayOfString.length-1]+', '+arrayOfString[0];
+  return lastAndFirstName;
 }
 // Desafio 5
-function footballPoints(wins,ties) {
-  let winsPoints = (wins*3);
+function footballPoints(wins, ties) {
+  let winsPoints = (wins * 3);
   let tiesPoints = ties;
   let totalPoints = (winsPoints + tiesPoints);
   return totalPoints;
@@ -32,39 +32,29 @@ function footballPoints(wins,ties) {
 function highestCount(arrayNumbers) {
   let numbers = arrayNumbers.sort();
   let timesHits = 0;
-  for(i=0; i < numbers.length; i+=1) {
-    if (numbers[numbers.length-1] === numbers[i]) {
+  for (let i=0; i < numbers.length; i+=1) {
+    if (numbers[numbers.length - 1] === numbers[i]) {
       timesHits +=1;
-    }; 
-  };
-  return timesHits
-};
+    }
+  }
+  return timesHits;
+}
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = 0;
   let distanceCat2 = 0;
-  if (cat1 - mouse > 0){
-    distanceCat1 = (cat1 - mouse)
+  const distanceCat1 = Math.abs(cat1 - mouse);
+  const distanceCat2 = Math.abs(cat2 - mouse);
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
   }
-  else { distanceCat1 = ((cat1 - mouse)*-1)
-  };
-
-  if (cat2 - mouse > 0){
-      distanceCat2 = (cat2-mouse)
-    }
-  else { distanceCat2 = ((cat2-mouse)*-1)
-  }; 
-  if(distanceCat1< distanceCat2){
-    return "cat1"
+  else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
   }
-  else if (distanceCat2<distanceCat1){
-    return "cat2"
-  } 
   else if (distanceCat2 == distanceCat1)
-  return "os gatos trombam e o rato foge"
-};
-
+  return 'os gatos trombam e o rato foge';
+}
 // Desafio 8
 function fizzBuzz(arrayOfNumbers) {
   let arrayFizzBuzzBug = [];
