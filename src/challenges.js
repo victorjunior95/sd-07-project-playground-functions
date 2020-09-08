@@ -132,12 +132,16 @@ function techList(tecNews, name) {
   let objectList = [];
   let listTec = tecNews.sort();
 
+  if (listTec[0] === '') {
+  objectList = 'Vazio!';
+  } else {
   for (let i = 0; i < listTec.length; i += 1) {
     let object = {
       tech: listTec[i],
       name
     }
     objectList.push(object)
+  }
   }
   return objectList;
 }
