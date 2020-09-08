@@ -156,6 +156,11 @@ function decode(str) {
 function techList(tech, name) {
   // seu código aqui
   var array = [];
+  
+  if(tech === []) {
+    return 'Vazio!'
+  }
+  
   for (let i = 0; i < tech.length; i += 1) {
     var resposta = {
       tech: tech[i],
