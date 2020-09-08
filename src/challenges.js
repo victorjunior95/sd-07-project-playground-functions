@@ -116,7 +116,7 @@ function encode(string) {
   string = string.replace(/u/g,"5");
   return string;
 }
-function decode() {
+function decode(string) {
   // seu código aqui
   string = string.replace(/1/g,"a");
   string = string.replace(/2/g,"e");
