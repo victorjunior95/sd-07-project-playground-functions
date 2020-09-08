@@ -200,7 +200,9 @@ function stringInArray(string) {
   string = string.replace(/\D/g, '');
   let newArray = string.split('');
   for (let i in newArray) {
-    newArray[i] = +newArray[i];
+    if (newArray.length !== 0) {
+      newArray[i] = +newArray[i];
+    }
   }
   return newArray;
 }
@@ -209,7 +211,7 @@ function sumArray(string) {
   let soma = 0;
   for (let i in array) {
     if (array.length !== 0) {
-    soma += array[i];
+      soma += array[i];
     }
   }
   return soma;
