@@ -206,7 +206,8 @@ function triangleCheck(sideOne, sideTwo, sideThree) {
     return true;
   } else if (sideThree < (sideOne + sideTwo) && sideThree > Math.abs(sideOne - sideTwo)) {
     return true;
-  } else return false;
+  }
+  return false;
 }
 
 // Desafio 13
