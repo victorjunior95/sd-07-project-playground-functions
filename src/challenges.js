@@ -54,20 +54,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arr) {
-  let numbersArr = [];
-for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
-        numbersArr[i] = 'fizzBuzz'
-} else if (arr[i] % 3 == 0) {
-  numbersArr[i] = 'fizz'
-} else if(arr[i] % 5 == 0) {
-  numbersArr[i] = 'buzz'
+function fizzBuzz(exp) {
+  let numbersExp = [];
+for (let i = 0; i < exp.length; i += 1) {
+    if (exp[i] % 3 == 0 && exp[i] % 5 == 0) {
+        numbersExp[i] = 'fizzBuzz'
+} else if (exp[i] % 3 == 0) {
+  numbersExp[i] = 'fizz'
+} else if(exp[i] % 5 == 0) {
+  numbersExp[i] = 'buzz'
 } else {
-  numbersArr[i] = 'bug!'
+  numbersExp[i] = 'bug!'
 }
 }
-return numbersArr
+return numbersExp
 }
 
 // Desafio 9
