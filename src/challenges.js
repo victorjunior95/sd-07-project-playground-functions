@@ -128,8 +128,18 @@ function decode(phrase2) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecNews, name) {
+  let objectList = [];
+  let listTec = tecNews.sort();
+
+  for (let i = 0; i < listTec.length; i += 1) {
+    let object = {
+      tech: listTec[i],
+      name
+    }
+    objectList.push(object)
+  }
+  return objectList;
 }
 
 // Desafio 11
