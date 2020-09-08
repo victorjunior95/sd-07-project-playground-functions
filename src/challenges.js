@@ -92,7 +92,7 @@ function fizzBuzz(evenOddArray) {
 function encode(string1) {
   // Objetc destructing: inicializando um objeto
   let letters = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-  // Método .replace() com 'regular expression', pra encontrar qlqr das alternativas(|), de maneira global(g), que será substituído por meio de uma arrow function chamando o objeto
+  // Método .replace() com 'regular expression', qlqr das alternativas(|), global(g), com arrow function
   let encodeString = string1.replace(/a|e|i|o|u/g, match => letters[match]);
   return encodeString;
 }
@@ -115,28 +115,68 @@ function decode(string2) {
 // Desafio 10
 function techList(techArray, name) {
   let newTechArray = techArray.sort();
-  let techObject;
+  let techObject = {};
   let array = [];
 
   if (newTechArray.length === 0) {
     techObject = 'Vazio!';
-  }
-  for (let i in newTechArray) {
-    techObject = {
-      tech: newTechArray[i],
-      name: `${name}`,
-    };
-    array.push(techObject);
-    // array.push(Object.assign({}, techObject));
+  } else {
+    for (let i = 0; i < newTechArray.length; i += 1) {
+      // techObject = {
+      //   tech: newTechArray[i],
+      //   name: `${name}`,
+      // };
+      // array.push(techObject);
+      techObject.tech = newTechArray[i];
+      techObject.name = name;
+      array.push(Object.assign({}, techObject)); 
+    } 
     techObject = array;
   }
+  
   return techObject;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// Função auxiliar: qtas vezes número repetido aparece
+function repeatedNumber(repNum) {
+  let counterMax = 0;
+
+  for (let i in repNum) {
+    let counter = 0;
+    for (let j in repNum) {
+      if (repNum[j] === repNum[i]) {
+        counter += 1;
+      } 
+    }
+    
+    if (counter > counterMax){
+      counterMax = counter;
+    }
+  }
+
+  return counterMax;
 }
+
+function generatePhoneNumber(phoneArray) {
+  let phoneNumbers;
+  
+  if (phoneArray.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  for (let i in phoneArray) {
+    if (phoneArray[i] < 0 || phoneArray[i] > 9 || repeatedNumber(phoneArray) >= 3) {
+      phoneNumbers = 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      phoneNumbers = phoneArray.join('');
+    }
+  }
+
+  return phoneNumbers;
+}
+
+console.log(generatePhoneNumber([2, 2, 4, 5, 6, 6, 9, 3, 0, 5, 4]));
 
 // Desafio 12
 function triangleCheck() {
