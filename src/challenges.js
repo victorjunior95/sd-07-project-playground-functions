@@ -80,14 +80,16 @@ function fizzBuzz(array) {
   let newArray = [];
   for (let number of array) {
     if ((number % 5 === 0) && number % 3 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (number % 5 === 0) {
-      newArray.push('buzz');
-    } else if (number % 3 === 0) {
-      newArray.push('fizz');
-    } else newArray.push('bug!');
+     return newArray.push('fizzBuzz');
+    }
+    if (number % 5 === 0) {
+      return newArray.push('buzz');
+    }
+    if (number % 3 === 0) {
+      return newArray.push('fizz');
+    }
   }
-  return newArray;
+  return newArray.push('bug!');
 }
 
 
@@ -152,7 +154,7 @@ function techList(array, name) {
   for (let techName of increasingArray) {
     let obj = {
       tech: techName,
-      name: name,
+      name
     }
     newArray.push(obj)
   }
@@ -195,9 +197,6 @@ function generatePhoneNumber(array) {
   return phoneNumber;
 }
 
-let arrayNumber = [1, 2, 3, 4, 5, 6, 1, 8, 9, 0, 1];
-console.log(generatePhoneNumber(arrayNumber));
-
 // Desafio 12
 function triangleCheck(sideOne, sideTwo, sideThree) {
   if (sideOne < (sideTwo + sideThree) && sideOne > Math.abs(sideTwo - sideThree)) {
@@ -216,7 +215,7 @@ function hydrate(phrase) {
   let expression = /\d+/g;
   let word = phrase.match(expression);
   for (let number of word) {
-    number = parseInt(number,10);
+    number = parseInt(number, 10);
     cont += number;
   }
   if (cont === 1) {
