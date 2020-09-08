@@ -180,7 +180,7 @@ function generatePhoneNumber(array) {
 
   let phoneNumber = '(';
   for (let number in array) {
-    if(array[number] < 0 || array[number] > 9) {
+    if (array[number] < 0 || array[number] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
@@ -202,11 +202,9 @@ console.log(generatePhoneNumber(arrayNumber));
 function triangleCheck(sideOne, sideTwo, sideThree) {
   if (sideOne < (sideTwo + sideThree) && sideOne > Math.abs(sideTwo - sideThree)) {
     return true;
-  }
-  else if (sideTwo < (sideOne + sideThree) && sideTwo > Math.abs(sideOne - sideThree)) {
+  } else if (sideTwo < (sideOne + sideThree) && sideTwo > Math.abs(sideOne - sideThree)) {
     return true;
-  }
-  else if (sideThree < (sideOne + sideTwo) && sideThree > Math.abs(sideOne - sideTwo)) {
+  } else if (sideThree < (sideOne + sideTwo) && sideThree > Math.abs(sideOne - sideTwo)) {
     return true;
   } else return false;
 }
