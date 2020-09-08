@@ -88,7 +88,7 @@ function highestCount(arr) {
   } */
   // ou podemos fazer um loop mais otimizado
   for (let i = 1; arr[i - 1] === arr[i]; i += 1) {
-    contador++;
+    contador += 1;
   }
   return contador;
 }
