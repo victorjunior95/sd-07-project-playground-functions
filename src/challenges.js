@@ -217,17 +217,17 @@ function checkConstraints(numbers) {
 function mostRepeatedNumber(numbers) {
   let mostRepeated = 0
   /* Checking if any number repeats greater or equal 3*/
-  for (let i = 0; i <= numbers.length; i += 1) {
+  numbers.forEach((element) => {
     let numberOfTimesRepeat = 0
     for (let j in numbers) {
-      if (numbers[i] === numbers[j]) {
+      if (element === numbers[j]) {
         numberOfTimesRepeat += 1
       }
-    }
     if (numberOfTimesRepeat > mostRepeated) {
       mostRepeated = numberOfTimesRepeat
     }
-  }
+  }   
+})
   return mostRepeated
 }
 
@@ -247,7 +247,7 @@ function generatePhoneNumber(numbers) {
   }
   return message
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 1, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lineACheck = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
