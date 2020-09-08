@@ -79,8 +79,25 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(name, array) {
+  let arrayOrganizada = array.sort()
+  let techsOrdened = []
+  
+  if (array.length === 0) {
+    return 'Vazio!'
+  }
+
+  for (let key in arrayOrganizada) {
+    if (key.length !== 0) {
+      let objeto = {
+        tech: arrayOrganizada[key],
+        name,
+      }
+      techsOrdened.push(objeto)
+    }
+  }
+
+  return techsOrdened
 }
 
 // Desafio 11
