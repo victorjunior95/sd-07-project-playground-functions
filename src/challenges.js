@@ -147,12 +147,12 @@ function encode(string) {
     newString = string.replace(/u/gi, 5);
   return newString;
 }
-function decode(newString) {
-  let originalString = newString.replace(/1/g, "a");
-    originalString = newString.replace(/2/g, "b");
-    originalString = newString.replace(/3/g, "c");
-    originalString = newString.replace(/4/g, "d");
-    originalString = newString.replace(/5/g, "e");
+function decode(string) {
+  let originalString = string.replace(/1/g, "a");
+    originalString = string.replace(/2/g, "b");
+    originalString = string.replace(/3/g, "c");
+    originalString = string.replace(/4/g, "d");
+    originalString = string.replace(/5/g, "e");
   return originalString;
 }
 
