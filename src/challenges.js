@@ -93,10 +93,10 @@ function encode(string) {
 }
 
 function decode(string) {
-  const vogais = ["a", "e", "i", "o", "u"];
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
 
   for (let i = 0; i < 5; i += 1) {
-    let regExp = new RegExp(i+1, 'g');
+    let regExp = new RegExp(i + 1, 'g');
     string = string.replace(regExp, vogais[i]);
   }
 
@@ -152,32 +152,24 @@ function verificaIntervalo(array, inferior, superior) {
   return true;
 }
 
+
 function generatePhoneNumber(array) {
-  let saida = [];
 
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
+  if (array.length != 11) {
+    return "Array com tamanho incorreto.";
   } else if (!(procuraRepetidos(array) && verificaIntervalo(array, -1, 10))) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  let key = 0;
+    return "não é possível gerar um número de telefone com esses valores";
+  } else {
+    /**FONTE:  http://wbruno.com.br/expressao-regular/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/*/
 
-  for (let i = 0; i < 15; i += 1) {
-    if (i === 0) {
-      saida[i] = '(';
-    } else if (i === 3) {
-      saida[i] = ')';
-    } else if (i === 4) {
-      saida[i] = ' '
-    } else if (i === 10) {
-      saida[i] = '-'
-    } else {
-      saida[i] = array[key];
-      key += 1;
-    }
-  }
+    array = array.toString();
+    array = array.replace(/\D/g, ""); // Remove tudo o que não é dígito
+    console.log(array)
+    array = array.replace(/^(\d{2})(\d)/g, "($1) $2"); // Coloca parênteses em volta dos dois primeiros dígitos
+    array = array.replace(/(\d)(\d{4})$/, "$1-$2"); // Coloca hífen entre o quarto e o quinto dígitos
 
-  return saida.join('');
+  }
+  return array;
 }
 
 // Desafio 12
@@ -206,7 +198,7 @@ function hydrate(phrase) {
    * O QUE SIGINIFICAM OS CARACTERES?
    * d : encontra correspondência com um número de 0 a 9; /\d/
    * + : permite encontrar repetidos;
-   * g : significa "global" que pesquisa varias vezes */
+   * g : significa 'global' que pesquisa varias vezes */
   let numbers = phrase.match(reg); // cria um array com os números encontrados na string phrase.
   let sum = 0;
 
