@@ -94,7 +94,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = math.abs(cat2 - mouse);
   if (distanceCat1 < distanceCat2) {
     return "cat1";
-  } else if (distanceCat2 < distanceCat1) {
+  } else if (distanceCat2 > distanceCat1) {
     return "cat2";
   } else {
     return "os gatos trombam e o rato foge";
@@ -139,34 +139,13 @@ u -> 5
 Ou seja, caso o parâmetro de encodeseja "hi there!", o retorno deve ser "h3 th2r2!".
 
 A segunda função deve se chamar decode e fazer o contrário de encode- ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deve ser "hi there!") . */
-function encode(/*string*/) {
-  // let newString = "";
-  // for (i = 0; i < string.length; i += 1) {
-  //   if (string[i] == "a") {
-  //     newString = string.replace("a", "1");
-  //   } else if (string[i] == "e") {
-  //     newString = string.replace("e", "2");
-  //   } else if (string[i] == "i") {
-  //     newString = string.replace("i", "3");
-  //   } else if (string[i] == "o") {
-  //     newString = string.replace("o", "4");
-  //   } else if (string[i] == "u") {
-  //     newString = string.replace("u", "5");
-  //   } 
-  //   // switch (string[i]) {
-  //   //   case "a":
-  //   //     newString = string.replace("a", "1");
-  //   //   case "e":
-  //   //     newString = string.replace("e", "2");
-  //   //   case "i":
-  //   //     newString = string.replace("i", "3");
-  //   //   case "o":
-  //   //     newString = string.replace("o", "4");
-  //   //   case "u":
-  //   //     newString = string.replace("u", "5");
-  //   // }
-  // }
-  // return newString;
+function encode(string) {
+  let newString = string.replace(/a/gi, "1");
+    newString = string.replace(/e/gi, "2");
+    newString = string.replace(/i/gi, "3");
+    newString = string.replace(/o/gi, "4");
+    newString = string.replace(/u/gi, "5");
+  return newString;
 }
 function decode(/*newString*/) {
   // let originalString = "";
