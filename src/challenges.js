@@ -5,7 +5,7 @@ function compareTrue(n1, n2) {
     return true;
   }
   return false;
-}
+};
 
 // Desafio 2
 function calcArea(base, height) {
@@ -13,14 +13,14 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
 
   return area;
-}
+};
 
 // Desafio 3
 function splitSentence(sentence) {
   // seu código aqui
   return sentence.split(' ');
 }
-
+;
 // Desafio 4
 function concatName(array) {
   // seu código aqui
@@ -28,7 +28,7 @@ function concatName(array) {
   let lastItem = array[array.length - 1];
 
   return `${lastItem}, ${firstItem}`;
-}
+};
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -38,7 +38,7 @@ function footballPoints(wins, ties) {
   let points = winPoints + tiePoints;
 
   return points;
-}
+};
 
 // Desafio 6
 function highestNumber(numbers) {
@@ -49,7 +49,8 @@ function highestNumber(numbers) {
     }
   }
   return highNumber;
-}
+};
+
 function highestCount(numbers) {
   // seu código aqui
   let number = highestNumber(numbers);
@@ -60,7 +61,7 @@ function highestCount(numbers) {
     }
   }
   return counting;
-}
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -73,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
-}
+};
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -91,7 +92,7 @@ function fizzBuzz(numbers) {
     }
   }
   return arrayStrings;
-}
+};
 
 // Desafio 9
 function encode(number) {
@@ -120,7 +121,7 @@ function encode(number) {
     }
   }
   return stringWithNumbers;
-}
+};
 
 function decode(letter) {
   // seu código aqui
@@ -130,7 +131,7 @@ function decode(letter) {
   letter = letter.replace(/4/gi, 'o');
   letter = letter.replace(/5/gi, 'u');
   return letter;
-}
+};
 
 // Desafio 10
 function techList(tec, names) {
@@ -145,7 +146,7 @@ function techList(tec, names) {
     return 'Vazio!';
   }
   return tecnologies;
-}
+};
 
 // Desafio 11
 function checkNumber(number) {
@@ -157,14 +158,14 @@ function checkNumber(number) {
     for (let k = 0; k < number.length; k += 1) {
       if (nAtual === number[k]) {
         contador += 1;
-      } else  if (nRepeticoes >= 3) {
+      } else if (nRepeticoes >= 3) {
         return 3;
       }
     }
     if (contador > nRepeticoes) {
       nRepeticoes = contador;
-    }    
-  } 
+    }
+  }
   return number;
 }
 
@@ -182,7 +183,7 @@ function generatePhoneNumber(number) {
     }
   }
   return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
-}
+};
 
 // Desafio 12
 function triangleCheck(ladoA, ladoB, ladoC) {
@@ -199,7 +200,7 @@ function triangleCheck(ladoA, ladoB, ladoC) {
     return true;
   }
   return false;
-}
+};
 
 // Desafio 13
 function hydrate(comanda) {
@@ -214,7 +215,7 @@ function hydrate(comanda) {
     return `${quant} copo de água`;
   }
   return `${quant} copos de água`;
-}
+};
 
 module.exports = {
   calcArea,
