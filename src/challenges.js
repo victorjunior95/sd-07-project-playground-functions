@@ -156,15 +156,14 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   } else if (!(procuraRepetidos(array) && verificaIntervalo(array, -1, 10))) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    /**FONTE:  http://wbruno.com.br/expressao-regular/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/*/
-
-    array = array.toString();
-    array = array.replace(/\D/g, ''); // Remove tudo o que não é dígito
-    console.log(array)
-    array = array.replace(/^(\d{2})(\d)/g, '($1) $2'); // Coloca parênteses em volta dos dois primeiros dígitos
-    array = array.replace(/(\d)(\d{4})$/, '$1-$2'); // Coloca hífen entre o quarto e o quinto dígitos
   }
+  /** FONTE:  http://wbruno.com.br/expressao-regular/mascara-campo-de-telefone-em-javascript-com-regex-nono-digito-telefones-sao-paulo/ */
+
+  array = array.toString();
+  array = array.replace(/\D/g, ''); // Remove tudo o que não é dígito
+  console.log(array)
+  array = array.replace(/^(\d{2})(\d)/g, '($1) $2'); // Coloca parênteses em volta dos dois primeiros dígitos
+  array = array.replace(/(\d)(\d{4})$/, '$1-$2'); // Coloca hífen entre o quarto e o quinto dígitos
   return array;
 }
 
