@@ -50,25 +50,25 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (distanceCat2 < distanceCat1) {
     return 'cat2';
   }
-  else if (distanceCat2 === distanceCat1){
+  else if (distanceCat2 === distanceCat1) {
     return 'os gatos trombam e o rato foge';
   }
 }
 // Desafio 8
 function fizzBuzz(arrayOfNumbers) {
   let arrayFizzBuzzBug = [];
-  for (let i= 0; i < arrayOfNumbers.length; i+= 1) {
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
     if (arrayOfNumbers[i] % 3 === 0 && arrayOfNumbers[i] % 5 !== 0) {
-      arrayFizzBuzzBug.push("fizz");
+      arrayFizzBuzzBug.push('fizz');
     }
     else if (arrayOfNumbers[i] % 5 === 0 && arrayOfNumbers[i] % 3 !== 0) {
-      arrayFizzBuzzBug.push("buzz");
+      arrayFizzBuzzBug.push('buzz');
     }
     else if (arrayOfNumbers[i] % 5 === 0 && arrayOfNumbers[i] % 3 === 0) {
-      arrayFizzBuzzBug.push("fizzBuzz");
+      arrayFizzBuzzBug.push('fizzBuzz"');
     }
     else {
-      arrayFizzBuzzBug.push("bug!");
+      arrayFizzBuzzBug.push('bug!');
     }
   }
   return arrayFizzBuzzBug;
@@ -80,7 +80,7 @@ function encode(anyString) {
   string = string.replace(/i/g,"3");
   string = string.replace(/o/g,"4");
   string = string.replace(/u/g,"5");
-  return string
+  return string;
 }
 
 function decode(anyString) {
@@ -89,26 +89,22 @@ function decode(anyString) {
   string = string.replace(/3/g,"i");
   string = string.replace(/4/g,"o");
   string = string.replace(/5/g,"u");
-  return string
+  return string;
 }
-
 // Desafio 10
 function techList(anyArray,name) {
-  if(anyArray.length == 0){
+  if(anyArray.length == 0) {
   return "Vazio!";
-  } 
+  }
   else {
     let array = anyArray.sort();
     let toLearn = [];
     for(let indice in array) {
-      toLearn.push ({ tech: array[indice], name: name }); 
+      toLearn.push ({ tech: array[indice], name: name });
       }
     return toLearn;
   }
-};
-let list = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(list, "Bruna"))
-
+}
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
