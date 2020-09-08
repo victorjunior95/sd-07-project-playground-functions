@@ -123,12 +123,13 @@ function techList(learn, name) {
 // Desafio 11
 function generatePhoneNumber(telefone) {
   for (let i in telefone) {
-    if (telefone[i] > 9 || telefone[i] < 0) {
+    if (telefone[i] < 0 || telefone[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
-    } else if (telefone[i] !== 1) {
-      return "Array com tamanho incorreto.";
-    }
+    }  
+  }  if (telefone.length !== 11) {
+    return "Array com tamanho incorreto.";
   }
+ 
   for (let i in telefone) {
     let captarRepeticao = telefone[i];
     let contador = 0;
@@ -141,8 +142,7 @@ function generatePhoneNumber(telefone) {
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
-  return `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`
-  
+  return `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
