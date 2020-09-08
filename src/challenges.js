@@ -274,9 +274,65 @@ function compare(a, b) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+
+function generatePhoneNumber(arrayNumbers) {
+  console.log("");
+  console.log("Desafio 11:");
+  let filtered = false;
+  let treeRep = true;
+
+  for ( i in arrayNumbers ) {
+
+    //-------Verificando se tem dígitos maiores que 9 ou menores que 0-------//
+    if ( arrayNumbers[i] > 9 || arrayNumbers < 0 ) {
+      console.log("Array com tamanho incorreto.");
+      return "Array com tamanho incorreto.";
+    } else {
+
+      //-------Verificando se tem 11 dígitos--------------------------------//
+      if ( arrayNumbers.length != 11 ) {
+        console.log("Não é possível gerar um número de telefone com esses valores.");
+        return "não é possível gerar um número de telefone com esses valores";
+      } else {
+        filtered = true;
+        break;
+      }
+    }
+  }
+
+  //-------Verificando se algum dígito se repete + de 3 vezes--------------//
+  let count = 0;
+  for ( j = 0; j < arrayNumbers.length; j += 1 ) {
+    count = 0;
+    
+    for ( k = 1; k <= arrayNumbers.length; k += 1 ) {
+      if ( arrayNumbers[j] === arrayNumbers[k] ) {
+        count += 1;
+
+        if ( count >= 3 ) {
+          console.log("Não é possível gerar um número de telefone com esses valores.");
+          return "não é possível gerar um número de telefone com esses valores";
+        
+        } else {
+          treeRep = false;
+          break;
+        }
+        
+      }
+    } 
+  }
+
+  //-------Retornando número de telefone--------------//
+  if ( filtered === true && treeRep === false ) {
+    arrayNumbers.splice(0, 0, '(');
+    arrayNumbers.splice(3, 0, ')');
+    arrayNumbers.splice(4, 0, ' ');
+    arrayNumbers.splice(10, 0, '-');
+    return arrayNumbers.join('');
+  }
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
