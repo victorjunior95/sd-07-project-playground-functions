@@ -145,7 +145,7 @@ function generatePhoneNumber(telefone) {
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
-  return telefone;
+  return telefone
 }
 
 // Desafio 12
