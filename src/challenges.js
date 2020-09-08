@@ -21,11 +21,9 @@ function splitSentence(str) {
 function concatName(array) {
   let lastItem;
   let firstItem;
-
   firstItem = array[0];
   lastItem = array[array.length - 1];
   array = lastItem + ", " + firstItem;
-  // array.push(lastItem);
   return array;
 }
 
@@ -38,17 +36,51 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arry) {
+  let maiorN = 0;
+  let contador = 0;
+  for (key in arry) {
+    if (arry[key] > maiorN) {
+      maiorN = arry[key];
+    }
+  }
+  for (key in arry) {
+    if (arry[key] == maiorN) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  //do cat1 ate o mouse  distacia vai para o contador cat1
+  let contadorCat1 = cat1 - mouse;
+  //do cat ate o mouse distacia vai  para o contador cat2
+  let contadorCat2 = cat2 - mouse;
+  if (contadorCat1 < 0) {
+    contadorCat1 = contadorCat1 * -1;
+  }
+  if (contadorCat2 < 0) {
+    contadorCat2 = contadorCat2 * -1;
+  }
+  //condiçao para checar distancia menor entre o cat1 e cat2
+  // condiçao contraria
+  if (contadorCat1 < contadorCat2 && contadorCat1 > 0 && contadorCat2 > 0) {
+    return "cat1";
+  } else if (
+    contadorCat1 > ContadorCat2 &&
+    contadorCat1 > 0 &&
+    contadorCat2 > 0
+  ) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz(arry) {
   let arryDeString = [];
 
   for (let index = 0; index < arry.length; index++) {
@@ -174,7 +206,6 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 
   return false;
 }
-
 
 // Desafio 13
 function hydrate() {
