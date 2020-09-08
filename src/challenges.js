@@ -73,8 +73,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arraySaida = [];
   for (let x in array) {
-    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
-      arrayReturn.push('fizzBuzz');
+    if (array[x] % 3 === 0 && array[x] % 5 === 0) {
+      arraySaida.push('fizzBuzz');
     } else if (array[x] % 3 === 0) {
       arraySaida.push('fizz');
     } else if (array[x] % 5 === 0) {
