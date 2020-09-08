@@ -165,9 +165,10 @@ function techList(array, name) {
   return technologies;
 }
 
+
 // Função auxiliar 01 - Desafio 11
 function checkMaxNumber(telefone) {
-  for (let number of telefone) {
+  for (let number of telefone){
     if (number < 0 || number > 9) return true;
   }
   return false;
@@ -175,18 +176,21 @@ function checkMaxNumber(telefone) {
 
 // Função auxiliar 02 - Desafio 11
 function contRepeatNumberArray(telefone) {
-  for (let j of telefone) {
-    let count = 0;
-    for (let i of telefone) {
-      if (j === i) {
-        count += 1;
-        if (count === 3) {
-          return true;
-        }
-      }
-    }
+  let count = 0;
+  for (let number of telefone) {
+    count = analyzesRepeatNumber(telefone, number)
+    if (count === 3) return true;
   }
   return false;
+}
+
+// Função auxiliar 03 - Desafio 11
+function analyzesRepeatNumber(telefone, number) {
+  let count = 0;
+  for (let value of telefone) {
+    if (value === number) count += 1;
+  }
+  return count;
 }
 
 // Desafio 11
@@ -199,7 +203,7 @@ function generatePhoneNumber(telefone) {
   const preFixo = telefone.slice(2, 7);
   const suFixo = telefone.slice(7, 11);
   phoneNumber = `(${DDD}) ${preFixo}-${suFixo}`;
-  phoneNumber = phoneNumber.replace(/,/g, '');
+  phoneNumber = phoneNumber.replace(/\,/g, '');
   return phoneNumber;
 }
 
