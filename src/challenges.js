@@ -195,8 +195,8 @@ function generatePhoneNumber(numbers) {
   for(let index in numbers){
     if(numbers[index] < 0 || numbers[index] > 9){
     naoEstaEntre0E9 += 1;    
+    }
   }
-}
 
   let repetition = 0;
 
@@ -230,9 +230,42 @@ function generatePhoneNumber(numbers) {
 generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]);
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let somaA = lineB + lineC;
+  let subtraiA = lineB - lineC;
+
+  let somaB = lineA + lineC;
+  let subtraiB = lineA - lineC;
+
+  let somaC = lineA + lineB;
+  let subtraiC = lineA - lineB;
+
+  let linhaTrianguloA = false;
+  let linhaTrianguloB = false;
+  let linhaTrianguloC = false
+
+  if (lineA < somaA && lineA > Math.abs(subtraiA)){
+    linhaTrianguloA = true;
+  }
+
+  if (lineB < somaB && lineB > Math.abs(subtraiB)){
+    linhaTrianguloB = true;
+  }
+
+  if (lineC < somaC && lineC > Math.abs(subtraiC)){
+    linhaTrianguloC = true;
+  }
+
+  if (linhaTrianguloA === true && linhaTrianguloB === true && linhaTrianguloC === true){
+    return true;
+  }
+  else {
+    return false;
+  }
+
 }
+
+triangleCheck(10, 14, 8);
 
 // Desafio 13
 function hydrate() {
