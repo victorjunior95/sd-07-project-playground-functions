@@ -50,9 +50,20 @@ return(count)
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let scat1 = Math.abs(cat1 - mouse);
+  let scat2 = Math.abs(cat2 - mouse); 
+  
+  if (scat1 < scat2) {
+      return("cat1")
+  } else if (scat2 < scat1) {
+      return("cat2")
+  } else {
+      return("os gatos trombam e o rato foge")
+  }
 }
+
+
 
 // Desafio 8
 function fizzBuzz() {
