@@ -38,15 +38,15 @@ return(points)
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  let count = 0
+  let count = 0 
+  let max = Math.max(...arrayNumbers);
+
   for (let i = 0; i < arrayNumbers.length; i++) {
-    if ((i < arrayNumbers.length)) {
-      if (arrayNumbers[1] == arrayNumbers[i+1]) {
-       count = arrayNumbers[1] + arrayNumbers[i+1]
+    if (arrayNumbers[i] == max) {
+      count = count+1
       }
-    }
-  }
-  return(count)  
+}
+return(count) 
 }
 
 // Desafio 7
