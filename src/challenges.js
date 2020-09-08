@@ -54,8 +54,8 @@ function highestCount(numbers) {
   // seu código aqui
   let number = highestNumber(numbers);
   let counting = 0;
-  for (let j = 0; j < numbers.length; j += 1) {
-    if (number === numbers[j]) {
+  for (let index in numbers) {
+    if (number === numbers[index]) {
       counting += 1;
     }
   }
