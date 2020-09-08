@@ -30,18 +30,19 @@ function splitSentence(str) {
 function concatName(array) {
   let first;
   let last;
-  let newArray=[];
+  
 
-  newArray= array.slice; // copia um array para outro
+  //newArray= array.slice; // copia um array para outro
 
-  first= newArray.shift;
-  last = newArray.pop;
+  first= array[0];
+  last = array[array.length-1];
 
-   console.log(first);
+   console.log(last, first);
   
 
 }
-
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+concatName(array);
 
 // Desafio 5
 function footballPoints(wins, ties) {
