@@ -146,7 +146,7 @@ function techList(array, name) {
   for (let i = 0; i < arrayEmOrdem.length; i += 1) {
     obj = {
       tech: arrayEmOrdem[i],
-      name: name,
+      name,
     }
     newArray.push(obj);
   }
