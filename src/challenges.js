@@ -134,7 +134,7 @@ function hydrate(stringdeentrada) {
   for (let i = 0; i < qtd.length; i+=1){
     soma = soma + qtd[i]
   }
-  let stringsaida ="${soma} copos de água"
+  let stringsaida = soma.toString() + "copos de água"
   return(stringsaida)
 }
 
