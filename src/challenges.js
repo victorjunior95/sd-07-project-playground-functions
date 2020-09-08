@@ -48,30 +48,26 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 === mouse - cat2){
-    return "os gatos trombam e o rato foge"
-  } else if (mouse - cat1 < mouse - cat2) {
-    return "cat1"
-  } else if (mouse - cat1 > mouse - cat2) {
-    return "cat2"
-  }
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return 'cat1';
+  else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz(numeros) {
-  let novo = []
-  for (let i = 0; i < numeros.length; i++) {
-    if (numeros[i] % 3 === 0 && numeros[i] % 5 !== 0) {
-      novo.push("fizz") 
-    } else if (numeros[i] % 5 === 0 && numeros[i] % 3 !== 0) {
-      novo.push("buzz") 
-    } else if (numeros[i] % 5 === 0 && numeros[i] % 3 === 0) {
-      novo.push("fizzbuzz") 
-    } else if (numeros[i] % 5 !== 0 && numeros[i] % 3 !== 0) {
-      novo.push("bug!") 
-    }
-  }
-  return novo
+function fizzBuzz(arr) {
+  let numbersArr = [];
+for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
+        numbersArr[i] = 'fizzBuzz'
+} else if (arr[i] % 3 == 0) {
+  numbersArr[i] = 'fizz'
+} else if(arr[i] % 5 == 0) {
+  numbersArr[i] = 'buzz'
+} else {
+  numbersArr[i] = 'bug!'
+}
+}
+return numbersArr
 }
 
 // Desafio 9
@@ -100,22 +96,4 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
   // seu código aqui
-}
-
-
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
 }
