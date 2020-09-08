@@ -102,10 +102,24 @@ function decode(fraseEstranha) {
 }
 
 // Desafio 10
-function techList() {
-
+function techList(tech, name) {
+  let lista = [];
+  if (tech.length > 0){
+    for (let i = 0; i < tech.length; i += 1) {
+      lista.push(
+        {
+          tech: tech[i],
+          name: name,
+        }
+      );
+    }
+    return lista;
+  }
+  return "Vazio!"
 }
 
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+console.log(techList([], "!"));
 // Desafio 11
 function generatePhoneNumber() {
   
