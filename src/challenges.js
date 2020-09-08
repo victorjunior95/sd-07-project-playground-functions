@@ -158,11 +158,9 @@ function techList(tech, name) {
   tech.sort();
   
   var array = [];
-  
-  if(tech == []) {
-    return "Vazio!"
+  if(tech.length == 0) {
+    array = "Vazio!"
   }
-  
   for (let i = 0; i < tech.length; i += 1) {
     var resposta = {
       tech: tech[i],
