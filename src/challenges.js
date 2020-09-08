@@ -14,7 +14,7 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-  function splitSentence(string) {
+function splitSentence(string) {
   // seu código aqui
 
   var espacos = ` `
@@ -153,8 +153,17 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
+function techList(aprender, nome) {
   // seu código aqui
+  var array = [];
+  for (let i = 0; i < aprender.length; i += 1) {
+    var resposta = {
+      tech: aprender[i],
+      nome: nome,
+    };
+    array.push(resposta);
+  }
+  return array;
 }
 
 // Desafio 11
