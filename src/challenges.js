@@ -77,15 +77,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  // seu código aqui
-  let arrayStrings = [];
-  for (let i = 0; i < numbers.length; i += 1) {
-    arrayStrings.push(changeNumberForFizzBuzz(numbers[i]));
-  }
-  return arrayStrings;
-}
-
 function changeNumberForFizzBuzz(number) {
   let change = '';
   if (number % 3 === 0 && number % 5 === 0) {
@@ -98,6 +89,15 @@ function changeNumberForFizzBuzz(number) {
     change = 'bug!';
   }
   return change;
+}
+
+function fizzBuzz(numbers) {
+  // seu código aqui
+  let arrayStrings = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    arrayStrings.push(changeNumberForFizzBuzz(numbers[i]));
+  }
+  return arrayStrings;
 }
 
 // Desafio 9
