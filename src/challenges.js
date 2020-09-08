@@ -161,9 +161,9 @@ function checkNumber(number) {
 
   number.forEach(function (item) {
     if (!numeros[item]) {
-        numeros[item] = 0;
-      }
-      numeros[item] += 1;
+      numeros[item] = 0;
+    }
+    numeros[item] += 1;
   })
 
   for (let prop in numeros) {
