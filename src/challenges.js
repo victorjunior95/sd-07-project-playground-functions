@@ -148,11 +148,11 @@ function encode(string) {
   return newString;
 }
 function decode(newString) {
-  let originalString = newString.replace(/a/gi, "1");
-    originalString = newString.replace(/e/gi, "2");
-    originalString = newString.replace(/i/gi, "3");
-    originalString = newString.replace(/o/gi, "4");
-    originalString = newString.replace(/u/gi, "5");
+  let originalString = newString.replace(/1/g, "a");
+    originalString = newString.replace(/2/g, "b");
+    originalString = newString.replace(/3/g, "c");
+    originalString = newString.replace(/4/g, "d");
+    originalString = newString.replace(/5/g, "e");
   return originalString;
 }
 
