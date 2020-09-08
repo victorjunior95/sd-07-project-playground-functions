@@ -104,7 +104,6 @@ function encode(string) {
   return vazio;
 }
 
-let string = "h3 th2r2!";
 function decode(string) {
   let vazio = '';
   for (let i = 0; i < string.length; i++) {
