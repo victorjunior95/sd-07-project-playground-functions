@@ -77,7 +77,7 @@ function highestCount(arr) {
       // console.log(`o numero foi b ${b}`);
       // console.log(`a diferença foi ${b - a}`);
       return b - a;
-    })
+    }),
   );
 
   /* for (let i = 1; i < arr.length; i += 1) {
