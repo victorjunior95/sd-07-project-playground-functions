@@ -4,7 +4,6 @@ function compareTrue(a, b) {
   return compare;
 }
 
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -207,14 +206,13 @@ function hydrate(string) {
   let number = string.match(/\d+/g);
   let sum = 0;
   for (let i = 0; i < number.length; i += 1) {
-    sum += parseInt(number[i], 0);
+    sum += parseInt(number[i]);
   }
   if (sum === 1) {
     return `${sum} copos de água`;
   }
   return `${sum} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
