@@ -31,8 +31,8 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(vetor) {
   let repeticao = 0;
-  for(i in vetor) {
-    if(vetor[i] == Math.max.apply(Math, vetor)) {
+  for (let i in vetor) {
+    if (vetor[i] === Math.max.apply(Math, vetor)) {
       repeticao += 1;
     }
   }
@@ -41,7 +41,7 @@ function highestCount(vetor) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     return 'cat2';
   } else if (Math.abs(mouse - cat2) > Math.abs(mouse - cat1)) {
     return 'cat1'
@@ -52,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let arrayString = [ ];
+  let arrayString = [];
   for(i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
       arrayString.push('fizz');
