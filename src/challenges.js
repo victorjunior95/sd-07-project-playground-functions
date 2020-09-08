@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let arrayString = [];
-  for(i in array) {
+  for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
       arrayString.push('fizz');
     } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
@@ -78,15 +78,15 @@ function decode() {
 
 // Desafio 10
 function techList(tecs, name) {
-  if(tecs.length === 0) {
+  if (tecs.length === 0) {
     return 'Vazio!';
   }
   let arrayOfObjects = [];
   tecs.sort();
-  for(i of tecs) {
+  for (let i of tecs) {
     let objects = {
       tech: i,
-      name: `${name}`
+      name: `${name}`,
     }
     arrayOfObjects.push(objects);
   }
@@ -101,13 +101,13 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let condition1, condition2;
-  if(lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA) {
+  if (lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA) {
     condition1 = true;
   }
-  if(lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs (lineA - lineB)) {
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs (lineA - lineB)) {
     condition2 = true;
   }
-  if(condition1 == true && condition2 == true) {
+  if (condition1 === true && condition2 === true) {
     return true;
   } else {
     return false;
