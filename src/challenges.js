@@ -191,10 +191,10 @@ function triangleCheck(ladoA, ladoB, ladoC) {
   let valorAB = Math.abs(ladoA - ladoB);
   let valorAC = Math.abs(ladoA - ladoC);
   let valorBC = Math.abs(ladoB - ladoC);
-  
+
   if (ladoA < ladoB + ladoC && valorBC < ladoA) {
     return true;
-  } else if ( ladoB < ladoA + ladoC && valorAC < ladoB) {
+  } else if (ladoB < ladoA + ladoC && valorAC < ladoB) {
     return true;
   } else if (ladoC < ladoA + ladoB && valorAB < ladoC) {
     return true;
@@ -203,8 +203,18 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(comanda) {
   // seu código aqui
+  let numerosString = comanda.match(/\d+/g).map(Number);
+  let quant = 0;
+
+  for (let i = 0; i < numerosString.length; i += 1) {
+    quant += numerosString[i];
+  }
+  if (quant === 1) {
+    return `${quant} copo de água`;
+  }
+  return `${quant} copos de água`;
 }
 
 module.exports = {
