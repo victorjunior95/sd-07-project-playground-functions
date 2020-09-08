@@ -181,6 +181,11 @@ function hydrate(frase) {
   for (let i = 0; i < numbers.length; i++) {
     resultado += numbers[i];
   }
+  if (resultado === 1) {
+    retorno += resultado;
+    retorno += ' copo de água';
+    return retorno;
+  }
   retorno += resultado;
   retorno += ' copos de água';
   return retorno;
