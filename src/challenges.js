@@ -19,7 +19,7 @@ function calcArea(base, height) {
 function splitSentence(name) {
   // seu código aqui
 
-  let arr = name.split(" ");
+  let arr = name.split(' ');
 
   return arr;
 
@@ -59,7 +59,7 @@ function concatName(names) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return wins * 3 + ties * 1;
+  return (wins * 3) + (ties * 1);
 }
 
 // console.log(footballPoints(1, 2));
@@ -88,7 +88,7 @@ function highestCount(arr) {
   } */
   // ou podemos fazer um loop mais otimizado
   for (let i = 1; arr[i - 1] === arr[i]; i += 1) {
-    contador++;
+    contador += contador;
   }
   return contador;
 }
@@ -101,11 +101,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Pos = Math.abs(mouse - cat1);
   let cat2Pos = Math.abs(mouse - cat2);
   if (cat1Pos < cat2Pos) {
-    return "cat1";
+    return 'cat1';
   } else if (cat1Pos > cat2Pos) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -116,15 +116,16 @@ function fizzBuzz(arr) {
   // seu código aqui
 
   let arrResult = [];
-  for (let i of arr) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      arrResult.push(`fizzBuzz`);
-    } else if (i % 3 === 0) {
-      arrResult.push(`fizz`);
-    } else if (i % 5 === 0) {
-      arrResult.push(`buzz`);
+
+  for (let value of arr) {
+    if (value % 3 === 0 && value % 5 === 0) {
+      arrResult.push('fizzBuzz');
+    } else if (value % 3 === 0) {
+      arrResult.push('fizz');
+    } else if (value % 5 === 0) {
+      arrResult.push('buzz');
     } else {
-      arrResult.push(`bug!`);
+      arrResult.push('bug!');
     }
   }
   return arrResult;
@@ -135,18 +136,18 @@ function fizzBuzz(arr) {
 // Desafio 9
 function encode(arg) {
   // seu código aqui
-  let code = ["a", "e", "i", "o", "u"];
+  let code = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 1; i <= code.length; i += 1) {
-    arg = arg.replace(RegExp(code[i - 1], "g"), i);
+    arg = arg.replace(RegExp(code[i - 1], 'g'), i);
   }
   return arg;
 }
 
 function decode(arg) {
   // seu código aqui
-  let code = ["a", "e", "i", "o", "u"];
+  let code = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 1; i <= code.length; i += 1) {
-    arg = arg.replace(RegExp(i.toString(), "g"), code[i - 1]);
+    arg = arg.replace(RegExp(i.toString(), 'g'), code[i - 1]);
   }
   return arg;
 }
@@ -155,7 +156,7 @@ function decode(arg) {
 function techList(argArray, name) {
   // seu código aqui
   if (argArray.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
 
   let resultArray = [];
@@ -192,7 +193,7 @@ function hydrate(drink) {
   // seu código aqui
   let amountOfDrinks = drink.match(/\d+/g).map(Number);
   let glassOfWater = amountOfDrinks.reduce((a, b) => a + b, 0);
-  let result = "";
+  let result = '';
   if (glassOfWater === 1) {
     result = `${glassOfWater} copo de água`;
   } else {
