@@ -133,16 +133,40 @@ function fizzBuzz(arr) {
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(arg) {
   // seu código aqui
+  let code = ["a", "e", "i", "o", "u"];
+  for (let i = 1; i <= code.length; i += 1) {
+    arg = arg.replace(RegExp(code[i - 1], "g"), i);
+  }
+  return arg;
 }
-function decode() {
+function decode(arg) {
   // seu código aqui
+  let code = ["a", "e", "i", "o", "u"];
+  for (let i = 1; i <= code.length; i += 1) {
+    arg = arg.replace(RegExp(i.toString(), "g"), code[i - 1]);
+  }
+  return arg;
 }
 
 // Desafio 10
-function techList() {
+function techList(argArray, name) {
   // seu código aqui
+  if (argArray.length === 0) {
+    return "Vazio!";
+  }
+
+  let resultArray = [];
+  argArray.sort();
+  for (let argName of argArray) {
+    let resultObject = {
+      tech: argName,
+      name: `${name}`,
+    };
+    resultArray.push(resultObject);
+  }
+  return resultArray;
 }
 
 // Desafio 11
@@ -151,13 +175,29 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(linhaA, linhaB, linhaC) {
   // seu código aqui
+  let checkA = linhaA < linhaB + linhaC && linhaA > Math.abs(linhaB - linhaC);
+  // check linhaB
+  let checkB = linhaB < linhaA + linhaC && linhaB > Math.abs(linhaA - linhaC);
+  // check linhaC
+  let checkC = linhaC < linhaB + linhaA && linhaC > Math.abs(linhaB - linhaA);
+
+  return checkA && checkB && checkC;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drink) {
   // seu código aqui
+  let amountOfDrinks = drink.match(/\d+/g).map(Number);
+  let glassOfWater = amountOfDrinks.reduce((a, b) => a + b, 0);
+  let result = "";
+  if (glassOfWater === 1) {
+    result = `${glassOfWater} copo de água`;
+  } else {
+    result = `${glassOfWater} copos de água`;
+  }
+  return result;
 }
 
 module.exports = {
