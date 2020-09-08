@@ -104,9 +104,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (cat1Pos > cat2Pos) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // console.log(catAndMouse(5, 3, 10));
