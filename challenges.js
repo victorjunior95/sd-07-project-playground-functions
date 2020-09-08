@@ -14,5 +14,6 @@ function calcArea(base,Height){
     let bases= base
     let altura= Height
     let soma= base*altura/2
-    console.log(soma)
+    let resultado= soma
+    return soma;
 }
