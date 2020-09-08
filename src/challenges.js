@@ -248,10 +248,22 @@ function techList(namesArr, name) {
 
   for ( let i in namesArr ) {
     list[i] = { tech: namesArr[i], name: name };
-  }
+  };
 
-  console.log(list);
-  return list;
+  //-------Ordenando arrays-------//
+  let orderedList = Object.values(list).sort(compare);
+  console.log(orderedList);
+  return orderedList;
+}
+
+function compare(a, b) {
+  if ( a.tech > b.tech ) {
+    return 1;
+  } else if ( a.tech < b.tech ) {
+    return -1;
+  } else {
+    return 0;
+  }
 }
 
 // Desafio 11
@@ -265,7 +277,7 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate () {
   // seu código aqui
 }
 
