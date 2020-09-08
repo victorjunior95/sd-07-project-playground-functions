@@ -244,16 +244,23 @@ function techList(namesArr, name) {
   console.log("");
   console.log("Desafio 10:");
 
-  let list = {};
+  if ( typeof namesArr != 'undefined' && (namesArr instanceof Array)) {
+    let list = {};
 
-  for ( let i in namesArr ) {
-    list[i] = { tech: namesArr[i], name: name };
-  };
+    for ( let i in namesArr ) {
+      list[i] = { tech: namesArr[i], name: name };
+    };
 
-  //-------Ordenando arrays-------//
-  let orderedList = Object.values(list).sort(compare);
-  console.log(orderedList);
-  return orderedList;
+    //-------Ordenando arrays-------//
+    let orderedList = Object.values(list).sort(compare);
+    console.log(orderedList);
+    return orderedList;
+  
+  } else {
+
+    console.log("Vazio!");
+    return 'Vazio!';
+  }
 }
 
 function compare(a, b) {
