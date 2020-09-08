@@ -5,20 +5,20 @@ function compareTrue(dormir, acordado) {
   } else {
     return false;
   };
-};
+}
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
-};
+}
 
 // Desafio 3
 let frase = 'go Trybe';
 
 function splitSentence(frase) {
   return frase.split(" ");
-};
+}
 
 // Desafio 4
 let wordConcat = ['Raphael', 'Cicero', 'Rodrigues', 'Araujo'];
@@ -27,7 +27,7 @@ function concatName(wordConcat) {
   let firstWord = wordConcat[0];
   let lastWord = wordConcat[wordConcat.length - 1];
   return lastWord + ', ' + firstWord;
-};
+}
 
 // Desafio 5
 let wins = 10;
@@ -35,7 +35,7 @@ let ties = 3;
 
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
-};
+}
 
 // Desafio 6
 let arrayNumeros = [9, 1, 2, 3, 9, 5, 7];
@@ -49,7 +49,7 @@ function highestCount(arrayNumeros) {
     }
   }
   return repeticoes;
-};
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -63,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return "os gatos trombam e o rato foge"
   }
-};
+}
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -80,15 +80,51 @@ function fizzBuzz(array) {
     }
   }
   return newArray;
-};
-
-// Desafio 9
-function encode() {
-  // seu código aqui
 }
 
-function decode() {
-  // seu código aqui
+// Desafio 9
+let string = "hi there!";
+
+function encode(string) {
+  let vazio = '';
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == 'a') {
+      vazio += '1';
+    } else if (string[i] == 'e') {
+      vazio += '2';
+    } else if (string[i] == 'i') {
+      vazio += '3';
+    } else if (string[i] == 'o') {
+      vazio += '4';
+    } else if (string[i] == 'u') {
+      vazio += '5';
+    } else {
+      vazio += string[i];
+    }
+  }
+  return vazio;
+}
+
+let string = "h3 th2r2!";
+
+function decode(string) {
+  let vazio = '';
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == '1') {
+      vazio += 'a';
+    } else if (string[i] == '2') {
+      vazio += 'e';
+    } else if (string[i] == '3') {
+      vazio += 'i';
+    } else if (string[i] == '4') {
+      vazio += 'o';
+    } else if (string[i] == '5') {
+      vazio += 'u';
+    } else {
+      vazio += string[i];
+    }
+  }
+  return vazio;
 }
 
 // Desafio 10
