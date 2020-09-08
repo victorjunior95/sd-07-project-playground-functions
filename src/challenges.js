@@ -83,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   const vetorSaida = [];
 
-  for (const i in array) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 5 === 0 && array[i] % 3 === 0) {
       vetorSaida.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
