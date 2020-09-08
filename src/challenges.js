@@ -122,13 +122,14 @@ function techList(learn, name) {
 
 // Desafio 11
 function generatePhoneNumber(telefone) {
+  if (telefone.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
   for (let i in telefone) {
     if (telefone[i] < 0 || telefone[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     }  
-  }  if (telefone.length !== 11) {
-    return "Array com tamanho incorreto.";
-  }
+  } 
  
   for (let i in telefone) {
     let captarRepeticao = telefone[i];
