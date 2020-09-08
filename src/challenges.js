@@ -155,6 +155,8 @@ function decode(str) {
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
+  tech.sort();
+  
   var array = [];
   
   if(tech === []) {
