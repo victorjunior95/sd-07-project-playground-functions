@@ -45,7 +45,7 @@ function highestCount(vetor) {
   let j = 0;
   do {
     swapped = false;
-    for (let i = 0; i < len; i+=1) {
+    for (let i = 0; i < len; i+= 1) {
       if (vetor[i] > vetor[i + 1]) {
         const tmp = vetor[i];
         vetor[i] = vetor[i + 1];
