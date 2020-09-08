@@ -223,11 +223,11 @@ function mostRepeatedNumber(numbers) {
       if (element === numbers[j]) {
         numberOfTimesRepeat += 1
       }
-    if (numberOfTimesRepeat > mostRepeated) {
-      mostRepeated = numberOfTimesRepeat
+      if (numberOfTimesRepeat > mostRepeated) {
+        mostRepeated = numberOfTimesRepeat
+      }
     }
-  }   
-})
+  })
   return mostRepeated
 }
 
