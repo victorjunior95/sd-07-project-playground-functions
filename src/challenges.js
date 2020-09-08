@@ -274,7 +274,7 @@ function compare(a, b) {
 }
 
 // Desafio 11
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]);
 
 function generatePhoneNumber(arrayNumbers) {
   console.log("");
@@ -283,38 +283,35 @@ function generatePhoneNumber(arrayNumbers) {
   let secondFilter = true;
   let thirdFilter = true;
 
+  //-------Verificando se tem 11 dígitos--------------------------------//
+  if ( arrayNumbers.length !== 11 ) {
+    firstFilter = false;
+    console.log("Array com tamanho incorreto.");
+    return "Array com tamanho incorreto.";
+  }
+
   //-------Verificando se tem dígitos maiores que 9 ou menores que 0-------//
   for ( i = 0; i < arrayNumbers.length; i += 1 ) {
     if ( arrayNumbers[i] > 9 || arrayNumbers[i] < 0 ) {
-      firstFilter = false;
+      secondFilter = false;
       console.log("Não é possível gerar um número de telefone com esses valores.");
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
 
-  //-------Verificando se tem 11 dígitos--------------------------------//
-  if ( arrayNumbers.length !== 11 ) {
-    secondFilter = false;
-    console.log("Array com tamanho incorreto.");
-    return "Array com tamanho incorreto.";
-  }
-
   //-------Verificando se algum dígito se repete + de 3 vezes---------//
   let count = 0;
-  for ( let j = 0; j < arrayNumbers.length; j += 1 ) {
+  for (let j = 0; j < arrayNumbers.length; j += 1) {
     count = 0;
-    for ( let k = 1; k < arrayNumbers.length; k += 1 ) {
-      
-      if ( arrayNumbers[j] === arrayNumbers[k] ) {
+    for (let k = 0; k < arrayNumbers.length; k += 1) {
+      if (arrayNumbers[j] === arrayNumbers[k]) {
         count += 1;
       }
     }
-  }
-
-  if ( count >= 3 ) {
-    thirdFilter = false;
-    console.log("Não é possível gerar um número de telefone com esses valores.");
-    return "não é possível gerar um número de telefone com esses valores";
+    if (count >= 3) {
+      console.log("Não é possível gerar um número de telefone com esses valores.");
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
 
   //-------Retornando número de telefone--------------//
