@@ -244,7 +244,7 @@ function techList(namesArr, name) {
   console.log("");
   console.log("Desafio 10:");
 
-  if ( typeof namesArr != 'undefined' && (namesArr instanceof Array)) {
+  if ( namesArr.length != 0 && Array.isArray(namesArr) ) {
     let list = {};
 
     for ( let i in namesArr ) {
