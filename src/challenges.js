@@ -250,12 +250,12 @@ function hydrate(string) {
         }
     }
     for ( let j = 0; j < result.length; j += 1) {
-        final = final + result[j];
+      final = final + result[j];
     }
-    if (final === 1) {
-        return `${final} copo de água`;
+  if (final === 1) {
+      return `${final} copo de água`;
     } else {
-        return `${final} copos de água`;
+      return `${final} copos de água`;
     }
 }
 
