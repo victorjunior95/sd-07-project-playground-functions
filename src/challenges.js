@@ -37,7 +37,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let count = 0;
-  let maiorNumero = array[0];
+  let maiorNumero = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > maiorNumero) {
       maiorNumero = array[i];
@@ -206,7 +206,7 @@ function hydrate(string) {
   let number = string.match(/\d+/g);
   let sum = 0;
   for (let i = 0; i < number.length; i += 1) {
-    sum += parseInt(number[i]);
+    sum += parseInt(number[i], 10);
   }
   if (sum === 1) {
     return `${sum} copos de água`;
