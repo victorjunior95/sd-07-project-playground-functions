@@ -20,12 +20,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array) {
-  let string = []
-  let string1 = [array[array.length-1]]
-  let string2 = [array[0]]
-  string = string1.concat(string2)
-  return string
+function concatName(palavras) {
+  return `${palavras[palavras.length - 1]}, ${palavras[0]}`
 }
 
 // Desafio 5
