@@ -54,18 +54,14 @@ function highestCount(arry) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  //do cat1 ate o mouse  distacia vai para o contador cat1
   let contadorCat1 = cat1 - mouse;
-  //do cat ate o mouse distacia vai  para o contador cat2
   let contadorCat2 = cat2 - mouse;
   if (contadorCat1 < 0) {
-    contadorCat1 = contadorCat1 * -1;
+    contadorCat1 = contadorCat1*-1;
   }
   if (contadorCat2 < 0) {
-    contadorCat2 = contadorCat2 * -1;
+    contadorCat2 = contadorCat2*-1;
   }
-  //condiçao para checar distancia menor entre o cat1 e cat2
-  // condiçao contraria
   if (contadorCat1 < contadorCat2 && contadorCat1 > 0 && contadorCat2 > 0) {
     return "cat1";
   } else if (
@@ -82,18 +78,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arry) {
   let arryDeString = [];
-
+  let element = "";
   for (let index = 0; index < arry.length; index++) {
-    let element;
-    console.log(arry);
-
     if (arry[index] % 5 == 0 && arry[index] % 3 == 0) {
       element = "fizzBuzz";
     } else {
       if (arry[index] % 3 == 0) {
         element = "fizz";
       }
-
       if (arry[index] % 5 == 0) {
         element = "buzz";
       } else {
@@ -103,13 +95,11 @@ function fizzBuzz(arry) {
     arryDeString.push(element);
     element = "";
   }
-
   return arryDeString;
 }
 
 // Desafio 9
 function encode(params) {
-  // seu código aqui
   let A = "1";
   let E = "2";
   let I = "3";
@@ -117,7 +107,6 @@ function encode(params) {
   let U = "5";
   let element = "";
   for (let key in params) {
-    // verificar e alterar
     switch (params[key]) {
       case "a":
         element = element + A;
@@ -143,40 +132,36 @@ function encode(params) {
   return element;
 }
 
-function decode(element) {
+function decode(params) {
   let A = "a"; //1
   let E = "e"; // 2
   let I = "i"; // 3
   let O = "o"; // 4
   let U = "u"; // 5
-  let params = "";
-
-  // console.log(params);
-  // percorer arry
-  for (let key in element) {
-    // verificar e alterar
-    switch (element[key]) {
+  let element = "";
+  for (let key in params) {
+    switch (params[key]) {
       case "1":
-        params = params + A;
+        element = element + A;
         break;
       case "2":
-        params = params + E;
+        element = element + E;
         break;
       case "3":
-        params = params + I;
+        element = element + I;
         break;
       case "4":
-        params = params + O;
+        element = element + O;
         break;
       case "5":
-        params = params + U;
+        element = element + U;
         break;
       default:
-        params = params + element[key];
+        element = element + element[key];
         break;
     }
   }
-  return params;
+  return element;
 }
 
 // Desafio 10
