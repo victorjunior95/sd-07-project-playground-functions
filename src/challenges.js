@@ -80,18 +80,21 @@ function fizzBuzz(array) {
   let newArray = [];
   for (let number of array) {
     if ((number % 5 === 0) && number % 3 === 0) {
-     return newArray.push('fizzBuzz');
+      newArray.push('fizzBuzz');
+      continue;
     }
     if (number % 5 === 0) {
-      return newArray.push('buzz');
+      newArray.push('buzz');
+      continue;
     }
     if (number % 3 === 0) {
-      return newArray.push('fizz');
+      newArray.push('fizz');
+      continue;
     }
+    newArray.push('bug!');
   }
-  return newArray.push('bug!');
+  return newArray;
 }
-
 
 // Desafio 9
 let code = {
@@ -154,7 +157,7 @@ function techList(array, name) {
   for (let techName of increasingArray) {
     let obj = {
       tech: techName,
-      name
+      name,
     }
     newArray.push(obj)
   }
