@@ -162,10 +162,9 @@ function checkNumber(number) {
     for (let k = 0; k < number.length; k += 1) {
       if (nRepeticoes === number[k]) {
         contador += 1;
+      } else if (contador >= 3) {
+        return 3;
       }
-    }
-    if (contador >= 3) {
-      return 3;
     }  
   }
   return number;
