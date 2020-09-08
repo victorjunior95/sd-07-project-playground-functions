@@ -1,42 +1,32 @@
 // Desafio 1
-
-let a = Boolean;
-let b = Boolean;
-
 function compareTrue(a, b) {
   // seu código aqui
-
   if (a === true && b === true) {
     return true
-  } else {
-    return false
   }
+  return false
 }
-//console.log(compareTrue(true, true))
+// console.log(compareTrue(true, true))
 
 // Desafio 2
-let base = 0;
-let height = 0;
-
 function calcArea(base, height) {
   // seu código aqui
   if (base > 0 && height > 0) {
-    let area = base * height / 2;
+    let area = (base * height) / 2;
     return area
-  } else {
-    return "Digite um valor válido"
   }
+  return 'Digite um valor válido'
 }
-//console.log(calcArea(4, 5));
+// console.log(calcArea(4, 5));
 
 // Desafio 3
-let str = "go Trybe";
+let str = 'go Trybe';
 function splitSentence(str) {
   // seu código aqui
-  let res = str.split (/[ ,]+/);
+  let res = str.split(/[ ,]+/);
   return res
 }
-//console.log(splitSentence(str));
+// console.log(splitSentence(str));
 
 // Desafio 4
 let arrayStr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
@@ -44,40 +34,33 @@ let arrayStr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(arrayStr) {
   // seu código aqui
   let first = arrayStr[0];
-  let last = arrayStr[arrayStr.length-1];
-  let newStr = "";
-  newStr = last + ", " + first;
+  let last = arrayStr [arrayStr.length-1];
+  let newStr = '';
+  newStr = last + ', ' + first;
   return newStr
 }
-//console.log(concatName(arrayStr));
+// console.log(concatName(arrayStr));
 
 // Desafio 5
-let wins = 0;
-let ties = 0;
-
 function footballPoints(wins, ties) {
   // seu código aqui
   if (wins >= 0 && ties >= 0) {
     let winsTotal = wins * 3;
     let pontos = winsTotal + ties;
     return pontos
-  } else {
-    return "Favor verifique os dados inseridos"
   }
+  return 'Favor verifique os dados inseridos'
 }
-//console.log(footballPoints(7, 1));
+// console.log(footballPoints(7, 1));
 
 // Desafio 6
 let numbers = [9, 1, 2, 3, 9, 5, 7];
-
 function highestCount(numbers) {
   // seu código aqui
-  numbers.sort((a,b)=>b-a);
-
+  numbers.sort((e,f) => f-e);
   if (numbers.length > 0) {
     let biggest = 0;
-    let counts = 0;
-    
+    let counts = 0;   
     for (let i = 0; i < numbers.length; i += 1) {
       if (numbers[i] >= biggest) {
         biggest = numbers[i];
@@ -85,11 +68,10 @@ function highestCount(numbers) {
       }
     }
     return counts;
-  } else {
-    return "Favor verifique os dados inseridos"
   }
+  return 'Favor verifique os dados inseridos'
 }
-//console.log(highestCount(numbers));
+// console.log(highestCount(numbers));
 
 // Desafio 7
 let cat1 = 9;
@@ -100,92 +82,89 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let dist1 = 0;
   let dist2 = 0;
-  if (cat1 >= 0 && cat2 >= 0 && mouse >=0) {
-    //1) Distância mouse e cat1:
+  if (cat1 >= 0 && cat2 >= 0 && mouse >= 0) {
+    // 1) Distância mouse e cat1:
     if (mouse > cat1) {
       dist1 = mouse - cat1;
     } else if (cat1 >= mouse) {
-      dist1 = cat1 - mouse; 
+      dist1 = cat1 - mouse;
     }
-    //2) Distância mouse e cat2:
+    // 2) Distância mouse e cat2:
     if (mouse > cat2) {
       dist2 = mouse - cat2;
     } else if (cat2 >= mouse) {
       dist2 = cat2 - mouse;
     }
-    //3) Distância entre mouse, cat1 e cat2:
+    // 3) Distância entre mouse, cat1 e cat2:
     if (dist1 === dist2) {
-      return "os gatos trombam e o rato foge"
-    //4) Menor distância:
+      return 'os gatos trombam e o rato foge'
+    // 4) Menor distância:
     } else if (dist1 < dist2) {
-      return "cat1"
+      return 'cat1'
     } else if (dist2 < dist1) {
-      return "cat2"
+      return 'cat2'
     }
-    } else {
-    return "Favor, insira dados válidos"
   }
-
+  return 'Favor, insira dados válidos'
 }
-//console.log(catAndMouse(mouse, cat1, cat2));
+// console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
-let numbersArr =  [2, 15, 7, 9, 45];
+let numbersArr = [2, 15, 7, 9, 45];
 
 function fizzBuzz(numbersArr) {
   // seu código aqui
-  let nStr = "";
+  let nStr = '';
   let nArr = [];
   if (numbersArr.length > 0) {
     for (let i = 0; i < numbersArr.length; i += 1) {
       if (numbersArr[i] % 5 === 0 && numbersArr[i] % 3 === 0) {
-        nStr = "fizzBuzz";
+        nStr = 'fizzBuzz';
       } else if (numbersArr[i] % 5 === 0) {
-        nStr = "buzz";
+        nStr = 'buzz';
       } else if (numbersArr[i] % 3 === 0) {
-        nStr = "fizz";
+        nStr = 'fizz';
       } else {
-        nStr = "bug!";
+        nStr = 'bug!';
       }
       nArr.push(nStr);
     }
     return nArr
-  } else {
-    return "Favor verifique os dados inseridos"
   }
+  return 'Favor verifique os dados inseridos'
 }
-//console.log(fizzBuzz(numbersArr));
+// console.log(fizzBuzz(numbersArr));
 
 // Desafio 9
 let myStr = "hi there!";
 
 function encode(myStr) {
   // seu código aqui
-  let vowels = myStr.replace(/a/gi, "1");
-  let vowel = vowels.replace(/e/gi, "2");
-  let vowe = vowel.replace(/i/gi, "3");
-  let vow = vowe.replace(/o/gi, "4");
-  let vo = vow.replace(/u/gi, "5");
-  return  vo
+  let vowels = myStr.replace(/a/gi, '1');
+  let vowel = vowels.replace(/e/gi, '2');
+  let vowe = vowel.replace(/i/gi, '3');
+  let vow = vowe.replace(/o/gi, '4');
+  let vo = vow.replace(/u/gi, '5');
+  return vo
 }
-//console.log(encode(myStr));
-let myOtherStr = "h3 th2r2!";
+// console.log(encode(myStr));
+let myOtherStr = 'h3 th2r2!';
 
 function decode(myOtherStr) {
   // seu código aqui
-  let myNumbers = myOtherStr.replace(/1/g, "a");
-  let myNumber = myNumbers.replace(/2/g, "e");
-  let myNumbe = myNumber.replace(/3/g, "i");
-  let myNumb = myNumbe.replace(/4/g, "o");
-  let myNum = myNumb.replace(/5/g, "u");
+  let myNumbers = myOtherStr.replace(/1/g, 'a');
+  let myNumber = myNumbers.replace(/2/g, 'e');
+  let myNumbe = myNumber.replace(/3/g, 'i');
+  let myNumb = myNumbe.replace(/4/g, 'o');
+  let myNum = myNumb.replace(/5/g, 'u');
   return myNum
 }
-//console.log(decode(myOtherStr));
+// console.log(decode(myOtherStr));
 
 // Desafio 10
 
-let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name = "Lucas";
+let tech = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let name = 'Lucas';
 
 function techList(tech, name) {
   // seu código aqui
@@ -193,43 +172,42 @@ function techList(tech, name) {
   tech.sort();
 
   if (tech.length === 0) {
-    return "Vazio!"
-  } else {
-    for (let t in tech) {
-      techArray.push ({
-        tech: tech[t],
-        name: name,
-      })
-    }
+    return 'Vazio!'
+  }
+  for (let t in tech) {
+    techArray.push({
+      tech: tech[t],
+      name: name,
+    })
   }
   return techArray
 }
-//console.log(techList(tech, name));
+// console.log(techList(tech, name));
 
 // Desafio 11
 let phoneNumber = [9, 2, 3, 0, 5, 6, 7, 8, 7, 0, 1];
 
 function generatePhoneNumber(phoneNumber) {
   // seu código aqui
-  //Estabelecer função para contagem de números repetidos:
-  function repeat (phoneNumber) {
+  // Estabelecer função para contagem de números repetidos:
+  function repeat(phoneNumber) {
     let count = 0;
     let stop = false;
     for (let phone of phoneNumber) {
       for (let otherPhone of phoneNumber) {
         if (phone === otherPhone) {
-        count += 1;
+          count += 1;
         }
       }
       if (count >= 3) {
-        stop = true; 
-      } 
+        stop = true;
+      }
       count = 0;
     }
     return stop
   }
-  //Estabelecer função para testar se os números são positivos e menores que 9:
-  function invalidNumber (phoneNumber) {
+  // Estabelecer função para testar se os números são positivos e menores que 9:
+  function invalidNumber(phoneNumber) {
     let invalid = false;
     for (let value of phoneNumber) {
       if (value < 0 || value > 9) {
@@ -238,20 +216,16 @@ function generatePhoneNumber(phoneNumber) {
     }
     return invalid
   }
-  //Verificar se o tamanho do array é 11:
+  // Verificar se o tamanho do array é 11:
   if (phoneNumber.length !== 11) {
-    return "Array com tamanho incorreto."
-  }
-  //Verificar se os números são positivos, menores que 9 e repetem até 2 vezes:
+    return 'Array com tamanho incorreto.' }
+  // Verificar se os números são positivos, menores que 9 e repetem até 2 vezes:
   else if (repeat(phoneNumber) === true || invalidNumber(phoneNumber) === true) {
-    return "não é possível gerar um número de telefone com esses valores"
-  }
-  //Imprimir os números válidos:
-  else {
-    return "(" + phoneNumber[0] + phoneNumber[1] + ") " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]
-  }      
+    return 'não é possível gerar um número de telefone com esses valores' }
+  // Imprimir os números válidos:
+  return '(' + phoneNumber[0] + phoneNumber[1] + ') ' + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + '-' + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]
 }
-console.log(generatePhoneNumber(phoneNumber));
+// console.log(generatePhoneNumber(phoneNumber));
 
 // Desafio 12
 let lineA = 4;
@@ -260,8 +234,8 @@ let lineC = 8;
 
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  var res = Boolean;
-  var abs = function (num1, num2) {
+  let res = Boolean;
+  let abs = function (num1, num2) {
     return Math.abs(num1 - num2)
   }
 
@@ -276,30 +250,30 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return res;
 }
-//console.log(triangleCheck(lineA, lineB, lineC));
+// console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
-let drink = "1 cachaça";
+let drink = '1 cachaça';
 
 function hydrate(drink) {
   // seu código aqui
   let total = 0;
 
   if (drink.length > 0) {
-    var water = drink.match(/\d+/g).map(Number); //water é array
+    let water = drink.match(/\d+/g).map(Number); // water é array
     for (let w = 0; w < water.length; w += 1) {
       if (water.length === 1 && water[w] === 1) {
-        total = water + " copo de água"
+        total = water + ' copo de água'
       } else {
-        total = water.reduce((total, currentElement) => total + currentElement) + " copos de água"
+        total = water.reduce((total, currentElement) => total + currentElement) + ' copos de água'
       }
     }
   } else {
-    total = 0 + " copos de água";
+    total = 0 + ' copos de água';
   }
-  return total 
+  return total
 }
-//console.log (hydrate(drink));
+// console.log (hydrate(drink));
 
 module.exports = {
   calcArea,
