@@ -90,9 +90,8 @@ function fizzBuzz(array) {
       vetorSaida.push('fizz');
     } else if (array[i] % 5 === 0) {
       vetorSaida.push('buzz');
-    } else {
-      vetorSaida.push('bug!');
     }
+    vetorSaida.push('bug!');
   }
 
   return vetorSaida;
