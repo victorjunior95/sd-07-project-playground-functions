@@ -132,19 +132,20 @@ function techList(tecNews, name) {
   let objectList = [];
   let listTec = tecNews.sort();
 
-  if (listTec[0] === '') {
-  objectList = 'Vazio!';
+  if (listTec.length !== 0) {
+    for (let i = 0; i < listTec.length; i += 1) {
+      let object = {
+        tech: listTec[i],
+        name
+      }
+      objectList.push(object);
+    } 
   } else {
-  for (let i = 0; i < listTec.length; i += 1) {
-    let object = {
-      tech: listTec[i],
-      name
-    }
-    objectList.push(object)
-  }
+    objectList = 'Vazio!';
   }
   return objectList;
 }
+console.log(techList([], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
