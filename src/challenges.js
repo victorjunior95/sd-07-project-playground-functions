@@ -327,35 +327,65 @@ function generatePhoneNumber(arrayNumbers) {
 
 
 // Desafio 12
-triangleCheck(14, 8, 10);
+triangleCheck(10, 13, 2);
 
 function triangleCheck(lineA, lineB, lineC) {
   console.log("");
   console.log("Desafio 12:");
+  let condition = 0;
 
   //            Condição: | b - c | < a < b + c   //
   //                      | a - c | < b < a + c   //
   //                      | a - b | < c < a + b   //
 
-  if ( (lineB - lineC) < lineA || (lineA - lineC) < lineB || (lineA - lineB) < lineC ) {
+  let firstOperation = [];
 
-    if ( lineA < (lineB + lineC) || lineB < (lineA + lineC) || lineC < (lineA + lineB) ) {
+  firstOperation.push(subLines(lineB, lineC));
+  firstOperation.push(subLines(lineA, lineC));
+  firstOperation.push(subLines(lineA, lineB));
+
+  let secondOperation = [];
+
+  secondOperation.push(sumLines(lineB, lineC));
+  secondOperation.push(sumLines(lineA, lineC));
+  secondOperation.push(sumLines(lineA, lineB));
+
+
+  if ( firstOperation[0] < lineA && lineA < secondOperation[0] ) {
+    console.log("É um triângulo");
+    return true;
+    
+  } else {
+    
+    if ( firstOperation[1] < lineB && lineB < secondOperation[1] ) {
       console.log("É um triângulo");
       return true;
-  
+    
     } else {
-      console.log("Não é um triângulo");
-      return false;
+
+      if ( firstOperation[2] < lineC && lineC < secondOperation[2] ) {
+        console.log("É um triângulo");
+        return true;
+      
+      } else {
+        console.log("Não é um triângulo");
+        return false;
+      }
     }
 
-  } else {
-    console.log("Não é um triângulo");
-    return false;
   }
+
+  
+
 }
 
+function sumLines(first, second) {
+  return Math.abs(first + second);
+}
 
-
+function subLines(first, second) {
+  return Math.abs(first - second);
+}
 
 // Desafio 13
 function hydrate () {
