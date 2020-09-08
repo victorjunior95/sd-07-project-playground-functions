@@ -196,22 +196,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function checkDrinks(string) {
-  let drink = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  let nDrinks = 0;
-  let number = 0;
-  for (let i in string) {
-    if (string.length !== 0) {
-      for (let j in drink) {
-      number = +string[i];
-      nDrinks = (number === drink[j]) ? nDrinks += drink[j] : nDrinks += 0;
-      }
-    }
+function stringInArray(string) {
+  string = string.replace(/\D/g, '');
+  let newArray = string.split('');
+  for (let i in newArray) {
+    newArray[i] = +newArray[i];
   }
-  return nDrinks;
+  return newArray;
+}
+function sumArray(string) {
+  array = stringInArray(string);
+  let sum = 0;
+  for (let i in array) {
+    sum += array[i];
+  }
+  return sum;
 }
 function hydrate(string) {
-  let result = checkDrinks(string);
+  let result = sumArray(string);
   if (result === 1) {
     return `${result} copo de água`;
   }
