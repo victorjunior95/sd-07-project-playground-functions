@@ -151,11 +151,25 @@ function generatePhoneNumber(array) {
   return 'Array com tamanho incorreto.';
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
-function triangleCheck() {
-
+function triangleCheck(lA, lB, lC) {
+  let parametros = 0;
+  let difAB = [(lA + lB), Math.abs(lA - lB)];
+  let difBC = [(lB + lC), Math.abs(lB - lC)];
+  let difCA = [(lC + lA), Math.abs(lC - lA)];
+  if (difAB[0] > lC && difAB[1] < lC) {
+    parametros += 1;
+  }
+  if (difBC[0] > lA && difBC[1] < lA) {
+    parametros += 1;
+  }
+  if (difCA[0] > lB && difCA[1] < lB) {
+    parametros += 1;
+  }
+  if (parametros === 3) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
