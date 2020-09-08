@@ -55,9 +55,9 @@ function highestCount(vetor) {
     }
   } while (swapped);
 
-  for (i = 0; i < vetor.length; i+=1) {
+  for (let i = 0; i < vetor.length; i += 1) {
     if (vetor[vetor.length - 1] === vetor[i]) {
-      j++;
+      j += 1;
     }
   }
   return j;
