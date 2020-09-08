@@ -104,13 +104,14 @@ function decode(fraseEstranha) {
 // Desafio 10
 function techList(tech, name) {
   let lista = [];
+  tech.sort();
   if (tech.length > 0) {
     for (let i = 0; i < tech.length; i += 1) {
       lista.push(
         {
           tech: tech[i],
-          name: name
-        },
+          name: name,
+        }
       );
     }
     return lista;
