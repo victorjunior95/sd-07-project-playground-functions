@@ -125,13 +125,9 @@ function generatePhoneNumber(telefone) {
   for (let i in telefone) {
     if (telefone[i] > 9 || telefone[i] < 0) {
       return "não é possível gerar um número de telefone com esses valores";
+    } else if (telefone[i] !== 1) {
+      return "Array com tamanho incorreto.";
     }
-  }
-
-  if (telefone.length === 11) {
-    telefone = `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
-  } else if (telefone.length !== 11) {
-    return "Array com tamanho incorreto.";
   }
   for (let i in telefone) {
     let captarRepeticao = telefone[i];
@@ -145,8 +141,10 @@ function generatePhoneNumber(telefone) {
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
-  return telefone
+  return `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
 }
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
