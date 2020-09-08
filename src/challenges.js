@@ -81,17 +81,23 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let arrayStrings = [];
   for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
-      arrayStrings.push('fizz');
-    } else if (numbers[i] % 3 !== 0 && numbers[i] % 5 === 0) {
-      arrayStrings.push('buzz');
-    } else if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-      arrayStrings.push('fizzBuzz');
-    } else {
-      arrayStrings.push('bug!');
-    }
+    arrayStrings.push(changeNumberForFizzBuzz(numbers[i]));
   }
   return arrayStrings;
+}
+
+function changeNumberForFizzBuzz(number) {
+  let change = '';
+  if (number % 3 === 0 && number % 5 === 0) {
+    change = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    change = 'fizz';
+  } else if (number % 5 === 0) {
+    change = 'buzz';
+  } else {
+    change = 'bug!';
+  }
+  return change;
 }
 
 // Desafio 9
