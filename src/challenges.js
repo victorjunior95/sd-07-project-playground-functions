@@ -145,7 +145,6 @@ function techList(tecNews, name) {
   }
   return objectList;
 }
-console.log(techList([], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
