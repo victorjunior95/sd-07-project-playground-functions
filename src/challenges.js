@@ -127,8 +127,15 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(stringdeentrada) {
   // seu código aqui
+  let qtd = parseInt(stringdeentrada.match(/\d/g).join(''))
+  let soma = 0
+  for (let i = 0; i < qtd.length; i+=1){
+    soma = soma + qtd[i]
+  }
+  let stringsaida = toString(soma) + " copos de água"
+  return(stringsaida)
 }
 
 module.exports = {
