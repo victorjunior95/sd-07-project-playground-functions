@@ -6,8 +6,8 @@ function compareTrue(a, b) {
   return false;
 }
 // Desafio 2
-function calcArea(base, height) {
-  let area = (base * height) / 2;
+function calcArea (base, height) {
+  let area = (base * height) /2;
 return area;
 }
 // Desafio 3
@@ -17,12 +17,11 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(arrayOfString) {
-  let lastAndFirstName = arrayOfString[arrayOfString.length-1] + ',' + arrayOfString[0];
-  return lastAndFirstName;
+  let lastAndFirstName = arrayOfString[arrayOfString.length-1]+", "+arrayOfString[0]
+  return lastAndFirstName
 }
-
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints(wins,ties) {
   let winsPoints = (wins*3);
   let tiesPoints = ties;
   let totalPoints = (winsPoints + tiesPoints);
