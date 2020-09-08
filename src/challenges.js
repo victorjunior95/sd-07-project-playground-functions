@@ -159,13 +159,13 @@ function checkNumber(number) {
   for (let i = 0; i < number.length; i += 1) {
     let contador = 0;
     let nRepeticoes = number[i];
-    for (let k = 0; k < number.length; k += 1) {
+    for (let k = 0; k <= number.length; k += 1) {
       if (nRepeticoes === number[k]) {
         contador += 1;
       } else if (contador >= 3) {
         return 3;
       }
-    }  
+    }
   }
   return number;
 }
