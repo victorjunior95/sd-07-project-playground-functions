@@ -1,14 +1,13 @@
 // Desafio 1
-function compareTrue(a,b) {
-  if(a === true && b === true){
-    return true
+function compareTrue(a, b) {
+  if (a === true && b === true) {
+    return true;
   } 
-  else {
-    return false
-  }
-};
+  {return false;};
+}
+
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let area = (base*height)/2
 return area
 };
@@ -119,11 +118,13 @@ function techList(anyArray,name) {
     let array = anyArray.sort();
     let toLearn = [];
     for(let indice in array) {
-      toLearn[indice] = { tech: array[indice], name: name };
+      toLearn.push ({ tech: array[indice], name: name }); 
       }
     return toLearn;
   }
 };
+let list = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(list, "Bruna"))
 
 // Desafio 11
 function generatePhoneNumber() {
