@@ -84,7 +84,6 @@ function fizzBuzz(array) {
 
 // Desafio 9
 let string = "hi there!";
-
 function encode(string) {
   let vazio = '';
   for (let i = 0; i < string.length; i++) {
@@ -106,7 +105,6 @@ function encode(string) {
 }
 
 let string = "h3 th2r2!";
-
 function decode(string) {
   let vazio = '';
   for (let i = 0; i < string.length; i++) {
