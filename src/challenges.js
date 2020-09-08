@@ -90,8 +90,8 @@ Exemplo: caso o gato cat2 está a 2 unidades de distância do rato, e cat1 está
 
 Caso os gatos estejam na mesma distância do rato, a função deve retornar uma string "os gatos trombam e o rato foge". */
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = math.abs(cat1 - mouse);
-  let distanceCat2 = math.abs(cat2 - mouse);
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
   if (distanceCat1 < distanceCat2) {
     return "cat1";
   } else if (distanceCat1 > distanceCat2) {
