@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (contadorCat1 < contadorCat2 && contadorCat1 > 0 && contadorCat2 > 0) {
     return "cat1";
   } else if (
-    contadorCat1 > ContadorCat2 &&
+    contadorCat1 > contadorCat2 &&
     contadorCat1 > 0 &&
     contadorCat2 > 0
   ) {
@@ -132,36 +132,36 @@ function encode(params) {
   return element;
 }
 
-function decode(params) {
+function decode(param) {
   let A = "a"; //1
   let E = "e"; // 2
   let I = "i"; // 3
   let O = "o"; // 4
   let U = "u"; // 5
-  let element = "";
-  for (let key in params) {
-    switch (params[key]) {
+  let elemento = "";
+  for (let key in param) {
+    switch (param[key]) {
       case "1":
-        element = element + A;
+        elemento = elemento + A;
         break;
       case "2":
-        element = element + E;
+        elemento = elemento + E;
         break;
       case "3":
-        element = element + I;
+        elemento = elemento + I;
         break;
       case "4":
-        element = element + O;
+        elemento = elemento + O;
         break;
       case "5":
-        element = element + U;
+        elemento = elemento + U;
         break;
       default:
-        element = element + element[key];
+        elemento = elemento + param[key];
         break;
     }
   }
-  return element;
+  return elemento;
 }
 
 // Desafio 10
