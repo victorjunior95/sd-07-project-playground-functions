@@ -277,9 +277,12 @@ function hydrate(string) {
   for (let i = 0; i < arrayNum.length; i += 1){
     somarArray += parseInt(arrayNum[i]);
   }
-
-
+  if (somarArray === 1){
+    return somarArray + "copo de água";
+  }
+  else{
   return somarArray + " copos de água";
+  }
 }
 
 hydrate("1 cachaça, 5 cervejas e 1 copo de vinho")
