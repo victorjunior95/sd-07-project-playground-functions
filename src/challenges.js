@@ -287,18 +287,16 @@ function generatePhoneNumber(arrayNumbers) {
   //-------Verificando se tem dígitos maiores que 9 ou menores que 0-------//
   for ( i = 0; i < arrayNumbers.length; i += 1 ) {
     if ( arrayNumbers[i] > 9 || arrayNumbers[i] < 0 ) {
+      firstFilter = false;
       console.log("Não é possível gerar um número de telefone com esses valores.");
       return "não é possível gerar um número de telefone com esses valores";
-    
-      firstFilter = false;
     }
     
     //-------Verificando se tem 11 dígitos--------------------------------//
     if ( arrayNumbers.length != 11 ) {
+      secondFilter = false;
       console.log("Array com tamanho incorreto.");
       return "Array com tamanho incorreto.";
-
-      secondFilter = false;
     }
   }
 
@@ -309,10 +307,9 @@ function generatePhoneNumber(arrayNumbers) {
         count += 1;
     
         if ( count >= 3 ) {
+          thirdFilter = false;
           console.log("Não é possível gerar um número de telefone com esses valores.");
           return "não é possível gerar um número de telefone com esses valores";
-          
-          thirdFilter = false;
         }
       }
   }
