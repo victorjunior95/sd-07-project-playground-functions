@@ -74,22 +74,23 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbersArray) {
   // seu código aqui
   let returnArray = []
-  for (let i = 0; i < numbersArray.length; i += 1) {
-    let value = numbersArray[i]
-    if (value % 3 === 0 && value % 5 === 0) {
+
+  numbersArray.forEach(i => {
+    if (i % 3 === 0 && i % 5 === 0) {
       returnArray.push('fizzBuzz')
     }
-    else if (value % 3 === 0) {
+    else if (i % 3 === 0) {
       returnArray.push('fizz')
     }
-    else if (value % 5 === 0) {
+    else if (i % 5 === 0) {
       returnArray.push('buzz')
     }
     else {
       returnArray.push('bug!')
     }
-  }
+  })
   return returnArray;
+  
 }
 
 // Desafio 9
