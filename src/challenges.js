@@ -166,7 +166,7 @@ function decode(string) {
     }
   }
   
-  // seu código aqui
+
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -174,6 +174,22 @@ function generatePhoneNumber() {
 }
 
 
+// Dwsafio 12 
+
+function triangleCheck(lineA, lineB, lineC) {
+  let retorno = false;
+  if (lineA < (lineB + lineC) &&
+      lineB < (lineA + lineC) &&
+      lineC < (lineB + lineA) &&
+      lineA > Math.abs(lineB - lineC) &&
+      lineB > Math.abs(lineA - lineC) &&
+      lineC > Math.abs(lineB - lineA)) {
+          retorno = true
+  } else {
+    retorno = false
+  }
+  return retorno;
+}
 // Desafio 13
 
   function hydrate(drink) {
@@ -191,7 +207,6 @@ function generatePhoneNumber() {
         return total + " copos de água"
     }
   }
-
 
 
 module.exports = {
