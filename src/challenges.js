@@ -161,10 +161,15 @@ generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result = false;
-  if (lineA < Math.abs(lineB+lineC) || lineB < Math.abs(lineA+lineC) || lineC < Math.abs(lineA+lineB)) {
+
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     result = true;
-    return result;
-  }
+  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    result = true;
+  } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+    result = true;
+  } 
+  return result;
 }
 
 triangleCheck(10, 14, 8);
