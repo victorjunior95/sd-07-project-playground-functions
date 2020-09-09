@@ -28,20 +28,12 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  let first;
-  let last;
-  let resp=" ";
-  
 
-   first= array[0];
-   last = array[array.length-1];
-
-   resp= last + "," + first;
-
-   return resp;
+  function concatName(array) {
+    return (array.pop() + ', ' + array.shift());
+  }
   
   
-
 }
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 concatName(array);
@@ -86,10 +78,33 @@ function highestCount(array) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
 
+  let dCat1 = cat1 - mouse;
+  let dCat2 = cat2 - mouse;
+  let resp = 0;
+
+    if(dCat1 < dCat2){
+      
+      Resp= "Cat1";
+      return resp;
+    }
+    else if (dCat1 > dCat2){
+
+        Resp= "Cat2";
+        return resp;
+    }else{
+
+      resp = "os gatos trombam e o rato foge.";
+      return resp;
+
+    }
+    console.log(resp);
+  }
+
+  catAndMouse(1,3,5);
+
+  
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
