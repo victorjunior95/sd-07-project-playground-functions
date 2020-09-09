@@ -35,8 +35,9 @@ function concatName(array) {
   
   
 }
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-concatName(array);
+
+//let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//concatName(array);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -87,23 +88,27 @@ function catAndMouse(mouse, cat1, cat2) {
     if(dCat1 < dCat2){
       
       Resp= "Cat1";
-      return resp;
+      
+      
+   
     }
     else if (dCat1 > dCat2){
 
         Resp= "Cat2";
-        return resp;
+        
+        
     }else{
 
       resp = "os gatos trombam e o rato foge.";
-      return resp;
+      
 
     }
-    console.log(resp);
+    
+    return resp;
+    
   }
 
-  catAndMouse(1,3,5);
-
+  catAndMouse(1, 3, 5)
   
 // Desafio 8
 function fizzBuzz() {
