@@ -1,12 +1,17 @@
 // Desafio 1
+    let num1 = 1;
+    let num2 = 2;
+    let num3 = 3;
 function compareTrue(num1,num2,num3) {
-    if((num1 < num2) && (num2 < num3)){
+    if(num1 < num2 && num2 < num3){
       return true;
     }
     else {
       return false; 
     }
+    
 }
+
 // Desafio 2
 function calcArea(base,height) {
   return area = (base*height)/2;
@@ -21,7 +26,6 @@ function splitSentence(string) {
 function concatName(numeros, maior, i) {
   numeros = []
   maior = numeros[0];
-  for
 
 
   
