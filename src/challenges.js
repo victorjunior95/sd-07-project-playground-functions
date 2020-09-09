@@ -117,9 +117,9 @@ function changeLetterNumber(char) {
 
 // Função auxiliar02 do Desafio 9
 function changeNumberLetter(number) {
-  number = parent(number);
+  number = parseInt(number);
   for (let key in code) {
-    if (number == code[key]) {
+    if (number === code[key]) {
       return key;
     }
   }
@@ -178,8 +178,7 @@ function checkMaxNumber(telefone) {
 // Função auxiliar 02 - Desafio 11
 function contRepeatNumberArray(telefone) {
   for (let number of telefone) {
-    let total = 0;
-    total = analyzesRepeatNumber(telefone, number)
+    let total = analyzesRepeatNumber(telefone, number)
     if (total === 3) return true;
   }
   return false;
