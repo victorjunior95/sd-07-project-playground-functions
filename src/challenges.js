@@ -47,7 +47,7 @@ for (var i = 0; i < array.length; i++){
 }
 
 // Desafio 7
-function catAndMouse(cat1,cat2,mouse) {
+function catAndMouse(mouse,cat1,cat2) {
   let resultado = "";
   if ((cat1 - mouse) < (cat2 - mouse)){
   resultado = "cat1";
