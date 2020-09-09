@@ -45,8 +45,10 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((mouse - cat1) < (mouse - cat2)){
+  return cat1;
+  } else return cat2;
 }
 
 // Desafio 8
