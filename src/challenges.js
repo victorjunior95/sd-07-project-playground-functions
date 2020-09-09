@@ -82,11 +82,67 @@ return(retorno);
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let palavraArray = string;
+  let newArray = [];
+  for (i in palavraArray){
+    switch (palavraArray[i]) {
+      case 'a':
+        newArray.push("1")
+        break;
+      case 'e':
+        newArray.push("2")
+        break;
+      case 'i':
+        newArray.push("3") 
+        break;
+      case 'o':
+        newArray.push("4")
+        break;
+      case 'u':
+        newArray.push("5") 
+        break;
+      default:
+        newArray.push(palavraArray[i])
+        break;
+    }
+    
+  }
+  let newString = newArray.join("")
+  return newString;
 }
-function decode() {
+
+
+
+function decode(string) {
   // seu código aqui
+  let palavraArray = string;
+  let newArray = [];
+  for (i in palavraArray){
+    switch (palavraArray[i]) {
+      case '1':
+        newArray.push("a")
+        break;
+      case '2':
+        newArray.push("e")
+        break;
+      case '3':
+        newArray.push("i") 
+        break;
+      case '4':
+        newArray.push("o")
+        break;
+      case '5':
+        newArray.push("u") 
+        break;
+      default:
+        newArray.push(palavraArray[i])
+        break;
+    }
+    
+  }
+  let newString = newArray.join("")
+  return newString;
 }
 
 // Desafio 10
