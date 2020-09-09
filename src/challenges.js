@@ -21,7 +21,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName() {
-  
+  return resultado = lista[lista.length - 1] + lista.indexOf(0);
+  }
 }
 
 // Desafio 5
