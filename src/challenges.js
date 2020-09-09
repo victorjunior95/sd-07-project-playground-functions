@@ -182,7 +182,22 @@ Entradas da função:
 ]
 Caso o array venha a função vazia sua função deve retornar 'Vazio!' */
 function techList(array, name) {
-  // seu código aqui
+  // let array é ["React", "Jest", "HTML", "CSS", "JavaScript"]
+  // let name é "Lucas"
+  // Ordena-los alfabeticamente
+  let orderArray = array.sort();
+  // Aloca-los em uma array de objetos
+  let newArray = [];
+  // Tirar as tecnologias da array
+  for (i = 0; i < orderArray.length; i += 1) {
+    // Transformar em objetos
+    let object = {};
+    object["tech"] = orderArray[i];
+    object["name"] = name;
+    // Aloca-los em uma array de objetos
+    newArray.push(object);
+  }
+  return newArray;
 }
 
 // Desafio 11
