@@ -94,7 +94,9 @@ function isDividedFor(value) {
 function fizzBuzz(numeros) {
   let msg = [];
   for (let i in numeros) {
-    msg.push(isDividedFor(numeros[i]));
+    if (Object.prototype.hasOwnProperty.call(numeros, i)) {
+      msg.push(isDividedFor(numeros[i]));
+    }
   }
   return msg;
 }
@@ -103,24 +105,26 @@ function fizzBuzz(numeros) {
 function encode(frase) {
   let msg = [];
   for (let i in frase) {
-    switch (frase[i]) {
-      case 'a':
-        msg.push('1');
-        break;
-      case 'e':
-        msg.push('2');
-        break;
-      case 'i':
-        msg.push('3');
-        break;
-      case 'o':
-        msg.push('4');
-        break;
-      case 'u':
-        msg.push('5');
-        break;
-      default:
-        msg.push(frase[i]);
+    if (Object.prototype.hasOwnProperty.call(frase, i)) {
+      switch (frase[i]) {
+        case 'a':
+          msg.push('1');
+          break;
+        case 'e':
+          msg.push('2');
+          break;
+        case 'i':
+          msg.push('3');
+          break;
+        case 'o':
+          msg.push('4');
+          break;
+        case 'u':
+          msg.push('5');
+          break;
+        default:
+          msg.push(frase[i]);
+      }
     }
   }
   return msg.join('');
@@ -129,24 +133,26 @@ function encode(frase) {
 function decode(frase) {
   let msg = [];
   for (let i in frase) {
-    switch (frase[i]) {
-      case '1':
-        msg.push('a');
-        break;
-      case '2':
-        msg.push('e');
-        break;
-      case '3':
-        msg.push('i');
-        break;
-      case '4':
-        msg.push('o');
-        break;
-      case '5':
-        msg.push('u');
-        break;
-      default:
-        msg.push(frase[i]);
+    if (Object.prototype.hasOwnProperty.call(frase, i)) {
+      switch (frase[i]) {
+        case '1':
+          msg.push('a');
+          break;
+        case '2':
+          msg.push('e');
+          break;
+        case '3':
+          msg.push('i');
+          break;
+        case '4':
+          msg.push('o');
+          break;
+        case '5':
+          msg.push('u');
+          break;
+        default:
+          msg.push(frase[i]);
+      }
     }
   }
   return msg.join('');
@@ -160,7 +166,6 @@ function techList(techName, name) {
   let objectList = [];
   for (let i in techName.sort()) {
     if (Object.prototype.hasOwnProperty.call(techName, i)) {
-
       let obj = {
         tech: '',
         name: '',
@@ -232,9 +237,11 @@ function hydrate(frase) {
   let quantidades = 0;
   let mensagem = '';
   for (let i in newFrase) {
-    let inteiro = parseInt(newFrase[i], 10);
-    if (!isNaN(inteiro)) {
-      quantidades += inteiro;
+      if (Object.prototype.hasOwnProperty.call(newFrase, i)) {    
+      let inteiro = parseInt(newFrase[i], 10);
+      if (!isNaN(inteiro)) {
+        quantidades += inteiro;
+      }
     }
   }
   switch (quantidades) {
