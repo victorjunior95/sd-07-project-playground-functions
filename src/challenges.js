@@ -38,7 +38,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6 Sem dificuldade
-function highestCount(array) {
+/*function highestCount(array) {
   let count = 0;
   let numMaior = 0;
   for (let i = 0; i < array.length; i += 1) {
@@ -50,6 +50,22 @@ function highestCount(array) {
       }
   }
   return count;
+}
+
+Esta funcionando mais não está sendo aceito
+*/
+function highestCount(numbers) {
+  let highestNumber = 0;
+  let countNumber = 0;
+  for (let i in numbers) {
+    if (highestNumber < numbers[i]) {
+      highestNumber = numbers[i];
+      countNumber = 1;
+    } else if (highestNumber === numbers[i]) {
+      countNumber += 1;
+    }
+  }
+  return countNumber;
 }
 // Desafio 7 Refiz 2x por não tratar o números negativos
 function catAndMouse(mouse, cat1, cat2) {
@@ -114,9 +130,9 @@ function encode(string) {
   return charge.join('')
 }
 
-function decode(string) {
-  let str = string.split('');
-  for (let i = 0; i < string.length; i++) {
+function decode(string2) {
+  let str = string2.split('');
+  for (let i = 0; i < string2.length; i++) {
     switch (str[i]) {
       case '1':
         str[i] = 'a';
