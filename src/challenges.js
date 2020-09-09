@@ -195,12 +195,10 @@ function techList(array, name) {
     object["tech"] = orderArray[i];
     object["name"] = name;
     // Aloca-los em uma array de objetos
-    newArray.push(object);
-
-    if (newArray.lenght == 0 && newArray[0] === null) {
-      return "Vazio!";
-    }
-      
+    newArray.push(object);      
+  }
+  if (newArray.lenght == 0 && newArray[0] === null) {
+    return "Vazio!";
   }
   return newArray;
 }
