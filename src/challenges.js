@@ -65,7 +65,7 @@ function fizzBuzz(n) {
     if(n[i]%5==0 && n[i]%3==0){
       string = "fizzBuzz";
     }
-    if(n[i]%5!=0 && n[i]%3!=0){
+    if(n[i]%5!==0 && n[i]%3!==0){
       string = "bug!";
     }
     nArray.push(string);
