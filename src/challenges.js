@@ -112,8 +112,6 @@ function encode(string) {
   return newString;
 }
 
-
-
 function decode(string) {
   // seu código aqui
   let palavraArray = string;
@@ -146,9 +144,29 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
+  function techList(tecnologias, name) {
+    let objetos = [];
+    let objeto = {
+        tech: "NomeTech",
+        name: "nome",
+    }
+    let tecnologiasEmOrdem = tecnologias.sort();
+    for (let i in tecnologiasEmOrdem) {
+        objeto = {
+            tech: tecnologiasEmOrdem[i],
+            name: name,
+        }
+        objetos.push(objeto);
+        objeto = 0;
+    }
+    if (tecnologias.length === 0){
+        return 'Vazio!';
+    } else {
+        return objetos;
+    }
+  }
+  
   // seu código aqui
-}
 
 // Desafio 11
 function generatePhoneNumber() {
