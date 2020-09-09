@@ -90,55 +90,36 @@ function fizzBuzz(numbersArray) {
     }
   })
   return returnArray;
-  
+
 }
 
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let auxString = string.split('');
-  let code = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5
+  let auxString = []
+  string.split('').map(x => {
+    if (x === 'a'){auxString.push('1')}
+    else if (x === 'e'){auxString.push('2')}
+    else if (x === 'i'){auxString.push('3')}
+    else if (x === 'o'){auxString.push('4')}
+    else if (x === 'u'){auxString.push('5')}
+    else {auxString.push(x)} 
+  });
 
-  }
-
-  for (let value in auxString) {
-    for (let compareValue in code) {
-      if (auxString[value] === compareValue) {
-        auxString[value] = code[compareValue];
-
-      }
-
-    }
-
-  }
   return auxString.join('');
 }
 function decode(string) {
   // seu código aqui
-  let auxString = string.split('');
-  let code = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5
+  let auxString = []
+  string.split('').map(x => {
+    if (x === '1'){auxString.push('a')}
+    else if (x === '2'){auxString.push('e')}
+    else if (x === '3'){auxString.push('i')}
+    else if (x === '4'){auxString.push('o')}
+    else if (x === '5'){auxString.push('u')}
+    else {auxString.push(x)} 
+  });
 
-  }
-
-  for (let value in auxString) {
-    for (let compareValue in code) {
-      if (auxString[value] === String(code[compareValue])) {
-        auxString[value] = compareValue;
-
-      }
-
-    }
-  }
   return auxString.join('');
 }
 
