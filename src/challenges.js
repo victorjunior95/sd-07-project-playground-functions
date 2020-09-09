@@ -179,45 +179,55 @@ function techList(techName, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneNumber) {
+function isPhoneNumber(phoneNumber) {
   // verifica se o número possui 11 algarismos
   if (phoneNumber.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    console.log('Array com tamanho incorreto.');
+    return false;
   }
 
   // verifica algarismo menor que zero ou maior que 9
   for (let i in phoneNumber) {
     if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      console.log('não é possível gerar um número de telefone com esses valores');
+      return false;
     }
   }
 
   // verifica se algum algarismo repete mais de 3 vezes
   for (let i in phoneNumber) {
-    let algarismo = phoneNumber[i];
-    let repeticao = 0;
-    for (let j in phoneNumber) {
-      if (algarismo === phoneNumber[j]) {
-        repeticao += 1;
+    if (Object.prototype.hasOwnProperty.call(phoneNumber, i)) {
+      let algarismo = phoneNumber[i];
+      let repeticao = 0;
+      for (let j in phoneNumber) {
+        if (algarismo === phoneNumber[j]) {
+          repeticao += 1;
+        }
+      }
+      if (repeticao >= 3) {
+        console.log('não é possível gerar um número de telefone com esses valores');
+        return false;
       }
     }
-    if (repeticao >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
   }
-
-  let formatedPhoneNumber = '(';
-  for (let i in phoneNumber) {
-    if (i === '1') {
-      formatedPhoneNumber += `${phoneNumber[i]}) `;
-    } else if (i === '6') {
-      formatedPhoneNumber += `${phoneNumber[i]}-`;
-    } else {
-      formatedPhoneNumber += `${phoneNumber[i]}`;
-    }
-  }
-  return formatedPhoneNumber;
+  return true;
 }
+
+function generatePhoneNumber(phoneNumber) {
+  if (isPhoneNumber(phoneNumber)) {
+    let formatedPhoneNumber = '(';
+    for (let i in phoneNumber) {
+      if (i === '1') {
+        formatedPhoneNumber += `${phoneNumber[i]}) `;
+      } else if (i === '6') {
+        formatedPhoneNumber += `${phoneNumber[i]}-`;
+      } else {
+        formatedPhoneNumber += `${phoneNumber[i]}`;
+      }
+    }
+    return formatedPhoneNumber;
+  }  
+}console.log(generatePhoneNumber([1, 2, 1, 1, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -237,7 +247,7 @@ function hydrate(frase) {
   let quantidades = 0;
   let mensagem = '';
   for (let i in newFrase) {
-      if (Object.prototype.hasOwnProperty.call(newFrase, i)) {    
+    if (Object.prototype.hasOwnProperty.call(newFrase, i)) {    
       let inteiro = parseInt(newFrase[i], 10);
       if (!isNaN(inteiro)) {
         quantidades += inteiro;
