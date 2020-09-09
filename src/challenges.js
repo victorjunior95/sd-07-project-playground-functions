@@ -84,43 +84,24 @@ function fizzBuzz(numeros) {
   }
   return retorno;
 }
-
+console.log(encode('hello'));
 function encode(frase) {
   let resultado = frase;
-  for (let i in resultado) {
-    if (
-      resultado[i] === 'a' ||
-      resultado[i] === 'e' ||
-      resultado[i] === 'i' ||
-      resultado[i] === 'o' ||
-      resultado[i] === 'u'
-    ) {
-      resultado = resultado.replace(/a/gi, '1');
-      resultado = resultado.replace(/e/gi, '2');
-      resultado = resultado.replace(/i/gi, '3');
-      resultado = resultado.replace(/o/gi, '4');
-      resultado = resultado.replace(/u/gi, '5');
-    } else if (
-      resultado[i] === '1' ||
-      resultado[i] === '2' ||
-      resultado[i] === '3' ||
-      resultado[i] === '4' ||
-      resultado[i] === '5'
-    ) {
-      resultado = resultado.replace(/1/gi, 'a');
-      resultado = resultado.replace(/2/gi, 'e');
-      resultado = resultado.replace(/3/gi, 'i');
-      resultado = resultado.replace(/4/gi, 'o');
-      resultado = resultado.replace(/5/gi, 'u');
-    }
-  }
+  resultado = resultado.replace(/a/gi, '1');
+  resultado = resultado.replace(/e/gi, '2');
+  resultado = resultado.replace(/i/gi, '3');
+  resultado = resultado.replace(/o/gi, '4');
+  resultado = resultado.replace(/u/gi, '5');
   return resultado;
 }
 
 function decode(frase) {
-  let texto = frase;
-  encode(texto);
-  let resultado = encode(texto);
+  let resultado = frase;
+  resultado = resultado.replace(/1/gi, 'a');
+  resultado = resultado.replace(/2/gi, 'e');
+  resultado = resultado.replace(/3/gi, 'i');
+  resultado = resultado.replace(/4/gi, 'o');
+  resultado = resultado.replace(/5/gi, 'u');
   return resultado;
 }
 
