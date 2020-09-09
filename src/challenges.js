@@ -20,11 +20,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(numeros, maior, i) {
-  numeros = []
-  maior = numeros[0];
-
-
+function concatName(lista) {
+    return resultado = lista[lista.length - 1 + lista.indexOf(0)];
+  } console.log(resultado);
   
 }
 
