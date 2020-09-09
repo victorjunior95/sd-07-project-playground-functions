@@ -53,18 +53,24 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(n) {
-  var multiplo = 0
-  for(var i = 0; i <= n; i++){
-    if(n%3==0 && n%5==0){
-      multiplo += "fizzBuzz"[i];
-    } else if (n%3==0 && n%5!=0){
-      multiplo += "fizz"[i];
-    } else if (n%3!=0 && n%5==0){
-      return "buzz"[i];
-    } else if (n%3!=0 && n%5!=0){
-      return "bug!"[i];
+  let nArray = [];
+  let string ="";
+  for(let i = 0; i <= n.length; i++){
+    if(n[i]%3==){
+      string = "fizz";
+    } 
+    if(n[i]%5==0){
+      string = "buzz";
     }
+    if(n[i]%5==0 && n[i]%3==0){
+      string = "fizzBuzz";
+    }
+    if(n[i]%5!=0 && n[i]%3!=0){
+      string = "bug!";
+    }
+    nArray.push(string);
   }
+  return nArray;
 }
 
 // Desafio 9
