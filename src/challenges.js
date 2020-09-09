@@ -260,8 +260,24 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+    // seu código aqui
+  function hydrate(drink) {
+    let num = drink.match(/\d/g);
+    let newNum = []
+    for (i in num){
+        newNum.push(parseInt(num[i]))
+    }
+    let total = newNum.reduce(function(acumulador, valorAtual, index, array) {
+        return acumulador + valorAtual;
+      });
+    if (total === 1) {
+        return total + " copo de água"
+    } else {
+        return total + " copos de água"
+    }
+  }
 }
+
 
 
 module.exports = {
