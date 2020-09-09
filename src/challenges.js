@@ -191,8 +191,8 @@ function elevenLength(valueArray) {
 
 // verifica algarismo menor que zero ou maior que 9
 function digitVerify(valueArray) {
-  for (let i in phoneNumber) {
-    if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
+  for (let i in valueArray) {
+    if (valueArray[i] < 0 || valueArray[i] > 9) {
       console.log('não é possível gerar um número de telefone com esses valores');
       return false;
     }
@@ -202,12 +202,12 @@ function digitVerify(valueArray) {
 
 // verifica se algum algarismo repete mais de 3 vezes
 function repeatVerify (valueArray) {
-  for (let i in phoneNumber) {
-    if (Object.prototype.hasOwnProperty.call(phoneNumber, i)) {
-      let algarismo = phoneNumber[i];
+  for (let i in valueArray) {
+    if (Object.prototype.hasOwnProperty.call(valueArray, i)) {
+      let algarismo = valueArray[i];
       let repeticao = 0;
-      for (let j in phoneNumber) {
-        if (algarismo === phoneNumber[j]) {
+      for (let j in valueArray) {
+        if (algarismo === valueArray[j]) {
           repeticao += 1;
         }
       }
@@ -238,7 +238,7 @@ function generatePhoneNumber(phoneNumber) {
       }
       return formatedPhoneNumber;
   }  
-}console.log(generatePhoneNumber([1, 2, 1, 1, 5, 6, 7, 8, 9, 0, 1]))
+}console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
