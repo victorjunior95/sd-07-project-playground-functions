@@ -7,15 +7,13 @@ function compareTrue(parameters1 , parameters2){
     }
 }
 //Função 2 funcionando por enquanto :3
-function calcArea(base, Height){
-    let b= base
-    let altura= Height
-    let soma= (base*altura)/2
+function calcArea(base, height){
+    let soma= (base * height) / 2;
     return soma;
     //console.log(resultado)
 }
 
-//Função 030
+//Função 03
 function splitSentence(stringName){
     return stringName.split(" ");
 }
@@ -57,4 +55,3 @@ function catAndMouse(mouse, cat1, cat2){
     }
 }
 //Função 08
-
