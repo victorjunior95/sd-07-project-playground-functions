@@ -92,7 +92,7 @@ function fizzBuzz(inputArray) {
     }else{
     numb = 'bug!';
     }
-    numberArray.push(word);
+    numberArray.push(numb);
   }
   return (numberArray);
 }
