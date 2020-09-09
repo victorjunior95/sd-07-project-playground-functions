@@ -39,10 +39,25 @@ function footballPoints(wins, ties) {
 return sun;
 }
 
-
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumber) {
   // seu código aqui
+  let result = 0;
+  let big = 0;
+  
+  for(let cont in arrayNumber)
+  {
+    if(arrayNumber[cont] > big){
+      big = arrayNumber[cont];
+    }
+}
+  for(let cont in arrayNumber){
+    if(big === arrayNumber[cont]){
+      result += 1;
+      console.log(result);
+    }
+  }
+ // console.log(result);
 }
 
 // Desafio 7
@@ -51,8 +66,9 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(entrada) {
   // seu código aqui
+  
 }
 
 // Desafio 9
