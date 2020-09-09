@@ -45,7 +45,7 @@ function highestCount() {
       }
     }
   }
-
+}
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catD1 = cat1 - mouse;
@@ -55,14 +55,14 @@ function catAndMouse(mouse, cat1, cat2) {
   }else if (catD2 < 0) {
     catD2 *= -1;
   }
-  if ((cat1 - mouse) == (cat2 - mouse)) {
-    return "os gatos trombam e o rato foge";
-  }if (catD1 < catD2) {
-    return "cat1";
-  } else {
+  if (catD1 < catD2) {
+    return 'cat1'
+  }else if (catD1 > catD2) {
     return "cat2";
   }
-}
+    return "os gatos trombam e o rato foge";
+  }
+
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -107,6 +107,7 @@ function encode(string) {
     }
   }
 }
+
 function decode(string) {
   let str = string.split('');
   for (let i = 0; i < string.length; i++) {
@@ -132,7 +133,6 @@ function decode(string) {
     }
   }
   return str.join('');
-}
 }
 
 // Desafio 10
