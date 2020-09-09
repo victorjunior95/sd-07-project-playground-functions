@@ -30,7 +30,7 @@ function concatName(arrayString){
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let sumWin = wins * 3;
+  let sumWins = wins * 3;
   let sumTies = ties * 1;
   let sun = sumWins + sumTies;
 return sun;
