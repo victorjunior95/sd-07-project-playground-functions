@@ -98,11 +98,11 @@ function fizzBuzz(array) {
 
 // Desafio 9
 let code = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5,
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5',
 }
 
 // Função auxiliar01 do Desafio 9
@@ -117,7 +117,6 @@ function changeLetterNumber(char) {
 
 // Função auxiliar02 do Desafio 9
 function changeNumberLetter(number) {
-  number = parseInt(number, 10);
   for (let key in code) {
     if (number === code[key]) {
       return key;
@@ -145,6 +144,7 @@ function decode(phase) {
   }
   return newPrase;
 }
+
 
 // Desafio 10
 function techList(array, name) {
@@ -176,24 +176,21 @@ function checkMaxNumber(telefone) {
 }
 
 // Função auxiliar 02 - Desafio 11
-function contRepeatNumberArray(telefone) {
-  let total;
-  let value;
-  for (let number of telefone) {
-    value = analyzesRepeatNumber(telefone, number);
-    total = value;
-    if (total === 3) return true;
-  }
-  return false;
-}
-
-// Função auxiliar 03 - Desafio 11
 function analyzesRepeatNumber(telefone, number) {
   let count = 0;
   for (let value of telefone) {
     if (value === number) count += 1;
   }
   return count;
+}
+// Função auxiliar 03 - Desafio 11
+function contRepeatNumberArray(telefone) {
+  let total;
+  for (let number of telefone) {
+    total = analyzesRepeatNumber(telefone, number);
+    if (total === 3) return true;
+  }
+  return false;
 }
 
 // Desafio 11
