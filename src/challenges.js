@@ -21,8 +21,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(lista) {
-  return resultado = lista[lista.length - 1] + lista.indexOf(0);
-  }
+  let resultado = lista[lista.lenght -1] + lista[0];
+return resultado
+}
 
 // Desafio 5
 function footballPoints(wins,ties) {
