@@ -39,28 +39,15 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(Array) {
   // seu código aqui
-  let uniqueKeys = Array.values()
-  let greaterValue = 0;
-  let greaterValueCont = 0
-  for (let key of uniqueKeys) {
-    let cont = 0;
-
-    for (let chave in Array) {
-      if (Array[chave] === key) {
-        cont += 1;
-
-      }
-    }
-
-    if (greaterValue <=key) {
-      greaterValue = key
-      greaterValueCont = cont;
-
-    }
-
+  let cont =[]
+  for (let i = 0; i <= 9; i += 1) {
+  let maior = Array.filter(x => x==(9-i))
+  if (maior.length != 0) {
+      cont = maior.length
+      break
   }
-  return greaterValueCont;
-
+  }
+  return cont;
 }
 
 // Desafio 7
@@ -87,26 +74,22 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbersArray) {
   // seu código aqui
   let returnArray = []
-  for (value of numbersArray) {
+  for (let i = 0; i < numbersArray.length; i += 1) {
+    let value = numbersArray[i]
     if (value % 3 === 0 && value % 5 === 0) {
       returnArray.push('fizzBuzz')
-
     }
     else if (value % 3 === 0) {
       returnArray.push('fizz')
-
     }
     else if (value % 5 === 0) {
       returnArray.push('buzz')
-
     }
     else {
       returnArray.push('bug!')
     }
   }
-
   return returnArray;
-
 }
 
 // Desafio 9
@@ -166,7 +149,7 @@ function techList(technologies, name) {
   }
   let techs = [];
 
-  for( let value of technologies.sort()){
+  for( let value of technologies.sort()) {
     techs.push({
       tech: value,
       name: name
@@ -243,12 +226,12 @@ function triangleCheck(lineA, lineB, lineC) {
   let pi = Math.PI
   let angulos = acosA + acosB + acosC
 
-  if (angulos==pi){
+  if (angulos == pi) {
       return true
   }
-  else {
-      return false
-  }
+
+  return false
+
 }
 
 // Desafio 13
@@ -261,12 +244,11 @@ function hydrate(string) {
       auxString += Number(char);
     }
   }
-  if (auxString === 1 ){
+  if (auxString === 1) {
     return `${auxString} copo de água`;
   }
-  else {
-    return `${auxString} copos de água`;
-  }
+
+  return `${auxString} copos de água`;
 
 }
 
