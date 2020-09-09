@@ -1,4 +1,3 @@
-compareTrue(2,2)
 //Voltar nesta função 1 mais tarde :c
 function compareTrue(parameters1 , parameters2){
     if(parameters1 && parameters2 === true){
@@ -7,7 +6,6 @@ function compareTrue(parameters1 , parameters2){
         return false;
     }
 }
-calcArea(1,5)
 //Função 2 funcionando por enquanto :3
 function calcArea(base, Height){
     let b= base
@@ -43,7 +41,6 @@ return sun;
 function highestCount()
 
 //Função 07
-catAndMouse(5, 4, 4)
 function catAndMouse(mouse, cat1, cat2){
     let gato1= (cat1 - mouse)
     let gato2= (cat2 - mouse)
