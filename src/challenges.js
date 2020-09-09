@@ -388,10 +388,24 @@ function subLines(first, second) {
 }
 
 // Desafio 13
-function hydrate () {
-  // seu código aqui
-}
+hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
 
+function hydrate (inputString) {
+  console.log("");
+  console.log("Desafio 13:");
+
+  let drinks = (inputString.replace(/\D/g, ""));
+  drinks = parseInt(drinks);
+
+  let sum = Array.from(drinks.toString()).map(Number);
+
+  let result = 0;
+  for ( i = 0; i < sum.length; i += 1 ) {
+    result += sum[i];
+  }
+  console.log(result);
+  return result;
+}
 
 module.exports = {
   calcArea,
