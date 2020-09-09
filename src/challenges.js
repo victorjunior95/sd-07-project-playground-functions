@@ -43,7 +43,7 @@ for (var i = 0; i < array.length; i++){
         cont++;
     }
 }
-}
+} return cont;
 }
 
 // Desafio 7
