@@ -47,8 +47,16 @@ for (var i = 0; i < array.length; i++){
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1,cat2,mouse) {
+  let resultado = "";
+  if ((cat1 - mouse) < (cat2 - mouse)){
+  resultado = "cat1";
+  } else if ((cat1 - mouse) > (cat2 - mouse)){
+  resultado = "cat2";
+  } else {
+    resultado = "os gatos trombam e o rato foge"
+  }
+  return resultado;
 }
 
 // Desafio 8
