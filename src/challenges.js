@@ -1,6 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(num1,num2,num3) {
+    var num1 = 1;
+    var num2 = 2;
+    var num3 = 3;
+    var eMenor = num1 < num2 && num2<num3;
+    var eMaior = num2 > num1 && num3>num2;
+    
 }
 
 // Desafio 2
