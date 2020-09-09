@@ -97,7 +97,7 @@ function fizzBuzz(numeros) {
     msg.push(isDividedFor(numeros[i]));
   }
   return msg;
-}console.log(fizzBuzz([2, 15, 7, 9, 45]));
+}
 
 // Desafio 9
 function encode(frase) {
@@ -159,13 +159,16 @@ function techList(techName, name) {
   }
   let objectList = [];
   for (let i in techName.sort()) {
-    let obj = {
-      tech: '',
-      name: '',
-    };
-    obj.tech = techName[i];
-    obj.name = name;
-    objectList.push(obj);
+    if (Object.prototype.hasOwnProperty.call(techName, i)) {
+
+      let obj = {
+        tech: '',
+        name: '',
+      };
+      obj.tech = techName[i];
+      obj.name = name;
+      objectList.push(obj);
+    }
   }
   return objectList;
 }
