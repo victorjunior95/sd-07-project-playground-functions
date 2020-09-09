@@ -32,7 +32,7 @@ function concatName(stringArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (wins * 3 + ties * 1);
+  return ((wins * 3) + (ties * 1));
 
 }
 
