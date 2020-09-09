@@ -20,11 +20,15 @@ function splitSentence(frase) {
 
 // Desafio 4 Concatenação de strings
 function concatName(nomes) {
-  let lista = ""
-  for (let index = 0; index < nomes.length; index++) {
-    lista = nomes[index -1];
+  let list = '';
+  for (let i = 0; i < nomes.length; i += 1) {
+    if (i === 0) {
+      list += `${nomes[nomes.length - 1]}, `;
+    } else if (i === nomes.length - 1) {
+      list += nomes[0];
+    }
   }
-  return lista;
+  return list;
 }
 
 // Desafio 5 Pontos no futebol
@@ -45,6 +49,7 @@ function highestCount() {
       }
     }
   }
+  return count;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
