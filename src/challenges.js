@@ -77,21 +77,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numeros) {
-  let msg = [];
-  for (let i in numeros) {
-    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-      msg.push('fizzBuzz');
-    } else if (numeros[i] % 3 === 0) {
-      msg.push('fizz');
-    } else if (numeros[i] % 5 === 0) {
-      msg.push('buzz');
-    } else {
-      msg.push('bug!');
-    }
+function isDividedFor(value) {
+  let msg = '';
+  if (value % 3 === 0 && value % 5 === 0) {
+    msg = 'fizzBuzz';
+  } else if (value % 3 === 0) {
+    msg = 'fizz';
+  } else if (value % 5 === 0) {
+    msg = 'buzz';
+  } else {
+    msg = 'bug!';
   }
   return msg;
 }
+
+function fizzBuzz(numeros) {
+  let msg = [];
+  for (let i in numeros) {
+    msg.push(isDividedFor(numeros[i]));
+  }
+  return msg;
+}console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(frase) {
@@ -219,27 +225,27 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(frase) {
-  let newFrase = frase.split("");
+  let newFrase = frase.split(' ');
   let quantidades = 0;
-  let mensagem = "";
+  let mensagem = '';
   for (let i in newFrase) {
-    let inteiro = parseInt(newFrase[i]);
+    let inteiro = parseInt(newFrase[i], 10);
     if (!isNaN(inteiro)) {
       quantidades += inteiro;
     }
   }
   switch (quantidades) {
     case 0:
-      mensagem = "Você não bebeu nada ainda";
+      mensagem = 'Você não bebeu nada ainda';
       break;
     case 1:
-      mensagem = "1 copo de água";
+      mensagem = '1 copo de água';
       break;
     default:
       mensagem = `${quantidades} copos de água`
   }
   return mensagem;
-} console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
+}
 
 module.exports = {
   calcArea,
