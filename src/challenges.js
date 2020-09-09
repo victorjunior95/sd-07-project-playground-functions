@@ -102,28 +102,23 @@ function fizzBuzz(arry) {
 
 // Desafio 9
 function encode(params) {
-  let A = "1";
-  let E = "2";
-  let I = "3";
-  let O = "4";
-  let U = "5";
   let element = "";
   for (let key in params) {
     switch (params.substr(key,1)) {
       case "a":
-        element = element + A;
+        element = element + "1";
         break;
       case "e":
-        element = element + E;
+        element = element + "2";
         break;
       case "i":
-        element = element + I;
+        element = element + "3";
         break;
       case "o":
-        element = element + O;
+        element = element + "4";
         break;
       case "U":
-        element = element + U;
+        element = element + "5";
         break;
       default:
         element = element + params.substr(key,1);
@@ -135,28 +130,23 @@ function encode(params) {
 }
 
 function decode(element) {
-  let A = "a"; //1
-  let E = "e"; // 2
-  let I = "i"; // 3
-  let O = "o"; // 4
-  let U = "u"; // 5
   let elemento = "";
   for (let key in element) {
     switch (element.substr(key,1)) {
       case "1":
-        elemento = elemento + A;
+        elemento = elemento + "a";
         break;
       case "2":
-        elemento = elemento + E;
+        elemento = elemento + "e";
         break;
       case "3":
-        elemento = elemento + I;
+        elemento = elemento + "i";
         break;
       case "4":
-        elemento = elemento + O;
+        elemento = elemento + "o";
         break;
       case "5":
-        elemento = elemento + U;
+        elemento = elemento + "u";
         break;
       default:
         elemento = elemento + element.substr(key,1);
