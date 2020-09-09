@@ -109,11 +109,15 @@ function generatePhoneNumber(numbers) {
   return text;
 }
 
-console.log(generatePhoneNumber([]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if((lineA + lineB) < lineC) return false;
+  if((lineA + lineC) < lineB) return false;
+  if((lineB + lineC) < lineA) return false;
+  if(Math.abs(lineA - lineB) > lineC) return false;
+  if(Math.abs(lineA - lineC) > lineB) return false;
+  if(Math.abs(lineB - lineC) > lineA) return false;
+  return true;
 }
 
 // Desafio 13
