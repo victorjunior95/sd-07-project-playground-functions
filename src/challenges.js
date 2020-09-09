@@ -106,19 +106,19 @@ function encode(params) {
   for (let key in params) {
     switch (params.substr(key,1)) {
       case "a":
-        element = element + "1";
+        element = element + 1;
         break;
       case "e":
-        element = element + "2";
+        element = element + 2;
         break;
       case "i":
-        element = element + "3";
+        element = element + 3;
         break;
       case "o":
-        element = element + "4";
+        element = element + 4;
         break;
       case "U":
-        element = element + "5";
+        element = element + 5;
         break;
       default:
         element = element + params.substr(key,1);
@@ -130,30 +130,30 @@ function encode(params) {
 }
 
 function decode(element) {
-  let elemento = "";
+  let params = "";
   for (let key in element) {
     switch (element.substr(key,1)) {
       case "1":
-        elemento = elemento + "a";
+        params = params + "a";
         break;
       case "2":
-        elemento = elemento + "e";
+        params = params + "e";
         break;
       case "3":
-        elemento = elemento + "i";
+        params = params + "i";
         break;
       case "4":
-        elemento = elemento + "o";
+        params = params + "o";
         break;
       case "5":
-        elemento = elemento + "u";
+        params = params + "u";
         break;
       default:
-        elemento = elemento + element.substr(key,1);
+        params = params + element.substr(key,1);
         break;
     }
   }
-  return elemento;
+  return params;
 }
 
 // Desafio 10
