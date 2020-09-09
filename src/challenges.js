@@ -57,7 +57,7 @@ function highestCount(arrayNumber) {
       console.log(result);
     }
   }
- // console.log(result);
+ return result;
 }
 
 // Desafio 7
