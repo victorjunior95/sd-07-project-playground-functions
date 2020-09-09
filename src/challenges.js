@@ -2,13 +2,13 @@
     let num1 = 1;
     let num2 = 2;
 function compareTrue(num1,num2) {
-    if(num1 >=0  && num1 >= num2){
-      return true;
-    }
-    else {
-      return false; 
-    }
-    
+  if(num1==true && num2 == true){
+    return true;
+  }
+  else if(num1==true && num2==false){
+    return false; 
+  }
+  
 }
 
 // Desafio 2
