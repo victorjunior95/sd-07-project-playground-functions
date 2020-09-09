@@ -46,7 +46,6 @@ function highestCount(arrayNumber){
     return result;
 }
 //Função 07
-catAndMouse(5 , 10, 6)
 function catAndMouse(mouse, cat1, cat2){
     let gato1= (cat1 - mouse);
     let gato2= (cat2 - mouse);
@@ -64,9 +63,7 @@ function catAndMouse(mouse, cat1, cat2){
 }
 //Função 08
 function fizzBuzz( numbers ){
-    //*if(typeof entrada !== 'array'){
-    // return 'Não é um numero';
-    //}
+
     let saida= [];
     for(let i= 0; i < numbers.length; i++){
         let entrada = numbers[i];
