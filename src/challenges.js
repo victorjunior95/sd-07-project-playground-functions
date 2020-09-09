@@ -171,34 +171,33 @@ function generatePhoneNumber(array) {
             } else if (array[j] == 8) {
                 cont8 = cont8 + 1;
             } else if (array[j] == 9) {
-                cont9 = cont9 + 1;
+                cont9 = cont9 ++;
             } 
-        }    
-  
-            if (value < 0 || value > 9) {
-                return 'não é possível gerar um número de telefone com esses valores';
-            } else if (i == 0) {
-                arrayResult.push('(');
-                arrayResult.push(array[i]);
-            } else if (i == 1) {
-                arrayResult.push(array[i]);
-                arrayResult.push(')');
-                arrayResult.push(' ');
-            } else if (i == 6) {
-                arrayResult.push(array[i]);
-                arrayResult.push('-')
-            } else if (i != 0 && i != 1 && i != 6) {
-                arrayResult.push(array[i]);
+            }    
+          if (value < 0 || value > 9) {
+              return 'não é possível gerar um número de telefone com esses valores';
+            } else if (i === 0) {
+              arrayResult.push('(');
+              arrayResult.push(array[i]);
+            } else if (i === 1) {
+              arrayResult.push(array[i]);
+              arrayResult.push(')');
+              arrayResult.push(' ');
+            } else if (i === 6) {
+              arrayResult.push(array[i]);
+              arrayResult.push('-')
+            } else if (i !== 0 && i !== 1 && i !== 6) {
+              arrayResult.push(array[i]);
             }
-    }
-    let result = arrayResult.join('');
-    return result;
-  }
+        }
+  let result = arrayResult.join('');
+  return result;
+}
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-    if ((lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) && (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB))) {
-        return true;
+  if ((lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) && (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB))) {
+      return true;
     } else {
       return false;
     }
