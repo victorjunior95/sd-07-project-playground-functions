@@ -123,10 +123,32 @@ function highestCount(arrayNum) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) { //input os 3 parametros
   // seu código aqui
+
+  var distCat1 = Math.abs(mouse - cat1); //ponto ed referencia o MOUSE 
+  var distCat2 = Math.abs(mouse - cat2); //MATH.ABS retorna o valor absoluto, segura que a diferenca seja sempre positiva
+  //usei no inicio CONST mas quando as distancas entre os gatos era a mesma aparecia o erro TypeError: Assignment to constant variable.
+  // se usar LET o VAR nao tem esse problema. 
+        if(distCat1 > distCat2){  // se CAT1 esta mais longe de CAT2
+           return "cat2"  //se so escrever CAT2 sem usar " " entao vou ter como resultado o NUMERO que ingrese para CAT2.
+        }
+
+        else if(distCat2 > distCat1){  // se CAT2 esta mais longe de CAT1
+           return "cat1"
+        }
+        
+        else if(distCat1 = distCat2){ //se CAT1 e CAT2 estao na mesma distanca 
+           return "os gatos trombam e o rato foge" 
+        }
 }
-//buenos dias mozart
+//console.log(catAndMouse(10,2,2));
+
+
+// Desafio 7
+//function catAndMouse() {
+  // seu código aqui
+//}
 
 
 // Desafio 8
