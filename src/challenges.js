@@ -198,7 +198,7 @@ function techList(array, name) {
     newArray.push(object);
 
     if (newArray.lenght == 0 && newArray[0] === null) {
-      newArray = "Vazio!";
+      return "Vazio!";
     }
       
   }
@@ -206,14 +206,14 @@ function techList(array, name) {
 }
 
 // Desafio 11
-/* Crie uma função chamada generatePhoneNumberque receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+/* Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
 
-Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], deve generatePhoneNumberretornar (12) 34567-8901.
+Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], deve generatePhoneNumber retornar (12) 34567-8901.
 
 Se uma função receber um array com tamanho diferente de 11, uma mesma deve retornar "Array com tamanho incorreto.".
 
 Caso algum dos números da matriz seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, deve generatePhoneNumberretornar uma string "não é possível gerar um número de telefone com esses valores". */
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
 }
 
