@@ -96,7 +96,7 @@ function encode(string) {
 function decode(string) {
   let array = string.split('');
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === 1) {
+    if (array[i] == 1) {
       array[i] = 'a';
     } else if (array[i] == 2) {
       array[i] = 'e';
