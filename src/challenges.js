@@ -32,17 +32,15 @@ function concatName(array) {
   let last;
   
 
-  //newArray= array.slice; // copia um array para outro
-
-  first= array[0];
+   first= array[0];
   last = array[array.length-1];
 
    console.log(last, first);
   
 
 }
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-concatName(array);
+//let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//sconcatName(array);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -56,30 +54,32 @@ let resp = wins *3 + ties;
 
 
 // Desafio 6
-function highestCount(array) {
-  let resp=1;
-  maior= array[0];
+function highestCount(array) { 
+  let resp =0;
+  let maior= array[0];
 
   for(let i=0; i < array.length; i+= 1){
       
       if(maior < array[i+1]){
 
-         maior = array[i+i];
+         maior = array[i+1];
       }
       
   }
   
   for(let i=0; i < array.length; i+= 1){
       
-    if(maior === array[i+1]){
+    if(maior === array[i]){
 
        resp = resp += 1;
     }
     
   }
   return resp;
+  
 }
-
+let array =[9, 1, 2, 3, 9, 5, 7]
+highestCount(array);
 
 
 // Desafio 7
