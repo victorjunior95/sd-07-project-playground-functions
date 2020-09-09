@@ -49,9 +49,9 @@ for (var i = 0; i < array.length; i++){
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   let resultado = "";
-  if ((cat1 - mouse) < (cat2 - mouse)){
+  if ((mouse - cat1) < (mouse - cat2)){
   resultado = "cat1";
-  } else if ((cat1 - mouse) > (cat2 - mouse)){
+  } else if ((mouse - cat1) > (mouse - cat2)){
   resultado = "cat2";
   } else {
     resultado = "os gatos trombam e o rato foge"
