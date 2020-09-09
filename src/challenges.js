@@ -104,9 +104,12 @@ function generatePhoneNumber(numbers) {
   let text = '(' + numbers[0] + numbers[1] + ')';
   for (let i = 2; i < 11; i += 1) {
     text = text.concat(numbers[i]);
+    if(i === 6) text = text.concat('-');
   }
   return text;
 }
+
+console.log(generatePhoneNumber([]));
 
 // Desafio 12
 function triangleCheck() {
