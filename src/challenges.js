@@ -55,7 +55,7 @@ function catAndMouse() {
 function fizzBuzz(n) {
   let nArray = [];
   let string = "";
-  for(let i = 0; i <= n.length; i++){
+  for(let i = 0; i < n.length; i++){
     if(n[i]%3==0){
       string = "fizz";
     } 
