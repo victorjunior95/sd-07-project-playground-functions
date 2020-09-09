@@ -259,8 +259,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-    // seu código aqui
+
   function hydrate(drink) {
     let num = drink.match(/\d/g);
     let newNum = []
@@ -276,7 +275,6 @@ function hydrate() {
         return total + " copos de água"
     }
   }
-}
 
 
 
