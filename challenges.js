@@ -15,7 +15,7 @@ function calcArea(base, Height){
     //console.log(resultado)
 }
 
-//Função 03
+//Função 030
 function splitSentence(stringName){
     return stringName.split(" ");
 }
