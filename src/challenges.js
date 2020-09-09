@@ -40,7 +40,8 @@ function highestCount(numeros) {
   for (let i = 0; i < numeros.length; i += 1) {
     if (higherNumber <= numeros[i]) {
       higherNumber = numeros[i];
-    }    
+    }
+  }
   for (let j = 0; j < numeros.length; j += 1) {
     if (higherNumber === numeros[j]) {
       numberOfTimes += 1;
