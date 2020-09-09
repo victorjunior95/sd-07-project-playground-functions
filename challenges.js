@@ -30,26 +30,21 @@ function footballPoints(wins, ties){
 return sun;
 }
 //Função 06
-let te=[1, 3, 4, 5, 6, 6, 6, 6]
-highestCount()
 function highestCount(arrayNumber){
     let result = 0;
     let greater = 0;
-
-    for()let cont in arrayNumber){
+    for(let cont in arrayNumber){
         if(arrayNumber[cont] > greater){
             greater = arrayNumber[cont];
         }
     }
     for(let cont in arrayNumber){
-        if(big === arrayNumber[cont]){
+        if(greater === arrayNumber[cont]){
             result += 1;
         }
     }
+    return result;
 }
-
-
-
 
 //Função 07
 function catAndMouse(mouse, cat1, cat2){
