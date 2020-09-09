@@ -170,7 +170,13 @@ function decode(string) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  let numeroString = "";
+  numero.unshift("(");
+  numero.splice(3, 0, ")");
+  numero.splice(4, 0, " ");
+  numero.splice(9, 0, "-");
+  numeroString = numero.join("")
+  return numeroString;
 }
 
 // Desafio 12
