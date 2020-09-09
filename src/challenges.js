@@ -168,7 +168,7 @@ function triangleCheck(lineA, lineB, lineC) {
     result = true;
   } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
     result = true;
-  } 
+  }
   return result;
 }
 
