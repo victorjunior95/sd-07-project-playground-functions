@@ -126,8 +126,8 @@ function changeNumberLetter(number) {
 }
 
 function encode(words) {
-  let newWords = '';
   let value;
+  let newWords = '';
   for (let char of words) {
     value = changeLetterNumber(char);
     newWords += value;
