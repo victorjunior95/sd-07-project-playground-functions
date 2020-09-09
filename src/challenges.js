@@ -173,24 +173,27 @@ function generatePhoneNumber(array) {
   if (array.length != 11) {
     return "Array com tamanho incorreto.";
   }
-  for (let i = 0; i < array.length; i += 1) {   
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";      
+      return "não é possível gerar um número de telefone com esses valores";
     }
-    let numberOfTimes = 0;
+  }
+
+  for (let i = 0; i < array.length; i += 1) {
+  let numberOfTimes = 0;
+  let teste = array[i];
     for (let j = 0; j < array.length; j += 1) { 
-      if (array[i] === array[j]) {
+      if (teste === array[j]) {
           numberOfTimes += 1;
       }
     }
-    if (numberOfTimes => 3) {
-      return "não é possível gerar um número de telefone com esses valores";    
-    } else {
-      return "(" + array[0] + array[1] + ") "  + array[2]  + array[3] + array[4]  + array[5]  + array[6]  + "-" + array[7] + array[8] + array[9] + array[10];
+    if (numberOfTimes >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
     }
-  }    
+  }
+      return "(" + array[0] + array[1] + ") "  + array[2]  + array[3] + array[4]  + array[5]  + array[6]  + "-" + array[7] + array[8] + array[9] + array[10];
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 3, -2, 5, 6, 3, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
