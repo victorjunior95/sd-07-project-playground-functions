@@ -24,7 +24,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
 }
 
 // Desafio 5
@@ -43,8 +43,19 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(n) {
+  var multiplo = ''
+  for(var i = 0; i <= n; i++){
+    if(n%3==0 && n%5==0){
+      console.log("fizzBuzz");
+    } else if (n%3==0 && n%5!=0){
+      console.log("fizz")
+    } else if (n%3!=0 && n%5==0){
+      console.log("buzz")
+    } else if (n%3!=0 && n%5!=0){
+      console.log("bug!");
+    }
+  }
 }
 
 // Desafio 9
