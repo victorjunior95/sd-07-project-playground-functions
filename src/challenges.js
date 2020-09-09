@@ -1,10 +1,8 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
   if (bol1 === true && bol2 === true) {
-  return true;
-  } else {
-  return false;
-  }
+    return true;
+  } return false;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -100,13 +98,13 @@ function decode(string) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === 1) {
       array[i] = 'a';
-    } else if (array[i] === 2) {
+    } else if (array[i] == 2) {
       array[i] = 'e';
-    } else if (array[i] === 3) {
+    } else if (array[i] == 3) {
       array[i] = 'i';
-    } else if (array[i] === 4) {
+    } else if (array[i] == 4) {
       array[i] = 'o';
-    } else if (array[i] === 5) {
+    } else if (array[i] == 5) {
       array[i] = 'u';
     }
   }
@@ -172,7 +170,7 @@ function generatePhoneNumber(array) {
         } else if (array[j] === 9) {
         cont9 = cont9 += 1;
         }
-      }    
+      }
         if (value < 0 || value > 9) {
           return 'não é possível gerar um número de telefone com esses valores';
         } else if (i === 0) {
@@ -256,7 +254,6 @@ function hydrate(string) {
     return `${final} copos de água`;
   }
 }
-
 
 module.exports = {
   calcArea,
