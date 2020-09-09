@@ -41,7 +41,6 @@ function highestCount(numeros) {
     if (higherNumber <= numeros[i]) {
       higherNumber = numeros[i];
     }    
-  }
   for (let j = 0; j < numeros.length; j += 1) {
     if (higherNumber === numeros[j]) {
       numberOfTimes += 1;
@@ -169,22 +168,28 @@ function techList(tech, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11 - falta testar repetidos
-function generatePhoneNumber(numbers) {
-  let phoneNumber = [];
-  if (numbers.length != 11) {
-    phoneNumber = "Array com tamanho incorreto.";
-  } else {
-    for (let i in numbers) {          
-      if (numbers[i] < 0 || numbers[i] > 9) {
-         phoneNumber = "não é possível gerar um número de telefone com esses valores"
-      } else {
-        phoneNumber = "(" + numbers[0] + numbers[1] + ") "  + numbers[2]  + numbers[3] + numbers[4]  + numbers[5]  + numbers[6]  + "-" + numbers[7] + numbers[8] + numbers[9] + numbers[10];
-          }            
+function generatePhoneNumber(array) {
+  if (array.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (let i = 0; i < array.length; i += 1) {   
+    if (array[i] < 0 || array[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";      
+    }
+    let numberOfTimes = 0;
+    for (let j = 0; j < array.length; j += 1) { 
+      if (array[i] === array[j]) {
+          numberOfTimes += 1;
       }
+    }
+    if (numberOfTimes > 2) {
+      return "não é possível gerar um número de telefone com esses valores";    
+    } else {
+      return "(" + array[0] + array[1] + ") "  + array[2]  + array[3] + array[4]  + array[5]  + array[6]  + "-" + array[7] + array[8] + array[9] + array[10];
+    }
   }    
-  return phoneNumber
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
