@@ -147,8 +147,8 @@ function encode(string) {
     newString = newString.replace(/u/gi, 5);
   return newString;
 }
-function decode(newString) {
-  let originalString = newString.replace(/1/g, "a");
+function decode(string) {
+  let originalString = string.replace(/1/g, "a");
     originalString = originalString.replace(/2/g, "b");
     originalString = originalString.replace(/3/g, "c");
     originalString = originalString.replace(/4/g, "d");
@@ -157,17 +157,16 @@ function decode(newString) {
 }
 
 // Desafio 10
-/* Crie uma função que recebe uma matriz de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado namecom um nome.
+/* Crie uma função que recebe uma matriz de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
 
 Para cada tecnologia sem array, crie um objeto com a seguinte estrutura:
-
 {
   tech: "NomeTech",
   name: name
 }
 Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo techno objeto.
 
-A saída da sua função deve ser uma lista de objetos ordenados pelo campo techdos objetos com o formato acima.
+A saída da sua função deve ser uma lista de objetos ordenados pelo campo tech dos objetos com o formato acima.
 
 Exemplo:
 
@@ -179,10 +178,10 @@ Entradas da função:
 // Saída:
 
 [
-  { tech: "CSS", name: "Lucas }, { tech: "HTML", name: "Lucas }, { tech: "JavaScript", name: "Lucas" }, { tech: "Jest", name: "Lucas" }, { tech: "React", name: "Lucas" }
+  { tech: "CSS", name: "Lucas" }, { tech: "HTML", name: "Lucas }, { tech: "JavaScript", name: "Lucas" }, { tech: "Jest", name: "Lucas" }, { tech: "React", name: "Lucas" }
 ]
 Caso o array venha a função vazia sua função deve retornar 'Vazio!' */
-function techList() {
+function techList(array, name) {
   // seu código aqui
 }
 
