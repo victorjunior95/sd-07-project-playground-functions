@@ -17,7 +17,6 @@ function splitSentence(frase) {
  return array
 }
 
-array = ['Trybe','programação','liberdade','dinheiro']
 
 function concatName(array) {
   let trocaString = (array[array.length - 1] + ', ' + array[0])
@@ -29,10 +28,6 @@ function footballPoints(wins, ties) {
   return Points
 }
 
-
-// Desafio 6
-
-numbers = [9,5,7,5,9,8,9,1,2,4]
 
 function highestCount(numbers) {
   let maior = numbers[0]
@@ -69,15 +64,47 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function fizzBuzz(numbers) {
+  resultado = []
+  for (let i = 0; i < numbers.length; i += 1){
+    elemento = numbers[i]
+    if (elemento % 3 === 0 && elemento % 5 ===0) {
+      resultado.push('fizzBuzz')
+    } else if (elemento % 5 === 0) {
+      resultado.push('buzz')
+    } else if (elemento % 3 ===0) {
+      resultado.push('fizz')
+    } else {
+      resultado.push('bug!')
+    }
+    console.log(resultado)  
+  }
+  return
 }
 
+
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+
+string = 'be trybe'
+
+function encode(string) {
+  array = string.split('')
+  newArray = []
+  for (i = 0;i < array.length;i += 1)
+    elemento = array[i]
+    if (elemento === 'a') {
+      newArray.push(1)
+    } else if (elemento === 'e') {
+      newArray.push(2)
+    } else if (elemento === 'i') {
+      newArray.push(3)
+    } else if (elemento === 'o') {
+      newArray.push(4)
+    }
+    } 
+encode(string)
+
 function decode() {
   // seu código aqui
 }
