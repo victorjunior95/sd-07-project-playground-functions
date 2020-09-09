@@ -96,12 +96,12 @@ function generatePhoneNumber(numbers) {
   const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
   if (numbers.length != 11) return 'Array com tamanho incorreto.';
   for (let i in numbers) {
-    if (numbers[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
+    if (numbers[i] > 9 || numbers[i] < 0) return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let i = 0; i < 10; i += 1){
     if (countOccurrences(numbers, i) > 2) return 'não é possível gerar um número de telefone com esses valores' 
   }
-  let text = '(' + numbers[0] + numbers[1] + ')';
+  let text = '(' + numbers[0] + numbers[1] + ')' + ' ';
   for (let i = 2; i < 11; i += 1) {
     text = text.concat(numbers[i]);
     if(i === 6) text = text.concat('-');
