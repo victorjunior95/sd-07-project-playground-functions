@@ -36,8 +36,10 @@ function concatName(array) {
    first= array[0];
    last = array[array.length-1];
 
-   resp= last + ", " + first;
-   console.log(resp);
+   resp= last + "," + first;
+
+   return resp;
+  
   
 
 }
