@@ -56,13 +56,13 @@ function fizzBuzz(n) {
   var multiplo = ''
   for(var i = 0; i <= n; i++){
     if(n%3==0 && n%5==0){
-      console.log("fizzBuzz");
+      return "fizzBuzz";
     } else if (n%3==0 && n%5!=0){
-      console.log("fizz")
+      return "fizz";
     } else if (n%3!=0 && n%5==0){
-      console.log("buzz")
+      return "buzz";
     } else if (n%3!=0 && n%5!=0){
-      console.log("bug!");
+      return "bug!";
     }
   }
 }
