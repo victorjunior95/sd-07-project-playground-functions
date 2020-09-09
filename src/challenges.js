@@ -117,6 +117,7 @@ function changeLetterNumber(char) {
 
 // Função auxiliar02 do Desafio 9
 function changeNumberLetter(number) {
+  number = parent(number);
   for (let key in code) {
     if (number == code[key]) {
       return key;
@@ -128,7 +129,6 @@ function changeNumberLetter(number) {
 function encode(words) {
   let newWords = '';
   let value;
-
   for (let char of words) {
     value = changeLetterNumber(char);
     newWords += value;
@@ -136,11 +136,11 @@ function encode(words) {
   return newWords;
 }
 
-function decode(words) {
+function decode(phase) {
   let newPrase = '';
   let character;
-  for (let char of words) {
-    character = changeNumberLetter(char);
+  for (let item of phase) {
+    character = changeNumberLetter(item);
     newPrase += character;
   }
   return newPrase;
@@ -177,8 +177,8 @@ function checkMaxNumber(telefone) {
 
 // Função auxiliar 02 - Desafio 11
 function contRepeatNumberArray(telefone) {
-  let total = 0;
   for (let number of telefone) {
+    let total = 0;
     total = analyzesRepeatNumber(telefone, number)
     if (total === 3) return true;
   }
