@@ -41,14 +41,19 @@ function footballPoints(wins, ties) {
 footballPoints(2, 1);
 
 // Desafio 6
-function highestCount(numbers) {
+function highestNumber(numbers) {
   let maiorNumero = 0;
-  let repeticao = 0;
   for (let index in numbers) {
     if (numbers[index] > maiorNumero) {
       maiorNumero = numbers[index];
     }
   }
+  return maiorNumero;
+}
+
+function highestCount(numbers) {
+  let repeticao = 0;
+  let maiorNumero = highestNumber(numbers);
   for (let indice in numbers) {
     if (numbers[indice] === maiorNumero) {
       repeticao += 1;
@@ -57,7 +62,7 @@ function highestCount(numbers) {
   return repeticao;
 }
 
-highestCount([9, 1, 2, 3, 9, 5, 7]);
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
