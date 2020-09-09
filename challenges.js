@@ -36,7 +36,7 @@ function footballPoints(wins, ties){
     let sumWin = wins * 3;
     let sumTies = ties * 1;
     let sun = sumWins + sumTies;
-return sun
+return sun;
 }
 
 //Função 06
@@ -49,10 +49,10 @@ function catAndMouse(mouse, cat1, cat2){
     let gato2= (cat2 - mouse)
     if(gato1 > gato2){
         //console.log(cat2)
-        return cat1
+        return cat1;
     }else if(gato2 > gato1){
         //console.log(cat1)
-        return cat2
+        return cat2;
     }else if(gato1 === gato2){
         var mengs= "os gatos trombam e o rato foge"
         //console.log(mengs)
