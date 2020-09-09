@@ -103,6 +103,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9 Essa eu tive que rever dos colegas e sites
+/* Função retornando, mas não está passando no teste ........
 function encode(string) {
   let charge = string.split('');
   for (let i = 0; i < array.length; i++) {
@@ -156,7 +157,46 @@ function decode(string2) {
   }
   return str.join('');
 }
+*/
+function encode(cod) {
+  let newCod = '';
+  for (let i = 0; i < cod.length; i += 1) {
+    if (cod[i] === 'a') {
+      newCod += '1';
+    } else if (cod[i] === 'e') {
+      newCod += '2';
+    } else if (cod[i] === 'i') {
+      newCod += '3';
+    } else if (cod[i] === 'o') {
+      newCod += '4';
+    } else if (cod[i] === 'u') {
+      newCod += '5';
+    } else {
+      newCod += cod[i];
+    }
+  }
+  return newCod;
+}
 
+function decode(dec) {
+  let newDec = '';
+  for (let i = 0; i < dec.length; i += 1) {
+    if (dec[i] === '1') {
+      newDec += 'a';
+    } else if (dec[i] === '2') {
+      newDec += 'e';
+    } else if (dec[i] === '3') {
+      newDec += 'i';
+    } else if (dec[i] === '4') {
+      newDec += 'o';
+    } else if (dec[i] === '5') {
+      newDec += 'u';
+    } else {
+      newDec += dec[i];
+    }
+  }
+  return newDec;
+}
 // Desafio 10
 function techList(array, name) {
   if (array.length !== 0) {
