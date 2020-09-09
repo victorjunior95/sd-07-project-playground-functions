@@ -38,16 +38,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6 Sem dificuldade
-function highestCount() {
+function highestCount(array) {
   let count = 0;
   let numMaior = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > numMaior) {
       numMaior = array[i];
-      if (array[i] === numMaior) {
+    }
+    if (array[i] === numMaior) {
         count += 1;
       }
-    }
   }
   return count;
 }
@@ -69,16 +69,16 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
 
-// Desafio 8 Fiz por sites
+// Desafio 8 Tive que refazer por causa da irdem de determinação, ajuda no platão vendo os dos colegas
 function fizzBuzz(array) {
   let lista = [];
   for (let i in array) {
-    if (array[i] % 3 === 0) {
-      lista.push('fizz');
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      lista.push('fizzBuzz');
     } else if (array[i] % 5 === 0) {
       lista.push('buzz');
-    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      lista.push('fizzBuzz');
+    } else if (array[i] % 3 === 0) {
+      lista.push('fizz');
     } else {
       lista.push('bug!');
     }
