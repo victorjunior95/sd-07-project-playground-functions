@@ -149,10 +149,10 @@ function encode(string) {
 }
 function decode(string) {
   let originalString = string.replace(/1/g, "a");
-    originalString = originalString.replace(/2/g, "b");
-    originalString = originalString.replace(/3/g, "c");
-    originalString = originalString.replace(/4/g, "d");
-    originalString = originalString.replace(/5/g, "e");
+    originalString = originalString.replace(/2/g, "e");
+    originalString = originalString.replace(/3/g, "i");
+    originalString = originalString.replace(/4/g, "o");
+    originalString = originalString.replace(/5/g, "u");
   return originalString;
 }
 
