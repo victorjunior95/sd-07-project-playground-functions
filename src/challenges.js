@@ -198,7 +198,7 @@ function techList(array, name) {
     newArray.push(object);      
   }
   
-  if (array.lenght === 0 && array[0] == null) {
+  if (newArray.lenght === 0 || newArray[0] == null) {
     return "Vazio!";
   }
   return newArray;
