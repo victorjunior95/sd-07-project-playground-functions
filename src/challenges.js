@@ -127,22 +127,23 @@ function changeNumberLetter(number) {
 
 function encode(words) {
   let newWords = '';
+  let value;
 
   for (let char of words) {
-    let value = changeLetterNumber(char);
+    value = changeLetterNumber(char);
     newWords += value;
   }
   return newWords;
 }
 
 function decode(words) {
-  let newWords = '';
-
+  let newPrase = '';
+  let character;
   for (let char of words) {
-    let value = changeNumberLetter(char);
-    newWords += value;
+    character = changeNumberLetter(char);
+    newPrase += character;
   }
-  return newWords;
+  return newPrase;
 }
 
 // Desafio 10
@@ -176,10 +177,10 @@ function checkMaxNumber(telefone) {
 
 // Função auxiliar 02 - Desafio 11
 function contRepeatNumberArray(telefone) {
-  let count;
+  const total;
   for (let number of telefone) {
-    count = analyzesRepeatNumber(telefone, number)
-    if (count === 3) return true;
+    total = analyzesRepeatNumber(telefone, number)
+    if (total === 3) return true;
   }
   return false;
 }
