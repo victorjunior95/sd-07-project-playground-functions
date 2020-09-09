@@ -152,31 +152,31 @@ function generatePhoneNumber(array) {
             for (let j = 0; j <= array.length; j += 1) {
              if (cont0 >= 3 || cont1 >= 3 || cont2 >= 3 || cont3 >= 3 || cont4 >= 3 || cont5 >= 3 || cont6 >= 3 || cont7 >= 3 || cont8 >= 3 || cont9 >= 3) {
                     return 'não é possível gerar um número de telefone com esses valores';
-            } else if (array[j] == 0) {
-                cont0 = cont0 + 1;
-            } else if (array[j] == 1) {
-                cont1 = cont1 + 1;
-            } else if (array[j] == 2) {
-                cont2 = cont2 + 1;
-            } else if (array[j] == 3) {
-                cont3 = cont3 + 1;
-            } else if (array[j] == 4) {
-                cont4 = cont4 + 1;
-            } else if (array[j] == 5) {
-                cont5 = cont5 + 1;
-            } else if (array[j] == 6) {
-                cont6 = cont6 + 1;
-            } else if (array[j] == 7) {
-                cont7 = cont7 + 1;
-            } else if (array[j] == 8) {
-                cont8 = cont8 + 1;
-            } else if (array[j] == 9) {
-                cont9 = cont9 ++;
+            } else if (array[j] === 0) {
+              cont0 = cont0++;
+            } else if (array[j] === 1) {
+              cont1 = cont1++;
+            } else if (array[j] === 2) {
+              cont2 = cont2++;
+            } else if (array[j] === 3) {
+              cont3 = cont3++;
+            } else if (array[j] === 4) {
+              cont4 = cont4++;
+            } else if (array[j] === 5) {
+              cont5 = cont5++;
+            } else if (array[j] === 6) {
+              cont6 = cont6++;
+            } else if (array[j] === 7) {
+              cont7 = cont7++;
+            } else if (array[j] === 8) {
+              cont8 = cont8++;
+            } else if (array[j] === 9) {
+              cont9 = cont9++;
             } 
             }    
           if (value < 0 || value > 9) {
-              return 'não é possível gerar um número de telefone com esses valores';
-            } else if (i === 0) {
+            return 'não é possível gerar um número de telefone com esses valores';
+          } else if (i === 0) {
               arrayResult.push('(');
               arrayResult.push(array[i]);
             } else if (i === 1) {
@@ -190,17 +190,17 @@ function generatePhoneNumber(array) {
               arrayResult.push(array[i]);
             }
         }
-  let result = arrayResult.join('');
-  return result;
-}
+      let result = arrayResult.join('');
+      return result;
+    }
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) && (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB))) {
-      return true;
-    } else {
-      return false;
-    }
+    return true;
+  } else {
+    return false;
+  }
 }
 // Desafio 13
 function hydrate(string) {
@@ -210,11 +210,11 @@ function hydrate(string) {
   let final = 0;
 
   for (let i = 0; i < array.length; i += 1) {
-      if (array[i] === '1') {
-          number = Number(array[i]);
-          result.push(number);
-          number = 0;
-        } else if (array[i] === '2') {
+    if (array[i] === '1') {
+        number = Number(array[i]);
+        result.push(number);
+        number = 0;
+      } else if (array[i] === '2') {
           number = Number(array[i]);
           result.push(number);
           number = 0;
@@ -247,15 +247,15 @@ function hydrate(string) {
           result.push(number);
           number = 0;
         }
-    }
+  }
   for (let j = 0; j < result.length; j += 1) {
-      final = final + result[j];
-    }
+    final += result[j];
+  }
   if (final === 1) {
-      return `${final} copo de água`;
-    } else {
-      return `${final} copos de água`;
-    }
+    return `${final} copo de água`;
+  } else {
+    return `${final} copos de água`;
+  }
 }
 
 
