@@ -1,6 +1,6 @@
 //Voltar nesta função 1 mais tarde :c
 function compareTrue(parameters1 , parameters2){
-    if(parameters1 && parameters2 === true){
+    if(parameters1 === true && parameters2 === true){
         return true;
     }else {
         return false;
