@@ -30,17 +30,19 @@ function splitSentence(str) {
 function concatName(array) {
   let first;
   let last;
+  let resp=" ";
   
 
    first= array[0];
-  last = array[array.length-1];
+   last = array[array.length-1];
 
-   console.log(last, first);
+   resp= last + ", " + first;
+   console.log(resp);
   
 
 }
-//let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-//sconcatName(array);
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+concatName(array);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -78,8 +80,7 @@ function highestCount(array) {
   return resp;
   
 }
-let array =[9, 1, 2, 3, 9, 5, 7]
-highestCount(array);
+
 
 
 // Desafio 7
