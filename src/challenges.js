@@ -109,7 +109,7 @@ function encode(params) {
   let U = "5";
   let element = "";
   for (let key in params) {
-    switch (params[key]) {
+    switch (params.substr(key,1)) {
       case "a":
         element = element + A;
         break;
@@ -126,7 +126,7 @@ function encode(params) {
         element = element + U;
         break;
       default:
-        element = element + params[key];
+        element = element + params.substr(key,1);
         break;
     }
   }
@@ -142,7 +142,7 @@ function decode(element) {
   let U = "u"; // 5
   let elemento = "";
   for (let key in element) {
-    switch (element[key]) {
+    switch (element.substr(key,1)) {
       case "1":
         elemento = elemento + A;
         break;
@@ -159,7 +159,7 @@ function decode(element) {
         elemento = elemento + U;
         break;
       default:
-        elemento = elemento + element[key];
+        elemento = elemento + element.substr(key,1);
         break;
     }
   }
