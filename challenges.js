@@ -59,25 +59,29 @@ function catAndMouse(mouse, cat1, cat2){
     }else if(gato1 === gato2){
         var mengs= "os gatos trombam e o rato foge"
         //console.log(mengs)
-        /return mengs;
+        return mengs;
     }
 }
 //Função 08
-function fizzBuzz( entrada ){
-    if(typeof entrada !== 'number'){
-        return 'Não é um numero';
+function fizzBuzz( numbers ){
+    //*if(typeof entrada !== 'array'){
+    // return 'Não é um numero';
+    //}
+    let saida= [];
+    for(let i= 0; i < numbers.length; i++){
+        let entrada = numbers[i];
+        let resultado;
+        if((entrada % 3 === 0) && (entrada % 5 === 0)){
+            resultado = "fizzBuzz";
+        }else if((entrada % 3 === 0)){
+            resultado = "fizz";
+        }else if((entrada % 5 === 0)){
+            resultado = "buzz";
+        }else{
+            resultado = "bug!";
+        }
+        saida.push(resultado)
     }
-    if((entrada % 3 === 0) && (entrada % 5 === 0)){
-        let fb= "fizzbuzz";
-    }
-    if((entrada % 3 !== 0) && (entrada % 5 !== 0)){
-        let dif= "bug!"
-    }
-    if((entrada % 3 === 0)){
-        let string1= "fizz";
-    }else if((entrada % 5 === 0)){
-        let string2= "buzz";
-    }
-
+    return saida;
 }
 
