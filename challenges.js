@@ -10,15 +10,11 @@ function compareTrue(parameters1 , parameters2){
 function calcArea(base, height){
     let soma= (base * height) / 2;
     return soma;
-    //console.log(resultado)
 }
-
 //Função 03
 function splitSentence(stringName){
     return stringName.split(" ");
 }
-
-
 //Função 04
 function concatName(arrayString){
     let first = arrayString[0];
@@ -26,7 +22,6 @@ function concatName(arrayString){
     let fullName= last + ", " + first;
     return fullName;
 }
-
 //Função 05
 function footballPoints(wins, ties){
     let sumWin = wins * 3;
@@ -34,9 +29,27 @@ function footballPoints(wins, ties){
     let sun = sumWins + sumTies;
 return sun;
 }
-
 //Função 06
-function highestCount()
+let te=[1, 3, 4, 5, 6, 6, 6, 6]
+highestCount()
+function highestCount(arrayNumber){
+    let result = 0;
+    let greater = 0;
+
+    for()let cont in arrayNumber){
+        if(arrayNumber[cont] > greater){
+            greater = arrayNumber[cont];
+        }
+    }
+    for(let cont in arrayNumber){
+        if(big === arrayNumber[cont]){
+            result += 1;
+        }
+    }
+}
+
+
+
 
 //Função 07
 function catAndMouse(mouse, cat1, cat2){
