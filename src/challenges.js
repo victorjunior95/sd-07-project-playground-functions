@@ -120,11 +120,26 @@ function triangleCheck(lineA, lineB, lineC) {
   return true;
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+var r = /\d+/g;
+var s = "you22 33 can enter 333 maximum 500 choices";
+var m;
+while ((m = r.exec(s)) != null) {
+  console.log(m[0]);
 }
 
+// Desafio 13
+function hydrate(drinks) {
+  /* Code to get integers from a string extracted in 
+  https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
+  let r = /\d+/g;
+  let m;
+  let count = 0;
+  while ((m = r.exec(drinks)) != null) {
+    count = count + parseInt(m[0]);
+  }
+  if(count === 1) return '1 copo de água';
+  return count + ' copos de água';
+}
 
 module.exports = {
   calcArea,
