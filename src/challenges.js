@@ -179,66 +179,45 @@ function techList(techName, name) {
 }
 
 // Desafio 11
-
-// verifica se o número possui 11 algarismos
-function elevenLength(valueArray) {
-  if (valueArray.length === 11) {
-    return true;
-  }
-  console.log('Array com tamanho incorreto.');
-  return false;
-}
-
-// verifica algarismo menor que zero ou maior que 9
-function digitVerify(valueArray) {
-  for (let i in valueArray) {
-    if (valueArray[i] < 0 || valueArray[i] > 9) {
-      console.log('não é possível gerar um número de telefone com esses valores');
-      return false;
-    }
-  }
-  return true;
-}
-
-// verifica se algum algarismo repete mais de 3 vezes
-function repeatVerify (valueArray) {
-  for (let i in valueArray) {
-    if (Object.prototype.hasOwnProperty.call(valueArray, i)) {
-      let algarismo = valueArray[i];
-      let repeticao = 0;
-      for (let j in valueArray) {
-        if (algarismo === valueArray[j]) {
-          repeticao += 1;
-        }
-      }
-      if (repeticao >= 3) {
-        console.log('não é possível gerar um número de telefone com esses valores');
-        return false;
-      }
-    }
-  }
-  return true;
-}
-
 function generatePhoneNumber(phoneNumber) {
-  if (
-    elevenLength(phoneNumber) &&
-    digitVerify(phoneNumber) &&
-    repeatVerify(phoneNumber)
-    ) {
-      let formatedPhoneNumber = '(';
-      for (let i in phoneNumber) {
-        if (i === '1') {
-          formatedPhoneNumber += `${phoneNumber[i]}) `;
-        } else if (i === '6') {
-          formatedPhoneNumber += `${phoneNumber[i]}-`;
-        } else {
-          formatedPhoneNumber += `${phoneNumber[i]}`;
-        }
+  // verifica se o número possui 11 algarismos
+  if (phoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  // verifica algarismo menor que zero ou maior que 9
+  for (let i in phoneNumber) {
+    if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  // verifica se algum algarismo repete mais de 3 vezes
+  for (let i in phoneNumber) {
+    let algarismo = phoneNumber[i];
+    let repeticao = 0;
+    for (let j in phoneNumber) {
+      if (algarismo === phoneNumber[j]) {
+        repeticao += 1;
       }
-      return formatedPhoneNumber;
-  }  
-}console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+    }
+    if (repeticao >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  let formatedPhoneNumber = '(';
+  for (let i in phoneNumber) {
+    if (i === '1') {
+      formatedPhoneNumber += `${phoneNumber[i]}) `;
+    } else if (i === '6') {
+      formatedPhoneNumber += `${phoneNumber[i]}-`;
+    } else {
+      formatedPhoneNumber += `${phoneNumber[i]}`;
+    }
+  }
+  return formatedPhoneNumber;
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
