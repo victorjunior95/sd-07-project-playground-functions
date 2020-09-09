@@ -403,8 +403,14 @@ function hydrate (inputString) {
   for ( i = 0; i < sum.length; i += 1 ) {
     result += sum[i];
   }
-  console.log(result + " copos de água");
-  return result + " copos de água";
+
+  if ( result > 1 ) {
+    console.log(result + " copos de água");
+    return result + " copos de água";
+  } else {
+    console.log(result + " copo de água");
+    return result + " copo de água";
+  }
 }
 
 module.exports = {
