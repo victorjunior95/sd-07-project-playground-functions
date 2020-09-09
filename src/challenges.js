@@ -54,9 +54,9 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(n) {
   let nArray = [];
-  let string ="";
+  let string = "";
   for(let i = 0; i <= n.length; i++){
-    if(n[i]%3==){
+    if(n[i]%3==0){
       string = "fizz";
     } 
     if(n[i]%5==0){
@@ -69,10 +69,10 @@ function fizzBuzz(n) {
       string = "bug!";
     }
     nArray.push(string);
+    string = "";
   }
   return nArray;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
