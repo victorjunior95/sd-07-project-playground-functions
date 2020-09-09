@@ -20,7 +20,7 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(lista) {
   return resultado = lista[lista.length - 1] + lista.indexOf(0);
   }
 }
