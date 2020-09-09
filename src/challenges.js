@@ -80,7 +80,7 @@ function fizzBuzz(numbers) {
     }
     console.log(resultado)  
   }
-  return
+  return resultado
 }
 
 
@@ -91,7 +91,7 @@ string = 'be trybe'
 function encode(string) {
   array = string.split('')
   newArray = []
-  for (i = 0;i < array.length;i += 1)
+  for (i = 0;i < array.length;i += 1) {
     elemento = array[i]
     if (elemento === 'a') {
       newArray.push(1)
@@ -102,7 +102,9 @@ function encode(string) {
     } else if (elemento === 'o') {
       newArray.push(4)
     }
-    } 
+  }
+  return
+} 
 encode(string)
 
 function decode() {
