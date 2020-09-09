@@ -196,6 +196,11 @@ function techList(array, name) {
     object["name"] = name;
     // Aloca-los em uma array de objetos
     newArray.push(object);
+
+    if (newArray.lenght == 0 && newArray[0] === nul) {
+      return "Vazio!";
+    }
+      
   }
   return newArray;
 }
