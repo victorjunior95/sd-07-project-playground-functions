@@ -1,9 +1,8 @@
 // Desafio 1
     let num1 = 1;
     let num2 = 2;
-    let num3 = 3;
 function compareTrue(num1,num2,num3) {
-    if(num1 < num2 && num2 < num3){
+    if(num1 < num2 && num2 > num1){
       return true;
     }
     else {
