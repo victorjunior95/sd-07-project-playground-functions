@@ -177,7 +177,7 @@ function checkMaxNumber(telefone) {
 
 // Função auxiliar 02 - Desafio 11
 function contRepeatNumberArray(telefone) {
-  const total;
+  const total = 0;
   for (let number of telefone) {
     total = analyzesRepeatNumber(telefone, number)
     if (total === 3) return true;
