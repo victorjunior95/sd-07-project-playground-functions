@@ -95,7 +95,7 @@ function encode(phrase) {
     } else if (phrase[i] === 'e') {
       newPhrase += '2';
     } else if (phrase[i] === 'i') {
-    newPhrase += '3';
+      newPhrase += '3';
     } else if (phrase[i] === 'o') {
       newPhrase += '4';
     } else if (phrase[i] === 'u') {
@@ -139,7 +139,7 @@ function techList(tecNews, name) {
         name
       }
       objectList.push(object);
-    } 
+  } 
   } else {
     objectList = 'Vazio!';
   }
@@ -167,7 +167,7 @@ function triangleCheck(lineA, lineB, lineC) {
     condLineB = true;
   } if (lineC < lineB + lineA && lineC > absValueAB) {
     condLineC = true;
-  }  
+}  
 
   if (condLineA && condLineB && condLineC) {
     res = true;
