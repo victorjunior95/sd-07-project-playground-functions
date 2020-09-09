@@ -64,31 +64,28 @@ function highestCount(arrayNumber) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
  if(mouse - cat1 > mouse - cat2){
- return "cat1";
-
+  return "cat1";
  }else if(mouse - cat1 < mouse - cat2){
-  
- return "cat2";
+  return "cat2";
  }else{
-   
- return "os gatos trombam e o rato foge";
+   return 'os gatos trombam e o rato foge'
  }
 }
-
 
 // Desafio 8
 function fizzBuzz(inputArray) {
   // seu código aqui
   let numberArray = [];
+
   for(cont in inputArray){
     if((inputArray[cont] % 3 == 0) && (inputArray[cont] % 5 == 0)){
-      numberArray[cont] = 'fizzBuzz';
+    console.log(numberArray[cont] = 'fizzBuzz');
     }else if(numberArray[cont] % 5 == 0){
-      numberArray[cont] = 'buzz';
+      console.log(numberArray[cont] = 'buzz');
     }else if(numberArray[cont] % 3 == 0){
-      numberArray[cont] = 'fizz';
+      console.log(numberArray[cont] = 'fizz');
     }else{
-      numberArray[cont] = 'bug!';
+      console.log(numberArray[cont] = 'bug!');
     }
   }
 }
