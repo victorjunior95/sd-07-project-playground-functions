@@ -147,8 +147,52 @@ function techList(tecNews, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function arraySize(numbers1) {
+  let numbersSize;
+  if (numbers.length === 11) {
+    numbersSize = numbers;
+  } else {
+    numbersSize = `Array com tamanho incorreto.`;
+  }
+  return numbersSize;
+}
+
+function checkNumbers(numbers2) {
+  for (let index = 0; index < numbers2.length; index += 1) {
+    if (numbers2[index] >= 0 && numbers2[index] <= 9) {
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+let numbers3 = [1, 2, 3, 4, 5, 6, 1, 8, 9, 0, 1];
+function repeatedNumbers(numbers3) {
+  let compareObject = {
+    0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0
+  }
+
+  for (let key in compareObject) {
+    for (index = 0; index < numbers3.length; index += 1) {
+      if (compareObject[key] === numbers3[index]) {
+        let nw = compareObject.map(p => p.key + 1);
+      }
+    }
+  }
+  for (let key2 in compareObject) {
+    if (compareObject[key2] > 2) {
+      return true;
+    }
+  } return false;
+}
+
+let a = repeatedNumbers(numbers3);
+console.log(a);
+
+
+function generatePhoneNumber(numbers) {
+  
 }
 
 // Desafio 12
