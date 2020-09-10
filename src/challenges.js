@@ -95,14 +95,10 @@ function fizzBuzz(numbersArray) {
 
 // Desafio 9
 function encode(code) {
-  // seu código aqui
-  let auxCode = code.split('').map(x => { return codeDecode(x, 1) });
-  return auxCode.join('');
+  return code.split('').map(x => { return codeDecode(x, 1) }).join('');
 }
 function decode(decode) {
-  // seu código aqui
-  let auxDecode = decode.split('').map(x => { return codeDecode(x, 2) });
-  return auxDecode.join('');
+  return decode.split('').map(x => { return codeDecode(x, 2) }).join('');
 }
 
 function codeDecode(x,identify){
