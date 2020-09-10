@@ -123,7 +123,7 @@ function fizzBuzz(vet) {
    
     if (vet[i]% 3 === 0 && vet[i]% 5 === 0){
 
-      vet1[i]= "fizzbuzz";
+      vet1[i]= "fizzBuzz";
     }
     else if(vet[i]% 3 === 0){
 
