@@ -110,8 +110,28 @@ return newArray;
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  // seu código 
+  let newString = ""
+    for(let index = 0 ; index < string.length ; index++) {
+      if (string[index] === "a"){
+        newString += "1";
+      }
+      else if (string[index] === "e"){
+        newString += "2";
+      }
+      else if (string[index] === "i"){
+        newString += "3";
+      }
+      else if (string[index] === "o"){
+        newString += "4";
+      }else if (string[index] === "u"){
+        newString += "5"
+      }else {
+        newString += string[index];
+      }
+    }
+      return newString;
 
 }
 function decode() {
