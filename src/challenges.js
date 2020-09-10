@@ -204,8 +204,6 @@ let result = " ";
 return result;
 }
 
-let a = "helo world";
- encode(a)
 
 function decode(str) {
   // seu código aqui
@@ -258,14 +256,14 @@ function decode(str) {
           
     }
   
-  console.log(result);
+  return result;
   }
-  //let b="h3 th2r2"
-  decode(result);
+ 
 
 // Desafio 10
 function techList() {
   // seu código aqui
+  idfgpdifpgodi
 }
 
 // Desafio 11
