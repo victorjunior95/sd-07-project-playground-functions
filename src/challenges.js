@@ -31,7 +31,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let string = array[array.length -1] + " ," + array[0] ;
+  let string = array[array.length -1] + ", " + array[0] ;
   return string;
 }
 
@@ -48,8 +48,8 @@ function highestCount(array) {
   let max = array[0]
 
   for (let i in array){
-    if (i > max){
-    max = i;
+    if (array[i] > max){
+    max = array[i]
   }
 }
   let counter = 0
@@ -62,7 +62,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(cat1 , cat2 , mouse) {
+function catAndMouse(mouse , cat1 , cat2) {
   // seu código aqui
   let absoluteDistance1 = cat1 - mouse;
   if(absoluteDistance1 < 0 ) {
@@ -102,6 +102,7 @@ function fizzBuzz(array) {
       resultArray.push("Bug!")
     }
 }
+return resultArray;
 }
 
 // Desafio 9
