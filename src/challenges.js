@@ -141,30 +141,28 @@ function techList(technologies, name) {
   return techs;
 }
 
-// Desafio 11
-// Desafio 11
 function generatePhoneNumber(phone) {
   //checking repeated numbers
-  let checker = 0
-  for (let i = 0; i < phone.length; i += 1) {
-  if(phone[i] < 0 || phone[i] > 9) {
-    checker = 3
-    break
-  }
-  let maior = phone.filter(x => x===(i))
-  if (maior.length > checker) { checker = maior.length }
-  }
-  
   if (phone.length != 11) { return 'Array com tamanho incorreto.' }
-  else if (checker >= 3) {
+  else if (phone.find(function(telChar) { return telChar < 0 || telChar > 9 }) || belowZeroAboveNine(phone) >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
+  
   phone.splice(0,0,'(')
   phone.splice(3,0,') ')
   phone.splice(-4,0,'-')
   
   return phone.join('');
 
+}
+
+function belowZeroAboveNine(numbers) {
+  let cont = 0
+  for (let i = 0; i <= 9; i += 1) {
+  let maior = numbers.filter(x => x==(i))
+  if (maior.length > cont) { cont = maior.length }
+  }
+  return cont
 }
 
 // Desafio 12
