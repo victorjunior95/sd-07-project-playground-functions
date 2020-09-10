@@ -175,11 +175,23 @@ function triangleCheck(lineA, lineB, lineC) {
     res = false;
   }
   return res;
-}
+} 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  let regEx = /\d/g;
+  let strDrink = drink.match(regEx);
+  let hydration = 0;
+  for (let index = 0; index < strDrink.length; index += 1) {
+    hydration += parseInt(strDrink[index]);
+  }
+  let messageHydration;
+  if (hydration > 1) {
+    messageHydration = `${hydration} copos de água`;
+  } else {
+    messageHydration = `${hydration} copo de água`;
+  }
+  return messageHydration;
 }
 
 
