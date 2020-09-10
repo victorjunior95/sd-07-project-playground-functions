@@ -93,8 +93,21 @@ function decode(str) {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+function techList(arr, name) {
+  let result = [];
+  arr.sort();
+  if (arr.length <= 0) {
+    return 'Vazio!';
+  }
+  for (let cont in arr) {
+    result.push({
+      tech: arr[cont],
+      name: name,
+    });
+  }
+  return result;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
