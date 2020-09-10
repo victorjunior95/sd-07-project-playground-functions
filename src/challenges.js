@@ -6,18 +6,20 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let trianguloArea = ((base * height)/2);
+  let trianguloArea = ((base * height) / 2);
   return trianguloArea;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let aPalavras = frase.split(' ');
+  return aPalavras;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let tamanho = nomes[nomes.length -1] + `, ` + nomes[0];
+  return tamanho;
 }
 
 // Desafio 5
