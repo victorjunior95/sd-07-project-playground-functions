@@ -11,13 +11,16 @@ function calcArea(b,h) {
 
 // Desafio 3
 function splitSentence(s) {
-  let array = s.split('');
+  let array = s.split(' ');
   return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let primeiroItem = array[0];
+  let ultimoItem = array[array.length - 1];
+  let string = ultimoItem.concat(', ', primeiroItem);
+  return string;
 }
 
 // Desafio 5
