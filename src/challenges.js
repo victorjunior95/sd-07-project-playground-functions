@@ -66,6 +66,7 @@ function techList() {
 function generatePhoneNumber() {
   // seu código aqui
 }
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
