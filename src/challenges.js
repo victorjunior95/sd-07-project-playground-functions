@@ -66,13 +66,26 @@ function catAndMouse(mouse, cat1, cat2) {
   } else { distWin = tie; }
   return distWin;
 }
-console.log (catAndMouse(1,-3,1));
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(num) {
+  const fi = 'fizz'; // Divisivel por 3
+  const bz = 'buzz'; // Divisivel por 5
+  const fiBz = 'fizzBuzz' // Divisivel por 3 e por 5
+  const x = 'bug!' // Não é divisivel;
+  let output = [];
+  for (let index in num){
+    if (num[index] % 3 == 0 && num[index] % 5 == 0){
+      output.push(fiBz);
+    } else if (num[index] % 3 == 0){
+      output.push(fi);
+    } else if (num[index] % 5 == 0){
+      output.push(bz);
+    } else {
+        output.push(x);
+      }
+  } 
+  return output;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
