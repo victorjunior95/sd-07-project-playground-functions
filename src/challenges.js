@@ -167,13 +167,13 @@ function generatePhoneNumber(phoneArray) {
 
   for (let i in phoneArray) {
     if (phoneArray[i] < 0 || phoneArray[i] > 9 || repeatedNumber(phoneArray) >= 3) {
-      phoneNumbers = 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      let phoneString = phoneArray.join('');
-      phoneNumbers = `(${phoneString.substring(0,2)}) ${phoneString.substring(2,7)}-${phoneString.substring(7)}`;
+      return 'não é possível gerar um número de telefone com esses valores';
     }
+    
+    let phoneString = phoneArray.join('');
+    phoneNumbers = `(${phoneString.substring(0,2)}) ${phoneString.substring(2,7)}-${phoneString.substring(7)}`;  
   }
-
+  
   return phoneNumbers;
 }
 
