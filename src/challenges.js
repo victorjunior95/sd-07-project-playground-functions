@@ -93,13 +93,13 @@ dCat1 = cat1 - mouse;
 dCat2 = cat2 - mouse;
 
     if(dCat1 < dCat2){
-      Resp = "Cat1";
+      Resp = "cat1";
       
          
     }
     else if (dCat1 > dCat2){
         
-        Resp = "Cat2";
+        Resp = "cat2";
                
     }
     else{
