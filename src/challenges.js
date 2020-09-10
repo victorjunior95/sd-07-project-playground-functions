@@ -122,7 +122,7 @@ if (dCat2 < 0){
   
     
   }
- catAndMouse(1,0,2);
+ //catAndMouse(1,0,2);
 
 
   
@@ -166,7 +166,7 @@ let array
 
 array= str.split("");//transferi cada letra da string pra uma posição do array.
 
-let result = " ";
+let result = "";
 
 
   for(let i=0; i< array.length; i +=1){
@@ -221,7 +221,7 @@ function decode(str) {
 
   array= str.split("");//transferi cada letra da string pra uma posição do array.
   
-  let result = " ";
+  let result = "";
   
   
     for(let i=0; i< array.length; i +=1){
