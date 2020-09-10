@@ -79,7 +79,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse());
+//console.log(catAndMouse());
 
 // Desafio 8
 function fizzBuzz(arrayNum = []) {
@@ -102,13 +102,28 @@ return arrayReturn;
 
 
 // Desafio 9
-function encode() {
-
+function encode(encoding) {
+  
+  return encoding = encoding.replace(/a/g, '1'),
+   encoding = encoding.replace(/e/g, '2'),
+   encoding = encoding.replace(/i/g, '3'),
+   encoding = encoding.replace(/o/g, '4'),
+   encoding = encoding.replace(/u/g, '5');
+ 
 }
-function decode() {
-  // seu código aqui
-}
+console.log(encode());
 
+
+function decode(decoding) {
+
+  return decoding = decoding.replace(/1/g, 'a'),
+   decoding = decoding.replace(/2/g, 'e'),
+   decoding = decoding.replace(/3/g, 'i'),
+   decoding = decoding.replace(/4/g, 'o'),
+   decoding = decoding.replace(/5/g, 'u');
+ 
+}
+console.log(decode());
 // Desafio 10
 function techList() {
   // seu código aqui
