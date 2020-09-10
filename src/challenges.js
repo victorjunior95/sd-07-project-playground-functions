@@ -125,8 +125,8 @@ function decode(decoding = "h3 th2r2") {
 }
 console.log(decode());
 // Desafio 10
-function techList(tech, name) {
-  let result = [];
+function techList(tech=[], name) {
+  let result=[];
   tech.sort();
   
  for(let index = 0; index < tech.length; index +=1){
