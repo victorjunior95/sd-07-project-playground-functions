@@ -57,16 +57,16 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   //let gato1= (cat1 - mouse);
   //let gato2= (cat2 - mouse);
-  if((cat1 - mouse) < (cat2 - mouse)){
-      console.log(cat2)
-      //return cat2;
-  }else if((cat1 - mouse) > (cat2 - mouse)){
-      console.log(cat1)
-      //return cat1;
-  }else if((cat1 - mouse) === (cat2 - mouse)){
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
+
+  if(distCat1 > distCat2){
+      return 'cat2';
+  }else if(distCat2 < distCat1){
+      return 'cat1';
+  }else if(distCat1 === distCat2){
       var mengs= "os gatos trombam e o rato foge"
-      console.log(mengs)
-      //return mengs;
+      return mengs;
   }
 }
 
