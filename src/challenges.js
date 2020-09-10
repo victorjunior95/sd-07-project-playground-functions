@@ -165,7 +165,21 @@ function decode(string) {
 // Desafio 10
 function techList(array , name) {
   // seu código aqui
- 
+  let = techSkills = {
+ };
+ let orderArray = array.sort();
+ let receiverArray =[]
+  for(let skill in orderArray) {
+    let object = {
+      tech: orderArray[skill],
+      name: name,
+    }
+  receiverArray.push(object)
+  }
+  if  (array.length ===0 ){ 
+    return "Vazio!"
+  }
+  return receiverArray;
 }
 
 // Desafio 11
