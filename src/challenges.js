@@ -72,7 +72,6 @@ function fizzBuzz(a) {
 }
 
 // Desafio 9
-function encode() {
 function encode(str) {
   let word = str.replace(/a/g, '1');
   word = word.replace(/e/g, '2');
@@ -81,7 +80,6 @@ function encode(str) {
   word = word.replace(/u/g, '5');
   return word;
 }
-function decode() {
 function decode(str) {
   let word = str.replace(/1/g, 'a');
   word = word.replace(/2/g, 'e');
@@ -92,7 +90,6 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
 function techList(arr, name) {
   let result = [];
   arr.sort();
