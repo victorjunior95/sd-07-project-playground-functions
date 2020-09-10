@@ -96,32 +96,37 @@ function fizzBuzz(numbersArray) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let auxString = []
-  string.split('').map(x => {
-    if (x === 'a'){auxString.push('1')}
-    else if (x === 'e'){auxString.push('2')}
-    else if (x === 'i'){auxString.push('3')}
-    else if (x === 'o'){auxString.push('4')}
-    else if (x === 'u'){auxString.push('5')}
-    else {auxString.push(x)} 
-  });
-
+  let auxString = string.split('').map(x => { return codeDecode(x, 1) });
   return auxString.join('');
 }
 function decode(string) {
   // seu código aqui
-  let auxString = []
-  string.split('').map(x => {
-    if (x === '1'){auxString.push('a')}
-    else if (x === '2'){auxString.push('e')}
-    else if (x === '3'){auxString.push('i')}
-    else if (x === '4'){auxString.push('o')}
-    else if (x === '5'){auxString.push('u')}
-    else {auxString.push(x)} 
-  });
-
+  let auxString = string.split('').map(x => { return codeDecode(x, 2) });
   return auxString.join('');
 }
+
+function codeDecode(x,identify){
+  let decode = ['a', 'e', 'i', 'o', 'u']
+  let code = ['1', '2', '3', '4', '5']
+  let result = []
+  let compare = []
+  if(identify === 1){
+    result = code
+    compare = decode
+  }
+  else if (identify === 2) {
+    result = decode
+    compare = code
+  }
+
+  if (x === compare[0]){return result[0]}
+  else if (x === compare[1]){return result[1]}
+  else if (x === compare[2]){return result[2]}
+  else if (x === compare[3]){return result[3]}
+  else if (x === compare[4]){return result[4]}
+  else {return x} 
+}
+
 
 // Desafio 10
 function techList(technologies, name) {
