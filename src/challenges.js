@@ -39,12 +39,12 @@ function footballPoints(wins, ties) {
 function highestCount(arry) {
   let maiorN = 0;
   let contador = 0;
-  for (key in arry) {
+  for (let key in arry) {
     if (arry[key] > maiorN) {
       maiorN = arry[key];
     }
   }
-  for (key in arry) {
+  for ( key in arry) {
     if (arry[key] == maiorN) {
       contador += 1;
     }
@@ -101,7 +101,7 @@ function fizzBuzz(arry) {
 
 // Desafio 9
 function encode(params) {
-  let element;
+  let element='';
   for (let key in params) {
     switch (params.substr(key, 1)) {
       case 'a':
@@ -128,10 +128,10 @@ function encode(params) {
   return element;
 }
 
-function decode(element) {
+function decode(params) {
   let element2='' ;
-  for (let key in element) {
-    switch (element.substr(key, 1)) {
+  for (let key in params ){
+    switch (params.substr(key, 1)) {
       case '1':
         element2 = element2 + 'a';
         break;
@@ -148,13 +148,14 @@ function decode(element) {
         element2 = element2 + 'u';
         break;
       default:
-        element2 = element2 + element.substr(key, 1);
+        element2 = element2 + params.substr(key, 1);
         break;
     }
   }
   return element2;
 }
-
+//console.log(encode('word'));
+//console.log(decode('w4rd' ));
 // Desafio 10
 function techList(tech, name) {
   let arrayObjeto = [];
