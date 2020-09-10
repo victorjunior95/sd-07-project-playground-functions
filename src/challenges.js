@@ -113,7 +113,7 @@ if (dCat2 < 0){
                
     }
     else {     
-      Resp = "os gatos trombam e o rato foge.";
+      Resp = "os gatos trombam e o rato foge";
     
       
     }
