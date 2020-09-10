@@ -58,15 +58,18 @@ console.log(highestCount(num));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let maisProximo = '';
-  for (let i = 1; i <= bicho.length; i += 1){
     if ((mouse - cat1) < (mouse - cat2)){
-      maisProximo = 'cat1';
+      if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
+        maisProximo = "cat1";
+      }
     } else if ((mouse - cat1) > (mouse - cat2)){
-      maisProximo = 'cat2';
-    }else {
+    } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
+        maisProximo = "cat2";
+      }
+     else {
       maisProximo = 'os gatos trombam e o rato foge';
     }
-  }
+  
   return maisProximo;
 }
 let bicho = ['mouse', 'cat1', 'cat2'];
@@ -116,12 +119,20 @@ console.log(decode(frase2));
 
 // Desafio 10
 function techList(tech, name) {
+  let nomesTecnologias = []; 
+  let tecnologiasAZ = tech.sort(); 
   if(tech.length === 0){
     return 'Vazio!';
   }
-let nomesTecnologias = [] 
-let tecnologiasAZ = tech.sort();
+
+for (let i = 0; i < tech.length; i += 1){
+  nomesTecnologias.push = tech[i];
 }
+return nomesTecnologias + ",";
+}
+let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Lucas";
+console.log(techList(tech, name));
 
 // Desafio 11
 function generatePhoneNumber() {
