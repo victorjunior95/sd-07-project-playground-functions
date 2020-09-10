@@ -90,13 +90,13 @@ function fizzBuzz(array) {
   // seu código aqui
   let resultArray = []
   for (let index in array) {
-    if(array[index] % 3 === 0 && array[index] % 5 === 0) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0 ) {
       resultArray.push("fizzbuzz")
     }
-    else if (array[index] % 3 === 0 && array[index] % 5 !==0 ) {
+    else if (array[index] % 3 === 0 && array[index] % 5 != 0 ) {
       resultArray.push("fizz")
     }
-    else if (array[index] % 5 === 0 && array[index] % 3 !==0 ) {
+    else if (array[index] % 5 === 0 && array[index] % 3 != 0 ) {
       resultArray.push("buzz")
     }
     else {
