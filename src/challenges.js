@@ -45,28 +45,80 @@ function highestCount(numeros) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let retorno ='';
+  if ((mouse - cat1) < (mouse - cat2)) {
+    retorno = "cat1";
+  } else if ((mouse - cat1) > (mouse - cat2)) {
+    retorno = "cat2";
+  } else {
+    retorno = "os gatos trombam e o rato foge";
+  }
+  return retorno;
 }
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let resultado = [];
+  let valor = '';
+  for(let i=0; i < numeros.length; i += 1){
+    if( (numeros[i] % 3 === 0) && (numeros[i] % 5 === 0)){
+      valor = 'fizzBuzz';
+    }else if(numeros[i] % 3 === 0){
+      valor = 'fizz';
+    }else if(numeros[i] % 5 === 0){
+      valor = 'buzz';
+    }else{
+      valor = 'bug!'
+    }
+    resultado.push(valor);
+    valor = '';
+  }
+  return resultado;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseResultante = frase.replace(/a/g, '1');
+  fraseResultante = fraseResultante.replace(/e/g, '2');
+  fraseResultante = fraseResultante.replace(/i/g, '3');
+  fraseResultante = fraseResultante.replace(/o/g, '4');
+  fraseResultante = fraseResultante.replace(/u/g, '5');
+  return fraseResultante;
+}
+function decode(frase) {
+  let fraseResultante = frase.replace(/1/g, 'a');
+  fraseResultante = fraseResultante.replace(/2/g, 'e');
+  fraseResultante = fraseResultante.replace(/3/g, 'i');
+  fraseResultante = fraseResultante.replace(/4/g, 'o');
+  fraseResultante = fraseResultante.replace(/5/g, 'u');
+  return fraseResultante;
 }
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(vetor, name) {
 
+
+  const vetorOrdenado = vetor.sort();
+  let resultado = [];
+
+  if(vetor.length === 0){
+    return "Vazio!";
+  }
+
+  for (const key in vetorOrdenado) {
+    let objeto = {
+      tech: vetorOrdenado[key],
+      name: name
+    }
+
+    resultado.push(objeto);
+  }
+
+  return resultado;
+}
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
