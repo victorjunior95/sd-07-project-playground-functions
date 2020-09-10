@@ -44,9 +44,19 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let retorno ='';
+  cat1 = Math.abs(cat1 - mouse);
+  cat2 = Math.abs(cat2 - mouse)
+  if (cat1 === cat2) {
+    retorno = "os gatos trombam e o rato foge";
+  } else {
+    retorno = (cat1 > cat2) ? "cat2" : "cat1";
+  }
+  return retorno;
 }
+console.log(catAndMouse(5, 3, 9))
+
 // Desafio 8
 function fizzBuzz(arrayNumerosFB) {
   let arrayFB = [];
