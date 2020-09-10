@@ -138,6 +138,28 @@ function encode(string) {
 }
 function decode() {
   // seu código aqui
+  let newString = ""
+    for(let index = 0 ; index < string.length ; index++) {
+      if (string[index] === "1"){
+        newString += "a";
+      }
+      else if (string[index] === "2"){
+        newString += "e";
+      }
+      else if (string[index] === "3"){
+        newString += "i";
+      }
+      else if (string[index] === "4"){
+        newString += "o";
+      }
+      else if (string[index] === "5"){
+        newString += "u";
+      }
+      else {
+        newString += string[index];
+      }
+    }
+      return newString;
 }
 
 // Desafio 10
