@@ -31,7 +31,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let newArray = [array[array.length -1] , array[0]];
+  let string = "array[array.length -1] , array[0]";
   return newArray
 }
 
@@ -51,6 +51,7 @@ function highestCount(array) {
     if (i > max){
     max = i;
   }
+}
   let counter = 0
   for(let i in array) {
     if(max = array[i])
@@ -58,22 +59,22 @@ function highestCount(array) {
   }
   return counter
 }
-}
+
 // Desafio 7
 function catAndMouse(cat1 , cat2 , mouse) {
   // seu código aqui
-  let absotuleDistance1 = cat1 - mouse;
-  if(absotuleDistance1 < 0 ) {
-    absotuleDistance1 = -absotuleDistance1;
+  let absoluteDistance1 = cat1 - mouse;
+  if(absoluteDistance1 < 0 ) {
+    absoluteDistance1 = -1*absoluteDistance1
   }
-  let absotuleDistance2 = cat2 - mouse;
-  if(absotuleDistance2 < 0 ) {
-    absotuleDistance2 = -absotuleDistance2;
+  let absoluteDistance2 = cat2 - mouse;
+  if(absoluteDistance2 < 0 ) {
+    absoluteDistance2 = -1*absoluteDistance2
   }
-  if(absolutDistance1 > absotuleDistance2) {
+  if(absoluteDistance1 > absoluteDistance2) {
     return "cat2";
   }
-  if(absolutDistance2 > absotuleDistance1) {
+  if(absoluteDistance2 > absoluteDistance1) {
     return "cat1";
   }
   else {
@@ -85,7 +86,7 @@ function catAndMouse(cat1 , cat2 , mouse) {
 function fizzBuzz(array) {
   // seu código aqui
   let resultArray = [];
-  for (let index in array);
+  for (let index in array)
     if(array[index] % 3 === 0 && array[index] % 5 === 0) {
       resultArray.push("fizzbuzz");
     }
