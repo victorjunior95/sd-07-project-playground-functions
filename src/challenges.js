@@ -5,7 +5,7 @@ function compareTrue(valueA, valueB) {
 
 // Desafio 2
 function calcArea(base, heigh) {
-    let area = (base * heigh) / 2;
+  let area = (base * heigh) / 2;
   return area;
 }
 
@@ -26,7 +26,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(name) {
-  let invert = [ name[name.length-1], name[0] ];
+  let invert = [name[name.length - 1], name[0]];
   let concatenate = `${invert[0]}, ${invert[1]}`;
   return concatenate;
 }
@@ -136,10 +136,10 @@ function decode(text) {
 // Desafio 10
 function techList(namesTech, who) {
   namesTech = namesTech.sort();
+  let whoWillLearn = [];
   if (namesTech.length !== 0) {
-    let whoWillLearn = [];
     for (let i in namesTech) {
-      whoWillLearn[i] = { tech: namesTech[i], name: who }
+      whoWillLearn[i] = {tech: namesTech[i], name: who}
     }
   } else {
     whoWillLearn = 'Vazio!';
