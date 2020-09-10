@@ -18,15 +18,16 @@ function concatName(nomeCompleto) {
   return output;
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsWin = 3;
+  let pointsTie = 1;
+  let totalPoints = (wins * pointsWin) + (ties * pointsTie);
+  return  totalPoints;
 }
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbers) {
 
+  }
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
