@@ -91,7 +91,7 @@ function fizzBuzz(array) {
 let newArray = [];
   for(let index = 0; index < array.length ; index++){
     if (array[index] % 3 === 0 && array[index] % 5 === 0 ) {
-      newArray.push("fizzbuzz");
+      newArray.push("fizzBuzz");
     }
     else if(array[index] % 3 === 0) {
       newArray.push("fizz");
