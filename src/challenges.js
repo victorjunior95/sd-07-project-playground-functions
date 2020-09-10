@@ -172,7 +172,7 @@ function generatePhoneNumber(telNumber) {
   for (j = 0; j < telNumber.length; j += 1) {
     repeat = 0;
     for (k = 0; k < telNumber.length; k += 1) {
-      if (telNumber[i] == telNumber[j]) {
+      if (telNumber[j] == telNumber[k]) {
         repeat += 1;
       }
     }
