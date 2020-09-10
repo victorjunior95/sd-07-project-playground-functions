@@ -122,13 +122,14 @@ function generatePhoneNumber(arrayN) {
   }
   for (let num in arrayN) {
     let dup = 0
-    if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
-      res = 'não é possível gerar um número de telefone com esses valores'
-      break
-    } for (let numD in arrayN) {
+    for (let numD in arrayN) {
       if (arrayN[num] === arrayN[numD]) {
         dup += 1;
       }
+      if (arrayN[num] < 0 || arrayN[num] > 9 || dup >= 3) {
+        res = 'não é possível gerar um número de telefone com esses valores'
+        break
+      } 
     }
     res = `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
   }
