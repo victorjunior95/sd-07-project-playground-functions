@@ -128,10 +128,10 @@ function encode(params) {
   return element;
 }
 
-function decode(params2) {
+function decode(element) {
   let element2='' ;
-  for (let key in params2) {
-    switch (params2.substr(key, 1)) {
+  for (let key in element) {
+    switch (element.substr(key, 1)) {
       case '1':
         element2 = element2 + 'a';
         break;
@@ -148,7 +148,7 @@ function decode(params2) {
         element2 = element2 + 'u';
         break;
       default:
-        element2 = element2 + params2.substr(key, 1);
+        element2 = element2 + element.substr(key, 1);
         break;
     }
   }
