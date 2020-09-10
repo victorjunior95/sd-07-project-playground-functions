@@ -13,8 +13,8 @@ function calcArea(base, heigh) {
 function splitSentence(sentence) {
   let split = [];
   let text = [];
-  for (let i = 0; i <= sentence.length; i +=1) {
-    if (sentence[i] === ' ' || i == sentence.length) {
+  for (let i = 0; i <= sentence.length; i += 1) {
+    if (sentence[i] === ' ' || i === sentence.length) {
       split.push(text);
       text = [];
     } else {
@@ -35,7 +35,7 @@ function concatName(name) {
 function footballPoints(wins, ties) {
   let winPoints = 3;
   let tiePoints = 1;
-  let points = ( wins * winPoints ) + ( ties * tiePoints ) ;
+  let points = (wins * winPoints) + (ties * tiePoints);
   return points;
 }
 
@@ -105,7 +105,7 @@ function encode(text) {
     } else if (text[i] === 'u') {
       encoded += '5';
     } else {
-        encoded += text[i];
+      encoded += text[i];
     }
   }
   return encoded;
@@ -125,11 +125,10 @@ function decode(text) {
     } else if (text[i] === '5') {
       decoded += 'u';
     } else {
-        decoded += text[i];
+      decoded += text[i];
     }
   }
   return decoded;
-
 }
 
 
@@ -139,7 +138,9 @@ function techList(namesTech, who) {
   let whoWillLearn = [];
   if (namesTech.length !== 0) {
     for (let i in namesTech) {
-      whoWillLearn[i] = {tech: namesTech[i], name: who}
+      whoWillLearn[i] = {
+        tech: namesTech[i], name: who
+      }
     }
   } else {
     whoWillLearn = 'Vazio!';
@@ -166,7 +167,7 @@ function generatePhoneNumber(telNumber) {
 
   for (let j = 0; j < telNumber.length; j += 1) {
     repeat = 0;
-    for (k = 0; k < telNumber.length; k += 1) {
+    for (let k = 0; k < telNumber.length; k += 1) {
       if (telNumber[j] === telNumber[k]) {
         repeat += 1;
       }
@@ -177,7 +178,7 @@ function generatePhoneNumber(telNumber) {
   }
 
   for (let n = 0; n <telNumber.length; n += 1) {
-      telefone += telNumber[n];
+    telefone += telNumber[n];
   }
   let tel = `(${telefone.slice(0, 2)}) ${telefone.slice(2, 7)}-${telefone.slice(7)}`;
   return tel;
@@ -185,17 +186,17 @@ function generatePhoneNumber(telNumber) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  function compare (A, B, C) {
+  function compare(A, B, C) {
     let check = false;
-    if (A + B > C && C > Math.abs (A - B)) {
+    if (A + B > C && C > Math.abs(A - B)) {
       check = true;
     }
     return check;
   }
 
-  let compa = compare (lineA, lineB, lineC);
-  let compb = compare (lineB, lineC, lineA);
-  let compc = compare (lineC, lineA, lineB);
+  let compa = compare(lineA, lineB, lineC);
+  let compb = compare(lineB, lineC, lineA);
+  let compc = compare(lineC, lineA, lineB);
   let finalCheck = false;
   if (compa === true && compb === true && compc) {
     finalCheck = true;
