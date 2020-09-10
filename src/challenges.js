@@ -102,7 +102,7 @@ return arrayReturn;
 
 
 // Desafio 9
-function encode(encoding) {
+function encode(encoding = "hi there") {
   
   return encoding = encoding.replace(/a/g, '1'),
    encoding = encoding.replace(/e/g, '2'),
@@ -114,7 +114,7 @@ function encode(encoding) {
 console.log(encode());
 
 
-function decode(decoding) {
+function decode(decoding = "h3 th2r2") {
 
   return decoding = decoding.replace(/1/g, 'a'),
    decoding = decoding.replace(/2/g, 'e'),
