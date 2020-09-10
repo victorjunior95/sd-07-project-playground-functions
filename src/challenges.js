@@ -144,57 +144,28 @@ function techList(technologies, name) {
 // Desafio 11
 function generatePhoneNumber(phone) {
   // seu código aqui
-  let uniqueKeys = phone.values()
   let formatedPhone = []
-  if (phone.length != 11) {
-    return 'Array com tamanho incorreto.'
+  function compare (telChar) { return telChar < 0 || telChar > 9 }
+
+  function repeatedNumbersCounter(Array) {
+    // seu código aqui
+    let cont = 0
+    for (let i = 0; i <= 9; i += 1) {
+    let maior = Array.filter(x => x==(9-i))
+    if (maior.length > cont) { cont = maior.length }
+    }
+    return cont;
   }
 
-  for (let key of uniqueKeys) {
-    let cont = 0;
-
-    if (key < 0 || key > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-
-    for (let chave in phone) {
-      if (phone[chave] === key) {
-        cont += 1;
-
-      }
-    }
-
-    if (cont >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-
+  if (phone.length != 11) { return 'Array com tamanho incorreto.' }
+  else if (phone.find(compare) || repeatedNumbersCounter(phone) >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-
-  for (let cont = 0; cont<11; cont += 1) {
-    if (cont== 0) {
-      formatedPhone.push('(');
-      formatedPhone.push(phone[cont]);
-
-    }
-    else if (cont == 1) {
-      formatedPhone.push(phone[cont]);
-      formatedPhone.push(')');
-      formatedPhone.push(' ');
-
-    }
-    else if (cont == 6) {
-      formatedPhone.push(phone[cont]);
-      formatedPhone.push('-');
-
-    }
-    else {
-      formatedPhone.push(phone[cont]);
-      
-    }
-
-  }
-
-  return formatedPhone.join('');
+  phone.splice(0,0,'(')
+  phone.splice(3,0,') ')
+  phone.splice(-4,0,'-')
+  
+  return phone.join('');
 
 }
 
