@@ -32,7 +32,7 @@ function splitSentence(string) {
 function concatName(array) {
   // seu código aqui
   let string = "array[array.length -1] , array[0]";
-  return newArray
+  return string;
 }
 
 // Desafio 5
@@ -54,9 +54,10 @@ function highestCount(array) {
 }
   let counter = 0
   for(let i in array) {
-    if(max = array[i])
+    if(max = array[i]){
     counter += 1
   }
+}
   return counter
 }
 
@@ -71,13 +72,14 @@ function catAndMouse(cat1 , cat2 , mouse) {
   if(absoluteDistance2 < 0 ) {
     absoluteDistance2 = -1*absoluteDistance2
   }
+
   if(absoluteDistance1 > absoluteDistance2) {
     return "cat2";
   }
-  if(absoluteDistance2 > absoluteDistance1) {
+  else if(absoluteDistance2 > absoluteDistance1) {
     return "cat1";
   }
-  else {
+  else if (absoluteDistance1 === absoluteDistance2) {
     return "os gatos trombam e o rato foge";
   }
 
@@ -85,25 +87,27 @@ function catAndMouse(cat1 , cat2 , mouse) {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  let resultArray = [];
-  for (let index in array)
+  let resultArray = []
+  for (let index in array) {
     if(array[index] % 3 === 0 && array[index] % 5 === 0) {
-      resultArray.push("fizzbuzz");
+      resultArray.push("fizzbuzz")
     }
     else if (array[index] % 3 ===0 ) {
-      resultArray.push("fizz");
+      resultArray.push("fizz")
     }
     else if (array[index] % 5 ===0 ) {
-      resultArray.push("buzz");
+      resultArray.push("buzz")
     }
     else {
-      resultArray.push("Bug!");
+      resultArray.push("Bug!")
     }
+}
 }
 
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
