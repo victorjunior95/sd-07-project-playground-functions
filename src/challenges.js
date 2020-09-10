@@ -172,6 +172,8 @@ function triangleCheck(lineA, lineB, lineC) {
     (lineB < sumTriangleAC && lineB > diffTriangleAC) && 
     (lineC < sumTriangleAB && lineC > diffTriangleAB)) {
       return true;
+    } else {
+      return false;
     }
 }
 
