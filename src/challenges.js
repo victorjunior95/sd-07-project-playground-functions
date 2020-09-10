@@ -102,11 +102,12 @@ let newArray = [];
     else {
       newArray.push("bug!");
     }
+  }
 return newArray;
 
 
   }
-}
+
 
 // Desafio 9
 function encode() {
