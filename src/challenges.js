@@ -144,21 +144,16 @@ function techList(technologies, name) {
 // Desafio 11
 function generatePhoneNumber(phone) {
   // seu código aqui
-  let formatedPhone = []
   function compare (telChar) { return telChar < 0 || telChar > 9 }
-
-  function repeatedNumbersCounter(Array) {
-    // seu código aqui
-    let cont = 0
-    for (let i = 0; i <= 9; i += 1) {
-    let maior = Array.filter(x => x==(9-i))
-    if (maior.length > cont) { cont = maior.length }
-    }
-    return cont;
+  //checking repeated numbers
+  let cont = 0
+  for (let i = 0; i <= 9; i += 1) {
+  let maior = phone.filter(x => x==(9-i))
+  if (maior.length > cont) { cont = maior.length }
   }
-
+  
   if (phone.length != 11) { return 'Array com tamanho incorreto.' }
-  else if (phone.find(compare) || repeatedNumbersCounter(phone) >= 3) {
+  else if (phone.find(function(telChar) { return telChar < 0 || telChar > 9 }) || cont >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   phone.splice(0,0,'(')
