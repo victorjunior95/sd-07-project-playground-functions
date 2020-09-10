@@ -1,10 +1,5 @@
 // Desafio 1
-function compareTrue(valueA,valueB) {
-  // if (valorA === true && valorB === true){
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+function compareTrue(valueA, valueB) {
   return valueA && valueB
 }
 
@@ -21,27 +16,26 @@ function splitSentence(sentence) {
   for (let i = 0; i <= sentence.length; i +=1) {
     if (sentence[i] === ' ' || i == sentence.length) {
       split.push(text);
-      text = [];      
+      text = [];
     } else {
       text += sentence[i];
     }
   }
-
   return split;
 }
 
 // Desafio 4
-function concatName (name) {
-  let invert = [name[name.length-1], name[0]];
+function concatName(name) {
+  let invert = [ name[name.length-1], name[0] ];
   let concatenate = `${invert[0]}, ${invert[1]}`;
   return concatenate;
 }
 
 // Desafio 5
-function footballPoints (wins, ties) {
+function footballPoints(wins, ties) {
   let winPoints = 3;
   let tiePoints = 1;
-  let points = wins * winPoints + ties * tiePoints;
+  let points = ( wins * winPoints ) + ( ties * tiePoints ) ;
   return points;
 }
 
@@ -56,19 +50,20 @@ function highestCount(numbers) {
   }
 
   for (let j = 0; j < numbers.length; j += 1) {
-    if (bigger == numbers[j]) {
-        repeat += 1;        
+    if (bigger === numbers[j]) {
+      repeat += 1;
     }
   }
 
   return repeat;
 }
 
-//Desafio 7
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
-  if (dist1 < dist2 ){
+  let text = [];
+  if (dist1 < dist2) {
     text = 'cat1';
   } else if (dist1 > dist2) {
     text = 'cat2';
@@ -80,13 +75,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numeros) {
-let answer = [];
+  let answer = [];
   for (let i in numeros) {
-    if (numeros[i]%3 === 0 && numeros[i]%5 === 0) {
+    if ((numeros[i] % 3) === 0 && (numeros[i] % 5) === 0) {
       answer[i] = 'fizzBuzz';
-    } else if (numeros[i]%3 === 0) {
+    } else if ((numeros[i] % 3) === 0) {
       answer[i] = 'fizz';
-    } else if (numeros[i]%5 === 0) {
+    } else if ((numeros[i] % 5) === 0) {
       answer[i] = 'buzz';
     } else {
       answer[i] = 'bug!';
@@ -99,7 +94,7 @@ let answer = [];
 function encode(text) {
   let encoded = [];
   for (let i = 0; i < text.length; i += 1) {
-    if (text[i] == 'a') {
+    if (text[i] === 'a') {
       encoded += '1';
     } else if (text[i] === 'e') {
       encoded += '2';
@@ -119,7 +114,7 @@ function encode(text) {
 function decode(text) {
   let decoded = [];
   for (let i = 0; i < text.length; i += 1) {
-    if (text[i] == '1') {
+    if (text[i] === '1') {
       decoded += 'a';
     } else if (text[i] === '2') {
       decoded += 'e';
