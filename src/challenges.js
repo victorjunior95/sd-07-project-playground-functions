@@ -4,15 +4,13 @@ function compareTrue(valueA, valueB) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  let triangleArea = (base * height)/2;
+  let triangleArea = (base * height) / 2;
   return triangleArea;
 }
-
-console.log(calcArea(51, 2));
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(inputSentence) {
+  output = inputSentence.split(' ');
+  return output;
 }
 
 // Desafio 4
