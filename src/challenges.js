@@ -103,7 +103,7 @@ function fizzBuzz(arry) {
 function encode(params) {
   let element='';
   for (let key in params) {
-    switch (params.substr(key, 1)) {
+    switch (params[key]) {
       case 'a':
         element = element + 1;
         break;
@@ -120,7 +120,7 @@ function encode(params) {
         element = element + 5;
         break;
       default:
-        element = element + params.substr(key, 1);
+        element = element + params[key];
         break;
     }
   }
@@ -131,7 +131,7 @@ function encode(params) {
 function decode(params) {
   let element2='' ;
   for (let key in params ){
-    switch (params.substr(key, 1)) {
+    switch (params[key]) {
       case '1':
         element2 = element2 + 'a';
         break;
@@ -148,14 +148,14 @@ function decode(params) {
         element2 = element2 + 'u';
         break;
       default:
-        element2 = element2 + params.substr(key, 1);
+        element2 = element2 + params[key];
         break;
     }
   }
   return element2;
 }
-//console.log(encode('word'));
-//console.log(decode('w4rd' ));
+//console.log(encode('This is an encoding test.'));
+//console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.' ));
 // Desafio 10
 function techList(tech, name) {
   let arrayObjeto = [];
