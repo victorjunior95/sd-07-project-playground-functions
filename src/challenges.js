@@ -174,7 +174,7 @@ function techList(tech, name) {
 let arraysort = tech.sort();
 arrayresultado = []
 if(tech.length <= 0){
-  return "Vazio!!!!";
+  return "Vazio!";
 }else {
   for(let key in arraysort){
     let newObject = {
