@@ -34,8 +34,8 @@ function concatName(array) {
     //return (array[0] + ', ' + array[array.length-1]);
     Resultado = (array[array.length-1] + ', ' + array[0]);
   
-  //return Resultado;
-  console.log(Resultado);
+  return Resultado;
+  
   
 }
 
@@ -102,17 +102,18 @@ dCat2 = cat2 - mouse;
         Resp = "cat2";
                
     }
-    else{
+    else (dCat1 === dCat2)
       
       Resp = "os gatos trombam e o rato foge.";
       
 
-    }
-
-    return Resp;
+    
+    
+    //return Resp;
+    console.log(Resp);
     
   }
-
+ catAndMouse(1,3,3);
 
   
 // Desafio 8
@@ -144,8 +145,7 @@ function fizzBuzz(vet) {
    return vet1;
 
 }
-let vet= [2, 15, 7, 9, 45];
-fizzBuzz(vet);
+
 
 
 // Desafio 9
