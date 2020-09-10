@@ -136,7 +136,7 @@ function encode(string) {
       return newString;
 
 }
-function decode() {
+function decode(string) {
   // seu código aqui
   let newString = ""
     for(let index = 0 ; index < string.length ; index++) {
@@ -163,8 +163,9 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(array , name) {
   // seu código aqui
+ 
 }
 
 // Desafio 11
