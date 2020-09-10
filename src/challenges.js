@@ -109,8 +109,8 @@ dCat2 = cat2 - mouse;
 
     
     
-    //return Resp;
-    console.log(Resp);
+    return Resp;
+   
     
   }
  catAndMouse(1,3,3);
