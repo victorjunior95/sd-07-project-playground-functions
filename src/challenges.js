@@ -97,7 +97,7 @@ dCat2 = cat2 - mouse;
       
          
     }
-    else if (dCat1 > dCat2){
+    else if (dCat2 < dCat1){
         
         Resp = "cat2";
                
