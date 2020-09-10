@@ -12,11 +12,12 @@ function splitSentence(inputSentence) {
   output = inputSentence.split(' ');
   return output;
 }
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomeCompleto) {
+  let output = nomeCompleto[nomeCompleto.length-1] + ", " + nomeCompleto[0];
+  return output;
 }
+console.log (concatName(['Celso', 'Oliva', 'Aparecido']));
 
 // Desafio 5
 function footballPoints() {
