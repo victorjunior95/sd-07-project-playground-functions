@@ -149,8 +149,7 @@ function techList(tecNews, name) {
 // Desafio 11
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 function arraySize(numbers1) {
-  let numbersSize;
-  if (numbers.length === 11) {
+  if (numbers1.length === 11) {
     return true;
   } else {
     return false;
