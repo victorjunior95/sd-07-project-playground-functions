@@ -96,6 +96,7 @@ if(dCat1 < 0){
 
   dCat1 *= -1;
 }
+
 if (dCat2 < 0){
    dCat2 *= -1;
 }
@@ -111,16 +112,18 @@ if (dCat2 < 0){
         Resp = "cat2";
                
     }
-    else if (dCat1 === dCat2){     
+    else {     
       Resp = "os gatos trombam e o rato foge.";
     
       
     }
     
   return Resp;
+  
     
   }
- catAndMouse(0,3,2);
+ catAndMouse(1,0,2);
+
 
   
 // Desafio 8
