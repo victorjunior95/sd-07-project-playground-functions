@@ -237,7 +237,7 @@ function hydrate(frase) {
   let quantidades = 0;
   let mensagem = '';
   for (let i in newFrase) {
-    if (Object.prototype.hasOwnProperty.call(newFrase, i)) {    
+    if (Object.prototype.hasOwnProperty.call(newFrase, i)) {
       let inteiro = parseInt(newFrase[i], 10);
       if (!isNaN(inteiro)) {
         quantidades += inteiro;
