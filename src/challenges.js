@@ -129,7 +129,7 @@ function techList(tech=[], name) {
   let result=[];
   tech.sort();
   if(tech.length === 0){
-    console.log("Vazio!")
+    result = "Vazio!"
   }else{
     for(let index = 0; index < tech.length; index +=1){
       result.push({tech: tech[index], name});
