@@ -147,9 +147,63 @@ function techList(tecNews, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+function arraySize(numbers1) {
+  let numbersSize;
+  if (numbers.length === 11) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+function checkNumbers(numbers2) {
+  for (let index = 0; index < numbers2.length; index += 1) {
+    if (numbers2[index] >= 0 && numbers2[index] <= 9) {
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+function repeatedNumbers(numbers3) {
+  let compareObject = {
+    0: 0, 
+    1: 0, 
+    2: 0, 
+    3: 0, 
+    4: 0, 
+    5: 0, 
+    6: 0, 
+    7: 0, 
+    8: 0, 
+    9: 0
+  }
+  for (index = 0; index < numbers3.length; index += 1) {
+      compareObject[numbers3[index]] += 1;
+      if (compareObject[numbers3[index]] > 2) {
+        return true;
+      }
+    }
+  return false; 
+}
+
+function generatePhoneNumber(numbers) {
+  let newNumbers = arraySize(numbers);
+  if (newNumbers === false) return 'Array com tamanho incorreto.';
+  newNumbers = checkNumbers(numbers);
+  if (newNumbers === false) return 'não é possível gerar um número de telefone com esses valores';
+  newNumbers = repeatedNumbers(numbers);
+  if (newNumbers === true) return 'não é possível gerar um número de telefone com esses valores';
+  let DDD = numbers.slice(0, 2);
+  let pre = numbers.slice(2, 7);
+  let su = numbers.slice(7, 11);
+  let phoneNumber = `(${DDD}) ${pre}-${su}`;
+  phoneNumber = phoneNumber.replace(/,/g, '');
+  return phoneNumber; 
+}
+console.log(generatePhoneNumber(numbers));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
