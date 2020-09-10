@@ -89,7 +89,7 @@ function catAndMouse(mouse , cat1 , cat2) {
 function fizzBuzz(array) {
   // seu código aqui
 let newArray = [];
-  for(let index = 0; i < array.length ; index++){
+  for(let index = 0; index < array.length ; index++){
     if (array[index] % 3 === 0 && array[index] % 5 === 0 ) {
       newArray.push("fizzbuzz");
     }
