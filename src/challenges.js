@@ -169,22 +169,22 @@ function generatePhoneNumber(phoneArray) {
     if (phoneArray[i] < 0 || phoneArray[i] > 9 || repeatedNumber(phoneArray) >= 3) {
       phoneNumbers = 'não é possível gerar um número de telefone com esses valores';
     } else {
-      phoneNumbers = `(${phoneArray.substring(0, 2)}) ${phoneArray.substring(2, 7)} - ${phoneArray.substring(7)}`;
+      let phoneString = phoneArray.join('');
+      phoneNumbers = `(${phoneString.substring(0,2)}) ${phoneString.substring(2,7)}-${phoneString.substring(7)}`;
     }
   }
 
   return phoneNumbers;
 }
 
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 // Desafio 12
-function triangleCheck() {
-  if((lineA < lineB + lineC) && (lineB < lineC + lineA) &&  (lineC < lineB + lineA) &&
-    (lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineC - lineA))
-     &&  (lineC > Math.abs(lineB - lineA))){
-        return true;
-     }else {
-         return false;
-     }
+function triangleCheck(lineA, lineB, lineC) {
+  let cond1 = (lineA < lineB + lineC) && (lineB < lineC + lineA) && (lineC < lineB + lineA);
+  let cond2 = (lineB > Math.abs(lineC - lineA)) && (lineC > Math.abs(lineB - lineA)) && (lineA > Math.abs(lineB - lineC));
+
+  return cond1 && cond2;
 }
 
 // Desafio 13
