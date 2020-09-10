@@ -131,7 +131,7 @@ function fizzBuzz(vet) {
 
     }
     else if (vet[i]% 5 === 0){
-S
+
       vet1[i]= "buzz";
     }
         
