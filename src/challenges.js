@@ -172,7 +172,7 @@ function techList(array , name) {
   for(let skill in orderArray) {
     let object = {
       tech: orderArray[skill],
-      name: name,
+      name: name
     }
   receiverArray.push(object)
   }
