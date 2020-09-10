@@ -35,9 +35,9 @@ function highestCount(numeros) {
   let maiorNumero = 0;
   let repetidos = 0;
   for (let i in numeros){
-    if (maiorNumero < numeros[i]);
+    if (maiorNumero < numeros[i]){
       maiorNumero = numeros[i];
-      repetidos = 1
+      repetidos = 1}
     else if (maiorNumero === numeros[i]){
         repetidos += 1;
       }
