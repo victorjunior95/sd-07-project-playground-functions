@@ -27,15 +27,14 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let highestNumber = 0;
-  let count = 0;
+  let count = 1;
   let compare = 0;
   let indice = 0;
   for (indice = 0; indice < numbers.length; indice+=1) {
      for (compare = indice; compare < numbers.length; compare += 1){
       if(numbers[compare] >= highestNumber) {
-        (numbers[compare] === highestNumber && indice != compare) ? count+=1:count=1;
+        (numbers[compare] === highestNumber && indice != compare) ? (indice = compare, count+=1):(numbers.indexOf(highestNumber, indice+1) != -1)  ? count +=1:'';
         highestNumber = numbers[compare];
-        indice = compare;
         break;
         } 
       }
