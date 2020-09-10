@@ -53,8 +53,9 @@ function highestCount(array) {
   }
 }
   let counter = 0
+
   for(let i in array) {
-    if(max = array[i]){
+    if(max === array[i]){
     counter += 1
   }
 }
@@ -92,17 +93,17 @@ function fizzBuzz(array) {
     if(array[index] % 3 === 0 && array[index] % 5 === 0) {
       resultArray.push("fizzbuzz")
     }
-    else if (array[index] % 3 ===0 ) {
+    else if (array[index] % 3 === 0 ) {
       resultArray.push("fizz")
     }
-    else if (array[index] % 5 ===0 ) {
+    else if (array[index] % 5 === 0 ) {
       resultArray.push("buzz")
     }
     else {
-      resultArray.push("Bug!")
+      resultArray.push("bug!")
     }
 }
-return resultArray;
+return resultArray
 }
 
 // Desafio 9
