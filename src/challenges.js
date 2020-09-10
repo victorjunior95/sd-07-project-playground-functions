@@ -169,23 +169,70 @@ function generatePhoneNumber(phoneArray) {
     if (phoneArray[i] < 0 || phoneArray[i] > 9 || repeatedNumber(phoneArray) >= 3) {
       phoneNumbers = 'não é possível gerar um número de telefone com esses valores';
     } else {
-      phoneNumbers = phoneArray.join('');
+      phoneNumbers = `(${phoneArray.substring(0, 2)}) ${phoneArray.substring(2, 7)} - ${phoneArray.substring(7)}`;
     }
   }
 
   return phoneNumbers;
 }
 
-console.log(generatePhoneNumber([2, 2, 4, 5, 6, 6, 9, 3, 0, 5, 4]));
-
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  if((lineA < lineB + lineC) && (lineB < lineC + lineA) &&  (lineC < lineB + lineA) &&
+    (lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineC - lineA))
+     &&  (lineC > Math.abs(lineB - lineA))){
+        return true;
+     }else {
+         return false;
+     }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let arrayNumbers = [];
+
+  for(let i = 0; i < string.length; i += 1){
+    switch(string[i]){
+      case '1':
+        arrayNumbers.push(1);
+        break;
+      case '2':
+        arrayNumbers.push(2);
+        break;
+      case '3':
+        arrayNumbers.push(3);
+        break; 
+      case '4':
+        arrayNumbers.push(4);
+        break;
+      case '5':
+        arrayNumbers.push(5);
+        break;
+      case '6':
+        arrayNumbers.push(6);
+        break;
+      case '7':
+        arrayNumbers.push(7);
+        break;
+      case '8':
+        arrayNumbers.push(8);
+        break;
+      case '9':
+        arrayNumbers.push(9);
+        break;                   
+    }
+  }
+
+  let sumNumbers = 0;
+  if(arrayNumbers.length == 1 && arrayNumbers[0] == 1) {
+    return "1 copo de água";
+  } else {
+    for(let i = 0; i < arrayNumbers.length; i += 1) {
+      sumNumbers += arrayNumbers[i];
+  }
+  return sumNumbers + " copos de água";    
+  }
+      
 }
 
 
