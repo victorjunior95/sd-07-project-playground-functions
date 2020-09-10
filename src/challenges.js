@@ -183,14 +183,9 @@ if(tech.length <= 0){
     }
     arrayresultado.push(newObject);
   }
-  console.log(arrayresultado);
+  return (arrayresultado);
 }
 }
-
-let text1 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let text2 = "Marcelo"
-
-techList(text1, text2);
 
 // Desafio 11
 function generatePhoneNumber() {
