@@ -57,10 +57,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let contadorCat1 = cat1 - mouse;
   let contadorCat2 = cat2 - mouse;
   if (contadorCat1 < 0) {
-    contadorCat1 = contadorCat1*-1;
+    contadorCat1 = contadorCat1 * -1;
   }
   if (contadorCat2 < 0) {
-    contadorCat2 = contadorCat2*-1;
+    contadorCat2 = contadorCat2 * -1;
   }
   if (contadorCat1 < contadorCat2 && contadorCat1 > 0 && contadorCat2 > 0) {
     return "cat1";
@@ -80,20 +80,19 @@ function fizzBuzz(arry) {
   let arryDeString = [];
   let element = "";
   for (let index = 0; index < arry.length; index++) {
-   
-      if (arry[index] % 3 == 0) {
-        element = "fizz";
-      }
-      if (arry[index] % 5 == 0) {
-        element = "buzz";
-      } 
-      if (arry[index] % 5 == 0 && arry[index] % 3 == 0) {
-        element = "fizzBuzz";
-      } 
-      if (arry[index] % 5 !==0 && arry[index] % 3 !== 0) {
+    if (arry[index] % 3 == 0) {
+      element = "fizz";
+    }
+    if (arry[index] % 5 == 0) {
+      element = "buzz";
+    }
+    if (arry[index] % 5 == 0 && arry[index] % 3 == 0) {
+      element = "fizzBuzz";
+    }
+    if (arry[index] % 5 !== 0 && arry[index] % 3 !== 0) {
       element = "bug!";
-      } 
-    
+    }
+
     arryDeString.push(element);
     element = "";
   }
@@ -104,7 +103,7 @@ function fizzBuzz(arry) {
 function encode(params) {
   let element = "";
   for (let key in params) {
-    switch (params.substr(key,1)) {
+    switch (params.substr(key, 1)) {
       case "a":
         element = element + 1;
         break;
@@ -121,7 +120,7 @@ function encode(params) {
         element = element + 5;
         break;
       default:
-        element = element + params.substr(key,1);
+        element = element + params.substr(key, 1);
         break;
     }
   }
@@ -132,7 +131,7 @@ function encode(params) {
 function decode(element) {
   let params = "";
   for (let key in element) {
-    switch (element.substr(key,1)) {
+    switch (element.substr(key, 1)) {
       case "1":
         params = params + "a";
         break;
@@ -149,7 +148,7 @@ function decode(element) {
         params = params + "u";
         break;
       default:
-        params = params + element.substr(key,1);
+        params = params + element.substr(key, 1);
         break;
     }
   }
@@ -170,10 +169,34 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numero) {
+  let arrayDeNumero = [];
+  let cont;
+  if (numero.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (let i = 0; i < numero.length; i += 1) {
+    if (numero[i] < 0 || numero[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    for (let j = 0; j < numero.length; j += 1) {
+      if (numero[i] === numero[j]) {
+        cont += 1;
+      }
+    }
+    if (cont > 2) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    cont = 0;
+  }
+  numero.splice(0, 0, "(");
+  numero.splice(3, 0, ") ");
+  numero.splice(9, 0, "-");
+  for (let index = 0; index < numero.length; index += 1) {
+    arrayDeNumero += numero[index];
+  }
+  return arrayDeNumero;
 }
-
 // Desafio 12
 function triangleCheck(ladoA, ladoB, ladoC) {
   // seu código aqui
@@ -183,10 +206,26 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 
   return false;
 }
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+  let num = bebida.match(/\d+/g).map(Number);
+  let trybeConversor = 0;
+  let bebidas;
+  for (let index in num) {
+    if (
+      parseInt(num[index], bebidas) < 1 ||
+      parseInt(num[index], bebidas) > 9
+    ) {
+      return "número inválido!";
+    }
+    trybeConversor += parseInt(num[index], bebidas);
+  }
+  if (trybeConversor === 1) {
+    trybeConversor += " copo de água";
+    return trybeConversor;
+  }
+  trybeConversor += " copos de água";
+  return trybeConversor;
 }
 
 module.exports = {
