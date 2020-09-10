@@ -102,18 +102,20 @@ dCat2 = cat2 - mouse;
         Resp = "cat2";
                
     }
-    else (dCat1 === dCat2)
+    else{
       
       Resp = "os gatos trombam e o rato foge.";
+    }
       
 
     
     
-    return Resp;
+    //return Resp;
+    console.log(Resp)
    
     
   }
- catAndMouse(1,3,3);
+ catAndMouse(10,4,22);
 
   
 // Desafio 8
