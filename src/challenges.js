@@ -141,7 +141,7 @@ function fizzBuzz(vet) {
     }
     
   }
-   console.log(vet1);
+   return vet1;
 
 }
 let vet= [2, 15, 7, 9, 45];
