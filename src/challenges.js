@@ -141,11 +141,11 @@ function fizzBuzz(vet) {
     }
     
   }
-   return (vet1);
+   console.log(vet1);
 
 }
-//let vet= [2, 15, 7, 9, 45];
-//fizzBuzz(vet);
+let vet= [2, 15, 7, 9, 45];
+fizzBuzz(vet);
 
 
 // Desafio 9
