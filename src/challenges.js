@@ -149,12 +149,119 @@ S
 
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+
+let array
+
+array= str.split("");//transferi cada letra da string pra uma posição do array.
+
+let result = " ";
+
+
+  for(let i=0; i< array.length; i +=1){
+   
+    if (array[i] === "a"){
+
+      array[i]=1;
+      result = result + array[i];
+    }
+
+    else if(array[i] === "e"){
+      
+     
+      array[i]=2;
+      result = result + array[i];
+    }
+    else if (array[i]=== "i"){
+    
+      
+      array[i]=3;
+      result = result + array[i];
+    }
+        
+    else if (array[i]=== "o"){
+      
+      
+      array[i]=4;
+      result = result + array[i];
+       
+    }
+    else if (array[i] === "u") {
+    
+    array[i]=5;
+    result = result + array[i];
+  }
+    else{
+
+      result = result + array[i];
+
+    }
+
+        
+  }
+
+return result;
 }
-function decode() {
+
+let a = "helo world";
+ encode(a)
+
+function decode(str) {
   // seu código aqui
-}
+  let array
+
+  array= str.split("");//transferi cada letra da string pra uma posição do array.
+  
+  let result = " ";
+  
+  
+    for(let i=0; i< array.length; i +=1){
+     
+      if (array[i] === "1"){
+  
+        array[i]="a";
+        result = result + array[i];
+      }
+  
+      else if(array[i] === "2"){
+        
+       
+        array[i]="e";
+        result = result + array[i];
+      }
+      else if (array[i]=== "3"){
+      
+        
+        array[i]="i";
+        result = result + array[i];
+      }
+          
+      else if (array[i]=== "4"){
+        
+        
+        array[i]="o";
+        result = result + array[i];
+         
+      }
+      else if (array[i] === "5") {
+      
+      array[i]="u";
+      result = result + array[i];
+    }
+      else{
+  
+        result = result + array[i];
+  
+      }
+  
+          
+    }
+  
+  console.log(result);
+  }
+  //let b="h3 th2r2"
+  decode(result);
 
 // Desafio 10
 function techList() {
