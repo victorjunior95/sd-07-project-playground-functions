@@ -117,8 +117,7 @@ if (dCat2 < 0){
       
     }
     
-    //return Resp;
-    console.log(Resp);
+  return Resp;
     
   }
  catAndMouse(0,3,2);
