@@ -14,7 +14,7 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ");
+  return str.split(' ');
 }
 
 // Desafio 4
@@ -23,7 +23,7 @@ function concatName(array) {
   let firstItem;
   firstItem = array[0];
   lastItem = array[array.length - 1];
-  array = lastItem + ", " + firstItem;
+  array = lastItem + ', ' + firstItem;
   return array;
 }
 
@@ -63,60 +63,60 @@ function catAndMouse(mouse, cat1, cat2) {
     contadorCat2 = contadorCat2 * -1;
   }
   if (contadorCat1 < contadorCat2 && contadorCat1 > 0 && contadorCat2 > 0) {
-    return "cat1";
+    return 'cat1';
   } else if (
     contadorCat1 > contadorCat2 &&
     contadorCat1 > 0 &&
     contadorCat2 > 0
   ) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(arry) {
   let arryDeString = [];
-  let element = "";
+  let element = '';
   for (let index = 0; index < arry.length; index++) {
     if (arry[index] % 3 == 0) {
-      element = "fizz";
+      element = 'fizz';
     }
     if (arry[index] % 5 == 0) {
-      element = "buzz";
+      element = 'buzz';
     }
     if (arry[index] % 5 == 0 && arry[index] % 3 == 0) {
-      element = "fizzBuzz";
+      element = 'fizzBuzz';
     }
     if (arry[index] % 5 !== 0 && arry[index] % 3 !== 0) {
-      element = "bug!";
+      element = 'bug!';
     }
 
     arryDeString.push(element);
-    element = "";
+    element = ' ';
   }
   return arryDeString;
 }
 
 // Desafio 9
 function encode(params) {
-  let element = "";
+  let element;
   for (let key in params) {
     switch (params.substr(key, 1)) {
-      case "a":
+      case 'a':
         element = element + 1;
         break;
-      case "e":
+      case 'e':
         element = element + 2;
         break;
-      case "i":
+      case 'i':
         element = element + 3;
         break;
-      case "o":
+      case 'o':
         element = element + 4;
         break;
-      case "U":
+      case 'U':
         element = element + 5;
         break;
       default:
@@ -129,23 +129,23 @@ function encode(params) {
 }
 
 function decode(element) {
-  let params = "";
+  let params ;
   for (let key in element) {
     switch (element.substr(key, 1)) {
-      case "1":
-        params = params + "a";
+      case '1':
+        params = params + 'a';
         break;
-      case "2":
-        params = params + "e";
+      case '2':
+        params = params + 'e';
         break;
-      case "3":
-        params = params + "i";
+      case '3':
+        params = params + 'i';
         break;
-      case "4":
-        params = params + "o";
+      case '4':
+        params = params + 'o';
         break;
-      case "5":
-        params = params + "u";
+      case '5':
+        params = params + 'u';
         break;
       default:
         params = params + element.substr(key, 1);
@@ -163,7 +163,7 @@ function techList(tech, name) {
     arrayObjeto.push({ tech: tech[key], name: name });
   }
   if (tech.length == 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   return arrayObjeto;
 }
@@ -173,11 +173,11 @@ function generatePhoneNumber(numero) {
   let arrayDeNumero = [];
   let cont;
   if (numero.length != 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < numero.length; i += 1) {
     if (numero[i] < 0 || numero[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     for (let j = 0; j < numero.length; j += 1) {
       if (numero[i] === numero[j]) {
@@ -185,13 +185,13 @@ function generatePhoneNumber(numero) {
       }
     }
     if (cont > 2) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     cont = 0;
   }
-  numero.splice(0, 0, "(");
-  numero.splice(3, 0, ") ");
-  numero.splice(9, 0, "-");
+  numero.splice(0, 0, '(');
+  numero.splice(3, 0, ') ');
+  numero.splice(9, 0, '-');
   for (let index = 0; index < numero.length; index += 1) {
     arrayDeNumero += numero[index];
   }
@@ -216,15 +216,15 @@ function hydrate(bebida) {
       parseInt(num[index], bebidas) < 1 ||
       parseInt(num[index], bebidas) > 9
     ) {
-      return "número inválido!";
+      return 'número inválido!';
     }
     trybeConversor += parseInt(num[index], bebidas);
   }
   if (trybeConversor === 1) {
-    trybeConversor += " copo de água";
+    trybeConversor += ' copo de água';
     return trybeConversor;
   }
-  trybeConversor += " copos de água";
+  trybeConversor += ' copos de água';
   return trybeConversor;
 }
 
