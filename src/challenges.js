@@ -92,6 +92,15 @@ function catAndMouse(mouse, cat1, cat2) {
 dCat1 = cat1 - mouse;
 dCat2 = cat2 - mouse;
 
+if(dCat1 < 0){
+
+  dCat1 *= -1;
+}
+if (dCat2 < 0){
+   dCat2 *= -1;
+}
+
+
     if(dCat1 < dCat2){
       Resp = "cat1";
       
@@ -108,10 +117,11 @@ dCat2 = cat2 - mouse;
       
     }
     
-    return Resp;
+    //return Resp;
+    console.log(Resp);
     
   }
- //catAndMouse(1,3,4);
+ catAndMouse(0,3,2);
 
   
 // Desafio 8
