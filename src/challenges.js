@@ -79,23 +79,25 @@ function fizzBuzz(numeros) {
   let result = [];
   for (let i = 0; i < numeros.length; i += 1) {
     if (numeros[i] % 15 === 0) {
-      result.push('fizzBuzz')
+      result.push('fizzBuzz');
     } else if (numeros[i] % 5 === 0) {
-      result.push('buzz')
+      result.push('buzz');
     } else if (numeros[i] % 3 === 0) {
-      result.push('fizz')
-    } else { result.push('bug!') }
+      result.push('fizz');
+    } else {
+      result.push('bug!');
+    }
   }
   return result;
 }
 // Desafio 9
-function encode(input) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  return [...input].map(elem => vowels.includes(elem) ? vowels.indexOf(elem) + 1 : elem).join('');
+function encode(entrada) {
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  return [...entrada].map(elem => vogais.includes(elem) ? vogais.indexOf(elem) + 1 : elem).join('');
 }
-function decode(text) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  return [...text].map(item => Number(item) ? vowels[Number(item) - 1] : item).join('');
+function decode(texto) {
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  return [...texto].map(item => Number(item) ? vogais[Number(item) - 1] : item).join('');
 }
 // Desafio 10
 function techList(vetor, name) {
@@ -125,21 +127,25 @@ function techList(vetor, name) {
   });
 }
 // Desafio 11
-function generatePhoneNumber(vector) {
-  if (vector.length !== 11) { return 'Array com tamanho incorreto.' }
-  vector.sort(function (a, b) { return a - b });
-  for (let i = 0; i < vector.length; i += 1) {
-    if (vector[i] === vector[i + 1] && vector[i] === vector[i + 2]) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else if (vector[i] > 9 || vector[i] < 0) {
+function generatePhoneNumber(vetor) {
+  let countRepeat = vetor.filter((e, i, a) => a.indexOf(e) !== i);
+  countRepeat.sort(function (a, b) { return a - b; });
+  if (vetor.length !== 11) { return 'Array com tamanho incorreto.' }
+  for (let i in vetor) {
+    if (vetor[i] > 9 || vetor[i] < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  vector.splice(0, 0, '(');
-  vector.splice(3, 0, ')');
-  vector.splice(4, 0, ' ');
-  vector.splice(10, 0, '-');
-  return vector.join('');
+  for (let i = 0; i < countRepeat.length; i += 1) {
+    if (countRepeat[i] === countRepeat[i + 1] || countRepeat[i] === countRepeat[i + 2]) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  vetor.splice(0, 0, '(');
+  vetor.splice(3, 0, ')');
+  vetor.splice(4, 0, ' ');
+  vetor.splice(10, 0, '-');
+  return vetor.join('');
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
