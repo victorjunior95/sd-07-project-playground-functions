@@ -165,14 +165,14 @@ function decode(string) {
 // Desafio 10
 function techList(array , name) {
   // seu código aqui
-  let = techSkills = {
+ let = techSkills = {
  };
  let orderArray = array.sort();
  let receiverArray =[]
   for(let skill in orderArray) {
-    let object = {
+    let object {
       tech: orderArray[skill],
-      name: name
+      name: name,
     }
   receiverArray.push(object)
   }
