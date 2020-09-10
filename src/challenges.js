@@ -143,8 +143,6 @@ function techList(technologies, name) {
 
 // Desafio 11
 function generatePhoneNumber(phone) {
-  // seu código aqui
-  function compare (telChar) { return telChar < 0 || telChar > 9 }
   //checking repeated numbers
   let cont = 0
   for (let i = 0; i <= 9; i += 1) {
