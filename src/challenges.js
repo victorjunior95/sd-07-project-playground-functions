@@ -57,10 +57,10 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   //let gato1= (cat1 - mouse);
   //let gato2= (cat2 - mouse);
-  if((cat1 - mouse) > (cat2 - mouse)){
+  if((cat1 - mouse) < (cat2 - mouse)){
       console.log(cat2)
       //return cat2;
-  }else if((cat1 - mouse) < (cat2 - mouse)){
+  }else if((cat1 - mouse) > (cat2 - mouse)){
       console.log(cat1)
       //return cat1;
   }else if((cat1 - mouse) === (cat2 - mouse)){
