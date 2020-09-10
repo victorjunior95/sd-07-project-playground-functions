@@ -125,9 +125,18 @@ function decode(decoding = "h3 th2r2") {
 }
 console.log(decode());
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let result = [];
+  tech.sort();
+  
+ for(let index = 0; index < tech.length; index +=1){
+    result.push({tech: tech[index], name});
+
+ }
+  return result;
+ 
 }
+console.log(techList());
 
 // Desafio 11
 function generatePhoneNumber() {
