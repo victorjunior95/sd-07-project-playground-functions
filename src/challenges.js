@@ -125,9 +125,11 @@ function encode(string) {
       }
       else if (string[index] === "o"){
         newString += "4";
-      }else if (string[index] === "u"){
-        newString += "5"
-      }else {
+      }
+      else if (string[index] === "u"){
+        newString += "5";
+      }
+      else {
         newString += string[index];
       }
     }
