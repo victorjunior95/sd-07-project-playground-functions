@@ -58,24 +58,46 @@ function highestCount(array) {
   }
   return counter
 }
-
+}
 // Desafio 7
 function catAndMouse(cat1 , cat2 , mouse) {
   // seu código aqui
-  if(cat2 > cat1) {
+  let absotuleDistance1 = cat1 - mouse;
+  if(absotuleDistance1 < 0 ) {
+    absotuleDistance1 = -absotuleDistance1;
+  }
+  let absotuleDistance2 = cat2 - mouse;
+  if(absotuleDistance2 < 0 ) {
+    absotuleDistance2 = -absotuleDistance2;
+  }
+  if(absolutDistance1 > absotuleDistance2) {
     return "cat2";
   }
-  if(cat1 > cat2) {
+  if(absolutDistance2 > absotuleDistance1) {
     return "cat1";
   }
   else {
     return "os gatos trombam e o rato foge";
   }
-}
 
+}
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let resultArray = [];
+  for (let index in array);
+    if(array[index] % 3 === 0 && array[index] % 5 === 0) {
+      resultArray.push("fizzbuzz");
+    }
+    else if (array[index] % 3 ===0 ) {
+      resultArray.push("fizz");
+    }
+    else if (array[index] % 5 ===0 ) {
+      resultArray.push("buzz");
+    }
+    else {
+      resultArray.push("Bug!");
+    }
 }
 
 // Desafio 9
