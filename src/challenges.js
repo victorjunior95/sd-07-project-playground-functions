@@ -48,7 +48,7 @@ function highestCount(array) {
   let max = array[0]
 
   for (let i in array){
-    if (i > max)
+    if (i > max){
     max = i;
   }
   let counter = 0
@@ -60,8 +60,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1 , cat2 , mouse) {
   // seu código aqui
+  if(cat2 > cat1) {
+    return "cat2";
+  }
+  if(cat1 > cat2) {
+    return "cat1";
+  }
+  else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
