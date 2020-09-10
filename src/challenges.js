@@ -48,28 +48,26 @@ function catAndMouse() {
   // seu código aqui
 }
 // Desafio 8
-function fizzBuzz() {
-  function fizzBuzz(arrayNumerosFB) {
-    let arrayFB = [];
-    for (let i = 0; i < arrayNumerosFB.length; i+= 1) {
-      let resto3 = arrayNumerosFB[i] % 3;
-      let resto5 = arrayNumerosFB[i] % 5
-      if ((resto3 === 0) || (resto5 === 0)) {
-        if ((resto3 === 0) && (resto5 === 0)) {
-          arrayFB[i] = 'fizzBuzz';
-        } else if (resto3 === 0) {
-          arrayFB[i] = 'fizz';
-        } else {
-          arrayFB[i] = 'buzz';
-        }
+function fizzBuzz(arrayNumerosFB) {
+  let arrayFB = [];
+  for (let i = 0; i < arrayNumerosFB.length; i+= 1) {
+    let resto3 = arrayNumerosFB[i] % 3;
+    let resto5 = arrayNumerosFB[i] % 5
+    if ((resto3 === 0) || (resto5 === 0)) {
+      if ((resto3 === 0) && (resto5 === 0)) {
+        arrayFB[i] = 'fizzBuzz';
+      } else if (resto3 === 0) {
+        arrayFB[i] = 'fizz';
       } else {
-        arrayFB[i] = 'bug!';
+        arrayFB[i] = 'buzz';
       }
+    } else {
+      arrayFB[i] = 'bug!';
     }
-    return arrayFB;
+  }
+  return arrayFB;
 }
-}
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
