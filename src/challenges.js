@@ -65,6 +65,33 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function bug() {
+  return 'bug'
+}
+function check(array, a) {
+  let arrayNum = array
+  let i = a
+  if (arrayNum[i] % 3 === 0) {
+    return 'fizz'
+  }
+  return 'buzz'
+}
+function both(array, a) {
+  let arrayNum = array
+  let i = a
+  if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
+    return 'fizzBuzz'
+  }
+  return check(arrayNum, a)
+}
+function frase(array, a) {
+  let arrayNum = array
+  let i = a
+  if (arrayNum[i] % 3 === 0 || arrayNum[i] % 5 === 0) {
+    return both(arrayNum, i)
+  }
+  return bug()
+}
 function fizzBuzz(array) {
   let res = []
   let arrayNum = array
@@ -73,33 +100,6 @@ function fizzBuzz(array) {
     res.push(frase(arrayNum, i))
   }
   return res
-}
-function frase(array, a) {
-  let arrayNum = array
-  let i = a
-  if (arrayNum[i] % 3 === 0 || arrayNum[i] % 5 === 0) {
-    return both(arrayNum, i)
-  } 
-  return bug()
-}
-function both(array, a) {
-  let arrayNum = array
-  let i = a
-  if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
-    return 'fizzBuzz'
-  } 
-  return check(arrayNum, a)
-}
-function check(array, a) {
-  let arrayNum = array
-  let i = a
-  if (arrayNum[i] % 3 === 0) {
-    return 'fizz'
-  } 
-  return 'buzz'
-}
-function bug() {
-  return 'bug'
 }
 
 // Desafio 9
