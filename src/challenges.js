@@ -65,18 +65,41 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNum) {
+function fizzBuzz(array) {
   let res = []
-  for (let i = 0; i < arrayNum.length; i += 1) {
-    if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
-      res.push('fizzBuzz')
-    } else if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 !== 0) {
-      res.push('fizz')
-    } else if (arrayNum[i] % 5 === 0 && arrayNum[i] % 3 !== 0) {
-      res.push('buzz')
-    } else res.push('bug!')
+  let arrayNum = array
+  let i
+  for (i = 0; i < arrayNum.length; i += 1) {
+    res.push(frase(arrayNum, i))
   }
   return res
+}
+function frase(array, a) {
+  let arrayNum = array
+  let i = a
+  if (arrayNum[i] % 3 === 0 || arrayNum[i] % 5 === 0) {
+    return both(arrayNum, i)
+  } 
+  return bug()
+}
+function both(array, a) {
+  let arrayNum = array
+  let i = a
+  if (arrayNum[i] % 3 === 0 && arrayNum[i] % 5 === 0) {
+    return 'fizzBuzz'
+  } 
+  return check(arrayNum, a)
+}
+function check(array, a) {
+  let arrayNum = array
+  let i = a
+  if (arrayNum[i] % 3 === 0) {
+    return 'fizz'
+  } 
+  return 'buzz'
+}
+function bug() {
+  return 'bug'
 }
 
 // Desafio 9
@@ -121,7 +144,7 @@ function generatePhoneNumber(arrayN) {
     return 'Array com tamanho incorreto.'
   }
   for (let num in arrayN) {
-     let dup = 0
+    let dup = 0
     for (let numD in arrayN) {
       if (arrayN[num] === arrayN[numD]) {
         dup += 1;
