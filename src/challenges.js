@@ -209,8 +209,23 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let x = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  let z = 0
+  
+  for(let i in string) {
+      for( let j in x ){
+          if(string[i] === x[j]){
+              z += parseInt(x[j], 10);
+          }
+      }
+  }
+  if (z === 1){
+      return "1 copo de água"
+  } else {
+      return `${z} copos de água`
+  }
+  
 }
 
 
