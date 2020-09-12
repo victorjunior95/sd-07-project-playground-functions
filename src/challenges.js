@@ -165,18 +165,18 @@ function dubC(a, b) {
     if (arrayN[num] === arrayN[numD]) {
       dup += 1;
     }
-	} if (dup >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores'
-	}
+  } if (dup >= 3) {
+  return 'não é possível gerar um número de telefone com esses valores'
+  }
   return `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
 }
 function control(a) {
-	let arrayN = a
-	let num
+  let arrayN = a
+  let num
   for (num in arrayN) {
     if (arrayN[num] < 0 || arrayN[num] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
-		}
+    }
   }
   return dubC(arrayN, num)
 }
