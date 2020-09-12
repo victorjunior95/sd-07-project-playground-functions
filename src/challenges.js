@@ -103,7 +103,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-/*function encode(string) {
+/* function encode(string) {
   let res = string
   let code = { a: 1, e: 2, i: 3, o: 4, u: 5 }
   for (let letra of string) {
@@ -114,7 +114,7 @@ function fizzBuzz(array) {
     }
   }
   return res
-}*/
+} */
 function loop(a, b, c) {
   let res = a
   let letra = b
