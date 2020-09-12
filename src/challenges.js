@@ -174,8 +174,6 @@ function dubC(a, b) {
 		dup += 1;
 	  }
 	}
-	console.log(arrayN[num])
-	console.log(dup)
 	return dupRes(arrayN, dup)
 }
 function control(a) {
