@@ -177,8 +177,8 @@ function dubC(a, b) {
   return dupRes(arrayN, dup)
 }
 function control(a) {
-  let arrayN = a
-  let num
+	let arrayN = a
+	let num
   for (num in arrayN) {
     if (arrayN[num] < 0 || arrayN[num] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
