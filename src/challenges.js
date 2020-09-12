@@ -157,35 +157,43 @@ function techList(array, name) {
   return obj
 }
 // Desafio 11
+function dupRes(a, b) {
+	let arrayN = a
+	let dup = b
+	if (dup >= 3) {
+	  return 'não é possível gerar um número de telefone com esses valores'
+	}
+	return `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
+}
 function dubC(a, b) {
-  let arrayN = a
-  let num = b
-  let dup = 0
-  for (let numD in arrayN) {
-    if (arrayN[num] === arrayN[numD]) {
-      dup += 1;
-    }
-  } if (dup > 2) {
-    return 'não é possível gerar um número de telefone com esses valores'
-  }
-  return `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
+	let arrayN = a
+	let num = b
+	let dup = 0
+	for (let numD in arrayN) {
+	  if (arrayN[num] === arrayN[numD]) {
+		dup += 1;
+	  }
+	}
+	console.log(arrayN[num])
+	console.log(dup)
+	return dupRes(arrayN, dup)
 }
 function control(a) {
-  let arrayN = a
-  let num
-  for (num in arrayN) {
-    if (arrayN[num] < 0 || arrayN[num] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-  }
-  return dubC(arrayN, num)
+	let arrayN = a
+	let num
+	for (num in arrayN) {
+	  if (arrayN[num] < 0 || arrayN[num] > 9) {
+		return 'não é possível gerar um número de telefone com esses valores'
+	  }
+	}
+	return dubC(arrayN, num)
 }
 function generatePhoneNumber(array) {
-  let arrayN = array
-  if (arrayN.length !== 11) {
-    return 'Array com tamanho incorreto.'
-  }
-  return control(arrayN)
+	let arrayN = array
+	if (arrayN.length !== 11) {
+	  return 'Array com tamanho incorreto.'
+	}
+	return control(arrayN)
 }
 
 // Desafio 12
