@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function bug() {
-  return 'bug'
+  return 'bug!'
 }
 function check(array, a) {
   let arrayNum = array
@@ -103,7 +103,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
+/*function encode(string) {
   let res = string
   let code = { a: 1, e: 2, i: 3, o: 4, u: 5 }
   for (let letra of string) {
@@ -112,6 +112,25 @@ function encode(string) {
         res = res.replace(i, code[i])
       }
     }
+  }
+  return res
+}*/
+function loop(a, b, c) {
+  let res = a
+  let letra = b
+  let code = c
+  for (let i in code) {
+    if (letra === i) {
+      res = res.replace(i, code[i])
+    }
+  }
+  return res
+}
+function encode(string) {
+  let res = string
+  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 }
+  for (let letra of string) {
+    res = loop(res, letra, code)
   }
   return res
 }
