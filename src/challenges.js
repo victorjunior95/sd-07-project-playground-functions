@@ -27,25 +27,26 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + ties;
-    return points;
+  const pointsPerVictory = 3;
+  let points = (wins * pointsPerVictory) + ties;
+  return points;
 }
 
 // Desafio 6
 function highestCount(arrayNumbers) {
     let highestNumber = 0;
     let sum = 0;
-    for (let i = 0; i < arrayNumbers.length; i += 1){
+    for (let i = 0; i < arrayNumbers.length; i += 1) {
       if (arrayNumbers[i] > highestNumber){
         highestNumber = arrayNumbers[i];
       }
     }
-    for (let i = 0; i < arrayNumbers.length; i += 1){
+    for (let i = 0; i < arrayNumbers.length; i += 1) {
       if (arrayNumbers[i] == highestNumber){
         sum += 1
       }
     }
-    return sum;
+  return sum;
 }
 
 // Desafio 7
@@ -55,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(cat2 - mouse);
 
   if (mouse === distanceCat1 && mouse === distanceCat2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (distanceCat1 > distanceCat2){
     return `cat2`;
   } else {
@@ -208,7 +209,7 @@ function hydrate(string) {
     cupWater += parseInt(newString[i]);
     }
 
-    if (cupWater < 2){
+    if (cupWater < 2) {
       return `${cupWater} copo de água`;
     } else {
       return `${cupWater} copos de água`
