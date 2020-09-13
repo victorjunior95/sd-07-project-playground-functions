@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let auxArray = [];
 
-  for (key in array) {
+  for (let key in array) {
     if (array[key] % 3 !== 0 && array[key] % 5 !== 0) {
       auxArray.push('bug!');
     } else if (array[key] % 3 === 0 && array[key] % 5 === 0) {
