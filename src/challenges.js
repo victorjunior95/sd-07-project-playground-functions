@@ -61,32 +61,32 @@ function fizzBuzz(array) {
   let auxArray = [];
 
   for (key in array) {
-    if (array[key] % 3 != 0 && array[key] % 5 != 0) {
-      auxArray.push(`bug!`);
-    } else if (array[key] % 3 == 0 && array[key] % 5 == 0) {
-      auxArray.push(`fizzBuzz`);
-    } else if (array[key] % 3 == 0) {
-      auxArray.push(`fizz`);
-    }else if (array[key] % 5 == 0) {
-      auxArray.push(`buzz`);
+    if (array[key] % 3 !== 0 && array[key] % 5 !== 0) {
+      auxArray.push('bug!');
+    } else if (array[key] % 3 === 0 && array[key] % 5 === 0) {
+      auxArray.push('fizzBuzz');
+    } else if (array[key] % 3 === 0) {
+      auxArray.push('fizz');
+    }else if (array[key] % 5 === 0) {
+      auxArray.push('buzz');
     }
   }
   return auxArray;
 }
 // Desafio 9
 function encode(string) {
-  let str = "";
+  let str = '';
   for (let i = 0; i <= string.length - 1; i += 1) {
-      if (string[i] === `a`) {
-      str += `1`;
-    } else if (string[i] === `e`) {
-      str += `2`;
-    } else if (string[i] === `i`) {
-      str += `3`;
-    } else if (string[i] === `o`) {
-      str += `4`;
-    } else if (string[i] === `u`) {
-      str += `5`;
+      if (string[i] === 'a') {
+      str += '1';
+    } else if (string[i] === 'e') {
+      str += '2';
+    } else if (string[i] === 'i') {
+      str += '3';
+    } else if (string[i] === 'o') {
+      str += '4';
+    } else if (string[i] === 'u') {
+      str += '5';
     } else {
       str += string[i];
     }
@@ -94,19 +94,19 @@ function encode(string) {
   return str;
 }
 function decode(string) {
-  let str = "";
+  let str = '';
 
   for (let i = 0; i <= string.length - 1; i += 1) {
-      if (string[i] === `1`) {
-      str += `a`;
-    } else if (string[i] === `2`) {
-      str += `e`;
-    } else if (string[i] === `3`) {
-      str += `i`;
-    } else if (string[i] === `4`) {
-      str += `o`;
-    } else if (string[i] === `5`) {
-      str += `u`;
+      if (string[i] === '1') {
+      str += 'a';
+    } else if (string[i] === '2') {
+      str += 'e';
+    } else if (string[i] === '3') {
+      str += 'i';
+    } else if (string[i] === '4') {
+      str += 'o';
+    } else if (string[i] === '5') {
+      str += 'u';
     } else {
       str += string[i];
     }
@@ -125,7 +125,7 @@ function techList(array, name) {
       name: name
     }
     list.push(techObject);
-    techObject = "";
+    techObject = '';
   }
   for (let i = 0; i <= list.length; i += 1) {
     list.sort((a, b) => {
@@ -140,11 +140,11 @@ function techList(array, name) {
 }
 // Desafio 11
 function generatePhoneNumber(array) {
-  let phoneNumber = `(`;
+  let phoneNumber = '(';
   let count = 0;
 
   if (array.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
 
   for (let i = 0; i <= array.length; i += 1) {
@@ -154,7 +154,7 @@ function generatePhoneNumber(array) {
         }
       }
       if (array[i] < 0 || array[i] > 9 || count >= 3){
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       } else {
         count = 0;
       }
@@ -163,12 +163,12 @@ function generatePhoneNumber(array) {
     for (let i = 0; i < array.length; i += 1) {
       if (i == 1){
         phoneNumber += array[i]
-        phoneNumber += `)`;
+        phoneNumber += ')';
       }  else if (i == 2) {
-        phoneNumber += ` `;
+        phoneNumber += ' ';
         phoneNumber += array[i];
       } else if (i == 7) {
-        phoneNumber += `-`;
+        phoneNumber += '-';
         phoneNumber += array[i];
       } else {
         phoneNumber += array[i];
