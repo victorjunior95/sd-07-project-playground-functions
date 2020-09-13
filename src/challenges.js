@@ -98,8 +98,8 @@ function decode(string) {
 
   for (let i = 0; i <= string.length - 1; i += 1) {
     if (string[i] === '1') {
-        str += 'a';
-      } else if (string[i] === '2') {
+      str += 'a';
+    } else if (string[i] === '2') {
       str += 'e';
     } else if (string[i] === '3') {
       str += 'i';
@@ -154,25 +154,25 @@ function generatePhoneNumber(array) {
       }
     }
     if (array[i] < 0 || array[i] > 9 || count >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      } else {
-        count = 0;
-      }
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      count = 0;
+    }
   }
 
   for (let i = 0; i < array.length; i += 1) {
-      if (i === 1) {
-        phoneNumber += array[i];
-        phoneNumber += ')';
-      } else if (i === 2) {
-        phoneNumber += ' ';
-        phoneNumber += array[i];
-      } else if (i === 7) {
-        phoneNumber += '-';
-        phoneNumber += array[i];
-      } else {
-        phoneNumber += array[i];
-      }
+    if (i === 1) {
+      phoneNumber += array[i];
+      phoneNumber += ')';
+    } else if (i === 2) {
+      phoneNumber += ' ';
+      phoneNumber += array[i];
+    } else if (i === 7) {
+      phoneNumber += '-';
+      phoneNumber += array[i];
+    } else {
+      phoneNumber += array[i];
+    }
   }
   return phoneNumber;
 }
@@ -180,11 +180,11 @@ function generatePhoneNumber(array) {
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA + lineB) > lineC && (lineB + lineC) > lineA && (lineA + lineC) > lineB) {
     if (Math.abs(lineA - lineB) < lineC && Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB) {
-        return true
+      return true
     }
   } else {
-      return false;
-    }
+    return false;
+  }
 }
 // Desafio 13
 function hydrate(string) {
