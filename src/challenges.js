@@ -123,23 +123,24 @@ function techList(tecnologias, nome) {
 }
 
 // Desafio 11
+
+function contaNumeroOcorrencias(num, arr) {
+  let limiteOcorrencias = 3;
+  let ocorrencias = arr.filter(function (elem) {
+    return elem === num;
+  });
+  return ocorrencias.length < limiteOcorrencias;
+}
+
 function procuraRepetidos(array) {
-  let qtdRepetidos = 0;
-
+  let ehLimitado = false;
   for (let i = 0; i < array.length; i += 1) {
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[i] === array[j]) {
-        qtdRepetidos += 1;
-      }
+    ehLimitado = contaNumeroOcorrencias(array[i], array);
+    if (!ehLimitado) {
+      return ehLimitado;
     }
-
-    if (qtdRepetidos >= 3) {
-      return false;
-    }
-    qtdRepetidos = 0;
   }
-
-  return true;
+  return ehLimitado;
 }
 
 function verificaIntervalo(array, inferior, superior) {
@@ -151,7 +152,6 @@ function verificaIntervalo(array, inferior, superior) {
   return true;
 }
 
-
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -162,9 +162,9 @@ function generatePhoneNumber(array) {
 
   array = array.toString();
   array = array.replace(/\D/g, ''); // Remove tudo o que não é dígito
-  console.log(array)
   array = array.replace(/^(\d{2})(\d)/g, '($1) $2'); // Coloca parênteses em volta dos dois primeiros dígitos
   array = array.replace(/(\d)(\d{4})$/, '$1-$2'); // Coloca hífen entre o quarto e o quinto dígitos
+
   return array;
 }
 
