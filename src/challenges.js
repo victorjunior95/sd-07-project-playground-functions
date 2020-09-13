@@ -53,7 +53,6 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = 0;
   let dist2 = 0;
-  let closest;
   if (cat1 < mouse) {
     dist1 = mouse - cat1;
   } else {
@@ -65,26 +64,27 @@ function catAndMouse(mouse, cat1, cat2) {
     dist2 = cat2 - mouse;
   }
   if (dist1 = dist2) {
-    closest = "os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge";
   } else if (dist1 > dist2) {
-    closest = 'cat2';
+    return cat2;
   } else {
-    closest = 'cat1';
+    return cat1;
   }
-  return closest;
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let arrayFB = [];
   for (let i = 0; i < array.length; i++) {
-    if ((array[i]%3) === 0) {
+    let div3 = array[i]%3 
+    let div5 = array[i]%5 
+    if (div3 == 0) {
       arrayFB.push("Fizz");
-    } if else ((array[i]%5) === 0) {
-    arrayFB.push("Buzz");
-    } if else ((array[i]%3) === 0 && (array[i]%5) === 0) {
-    arrayFB.push("FizzBuzz");
-    } if else ((array[i]%3) !== 0 && (array[i]%5) !== 0) {
+    } if else (div5 == 0) {
+      arrayFB.push("Buzz");
+    } if else (div3 == 0 && div5 == 0) {
+      arrayFB.push("FizzBuzz");
+    } if else (div3 != 0 && div5 != 0) {
       arrayFB.push("bug!");
     } 
   }
