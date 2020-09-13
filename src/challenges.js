@@ -30,7 +30,8 @@ function concatName(string) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  let qtdVitorias = 3;
+  return (wins * qtdVitorias) + ties;
 }
 
 // Desafio 6
@@ -106,18 +107,19 @@ function decode(string) {
 // Desafio 10
 function techList(tecnologias, nome) {
   let saida = [];
-  tecnologias = tecnologias.sort();
 
   if (tecnologias.length === 0) {
     saida = 'Vazio!';
   } else {
-    for (let i = 0; i < tecnologias.length; i += 1) {
+
+    tecnologias.sort().forEach((element) => {
       saida.push({
-        tech: tecnologias[i],
-        name: nome,
-      })
-    }
+        tech: element,
+        name: nome
+      });
+    });
   }
+
   return saida;
 }
 
