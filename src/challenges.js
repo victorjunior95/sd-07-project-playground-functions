@@ -67,18 +67,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let arrayRetorno = [];
+  
+  array.forEach(element => {
+      if (element % 5 === 0 && element % 3 === 0) {
+          arrayRetorno.push('fizzBuzz');
+      } else if (element % 3 === 0) {
+          arrayRetorno.push('fizz');
+      } else if (element % 5 === 0) {
+          arrayRetorno.push('buzz');
+      } else if (element % 5 && element % 3) {
+          arrayRetorno.push('bug!');
+      }
+  });
 
-  for (let key = 0; key < array.length; key += 1) {
-    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
-      arrayRetorno.push('fizzBuzz');
-    } else if (array[key] % 3 === 0) {
-      arrayRetorno.push('fizz');
-    } else if (array[key] % 5 === 0) {
-      arrayRetorno.push('buzz');
-    } else if (array[key] % 5 && array[key] % 3) {
-      arrayRetorno.push('bug!');
-    }
-  }
   return arrayRetorno;
 }
 
@@ -110,15 +111,14 @@ function techList(tecnologias, nome) {
 
   if (tecnologias.length === 0) {
     saida = 'Vazio!';
-  } else {
-
-    tecnologias.sort().forEach((element) => {
-      saida.push({
-        tech: element,
-        name: nome
-      });
-    });
   }
+
+  tecnologias.sort().forEach((element) => {
+    saida.push({
+      tech: element,
+      name: nome,
+    });
+  });
 
   return saida;
 }
