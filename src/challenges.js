@@ -14,7 +14,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let splits = string.split(' ');
-    return splits;
+  return splits;
 }
 // Desafio 4
 function concatName(array) {
@@ -29,16 +29,16 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(arrayNumbers) {
-    let highestNumber = 0;
-    let sum = 0;
+  let highestNumber = 0;
+  let sum = 0;
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] > highestNumber){
-        highestNumber = arrayNumbers[i];
+    if (arrayNumbers[i] > highestNumber) {
+      highestNumber = arrayNumbers[i];
     }
   }
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] === highestNumber) {
-        sum += 1
+      sum += 1
     }
   }
   return sum;
@@ -67,7 +67,7 @@ function fizzBuzz(array) {
       auxArray.push('fizzBuzz');
     } else if (array[key] % 3 === 0) {
       auxArray.push('fizz');
-    }else if (array[key] % 5 === 0) {
+    } else if (array[key] % 5 === 0) {
       auxArray.push('buzz');
     }
   }
@@ -77,7 +77,7 @@ function fizzBuzz(array) {
 function encode(string) {
   let str = '';
   for (let i = 0; i <= string.length - 1; i += 1) {
-      if (string[i] === 'a') {
+    if (string[i] === 'a') {
       str += '1';
     } else if (string[i] === 'e') {
       str += '2';
@@ -97,9 +97,9 @@ function decode(string) {
   let str = '';
 
   for (let i = 0; i <= string.length - 1; i += 1) {
-      if (string[i] === '1') {
-      str += 'a';
-    } else if (string[i] === '2') {
+    if (string[i] === '1') {
+        str += 'a';
+      } else if (string[i] === '2') {
       str += 'e';
     } else if (string[i] === '3') {
       str += 'i';
@@ -116,13 +116,13 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let list = [];
-  if (array.length == 0) {
+  if (array.length === 0) {
     return 'Vazio!';
   }
   for (let i = 0; i < array.length; i += 1) {
     let techObject = {
       tech: array[i],
-      name: name
+      name: name,
     }
     list.push(techObject);
     techObject = '';
@@ -148,49 +148,49 @@ function generatePhoneNumber(array) {
   }
 
   for (let i = 0; i <= array.length; i += 1) {
-      for (let j = 0; j <= array.length; j += 1) {
-        if (array[i] === array[j]){
-          count += 1;
-        }
+    for (let j = 0; j <= array.length; j += 1) {
+      if (array[i] === array[j]) {
+        count += 1;
       }
-      if (array[i] < 0 || array[i] > 9 || count >= 3){
+    }
+    if (array[i] < 0 || array[i] > 9 || count >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       } else {
         count = 0;
       }
-    }
+  }
 
-    for (let i = 0; i < array.length; i += 1) {
-      if (i == 1){
-        phoneNumber += array[i]
+  for (let i = 0; i < array.length; i += 1) {
+      if (i === 1) {
+        phoneNumber += array[i];
         phoneNumber += ')';
-      }  else if (i == 2) {
+      } else if (i === 2) {
         phoneNumber += ' ';
         phoneNumber += array[i];
-      } else if (i == 7) {
+      } else if (i === 7) {
         phoneNumber += '-';
         phoneNumber += array[i];
       } else {
         phoneNumber += array[i];
       }
-    }
-      return phoneNumber;
+  }
+  return phoneNumber;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-    if ((lineA + lineB) > lineC && (lineB + lineC) > lineA && (lineA + lineC) > lineB) {
-      if (Math.abs(lineA - lineB) < lineC && Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB) {
+  if ((lineA + lineB) > lineC && (lineB + lineC) > lineA && (lineA + lineC) > lineB) {
+    if (Math.abs(lineA - lineB) < lineC && Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB) {
         return true
-      }
-    } else {
+    }
+  } else {
       return false;
     }
 }
 // Desafio 13
 function hydrate(string) {
-   let cupWater = 0;
-    let newString = string.replace(/\D/g, '');
-   
+  let cupWater = 0;
+  let newString = string.replace(/\D/g, '');
+
   for (let i = 0; i < newString.length; i += 1) {
     cupWater += parseInt(newString[i]);
   }
