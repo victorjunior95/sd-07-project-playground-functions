@@ -16,46 +16,47 @@ function calcArea(base, height) {
   return area;
 }
 
+// Desafio 3
 function splitSentence(fraseDesafio3) {
 
   //essa funcao busca o indice do inicio e fim de cada palavra dentro do array, e nos retorna um novo array com esses "pares".
   function inicioFimPalavra(fraseInteira) {
-      let indiceEspacos = [0];
-      for (let i = 0; i <= fraseInteira.length; i += 1) {
-          if (fraseInteira[i] === " ") {
-              indiceEspacos.push(i - 1);
-              indiceEspacos.push(i + 1);
-          }
+    let indiceEspacos = [0];
+    for (let i = 0; i <= fraseInteira.length; i += 1) {
+      if (fraseInteira[i] === " ") {
+        indiceEspacos.push(i - 1);
+        indiceEspacos.push(i + 1);
       }
-      indiceEspacos.push(fraseInteira.length - 1);
-      return indiceEspacos;
+    }
+    indiceEspacos.push(fraseInteira.length - 1);
+    return indiceEspacos;
   }
 
   //vamos criar duas função que dado um array ela cria outro array com indices 0, 2, 4, .... e outro com 1, 3, 5... (indices do array dado).
   function arrayIndiceI(arrayInicioFimPalavra) {
-      let arrayIndiceI = [];
-      for (let i = 0; i < arrayInicioFimPalavra.length; i += 2) {
-          arrayIndiceI.push(arrayInicioFimPalavra[i]);
-      }
-      return arrayIndiceI;
+    let arrayIndiceI = [];
+    for (let i = 0; i < arrayInicioFimPalavra.length; i += 2) {
+      arrayIndiceI.push(arrayInicioFimPalavra[i]);
+    }
+    return arrayIndiceI;
   }
 
   function arrayIndiceF(arrayInicioFimPalavra) {
-      let arrayIndiceF = [];
-      for (let i = 1; i < arrayInicioFimPalavra.length; i += 2) {
-          arrayIndiceF.push(arrayInicioFimPalavra[i]);
-      }
-      return arrayIndiceF;
+    let arrayIndiceF = [];
+    for (let i = 1; i < arrayInicioFimPalavra.length; i += 2) {
+      arrayIndiceF.push(arrayInicioFimPalavra[i]);
+    }
+    return arrayIndiceF;
   }
 
   //escreve uma palavra dado uma sting de uma frase e dois números como parametros que são os indices Inicio e Fim.
   function escrevePlavra(stringDados, indiceI, indiceF) {
-      let palavraSendoFormada = "";
-      for (k = indiceI; k <= indiceF; k += 1) {
-          palavraSendoFormada += stringDados[k];
-      }
-      let palavraFormada = palavraSendoFormada;
-      return palavraFormada;
+    let palavraSendoFormada = "";
+    for (k = indiceI; k <= indiceF; k += 1) {
+      palavraSendoFormada += stringDados[k];
+    }
+    let palavraFormada = palavraSendoFormada;
+    return palavraFormada;
   }
 
   let arrayIF = inicioFimPalavra(fraseDesafio3);
@@ -66,14 +67,21 @@ function splitSentence(fraseDesafio3) {
   let palavraEscrita = "";
   let arrayFinal = [];
   for (let a = 0; a < arrayComIndicesI.length; a += 1) {
-      valorIndiceI = arrayComIndicesI[a];
-      valorIndiceF = arrayComIndicesF[a];
-      palavraEscrita = escrevePlavra(fraseDesafio3, valorIndiceI, valorIndiceF);
-      arrayFinal.push(palavraEscrita);
+    valorIndiceI = arrayComIndicesI[a];
+    valorIndiceF = arrayComIndicesF[a];
+    palavraEscrita = escrevePlavra(fraseDesafio3, valorIndiceI, valorIndiceF);
+    arrayFinal.push(palavraEscrita);
   }
   return arrayFinal;
 }
-console.log(splitSentence("vinicius muniz marin"))
+console.log(splitSentence("com o basico"))
+
+// Desafio 3 (utilizando split)
+function splitNew(frase) {
+  let resultado = frase.split(" ");
+  return resultado;
+}
+console.log(splitNew("teste com split"))
 
 // Desafio 4
 function concatName(arrayDeStrings) {
@@ -226,9 +234,67 @@ function techList(nomesTec, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeros) {
+
+  function maisDeTresRepeticoes(numeros) {
+      let repeteTresVezes = false;
+      let repeticao = 0;
+      let maiorRepeticao = 0;
+      for (let i = 0; i < numeros.length; i += 1) {
+          let numeroAtual = numeros[i];
+          repeticao = 0;
+          for (let j = 0; j < numeros.length; j += 1) {
+              let numeroPercorrido = numeros[j];
+              if (numeroAtual === numeroPercorrido) {
+                  repeticao += 1;
+              }
+          }
+          if (repeticao > maiorRepeticao) {
+              maiorRepeticao = repeticao;
+          }
+      }
+      if (maiorRepeticao >= 3) {
+          repeteTresVezes = true;
+      } else {
+          repeteTresVezes = false;
+      }
+      return repeteTresVezes;
+  }
+
+  let impossivelGerar = false;
+
+  for (let index = 0; index < numeros.length; index += 1) {
+      if (numeros[index] > 9 || numeros[index] < 0 || maisDeTresRepeticoes(numeros)) {
+          impossivelGerar = true;
+      }
+  }
+
+  if (numeros.length !== 11) {
+      let resultado = 'Array com tamanho incorreto.';
+      return resultado;
+  }
+  else if (impossivelGerar) {
+      let resultado = 'não é possível gerar um número de telefone com esses valores';
+      return resultado;
+  }
+  else {
+      let phoneNumber = "("
+      phoneNumber += numeros[0];
+      phoneNumber += numeros[1];
+      phoneNumber += ") ";
+      for (let index = 2; index <= 6; index += 1) {
+          phoneNumber += numeros[index];
+      }
+      phoneNumber += "-"
+      for (let index = 7; index <= 10; index += 1) {
+          phoneNumber += numeros[index];
+      }
+      return phoneNumber;
+  }
 }
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 1];
+console.log(generatePhoneNumber(array))
 
 // Desafio 12
 function triangleCheck() {
