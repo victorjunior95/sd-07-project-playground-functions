@@ -63,15 +63,12 @@ function fizzBuzz(arrayNumeros) {
       case ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i] % 5 === 0)):
         arrayString.push('fizzBuzz');
         break;
-      
       case (arrayNumeros[i] % 3 === 0):
         arrayString.push('fizz');
         break;
-        
       case (arrayNumeros[i] % 5 === 0):
         arrayString.push('buzz');
         break;
-
       default:
         arrayString.push('bug!');
         break;
@@ -134,7 +131,7 @@ function techList(arrayTech, name) {
   let arrayWithInformation = [];
 
   for (let i = 0; i < arraySorting.length; i += 1) {
-    arrayWithInformation[i] = { tech: arraySorting[i], name: name };
+    arrayWithInformation[i] = { "tech": arraySorting[i], "name": name };
   }
   return arrayWithInformation;
 }
