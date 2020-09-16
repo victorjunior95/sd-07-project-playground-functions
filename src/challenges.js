@@ -131,9 +131,9 @@ function techList(arrayTech, name) {
   let arrayWithInformation = [];
 
   for (let i = 0; i < arraySorting.length; i += 1) {
-    arrayWithInformation[i] = { 
-      'tech': arraySorting[i],
-      'name': name };
+    arrayWithInformation[i] = {
+      tech: arraySorting[i],
+      name: name };
   }
   return arrayWithInformation;
 }
