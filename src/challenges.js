@@ -168,7 +168,7 @@ function generatePhoneNumber(arrayNumber) {
   return phoneNumber;
 }
 
-// Desafio 12
+// Desafio 12 - OK
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let validaLineA = ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)));
@@ -181,7 +181,7 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// Desafio 13
+// Desafio 13 - OK
 function hydrate(stringText) {
   // seu código aqui
   let result = stringText.split(' ');
