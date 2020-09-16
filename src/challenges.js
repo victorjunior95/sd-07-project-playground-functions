@@ -37,13 +37,14 @@ function highestCount(numbersArray) {
   let higherNumber = numbersArray[0];
   let totalCount = 0;
   for (let actual in numbersArray) {
-    if (higherNumber === numbersArray[actual]){
+    if (higherNumber === numbersArray[actual]) {
       totalCount += 1;
-    } else if (higherNumber < numbersArray[actual]){
+    } else if (higherNumber < numbersArray[actual]) {
       totalCount = 1;
       higherNumber = numbersArray[actual];
     }
   }
+  return totalCount;
 }
 
 // Desafio 7
