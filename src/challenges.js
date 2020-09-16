@@ -58,37 +58,26 @@ function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let arrayString = [];
 
-for (let i = 0; i < arrayNumeros.length; i += 1) {
- /*      if ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i] % 5 === 0)) {
-      arrayString.push('fizzBuzz');
-    } else if (arrayNumeros[i] % 3 === 0) {
-      arrayString.push('fizz');
-    } else if (arrayNumeros[i] % 5 === 0) {
-      arrayString.push('buzz');
-    } else {
-      arrayString.push('bug!');
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
+    switch (true) {
+      case ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i] % 5 === 0)):
+        arrayString.push('fizzBuzz');
+        break;
+      
+      case (arrayNumeros[i] % 3 === 0):
+        arrayString.push('fizz');
+        break;
+        
+      case (arrayNumeros[i] % 5 === 0):
+        arrayString.push('buzz');
+        break;
+
+      default:
+        arrayString.push('bug!');
+        break;
     }
-  } */
-
-  switch (true) {
-    case ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i] % 5 === 0)):
-      arrayString.push('fizzBuzz');
-      break;
-    
-    case (arrayNumeros[i] % 3 === 0):
-      arrayString.push('fizz');
-      break;
-
-    case (arrayNumeros[i] % 5 === 0):
-      arrayString.push('buzz');
-      break;
-    
-    default:
-      arrayString.push('bug!');
-      break;
   }
-}
-return arrayString;
+  return arrayString;
 }
 
 // Desafio 9 - OK
