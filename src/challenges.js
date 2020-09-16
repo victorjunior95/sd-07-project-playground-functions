@@ -23,15 +23,19 @@ function somaRepeat(arrayGenerico, pos) {
   return soma;
 }
 
+function zeroToNine(arrayTelefone){
+  for (let i in arrayTelefone) {
+    if (arrayTelefone[i] > 9 || arrayTelefone[i] < 0 || somaRepeat(arrayTelefone, i) >= 3) {
+      retorno = 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
 // Valida array e dá uma resposta em strings
 function validaTelefone(arrayTelefone) {
   let retorno = '';
   if (arrayTelefone.length === 11) {
-    for (let i in arrayTelefone) {
-      if (arrayTelefone[i] > 9 || arrayTelefone[i] < 0 || somaRepeat(arrayTelefone, i) >= 3) {
-        retorno = 'não é possível gerar um número de telefone com esses valores';
-      }
-    }
+    zeroToNine();
   } else {
     retorno = 'Array com tamanho incorreto.';
   }
@@ -63,11 +67,7 @@ function enfeitaTelefone(arrayTelefone) {
 
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  let boolR = false;
-  if (bool1 && bool2) {
-    boolR = true;
-  }
-  return boolR;
+  return bool1 && bool2;
 }
 
 // Desafio 2
