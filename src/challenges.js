@@ -293,12 +293,31 @@ function generatePhoneNumber(numeros) {
   }
 }
 
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 1];
-console.log(generatePhoneNumber(array))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let resultadoA = false;
+  let resultadoB = false;
+  let resultadoC = false;
+  let resultadoFinal = false;
+
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+      resultadoA = true
+  }
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+      resultadoB = true
+  }
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+      resultadoC = true
+  }
+
+  if (resultadoA && resultadoB && resultadoC) {
+      resultadoFinal = true;
+  }
+  else {
+      resultadoFinal = false;
+  }
+  return resultadoFinal;
 }
 
 // Desafio 13
