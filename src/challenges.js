@@ -71,7 +71,7 @@ function fizzBuzz(array) {
   // seu código aqui
   returnarray = []
   for (let i in array) {
-        if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
+      if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
       info = "bug!";
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       info = "fizzBuzz";
@@ -86,11 +86,37 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let text = "";
+  for (r in string) {
+    switch (string[r]) {
+      case "a":
+      text += "1";
+      break;
+      case "e":
+      text += "2";
+      break;
+      case "i":
+      text += "3";
+      break;
+      case "o":
+      text += "4";
+      break;
+      case "u":
+      text += "5";
+      break;
+      default
+      text += string[r];
+    }
+  }
 }
+
+console.log (encode ("hi there!"))
+
 function decode() {
   // seu código aqui
+ 
 }
 
 // Desafio 10
