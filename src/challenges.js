@@ -321,8 +321,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phraseDrink) {
+  const numbers = /\d+/g;
+  const arrayNumbers = phraseDrink.match(numbers);
+  let soma = 0;
+  let resultado = "";
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+      soma += parseInt(arrayNumbers[index]);
+  }
+  if (soma === 1){
+      resultado = soma + " copo de água";
+  }
+  else if (soma > 1 && soma < 10){
+      resultado = soma + " copos de água";
+  }
+  return resultado;
 }
 
 
