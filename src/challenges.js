@@ -26,7 +26,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let resultado = string.split(" ");
+  let resultado = string.split(' ');
   return resultado;
 }
 
@@ -37,10 +37,10 @@ function splitSentence(string) {
 
 // Desafio 4 ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'],
 function concatName(array) {
-  let novoArray = "";
+  let novoArray = '';
   for (let i = array.length - 1; i >= 0; i -= 1) {
     if (i === array.length - 1) {
-      novoArray = novoArray + array[i] + ", ";
+      novoArray = novoArray + array[i] + ', ';
     }
     if (i === 0) {
       novoArray = novoArray + array[i];
@@ -99,11 +99,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(mouse - cat1);
   let dist2 = Math.abs(mouse - cat2);
   if (dist1 > dist2) {
-    return "cat2";
+    return 'cat2';
   } else if (dist2 > dist1) {
-    return "cat1";
+    return 'cat1';
   }
-  return "os gatos trombam e o rato foge";
+  return 'os gatos trombam e o rato foge';
 }
 
 // --------------------TESTE DESAFIO 7--------------------------------
@@ -118,13 +118,13 @@ function fizzBuzz(array) {
   let novoArray = [];
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      novoArray.push("fizzBuzz");
+      novoArray.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
-      novoArray.push("fizz");
+      novoArray.push('fizz');
     } else if (array[i] % 5 === 0) {
-      novoArray.push("buzz");
+      novoArray.push('buzz');
     } else {
-      novoArray.push("bug!");
+      novoArray.push('bug!');
     }
   }
   return novoArray;
@@ -137,18 +137,18 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let novaString = "";
+  let novaString = '';
   for (let i in string) {
-    if (string[i] === "a") {
-      novaString = novaString + "1";
-    } else if (string[i] === "e") {
-      novaString = novaString + "2";
-    } else if (string[i] === "i") {
-      novaString = novaString + "3";
-    } else if (string[i] === "o") {
-      novaString = novaString + "4";
-    } else if (string[i] === "u") {
-      novaString = novaString + "5";
+    if (string[i] === 'a') {
+      novaString = novaString + '1';
+    } else if (string[i] === 'e') {
+      novaString = novaString + '2';
+    } else if (string[i] === 'i') {
+      novaString = novaString + '3';
+    } else if (string[i] === 'o') {
+      novaString = novaString + '4';
+    } else if (string[i] === 'u') {
+      novaString = novaString + '5';
     } else {
       novaString = novaString + string[i];
     }
@@ -161,18 +161,18 @@ function encode(string) {
 // -------------------------------------------------------------------
 
 function decode(string) {
-  let novaString = "";
+  let novaString = '';
   for (let i in string) {
-    if (string[i] === "1") {
-      novaString = novaString + "a";
-    } else if (string[i] === "2") {
-      novaString = novaString + "e";
-    } else if (string[i] === "3") {
-      novaString = novaString + "i";
-    } else if (string[i] === "4") {
-      novaString = novaString + "o";
-    } else if (string[i] === "5") {
-      novaString = novaString + "u";
+    if (string[i] === '1') {
+      novaString = novaString + 'a';
+    } else if (string[i] === '2') {
+      novaString = novaString + 'e';
+    } else if (string[i] === '3') {
+      novaString = novaString + 'i';
+    } else if (string[i] === '4') {
+      novaString = novaString + 'o';
+    } else if (string[i] === '5') {
+      novaString = novaString + 'u';
     } else {
       novaString = novaString + string[i];
     }
@@ -187,8 +187,8 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array == "") {
-    return "Vazio!";
+  if (array == '') {
+    return 'Vazio!';
   } else {
     let novoArray = [];
     for (let i in array) {
@@ -222,10 +222,10 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let newNumber = "";
+  let newNumber = '';
 
-  if (array.length != 11 || array == "") {
-    return "Array com tamanho incorreto.";
+  if (array.length != 11 || array == '') {
+    return 'Array com tamanho incorreto.';
   }
 
   let count = 1;
@@ -236,7 +236,7 @@ function generatePhoneNumber(array) {
       }
       if (k == array.length - 1) {
         if (count >= 3) {
-          return "não é possível gerar um número de telefone com esses valores";
+          return 'não é possível gerar um número de telefone com esses valores';
         } else {
           count = 1;
         }
@@ -246,14 +246,14 @@ function generatePhoneNumber(array) {
 
   for (let i in array) {
     if (array[i] < 0 || array[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     } else {
       if (i == 0) {
-        newNumber = newNumber + "(" + array[i];
+        newNumber = newNumber + '(' + array[i];
       } else if (i == 2) {
-        newNumber = newNumber + ") " + array[i];
+        newNumber = newNumber + ') ' + array[i];
       } else if (i == 7) {
-        newNumber = newNumber + "-" + array[i];
+        newNumber = newNumber + '-' + array[i];
       } else {
         newNumber = newNumber + array[i];
       }
@@ -298,9 +298,9 @@ function hydrate(string) {
     }
   }
   if (num === 1) {
-    return num + " copo de água";
+    return num + ' copo de água';
   } else {
-    return num + " copos de água";
+    return num + ' copos de água';
   }
 }
 
