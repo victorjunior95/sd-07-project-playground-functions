@@ -21,7 +21,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array;
 }
 // console.log (splitSentence('go trybe'));
@@ -69,9 +69,9 @@ function highestCount(arrayNumbers) {
 const messageEqual = (distance, distance2) => {
   let message;
   if (distance === distance2) {
-    message = "os gatos trombam e o rato foge";
+    message = 'os gatos trombam e o rato foge';
   } else if (distance + 1 === distance2 - 1 || distance - 1 === distance2 + 1) {
-    message = "os gatos trombam e o rato foge";
+    message = 'os gatos trombam e o rato foge';
   }
   return message;
 };
@@ -79,9 +79,9 @@ const messageEqual = (distance, distance2) => {
 const compareDistance = (distance, distance2) => {
   let message;
   if (distance < distance2) {
-    message = "cat1";
+    message = 'cat1';
   } else if (distance > distance2) {
-    message = "cat2";
+    message = 'cat2';
   } else {
     message = messageEqual(distance, distance2);
   }
@@ -108,13 +108,13 @@ const newArrayResult = (firstArray) => {
 
 const changeArray = (secondArray, newArray, index) => {
   if (secondArray[index] % 3 === 0 && secondArray[index] % 5 === 0) {
-    newArray[index] = "fizzBuzz";
+    newArray[index] = 'fizzBuzz';
   } else if (secondArray[index] % 3 === 0) {
-    newArray[index] = "fizz";
+    newArray[index] = 'fizz';
   } else if (secondArray[index] % 5 === 0) {
-    newArray[index] = "buzz";
+    newArray[index] = 'buzz';
   } else {
-    newArray[index] = "bug!";
+    newArray[index] = 'bug!';
   }
 };
 // console.log (changeArray([2, 15, 7, 9, 45]));
@@ -130,7 +130,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  let arrayString = string.split("");
+  let arrayString = string.split('');
 
   let object = {
     a: 1,
@@ -149,21 +149,21 @@ function encode(string) {
       }
     }
   }
-  let join = arrayString.join("");
+  let join = arrayString.join('');
 
   return join;
 }
 // console.log(encode('hi there!'));
 
 function decode(string2) {
-  let arrayString2 = string2.split("");
+  let arrayString2 = string2.split('');
 
   let object2 = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u",
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
 
   for (let i in object2) {
@@ -176,7 +176,7 @@ function decode(string2) {
       }
     }
   }
-  let join2 = arrayString2.join("");
+  let join2 = arrayString2.join('');
   return join2;
 }
 // console.log(decode('h3 th2r2!'));
@@ -190,7 +190,7 @@ function techList(arrayNames, name) {
     result[i] = { tech: arrayNames2[i], name: name };
   }
   if (arrayNames.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   } else {
     return result;
   }
@@ -217,17 +217,17 @@ function generatePhoneNumber(array11) {
   // CONDIÇÃO CRIADA PARA RETORNAR MENSAGEM CASO UM NÚMERO SE REPITA MAIS DO QUE 3 VZS
   for (let key in object) {
     if (object[key] >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   // CONDIÇÃO CRIADA CASO MEU ARRAY TENHA TAMANHO DIFERENTE DE 11
   if (array11.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   // CONDIÇÃO CRIADA PARA GERAR MENSAGEM SE MEU ARRAY TIVER NÚMEROS MAIOR DO QUE 9 E MENOR DO QUE 0
   for (let i = 0; i < array11.length; i += 1) {
     if (array11[i] < 0 || array11[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     } else if (i >= 2 && i < 7) {
       phoneNumber2.push(array11[i]);
     } else if (i >= 7) {
@@ -235,8 +235,8 @@ function generatePhoneNumber(array11) {
     }
   }
   // CONCATENAÇÃO DA MINHA MENSAGEM
-  let phoneNumber2Join = phoneNumber2.join("");
-  let phoneNumber3Join = phoneNumber3.join("");
+  let phoneNumber2Join = phoneNumber2.join('');
+  let phoneNumber3Join = phoneNumber3.join('');
 
   let mensagem = `${phoneNumber1} ${phoneNumber2Join}-${phoneNumber3Join}`;
   return mensagem;
