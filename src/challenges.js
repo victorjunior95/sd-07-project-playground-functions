@@ -2,111 +2,123 @@
 
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
+  let value;
+  if (param1 && param2) {
+    value = true;
   } else {
-    return false;
+    value = false;
   }
+  return value;
 }
-//console.log (compareTrue (true,false));
+// console.log (compareTrue (true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-//console.log(calcArea(20,10))
+// console.log(calcArea(20,10))
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array;
 }
-//console.log (splitSentence("go trybe"));
+// console.log (splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(string) {
   let primeiroUltimo = `${string[string.length - 1]}, ${string[0]}`;
   return primeiroUltimo;
 }
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = wins * 3 + ties;
+  let pontos = (wins * 3) + ties;
   return pontos;
 }
-//console.log(footballPoints(10,20));
+// console.log(footballPoints(10,20));
 
 // Desafio 6
-function highestCount(arrayNumbers) {
-  let countRepetitions = 0;
-  let highestNumber = arrayNumbers[0];
 
-  for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (highestNumber < arrayNumbers[i]) {
-      highestNumber = arrayNumbers[i];
+const highestNumberArray = (array) => {
+  let highestNumber = array[0];
+  for (let i = 0; i < array.length; i += 1) {
+    if (highestNumber < array[i]) {
+      highestNumber = array[i];
     }
   }
+  return highestNumber;
+}
+// console.log(highestNumberArray([9, 1, 2, 3, 9, 5, 7]));
+
+function highestCount(arrayNumbers) {
+  let higherNumber = highestNumberArray(arrayNumbers)
+  let countRepetitions = 0;
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (highestNumber == arrayNumbers[i]) {
+    if (higherNumber == arrayNumbers[i]) {
       countRepetitions += 1;
     }
   }
   return countRepetitions;
 }
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9, 10]));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let mathMouse = Math.abs(mouse);
-  let mathCat1 = Math.abs(cat1);
-  let mathCat2 = Math.abs(cat2);
-
-  let distance = mathMouse - mathCat1;
-  let distance2 = mathMouse - mathCat2;
-
-  if (
-    mathCat1 == mathMouse + 1 ||
-    (mathCat1 == mathMouse - 1 && mathCat2 == mathMouse + 1) ||
-    mathCat2 == mathMouse - 1
-  ) {
-    return "os gatos trombam e o rato foge";
-  } else if (mathMouse == mathCat1 && mathMouse == mathCat2) {
-    return "os gatos trombam e o rato foge";
-  } else if (distance < distance2) {
-    return "cat2";
-  } else if (distance > distance2) {
-    return "cat1";
+const messageEqual = (distance, distance2) => {
+  let message;
+  if (distance === distance2) {
+    message = 'os gatos trombam e o rato foge';
+  } else if (distance + 1 === distance2 - 1 ||distance - 1 === distance2 + 1 ) {
+    message = 'os gatos trombam e o rato foge';
   }
+  return message;
 }
-//console.log(catAndMouse(0, 3, 2));
+
+const compareDistance = (distance, distance2) => {
+  let message;
+  if (distance < distance2 ) {
+    message = 'cat1';
+  } else if (distance > distance2) {
+    message = 'cat2';
+  } else {
+    message = messageEqual(distance, distance2);
+  }
+  return message;
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+  let distance = cat1 - mouse;
+  let distance2 = cat2 - mouse;
+  return compareDistance(Math.abs(distance), Math.abs(distance2));
+}
+console.log(catAndMouse(1, 1, 3));
 
 // Desafio 8
 function fizzBuzz(question08) {
   let arrayResult = [];
-  for (let i = 0; i < question08.length; i+= 1) {
+  for (let i = 0; i < question08.length; i += 1) {
     arrayResult.push(question08[i]);
   }
-
   for (let i = 0; i < arrayResult.length; i += 1) {
     if (question08[i] % 3 === 0 && question08[i] % 5 === 0) {
-      arrayResult[i] = "fizzBuzz";
+      arrayResult[i] = 'fizzBuzz';
     } else if (question08[i] % 3 === 0) {
-      arrayResult[i] = "fizz";
+      arrayResult[i] = 'fizz';
     } else if (question08[i] % 5 === 0) {
-      arrayResult[i] = "buzz";
+      arrayResult[i] = 'buzz';
     } else {
-      arrayResult[i] = "bug!";
+      arrayResult[i] = 'bug!';
     }
   }
   return arrayResult;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  let arrayString = string.split("");
+  let arrayString = string.split('');
 
   let object = {
     a: 1,
@@ -125,21 +137,21 @@ function encode(string) {
       }
     }
   }
-  let join = arrayString.join("");
+  let join = arrayString.join('');
 
   return join;
 }
-// console.log(encode("hi there!"));
+// console.log(encode('hi there!'));
 
 function decode(string2) {
-  let arrayString2 = string2.split("");
+  let arrayString2 = string2.split('');
 
   let object2 = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u",
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
 
   for (let i in object2) {
@@ -152,10 +164,10 @@ function decode(string2) {
       }
     }
   }
-  let join2 = arrayString2.join("");
+  let join2 = arrayString2.join('');
   return join2;
 }
-//console.log(decode("h3 th2r2!"));
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(arrayNames, name) {
@@ -166,12 +178,12 @@ function techList(arrayNames, name) {
     result[i] = { tech: arrayNames2[i], name: name };
   }
   if (arrayNames.length == 0) {
-    return "Vazio!";
+    return 'Vazio!';
   } else {
     return result;
   }
 }
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber(array11) {
@@ -190,29 +202,29 @@ function generatePhoneNumber(array11) {
       object[array11[i]] += 1;
     }
   }
-// CONDIÇÃO CRIADA PARA RETORNAR MENSAGEM CASO UM NÚMERO SE REPITA MAIS DO QUE 3 VZS
+  // CONDIÇÃO CRIADA PARA RETORNAR MENSAGEM CASO UM NÚMERO SE REPITA MAIS DO QUE 3 VZS
   for (let key in object) {
     if (object[key] >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-// CONDIÇÃO CRIADA CASO MEU ARRAY TENHA TAMANHO DIFERENTE DE 11
+  // CONDIÇÃO CRIADA CASO MEU ARRAY TENHA TAMANHO DIFERENTE DE 11
   if (array11.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
-// CONDIÇÃO CRIADA PARA GERAR MENSAGEM SE MEU ARRAY TIVER NÚMEROS MAIOR DO QUE 9 E MENOR DO QUE 0
+  // CONDIÇÃO CRIADA PARA GERAR MENSAGEM SE MEU ARRAY TIVER NÚMEROS MAIOR DO QUE 9 E MENOR DO QUE 0
   for (let i = 0; i < array11.length; i += 1) {
     if (array11[i] < 0 || array11[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     } else if (i >= 2 && i < 7) {
       phoneNumber2.push(array11[i]);
     } else if (i >= 7) {
       phoneNumber3.push(array11[i]);
     }
   }
-// CONCATENAÇÃO DA MINHA MENSAGEM
-  let phoneNumber2Join = phoneNumber2.join("");
-  let phoneNumber3Join = phoneNumber3.join("");
+  // CONCATENAÇÃO DA MINHA MENSAGEM
+  let phoneNumber2Join = phoneNumber2.join('');
+  let phoneNumber3Join = phoneNumber3.join('');
 
   let mensagem = `${phoneNumber1} ${phoneNumber2Join}-${phoneNumber3Join}`;
   return mensagem;
@@ -220,12 +232,12 @@ function generatePhoneNumber(array11) {
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   let a = Math.abs(lineA);
   let b = Math.abs(lineB);
   let c = Math.abs(lineC);
-  
-  if(a < b + c && b < a + c && c < a + b) {
+
+  if (a < b + c && b < a + c && c < a + b) {
     return true;
   } else {
     return false;
@@ -243,13 +255,13 @@ function hydrate(string) {
     count += parseInt(numberString[i]);
   }
 
-  if(count < 2) {
-  return `${count} copo de água`;
-  } else if (count > 1){
+  if (count < 2) {
+    return `${count} copo de água`;
+  } else if (count > 1) {
     return `${count} copos de água`;
   }
 }
-// console.log(hydrate("2 cerveja e 1 vinho"));
+// console.log(hydrate('2 cerveja e 1 vinho'));
 
 module.exports = {
   calcArea,
