@@ -62,7 +62,7 @@ function highestCount(numbers) {
   return repeticao;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -81,17 +81,17 @@ catAndMouse(0, 3, 2);
 // Desafio 8
 function fizzBuzz(numbers) {
   let newArray = [];
-  for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+  numbers.forEach((number) => {
+    if (number % 3 === 0 && number % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
+    } else if (number % 3 === 0) {
       newArray.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
+    } else if (numbers % 5 === 0) {
       newArray.push('buzz');
     } else {
       newArray.push('bug!');
     }
-  }
+  });
   return newArray;
 }
 
@@ -147,21 +147,19 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let i = 0; i < array.length; i += 1) {
+  array.forEach((element) => {
     let count = 0;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[j] === array[i]) {
-        count += 1;
-      }
+    if (element === element){
+      count += 1;
     }
-    if (array[i] < 0 || array[i] > 9 || count >= 3) {
+    if (element < 0 || element > 9 || count >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-  }
+  });
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
