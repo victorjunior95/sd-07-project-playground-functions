@@ -147,17 +147,18 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let i = 0; i < array.length; i += 1) {
+  array.forEach((element) => {
     let count = 0;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[j] === array[i]) {
+    array.forEach((otherElement) => {
+      if (otherElement === element) {
         count += 1;
       }
-    }
-    if (array[i] < 0 || array[i] > 9 || count >= 3) {
+    });
+    if (element < 0 || element > 9 || count >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-  }
+    return count;
+  });
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
