@@ -81,17 +81,17 @@ catAndMouse(0, 3, 2);
 // Desafio 8
 function fizzBuzz(numbers) {
   let newArray = [];
-  for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+  numbers.forEach((number) => {
+    if (number % 3 === 0 && number % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
+    } else if (number % 3 === 0) {
       newArray.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
+    } else if (number % 5 === 0) {
       newArray.push('buzz');
     } else {
       newArray.push('bug!');
     }
-  }
+  });
   return newArray;
 }
 
