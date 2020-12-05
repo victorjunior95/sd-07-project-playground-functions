@@ -158,58 +158,58 @@ function techList(array, name) {
 }
 // Desafio 11
 function resNum(array) {
-	const check = checkAllConditions(array);
-	if(check) return 'não é possível gerar um número de telefone com esses valores'
-	return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  const check = checkAllConditions(array);
+  if(check) return 'não é possível gerar um número de telefone com esses valores'
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
 function testDub(array) {
-	let check = true;
-	for (let i = 0; i < array.length; i++) {
-		let dubN = 0;
-		for (let a = 0; a < array.length; a++) {
-			if(array[i] === array[a]) dubN += 1;
-			if(dubN === 3) {
-				check = false;
-			}
-		}
-	}
-	return check;
+  let check = true;
+  for (let i = 0; i < array.length; i++) {
+    let dubN = 0;
+    for (let a = 0; a < array.length; a++) {
+      if(array[i] === array[a]) dubN += 1;
+      if(dubN === 3) {
+        check = false;
+      }
+    }
+  }
+  return check;
 }
 
 function testingDub(array) {
-	let check = true;
-	if (check) {
-		check = testDub(array)
-	}
-	return check;
+  let check = true;
+  if (check) {
+    check = testDub(array)
+  }
+  return check;
 }
 
 function testingN(array) {
-	let check = false;
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] < 0 || array[i] > 9) check = true;
-	}
-	return check;
+  let check = false;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < 0 || array[i] > 9) check = true;
+  }
+  return check;
 }
 
 function checkAllConditions(array) {
-	let checkDub = true;
-	let checkN = false;
-	let finalCheck = false;
-	if (checkDub) {
-		checkDub = testingDub(array);
-	}
-	checkN = testingN(array);
-	if (checkDub === false || checkN === true) finalCheck = true;
-	return finalCheck;
+  let checkDub = true;
+  let checkN = false;
+  let finalCheck = false;
+  if (checkDub) {
+    checkDub = testingDub(array);
+  }
+  checkN = testingN(array);
+  if (checkDub === false || checkN === true) finalCheck = true;
+  return finalCheck;
 }
 
 function generatePhoneNumber(array) {
-	if (array.length !== 11) {
-	  return 'Array com tamanho incorreto.';
-	}
-	return resNum(array);
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  return resNum(array);
 }
 
 // Desafio 12
