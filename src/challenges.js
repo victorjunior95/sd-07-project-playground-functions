@@ -186,11 +186,11 @@ function testingDub(array) {
 }
 
 function testingN(array) {
-  let check = false;
+  let checkN = false;
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9) check = true;
+    if (array[i] < 0 || array[i] > 9) checkN = true;
   }
-  return check;
+  return checkN;
 }
 
 function checkAllConditions(array) {
@@ -210,7 +210,6 @@ function resNum(array) {
   if (checkAll) return 'não é possível gerar um número de telefone com esses valores'
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
-
 
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
