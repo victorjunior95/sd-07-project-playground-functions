@@ -157,43 +157,37 @@ function techList(array, name) {
   return obj
 }
 // Desafio 11
-function resNum(array) {
-  const check = checkAllConditions(array);
-  if(check) return 'não é possível gerar um número de telefone com esses valores'
-  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
-}
-
 function test(dubN, arrayI, arrayA) {
   let dub = dubN;
   if (arrayI === arrayA) dub += 1;
-   return dub;
+  return dub;
 }
 
 function testDub(array) {
-  let check = true;
+  let checkDubN = true;
   for (let i = 0; i < array.length; i += 1) {
     let dubN = 0;
     for (let a = 0; a < array.length; a += 1) {
-      dubN = test(dubN, array[i], array[a])
+      dubN = test(dubN, array[i], array[a]);
       if (dubN === 3) {
-        check = false;
+        checkDubN = false;
       }
     }
   }
-  return check;
+  return checkDubN;
 }
 
 function testingDub(array) {
-  let check = true;
-  if (check) {
-    check = testDub(array)
+  let checkN = true;
+  if (checkN) {
+    checkN = testDub(array);
   }
-  return check;
+  return checkN;
 }
 
 function testingN(array) {
   let check = false;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9) check = true;
   }
   return check;
@@ -210,6 +204,13 @@ function checkAllConditions(array) {
   if (checkDub === false || checkN === true) finalCheck = true;
   return finalCheck;
 }
+
+function resNum(array) {
+  const checkAll = checkAllConditions(array);
+  if (checkAll) return 'não é possível gerar um número de telefone com esses valores'
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+}
+
 
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
