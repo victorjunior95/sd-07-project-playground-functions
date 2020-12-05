@@ -163,13 +163,19 @@ function resNum(array) {
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
+function test(dubN, arrayI, arrayA) {
+  let dub = dubN;
+  if (arrayI === arrayA) dub += 1;
+   return dub;
+}
+
 function testDub(array) {
   let check = true;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     let dubN = 0;
-    for (let a = 0; a < array.length; a++) {
-      if(array[i] === array[a]) dubN += 1;
-      if(dubN === 3) {
+    for (let a = 0; a < array.length; a += 1) {
+      dubN = test(dubN, array[i], array[a])
+      if (dubN === 3) {
         check = false;
       }
     }
