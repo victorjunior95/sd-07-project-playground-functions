@@ -157,41 +157,59 @@ function techList(array, name) {
   return obj
 }
 // Desafio 11
-function dupRes(a, b) {
-  let arrayN = a
-  let dup = b
-  if (dup >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores'
-  }
-  return `(${arrayN[0]}${arrayN[1]}) ${arrayN[2]}${arrayN[3]}${arrayN[4]}${arrayN[5]}${arrayN[6]}-${arrayN[7]}${arrayN[8]}${arrayN[9]}${arrayN[10]}`
+function resNum(array) {
+	const check = checkAllConditions(array);
+	if(check) return 'não é possível gerar um número de telefone com esses valores'
+	return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
-function dubC(a, b) {
-  let arrayN = a
-  let num = b
-  let dup = 0
-  for (let numD in arrayN) {
-    if (arrayN[num] === arrayN[numD]) {
-      dup += 1;
-    }
-  }
-  return dupRes(arrayN, dup)
+
+function testDub(array) {
+	let check = true;
+	for (let i = 0; i < array.length; i++) {
+		let dubN = 0;
+		for (let a = 0; a < array.length; a++) {
+			if(array[i] === array[a]) dubN += 1;
+			if(dubN === 3) {
+				check = false;
+			}
+		}
+	}
+	return check;
 }
-function control(a) {
-  let arrayN = a
-  let num
-  for (num in arrayN) {
-    if (arrayN[num] < 0 || arrayN[num] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-  }
-  return dubC(arrayN, num)
+
+function testingDub(array) {
+	let check = true;
+	if (check) {
+		check = testDub(array)
+	}
+	return check;
 }
+
+function testingN(array) {
+	let check = false;
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] < 0 || array[i] > 9) check = true;
+	}
+	return check;
+}
+
+function checkAllConditions(array) {
+	let checkDub = true;
+	let checkN = false;
+	let finalCheck = false;
+	if (checkDub) {
+		checkDub = testingDub(array);
+	}
+	checkN = testingN(array);
+	if (checkDub === false || checkN === true) finalCheck = true;
+	return finalCheck;
+}
+
 function generatePhoneNumber(array) {
-  let arrayN = array
-  if (arrayN.length !== 11) {
-    return 'Array com tamanho incorreto.'
-  }
-  return control(arrayN)
+	if (array.length !== 11) {
+	  return 'Array com tamanho incorreto.';
+	}
+	return resNum(array);
 }
 
 // Desafio 12
